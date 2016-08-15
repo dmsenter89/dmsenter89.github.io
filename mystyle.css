@@ -32,3 +32,8 @@ ul.topnav li a.active {background-color: #4CAF50;}
     ul.topnav li.right,
     ul.topnav li {float: none;}
 }
+
+#left_img {
+  float: left;
+  padding-right: 10px;
+}
