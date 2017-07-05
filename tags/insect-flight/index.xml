@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Insect Flight on Michael Senter</title>
+    <link>https://dmsenter89.github.io/tags/insect-flight/</link>
+    <description>Recent content in Insect Flight on Michael Senter</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Michael Senter</copyright>
+    <lastBuildDate>Sun, 02 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/insect-flight/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Tiny Insect Flight</title>
+      <link>https://dmsenter89.github.io/project/tiny-insects/</link>
+      <pubDate>Sun, 02 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/project/tiny-insects/</guid>
+      <description>&lt;p&gt;Winged insects are taxonomically diverse and inhibit virtually every terrestrial
+ecosystem on our planet. They range in size from the most minute insects, barely
+visible to the naked eye, to those with wingspans greater than 7 inches - larger
+than the palm of an adult human! With such diversity, insects provide a plethora
+ of model organisms for investigating flight.&lt;/p&gt;
+
+&lt;p&gt;Students of biology are familiar with the fact that small bacteria tend to move
+differently than fish swim for example. This is because a swimming motion is not
+effective in moving you forward when you&amp;rsquo;re as small as a bacterium. But flagella
+and celia will in fact move you forward effectively at that size. This difference
+in behavior has to do with how the organism in question experiences the relative
+effects of inertial and viscous forces. One way of quantifying the relative
+importance of these effects is with the dimensionless quantity known as the
+&lt;em&gt;Reynolds number&lt;/em&gt;; it is given by
+$$\mathrm{Re}= \frac{\rho u L}{\mu},$$
+where $\rho$ is the density of the fluid&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; in which the organism is moving, $u$ is
+the velocity of the fluid with respect to the organism, $L$ is the &amp;ldquo;characteristic
+length&amp;rdquo; of the organism, and $\mu$ is the dynamic viscosity of the fluid. We and
+many of the animals that we are familiar with from every day life live in a &amp;ldquo;high
+Reynolds number world.&amp;rdquo; When we say high, we mean a value of Re in the thousands
+and tens of thousands and higher. Bacteria on the other hand live in a low
+Reynolds number world, with values on the order of $\mathrm{Re} \ll 1$. The
+intermediate Reynolds number world is less well studied, and that&amp;rsquo;s where some
+intersting stuff happens!&lt;/p&gt;
+
+&lt;p&gt;Very small insects, such as &lt;a href=&#34;https://en.wikipedia.org/wiki/Thrips&#34; target=&#34;_blank&#34;&gt;thrips&lt;/a&gt; and
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Fairyfly&#34; target=&#34;_blank&#34;&gt;fairyflies&lt;/a&gt;, live in the intermediate
+Reynolds number world. While larger insects typically create lift
+by creating a leading edge vortex that remains attached to their wings, while a
+trailing edge vortex is created and shed from the wing with each stroke. The tiny
+insects on the other hand shed neither their trailing nor leading edge vortices,
+and instead engage in what is known as clap-and-fling
+(&lt;a href=&#34;https://en.wikipedia.org/wiki/Insect_flight#Aerodynamics&#34; target=&#34;_blank&#34;&gt;cf. here for some details&lt;/a&gt;).
+Another interesting aspect of the flight of the smallest fliers is that their
+wings show interesting adaptations. Most of us are familiar with the way
+bee wings look. Even fruitflies have a very similar wing structure. Very tiny
+fliers on the other hand will have relatively small wings with large bristles
+attached to them, as in the image below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://dmsenter89.github.io/img/thrips.png&#34; alt=&#34;alternative text for search engines&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When gathering footage for previous work on clap-and-fling
+(&lt;a href=&#34;https://doi.org/10.1242/jeb.084897&#34; target=&#34;_blank&#34;&gt;Santhanakrishnan et al, 2014&lt;/a&gt;), we
+also happened to come across footage showing parachuting behavior. Active flight
+is energetically costly, especially if you want to go far. Passive flight
+behaviors are an integral part of long-distance travel; just think of large
+birds you may see circling on convection currents in the air. My work is on
+trying to understand the aerodynamics of such passive flight behaviors in tiny
+insects.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Mathematically, we can treat air as a fluid.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
