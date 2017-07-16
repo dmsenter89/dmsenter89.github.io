@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Michael Senter</title>
+    <link>https://dmsenter89.github.io/tags/code/</link>
+    <description>Recent content in Code on Michael Senter</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Michael Senter</copyright>
+    <lastBuildDate>Thu, 13 Jul 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/code/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>IBM Geometry Creation</title>
+      <link>https://dmsenter89.github.io/project/meshmerizeme/</link>
+      <pubDate>Thu, 13 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/project/meshmerizeme/</guid>
+      <description>
+
+&lt;h2 id=&#34;summary&#34;&gt;Summary&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/nickabattista/IB2d&#34; target=&#34;_blank&#34;&gt;IB2d&lt;/a&gt; and
+&lt;a href=&#34;https://github.com/IBAMR/IBAMR&#34; target=&#34;_blank&#34;&gt;IBAMR&lt;/a&gt; are two software packages implementing
+the immersed boundary method (see below). These packages model fluid-structure
+interaction problems based on user given parameters and geometry. The manual
+creation of the initial geometry mesh can be difficult and time consuming,
+especially for the complex shapes encountered in biological applications.
+Oftentimes we have images of the geometry we wish to explore.
+I am developing software to help automate the creation of such CFD meshes for
+2D simulations with a file-format suitable for use with IB2d and IBAMR from
+images. An initial prototype version is available on
+&lt;a href=&#34;https://github.com/dmsenter89/MeshmerizeMe&#34; target=&#34;_blank&#34;&gt;Github&lt;/a&gt;. A paper
+exploring the use of MeshmerizeMe in conjuction with IB2d for simulations is
+in preparation.&lt;/p&gt;
+
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+
+&lt;p&gt;MeshmerizeMe needs two input files per experimental geometry: an SVG image file
+with the geometry of interest and an input2d file with the experiment parameters.
+When selecting an SVG for use with MeshmerizeMe it will automatically look for
+the input2d file in the same folder. It will then parse the paths, transform
+them into the correct coordinate system and appropriately sample the paths based
+on the size of the Cartesian grid set in the input2d file. The geometry will be
+exported as a vertex file. This file is readable by both IB2d and IBAMR.&lt;/p&gt;
+
+&lt;p&gt;SVGs were chosen as the image source as the are an open, text-based format
+making them very accesible to work with. They are standardized for web use and
+many tools exist for creating and manipulating SVG images. They can be created
+from source images such as photographs or scans by means of edge detection tools
+and by manually tracing the outline of a shape of interest
+Consider optimizing the SVG prior to processing to save time.&lt;/p&gt;
+
+&lt;p&gt;As the current version of MeshmerizeMe only handles a subset of SVG, tools that
+optimize the SVG files created by your editor are very useful. Examples of such
+software include  &lt;a href=&#34;https://github.com/svg/svgo&#34; target=&#34;_blank&#34;&gt;SVGO&lt;/a&gt;, which also offers a
+webapp  called &lt;a href=&#34;https://jakearchibald.github.io/svgomg/&#34; target=&#34;_blank&#34;&gt;SVGOMG&lt;/a&gt;.
+Another software is &lt;a href=&#34;https://github.com/RazrFalcon/svgcleaner&#34; target=&#34;_blank&#34;&gt;svgcleaner&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&#34;ibm-background&#34;&gt;IBM Background&lt;/h2&gt;
+
+&lt;p&gt;One aspect of computational fluid dynamics is the investigation of&lt;br /&gt;
+fluid-structure interactions. One method developed for the study of such
+interactions is the immersed boundary method (IBM) developed by Peskin&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a rel=&#34;footnote&#34; href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.
+It is well known that fluids can be studied from both a Eulerian and a
+Lagrangian view. The IBM combines these - the domain of the problem is resolved
+as a Cartesian grid on which Eulerian equations are solved for fluid velocity
+and pressure. In the case of Newtonian fluids the incompressible Navier-Stokes
+equations comprising of&lt;/p&gt;
+
+&lt;p&gt;$$ \rho  \left( \frac{\partial \mathbf{u}}{\partial t} + \mathbf{u} \cdot \nabla \mathbf{u} \right)  = - \nabla \mathbf{p} + \mu \nabla^2 \mathbf{u} + \mathbf{f}$$&lt;/p&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;p&gt;$$\nabla \cdot \mathbf{u} = 0$$&lt;/p&gt;
+
+&lt;p&gt;need to be solved.&lt;/p&gt;
+
+&lt;p&gt;The immersed structures are modeled as fibers in the form of parametric
+curves $X(s,t)$, where $s$ is a parameter and $t$ is time. The fiber experiences
+force distributions $F(s,t)$, and we can derive the force the fiber exerts on
+the fluid from the momentum equation. For the fibers we then solve&lt;/p&gt;
+
+&lt;p&gt;$$\mathbf{f} = \int_\Gamma \mathbf{F}(s,t)\,\delta\left(\mathbf{x}-\mathbf{X}(s,t)\right)\,ds$$&lt;/p&gt;
+
+&lt;p&gt;and&lt;/p&gt;
+
+&lt;p&gt;$$\frac{\partial \mathbf{X}}{\partial t} = \int_\Omega \mathbf{u}(\mathbf{x},t)\, \delta \left( \mathbf{x}-\mathbf{X}(s,t)\right)\,d\mathbf{x}.$$&lt;/p&gt;
+
+&lt;p&gt;Here, $\Gamma$ is the immersed structure and $\Omega$ is the fluid domain.&lt;/p&gt;
+
+&lt;p&gt;The immersed structures are discretized not on a Cartesian grid but on a
+separate Lagrangian grid on the fiber itself. Of import to CFD software users
+is that the initial discretization of the immersed structure has to be
+supplied by the user. While this is not too difficult for simple geometries,
+the often complex structures encountered in mathematical biology can present
+a significant time investment. This is the part where MeshmerizeMe comes in
+handy.&lt;/p&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;Charles S Peskin. 2002. &amp;ldquo;The immersed boundary method.&amp;rdquo; &lt;em&gt;Acta numerica&lt;/em&gt; 11:479-517.
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
