@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Michael Senter</title>
-    <link>https://dmsenter89.github.io/post/</link>
-    <description>Recent content in Posts on Michael Senter</description>
+    <title>Thoughts on Michael Senter</title>
+    <link>https://dmsenter89.github.io/tags/thoughts/</link>
+    <description>Recent content in Thoughts on Michael Senter</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Michael Senter</copyright>
-    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/post/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 16 Jul 2017 12:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/thoughts/" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Chalk Talks and Plots</title>
@@ -68,27 +68,6 @@ I&amp;rsquo;m sure most of us have done it at some point; perhaps at a bar on a 
 their peers after a conference. And it&amp;rsquo;s exciting and fun. I feel it draws
 the audience in more than searching through your phone for some nice plot you made.
 Doing this type of presentation more often would be refreshing.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Filming Thrips with Vishwa</title>
-      <link>https://dmsenter89.github.io/post/20170702-filming-with-vishwa/</link>
-      <pubDate>Sun, 02 Jul 2017 12:00:00 +0000</pubDate>
-      
-      <guid>https://dmsenter89.github.io/post/20170702-filming-with-vishwa/</guid>
-      <description>&lt;p&gt;This past month has been rather exciting due to a visit by OSU graduate student
-&lt;a href=&#34;http://www.appliedfluidslab.org/personnel/&#34; target=&#34;_blank&#34;&gt;Vishwa Teja Kasoju&lt;/a&gt;. He is a student
-in the Mechanical &amp;amp; Aerospace engineering PhD program as part of
-&lt;a href=&#34;http://www.appliedfluidslab.org/&#34; target=&#34;_blank&#34;&gt;Dr. Santhanakrishnan&amp;rsquo;s lab&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Vishwa visited both UNC and Duke to get some footage of thrips flight and
-Mantis shrimp escape behaviors. My undergraduate student Kristen Armel and I
-assisted Vishwa in some of his thrips collecting and filming. It was a good
-learning experience for us, as we learned how to work with the high speed cameras
-we have on-site. We had good luck finding thrips around campus, escpecially a
-day after it rained. Luckily there were plenty of rainy days in June, so we
-had no shortage of specimen.&lt;/p&gt;
 </description>
     </item>
     

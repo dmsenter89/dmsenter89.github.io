@@ -11,6 +11,67 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Chalk Talks and Plots</title>
+      <link>https://dmsenter89.github.io/post/20170716_chalk_talks/</link>
+      <pubDate>Sun, 16 Jul 2017 12:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/post/20170716_chalk_talks/</guid>
+      <description>&lt;p&gt;The past few days I was at the &lt;a href=&#34;http://www.math.utah.edu/research/mathbio/workshops/UtahAlumConference.html&#34; target=&#34;_blank&#34;&gt;Utah Math Bio Alumni Conference&lt;/a&gt;.
+It was great being back at my &lt;em&gt;alma mater&lt;/em&gt; surrounded by so many talented
+mathematicians and scientists, but more on that next week when I&amp;rsquo;ll write about
+my conference experience (I&amp;rsquo;ll also be at SMB this week). What I want to write
+about today are some thoughts I&amp;rsquo;ve had on chalk talks. Prior to their talks a lot
+of presenters took a few minutes to reminisce about their experiences with Utah math bio.
+The quality of physiology group meetings came up several times. At one point, someone
+(I think it was &lt;a href=&#34;http://www.math.ubc.ca/~cytryn/index.shtml&#34; target=&#34;_blank&#34;&gt;Eric Cytrynbaum&lt;/a&gt;)
+mentioned how it was difficult nowadays to get students to use the board during
+group meetings when everyone has a laptop and uses powerpoints and computer-generated
+plots. That got me thinking and wondering when I&amp;rsquo;ve had my last &amp;ldquo;real&amp;rdquo; chalk talk.
+And it&amp;rsquo;s been a while. It&amp;rsquo;s definitely true in my experience that we&amp;rsquo;ve become
+very reliant on powerpoints and beamer presentations. And I have to say I miss chalk
+talks. When I was a senior at Utah I took an intro to applied math course
+with Dr. Cherkaev that required us to present a final project on a topic of our
+choosing. I remember being the only one in the course &lt;em&gt;not&lt;/em&gt; using a powerpoint.&lt;/p&gt;
+
+&lt;p&gt;I like chalk talks and I think being good at chalk talks is a
+great skill to have. And it&amp;rsquo;s especially important for graduate students. We don&amp;rsquo;t
+have a lot of papers out yet, with us being early in our career and all. But
+we have ideas and enthusiasm. Actively writing your work down while you discuss it
+with peers is a great way to communicate that enthusiasm. And
+this is frankly one area where I feel that pure math students tend to have a leg
+up on applied students. Or at least the one&amp;rsquo;s I know. One-on-one meetings with
+their advisors tend to involve blackboard work or going over handwritten pages.
+Applied students? Open your laptop, show some code and or graphs, what have you.
+Not that there is anything wrong with that. It just leads to us having less
+practice.&lt;/p&gt;
+
+&lt;p&gt;One of the appeals of computer aided presentation is that we can use graphs and
+images. In science we often have cool images and nice graphs and we love
+showing them off. But whether or not it is important to show someone these
+particular visuals depends on what we&amp;rsquo;re trying to accomplish.
+I&amp;rsquo;m not arguing we should do chalk talks at
+conference presentations. I&amp;rsquo;m thinking more of informal settings such as lab meetings
+or just getting together with peers in the department lounge. In such informal
+situations, what I am generally trying to accomplish is give my peers a high level
+overview of what I&amp;rsquo;m currently doing, what challenges I may face and what results
+I got. And if I have plots, I don&amp;rsquo;t expect them to notice anything very precise.
+In general I&amp;rsquo;m trying to point out some qualitative behavior of interest. And that
+frankly does not require me firing up matplotlib or a draft of a paper I&amp;rsquo;m
+writing. Qualitative behavior lends itself to back-of-the-envelope plotting.&lt;/p&gt;
+
+&lt;p&gt;XKCD is a great example of just how effectivey seemingly &amp;ldquo;crude&amp;rdquo; plots and charts
+can be. &lt;a href=&#34;https://xkcd.com/1319/&#34; target=&#34;_blank&#34;&gt;Here&lt;/a&gt; is an example:
+&lt;img src=&#34;https://imgs.xkcd.com/comics/automation.png&#34; alt=&#34;XKCD Graph&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It gets the point across. Humor in this case, but the same can be done with research.
+I&amp;rsquo;m sure most of us have done it at some point; perhaps at a bar on a napkin with
+their peers after a conference. And it&amp;rsquo;s exciting and fun. I feel it draws
+the audience in more than searching through your phone for some nice plot you made.
+Doing this type of presentation more often would be refreshing.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>MeshmerizeMe: A Tool for the Creation of Curvilinear Meshes for Immersed Boundary Simulations</title>
       <link>https://dmsenter89.github.io/talk/utah_mbalumn_2017/</link>
       <pubDate>Fri, 14 Jul 2017 00:00:00 +0000</pubDate>
