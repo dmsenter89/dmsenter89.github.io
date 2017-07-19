@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Michael Senter</title>
+    <link>https://dmsenter89.github.io/publication/</link>
+    <description>Recent content in Publications on Michael Senter</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 Michael Senter</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/publication/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Mean first passage time in a thermally fluctuating viscoelastic fluid</title>
+      <link>https://dmsenter89.github.io/publication/mfpt_thermal_fluctuation/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/publication/mfpt_thermal_fluctuation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
