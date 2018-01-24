@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Michael Senter</copyright>
-    <atom:link href="/publication_types/" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Mar 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://dmsenter89.github.io/publication_types/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>2</title>
+      <link>https://dmsenter89.github.io/publication_types/2/</link>
+      <pubDate>Wed, 08 Mar 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/publication_types/2/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

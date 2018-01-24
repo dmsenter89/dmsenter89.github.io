@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks on Michael Senter</title>
+    <title>Recent &amp; Upcoming Presentations on Michael Senter</title>
     <link>https://dmsenter89.github.io/talk/</link>
-    <description>Recent content in Recent &amp; Upcoming Talks on Michael Senter</description>
+    <description>Recent content in Recent &amp; Upcoming Presentations on Michael Senter</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Michael Senter</copyright>
     <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/talk/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dmsenter89.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MeshmerizeMe: A Tool for the Creation of Curvilinear Meshes for Immersed Boundary Simulations</title>
+      <link>https://dmsenter89.github.io/talk/smb_2017/</link>
+      <pubDate>Mon, 17 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/talk/smb_2017/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MeshmerizeMe: A Tool for the Creation of Curvilinear Meshes for Immersed Boundary Simulations</title>
@@ -34,8 +45,7 @@
       <pubDate>Thu, 18 May 2017 00:00:00 +0000</pubDate>
       
       <guid>https://dmsenter89.github.io/talk/bamm-2017/</guid>
-      <description>&lt;p&gt;Embed your slides or video here using &lt;a href=&#34;https://gcushen.github.io/hugo-academic-demo/post/writing-markdown-latex/&#34; target=&#34;_blank&#34;&gt;shortcodes&lt;/a&gt;. Further details can easily be added using &lt;em&gt;Markdown&lt;/em&gt; and $\rm \LaTeX$ math code.&lt;/p&gt;
-</description>
+      <description></description>
     </item>
     
     <item>

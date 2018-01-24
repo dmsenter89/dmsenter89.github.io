@@ -8,7 +8,73 @@
     <language>en-us</language>
     <copyright>&amp;copy; 2017 Michael Senter</copyright>
     <lastBuildDate>Wed, 20 Apr 2016 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/home/" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://dmsenter89.github.io/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://dmsenter89.github.io/home/about/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/home/about/</guid>
+      <description>Biography I’m a graduate student in applied mathematics at the University of North Carolina at Chapel Hill working in the Miller lab. I have broad interests in mathematical biology including fluid dynamics, biomechanics, and scientific computing. In particular, I&amp;rsquo;m currently working on passive flight behaviors in tiny insects.
+My undergraduate was at the University of Utah. While a student there I was fortunate to work with Dr. Christel Hohenegger on modeling the motion of passive particles in complex fluids.</description>
+    </item>
+    
+    <item>
+      <title>Recent Publications</title>
+      <link>https://dmsenter89.github.io/home/publications/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Presentations</title>
+      <link>https://dmsenter89.github.io/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>https://dmsenter89.github.io/home/posts/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://dmsenter89.github.io/home/projects/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://dmsenter89.github.io/home/teaching/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/home/teaching/</guid>
+      <description> Current Course  Spring 2018 BCB 718 (Computational Modeling Laboratory), teaching assistant.  Previously Taught Courses  Fall 2017 MATH 232 (Calculus II), recitation leader. Fall 2016 MATH 564 (Math Modeling in the Life Sciences), teaching assistant. Summer 2016 MATH 110 (College Algebra), instructor on record. Spring 2016 MATH 232 (Calculus II), recitation leader. Fall 2015 MATH 231 (Calculus I), recitation leader.  </description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://dmsenter89.github.io/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://dmsenter89.github.io/home/contact/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
