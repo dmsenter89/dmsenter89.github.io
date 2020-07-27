@@ -5,12 +5,20 @@
     <link>https://dmsenter89.github.io/talk/</link>
       <atom:link href="https://dmsenter89.github.io/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Recent &amp; Upcoming Talks</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 17 Apr 2020 09:00:00 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Recent &amp; Upcoming Talks</title>
       <link>https://dmsenter89.github.io/talk/</link>
     </image>
+    
+    <item>
+      <title>Thesis Proposal</title>
+      <link>https://dmsenter89.github.io/talk/thesis-proposal/</link>
+      <pubDate>Fri, 17 Apr 2020 09:00:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/talk/thesis-proposal/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
