@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Michael&#39;s Site</title>
-    <link>https://dmsenter89.github.io/</link>
-      <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <description>Michael&#39;s Site</description>
+    <title>Projects | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/project/</link>
+      <atom:link href="https://dmsenter89.github.io/project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Projects</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 27 Jul 2020 11:35:06 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
-      <title>Michael&#39;s Site</title>
-      <link>https://dmsenter89.github.io/</link>
+      <title>Projects</title>
+      <link>https://dmsenter89.github.io/project/</link>
     </image>
     
     <item>
@@ -92,23 +92,6 @@ handy.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Porting Forward</title>
-      <link>https://dmsenter89.github.io/post/porting-forward/</link>
-      <pubDate>Mon, 27 Jul 2020 11:31:07 -0400</pubDate>
-      <guid>https://dmsenter89.github.io/post/porting-forward/</guid>
-      <description>&lt;p&gt;My website is back up and running! Some incompatabilities between my old site and updates to both Hugo and the Academic Theme have led to some downtime on this pageas I didn&amp;rsquo;t have time to look through how to rebuild my site without loosing previous content. I&amp;rsquo;m currently in the process of updating everything and will try to bring back some material as well. Stay tuned!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Mean first passage time in a thermally fluctuating viscoelastic fluid</title>
-      <link>https://dmsenter89.github.io/publication/hohenegger-2017-mean/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
-      <guid>https://dmsenter89.github.io/publication/hohenegger-2017-mean/</guid>
-      <description></description>
     </item>
     
   </channel>

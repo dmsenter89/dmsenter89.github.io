@@ -5,12 +5,21 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 27 Jul 2020 11:31:07 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Porting Forward</title>
+      <link>https://dmsenter89.github.io/post/porting-forward/</link>
+      <pubDate>Mon, 27 Jul 2020 11:31:07 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/porting-forward/</guid>
+      <description>&lt;p&gt;My website is back up and running! Some incompatabilities between my old site and updates to both Hugo and the Academic Theme have led to some downtime on this pageas I didn&amp;rsquo;t have time to look through how to rebuild my site without loosing previous content. I&amp;rsquo;m currently in the process of updating everything and will try to bring back some material as well. Stay tuned!&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
