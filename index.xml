@@ -17,9 +17,12 @@
       <link>https://dmsenter89.github.io/talk/webscraping-tutorial/</link>
       <pubDate>Thu, 30 Jul 2020 13:00:00 -0400</pubDate>
       <guid>https://dmsenter89.github.io/talk/webscraping-tutorial/</guid>
-      <description>&lt;p&gt;This workshop focuses on using Python. To avoid having to install Python locally during the workshop, we will be utilizing an 
-&lt;a href=&#34;https://notebooks.azure.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Azure notebook&lt;/a&gt; project. I recommend you sign up for a free account prior to the workshop, if possible. The example files are located 
+      <description>&lt;p&gt;This workshop covers data acquisition and basic data preparation with a focus on using Python with Jupyter Notebooks. To avoid having to install Python locally during the workshop, we will be utilizing an 
+&lt;a href=&#34;https://notebooks.azure.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Azure notebook&lt;/a&gt; project. The example files are located 
 &lt;a href=&#34;https://notebooks.azure.com/dmsenter/projects/datacollectiontutorial&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Please note that the free Azure notebooks will only be available until early October. To continue using Python and Jupyter notebooks, you may want to consider using a local installation. For Windows and Mac users, I recommend using 
+&lt;a href=&#34;https://www.anaconda.com/products/individual&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anaconda&lt;/a&gt;. For continued cloud usage, you may consider 
+&lt;a href=&#34;https://cocalc.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cocalc&lt;/a&gt;. Please note that you will need a subscription for your Cocalc notebooks to be able to download data from external sources.&lt;/p&gt;
 </description>
     </item>
     
