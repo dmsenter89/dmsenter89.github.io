@@ -23,6 +23,68 @@
 &lt;p&gt;Please note that the free Azure notebooks will only be available until early October. To continue using Python and Jupyter notebooks, you may want to consider using a local installation. For Windows and Mac users, I recommend using 
 &lt;a href=&#34;https://www.anaconda.com/products/individual&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anaconda&lt;/a&gt;. For continued cloud usage, you may consider 
 &lt;a href=&#34;https://cocalc.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cocalc&lt;/a&gt;. Please note that you will need a subscription for your Cocalc notebooks to be able to download data from external sources.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Additional Links:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://markummitchell.github.io/engauge-digitizer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Engauge Digitizer&lt;/a&gt; (software to extract data points from graphs).&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markdown Cheatsheet&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Webscraping Tutorial</title>
+      <link>https://dmsenter89.github.io/slides/webscraping-tutorial/</link>
+      <pubDate>Thu, 30 Jul 2020 12:30:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/slides/webscraping-tutorial/</guid>
+      <description>&lt;h1 id=&#34;basics-of-web-scraping-with-python&#34;&gt;Basics of Web Scraping with Python&lt;/h1&gt;
+&lt;p&gt;Michael Senter&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;goals-for-today&#34;&gt;Goals for Today&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;span class=&#34;fragment &#34; &gt;
+Understand what tools and methods are available.
+&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;fragment &#34; &gt;
+Be able to create a new project using Python and Jupyter.
+&lt;/span&gt;&lt;/li&gt;
+&lt;li&gt;&lt;span class=&#34;fragment &#34; &gt;
+Be able to edit existing code snippets to gather data.
+&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;python&#34;&gt;Python&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;easy to learn, reads like &amp;ldquo;pseudocode&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;widely used in a variety of fields&lt;/li&gt;
+&lt;li&gt;many books, websites, etc. to help you learn&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;print(&amp;quot;Hello, world!&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;data-sources&#34;&gt;Data Sources&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;csvexcel-downloads&#34;&gt;CSV/Excel Downloads&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;covid-related-data&#34;&gt;COVID Related Data&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;johns-hopkins-dashboard&#34;&gt;Johns Hopkins Dashboard&lt;/h2&gt;
+&lt;p&gt;The Johns Hopkins data is published on 
+&lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt; and is updated regularly.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;using-sas&#34;&gt;Using SAS&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename outfile &amp;quot;~/import-data-nyt.sas&amp;quot;;
+
+/* download official SAS script to above filename */
+proc http url=&amp;quot;https://raw.githubusercontent.com/sassoftware/covid-19-sas/master/Data/import-data-nyt.sas&amp;quot; 
+  method=&amp;quot;get&amp;quot; out=outfile;
+run;
+
+/* run the downloaded script */
+%include &amp;quot;~/import-data-nyt.sas&amp;quot;;
+/* state and county level data are now in memory */
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

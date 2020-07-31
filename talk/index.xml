@@ -23,6 +23,13 @@
 &lt;p&gt;Please note that the free Azure notebooks will only be available until early October. To continue using Python and Jupyter notebooks, you may want to consider using a local installation. For Windows and Mac users, I recommend using 
 &lt;a href=&#34;https://www.anaconda.com/products/individual&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Anaconda&lt;/a&gt;. For continued cloud usage, you may consider 
 &lt;a href=&#34;https://cocalc.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Cocalc&lt;/a&gt;. Please note that you will need a subscription for your Cocalc notebooks to be able to download data from external sources.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Additional Links:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://markummitchell.github.io/engauge-digitizer/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Engauge Digitizer&lt;/a&gt; (software to extract data points from graphs).&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://github.com/adam-p/markdown-here/wiki/Markdown-Here-Cheatsheet&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Markdown Cheatsheet&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 </description>
     </item>
     
