@@ -5,12 +5,20 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 30 Jul 2020 13:00:00 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 03 Aug 2020 11:27:55 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>A semi-automated finite difference mesh creation method for use with immersed boundary software IB2d and IBAMR</title>
+      <link>https://dmsenter89.github.io/publication/senter-2020-meshmerizeme/</link>
+      <pubDate>Mon, 03 Aug 2020 11:27:55 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/publication/senter-2020-meshmerizeme/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Basics of Web Scraping with Python</title>
@@ -190,7 +198,7 @@ handy.&lt;/p&gt;
     <item>
       <title>Mean first passage time in a thermally fluctuating viscoelastic fluid</title>
       <link>https://dmsenter89.github.io/publication/hohenegger-2017-mean/</link>
-      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 01 Apr 2017 00:00:00 +0000</pubDate>
       <guid>https://dmsenter89.github.io/publication/hohenegger-2017-mean/</guid>
       <description></description>
     </item>
