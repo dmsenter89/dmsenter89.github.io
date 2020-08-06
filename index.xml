@@ -52,13 +52,13 @@
 &lt;h2 id=&#34;goals-for-today&#34;&gt;Goals for Today&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;span class=&#34;fragment &#34; &gt;
-Understand what tools and methods are available.
+Understand what tools and methods are available. 
 &lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;fragment &#34; &gt;
 Be able to create a new project using Python and Jupyter.
 &lt;/span&gt;&lt;/li&gt;
 &lt;li&gt;&lt;span class=&#34;fragment &#34; &gt;
-Be able to edit existing code snippets to gather data.
+Be able to edit existing code snippets to gather data. 
 &lt;/span&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -97,9 +97,37 @@ run;
     </item>
     
     <item>
+      <title>Porting Forward</title>
+      <link>https://dmsenter89.github.io/post/porting-forward/</link>
+      <pubDate>Mon, 27 Jul 2020 11:31:07 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/porting-forward/</guid>
+      <description>&lt;p&gt;My website is back up and running! Some incompatabilities between my old site and updates to both Hugo and the Academic Theme have led to some downtime on this pageas I didn&amp;rsquo;t have time to look through how to rebuild my site without loosing previous content. I&amp;rsquo;m currently in the process of updating everything and will try to bring back some material as well. Stay tuned!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thesis Proposal</title>
+      <link>https://dmsenter89.github.io/talk/thesis-proposal/</link>
+      <pubDate>Fri, 17 Apr 2020 09:00:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/talk/thesis-proposal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Clap and Fling</title>
+      <link>https://dmsenter89.github.io/project/clap-and-fling/</link>
+      <pubDate>Fri, 01 Jun 2018 11:23:23 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/project/clap-and-fling/</guid>
+      <description>&lt;p&gt;Insects are ubiquitious throughout the world. Most of us are familiar with winged insects such as butterflies and bees. Insect flight is an interesting topic from a biomechanics perspective. Unlike birds, most insects (with some eceptions, such as dragonflies and others) do not have flight muscles attached to their wings. Instead, their flight muscles oscillate their thorax, which in turn makes the wings move. The aerodynamics of insect flight are also very interesting. Larger insects are able to fly by creating a leading edge vortex. This method does not work in the smallest insect fliers. Such insects include the thrips and chalcid wasps, some of which have wingspans as small as 1 mm. These insects have unusual wing structures, as can be seen in this image:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/b/b8/Thysanoptera-thripidae-sp.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;The solid part of the wing is rather small and narrow, with many large bristles projecting from the solid part of the wing. Insects such as thrips do not create a leading edge vortex; instead, they fly using the &amp;ldquo;Clap-and-Fling&amp;rdquo; method. This method is common amongst insects who fly in the intermediate Reynolds number regime, $1\leq \mathrm{Re} \leq 100$.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>MeshmerizeMe</title>
       <link>https://dmsenter89.github.io/project/meshmerizeme/</link>
-      <pubDate>Mon, 27 Jul 2020 11:35:06 -0400</pubDate>
+      <pubDate>Wed, 20 Sep 2017 11:35:06 -0400</pubDate>
       <guid>https://dmsenter89.github.io/project/meshmerizeme/</guid>
       <description>&lt;p&gt;
 &lt;a href=&#34;https://github.com/nickabattista/IB2d&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IB2d&lt;/a&gt; and
@@ -176,23 +204,6 @@ handy.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;/section&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Porting Forward</title>
-      <link>https://dmsenter89.github.io/post/porting-forward/</link>
-      <pubDate>Mon, 27 Jul 2020 11:31:07 -0400</pubDate>
-      <guid>https://dmsenter89.github.io/post/porting-forward/</guid>
-      <description>&lt;p&gt;My website is back up and running! Some incompatabilities between my old site and updates to both Hugo and the Academic Theme have led to some downtime on this pageas I didn&amp;rsquo;t have time to look through how to rebuild my site without loosing previous content. I&amp;rsquo;m currently in the process of updating everything and will try to bring back some material as well. Stay tuned!&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Thesis Proposal</title>
-      <link>https://dmsenter89.github.io/talk/thesis-proposal/</link>
-      <pubDate>Fri, 17 Apr 2020 09:00:00 -0400</pubDate>
-      <guid>https://dmsenter89.github.io/talk/thesis-proposal/</guid>
-      <description></description>
     </item>
     
     <item>
