@@ -18,10 +18,24 @@
       <pubDate>Thu, 29 Oct 2020 22:39:00 -0400</pubDate>
       <guid>https://dmsenter89.github.io/post/20-10-tabula/</guid>
       <description>&lt;p&gt;After reading a news article about teacher pay in the US, I was curious and wanted to look into the source data myself. Unfortunately, the source that was mentioned was a publication by the 
-&lt;a href=&#34;https://www.nea.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;National Education Association (NEA)&lt;/a&gt; which had the data as tables embedded inside a PDF report. As those who know me can attest, I don&amp;rsquo;t like hand-copying data. It is slow and error-prone. Instead, I decided to use tabula to extract the information from the PDFs directly into a Pandas dataframe. In this post, I will show you how I did that and how I cleaned up the data for analysis.&lt;/p&gt;
-&lt;h1 id=&#34;the-data-source&#34;&gt;The Data Source&lt;/h1&gt;
+&lt;a href=&#34;https://www.nea.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;National Education Association (NEA)&lt;/a&gt; which had the data as tables embedded inside a PDF report. As those who know me can attest, I don&amp;rsquo;t like hand-copying data. It is slow and error-prone. Instead, I decided to use the tabula package to extract the information from the PDFs directly into a Pandas dataframe. In this post, I will show you how to extract the data and how to clean it up for analysis.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-data-source&#34;&gt;The Data Source&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#loading-the-data&#34;&gt;Loading the Data&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#cleaning-the-data&#34;&gt;Cleaning the Data&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#numeric-conversion&#34;&gt;Numeric Conversion&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#table-b-6&#34;&gt;Table B-6&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;the-data-source&#34;&gt;The Data Source&lt;/h2&gt;
 &lt;p&gt;Several years worth of data are available in PDF form on the 
-&lt;a href=&#34;https://www.nea.org/research-publications&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NEA website&lt;/a&gt;. Reading through the technical notes, they highlight that they did not collect all of their own salary information. Some states&#39; information is calculated from the American Community Survey (ACS) done by the Census bureau - a great resource whose API I have covered in a different post. Each report includes accurate data for the previous school year, as well as estimates for the current school year. As of this post, the newest report is the 2020 report which includes data for the the 2018-2019 school year, as well as estimates of the 2019-2020 school year.&lt;/p&gt;
+&lt;a href=&#34;https://www.nea.org/research-publications&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NEA website&lt;/a&gt;. Reading through the technical notes, they highlight that they did not collect all of their own salary information. Some states&#39; information is calculated from the American Community Survey (ACS) done by the Census Bureau - a great resource whose API I have covered in a 
+&lt;a href=&#34;https://dmsenter89.github.io/post/20-08-census-api/&#34;&gt;different post&lt;/a&gt;. Each report includes accurate data for the previous school year, as well as estimates for the current school year. As of this post, the newest report is the 2020 report which includes data for the the 2018-2019 school year, as well as estimates of the 2019-2020 school year.&lt;/p&gt;
 &lt;p&gt;The 2020 report has the desired teacher salary information in two separate locations. One is in table B-6 on page 26 of the PDF, which shows a ranking of the different states&#39; average salary in addition to the average salary:&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;table_B-6.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 &lt;p&gt;A second location is in table E-7 on page 46, which gives salary data for the completed school year as well as different states&#39; estimates for the 2019-2020 school year:&lt;/p&gt;
@@ -45,7 +59,7 @@
 }
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We can now use dictionary comprehension to fill in a dictionary with all the source tables of interest. We will be using the tabula package to extract data from the PDFs. If you don&amp;rsquo;t have it installed, you can use &lt;code&gt;pip install tabula-py&lt;/code&gt; to get a copy. The method that reads in a PDF is aptly called &lt;code&gt;read_pdf&lt;/code&gt;. It&amp;rsquo;s first argument is a file path to the PDF. Since we want to use a URL, we will use the keyword argument &lt;code&gt;stream=True&lt;/code&gt; and then name the specific page in each PDF that contains the information we are after. By default, &lt;code&gt;read_pdf&lt;/code&gt; returns a list of dataframes, so we just save the first element from the list, which is the report we are interested in.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; if you are using WSL, depending on your settings, you may the &lt;code&gt;Exception in thread &amp;quot;main&amp;quot; java.awt.AWTError: Can&#39;t connect to X11 window server using &#39;172.17.16.17:0&#39; as the value of the DISPLAY variable.&lt;/code&gt; error when running &lt;code&gt;read_pdf&lt;/code&gt;. This is fixed by having an X11 server running.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; if you are using WSL, depending on your settings, you may get the error &lt;code&gt;Exception in thread &amp;quot;main&amp;quot; java.awt.AWTError: Can&#39;t connect to X11 window server using &#39;XXX.XXX.XXX.XXX:0&#39; as the value of the DISPLAY variable.&lt;/code&gt; error when running &lt;code&gt;read_pdf&lt;/code&gt;. This is fixed by having an X11 server running.&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import tabula
 import pandas as pd
 
@@ -53,7 +67,7 @@ source_df = {year : tabula.read_pdf(report[year][&#39;url&#39;], stream=True, pa
              for year in report.keys()}
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And that&amp;rsquo;s it in principle. How cool is that! Of course, we still need to clean our data a little bit.&lt;/p&gt;
-&lt;h2 id=&#34;cleaning-the-data&#34;&gt;Cleaning the Data&lt;/h2&gt;
+&lt;h3 id=&#34;cleaning-the-data&#34;&gt;Cleaning the Data&lt;/h3&gt;
 &lt;p&gt;Let&amp;rsquo;s take a look at the first and last few entries of the 2020 report:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.concat([source_df[&#39;2020&#39;].head(), 
            source_df[&#39;2020&#39;].tail()])
@@ -251,7 +265,7 @@ source_df[&amp;quot;2020&amp;quot;].head()  # show the result of our edits so fa
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;/div&gt;
-&lt;p&gt;Looks like we&amp;rsquo;re almost done! Let&amp;rsquo;s drop the unnecessary columns to and check our remaining column names:&lt;/p&gt;
+&lt;p&gt;Looks like we&amp;rsquo;re almost done! Let&amp;rsquo;s drop the unnecessary columns and check our remaining column names:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for year, df in source_df.items():
     df.drop(df.columns[3:], axis=1, inplace=True)
     print(f&amp;quot;{year}:\t{df.columns}&amp;quot;)
@@ -270,7 +284,7 @@ for year, df in source_df.items():
             df.columns[2] : re.sub(r&amp;quot;\d{2}-&amp;quot;, &#39;&#39;, df.columns[2]),
         }, 
                   inplace=True)
-    # always print the output for verification
+    # print the output for verification
     print(f&amp;quot;{year}:\t{df.columns}&amp;quot;)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;pre&gt;&lt;code&gt;2020:	Index([&#39;State&#39;, &#39;Salary 2019&#39;, &#39;Salary 2020&#39;], dtype=&#39;object&#39;)
@@ -356,7 +370,7 @@ merge_df.head()
 &lt;h3 id=&#34;numeric-conversion&#34;&gt;Numeric Conversion&lt;/h3&gt;
 &lt;p&gt;We&amp;rsquo;re almost done! Notice that we still have not dealt with the fact that every column is still treated as a string. Before we can use the &lt;code&gt;to_numeric&lt;/code&gt; function, we still need to take care of two issues:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The commas in the numbers. While they are nice for us human eyes, Pandas doesn&amp;rsquo;t like them.&lt;/li&gt;
+&lt;li&gt;The commas in the numbers. While they are nice for our human eyes, Pandas doesn&amp;rsquo;t like them.&lt;/li&gt;
 &lt;li&gt;In the 2017 salary column, there appears to be extraneous white space after the first digit for some entries.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Luckily, both of these problems can be remedied with a simple string replacement operation.&lt;/p&gt;
@@ -453,9 +467,7 @@ for col in merge_df.columns[1:]:
 &lt;/table&gt;
 &lt;/div&gt;
 &lt;h2 id=&#34;table-b-6&#34;&gt;Table B-6&lt;/h2&gt;
-&lt;p&gt;As mentioned above, table B-6 in the 2020 Report presents slightly greater challenges. A lot of the cleaning is similar or identical, so I will not reproduce it in full. Instead, I have created loaded and subsetted part of table B-6 and I will show how this can be cleaned up as well. But first, let&amp;rsquo;s look at the first several entries:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;b6
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As mentioned above, table B-6 in the 2020 Report presents slightly greater challenges. A lot of the cleaning is similar or identical, so I will not reproduce it in full. Instead, I have loaded a subsetted part of table B-6 and will show how this can be cleaned up as well. But first, let&amp;rsquo;s look at the first several entries:&lt;/p&gt;
 &lt;div&gt;
 &lt;style scoped&gt;
     .dataframe tbody tr th:only-of-type {
@@ -541,8 +553,6 @@ for col in merge_df.columns[1:]:
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;b6.iloc[:,1:] = b6.iloc[:,1:].replace(r&amp;quot;([\d,]+).*&amp;quot;, r&amp;quot;\1&amp;quot;, regex=True)
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And now we&amp;rsquo;re back to where we were above before we did the string conversion. This is what it looks like after also dropping the first row and renaming the columns:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;b6
-&lt;/code&gt;&lt;/pre&gt;
 &lt;div&gt;
 &lt;style scoped&gt;
     .dataframe tbody tr th:only-of-type {

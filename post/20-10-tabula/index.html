@@ -244,7 +244,7 @@
     
       <meta property="article:published_time" content="2020-10-29T22:39:00-04:00">
     
-    <meta property="article:modified_time" content="2020-10-29T22:39:00-04:00">
+    <meta property="article:modified_time" content="2020-11-03T12:00:00-04:00">
   
 
   
@@ -273,7 +273,7 @@
   "headline": "Teacher Salaries",
   
   "datePublished": "2020-10-29T22:39:00-04:00",
-  "dateModified": "2020-10-29T22:39:00-04:00",
+  "dateModified": "2020-11-03T12:00:00-04:00",
   
   "author": {
     "@type": "Person",
@@ -608,8 +608,10 @@
     
     
       
+          Last updated on
+      
     
-    Oct 29, 2020
+    Nov 3, 2020
   </span>
   
 
@@ -618,7 +620,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    9 min read
+    10 min read
   </span>
   
 
@@ -655,10 +657,24 @@
 
     <div class="article-style">
       <p>After reading a news article about teacher pay in the US, I was curious and wanted to look into the source data myself. Unfortunately, the source that was mentioned was a publication by the 
-<a href="https://www.nea.org/" target="_blank" rel="noopener">National Education Association (NEA)</a> which had the data as tables embedded inside a PDF report. As those who know me can attest, I don&rsquo;t like hand-copying data. It is slow and error-prone. Instead, I decided to use tabula to extract the information from the PDFs directly into a Pandas dataframe. In this post, I will show you how I did that and how I cleaned up the data for analysis.</p>
-<h1 id="the-data-source">The Data Source</h1>
+<a href="https://www.nea.org/" target="_blank" rel="noopener">National Education Association (NEA)</a> which had the data as tables embedded inside a PDF report. As those who know me can attest, I don&rsquo;t like hand-copying data. It is slow and error-prone. Instead, I decided to use the tabula package to extract the information from the PDFs directly into a Pandas dataframe. In this post, I will show you how to extract the data and how to clean it up for analysis.</p>
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-data-source">The Data Source</a></li>
+    <li><a href="#loading-the-data">Loading the Data</a>
+      <ul>
+        <li><a href="#cleaning-the-data">Cleaning the Data</a></li>
+        <li><a href="#numeric-conversion">Numeric Conversion</a></li>
+      </ul>
+    </li>
+    <li><a href="#table-b-6">Table B-6</a></li>
+  </ul>
+</nav>
+<h2 id="the-data-source">The Data Source</h2>
 <p>Several years worth of data are available in PDF form on the 
-<a href="https://www.nea.org/research-publications" target="_blank" rel="noopener">NEA website</a>. Reading through the technical notes, they highlight that they did not collect all of their own salary information. Some states' information is calculated from the American Community Survey (ACS) done by the Census bureau - a great resource whose API I have covered in a different post. Each report includes accurate data for the previous school year, as well as estimates for the current school year. As of this post, the newest report is the 2020 report which includes data for the the 2018-2019 school year, as well as estimates of the 2019-2020 school year.</p>
+<a href="https://www.nea.org/research-publications" target="_blank" rel="noopener">NEA website</a>. Reading through the technical notes, they highlight that they did not collect all of their own salary information. Some states' information is calculated from the American Community Survey (ACS) done by the Census Bureau - a great resource whose API I have covered in a 
+<a href="https://dmsenter89.github.io/post/20-08-census-api/">different post</a>. Each report includes accurate data for the previous school year, as well as estimates for the current school year. As of this post, the newest report is the 2020 report which includes data for the the 2018-2019 school year, as well as estimates of the 2019-2020 school year.</p>
 <p>The 2020 report has the desired teacher salary information in two separate locations. One is in table B-6 on page 26 of the PDF, which shows a ranking of the different states' average salary in addition to the average salary:</p>
 <p><img src="table_B-6.PNG" alt=""></p>
 <p>A second location is in table E-7 on page 46, which gives salary data for the completed school year as well as different states' estimates for the 2019-2020 school year:</p>
@@ -682,7 +698,7 @@
 }
 </code></pre>
 <p>We can now use dictionary comprehension to fill in a dictionary with all the source tables of interest. We will be using the tabula package to extract data from the PDFs. If you don&rsquo;t have it installed, you can use <code>pip install tabula-py</code> to get a copy. The method that reads in a PDF is aptly called <code>read_pdf</code>. It&rsquo;s first argument is a file path to the PDF. Since we want to use a URL, we will use the keyword argument <code>stream=True</code> and then name the specific page in each PDF that contains the information we are after. By default, <code>read_pdf</code> returns a list of dataframes, so we just save the first element from the list, which is the report we are interested in.</p>
-<p><em>Note:</em> if you are using WSL, depending on your settings, you may the <code>Exception in thread &quot;main&quot; java.awt.AWTError: Can't connect to X11 window server using '172.17.16.17:0' as the value of the DISPLAY variable.</code> error when running <code>read_pdf</code>. This is fixed by having an X11 server running.</p>
+<p><em>Note:</em> if you are using WSL, depending on your settings, you may get the error <code>Exception in thread &quot;main&quot; java.awt.AWTError: Can't connect to X11 window server using 'XXX.XXX.XXX.XXX:0' as the value of the DISPLAY variable.</code> error when running <code>read_pdf</code>. This is fixed by having an X11 server running.</p>
 <pre><code class="language-python">import tabula
 import pandas as pd
 
@@ -690,7 +706,7 @@ source_df = {year : tabula.read_pdf(report[year]['url'], stream=True, pages=repo
              for year in report.keys()}
 </code></pre>
 <p>And that&rsquo;s it in principle. How cool is that! Of course, we still need to clean our data a little bit.</p>
-<h2 id="cleaning-the-data">Cleaning the Data</h2>
+<h3 id="cleaning-the-data">Cleaning the Data</h3>
 <p>Let&rsquo;s take a look at the first and last few entries of the 2020 report:</p>
 <pre><code class="language-python">pd.concat([source_df['2020'].head(), 
            source_df['2020'].tail()])
@@ -888,7 +904,7 @@ source_df[&quot;2020&quot;].head()  # show the result of our edits so far
   </tbody>
 </table>
 </div>
-<p>Looks like we&rsquo;re almost done! Let&rsquo;s drop the unnecessary columns to and check our remaining column names:</p>
+<p>Looks like we&rsquo;re almost done! Let&rsquo;s drop the unnecessary columns and check our remaining column names:</p>
 <pre><code class="language-python">for year, df in source_df.items():
     df.drop(df.columns[3:], axis=1, inplace=True)
     print(f&quot;{year}:\t{df.columns}&quot;)
@@ -907,7 +923,7 @@ for year, df in source_df.items():
             df.columns[2] : re.sub(r&quot;\d{2}-&quot;, '', df.columns[2]),
         }, 
                   inplace=True)
-    # always print the output for verification
+    # print the output for verification
     print(f&quot;{year}:\t{df.columns}&quot;)
 </code></pre>
 <pre><code>2020:	Index(['State', 'Salary 2019', 'Salary 2020'], dtype='object')
@@ -993,7 +1009,7 @@ merge_df.head()
 <h3 id="numeric-conversion">Numeric Conversion</h3>
 <p>We&rsquo;re almost done! Notice that we still have not dealt with the fact that every column is still treated as a string. Before we can use the <code>to_numeric</code> function, we still need to take care of two issues:</p>
 <ul>
-<li>The commas in the numbers. While they are nice for us human eyes, Pandas doesn&rsquo;t like them.</li>
+<li>The commas in the numbers. While they are nice for our human eyes, Pandas doesn&rsquo;t like them.</li>
 <li>In the 2017 salary column, there appears to be extraneous white space after the first digit for some entries.</li>
 </ul>
 <p>Luckily, both of these problems can be remedied with a simple string replacement operation.</p>
@@ -1090,9 +1106,7 @@ for col in merge_df.columns[1:]:
 </table>
 </div>
 <h2 id="table-b-6">Table B-6</h2>
-<p>As mentioned above, table B-6 in the 2020 Report presents slightly greater challenges. A lot of the cleaning is similar or identical, so I will not reproduce it in full. Instead, I have created loaded and subsetted part of table B-6 and I will show how this can be cleaned up as well. But first, let&rsquo;s look at the first several entries:</p>
-<pre><code class="language-python">b6
-</code></pre>
+<p>As mentioned above, table B-6 in the 2020 Report presents slightly greater challenges. A lot of the cleaning is similar or identical, so I will not reproduce it in full. Instead, I have loaded a subsetted part of table B-6 and will show how this can be cleaned up as well. But first, let&rsquo;s look at the first several entries:</p>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1178,8 +1192,6 @@ for col in merge_df.columns[1:]:
 <pre><code class="language-python">b6.iloc[:,1:] = b6.iloc[:,1:].replace(r&quot;([\d,]+).*&quot;, r&quot;\1&quot;, regex=True)
 </code></pre>
 <p>And now we&rsquo;re back to where we were above before we did the string conversion. This is what it looks like after also dropping the first row and renaming the columns:</p>
-<pre><code class="language-python">b6
-</code></pre>
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
