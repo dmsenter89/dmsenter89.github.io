@@ -208,6 +208,44 @@
 
 
 
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88798177-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-88798177-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
   
 
 
@@ -540,6 +578,8 @@
   <h2>Latest</h2>
   <ul>
     
+      <li><a href="/post/20-11-north-carolina-housing/">North Carolina Housing Data</a></li>
+    
       <li><a href="/post/20-10-tabula/">Teacher Salaries</a></li>
     
       <li><a href="/post/20-08-census-api/">Accessing Census Data via API</a></li>
@@ -557,8 +597,6 @@
       <li><a href="/project/clap-and-fling/">Clap and Fling</a></li>
     
       <li><a href="/project/meshmerizeme/">MeshmerizeMe</a></li>
-    
-      <li><a href="/publication/hohenegger-2017-mean/">Mean first passage time in a thermally fluctuating viscoelastic fluid</a></li>
     
   </ul>
   

@@ -5,12 +5,20 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 29 Oct 2020 22:39:00 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Nov 2020 10:10:01 -0500</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>North Carolina Housing Data</title>
+      <link>https://dmsenter89.github.io/post/20-11-north-carolina-housing/</link>
+      <pubDate>Fri, 06 Nov 2020 10:10:01 -0500</pubDate>
+      <guid>https://dmsenter89.github.io/post/20-11-north-carolina-housing/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Teacher Salaries</title>
