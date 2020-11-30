@@ -27,7 +27,7 @@
   
     
   
-  <meta name="description" content="In this post, we will be creating an updated version of Kaggle&#39;s California Housing Prices data set using North Carolina instead.">
+  <meta name="description" content="A popular beginners machine learning problem is the prediction of housing prices. A frequently used data set for this purpose uses housing prices in California along some additional gathered through the 1990 Census.">
 
   
   <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/20-11-north-carolina-housing/">
@@ -276,13 +276,13 @@
   <meta property="og:site_name" content="Michael&#39;s Site">
   <meta property="og:url" content="https://dmsenter89.github.io/post/20-11-north-carolina-housing/">
   <meta property="og:title" content="North Carolina Housing Data | Michael&#39;s Site">
-  <meta property="og:description" content="In this post, we will be creating an updated version of Kaggle&#39;s California Housing Prices data set using North Carolina instead."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:description" content="A popular beginners machine learning problem is the prediction of housing prices. A frequently used data set for this purpose uses housing prices in California along some additional gathered through the 1990 Census."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
       <meta property="article:published_time" content="2020-11-06T10:10:01-05:00">
     
-    <meta property="article:modified_time" content="2020-11-06T10:10:01-05:00">
+    <meta property="article:modified_time" content="2020-11-30T10:10:01-05:00">
   
 
   
@@ -311,7 +311,7 @@
   "headline": "North Carolina Housing Data",
   
   "datePublished": "2020-11-06T10:10:01-05:00",
-  "dateModified": "2020-11-06T10:10:01-05:00",
+  "dateModified": "2020-11-30T10:10:01-05:00",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "In this post, we will be creating an updated version of Kaggle's California Housing Prices data set using North Carolina instead."
+  "description": "A popular beginners machine learning problem is the prediction of housing prices. A frequently used data set for this purpose uses housing prices in California along some additional gathered through the 1990 Census."
 }
 </script>
 
@@ -644,8 +644,10 @@
     
     
       
+          Last updated on
+      
     
-    Nov 6, 2020
+    Nov 30, 2020
   </span>
   
 
@@ -654,7 +656,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    0 min read
+    8 min read
   </span>
   
 
@@ -690,7 +692,166 @@
   <div class="article-container">
 
     <div class="article-style">
-      
+      <p>A popular beginners machine learning problem is the prediction of housing prices. A frequently used data set for this purpose uses housing prices in California along some additional  gathered through the 1990 Census. One such data set is available 
+<a href="https://www.kaggle.com/camnugent/california-housing-prices" target="_blank" rel="noopener">here</a> at Kaggle. Unfortunately, that data set is rather old. And I live in North Carolina, not California! So I figured I might as well create a new housing data set, but this time with more up-to-date information and using North Carolina as the state to be analyzed. One thing that may be interesting about North Carlina as compared to California is the position of major populations centers. In California, major population centers are near the beach, while major population centers in North Carolina are in the interior of the state. Both large citites and proximity to the beach tend to correlate with higher housing prices. In California, unlike in North Carolina, both of these go together.</p>
+<p>This post will describe the Kaggle data set with California housing prices and then walk you through how the relevant data can be acquired from the Census Bureau. I&rsquo;ll also show how to clean the data. For those who just want to explore the complete data set, I have made it available for download <a href="/files/NC_Housing_Prices_2018.csv" target="_blank">here</a>.</p>
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-source-data-set">The Source Data Set</a></li>
+    <li><a href="#acquiring-the-census-data-set">Acquiring the Census Data Set</a>
+      <ul>
+        <li><a href="#census-variables">Census Variables</a></li>
+        <li><a href="#geography-considerations">Geography Considerations</a></li>
+      </ul>
+    </li>
+    <li><a href="#acquiring-location-data">Acquiring Location Data</a></li>
+    <li><a href="#data-merge-with-geoid-matching">Data Merge with GEOID Matching</a></li>
+    <li><a href="#data-cleaning">Data Cleaning</a></li>
+  </ul>
+</nav>
+<h2 id="the-source-data-set">The Source Data Set</h2>
+<p>The geographic unit of the Kaggle data set is the Census block group, which means we will have several thousand data points for our analysis. For a good big-picture overview of Census geography divisions, see this 
+<a href="https://pitt.libguides.com/uscensus/understandinggeography" target="_blank" rel="noopener">post</a> from the University of Pittsburgh library. The data set&rsquo;s ten columns contain geographic, housing, and Census information that can be broken down as follows:</p>
+<ul>
+<li>geographic information
+<ul>
+<li>longitude</li>
+<li>latitude</li>
+<li>ocean proximity</li>
+</ul>
+</li>
+<li>housing information
+<ul>
+<li>median age of homes</li>
+<li>median value of homes</li>
+<li>total number of rooms in area</li>
+<li>total number of bedrooms in the area</li>
+</ul>
+</li>
+<li>Census information
+<ul>
+<li>population</li>
+<li>number of households</li>
+<li>median income</li>
+</ul>
+</li>
+</ul>
+<p>Most of these exist directly in the Census API data that we have 
+<a href="https://dmsenter89.github.io/post/20-08-census-api/">covered previously</a>. The ocean proximity variable is a categorical giving approximate distance from the beach. My data set will not include this last categorical variable.</p>
+<h2 id="acquiring-the-census-data-set">Acquiring the Census Data Set</h2>
+<h3 id="census-variables">Census Variables</h3>
+<p>The first, and most time consuming aspect, is to figure out where the data we want is located. We know that the US has a decennial census, so accurate information is available every ten years at every level of geography that the Census Bureau tracks. Since it is currently a census year 2020 and the newest information hasn&rsquo;t been tabulated yet, that means the last census count that is available is from 2010. While this is 20 years more current than the California set from 1990, it still seems a bit outdated. Luckily, since the introduction of the American Community Survey (ACS) we have annually updated information available - but not for every level of geography. Only the 5-year ACS average gives us census block-level information for the whole state, making it comparable to the Kaggle data set. The most recent of these is the 2018.</p>
+<p>I start by creating a data dictionary from the 
+<a href="https://api.census.gov/data/2018/acs/acs5/groups.html" target="_blank" rel="noopener">groups</a> and 
+<a href="https://api.census.gov/data/2018/acs/acs5/variables.html" target="_blank" rel="noopener">variables</a> pages of the &ldquo;American Community Survey: 1-Year Estimates: Detailed Tables 5-Year&rdquo; data set. Note that median home age is not directly available. Instead, we will use the median year structures were built to calculate the median home age. Our data dictionary also does not include any data for the longitude and latitude of each row. We will get that data separately.</p>
+<pre><code class="language-python">data_dictionary = {
+    'B01001_001E' : &quot;population&quot;,
+    'B11001_001E' : &quot;households&quot;,
+    'B19013_001E' : &quot;median_income&quot;, 
+    'B25077_001E' : &quot;median_house_value&quot;,
+    'B25035_001E' : &quot;median_year_structure_built&quot;,
+    'B25041_001E' : &quot;total_bedrooms&quot;,
+    'B25017_001E' : &quot;total_rooms&quot;,
+}
+</code></pre>
+<h3 id="geography-considerations">Geography Considerations</h3>
+<p>The next step is figuring out exactly what level of geography we want. Our data set goes down to the Census block level at its most granular. Unfortunately, the Census API won&rsquo;t let us pull the data for all the Census blocks in a state at once. Census tracts on the other hand can be acquired in one go. If we were to shortcut and use only tract data, this would be a pretty quick API call build:</p>
+<pre><code class="language-python">primary_geo = &quot;tract:*&quot;
+secondary_geo = &quot;state:37&quot;
+query = base_URL + &quot;?get=&quot; + &quot;,&quot;.join(data_dictionary.keys()) + f&quot;&amp;for={primary_geo}&amp;in={secondary_geo}&quot;
+</code></pre>
+<p>But let&rsquo;s try and do it for the Census blocks instead. This will require us to build a sequence of API calls that loops over a larger geographic area, say the different counties in the state, and pull in the respective census block data for that geographic unit. While the FIPS codes for the state counties are sorted alphabetically, they are not contiguous. A full listing of North Carolina county FIPS codes is availalbe 
+<a href="https://www.lib.ncsu.edu/gis/countyfips" target="_blank" rel="noopener">from NCSU here</a>. It appears to be that the county FIPS codes are three digits long, starting at <code>001</code> and go up to <code>199</code> in increments of 2, meaning only odd numbers are in the county set. So it looks like we will be using <code>range(1,200,2)</code> with zero-padding to create the list of county FIPS codes. So we could use a loop similar to this:</p>
+<pre><code class="language-python">vars_requested = &quot;,&quot;.join(data_dictionary.keys())
+
+for i in range(1,200,2):
+    geo_request = f&quot;for=block%20group:*&amp;in=state:37%20county:{i:03}&quot;
+    query = base_URL + f&quot;?get={vars_requested}&amp;{geo_request}&quot;
+</code></pre>
+<p>While practicing to write the appropriate API call, you may find it useful to give it frequent, quick tests using curl. If you are using Jupyter or IPython, you can use <code>!curl &quot;{query}&quot;</code> to test your API query. Don&rsquo;t forget the quotation marks, since the ampersand has special meaning in the shell. It may be helpful to test the output of your call at the county or city level with that reported on the 
+<a href="https://www.census.gov/quickfacts/fact/table/US/PST045219" target="_blank" rel="noopener">Census Quickfacts page</a>, if your variable is listed there. This can help make sure you are pulling the data you actually want.</p>
+<p>Now that we have figured out the loop necessary for creation of the API calls, we can put everything together and create a list of Pandas DataFrames which we then concatenate to create our master list.</p>
+<pre><code class="language-python">import pandas as pd
+import requests
+
+# create the base-URL
+host_name = &quot;https://api.census.gov/data&quot;
+year = &quot;2018&quot;
+dataset_name = &quot;acs/acs5&quot;
+base_URL = f&quot;{host_name}/{year}/{dataset_name}&quot;
+
+# build the api calls as a list
+query_vars = base_URL + &quot;?get=&quot; + &quot;,&quot;.join(list(data_dictionary.keys()) + [&quot;NAME&quot;,&quot;GEO_ID&quot;])
+api_calls = [query_vars + f&quot;&amp;for=block%20group:*&amp;in=state:37%20county:{i:03}&quot; for i in range(1,200,2) ]
+
+# running the API calls will take a moment
+rjson_list = [requests.get(call).json() for call in api_calls]
+
+# create the data frame by concatenation
+df_list = [pd.DataFrame(data[1:], columns=data[0]) for data in rjson_list]
+df = pd.concat(df_list, ignore_index=True)
+
+# save the raw output to disk
+df.to_csv(&quot;raw_census.csv&quot;, index=False)
+</code></pre>
+<p>And now we have the data set! We do still have to address the issue of our values all being imported as strings as mentioned in my 
+<a href="https://dmsenter89.github.io/post/20-08-census-api/">Census API post</a>.</p>
+<h2 id="acquiring-location-data">Acquiring Location Data</h2>
+<p>As mentioned above, we are still missing information regarding the latitude and longitude of the different block groups. The Census Bureau makes a lot of geographically coded data available on its 
+<a href="https://tigerweb.geo.census.gov/tigerwebmain/TIGERweb_main.html" target="_blank" rel="noopener">TIGERweb</a> page. You can interact with it both using a REST API and its web-interface. A page with map information exists 
+<a href="https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_ACS2018/Tracts_Blocks/MapServer/4" target="_blank" rel="noopener">here</a>.</p>
+<p>Dealing with shapefiles and the TIGERweb API can get a little complicated. Luckily, I know someone with expertise in GIS and shapefiles so we will be using a CSV file of the geographic data we need courtesy of 
+<a href="https://www.linkedin.com/in/summer-faircloth-652797137" target="_blank" rel="noopener">Summer Faircloth</a>, a GIS intern at the North Carolina Department of Transportation. She downloaded the TIGER/Line Shapefiles for the 20189 ACS 
+<a href="https://catalog.data.gov/dataset/tiger-line-shapefile-2018-state-north-carolina-current-block-group-state-based" target="_blank" rel="noopener">Block Groups</a> and 
+<a href="https://catalog.data.gov/dataset/tiger-line-shapefile-2018-state-north-carolina-current-census-tract-state-based" target="_blank" rel="noopener">Census Tracts</a> and joined the data sets in ArcMap, from where she exported our CSV file, which is now <a href="/files/BlockGroup_Tract2018.csv" target="_blank">available here</a>.</p>
+<p>We don&rsquo;t need all of the columns in the CSV file, so we will limit the import to the parts we need with the <code>usecols</code> keyword.</p>
+<pre><code class="language-python">df = pd.read_csv(&quot;raw_census.csv&quot;, dtype={})
+</code></pre>
+<pre><code class="language-python">shapedata = pd.read_csv(&quot;BlockGroup_Tract2018.csv&quot;, 
+                        dtype={&quot;GEOID&quot;: str},
+                        usecols=['GEOID','NAMELSAD','INTPTLAT','INTPTLON','NAMELSAD_1'] )
+
+shapedata = shapedata.rename(columns={'INTPTLAT' : 'latitude', 'INTPTLON' : 'longitude' })
+</code></pre>
+<h2 id="data-merge-with-geoid-matching">Data Merge with GEOID Matching</h2>
+<p>At this stage we have two data frames - the first consists of all the Census information sans the geographic coordinates of the block groups, and a second data set containing the block groups' location. Both data sets contain a GEOID column that can be used for merging. The GEOID returned by the Census API includes additional information to the regular FIPS code based GEOID used in the TIGERweb system. For example, &ldquo;1500000US370010204005&rdquo; in the census data set is actually GEOID &ldquo;370010204005&rdquo; for purposes of the TIGERweb data set. We&rsquo;ll use a string split to make our GEO_ID variable from the Census API compatible with the FIPS code based GEOID from the TIGERweb service.</p>
+<pre><code class="language-python">df[&quot;GEO_ID&quot;] = df[&quot;GEO_ID&quot;].str.split('US').str[1]
+
+df = df.merge(shapedata, left_on='GEO_ID', right_on=&quot;GEOID&quot;)
+</code></pre>
+<h2 id="data-cleaning">Data Cleaning</h2>
+<p>Now that our data set has been assembled, we can work on cleaning up the merged data set. We have the following tasks left:</p>
+<ul>
+<li>convert column data types to numeric</li>
+<li>drop unnecessary columns</li>
+<li>rename columns</li>
+<li>handle missing values</li>
+<li>calculate median age of homes</li>
+</ul>
+<pre><code class="language-python">for col in data_dictionary.keys():
+    if col not in [&quot;NAME&quot;, &quot;GEO_ID&quot;]:
+        df[col] = pd.to_numeric(df[col])
+</code></pre>
+<p>To indicate missing values, the Census API returns a value of &ldquo;-666666666&rdquo; in numeric columns. As all of our variables - except for longitude - ought to be positive, we can use the <code>mask</code> function to convert all negative values to missing. We&rsquo;ll start by filtering out the string columns that are no longer necessary.</p>
+<pre><code class="language-python"># filter down to our numerical columns
+keeps = list(data_dictionary.keys()) +[&quot;latitude&quot;, &quot;longitude&quot;]
+df = df.filter(items=keeps)
+
+# replace vals &lt; 0 with missing
+k = df.loc[:, df.columns != 'longitude']
+k = k.mask(k &lt; 0)
+df.loc[:, df.columns != 'longitude'] = k
+</code></pre>
+<p>Now that the missing values have been handled, we can go ahead and calculate our median home age.</p>
+<pre><code class="language-python">df.rename(columns=data_dictionary, inplace=True)
+df[&quot;housing_median_age&quot;] = 2018 - df[&quot;median_year_structure_built&quot;]
+df.drop(columns=&quot;median_year_structure_built&quot;, inplace=True)
+</code></pre>
+<p>And now we&rsquo;re done! We will save our output data set to disk for future analysis in a different post.</p>
+<pre><code class="language-python">df.to_csv(&quot;NC_Housing_Prices_2018.csv&quot;, index=False)
+</code></pre>
+
     </div>
 
     
