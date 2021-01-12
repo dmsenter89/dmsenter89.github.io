@@ -694,15 +694,16 @@
 development in both public and private repositories. It is also increasingly used to store
 data in text formats, see for example the 
 <a href="https://github.com/nytimes/covid-19-data" target="_blank" rel="noopener">New York Times COVID-19 data set</a>.
-In this post, I&rsquo;ll briefly demonstrate how to clone a repository with the git functions
-that are built into SAS Studio and how to use a git pull to update this data set later.</p>
-<p>Git functionality has been built-in to SAS Studio for a little while, so that there are actually
+This post will briefly demonstrate how to clone and pull updates from a GitHub repository
+using the git functions that are built into SAS Studio.</p>
+<p>Git functionality has been built into SAS Studio for a little while, so there are actually
 two slightly different iterations of the git functions. The examples in this post will use the versions
 compatible with SAS Studio 3.8, which is the current version available at SAS OnDemand for Academics.
 All git functions use the same prefix. In older versions such as SAS Studio 3.8 the prefix is <code>gitfn_</code>,
 which is followed by a git command such as &ldquo;clone&rdquo; or &ldquo;pull&rdquo;. In SAS Studio 5, the prefix has been
-simplified to just <code>git_</code>. Aside from the prefix, most git functions have the same name between the
-two versions, but a complete table is available 
+simplified to just <code>git_</code>. Most git functions have the same name between the<br>
+two versions, so that the only difference is the prefix. A complete table of the old and new
+versions of the git functions is available 
 <a href="https://go.documentation.sas.com/?cdcId=pgmsascdc&amp;cdcVersion=9.4_3.5&amp;docsetId=lefunctionsref&amp;docsetTarget=n1mlc3f9w9zh9fn13qswiq6hrta0.htm&amp;locale=en#p0evl64wd2dljrn1l43t739qtwba" target="_blank" rel="noopener">in the documentation</a>.</p>
 <p>We use the git functions by calling them in an otherwise empty DATA step. In other words, we use the
 format</p>
@@ -711,7 +712,7 @@ format</p>
 run;
 </code></pre>
 <h2 id="cloning-a-repo">Cloning a Repo</h2>
-<p>To get data from a github account we use <code>gitfn_clone</code>. It takes two arguments -
+<p>To clone a repo from github we use <code>gitfn_clone</code>. It takes two arguments -
 the URL of the repository of interest and the path to an <em>empty</em> folder. You can
 have SAS create the folder for you by using <code>OPTIONS DLCREATEDIR</code>. The basic
 syntax for the clone is as follows:</p>
@@ -722,7 +723,7 @@ syntax for the clone is as follows:</p>
     put rc=;         /* equals 0 if successful */
 run;
 </code></pre>
-<p>It doesn&rsquo;t matter if you the URL you use ends in &ldquo;.git&rdquo; or not. In other words, the
+<p>It doesn&rsquo;t matter if the URL you use ends in &ldquo;.git&rdquo; or not. In other words, the
 following two macros would both work the same:</p>
 <pre><code class="language-SAS">%LET repoURL=https://github.com/nytimes/covid-19-data;
 /* works the same as */

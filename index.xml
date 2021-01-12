@@ -21,15 +21,16 @@
 development in both public and private repositories. It is also increasingly used to store
 data in text formats, see for example the 
 &lt;a href=&#34;https://github.com/nytimes/covid-19-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Times COVID-19 data set&lt;/a&gt;.
-In this post, I&amp;rsquo;ll briefly demonstrate how to clone a repository with the git functions
-that are built into SAS Studio and how to use a git pull to update this data set later.&lt;/p&gt;
-&lt;p&gt;Git functionality has been built-in to SAS Studio for a little while, so that there are actually
+This post will briefly demonstrate how to clone and pull updates from a GitHub repository
+using the git functions that are built into SAS Studio.&lt;/p&gt;
+&lt;p&gt;Git functionality has been built into SAS Studio for a little while, so there are actually
 two slightly different iterations of the git functions. The examples in this post will use the versions
 compatible with SAS Studio 3.8, which is the current version available at SAS OnDemand for Academics.
 All git functions use the same prefix. In older versions such as SAS Studio 3.8 the prefix is &lt;code&gt;gitfn_&lt;/code&gt;,
 which is followed by a git command such as &amp;ldquo;clone&amp;rdquo; or &amp;ldquo;pull&amp;rdquo;. In SAS Studio 5, the prefix has been
-simplified to just &lt;code&gt;git_&lt;/code&gt;. Aside from the prefix, most git functions have the same name between the
-two versions, but a complete table is available 
+simplified to just &lt;code&gt;git_&lt;/code&gt;. Most git functions have the same name between the&lt;br&gt;
+two versions, so that the only difference is the prefix. A complete table of the old and new
+versions of the git functions is available 
 &lt;a href=&#34;https://go.documentation.sas.com/?cdcId=pgmsascdc&amp;amp;cdcVersion=9.4_3.5&amp;amp;docsetId=lefunctionsref&amp;amp;docsetTarget=n1mlc3f9w9zh9fn13qswiq6hrta0.htm&amp;amp;locale=en#p0evl64wd2dljrn1l43t739qtwba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in the documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;We use the git functions by calling them in an otherwise empty DATA step. In other words, we use the
 format&lt;/p&gt;
@@ -38,7 +39,7 @@ format&lt;/p&gt;
 run;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;cloning-a-repo&#34;&gt;Cloning a Repo&lt;/h2&gt;
-&lt;p&gt;To get data from a github account we use &lt;code&gt;gitfn_clone&lt;/code&gt;. It takes two arguments -
+&lt;p&gt;To clone a repo from github we use &lt;code&gt;gitfn_clone&lt;/code&gt;. It takes two arguments -
 the URL of the repository of interest and the path to an &lt;em&gt;empty&lt;/em&gt; folder. You can
 have SAS create the folder for you by using &lt;code&gt;OPTIONS DLCREATEDIR&lt;/code&gt;. The basic
 syntax for the clone is as follows:&lt;/p&gt;
@@ -49,7 +50,7 @@ syntax for the clone is as follows:&lt;/p&gt;
     put rc=;         /* equals 0 if successful */
 run;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;It doesn&amp;rsquo;t matter if you the URL you use ends in &amp;ldquo;.git&amp;rdquo; or not. In other words, the
+&lt;p&gt;It doesn&amp;rsquo;t matter if the URL you use ends in &amp;ldquo;.git&amp;rdquo; or not. In other words, the
 following two macros would both work the same:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;%LET repoURL=https://github.com/nytimes/covid-19-data;
 /* works the same as */
