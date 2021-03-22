@@ -21,6 +21,23 @@
     </item>
     
     <item>
+      <title>Metachronal Paddling</title>
+      <link>https://dmsenter89.github.io/project/metachronal-paddling/</link>
+      <pubDate>Mon, 22 Mar 2021 13:06:07 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/project/metachronal-paddling/</guid>
+      <description>&lt;p&gt;Metachronal paddling can be described as the sequential oscillation of appendages whereby adjacent paddles maintain a nearly constant phase difference.
+This mechanism is widely used in nature, both in locomotion such as swimming in crustaceans and in fluid transport such as the clearance of mucus
+in the mammalian lung. Aside from the wide range of applications, metachronal paddling can be observed across a wide range of
+Reynolds number regimes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/c/cc/Artemia_monica.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I work on simulating the hydrodynamics of metachronal paddling in brineshrimp (&lt;em&gt;Artemia&lt;/em&gt;). Brineshrimp are small aquatic
+crustaceans who lay dormat eggs and are widely used in aquaculture. Brineshrimp thoracopods are spaced closely together
+beat with a small phase difference. We are interested in the hydrodynamics and efficiency of this swimming pattern, which has not
+previously been rigorously explored.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Using Git with SAS Studio</title>
       <link>https://dmsenter89.github.io/post/git-with-sas-studio/</link>
       <pubDate>Mon, 11 Jan 2021 14:42:50 -0500</pubDate>
