@@ -1,0 +1,1723 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="D. Michael Senter">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="What do you do when your data table is in PDF format? Let&#39;s use tabula-py to extract teacher salary information from PDFs directly into Pandas dataframes. We&#39;ll also use some regex to clean up the results.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/20-10-tabula/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88798177-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-88798177-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://dmsenter89.github.io/post/20-10-tabula/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Michael&#39;s Site">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/20-10-tabula/">
+  <meta property="og:title" content="Teacher Salaries | Michael&#39;s Site">
+  <meta property="og:description" content="What do you do when your data table is in PDF format? Let&#39;s use tabula-py to extract teacher salary information from PDFs directly into Pandas dataframes. We&#39;ll also use some regex to clean up the results."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-10-29T22:39:00-04:00">
+    
+    <meta property="article:modified_time" content="2020-11-03T12:00:00-04:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://dmsenter89.github.io/post/20-10-tabula/"
+  },
+  "headline": "Teacher Salaries",
+  
+  "datePublished": "2020-10-29T22:39:00-04:00",
+  "dateModified": "2020-11-03T12:00:00-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "D. Michael Senter"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Michael's Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "What do you do when your data table is in PDF format? Let's use tabula-py to extract teacher salary information from PDFs directly into Pandas dataframes. We'll also use some regex to clean up the results."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Teacher Salaries | Michael&#39;s Site</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Michael&#39;s Site</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Michael&#39;s Site</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Teacher Salaries</h1>
+
+  
+  <p class="page-subtitle">Extracting Data from PDFs with Tabula</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    Nov 3, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>After reading a news article about teacher pay in the US, I was curious and wanted to look into the source data myself. Unfortunately, the source that was mentioned was a publication by the 
+<a href="https://www.nea.org/" target="_blank" rel="noopener">National Education Association (NEA)</a> which had the data as tables embedded inside a PDF report. As those who know me can attest, I don&rsquo;t like hand-copying data. It is slow and error-prone. Instead, I decided to use the tabula package to extract the information from the PDFs directly into a Pandas dataframe. In this post, I will show you how to extract the data and how to clean it up for analysis.</p>
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#the-data-source">The Data Source</a></li>
+    <li><a href="#loading-the-data">Loading the Data</a>
+      <ul>
+        <li><a href="#cleaning-the-data">Cleaning the Data</a></li>
+        <li><a href="#numeric-conversion">Numeric Conversion</a></li>
+      </ul>
+    </li>
+    <li><a href="#table-b-6">Table B-6</a></li>
+  </ul>
+</nav>
+<h2 id="the-data-source">The Data Source</h2>
+<p>Several years worth of data are available in PDF form on the 
+<a href="https://www.nea.org/research-publications" target="_blank" rel="noopener">NEA website</a>. Reading through the technical notes, they highlight that they did not collect all of their own salary information. Some states' information is calculated from the American Community Survey (ACS) done by the Census Bureau - a great resource whose API I have covered in a 
+<a href="https://dmsenter89.github.io/post/20-08-census-api/">different post</a>. Each report includes accurate data for the previous school year, as well as estimates for the current school year. As of this post, the newest report is the 2020 report which includes data for the the 2018-2019 school year, as well as estimates of the 2019-2020 school year.</p>
+<p>The 2020 report has the desired teacher salary information in two separate locations. One is in table B-6 on page 26 of the PDF, which shows a ranking of the different states' average salary in addition to the average salary:</p>
+<p><img src="table_B-6.PNG" alt=""></p>
+<p>A second location is in table E-7 on page 46, which gives salary data for the completed school year as well as different states' estimates for the 2019-2020 school year:</p>
+<p><img src="table_E-7.PNG" alt=""></p>
+<p>Note that table E-7 lacks the star-annotation marking NEA estimated values. This, and the lack of the ranking column, makes Table E-7 easier to parse. In the main example below, this will be the source of the five years of data. I will however also show how to parse table B-6 at the end of this post for completion.</p>
+<h2 id="loading-the-data">Loading the Data</h2>
+<p>As of October 2020, the NEA site has five years worth of reports online. Unfortunately, these are not labeled consistently for all five years. Similarly the page numbers differ for each report. Prior to the 2018 report, inconsistent formats were used for the tables which require previous years to be parsed separately from the newer tables. For this reason, I&rsquo;ll make a dictionary for the 2018-2020 reports only, which will simplify the example below.</p>
+<pre><code class="language-python">report = {
+    '2020' : {
+        'url'  : &quot;https://www.nea.org/sites/default/files/2020-10/2020%20Rankings%20and%20Estimates%20Report.pdf&quot;,
+        'page' : 46,
+    },
+    '2019' : {
+        'url'  : &quot;https://www.nea.org/sites/default/files/2020-06/2019%20Rankings%20and%20Estimates%20Report.pdf&quot;,
+        'page' : 49,
+    },
+    '2018' : {
+        'url'  : &quot;https://www.nea.org/sites/default/files/2020-07/180413-Rankings_And_Estimates_Report_2018.pdf&quot;,
+        'page' : 51,
+    },
+}
+</code></pre>
+<p>We can now use dictionary comprehension to fill in a dictionary with all the source tables of interest. We will be using the tabula package to extract data from the PDFs. If you don&rsquo;t have it installed, you can use <code>pip install tabula-py</code> to get a copy. The method that reads in a PDF is aptly called <code>read_pdf</code>. It&rsquo;s first argument is a file path to the PDF. Since we want to use a URL, we will use the keyword argument <code>stream=True</code> and then name the specific page in each PDF that contains the information we are after. By default, <code>read_pdf</code> returns a list of dataframes, so we just save the first element from the list, which is the report we are interested in.</p>
+<p><em>Note:</em> if you are using WSL, depending on your settings, you may get the error <code>Exception in thread &quot;main&quot; java.awt.AWTError: Can't connect to X11 window server using 'XXX.XXX.XXX.XXX:0' as the value of the DISPLAY variable.</code> error when running <code>read_pdf</code>. This is fixed by having an X11 server running.</p>
+<pre><code class="language-python">import tabula
+import pandas as pd
+
+source_df = {year : tabula.read_pdf(report[year]['url'], stream=True, pages=report[year]['page'])[0] 
+             for year in report.keys()}
+</code></pre>
+<p>And that&rsquo;s it in principle. How cool is that! Of course, we still need to clean our data a little bit.</p>
+<h3 id="cleaning-the-data">Cleaning the Data</h3>
+<p>Let&rsquo;s take a look at the first and last few entries of the 2020 report:</p>
+<pre><code class="language-python">pd.concat([source_df['2020'].head(), 
+           source_df['2020'].tail()])
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>2018-19</th>
+      <th>2019-20</th>
+      <th>From 2018-19 to 2019-20</th>
+      <th>From 2010-11 to 2019-20 (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>State</td>
+      <td>Salary($)</td>
+      <td>Salary($)</td>
+      <td>Change(%)</td>
+      <td>Current Dollar Constant Dollar</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>52,009</td>
+      <td>54,095</td>
+      <td>4.01</td>
+      <td>13.16 -2.58</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alaska</td>
+      <td>70,277</td>
+      <td>70,877</td>
+      <td>0.85</td>
+      <td>15.36 -0.69</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arizona</td>
+      <td>50,353</td>
+      <td>50,381</td>
+      <td>0.06</td>
+      <td>8.03 -7.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Arkansas</td>
+      <td>49,438</td>
+      <td>49,822</td>
+      <td>0.78</td>
+      <td>8.31 -6.75</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>Washington</td>
+      <td>73,049</td>
+      <td>72,965</td>
+      <td>-0.11</td>
+      <td>37.86 18.69</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>West Virginia</td>
+      <td>47,681</td>
+      <td>50,238</td>
+      <td>5.36</td>
+      <td>13.51 -2.28</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>Wisconsin</td>
+      <td>58,277</td>
+      <td>59,176</td>
+      <td>1.54</td>
+      <td>9.17 -6.02</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>Wyoming</td>
+      <td>58,861</td>
+      <td>59,014</td>
+      <td>0.26</td>
+      <td>5.19 -9.44</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>United States</td>
+      <td>62,304</td>
+      <td>63,645</td>
+      <td>2.15</td>
+      <td>14.14 -1.73</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>We see that each column is treated as a string object (which you can confirm by running <code>source_df['2020'].dtypes</code>) and that the first row of data is actually at index 1 due to the fact that the PDF report used a two-row header. This means we can safely drop the first row of every dataframe. We can also drop the last row of every dataframe since that just contains summary data of the US as a whole, which we can easily regenerate as necessary. So row indices 0 and 52 can go for all of our data sets.</p>
+<pre><code class="language-python">for df in source_df.values():
+    df.drop([0, 52], inplace=True)
+</code></pre>
+<p>Next up I&rsquo;d like to fix the column names. The fist column is clearly the name of the state (except in the case of Washington D.C.), while the next two columns give the years for which the salary information is given. Let&rsquo;s rename the second and third columns according to the pattern <code>Salary %YYYY-YY</code> using Python&rsquo;s f-string syntax.</p>
+<pre><code class="language-python">for df in source_df.values():
+    df.rename(columns={
+        df.columns[0] : &quot;State&quot;,
+        df.columns[1] : f&quot;Salary {str(df.columns[1])}&quot;,
+        df.columns[2] : f&quot;Salary {str(df.columns[2])}&quot;,
+    }, 
+              inplace=True)
+    
+source_df[&quot;2020&quot;].head()  # show the result of our edits so far
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Salary 2018-19</th>
+      <th>Salary 2019-20</th>
+      <th>From 2018-19 to 2019-20</th>
+      <th>From 2010-11 to 2019-20 (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>52,009</td>
+      <td>54,095</td>
+      <td>4.01</td>
+      <td>13.16 -2.58</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alaska</td>
+      <td>70,277</td>
+      <td>70,877</td>
+      <td>0.85</td>
+      <td>15.36 -0.69</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arizona</td>
+      <td>50,353</td>
+      <td>50,381</td>
+      <td>0.06</td>
+      <td>8.03 -7.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Arkansas</td>
+      <td>49,438</td>
+      <td>49,822</td>
+      <td>0.78</td>
+      <td>8.31 -6.75</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>California</td>
+      <td>83,059</td>
+      <td>84,659</td>
+      <td>1.93</td>
+      <td>24.74 7.39</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Looks like we&rsquo;re almost done! Let&rsquo;s drop the unnecessary columns and check our remaining column names:</p>
+<pre><code class="language-python">for year, df in source_df.items():
+    df.drop(df.columns[3:], axis=1, inplace=True)
+    print(f&quot;{year}:\t{df.columns}&quot;)
+</code></pre>
+<pre><code>2020:	Index(['State', 'Salary 2018-19', 'Salary 2019-20'], dtype='object')
+2019:	Index(['State', 'Salary 2017-18', 'Salary 2018-19'], dtype='object')
+2018:	Index(['State', 'Salary 2017', 'Salary 2018'], dtype='object')
+</code></pre>
+<p>We can see that the column naming scheme in 2018 was different than in the previous reports. To make them all compatible for our merge, we&rsquo;re going to have to do some more editing. Based on the other reports, it appears as though the 2018 report used the calendar year of the <em>end</em> of the school year, while the others utilized a range. This can easily be solved using regex substitution. We&rsquo;ll do that now.</p>
+<pre><code class="language-python">import re
+
+for year, df in source_df.items():
+    if year != &quot;2018&quot;:
+        df.rename(columns={
+            df.columns[1] : re.sub(r&quot;\d{2}-&quot;, '', df.columns[1]),
+            df.columns[2] : re.sub(r&quot;\d{2}-&quot;, '', df.columns[2]),
+        }, 
+                  inplace=True)
+    # print the output for verification
+    print(f&quot;{year}:\t{df.columns}&quot;)
+</code></pre>
+<pre><code>2020:	Index(['State', 'Salary 2019', 'Salary 2020'], dtype='object')
+2019:	Index(['State', 'Salary 2018', 'Salary 2019'], dtype='object')
+2018:	Index(['State', 'Salary 2017', 'Salary 2018'], dtype='object')
+</code></pre>
+<p>Now that everything works, we can do our merge to create a single dataframe with the information for all of the school years we have downloaded.</p>
+<pre><code class="language-python">merge_df = source_df[&quot;2018&quot;].drop([&quot;Salary 2018&quot;], axis=1).merge(
+                    source_df[&quot;2019&quot;].drop([&quot;Salary 2019&quot;], axis=1)).merge(
+                    source_df[&quot;2020&quot;])
+
+merge_df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Salary 2017</th>
+      <th>Salary 2018</th>
+      <th>Salary 2019</th>
+      <th>Salary 2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alabama</td>
+      <td>50,391</td>
+      <td>50,568</td>
+      <td>52,009</td>
+      <td>54,095</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alaska</td>
+      <td>6 8,138</td>
+      <td>69,682</td>
+      <td>70,277</td>
+      <td>70,877</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Arizona</td>
+      <td>4 7,403</td>
+      <td>48,723</td>
+      <td>50,353</td>
+      <td>50,381</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arkansas</td>
+      <td>4 8,304</td>
+      <td>50,544</td>
+      <td>49,438</td>
+      <td>49,822</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>California</td>
+      <td>7 9,128</td>
+      <td>80,680</td>
+      <td>83,059</td>
+      <td>84,659</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h3 id="numeric-conversion">Numeric Conversion</h3>
+<p>We&rsquo;re almost done! Notice that we still have not dealt with the fact that every column is still treated as a string. Before we can use the <code>to_numeric</code> function, we still need to take care of two issues:</p>
+<ul>
+<li>The commas in the numbers. While they are nice for our human eyes, Pandas doesn&rsquo;t like them.</li>
+<li>In the 2017 salary column, there appears to be extraneous white space after the first digit for some entries.</li>
+</ul>
+<p>Luckily, both of these problems can be remedied with a simple string replacement operation.</p>
+<pre><code class="language-python">merge_df.iloc[:,1:] = merge_df.iloc[:,1:].replace(r&quot;[,| ]&quot;, '', regex=True)
+
+for col in merge_df.columns[1:]:
+    merge_df[col] = pd.to_numeric(merge_df[col])
+</code></pre>
+<p>Now we&rsquo;re done! We have created an overview of annual teacher salaries from the 2016-17 school year until 2019-20 extracted from a series of PDFs published by the NEA. We have cleaned up the data and converted everything to numerical values. We can now get summary statistics and do any analysis of interest with this data.</p>
+<pre><code class="language-python">merge_df.describe() # summary stats of our numeric columns
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Salary 2017</th>
+      <th>Salary 2018</th>
+      <th>Salary 2019</th>
+      <th>Salary 2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>51.000000</td>
+      <td>51.000000</td>
+      <td>51.000000</td>
+      <td>51.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>56536.196078</td>
+      <td>57313.039216</td>
+      <td>58983.254902</td>
+      <td>60170.647059</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>9569.444674</td>
+      <td>9795.914601</td>
+      <td>10286.843230</td>
+      <td>10410.259274</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>42925.000000</td>
+      <td>44926.000000</td>
+      <td>45105.000000</td>
+      <td>45192.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>49985.000000</td>
+      <td>50451.500000</td>
+      <td>51100.500000</td>
+      <td>52441.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>54308.000000</td>
+      <td>53815.000000</td>
+      <td>54935.000000</td>
+      <td>57091.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>61038.000000</td>
+      <td>61853.000000</td>
+      <td>64393.500000</td>
+      <td>66366.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>81902.000000</td>
+      <td>84227.000000</td>
+      <td>85889.000000</td>
+      <td>87543.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="table-b-6">Table B-6</h2>
+<p>As mentioned above, table B-6 in the 2020 Report presents slightly greater challenges. A lot of the cleaning is similar or identical, so I will not reproduce it in full. Instead, I have loaded a subsetted part of table B-6 and will show how this can be cleaned up as well. But first, let&rsquo;s look at the first several entries:</p>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>2017-18 (Revised)</th>
+      <th>2018-19</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>State</td>
+      <td>Salary($) Rank</td>
+      <td>Salary($)</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>50,568 36</td>
+      <td>52,009</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alaska</td>
+      <td>69,682 7</td>
+      <td>70,277</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arizona</td>
+      <td>48,315 45</td>
+      <td>50,353</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Arkansas</td>
+      <td>49,096 44</td>
+      <td>49,438</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>California</td>
+      <td>80,680 2</td>
+      <td>83,059 *</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Colorado</td>
+      <td>52,695 32</td>
+      <td>54,935</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Connecticut</td>
+      <td>74,517 * 5</td>
+      <td>76,465 *</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Delaware</td>
+      <td>62,422 13</td>
+      <td>63,662</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>We can see that there is an additional hurdle compared to the previous tables: the second column now contains data from two columns, both the Salary information as well as a ranking of the salary as it compares to the different states. For a few states, there is additionally a &lsquo;*&rsquo; to denote values that were estimated as opposed to received. We can again use a simple regex replace together with a capture group to parse out only those values that we are interested in, while dropping the extraneous information using the code below.</p>
+<pre><code class="language-python">b6.iloc[:,1:] = b6.iloc[:,1:].replace(r&quot;([\d,]+).*&quot;, r&quot;\1&quot;, regex=True)
+</code></pre>
+<p>And now we&rsquo;re back to where we were above before we did the string conversion. This is what it looks like after also dropping the first row and renaming the columns:</p>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>State</th>
+      <th>Salary 2018</th>
+      <th>Salary 2019</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Alabama</td>
+      <td>50,568</td>
+      <td>52,009</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Alaska</td>
+      <td>69,682</td>
+      <td>70,277</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Arizona</td>
+      <td>48,315</td>
+      <td>50,353</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Arkansas</td>
+      <td>49,096</td>
+      <td>49,438</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>California</td>
+      <td>80,680</td>
+      <td>83,059</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>Colorado</td>
+      <td>52,695</td>
+      <td>54,935</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Connecticut</td>
+      <td>74,517</td>
+      <td>76,465</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>Delaware</td>
+      <td>62,422</td>
+      <td>63,662</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>From here on out, we can proceed as in the previous example.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/20-10-tabula/&amp;text=Teacher%20Salaries" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/20-10-tabula/&amp;t=Teacher%20Salaries" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Teacher%20Salaries&amp;body=https://dmsenter89.github.io/post/20-10-tabula/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/20-10-tabula/&amp;title=Teacher%20Salaries" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Teacher%20Salaries%20https://dmsenter89.github.io/post/20-10-tabula/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/20-10-tabula/&amp;title=Teacher%20Salaries" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/d.-michael-senter/avatar_hu9d01c61c86bcbccf229bab33cc03765b_1162188_270x270_fill_q90_lanczos_center.jpg" alt="D. Michael Senter">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://dmsenter89.github.io/">D. Michael Senter</a></h5>
+        <h6 class="card-subtitle">PhD Candidate in Applied Mathematics</h6>
+        <p class="card-text">My research interests include computational fluid dynamics, big data analytics, and machine learning.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=DPyUrhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/dmsenter89" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/MyCV.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/sas.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/matlab.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/mathematica.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/julia.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
