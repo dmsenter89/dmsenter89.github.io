@@ -5,12 +5,96 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 Jan 2021 14:42:50 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 09 Jun 2021 16:00:34 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Census 2020 Population Estimates Updated</title>
+      <link>https://dmsenter89.github.io/post/21-06-covid-county-incidence/</link>
+      <pubDate>Wed, 09 Jun 2021 16:00:34 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-06-covid-county-incidence/</guid>
+      <description>&lt;p&gt;The Census Bureau has updated its population estimates for 2020 with county level data. This means any
+projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates.&lt;/p&gt;
+&lt;p&gt;This is particularly useful for those of us who have been trying to track the development of COVID-19. The
+average incidence rates are typically rescaled to new cases per 100,000 people. Previous graphs and maps I
+have created used the 2019 estimates. I have now updated my code for mapping North Carolina developments to
+use the 2020 estimates.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-county-level-data-for-north-carolina-using-the-nyt-covid-data-set-date-set-to-june-8-2021&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-06-covid-county-incidence/nc_avg_incidence_08jun2021_hu8396d2a41a978826522d96cfe881f35d_68326_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;County level data for North Carolina using the NYT COVID data set. Date set to June 8, 2021.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-06-covid-county-incidence/nc_avg_incidence_08jun2021_hu8396d2a41a978826522d96cfe881f35d_68326_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    County level data for North Carolina using the NYT COVID data set. Date set to June 8, 2021.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Below this post is my code for loading the necessary data using SAS.
+Note that I&amp;rsquo;m using a macro called &lt;code&gt;mystate&lt;/code&gt; that can be set to the statecode abbreviation of your choice.
+The conditional &lt;code&gt;County ne 0&lt;/code&gt; is in the code because the county level CSV includes both the county data as
+well as the totals for each state.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;
+filename popdat url &#39;https://www2.census.gov/programs-surveys/popest/datasets/2010-2020/counties/totals/co-est2020-alldata.csv&#39;;
+
+data censusdata;
+	infile POPDAT delimiter=&#39;,&#39; MISSOVER DSD lrecl=32767 firstobs=2;
+	informat SUMLEV REGION DIVISION State County best32.
+                         STNAME $20. CTYNAME $35. 
+		CENSUS2010POP ESTIMATESBASE2010 POPESTIMATE2010-POPESTIMATE2020 best32.;
+	format SUMLEV REGION DIVISION STATE best32. COUNTY 5. STNAME $20. CTYNAME $35. 
+		CENSUS2010POP ESTIMATESBASE2010 POPESTIMATE2010-POPESTIMATE2020 
+		COMMA12. StateCode $2.;
+	input SUMLEV REGION DIVISION STATE COUNTY STNAME $ CTYNAME $
+                        CENSUS2010POP ESTIMATESBASE2010 
+		POPESTIMATE2010-POPESTIMATE2020;
+
+	if (State ne 0) and (State ne 72) then
+		do;
+			FIPS=put(State, Z2.);
+			Statecode=fipstate(FIPS);
+
+			if Statecode eq &amp;amp;mystate and County ne 0 then
+				output;
+		end;
+	keep STNAME CTYNAME County FIPS Statecode Popestimate2020;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The media release can be 
+&lt;a href=&#34;https://www.census.gov/newsroom/press-releases/2021/2020-vintage-population-estimates.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;viewed here&lt;/a&gt;. The county-level data set can be downloaded 
+&lt;a href=&#34;https://www.census.gov/programs-surveys/popest/technical-documentation/research/evaluation-estimates/2020-evaluation-estimates/2010s-counties-total.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;at this page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Using Git with SAS Studio</title>
