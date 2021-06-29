@@ -5,12 +5,34 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 09 Jun 2021 16:00:34 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 29 Jun 2021 10:57:05 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>SASPy Video Tutorial</title>
+      <link>https://dmsenter89.github.io/post/2021-06-youtube-tutorial/</link>
+      <pubDate>Tue, 29 Jun 2021 10:57:05 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/2021-06-youtube-tutorial/</guid>
+      <description>&lt;p&gt;I have been using both SAS and Python extensively for a while now. With each having great features, it was very useful to combine my
+skills in both languages by seamlessly moving between SAS and Python in
+a single notebook. In the video below, fellow SAS intern Ariel Chien and I show how easy it is to connect the SAS and Python kernels using the open-source SASPy package together with SAS OnDemand for Academics.
+I hope you will also find that this adds to your workflow!&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/6mcsbeKwSqM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The Jupyter notebook from the video can be viewed 
+&lt;a href=&#34;https://github.com/sascommunities/sas-howto-tutorials/tree/master/sastopython&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;on GitHub&lt;/a&gt;. For installation instructions, check out the 
+&lt;a href=&#34;https://github.com/sassoftware/saspy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SASPy GitHub page&lt;/a&gt;. Configuration for SASPy to connect to ODA can be found 
+&lt;a href=&#34;https://support.sas.com/ondemand/saspy.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;at this support page&lt;/a&gt;. For more information on SAS OnDemand for Academics, 
+&lt;a href=&#34;https://www.sas.com/en_us/software/on-demand-for-academics.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;click here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Census 2020 Population Estimates Updated</title>
