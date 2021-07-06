@@ -85,6 +85,8 @@ and the appropriate labels in column 2. So an AWK script to print the appropriat
 labels can be written like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;awk -F &#39;[[:space:]][[:space:]]+&#39; &#39;{printf &amp;quot;\t%s=\&amp;quot;%s\&amp;quot;\n&amp;quot;, $1, $2}&#39; FILE.DAT
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is what everything looks like given our code:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;label.PNG&#34; alt=&#34;Sample Code returned by AWK.&#34; title=&#34;Sample Code returned by AWK.&#34;&gt;&lt;/p&gt;
 &lt;h3 id=&#34;the-input-statement&#34;&gt;The INPUT STATEMENT&lt;/h3&gt;
 &lt;p&gt;The INPUT statement can be made in a similar way, it just requires some minor tweaking as
 INPUT can be a bit more complex to handle a variety of data, see the 
@@ -97,6 +99,9 @@ type. Then the few lines that need adjustment can be manually adjusted. The corr
 look like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;awk -F &#39;[[:space:]][[:space:]]+&#39; &#39;{printf &amp;quot;\t@%s %s $%s. /*%s - %s*/\n&amp;quot;,$4, $1, $5, $3, $2}&#39; FILE.DAT
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is what is returned by our code (highlighted part has been manually edited):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;input.PNG&#34; alt=&#34;Sample Code returned by AWK.&#34; title=&#34;Sample Code returned by AWK.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I hope you all find this useful and that it will save you some typing!&lt;/p&gt;
 </description>
     </item>
     
