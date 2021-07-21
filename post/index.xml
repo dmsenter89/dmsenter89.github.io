@@ -5,12 +5,31 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 06 Jul 2021 10:38:27 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 21 Jul 2021 08:49:52 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Making VS Code and Python Play Nice on Windows</title>
+      <link>https://dmsenter89.github.io/post/21-07-vsc-python-fix/</link>
+      <pubDate>Wed, 21 Jul 2021 08:49:52 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-07-vsc-python-fix/</guid>
+      <description>&lt;p&gt;One of the editors I use regularly is VS Code. I work a lot with Python, but when installing Anaconda
+using default settings on a Windows machine already having VSC installed there&amp;rsquo;s a good chance you&amp;rsquo;ll run into
+an issue. When attempting to run Python code straight from VSC you may get an error. This should be fixed
+on some newer versions of Anaconda, but I&amp;rsquo;ve needed to do something about it often enough I feel it&amp;rsquo;s
+useful to save the solution 
+&lt;a href=&#34;https://stackoverflow.com/users/1072989/janh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;janh&lt;/a&gt; posted on
+
+&lt;a href=&#34;https://stackoverflow.com/questions/54828713/working-with-anaconda-in-visual-studio-code&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StackExchange&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Specifically, the issue can be fixed by manually changing VSC&amp;rsquo;s default shell from PowerShell to CMD.
+Just open the command palette (CTRL+SHIFT+P), search &amp;ldquo;Terminal: Select Default Profile&amp;rdquo; and switch to
+&amp;ldquo;Command Prompt&amp;rdquo;. Everything should work as expected from now on!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Making INPUT and LABEL Statements with AWK</title>
