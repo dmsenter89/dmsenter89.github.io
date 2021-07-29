@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Analytics Software Tester">
+  <meta name="description" content="I find myself needing to import CSV files with a relatively large number of columns. In many cases, proc import works surprisingly well in giving me what I want. But sometimes, I need to do some work while reading in the file and it would be nice to just use a data step to do so, but I don&rsquo;t want to type it in by hand.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/404.html">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/404.html">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/">
 
   
   
@@ -274,18 +274,63 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/404.html">
-  <meta property="og:title" content="404 Page not found | Michael&#39;s Site">
-  <meta property="og:description" content="Analytics Software Tester"><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/">
+  <meta property="og:title" content="From Proc Import to a Data Step with Regex | Michael&#39;s Site">
+  <meta property="og:description" content="I find myself needing to import CSV files with a relatively large number of columns. In many cases, proc import works surprisingly well in giving me what I want. But sometimes, I need to do some work while reading in the file and it would be nice to just use a data step to do so, but I don&rsquo;t want to type it in by hand."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
+      <meta property="article:published_time" content="2021-07-29T08:46:10-04:00">
+    
+    <meta property="article:modified_time" content="2021-07-29T08:46:10-04:00">
   
 
   
 
 
+    
 
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/"
+  },
+  "headline": "From Proc Import to a Data Step with Regex",
+  
+  "datePublished": "2021-07-29T08:46:10-04:00",
+  "dateModified": "2021-07-29T08:46:10-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "D. Michael Senter"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Michael's Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "I find myself needing to import CSV files with a relatively large number of columns. In many cases, proc import works surprisingly well in giving me what I want. But sometimes, I need to do some work while reading in the file and it would be nice to just use a data step to do so, but I don\u0026rsquo;t want to type it in by hand."
+}
+</script>
+
+  
 
   
 
@@ -293,10 +338,13 @@
   
 
 
+  
 
 
 
-  <title>404 Page not found | Michael&#39;s Site</title>
+
+
+  <title>From Proc Import to a Data Step with Regex | Michael&#39;s Site</title>
 
 </head>
 
@@ -557,51 +605,407 @@
 </nav>
 
 
-  <div class="universal-wrapper pt-3">
-
-  <h1>Page not found</h1>
-
-  
-  
-  <form class="d-flex align-items-center mb-3">
-    <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
-  </form>
-  
+  <article class="article">
 
   
 
-  <p>Perhaps you were looking for one of these?</p>
+
+
+
+
+
+
+
+
+
+
+
+  
 
   
   
   
-  <h2>Latest</h2>
-  <ul>
+<div class="article-container pt-3">
+  <h1>From Proc Import to a Data Step with Regex</h1>
+
+  
+
+  
     
-      <li><a href="/post/21-07-proc-import-to-data-step-with-regex/">From Proc Import to a Data Step with Regex</a></li>
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
     
-      <li><a href="/post/21-07-vsc-python-fix/">Making VS Code and Python Play Nice on Windows</a></li>
     
-      <li><a href="/post/2021-07-awk-for-sas/">Making INPUT and LABEL Statements with AWK</a></li>
+      
     
-      <li><a href="/post/2021-06-youtube-tutorial/">SASPy Video Tutorial</a></li>
-    
-      <li><a href="/post/21-06-covid-county-incidence/">Census 2020 Population Estimates Updated</a></li>
-    
-      <li><a href="/talk/dissertation-defense/">Dissertation Defense</a></li>
-    
-      <li><a href="/project/metachronal-paddling/">Metachronal Paddling</a></li>
-    
-      <li><a href="/post/git-with-sas-studio/">Using Git with SAS Studio</a></li>
-    
-      <li><a href="/post/20-11-north-carolina-housing/">North Carolina Housing Data</a></li>
-    
-      <li><a href="/post/20-10-tabula/">Teacher Salaries</a></li>
-    
-  </ul>
+    Jul 29, 2021
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    3 min read
+  </span>
+  
+
+  
+  
+  
+
+  
   
 
 </div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>I find myself needing to import CSV files with a relatively large number of columns. In many cases, <code>proc import</code> works surprisingly well in giving me what I want. But sometimes, I need to do some work while reading in the file and it would be nice to just use a data step to do so, but I don&rsquo;t want to type it in by hand. That&rsquo;s when a combination of <code>proc import</code> and some regex substitution can come in handy.</p>
+<p>For the first step, run a <code>proc import</code>, like this sample code that is provided by SAS Studio when you double click on a CSV file:</p>
+<pre><code class="language-sas">FILENAME REFFILE '/path/to/file/data.csv';
+
+PROC IMPORT DATAFILE=REFFILE
+    DBMS=CSV
+    OUT=WORK.IMPORT;
+    GETNAMES=YES;
+RUN;
+</code></pre>
+<p>If you run this code, you will see that SAS generates a complete data step for you. This is what the beginning of one looks like:</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-sample-log-output">
+
+
+  <a data-fancybox="" href="/post/21-07-proc-import-to-data-step-with-regex/log_hu417e5750fec5319adb043ca92305efb0_26856_2000x2000_fit_lanczos_2.PNG" data-caption="Sample log output.">
+
+
+  <img data-src="/post/21-07-proc-import-to-data-step-with-regex/log_hu417e5750fec5319adb043ca92305efb0_26856_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="797" height="461">
+</a>
+
+
+  
+  
+  <figcaption>
+    Sample log output.
+  </figcaption>
+
+
+</figure>
+
+<p>There will be be two lines for each variable, one giving the <code>informat</code> and one giving the <code>format</code> that SAS decided on. This will be followed by an <code>input</code> statement. You can copy that from the log into a text editor such as VSCode, but unfortunately the line numbering of the LOG will carry over. One convenient way of fixing this is to use regex search-and-replace. Each line starts with a space followed by 1-3 digits, followed by a variable number of spaces until the next word. To capture this I use <code>^\s\d{1,3}\s+</code> as my search term and replace with nothing. This will left align the whole data step, but this can be adjusted later.</p>
+<p>At this point the data step can be saved as a SAS file or copied back over to the file you are working within SAS Studio, but I like to do one more adjustment. I really like using the <code>attrib</code> statement, 
+<a href="https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lestmtsref/n1wxb7p9jkxycin16lz2db7idbnt.htm" target="_blank" rel="noopener">see documentation</a>, because it allows me to see the informat, format, and label of a variable all in one place. So I use regex to re-arrange my informat statement into the beginnings of an attribute statement. Use the search term <code>informat\s([^\s]+)\s([^\s]+)\s+;</code> to capture each informat line and create two capture groups - the variable name as group 1 and the informat as group 2. If you use the replace code <code>$1 informat=$2 format=$2</code>, you will see the beginnings of an attribute statement. In this replacement scheme, each informat matches each format. This is fine for date and character variables, but you may want to adjust the display format for some of your numeric variables.</p>
+<p>To clean this up, get rid of the format lines (you can search for <code>^format.+\n</code> and replace with an empty replace to delete them), add the <code>attrib</code> statement below the <code>infile</code> and make sure to end the block of attributes with a semicolon, and indent your code as desired.</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-sample-data-step-view">
+
+
+  <a data-fancybox="" href="/post/21-07-proc-import-to-data-step-with-regex/code_snip_hub5c78044ade6674b35a08b503d783f3d_19917_2000x2000_fit_lanczos_2.PNG" data-caption="Sample data step view.">
+
+
+  <img data-src="/post/21-07-proc-import-to-data-step-with-regex/code_snip_hub5c78044ade6674b35a08b503d783f3d_19917_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="843" height="190">
+</a>
+
+
+  
+  
+  <figcaption>
+    Sample data step view.
+  </figcaption>
+
+
+</figure>
+
+<p>And there you have it! The beginning of a nicely formatted data step that you can start to work with.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/&amp;text=From%20Proc%20Import%20to%20a%20Data%20Step%20with%20Regex" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/&amp;t=From%20Proc%20Import%20to%20a%20Data%20Step%20with%20Regex" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=From%20Proc%20Import%20to%20a%20Data%20Step%20with%20Regex&amp;body=https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/&amp;title=From%20Proc%20Import%20to%20a%20Data%20Step%20with%20Regex" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=From%20Proc%20Import%20to%20a%20Data%20Step%20with%20Regex%20https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/&amp;title=From%20Proc%20Import%20to%20a%20Data%20Step%20with%20Regex" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/d.-michael-senter/avatar_hu9d01c61c86bcbccf229bab33cc03765b_1162188_270x270_fill_q90_lanczos_center.jpg" alt="D. Michael Senter">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://dmsenter89.github.io/">D. Michael Senter</a></h5>
+        <h6 class="card-subtitle">Analytics Software Tester</h6>
+        <p class="card-text">My research interests include computational fluid dynamics, big data analytics, and machine learning.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=DPyUrhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/dmsenter89" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/MyCV.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
 
       
 
