@@ -3,17 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/</loc>
-    <lastmod>2021-07-29T08:46:10-04:00</lastmod>
+    <loc>https://dmsenter89.github.io/categories/</loc>
+    <lastmod>2021-09-29T13:41:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/</loc>
+    <lastmod>2021-09-29T13:41:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dmsenter89.github.io/tag/data-cleaning/</loc>
+    <lastmod>2021-09-29T13:41:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dmsenter89.github.io/category/data-cleaning/</loc>
+    <lastmod>2021-09-29T13:41:36-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://dmsenter89.github.io/</loc>
-    <lastmod>2021-07-29T08:46:10-04:00</lastmod>
+    <lastmod>2021-09-29T13:41:36-04:00</lastmod>
   </url>
   
   <url>
     <loc>https://dmsenter89.github.io/post/</loc>
+    <lastmod>2021-09-29T13:41:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dmsenter89.github.io/tags/</loc>
+    <lastmod>2021-09-29T13:41:36-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/</loc>
     <lastmod>2021-07-29T08:46:10-04:00</lastmod>
   </url>
   
@@ -188,15 +213,7 @@
   </url>
   
   <url>
-    <loc>https://dmsenter89.github.io/categories/</loc>
-  </url>
-  
-  <url>
     <loc>https://dmsenter89.github.io/author/d.-michael-senter/</loc>
-  </url>
-  
-  <url>
-    <loc>https://dmsenter89.github.io/tags/</loc>
   </url>
   
 </urlset>

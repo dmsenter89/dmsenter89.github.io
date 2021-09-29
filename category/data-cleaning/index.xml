@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data-cleaning | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/category/data-cleaning/</link>
+      <atom:link href="https://dmsenter89.github.io/category/data-cleaning/index.xml" rel="self" type="application/rss+xml" />
+    <description>data-cleaning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Sep 2021 13:41:36 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>data-cleaning</title>
+      <link>https://dmsenter89.github.io/category/data-cleaning/</link>
+    </image>
+    
+    <item>
+      <title>Cleaning up a Date String with RegEx in SAS</title>
+      <link>https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/</link>
+      <pubDate>Wed, 29 Sep 2021 13:41:36 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/</guid>
+      <description>&lt;p&gt;Sometimes we have to deal with manually entered data, which means there is a good chance that the data needs to be cleaned for consistency due to the
+inevitable errors that creep in when typing in data, not to speak of any inconsistencies between individuals entering data.&lt;/p&gt;
+&lt;p&gt;In my particular case, I was recently dealing with a data set that included
+manually calculated ages that had been entered as a complete string
+of the number of years, months, and days of an individual. Such a string
+is not particularly useful for analysis and I wanted to have the age as
+a numeric variable instead. Regular expressions can help out a lot in this
+type of situation. In this post, we will look at a few representative examples
+of the type of entries I&amp;rsquo;ve encountered and how to read them using RegEx in SAS.&lt;/p&gt;
+&lt;h2 id=&#34;lets-look-at-the-data&#34;&gt;Let&amp;rsquo;s Look at the Data&lt;/h2&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-what-were-starting-from&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/RAW_DS_hu83735545411e40d8d73c711ad73aa038_21697_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;What we&amp;amp;rsquo;re starting from.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/RAW_DS_hu83735545411e40d8d73c711ad73aa038_21697_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;508&#34; height=&#34;250&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    What we&amp;rsquo;re starting from.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;If we look at our sample data, we notice a few things. The data is consistently
+ordered from largest to smallest, in the order of year, month, and day.
+For some lines, only the year variable is available. In all cases, the string
+starts with two digits.&lt;/p&gt;
+&lt;p&gt;Separation of the time units is inconsistent; occasionally they are separated
+by commas, sometimes by hyphens, and in some cases by spaces alone. The terms
+indicating the units are spelled and capitalized inconsistently as well. There
+are some abbreviations and occasionally the plural &amp;rsquo;s&#39; in days is wrapped in
+parentheses.&lt;/p&gt;
+&lt;p&gt;If you want to follow along, you can create the sample data with the
+following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data raw;
+    infile datalines delimiter = &#39;,&#39; MISSOVER DSD;
+    attrib
+        ID     informat=best32. format=1.
+        STR_AGE informat=$500.   format=$500. label=&#39;Age String&#39;
+        VAR1   informat=best32. format=1.;
+    input ID STR_AGE $ VAR1;
+
+    datalines;
+    1,&amp;quot;62 Years, 5 Months, 8 Days&amp;quot;,1
+    2,43 Yrs. -2 Months -4 Day(s), 2
+    3,33 years * months 24 days, 1
+    4,58,1
+    5,&amp;quot;47 Yrs. -11 Months -27 Day(s)&amp;quot;,2
+    ;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;the-regex-patterns&#34;&gt;The RegEx Patterns&lt;/h2&gt;
+&lt;p&gt;We will use a total of three regex patterns, one for each of the time units:
+year, month, day.  SAS uses Pearl regex and the function &lt;code&gt;prxparse&lt;/code&gt; to define
+the regex patterns that are supposed to be searched for.&lt;/p&gt;
+&lt;p&gt;For the year variable, we need to match the first two digits in our string.
+Therefore, the correct call is &lt;code&gt;prxparse(&#39;/^(\d{2}).*/&#39;)&lt;/code&gt;. Note that the
+&lt;code&gt;(&lt;/code&gt; and &lt;code&gt;)&lt;/code&gt; delimit the capture group.&lt;/p&gt;
+&lt;p&gt;The month and day regex patterns are very similar. For the months, we want to
+lazy-match the until we hit between one or two digits followed by
+an &amp;rsquo;m&#39; and some number of other characters. We use the &lt;code&gt;i&lt;/code&gt; flag since
+we cannot guarantee capitalization: &lt;code&gt;prxparse(&#39;/.*?(\d{1,2}).M.*/i&#39;)&lt;/code&gt;.
+The day pattern is nearly identical: &lt;code&gt;prxparse(&#39;/.*?(\d{1,2}).D\D*$/i&#39;)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can extract our matches using the &lt;code&gt;prxposn&lt;/code&gt; function. We use the
+&lt;code&gt;prxmatch&lt;/code&gt; function to check if we actually have a match:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;/* match into strings */
+if prxmatch(year_rxid, STR_AGE)  then year_dig_str = prxposn(year_rxid,1,STR_AGE);
+if prxmatch(month_rxid, STR_AGE) then month_dig_str = prxposn(month_rxid,1,STR_AGE);
+if prxmatch(day_rxid, STR_AGE)   then day_dig_str = prxposn(day_rxid,1, STR_AGE);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The extracted strings can then be converted to numeric variables using
+the &lt;code&gt;input&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;The last step is the calculation of the age from the three components.
+Since not all three time units are specified for every row, we cannot use
+the standard arithmetic of &lt;code&gt;years + months + days&lt;/code&gt;, because the missing
+values would propagate. We need to use the &lt;code&gt;sum&lt;/code&gt; function instead.&lt;/p&gt;
+&lt;p&gt;Putting it all together, we get the correct output:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-result&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/FIXED_DS_hu37f587f0a5cd00ab598beb8689b70b5f_34165_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;The Result&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/FIXED_DS_hu37f587f0a5cd00ab598beb8689b70b5f_34165_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;867&#34; height=&#34;251&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The Result
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;complete-code&#34;&gt;Complete Code&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data fixed;
+    set raw;
+    
+   /* define the regex patterns */
+   year_rxid  = prxparse(&#39;/^(\d{2}).*/&#39;);
+   month_rxid = prxparse(&#39;/.*?(\d{1,2}).M.*/i&#39;);
+   day_rxid   = prxparse(&#39;/.*?(\d{1,2}).D\D*$/i&#39;);   /* match 2 digits followed by D and non-digit chars  */
+  
+   /* make sure we have enough space to store the extraction */
+   length year_dig_str month_dig_str day_dig_str $4;
+   
+   /* match into strings */
+   /* match into strings */
+   if prxmatch(year_rxid, STR_AGE)  then year_dig_str = prxposn(year_rxid,1,STR_AGE);
+   if prxmatch(month_rxid, STR_AGE) then month_dig_str = prxposn(month_rxid,1,STR_AGE);
+   if prxmatch(day_rxid, STR_AGE)   then day_dig_str = prxposn(day_rxid,1, STR_AGE);
+   
+   /* use input to convert str -&amp;gt; numeric */
+   years  = input(year_dig_str, ? 12.);
+   months = input(month_dig_str, ? 12.);
+   days   = input(day_dig_str, ? 12.);
+   
+   /* Use SUM function when calculating age
+    to avoid missing values propagating  */
+   age = sum(years,months/12,days/365.25);
+   
+   /* get rid of temporary variables */ 
+   drop month_rxid month_dig_str year_rxid year_dig_str day_rxid day_dig_str;
+   run;
+   
+proc print data=fixed; run;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
