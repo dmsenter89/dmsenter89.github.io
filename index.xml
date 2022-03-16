@@ -5,12 +5,53 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Mar 2022 08:30:29 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 16 Mar 2022 09:23:12 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Multline Bash Variable Replacement</title>
+      <link>https://dmsenter89.github.io/post/22-03-multiline-replacement/</link>
+      <pubDate>Wed, 16 Mar 2022 09:23:12 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-03-multiline-replacement/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve recently needed to append several lines of data to a SAS data step that I collected and built
+via a shell script. For search-and-replace in bash I typically use sed, but this time I ran into a problem -
+sed does not like multiline shell variables. Thanks to Stack, I found a way to accomplish this task using awk instead.&lt;/p&gt;
+&lt;p&gt;Suppose you have a file called data.sas with the following contents:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data person;
+   infile datalines delimiter=&#39;,&#39;; 
+   input name :$10. dept :$30.;
+   datalines4;                      
+John,Sales
+Mary,Accounting
+Theresa,Management
+Stewart,HR
+;;;;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that I am using a datalines4 statement so that I get an easy to identify target for the substitution.
+I want to insert a multiline shell variable before the &lt;code&gt;;;;;&lt;/code&gt; to add my data to this data step. Say I have the
+following variable:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;NEWDATA=$(cat &amp;lt;&amp;lt;-END
+Will,Compliance
+Sidney,Management
+END
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If I try to use sed (&lt;code&gt;sed &amp;quot;s/\;\{4\}/$DATA\n;;;;/&amp;quot; data.sas&lt;/code&gt;) I will get an error about an unterminated s command.
+Instead of sed, I can use awk with a variable to achieve the same goal:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;awk -v r=&amp;quot;$NEWDATA\n;;;;&amp;quot; &#39;{gsub(/;{4}/, r)}1&#39; data.sas
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The one downside is that awk does not have an in-place option like sed, and if I try to redirect to the same file
+I&amp;rsquo;m reading from I get an empty file out. So you&amp;rsquo;ll have to rename the original file in your processing script to
+achieve a similar effect as with the inplace option in sed.&lt;/p&gt;
+&lt;p&gt;For additional approaches, see this 
+&lt;a href=&#34;https://stackoverflow.com/q/10107459&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StackOverflow Question&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Easy SASPy Setup from Jupyter</title>
