@@ -21,7 +21,7 @@
 via a shell script. For search-and-replace in bash I typically use sed, but this time I ran into a problem -
 sed does not like multiline shell variables. Thanks to Stack, I found a way to accomplish this task using awk instead.&lt;/p&gt;
 &lt;p&gt;Suppose you have a file called data.sas with the following contents:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;data person;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data person;
    infile datalines delimiter=&#39;,&#39;; 
    input name :$10. dept :$30.;
    datalines4;                      
