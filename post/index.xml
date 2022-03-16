@@ -5,12 +5,88 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 29 Sep 2021 13:41:36 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Mar 2022 08:30:29 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Easy SASPy Setup from Jupyter</title>
+      <link>https://dmsenter89.github.io/post/22-03-saspy-setup/</link>
+      <pubDate>Fri, 11 Mar 2022 08:30:29 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-03-saspy-setup/</guid>
+      <description>&lt;p&gt;I love using SASPy, but the setup can take a minute. I used to do the setup via the CLI until I
+started thinking I might be able to just do it straight from a Jupyter notebook. Having just a
+couple of cells in Jupyter notebook makes for easy copy-and-paste and reduces setup time. The code
+below has been tested on both Windows and Linux. As a bonus,
+this also works on  
+&lt;a href=&#34;https://colab.research.google.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Google Colab&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can easily install packages via pip from Jupyter either by using a shell cell (&lt;code&gt;!&lt;/code&gt;) or by
+using the pip magic command: &lt;code&gt;%pip install saspy&lt;/code&gt;. Once done, copy and paste the following into
+a code cell and run to create the sascfg_personal.py file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import saspy, platform
+from pathlib import Path
+
+# get path for configuration file
+cfgpath = saspy.__file__.replace(&#39;__init__.py&#39;,&#39;sascfg_personal.py&#39;)
+
+# To pick the path for Java, we need to know whether we&#39;re on Windows or not
+if platform.system()==&#39;Windows&#39;:
+    print(&amp;quot;Windows detected.&amp;quot;)
+    javapath = !where java
+    authfile = Path(Path.home(),&amp;quot;_authinfo&amp;quot;)
+else:
+    javapath = !which java
+    authfile = Path(Path.home(),&amp;quot;.authinfo&amp;quot;)
+    
+# the `!` command returns a string list, we want only the string
+javapath = javapath[0]
+print(f&amp;quot;Java is present at {javapath}&amp;quot;)
+
+# US home Region configuration string set up via string-replacement.
+# For other server addresses, see https://support.sas.com/ondemand/saspy.html
+cfgtext = f&amp;quot;&amp;quot;&amp;quot;SAS_config_names=[&#39;oda&#39;]
+oda = {{&#39;java&#39; : &#39;{repr(javapath).strip(&amp;quot;&#39;&amp;quot;)}&#39;,
+#US Home Region
+&#39;iomhost&#39; : [&#39;odaws01-usw2.oda.sas.com&#39;,&#39;odaws02-usw2.oda.sas.com&#39;,&#39;odaws03-usw2.oda.sas.com&#39;,&#39;odaws04-usw2.oda.sas.com&#39;],
+&#39;iomport&#39; : 8591,
+&#39;authkey&#39; : &#39;oda&#39;,
+&#39;encoding&#39; : &#39;utf-8&#39;
+}}&amp;quot;&amp;quot;&amp;quot;
+
+# write the configuration file
+with open(cfgpath, &#39;w&#39;) as file:
+    file.write(cfgtext)
+    print(f&amp;quot;Wrote configuration file to {cfgpath}&amp;quot;)
+    print(f&amp;quot;Content of file: \n```\n{cfgtext}\n```&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Optionally, you can set up an authentication file with your username and password. Without this file,
+you&amp;rsquo;ll be prompted for your username and password each time you log in.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# change variables to match your username and password
+omr_user_id = r&amp;quot;max.mustermann@sample.com&amp;quot;
+omr_user_password = r&amp;quot;K5d7#QBPw&amp;quot;
+with open(authfile, &amp;quot;w&amp;quot;) as file:
+    file.write(f&amp;quot;oda user {omr_user_id} password {omr_user_password}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And that&amp;rsquo;s it! You&amp;rsquo;re now ready to connect to SASPy. In my experience you don&amp;rsquo;t even need to restart
+the kernel to begin work with SAS on ODA. You can try the following snippet in a new cell:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# starts a new SAS session with the `oda` configuration we set up
+sas_session = saspy.SASsession(cfgname=&#39;oda&#39;)
+
+# load a SAS data set and make a scatter plot
+cars = sas_session.sasdata(&#39;cars&#39;, &#39;sashelp&#39;)
+cars.scatter(x=&#39;msrp&#39;, y=&#39;horsepower&#39;)
+
+# directly run SAS code to print a table
+sas_session.submitLST(&amp;quot;proc print data=sashelp.cars(obs=6); run;&amp;quot;)
+
+# quit SAS connection
+sas_session.endsas()
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Cleaning up a Date String with RegEx in SAS</title>
