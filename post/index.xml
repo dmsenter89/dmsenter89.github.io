@@ -5,12 +5,335 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 16 Mar 2022 09:23:12 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 13 Apr 2022 08:27:35 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Working with the Census API Directly from SAS</title>
+      <link>https://dmsenter89.github.io/post/22-04-census-api-with-sas/</link>
+      <pubDate>Wed, 13 Apr 2022 08:27:35 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-04-census-api-with-sas/</guid>
+      <description>&lt;p&gt;In a previous 
+&lt;a href=&#34;https://dmsenter89.github.io/post/20-08-census-api/&#34;&gt;post&lt;/a&gt;, I have shown how to connect to the Census API and load data
+with Python. In this post, I will do the same using SAS instead. Before we get started, two important links
+from last time: a guide to the API can be found 
+&lt;a href=&#34;https://www.census.gov/data/developers/guidance/api-user-guide.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and a list of the
+available data sets can be accessed 
+&lt;a href=&#34;https://api.census.gov/data.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;picking-the-data&#34;&gt;Picking the Data&lt;/h2&gt;
+&lt;p&gt;For this post, I&amp;rsquo;ll use the same data as last time. There we used the 2018 American Community Survey 1-Year Detailed Table
+and asked for three variables - total population, household income, and median monthly cost for Alamance and Orange
+counties in North Carolina (FIPS codes 37001 and 37135). The variable names are not very intuitive, so I highly recommend starting
+your code with a comment section that includes a markdown-style table of the variables that you want to use. Here is
+an example table for our data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Label&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;B01003_001E&lt;/td&gt;
+&lt;td&gt;Total Population&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B19001_001E&lt;/td&gt;
+&lt;td&gt;Household Income (12 Month)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B25105_001E&lt;/td&gt;
+&lt;td&gt;Median Monthly Housing Cost&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;building-the-query&#34;&gt;Building the Query&lt;/h2&gt;
+&lt;p&gt;The next step is to build the query. Like last time, the API consists of a base
+URL that points us to the data set we are looking for, a list of the variables
+we want to request, and a description of the geography for which we want to
+request those variables. Just like last time, I&amp;rsquo;ll build the query using several
+macros for flexibility purposes. Note that since &lt;code&gt;&amp;amp;&lt;/code&gt; has a special meaning in SAS,
+we need to use &lt;code&gt;%str(&amp;amp;)&lt;/code&gt; when referring to it to avoid having the log clobbered with
+warnings about unresolved macros.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;%let baseurl=https://api.census.gov/data/2018/acs/acs1;
+%let varlist=NAME,B01003_001E,B19001_001E,B25105_001E;
+%let geolist=for=county:001,135%str(&amp;amp;)in=state:37;
+%let fullurl=&amp;amp;baseurl.?get=&amp;amp;varlist.%str(&amp;amp;)&amp;amp;geolist.;
+%put &amp;amp;=fullurl;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Your log should now show the full query URL:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;FULLURL=https://api.census.gov/data/2018/acs/acs1?get=NAME,B01003_001E,B19001_001E,B25105_001E&amp;amp;for=county:001,135&amp;amp;in=state:37
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;making-the-api-request&#34;&gt;Making the API Request&lt;/h2&gt;
+&lt;p&gt;The API call is achieved with a simple PROC HTTP call using a temporary file to hold the response from the server.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;filename response temp;
+
+proc http url=&amp;quot;&amp;amp;fullurl.&amp;quot; method=&amp;quot;GET&amp;quot; out=response;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;handling-the-json-response&#34;&gt;Handling the JSON Response&lt;/h2&gt;
+&lt;p&gt;We read the JSON response by utilizing the
+
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lestmtsglobal/n1jfdetszx99ban1rl4zll6tej7j.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIBNAME JSON Engine&lt;/a&gt;
+in SAS.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;libname manual JSON fileref=response;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now run &lt;code&gt;proc datasets lib=manual; quit;&lt;/code&gt;. You&amp;rsquo;ll see two data sets that were created: ALLDATA which contains the whole JSON file&amp;rsquo;s contents
+in a single data set, and ROOT which is a data set of all the root-level data. The latter one is the one we want. Here&amp;rsquo;s what the
+first few observations in each look like:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-first-few-observations-in-the-automatically-created-data-sets&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/auto_datasets_hu58f00ccbf67d7d2f36e2c3ae0591a33b_44045_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;First few observations in the automatically created data sets.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/auto_datasets_hu58f00ccbf67d7d2f36e2c3ae0591a33b_44045_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1073&#34; height=&#34;490&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    First few observations in the automatically created data sets.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Just like with Python, all columns are treated as character variables at first. Because of the way the Census API is structured,
+the first row consists of headers, which SAS didn&amp;rsquo;t use. This is something we&amp;rsquo;ll need to fix. At this point we have two main routes we can use to fix
+these issues - we can manually create a new data set from ROOT with PROC SQL and address the issues in that way, or we can take
+advantage of SAS&#39; JSON map feature to define how we want to load the JSON when the LIBNAME statement is executed. There are good use cases for each,
+so I will show both methods.&lt;/p&gt;
+&lt;h3 id=&#34;cleaning-up-via-proc-sql&#34;&gt;Cleaning up via PROC SQL&lt;/h3&gt;
+&lt;p&gt;Using PROC SQL, you can rename all the character variables you want to keep. To change from character to numeric,
+you&amp;rsquo;ll use the &lt;code&gt;input&lt;/code&gt; function. You can then assign formats and labels as desired. To get rid of the first row,
+you can just add a conditional &lt;code&gt;having ordinal_root ne 1&lt;/code&gt; to avoid loading that line.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;proc sql;
+	create table census as
+	select
+		element1 as Name,
+		input(element2, best12.) as B01003_001E format=COMMA12.  label=&#39;Total Population&#39;,
+		input(element3, best12.) as B19001_001E format=DOLLAR12. label=&#39;Household Income (12 Month)&#39;,
+		input(element4, best12.) as B25105_001E format=DOLLAR12. label=&#39;Median Monthly Housing Cost&#39;,
+		element5 as state,
+		element6 as county
+	from manual.root
+	having ordinal_root ne 1;
+quit;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-result-from-the-proc-sql-method&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/CensusData_SQL_hu13384c4c5502c575dbc7b9e51c49ebcb_20401_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Result from the PROC SQL method.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/CensusData_SQL_hu13384c4c5502c575dbc7b9e51c49ebcb_20401_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1022&#34; height=&#34;124&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Result from the PROC SQL method.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;A benefit of this method is that as you fix the input table, you can already begin to work with
+it thanks to the &lt;code&gt;calculated&lt;/code&gt; keyword in PROC SQL. Say we weren&amp;rsquo;t actually interested in housing cost and
+household income, but instead would like to know what percent of their annual income a household spends on
+housing in a given county. We could just add a new variable to our PROC SQL call and build our table like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;proc sql;
+	create table census as
+	select
+		element1 as Name,
+		input(element2, best12.) as B01003_001E format=COMMA12. label=&#39;Total Population&#39;,
+		input(element3, best12.) as B19001_001E format=DOLLAR12. label=&#39;Household Income (12 Month)&#39;,
+		input(element4, best12.) as B25105_001E format=DOLLAR12. label=&#39;Median Monthly Housing Cost&#39;,
+		/* Now calculate what we want from the new columns: */
+		12*(calculated B25105_001E)/calculated B19001_001E as HousingCostPCT format=PERCENT10.2,
+		element5 as state,
+		element6 as county
+	from manual.root
+	having ordinal_root ne 1;
+quit;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;using-a-json-map&#34;&gt;Using a JSON MAP&lt;/h3&gt;
+&lt;p&gt;Alternatively, we could change the way SAS reads the JSON data by editing the JSON map it uses to decode
+the JSON file. The first step is to ask SAS to create a map for us to edit:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;filename automap &amp;quot;sas.map&amp;quot;;
+libname autodata JSON fileref=response map=automap automap=create;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The map will look something like this:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-beginning-of-the-automatically-created-json-map&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/AUTO_MAP_hu793d98e625aa154a8d9815a25890d65f_22860_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Beginning of the automatically created JSON map.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/AUTO_MAP_hu793d98e625aa154a8d9815a25890d65f_22860_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;460&#34; height=&#34;426&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Beginning of the automatically created JSON map.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Note that this is also a JSON file which you can edit in a text editor. With this map, you can change the names
+of the data sets and variables, assign labels and formats, and also re-format incoming data. Variables and data sets
+you don&amp;rsquo;t want to read can simply be deleted from the map. Here&amp;rsquo;s the beginning of my edited file:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-beginning-of-my-edited-json-map&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/AUTO_MAP_EDITED_hua840053fe8872e6ad1fe911a8f4abee6_59487_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Beginning of my edited JSON map.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/AUTO_MAP_EDITED_hua840053fe8872e6ad1fe911a8f4abee6_59487_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;475&#34; height=&#34;575&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Beginning of my edited JSON map.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Since the first row of observations in the JSON are actually a header and non-numeric, I add &lt;code&gt;?&lt;/code&gt; prior to the
+specified informat. This prevents errors in the log and simply replaces non-matching variables with missing values.
+We can now reload the JSON using our custom map by dropping the &lt;code&gt;automap=create&lt;/code&gt; option from the LIBNAME statement:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;libname autodata JSON fileref=response map=automap;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When I now print the resulting data set, the header row is still there, but replaced by missing values in numeric
+columns:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-data-set-as-a-result-of-the-edited-json-map&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/MAP_RESULT_hua2828dd6a29f70dd2548d0bd22c856b1_25610_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;The data set as a result of the edited JSON map.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/MAP_RESULT_hua2828dd6a29f70dd2548d0bd22c856b1_25610_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1026&#34; height=&#34;165&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The data set as a result of the edited JSON map.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;This means we&amp;rsquo;ll need to additionally drop this row in a separate step using a delete statement either in
+a PROC SQL or DATA step.&lt;/p&gt;
+&lt;p&gt;Whichever method you choose, you now can access data via an API call from SAS. Happy exploring!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Multline Bash Variable Replacement</title>

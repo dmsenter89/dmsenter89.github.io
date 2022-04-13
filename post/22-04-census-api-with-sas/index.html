@@ -1,0 +1,1422 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="D. Michael Senter">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="A post showing how PROC HTTP and LIBNAME JSON can be used to directly work with the Census API from SAS.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/22-04-census-api-with-sas/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88798177-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-88798177-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://dmsenter89.github.io/post/22-04-census-api-with-sas/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Michael&#39;s Site">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/22-04-census-api-with-sas/">
+  <meta property="og:title" content="Working with the Census API Directly from SAS | Michael&#39;s Site">
+  <meta property="og:description" content="A post showing how PROC HTTP and LIBNAME JSON can be used to directly work with the Census API from SAS."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2022-04-13T08:27:35-04:00">
+    
+    <meta property="article:modified_time" content="2022-04-13T08:27:35-04:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://dmsenter89.github.io/post/22-04-census-api-with-sas/"
+  },
+  "headline": "Working with the Census API Directly from SAS",
+  
+  "datePublished": "2022-04-13T08:27:35-04:00",
+  "dateModified": "2022-04-13T08:27:35-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "D. Michael Senter"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Michael's Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "A post showing how PROC HTTP and LIBNAME JSON can be used to directly work with the Census API from SAS."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Working with the Census API Directly from SAS | Michael&#39;s Site</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Michael&#39;s Site</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Michael&#39;s Site</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Working with the Census API Directly from SAS</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 13, 2022
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>In a previous 
+<a href="/post/20-08-census-api/">post</a>, I have shown how to connect to the Census API and load data
+with Python. In this post, I will do the same using SAS instead. Before we get started, two important links
+from last time: a guide to the API can be found 
+<a href="https://www.census.gov/data/developers/guidance/api-user-guide.html" target="_blank" rel="noopener">here</a> and a list of the
+available data sets can be accessed 
+<a href="https://api.census.gov/data.html" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="picking-the-data">Picking the Data</h2>
+<p>For this post, I&rsquo;ll use the same data as last time. There we used the 2018 American Community Survey 1-Year Detailed Table
+and asked for three variables - total population, household income, and median monthly cost for Alamance and Orange
+counties in North Carolina (FIPS codes 37001 and 37135). The variable names are not very intuitive, so I highly recommend starting
+your code with a comment section that includes a markdown-style table of the variables that you want to use. Here is
+an example table for our data:</p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Label</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>B01003_001E</td>
+<td>Total Population</td>
+</tr>
+<tr>
+<td>B19001_001E</td>
+<td>Household Income (12 Month)</td>
+</tr>
+<tr>
+<td>B25105_001E</td>
+<td>Median Monthly Housing Cost</td>
+</tr>
+</tbody>
+</table>
+<h2 id="building-the-query">Building the Query</h2>
+<p>The next step is to build the query. Like last time, the API consists of a base
+URL that points us to the data set we are looking for, a list of the variables
+we want to request, and a description of the geography for which we want to
+request those variables. Just like last time, I&rsquo;ll build the query using several
+macros for flexibility purposes. Note that since <code>&amp;</code> has a special meaning in SAS,
+we need to use <code>%str(&amp;)</code> when referring to it to avoid having the log clobbered with
+warnings about unresolved macros.</p>
+<pre><code class="language-SAS">%let baseurl=https://api.census.gov/data/2018/acs/acs1;
+%let varlist=NAME,B01003_001E,B19001_001E,B25105_001E;
+%let geolist=for=county:001,135%str(&amp;)in=state:37;
+%let fullurl=&amp;baseurl.?get=&amp;varlist.%str(&amp;)&amp;geolist.;
+%put &amp;=fullurl;
+</code></pre>
+<p>Your log should now show the full query URL:</p>
+<pre><code>FULLURL=https://api.census.gov/data/2018/acs/acs1?get=NAME,B01003_001E,B19001_001E,B25105_001E&amp;for=county:001,135&amp;in=state:37
+</code></pre>
+<h2 id="making-the-api-request">Making the API Request</h2>
+<p>The API call is achieved with a simple PROC HTTP call using a temporary file to hold the response from the server.</p>
+<pre><code class="language-SAS">filename response temp;
+
+proc http url=&quot;&amp;fullurl.&quot; method=&quot;GET&quot; out=response;
+run;
+</code></pre>
+<h2 id="handling-the-json-response">Handling the JSON Response</h2>
+<p>We read the JSON response by utilizing the
+
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lestmtsglobal/n1jfdetszx99ban1rl4zll6tej7j.htm" target="_blank" rel="noopener">LIBNAME JSON Engine</a>
+in SAS.</p>
+<pre><code class="language-SAS">libname manual JSON fileref=response;
+</code></pre>
+<p>Now run <code>proc datasets lib=manual; quit;</code>. You&rsquo;ll see two data sets that were created: ALLDATA which contains the whole JSON file&rsquo;s contents
+in a single data set, and ROOT which is a data set of all the root-level data. The latter one is the one we want. Here&rsquo;s what the
+first few observations in each look like:</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-first-few-observations-in-the-automatically-created-data-sets">
+
+
+  <a data-fancybox="" href="/post/22-04-census-api-with-sas/auto_datasets_hu58f00ccbf67d7d2f36e2c3ae0591a33b_44045_2000x2000_fit_lanczos_2.PNG" data-caption="First few observations in the automatically created data sets.">
+
+
+  <img data-src="/post/22-04-census-api-with-sas/auto_datasets_hu58f00ccbf67d7d2f36e2c3ae0591a33b_44045_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="1073" height="490">
+</a>
+
+
+  
+  
+  <figcaption>
+    First few observations in the automatically created data sets.
+  </figcaption>
+
+
+</figure>
+
+<p>Just like with Python, all columns are treated as character variables at first. Because of the way the Census API is structured,
+the first row consists of headers, which SAS didn&rsquo;t use. This is something we&rsquo;ll need to fix. At this point we have two main routes we can use to fix
+these issues - we can manually create a new data set from ROOT with PROC SQL and address the issues in that way, or we can take
+advantage of SAS' JSON map feature to define how we want to load the JSON when the LIBNAME statement is executed. There are good use cases for each,
+so I will show both methods.</p>
+<h3 id="cleaning-up-via-proc-sql">Cleaning up via PROC SQL</h3>
+<p>Using PROC SQL, you can rename all the character variables you want to keep. To change from character to numeric,
+you&rsquo;ll use the <code>input</code> function. You can then assign formats and labels as desired. To get rid of the first row,
+you can just add a conditional <code>having ordinal_root ne 1</code> to avoid loading that line.</p>
+<pre><code class="language-SAS">proc sql;
+	create table census as
+	select
+		element1 as Name,
+		input(element2, best12.) as B01003_001E format=COMMA12.  label='Total Population',
+		input(element3, best12.) as B19001_001E format=DOLLAR12. label='Household Income (12 Month)',
+		input(element4, best12.) as B25105_001E format=DOLLAR12. label='Median Monthly Housing Cost',
+		element5 as state,
+		element6 as county
+	from manual.root
+	having ordinal_root ne 1;
+quit;
+</code></pre>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-result-from-the-proc-sql-method">
+
+
+  <a data-fancybox="" href="/post/22-04-census-api-with-sas/CensusData_SQL_hu13384c4c5502c575dbc7b9e51c49ebcb_20401_2000x2000_fit_lanczos_2.PNG" data-caption="Result from the PROC SQL method.">
+
+
+  <img data-src="/post/22-04-census-api-with-sas/CensusData_SQL_hu13384c4c5502c575dbc7b9e51c49ebcb_20401_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="1022" height="124">
+</a>
+
+
+  
+  
+  <figcaption>
+    Result from the PROC SQL method.
+  </figcaption>
+
+
+</figure>
+
+<p>A benefit of this method is that as you fix the input table, you can already begin to work with
+it thanks to the <code>calculated</code> keyword in PROC SQL. Say we weren&rsquo;t actually interested in housing cost and
+household income, but instead would like to know what percent of their annual income a household spends on
+housing in a given county. We could just add a new variable to our PROC SQL call and build our table like this:</p>
+<pre><code class="language-SAS">proc sql;
+	create table census as
+	select
+		element1 as Name,
+		input(element2, best12.) as B01003_001E format=COMMA12. label='Total Population',
+		input(element3, best12.) as B19001_001E format=DOLLAR12. label='Household Income (12 Month)',
+		input(element4, best12.) as B25105_001E format=DOLLAR12. label='Median Monthly Housing Cost',
+		/* Now calculate what we want from the new columns: */
+		12*(calculated B25105_001E)/calculated B19001_001E as HousingCostPCT format=PERCENT10.2,
+		element5 as state,
+		element6 as county
+	from manual.root
+	having ordinal_root ne 1;
+quit;
+</code></pre>
+<h3 id="using-a-json-map">Using a JSON MAP</h3>
+<p>Alternatively, we could change the way SAS reads the JSON data by editing the JSON map it uses to decode
+the JSON file. The first step is to ask SAS to create a map for us to edit:</p>
+<pre><code class="language-SAS">filename automap &quot;sas.map&quot;;
+libname autodata JSON fileref=response map=automap automap=create;
+</code></pre>
+<p>The map will look something like this:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-beginning-of-the-automatically-created-json-map">
+
+
+  <a data-fancybox="" href="/post/22-04-census-api-with-sas/AUTO_MAP_hu793d98e625aa154a8d9815a25890d65f_22860_2000x2000_fit_lanczos_2.PNG" data-caption="Beginning of the automatically created JSON map.">
+
+
+  <img data-src="/post/22-04-census-api-with-sas/AUTO_MAP_hu793d98e625aa154a8d9815a25890d65f_22860_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="460" height="426">
+</a>
+
+
+  
+  
+  <figcaption>
+    Beginning of the automatically created JSON map.
+  </figcaption>
+
+
+</figure>
+</p>
+<p>Note that this is also a JSON file which you can edit in a text editor. With this map, you can change the names
+of the data sets and variables, assign labels and formats, and also re-format incoming data. Variables and data sets
+you don&rsquo;t want to read can simply be deleted from the map. Here&rsquo;s the beginning of my edited file:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-beginning-of-my-edited-json-map">
+
+
+  <a data-fancybox="" href="/post/22-04-census-api-with-sas/AUTO_MAP_EDITED_hua840053fe8872e6ad1fe911a8f4abee6_59487_2000x2000_fit_lanczos_2.PNG" data-caption="Beginning of my edited JSON map.">
+
+
+  <img data-src="/post/22-04-census-api-with-sas/AUTO_MAP_EDITED_hua840053fe8872e6ad1fe911a8f4abee6_59487_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="475" height="575">
+</a>
+
+
+  
+  
+  <figcaption>
+    Beginning of my edited JSON map.
+  </figcaption>
+
+
+</figure>
+</p>
+<p>Since the first row of observations in the JSON are actually a header and non-numeric, I add <code>?</code> prior to the
+specified informat. This prevents errors in the log and simply replaces non-matching variables with missing values.
+We can now reload the JSON using our custom map by dropping the <code>automap=create</code> option from the LIBNAME statement:</p>
+<pre><code class="language-SAS">libname autodata JSON fileref=response map=automap;
+</code></pre>
+<p>When I now print the resulting data set, the header row is still there, but replaced by missing values in numeric
+columns:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-the-data-set-as-a-result-of-the-edited-json-map">
+
+
+  <a data-fancybox="" href="/post/22-04-census-api-with-sas/MAP_RESULT_hua2828dd6a29f70dd2548d0bd22c856b1_25610_2000x2000_fit_lanczos_2.PNG" data-caption="The data set as a result of the edited JSON map.">
+
+
+  <img data-src="/post/22-04-census-api-with-sas/MAP_RESULT_hua2828dd6a29f70dd2548d0bd22c856b1_25610_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="1026" height="165">
+</a>
+
+
+  
+  
+  <figcaption>
+    The data set as a result of the edited JSON map.
+  </figcaption>
+
+
+</figure>
+</p>
+<p>This means we&rsquo;ll need to additionally drop this row in a separate step using a delete statement either in
+a PROC SQL or DATA step.</p>
+<p>Whichever method you choose, you now can access data via an API call from SAS. Happy exploring!</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/22-04-census-api-with-sas/&amp;text=Working%20with%20the%20Census%20API%20Directly%20from%20SAS" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/22-04-census-api-with-sas/&amp;t=Working%20with%20the%20Census%20API%20Directly%20from%20SAS" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Working%20with%20the%20Census%20API%20Directly%20from%20SAS&amp;body=https://dmsenter89.github.io/post/22-04-census-api-with-sas/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/22-04-census-api-with-sas/&amp;title=Working%20with%20the%20Census%20API%20Directly%20from%20SAS" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Working%20with%20the%20Census%20API%20Directly%20from%20SAS%20https://dmsenter89.github.io/post/22-04-census-api-with-sas/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/22-04-census-api-with-sas/&amp;title=Working%20with%20the%20Census%20API%20Directly%20from%20SAS" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/d.-michael-senter/avatar_hu9d01c61c86bcbccf229bab33cc03765b_1162188_270x270_fill_q90_lanczos_center.jpg" alt="D. Michael Senter">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://dmsenter89.github.io/">D. Michael Senter</a></h5>
+        <h6 class="card-subtitle">Analytics Software Tester</h6>
+        <p class="card-text">My research interests include computational fluid dynamics, big data analytics, and machine learning.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=DPyUrhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/dmsenter89" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/MyCV.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/sas.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/matlab.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/mathematica.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/julia.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
