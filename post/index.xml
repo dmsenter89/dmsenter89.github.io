@@ -5,12 +5,40 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 13 Apr 2022 08:27:35 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 20 Apr 2022 11:42:02 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>The INDSNAME Option in SAS</title>
+      <link>https://dmsenter89.github.io/post/22-04-sas-indsname-option/</link>
+      <pubDate>Wed, 20 Apr 2022 11:42:02 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-04-sas-indsname-option/</guid>
+      <description>&lt;p&gt;I frequently find myself needing to concatenate data sets but also wanting to be able to distinguish
+which row came from which data set originally. Introductory SAS courses tend to teach the &lt;code&gt;in&lt;/code&gt; keyword,
+for a workflow similar to this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data Concat1;
+set data1(in = ds0)  
+    data2(in = ds1);
+if ds0 then source = &amp;quot;data1&amp;quot;;
+else if ds1 then source = &amp;quot;data2&amp;quot;;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With more than two input data sets, this can get unwieldy and repetitive. In an old 
+&lt;a href=&#34;https://blogs.sas.com/content/iml/2015/08/03/indsname-option.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt;
+on Rick Wicklin&amp;rsquo;s DO LOOP, a better method is introduced - the &lt;code&gt;indsname&lt;/code&gt; option. Using this method, the above code looks much nicer:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data Concat2;
+set data1-data2 indsname = source;  /* the INDSNAME= option is on the SET statement */
+libref = scan(source,1,&#39;.&#39;);        /* extract the libref */
+dsname = scan(source,2,&#39;.&#39;);        /* extract the data set name */
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As long as your input data sets are reasonably named, you&amp;rsquo;ll now have access to all the information needed.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Working with the Census API Directly from SAS</title>
