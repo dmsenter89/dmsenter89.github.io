@@ -5,12 +5,46 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 20 Apr 2022 11:42:02 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 May 2022 16:30:00 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Wordle in Golang</title>
+      <link>https://dmsenter89.github.io/post/22-05-go-wordle/</link>
+      <pubDate>Thu, 05 May 2022 16:30:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-05-go-wordle/</guid>
+      <description>&lt;p&gt;Lately I&amp;rsquo;ve been playing around with 
+&lt;a href=&#34;https://go.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Go&lt;/a&gt;. I&amp;rsquo;ve read about Go for a few years
+and have been using some software written in Go (this website is built with 
+&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt;),
+but never tried it before. So what better way to give Go a shake
+than to write some code. Since Wordle has been popular, I thought I&amp;rsquo;d write a very simple
+Wordle implementation in Go; you can check it out on 
+&lt;a href=&#34;https://github.com/dmsenter89/go-wordle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.
+It&amp;rsquo;s been a good way for me to get familiar with some of the
+basisc of Go, such as variables and their types, functions, etc. So far I&amp;rsquo;ve been enjoying it.&lt;/p&gt;
+&lt;p&gt;The Go website has a very nicely written 
+&lt;a href=&#34;https://go.dev/doc/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; and
+
+&lt;a href=&#34;https://pkg.go.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;package page&lt;/a&gt;. The 
+&lt;a href=&#34;https://go.dev/play/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Go Playground&lt;/a&gt;
+let&amp;rsquo;s you test out Go in your browser without needing to install anything. I&amp;rsquo;ve also found
+Bodner&amp;rsquo;s &amp;ldquo;
+&lt;a href=&#34;https://www.oreilly.com/library/view/learning-go/9781492077206/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning Go&lt;/a&gt;&amp;rdquo; to be helpful.&lt;/p&gt;
+&lt;p&gt;Go is a compiled language with a pretty picky compiler. It won&amp;rsquo;t let you compile code
+with unnecessary imports and variable declarations, which help keeps your code clean.
+Cross-compilation is 
+&lt;a href=&#34;https://freshman.tech/snippets/go/cross-compile-go-programs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;built-in&lt;/a&gt;.
+While Go is not a common language in scientific computing, the 
+&lt;a href=&#34;https://www.gonum.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gonum&lt;/a&gt; package
+has implemented a number of important functions and seems to be well developed. I look forward
+to learning more about Go in the future.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The INDSNAME Option in SAS</title>
