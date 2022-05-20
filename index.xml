@@ -5,12 +5,80 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 05 May 2022 16:30:00 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 19 May 2022 21:45:46 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Conditional RegEx Matching with Python</title>
+      <link>https://dmsenter89.github.io/post/22-05-conditional-regex-python/</link>
+      <pubDate>Thu, 19 May 2022 21:45:46 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-05-conditional-regex-python/</guid>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve needed to capture the entries of a datalines statement in SAS for editing. Generally,
+this is a straight forward problem if I only need to do it with one file or all of the files that
+I am using are formatted identically. But then I started thinking about the more general case. SAS
+doesn&amp;rsquo;t care about the case of my keywords, so I need a case insensitive match. I need to account for
+possible extra whitespace. So far so good. But what if I have two different keywords that can start
+my data section, and the end of the data section is indicated with different characters depending on
+the chosen keyword? Could I still use a single regular expression?&lt;/p&gt;
+&lt;p&gt;SAS does in fact allow a number of different keywords to enter data in a data step.
+In my experience, the most common are the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/v_027/lestmtsref/p0114gachtut3nn1and4ap8ke9nf.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;datalines&lt;/a&gt;
+and 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/v_027/lestmtsref/p1mm9b070wj962n16q0v1d9uku5q.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;datalines4&lt;/a&gt;
+statements. The main difference between them is how the end of the data is indicated. For datalines,
+a single semicolon is used, while datalines4 uses a sequence of four semicolons, thereby allowing
+the use of semicolons in the data itself. There are some aliases for these commands that can be used:
+cards/lines and cards4/lines4 with matching behavior. A simple data step with these statements
+could look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data person;
+  input name $ sex $ age;
+  datalines; /* or `cards` or `lines` */
+Alfred M 14
+Alice F 13
+;
+
+data person4;
+  input name $ sex $ age;
+  datalines4; /* or `cards4` or `lines4` */
+Alfred M 14
+Alice F 13
+;;;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We could write two separate RegEx expressions, one for the datalines/cards/lines statement and
+a second one for the datalines4/cards4/lines4 statement. But, if the RegEx engine we are using allows
+conditionals, e.g. the Python RegEx engine, then we can write a single statement that can capture
+both types of statements. The basic format of the conditonal capture is &lt;code&gt;(?(D)A|B)&lt;/code&gt;, which can be read as &amp;ldquo;if capture
+group D is set, then match A, otherwise match B.&amp;rdquo; For more details, see 
+&lt;a href=&#34;https://www.regular-expressions.info/conditional.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using this technique, we can capture both types of statements in one go.
+The short form of the solution I found is this
+regular expression: &lt;code&gt;r&amp;quot;(?:(?:(?:data)?lines)|cards)(4)?\s*;(.*?)(?(1);{4}|;)&amp;quot;&lt;/code&gt;
+with two flags set: case insensitive and dot-all. If we utilize Python&amp;rsquo;s verbose flag,
+we can format this a bit nicer as well:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;re.compile(
+  r&amp;quot;&amp;quot;&amp;quot;(?:(?:    # mark groups as non-capture groups
+      (?:data)? # maybe match `data`, but don&#39;t capture
+       lines)   # matches `lines`
+      |cards)   # alternatively, matches `cards`
+      (4)?      # a `4` may be present
+      \s*;      # there might be whitespace before the ;
+      (.*?)     # lazy-match data content
+      (?(1)     # check if capture group 1 is set, if so
+      ;{4}      # match `;;;`
+      |;)       # otherwise, match a single ;
+  &amp;quot;&amp;quot;&amp;quot;, flags=re.DOTALL | re.X | re.I)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A great website to help you build up a regular expression is 
+&lt;a href=&#34;https://regex101.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;regex101.com&lt;/a&gt;.
+It allows you to copy a sample text and regular expression. It then explains your expression and lists
+the capture groups by number, which can be convenient. It also allows you to try out different RegEx engines.
+Try setting it to Python with the flags we mentioned, and see how it works!&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Wordle in Golang</title>

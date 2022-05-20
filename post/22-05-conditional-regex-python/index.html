@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Learning the basics of Go with a Wordle app.">
+  <meta name="description" content="When the endpoint of your match depends on an earlier term, try conditional regex matching in Python.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/22-05-go-wordle/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/22-05-conditional-regex-python/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/22-05-go-wordle/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/22-05-conditional-regex-python/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/22-05-go-wordle/">
-  <meta property="og:title" content="Wordle in Golang | Michael&#39;s Site">
-  <meta property="og:description" content="Learning the basics of Go with a Wordle app."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/22-05-conditional-regex-python/">
+  <meta property="og:title" content="Conditional RegEx Matching with Python | Michael&#39;s Site">
+  <meta property="og:description" content="When the endpoint of your match depends on an earlier term, try conditional regex matching in Python."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2022-05-05T16:30:00-04:00">
+      <meta property="article:published_time" content="2022-05-19T21:45:46-04:00">
     
-    <meta property="article:modified_time" content="2022-05-05T16:30:00-04:00">
+    <meta property="article:modified_time" content="2022-05-19T21:45:46-04:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/22-05-go-wordle/"
+    "@id": "https://dmsenter89.github.io/post/22-05-conditional-regex-python/"
   },
-  "headline": "Wordle in Golang",
+  "headline": "Conditional RegEx Matching with Python",
   
-  "datePublished": "2022-05-05T16:30:00-04:00",
-  "dateModified": "2022-05-05T16:30:00-04:00",
+  "datePublished": "2022-05-19T21:45:46-04:00",
+  "dateModified": "2022-05-19T21:45:46-04:00",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Learning the basics of Go with a Wordle app."
+  "description": "When the endpoint of your match depends on an earlier term, try conditional regex matching in Python."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>Wordle in Golang | Michael&#39;s Site</title>
+  <title>Conditional RegEx Matching with Python | Michael&#39;s Site</title>
 
 </head>
 
@@ -626,7 +626,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Wordle in Golang</h1>
+  <h1>Conditional RegEx Matching with Python</h1>
 
   
 
@@ -645,7 +645,7 @@
     
       
     
-    May 5, 2022
+    May 19, 2022
   </span>
   
 
@@ -654,7 +654,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    1 min read
+    3 min read
   </span>
   
 
@@ -680,55 +680,6 @@
 
 
 
-
-<div class="btn-links mb-3">
-  
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/dmsenter89/go-wordle" target="_blank" rel="noopener">
-    <i class="fab fa-github "></i>
-    
-  </a>
-
-
-</div>
 
 
   
@@ -739,32 +690,66 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Lately I&rsquo;ve been playing around with 
-<a href="https://go.dev/" target="_blank" rel="noopener">Go</a>. I&rsquo;ve read about Go for a few years
-and have been using some software written in Go (this website is built with 
-<a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>),
-but never tried it before. So what better way to give Go a shake
-than to write some code. Since Wordle has been popular, I thought I&rsquo;d write a very simple
-Wordle implementation in Go; you can check it out on 
-<a href="https://github.com/dmsenter89/go-wordle" target="_blank" rel="noopener">GitHub</a>.
-It&rsquo;s been a good way for me to get familiar with some of the
-basisc of Go, such as variables and their types, functions, etc. So far I&rsquo;ve been enjoying it.</p>
-<p>The Go website has a very nicely written 
-<a href="https://go.dev/doc/" target="_blank" rel="noopener">documentation</a> and
+      <p>Recently I&rsquo;ve needed to capture the entries of a datalines statement in SAS for editing. Generally,
+this is a straight forward problem if I only need to do it with one file or all of the files that
+I am using are formatted identically. But then I started thinking about the more general case. SAS
+doesn&rsquo;t care about the case of my keywords, so I need a case insensitive match. I need to account for
+possible extra whitespace. So far so good. But what if I have two different keywords that can start
+my data section, and the end of the data section is indicated with different characters depending on
+the chosen keyword? Could I still use a single regular expression?</p>
+<p>SAS does in fact allow a number of different keywords to enter data in a data step.
+In my experience, the most common are the 
+<a href="https://documentation.sas.com/doc/en/pgmsascdc/v_027/lestmtsref/p0114gachtut3nn1and4ap8ke9nf.htm" target="_blank" rel="noopener">datalines</a>
+and 
+<a href="https://documentation.sas.com/doc/en/pgmsascdc/v_027/lestmtsref/p1mm9b070wj962n16q0v1d9uku5q.htm" target="_blank" rel="noopener">datalines4</a>
+statements. The main difference between them is how the end of the data is indicated. For datalines,
+a single semicolon is used, while datalines4 uses a sequence of four semicolons, thereby allowing
+the use of semicolons in the data itself. There are some aliases for these commands that can be used:
+cards/lines and cards4/lines4 with matching behavior. A simple data step with these statements
+could look like this:</p>
+<pre><code class="language-SAS">data person;
+  input name $ sex $ age;
+  datalines; /* or `cards` or `lines` */
+Alfred M 14
+Alice F 13
+;
 
-<a href="https://pkg.go.dev/" target="_blank" rel="noopener">package page</a>. The 
-<a href="https://go.dev/play/" target="_blank" rel="noopener">Go Playground</a>
-let&rsquo;s you test out Go in your browser without needing to install anything. I&rsquo;ve also found
-Bodner&rsquo;s &ldquo;
-<a href="https://www.oreilly.com/library/view/learning-go/9781492077206/" target="_blank" rel="noopener">Learning Go</a>&rdquo; to be helpful.</p>
-<p>Go is a compiled language with a pretty picky compiler. It won&rsquo;t let you compile code
-with unnecessary imports and variable declarations, which help keeps your code clean.
-Cross-compilation is 
-<a href="https://freshman.tech/snippets/go/cross-compile-go-programs/" target="_blank" rel="noopener">built-in</a>.
-While Go is not a common language in scientific computing, the 
-<a href="https://www.gonum.org/" target="_blank" rel="noopener">gonum</a> package
-has implemented a number of important functions and seems to be well developed. I look forward
-to learning more about Go in the future.</p>
+data person4;
+  input name $ sex $ age;
+  datalines4; /* or `cards4` or `lines4` */
+Alfred M 14
+Alice F 13
+;;;;
+</code></pre>
+<p>We could write two separate RegEx expressions, one for the datalines/cards/lines statement and
+a second one for the datalines4/cards4/lines4 statement. But, if the RegEx engine we are using allows
+conditionals, e.g. the Python RegEx engine, then we can write a single statement that can capture
+both types of statements. The basic format of the conditonal capture is <code>(?(D)A|B)</code>, which can be read as &ldquo;if capture
+group D is set, then match A, otherwise match B.&rdquo; For more details, see 
+<a href="https://www.regular-expressions.info/conditional.html" target="_blank" rel="noopener">here</a>.</p>
+<p>Using this technique, we can capture both types of statements in one go.
+The short form of the solution I found is this
+regular expression: <code>r&quot;(?:(?:(?:data)?lines)|cards)(4)?\s*;(.*?)(?(1);{4}|;)&quot;</code>
+with two flags set: case insensitive and dot-all. If we utilize Python&rsquo;s verbose flag,
+we can format this a bit nicer as well:</p>
+<pre><code class="language-Python">re.compile(
+  r&quot;&quot;&quot;(?:(?:    # mark groups as non-capture groups
+      (?:data)? # maybe match `data`, but don't capture
+       lines)   # matches `lines`
+      |cards)   # alternatively, matches `cards`
+      (4)?      # a `4` may be present
+      \s*;      # there might be whitespace before the ;
+      (.*?)     # lazy-match data content
+      (?(1)     # check if capture group 1 is set, if so
+      ;{4}      # match `;;;`
+      |;)       # otherwise, match a single ;
+  &quot;&quot;&quot;, flags=re.DOTALL | re.X | re.I)
+</code></pre>
+<p>A great website to help you build up a regular expression is 
+<a href="https://regex101.com/" target="_blank" rel="noopener">regex101.com</a>.
+It allows you to copy a sample text and regular expression. It then explains your expression and lists
+the capture groups by number, which can be convenient. It also allows you to try out different RegEx engines.
+Try setting it to Python with the flags we mentioned, and see how it works!</p>
 
     </div>
 
@@ -788,7 +773,7 @@ to learning more about Go in the future.</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/22-05-go-wordle/&amp;text=Wordle%20in%20Golang" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/22-05-conditional-regex-python/&amp;text=Conditional%20RegEx%20Matching%20with%20Python" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -801,7 +786,7 @@ to learning more about Go in the future.</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/22-05-go-wordle/&amp;t=Wordle%20in%20Golang" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/22-05-conditional-regex-python/&amp;t=Conditional%20RegEx%20Matching%20with%20Python" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -814,7 +799,7 @@ to learning more about Go in the future.</p>
       
       
       <li>
-        <a href="mailto:?subject=Wordle%20in%20Golang&amp;body=https://dmsenter89.github.io/post/22-05-go-wordle/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Conditional%20RegEx%20Matching%20with%20Python&amp;body=https://dmsenter89.github.io/post/22-05-conditional-regex-python/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -827,7 +812,7 @@ to learning more about Go in the future.</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/22-05-go-wordle/&amp;title=Wordle%20in%20Golang" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/22-05-conditional-regex-python/&amp;title=Conditional%20RegEx%20Matching%20with%20Python" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -840,7 +825,7 @@ to learning more about Go in the future.</p>
       
       
       <li>
-        <a href="whatsapp://send?text=Wordle%20in%20Golang%20https://dmsenter89.github.io/post/22-05-go-wordle/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Conditional%20RegEx%20Matching%20with%20Python%20https://dmsenter89.github.io/post/22-05-conditional-regex-python/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -853,7 +838,7 @@ to learning more about Go in the future.</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/22-05-go-wordle/&amp;title=Wordle%20in%20Golang" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/22-05-conditional-regex-python/&amp;title=Conditional%20RegEx%20Matching%20with%20Python" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
