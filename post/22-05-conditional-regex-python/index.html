@@ -741,7 +741,7 @@ we can format this a bit nicer as well:</p>
       \s*;      # there might be whitespace before the ;
       (.*?)     # lazy-match data content
       (?(1)     # check if capture group 1 is set, if so
-      ;{4}      # match `;;;`
+      ;{4}      # match `;;;;`
       |;)       # otherwise, match a single ;
   &quot;&quot;&quot;, flags=re.DOTALL | re.X | re.I)
 </code></pre>
