@@ -5,12 +5,46 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Aug 2022 17:21:38 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 11 Aug 2022 09:15:00 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Cross Compiling With Go</title>
+      <link>https://dmsenter89.github.io/post/22-08-cross-compiling-with-go/</link>
+      <pubDate>Thu, 11 Aug 2022 09:15:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-08-cross-compiling-with-go/</guid>
+      <description>&lt;p&gt;A big difference between using compiled languages like C/C++ compared to scripting languages
+like Javascript or Python is that prior to execution, compiled languages require an explicit
+compilation step where the human readable code is translated to machine code for execution,
+the so-called &amp;ldquo;binary&amp;rdquo; of the code. Typically, a separate binary needs to be compiled for
+each target operating system and architecture. Compiling for your own machine is not a problem.
+The difficulty lies in creating binaries for machines that you don&amp;rsquo;t normally use, so you might
+not have an extra Mac lying around just to compile your program on for other Mac users.
+Compiling programs for an operating system or architecture other than the one you are working
+with is called cross-compiling. This would allow a Linux developer to create binaries for
+Windows and Mac computers, for example.&lt;/p&gt;
+&lt;p&gt;For most languages, this requires installing additional development tools and increases the
+complexity of the compilation workflow. I have found Go to be a pleasant exception to this,
+because cross-compilation is built into the standard Go tools. There is no need to learn
+any additional build-tools. All you need to learn about are some system variables that you
+need to set when compiling.&lt;/p&gt;
+&lt;p&gt;Go build tools know which system you are building for by checking the GOOS and GOARCH environment
+variables. If they are unset, the tools fall back to GOHOSTOS and GOHOSTARCH. In other words,
+to change the target OS/architecture for your build, all you have to do is set the GOOS and GOARCH
+variables during the build. So say you want to build a simple program hello.go for a Windows
+computer with the same architecture as your development machine. All you have to do is write&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;GOOS=windows go build hello.go
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;instead of just &lt;code&gt;go build hello.go&lt;/code&gt; and you&amp;rsquo;re good to go. This would produce a &lt;code&gt;hello.exe&lt;/code&gt;
+binary you could copy to a Windows machine to run.&lt;/p&gt;
+&lt;p&gt;To check what combinations of GOOS and GOARCH are valid, run &lt;code&gt;go tool dist list&lt;/code&gt;. To see
+which environment variables Go is currently seeing, run &lt;code&gt;go env&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Loading Zillow Housing Data in SAS</title>
