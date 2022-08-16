@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Susan Keen, MD, MSCR | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/author/susan-keen-md-mscr/</link>
+      <atom:link href="https://dmsenter89.github.io/author/susan-keen-md-mscr/index.xml" rel="self" type="application/rss+xml" />
+    <description>Susan Keen, MD, MSCR</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 15 Jun 2022 10:00:00 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Susan Keen, MD, MSCR</title>
+      <link>https://dmsenter89.github.io/author/susan-keen-md-mscr/</link>
+    </image>
+    
+    <item>
+      <title>Family History And Chronic Medical Conditions Associated With Sudden Death Among Working Age Adults</title>
+      <link>https://dmsenter89.github.io/publication/doshi-2022-family-history/</link>
+      <pubDate>Wed, 15 Jun 2022 10:00:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/publication/doshi-2022-family-history/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Sudden death accounts for $10%$ of deaths in the United States. Prior research has
+focused on sudden death in older victims, leaving much unknown about risk factors for younger,
+working age adults. Compared to older adults, younger adults may be more vulnerable to genetic factors.
+Understanding age related differences in sudden death risk factors may guide future prevention efforts,
+as the factors contributing to sudden death in younger patients may warrant different types of prevention
+than those affecting older adults.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;p&gt;From 2013-2015, out-of-hospital deaths among adults aged 18-64 in Wake County, NC were screened and adjudicated
+to identify 306 sudden death victims. A comparison group of 1,113 patients matched for age, gender, and residence
+was formed by randomly sampling individuals from the Carolina Data Warehouse. For sudden death victims and controls,
+the prevalence of sudden death risk factors, comprising comorbidities, mental illnesses, and family history variables,
+were assessed in three age groups (18-41, 42-54, and 55-64 years old). Hypothesis testing was conducted for each
+variable across all pairwise combinations of age groups using an unpaired, two-sample proportion Z-test with $p&amp;lt;0.05$
+as statistically significant.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;None of the variables analyzed were more prevalent in younger sudden death victims compared to older victims.
+However, family history variables were largely missing ($&amp;gt;80%$) compared to comorbidities and mental illnesses ($&amp;lt;10%$),
+with younger adults being disproportionately affected.&lt;/p&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;Underreporting of family history in medical records leaves younger adults as a poorly understood subset of sudden death
+victims who are currently unable to be appropriately screened for lifesaving preventive measures.&lt;/p&gt;
+&lt;h2 id=&#34;public-health-implications&#34;&gt;Public Health Implications&lt;/h2&gt;
+&lt;p&gt;Better family history documentation may identify younger adults at higher risk of sudden death, allowing more
+comprehensive population level screening and implementation of prevention measures appropriate for addressing genetic
+factors instead of the environmental factors more common in older adults.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Housing Insecurity: Effects on Sudden Death and Interaction with Mental Illness</title>
+      <link>https://dmsenter89.github.io/publication/vrooman-2022-housing-insecurity/</link>
+      <pubDate>Sat, 02 Apr 2022 10:00:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/publication/vrooman-2022-housing-insecurity/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;Housing insecurity is a powerful social determinant of health that is associated with increased all-cause mortality.
+The health consequences of and contributors to housing insecurity are poorly studied, which makes preventative care
+elusive for this population. In order to address these issues, we assessed the prevalence of housing insecurity
+among sudden death victims and examined its relationship to sudden death, mental illness, and clinical comorbidities.&lt;/p&gt;
+&lt;h2 id=&#34;methods&#34;&gt;Methods&lt;/h2&gt;
+&lt;p&gt;From 1 March 2013 to 28 February 2015, out-of-hospital deaths in Wake County, North Carolina, were screened and adjudicated
+to identify 399 sudden deaths among residents between the ages of 18 and 64. A control sample of 1,101 living patients were
+generated by randomly sampling for age, gender, and Wake County residence from the Carolina Data Warehouse for Health.
+Housing status was abstracted from clinical records from sudden death victims and controls.&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;Results&lt;/h2&gt;
+&lt;p&gt;Housing insecurity was documented in 28 (7.1%) of victims and 47 (4.3%) of controls (OR(95CI): 1.71(1.05-3.2)). This difference
+remained significant after adjusting for hypertension, age, and diabetes. However, when additionally adjusting for depression,
+anxiety, alcohol abuse, substance abuse, schizophrenia, and bipolar disorder, the increased prevalence of housing insecurity
+in the sudden death group became insignificant.&lt;/p&gt;
+&lt;h2 id=&#34;conclusions&#34;&gt;Conclusions&lt;/h2&gt;
+&lt;p&gt;Housing insecure individuals experience a higher burden of sudden death than housing secure individuals. Mental illness
+appears to confound the relationship between housing insecurity and sudden death. Treating underlying mental illness may
+be a path towards specializing clinical care to optimize health outcomes for housing insecure individuals.&lt;/p&gt;
+&lt;h2 id=&#34;clinical-implications&#34;&gt;Clinical Implications&lt;/h2&gt;
+&lt;p&gt;Optimize health outcomes for housing insecure individuals by acknowledging that housing insecurity appears to be a risk
+factor for sudden death - a relationship complicated by mental illness.  Patients with housing insecurity should be screened
+for mental illness, and treatment and referral to a mental illness specialist should be considered.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
