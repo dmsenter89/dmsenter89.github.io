@@ -282,7 +282,7 @@
     
       <meta property="article:published_time" content="2022-09-30T15:40:00-04:00">
     
-    <meta property="article:modified_time" content="2022-09-30T15:40:00-04:00">
+    <meta property="article:modified_time" content="2022-10-20T13:20:00-04:00">
   
 
   
@@ -311,7 +311,7 @@
   "headline": "Does it ever make sense to play the Lottery?",
   
   "datePublished": "2022-09-30T15:40:00-04:00",
-  "dateModified": "2022-09-30T15:40:00-04:00",
+  "dateModified": "2022-10-20T13:20:00-04:00",
   
   "author": {
     "@type": "Person",
@@ -646,8 +646,10 @@
     
     
       
+          Last updated on
+      
     
-    Sep 30, 2022
+    Oct 20, 2022
   </span>
   
 
@@ -842,11 +844,11 @@ for i in jackpots do printf(true, &quot;E(~:D) = $~$ ~%&quot;, i, E(i))$
 <a href="results.html">here</a>. Note that this page may take a moment to load due to the many data points. You will need to zoom in on the left-hand side to be able really make anything out.</p>
 <h4 id="implementation-note">Implementation Note</h4>
 <p>The number of simulations grows quickly given the $5,218$ games we are using. Doing $50,000$ simulations of that many games requires over 260 million random draws. Prototyping in Python often makes sense because of the many features available for analysis and plotting, but this seems like an example where a compiled language might outperform by a considerable amount. I decided to 
-<a href="https://github.com/dmsenter89/lottery-sims" target="_blank" rel="noopener">try this out</a>.</p>
-<p>All of the programs were written with an emphasis on simplicity over performance so as to avoid biasing the results. Since the different individuals play their games independently, I wrote both a single-threaded C++ version as well as one utilizing OpenMP&rsquo;s parallel for loop. My second compiled language was Go.</p>
-<p>For scripting languages, I included Python and Julia. In Julia the main loop can trivially be set to run concurrently by prepending <code>Threads.@threads</code> to the for loop, so inlcuded that as well. This instructs the Julia interpreter to run this loop with the available threads. By default this is one, but can be set higher using an environment variable or by starting Julia with the <code>-t</code> flag and specifying the desired number of threads.</p>
+<a href="https://github.com/dmsenter89/lottery-sims" target="_blank" rel="noopener">try this out (GitHub)</a>.</p>
+<p>All of the programs were written with an emphasis on simplicity over performance so as to avoid biasing the results. Since the different individuals play their games independently, I wrote both a single-threaded C++ version as well as one utilizing OpenMP&rsquo;s parallel for loop. As alternative compiled languages I added implementations in Go and Rust.</p>
+<p>For scripting languages I included Python and Julia. In Julia the main loop can trivially be set to run concurrently by prepending <code>Threads.@threads</code> to the for loop, so inlcuded that as an option as well. This instructs the Julia interpreter to run this loop with the available threads. By default this is one, but can be set higher using an environment variable or by starting Julia with the <code>-t</code> flag and specifying the desired number of threads.</p>
 <p>I used 
-<a href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener">hyperfine</a> to benchmark the performance of my programs in WSL; see output below.</p>
+<a href="https://github.com/sharkdp/hyperfine" target="_blank" rel="noopener">hyperfine (GitHub)</a> to benchmark the performance of my programs in WSL; see output below for details.</p>
 <table>
 <thead>
 <tr>
@@ -860,49 +862,57 @@ for i in jackpots do printf(true, &quot;E(~:D) = $~$ ~%&quot;, i, E(i))$
 <tbody>
 <tr>
 <td style="text-align:left">C++ (Single Thread)</td>
-<td style="text-align:right">4.597 ± 0.031</td>
-<td style="text-align:right">4.560</td>
-<td style="text-align:right">4.655</td>
-<td style="text-align:right">1.77 ± 0.12</td>
+<td style="text-align:right">4.602 ± 0.087</td>
+<td style="text-align:right">4.514</td>
+<td style="text-align:right">4.828</td>
+<td style="text-align:right">1.88 ± 0.06</td>
 </tr>
 <tr>
 <td style="text-align:left">C++ (OpenMP)</td>
-<td style="text-align:right">2.599 ± 0.181</td>
-<td style="text-align:right">2.479</td>
-<td style="text-align:right">3.050</td>
-<td style="text-align:right">1.00</td>
+<td style="text-align:right">2.653 ± 0.170</td>
+<td style="text-align:right">2.506</td>
+<td style="text-align:right">3.092</td>
+<td style="text-align:right">1.08 ± 0.07</td>
 </tr>
 <tr>
 <td style="text-align:left">Go</td>
-<td style="text-align:right">9.296 ± 0.114</td>
-<td style="text-align:right">9.199</td>
-<td style="text-align:right">9.572</td>
-<td style="text-align:right">3.58 ± 0.25</td>
+<td style="text-align:right">9.362 ± 0.058</td>
+<td style="text-align:right">9.258</td>
+<td style="text-align:right">9.417</td>
+<td style="text-align:right">3.83 ± 0.10</td>
 </tr>
 <tr>
 <td style="text-align:left">Julia</td>
-<td style="text-align:right">28.662 ± 0.479</td>
-<td style="text-align:right">27.991</td>
-<td style="text-align:right">29.705</td>
-<td style="text-align:right">11.03 ± 0.79</td>
+<td style="text-align:right">28.606 ± 0.372</td>
+<td style="text-align:right">28.198</td>
+<td style="text-align:right">29.520</td>
+<td style="text-align:right">11.69 ± 0.33</td>
 </tr>
 <tr>
 <td style="text-align:left">Julia (4 Threads)</td>
-<td style="text-align:right">18.978 ± 0.391</td>
-<td style="text-align:right">18.646</td>
-<td style="text-align:right">19.952</td>
-<td style="text-align:right">7.30 ± 0.53</td>
+<td style="text-align:right">19.016 ± 0.274</td>
+<td style="text-align:right">18.673</td>
+<td style="text-align:right">19.511</td>
+<td style="text-align:right">7.77 ± 0.23</td>
 </tr>
 <tr>
 <td style="text-align:left">Python</td>
 <td style="text-align:right">57.727 ± 0.530</td>
-<td style="text-align:right">57.013</td>
-<td style="text-align:right">58.539</td>
-<td style="text-align:right">22.21 ± 1.56</td>
+<td style="text-align:right">59.783 ± 3.811</td>
+<td style="text-align:right">57.833</td>
+<td style="text-align:right">70.242</td>
+</tr>
+<tr>
+<td style="text-align:left">Rust</td>
+<td style="text-align:right">2.447 ± 0.062</td>
+<td style="text-align:right">2.391</td>
+<td style="text-align:right">2.579</td>
+<td style="text-align:right">1.00</td>
 </tr>
 </tbody>
 </table>
-<p>As I expected, C++ ran the fastest.</p>
+<p>I was surprised by Rust&rsquo;s performance. I only looked up enough Rust to be able to implement this simple example, so I find it surprising that it can keep up with a multi-threaded C++ implementation.</p>
+<p><em>Updates: This blogpost has been updated with new benchmark values. The original post did not include results in Rust.</em></p>
 
     </div>
 
