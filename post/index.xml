@@ -5,12 +5,112 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 30 Sep 2022 15:40:00 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Nov 2022 15:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>SAS Markdown for Reproducibility</title>
+      <link>https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/</link>
+      <pubDate>Fri, 11 Nov 2022 15:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/</guid>
+      <description>&lt;p&gt;One of the coolest packages for R is 
+&lt;a href=&#34;https://yihui.org/knitr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;knitr&lt;/a&gt;. Essentially, it allows you to combine explanatory writing, such as a paper or blog post, directly with your analysis code in a Markdown document. When the target document
+is compiled (&amp;lsquo;knitted&amp;rsquo;), the R code in the document is run and the results inserted into the final document. The target document could
+be an HTML or a PDF file, for example. This is great for many reasons. You have a regular report you want to run, but the data updates?
+Just re-knit and your entire report is updated. No more separate running of the code followed by copying the results into whatever
+software you use to build the report itself. This makes it not just less cumbersome, but less error prone. It also improves reproducibility.
+Somebody wants to see your work, perhaps because they are unsure of your results or they want to extend your work? You can share the
+markdown file and the other party can see exactly what code was used to generate what part of your report or paper.&lt;/p&gt;
+&lt;p&gt;While knitr is certainly not the first package that allows for this workflow, and also not the only one, I have found it to be the most consistent and easy to use.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Luckily, knitr supports 
+&lt;a href=&#34;https://yihui.org/knitr/demo/engines/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a variety&lt;/a&gt; of 
+&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/language-engines.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;languages&lt;/a&gt;, including 
+&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown-cookbook/eng-sas.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS&lt;/a&gt;. And you can even mix and match multiple languages in 
+&lt;a href=&#34;https://github.com/yihui/knitr-examples/blob/master/106-polyglot.Rmd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one document&lt;/a&gt;.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;You might think that this sounds similar to Jupyter notebooks. While that is true, and there is a 
+&lt;a href=&#34;https://github.com/sassoftware/sas_kernel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jupyter kernel for SAS&lt;/a&gt; as well, knitr has some advantages over Jupyter for report-generation. Without additional tools, you have the option to execute but not display the code that generates your results, making a cleaner report. You can also elect to only show part of the code, with manual setup code running behind the scenes without being printed to the report itself. Additionally, the entire document is executed linearly. That means that if you update a code chunk towards the beginning of your document, it affects the code chunks following it, while in Jupyter you easily get in the habit of executing the chunks independently which can lead to inconsistencies if you don&amp;rsquo;t pay attention to the cell numbers.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;In this post, I&amp;rsquo;ll demonstrate the basics of setting up a reproducible report using the SAS engine in knitr.&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;Perhaps the easiest way to get started for beginners is to use RStudio and Anaconda. With that you can create a sample R Markdown document (&lt;code&gt;File -&amp;gt; New File -&amp;gt; R Markdown&lt;/code&gt;). Press the &lt;code&gt;knit&lt;/code&gt; button. If any packages required by knitr are missing, RStudio will install them for you. This way you can be sure that all the R parts are set up correctly. Additionally, I recommend installing the 
+&lt;a href=&#34;https://github.com/Hemken/SASmarkdown&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SASmarkdown&lt;/a&gt; package with&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# from CRAN:
+install.packages(&amp;quot;SASmarkdown&amp;quot;)
+# from GitHub: 
+devtools::install_github(&amp;quot;Hemken/SASmarkdown&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once install is complete, load the package (&lt;code&gt;library(SASmarkdown)&lt;/code&gt;) and check the output. If you see a message that SAS was found, you are good to go. If not, you will either need to add SAS to your PATH or simply provide the path to SAS as an option in your document (see below).&lt;/p&gt;
+&lt;h2 id=&#34;a-basic-markdown-file&#34;&gt;A Basic Markdown File&lt;/h2&gt;
+&lt;p&gt;The important thing is to load the SASMarkdown package in your document. I recommend making a setup chunk at the very top of your document and setting include to FALSE.
+That way the setup chunk is executed, but not printed to your final document.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```{r setup, include=FALSE}
+library(SASMarkdown)
+# if SAS is not in your path, define it manually:
+saspath &amp;lt;- &amp;quot;C:/Program Files/SASHome/SASFoundation/9.4/sas.exe&amp;quot;
+knitr::opts_chunk$set(engine=&amp;quot;sashtml&amp;quot;, engine.path=saspath)
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With that, we&amp;rsquo;re ready to run a basic SAS chunk using just the SAS option. This produces the typewriter-style output that is familiar from Enterprise Guide for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;```{sas example1}
+proc print data=sashelp.class; run;
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we want to take advantage of the modern HTML output that is standard in SAS Studio, we use the &lt;code&gt;sashtml&lt;/code&gt; engine instead:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;```{sashtml example2}
+/* if you want, you can set an ODS style for HTML output: */
+ods html style=journal;
+proc print data=sashelp.class; run;
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want graphical output, for example from SGPLOT, you&amp;rsquo;ll need to use the &lt;code&gt;sashtml&lt;/code&gt; engine. To get the default blue look from SAS Studio, use the HTMLBLUE style:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;```{sashtml example3}
+ods html style=HTMLBLUE;
+proc sgplot data=sashelp.cars;
+  scatter x=EngineSize y=MPG_CITY;
+run;
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;some-additional-comments&#34;&gt;Some Additional Comments&lt;/h2&gt;
+&lt;p&gt;The first thing that is important to note is that each chunk is processed &lt;em&gt;separately&lt;/em&gt;. That means each chunk should be written so as to be capable of being executed independent of the others. It is possible to get around this using the &lt;code&gt;collectcode=TRUE&lt;/code&gt; chunk option. This chunk will then subsequently be executed prior to the code from a following chunk. So for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;```{sashtml save1, collectcode=TRUE}
+data sample;
+  set sashelp.class;
+run;
+```
+  And now use it again:
+```{sashtml save2}
+proc means data=sample; run;
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is particularly useful for libnames and setting the preferred ODS style, so you don&amp;rsquo;t have to keep doing it again in each cell.&lt;/p&gt;
+&lt;p&gt;The other thing to note is that knitr for SAS works best with HTML output. It can use SAS styles and produce output looking like what
+you would expect running in SAS Studio. If you want PDF output, you can get nicer output using 
+&lt;a href=&#34;https://support.sas.com/rnd/base/ods/odsmarkup/latex.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX Tagsets for ODS&lt;/a&gt; and the 
+&lt;a href=&#34;https://support.sas.com/rnd/app/papers/statrep.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StatRep System&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;knitr itself was based on Sweave, but uses Markdown instead of LaTeX code. Other languages have similar packages, for
+example 
+&lt;a href=&#34;https://mpastell.com/pweave/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pweave&lt;/a&gt; for Python or 
+&lt;a href=&#34;https://docs.juliahub.com/Weave/9EzOc/0.9.4/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Weave&lt;/a&gt; for Julia. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;The chunks from different languages do not have access to each other&amp;rsquo;s data. To move data between the different engines,
+more setup work is needed. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;If you code in Julia, there is an interesting new reactive notebook called 
+&lt;a href=&#34;https://github.com/fonsp/Pluto.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pluto&lt;/a&gt; that
+promises to always keep your cells in sync, while being geared towards a Jupyter-style workflow. &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
     
     <item>
       <title>Does it ever make sense to play the Lottery?</title>
