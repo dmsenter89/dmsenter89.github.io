@@ -5,12 +5,94 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Nov 2022 15:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 14 Nov 2022 22:34:25 -0500</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Setup an Arbitrary WSL2 Distro</title>
+      <link>https://dmsenter89.github.io/post/22-11-setup-an-arbitrary-wsl2-distro/</link>
+      <pubDate>Mon, 14 Nov 2022 22:34:25 -0500</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-11-setup-an-arbitrary-wsl2-distro/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://learn.microsoft.com/en-us/windows/wsl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Windows Subsystem for Linux&lt;/a&gt; (WSL) is an important part of my daily work flow. Unfortunately, the main distro supplied by Windows
+is Ubuntu, which - for a variety of reasons - is not exactly my favorite distro. Luckily, WSL2 allows you to import an arbitrary Linux distro
+to use instead. I got the idea from 
+&lt;a href=&#34;https://dev.to/bowmanjd/install-fedora-on-windows-subsystem-for-linux-wsl-4b26&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;an article (Dev.to)&lt;/a&gt;
+by Jonathan Bowman explaining how to get Fedora up and running in WSL2. This article summarizes the
+key points of Bowman&amp;rsquo;s post and includes information for my long time daily driver, 
+&lt;a href=&#34;https://archlinux.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Arch Linux&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The short of it is that you can import a root filesystem tarball into WSL2 from Windows terminal
+using the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-cmd&#34;&gt;wsl --import &amp;lt;distro-name&amp;gt; &amp;lt;distro-target-location&amp;gt; &amp;lt;path-to-tarball&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once imported, you can launch into your distro using &lt;code&gt;wsl -d &amp;lt;distro-name&amp;gt;&lt;/code&gt;. The only question is
+how to get the root filesystem for this import step.&lt;/p&gt;
+&lt;p&gt;There are two options we can go with: using a pre-fabricated root filesystem (rootfs), or creating our own
+using Docker.&lt;/p&gt;
+&lt;h2 id=&#34;using-an-existing-root-filesystem&#34;&gt;Using an Existing Root Filesystem&lt;/h2&gt;
+&lt;p&gt;Some distros publish these. For Arch Linux, you can find them on 
+&lt;a href=&#34;https://gitlab.archlinux.org/archlinux/archlinux-docker/-/releases&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitLab&lt;/a&gt;.
+Two main images are available: base and base-devel. The latter has the base-devel 
+&lt;a href=&#34;https://archlinux.org/groups/x86_64/base-devel/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;package group&lt;/a&gt; pre-installed.&lt;/p&gt;
+&lt;p&gt;For Fedora, you can head over to 
+&lt;a href=&#34;https://github.com/fedora-cloud/docker-brew-fedora/tree/37/x86_64&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;
+to get a copy of the rootfs. Note that for Fedora, the rootfs is merely part of the repo and not a separate release
+page. You&amp;rsquo;ll be able to pick your base version of Fedora by switching branches in the repository.&lt;/p&gt;
+&lt;p&gt;These rootfs images are usually compressed. Before you can use them with WSL2, the tarball needs to be extracted.
+The Arch Linux rootfs can be extracted with zstd and the Fedora rootfs can be extracted using 7z.&lt;/p&gt;
+&lt;h2 id=&#34;making-your-own-root-filesystem&#34;&gt;Making your Own Root Filesystem&lt;/h2&gt;
+&lt;p&gt;Docker allows you to export a container to a root filesystem tarball:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;docker export -o &amp;lt;rootfs-name&amp;gt;.tar &amp;lt;container-or-image-name&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The neat thing here is that you can use either an image or a container name.&lt;/p&gt;
+&lt;p&gt;Arch Linux images are available from 
+&lt;a href=&#34;https://hub.docker.com/_/archlinux&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DockerHub&lt;/a&gt;. Available
+tags include the above mentioned base and base-devel. Fedora is also available on 
+&lt;a href=&#34;https://hub.docker.com/_/fedora&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DockerHub&lt;/a&gt;
+and its tags include version numbers (e.g., 37 or 36).&lt;/p&gt;
+&lt;h2 id=&#34;additional-setup&#34;&gt;Additional Setup&lt;/h2&gt;
+&lt;p&gt;Once you have imported the distro you only have a barebones system available. Likely only the root user is
+available, which is not ideal. You&amp;rsquo;ll want to install the packages you want to use and set up your own
+user in addition to root. If you are building your own rootfs using Docker, you can build everything
+interactively in your container by running &lt;code&gt;docker run -it &amp;lt;image-name&amp;gt;:&amp;lt;tag&amp;gt;&lt;/code&gt; to drop into a
+shell and do all your setup there. Alternatively, you can create a Dockerfile with the basic setup
+and build an image from that.&lt;/p&gt;
+&lt;h3 id=&#34;arch-linux&#34;&gt;Arch Linux&lt;/h3&gt;
+&lt;p&gt;Pacman won&amp;rsquo;t work out-of-the-box because it doesn&amp;rsquo;t ship with keys. You&amp;rsquo;ll need to run &lt;code&gt;pacman-keys --init&lt;/code&gt;
+first. Install your favorite software using pacman, e.g.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;pacman -Syu exa htop vim
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;User management and other common setup tasks are covered in the Arch Wiki&amp;rsquo;s 
+&lt;a href=&#34;https://wiki.archlinux.org/title/General_recommendations#System_administration&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;General Recommendations&lt;/a&gt;.
+Key tasks include 
+&lt;a href=&#34;https://wiki.archlinux.org/title/Users_and_groups#User_management&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;adding a new user&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;useradd -m -G wheel $username
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;fedora&#34;&gt;Fedora&lt;/h3&gt;
+&lt;p&gt;Make sure to run &lt;code&gt;dnf upgrade&lt;/code&gt; to get the latest version of your packages.
+You may need to install either the &lt;code&gt;util-linux&lt;/code&gt; or &lt;code&gt;util-linux-core&lt;/code&gt; packages in order to get
+the mount command working (used by WSL to mount the Windows filesystem). To be
+able to add a non-root user with a password you&amp;rsquo;ll need to make sure that &lt;code&gt;passwd&lt;/code&gt; is installed.&lt;/p&gt;
+&lt;p&gt;To add a non-root user in Fedora, use&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;useradd -G wheel $username 
+passwd $username  # in interactive mode, you&#39;ll type in your password here
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;general-case&#34;&gt;General Case&lt;/h3&gt;
+&lt;p&gt;In order to actually start the WSL instance as your non-root user, you&amp;rsquo;ll need
+to edit &lt;code&gt;/etc/wsl.conf&lt;/code&gt; inside of your distro. If the user section doesn&amp;rsquo;t exist
+yet, you can just run&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;echo -e &amp;quot;\n[user]\ndefault = ${username}\n&amp;quot; &amp;gt;&amp;gt; /etc/wsl.conf
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Those are the basics to get you up and running. Not everything will necessarily
+work smoothly out-of-the box as you may be missing some packages that you&amp;rsquo;re not
+aware of until you need them, but overall I&amp;rsquo;ve had a positive experience with this
+setup.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SAS Markdown for Reproducibility</title>
