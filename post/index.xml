@@ -5,12 +5,69 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 23 Nov 2022 16:43:28 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 07 Dec 2022 15:38:16 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Some CLI Tools</title>
+      <link>https://dmsenter89.github.io/post/22-12-some-cli-tools/</link>
+      <pubDate>Wed, 07 Dec 2022 15:38:16 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-12-some-cli-tools/</guid>
+      <description>&lt;p&gt;There are certain CLI tools that I find myself installing whenever I set up a new system. I&amp;rsquo;m not talking about the general system setup, like installing vim or Python, but some drop-in replacements for older Linux tools and some cli solutions that I use quite regularly. I thought I would collect them here for convenience. The headers are sorted alphabetically, except that &amp;ldquo;Other&amp;rdquo; is last because that seems most sensible.&lt;/p&gt;
+&lt;h2 id=&#34;better-drop-ins&#34;&gt;&amp;ldquo;Better&amp;rdquo; Drop-Ins&lt;/h2&gt;
+&lt;p&gt;The following tools I use as &amp;ldquo;better&amp;rdquo; drop-ins for other commands. Instead of &lt;code&gt;ls&lt;/code&gt;, I typically now use 
+&lt;a href=&#34;https://github.com/ogham/exa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;exa&lt;/a&gt;. Instead of grep, I tend to use 
+&lt;a href=&#34;https://github.com/BurntSushi/ripgrep&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ripgrep&lt;/a&gt;. Instead of find, I tend to use 
+&lt;a href=&#34;https://github.com/sharkdp/fd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fd&lt;/a&gt;. For quick viewing of text-files with syntax highlighting, I like 
+&lt;a href=&#34;https://github.com/sharkdp/bat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bat&lt;/a&gt;. As a git/diff pager with syntax highlighting I use 
+&lt;a href=&#34;https://github.com/dandavison/delta&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;delta&lt;/a&gt;. All of these tools are written in Rust.&lt;/p&gt;
+&lt;h2 id=&#34;data-and-file-wrangling&#34;&gt;Data and File Wrangling&lt;/h2&gt;
+&lt;h4 id=&#34;calculator&#34;&gt;Calculator&lt;/h4&gt;
+&lt;p&gt;A great CLI calculator implemented in C++ is 
+&lt;a href=&#34;https://qalculate.github.io/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Qalculate!&lt;/a&gt;. It is mainly intended to be run with a Qt or GTK GUI, but does include a CLI version that can be invoked with &lt;code&gt;qalc&lt;/code&gt;. A Rusty alternative is 
+&lt;a href=&#34;https://github.com/tiffany352/rink-rs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;rink&lt;/a&gt;. A benefit of rink is that if you are trying to convert incompatible units, it will make a suggestion for a transformation that makes each side compatible, which can help with dimensional analysis. A good Rusty calculator app without units but wide support of operations, including functions, is 
+&lt;a href=&#34;https://github.com/PaddiM8/kalker&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;kalker&lt;/a&gt;.&lt;/p&gt;
+&lt;h4 id=&#34;csv-and-json&#34;&gt;CSV and JSON&lt;/h4&gt;
+&lt;p&gt;CSV files are ubiquitous, and being able to manipulate them and get an overview of what is contained without needing to actually load them in Excel/Python/SAS/etc is very useful. I used to really like 
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;csvkit&lt;/a&gt; for that. The main drawback here is speed for large CSV files, due to it being implemented in Python. A must faster program written in Rust is 
+&lt;a href=&#34;https://github.com/jqnatividad/qsv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;qsv&lt;/a&gt;, successor to BurntSushi&amp;rsquo;s 
+&lt;a href=&#34;https://github.com/BurntSushi/xsv&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;xsv&lt;/a&gt;. It has more features than csvkit, is faster, and seems more flexible.&lt;/p&gt;
+&lt;p&gt;Another cool Python program for interacting with CSV files is 
+&lt;a href=&#34;https://www.visidata.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;visidata&lt;/a&gt;. It is a CSV viewer that doubles as a spreadsheet program, allows you to make plots and statistics and just do a ton of different things with your file in-memory.&lt;/p&gt;
+&lt;p&gt;The C program 
+&lt;a href=&#34;https://github.com/stedolan/jq&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;jq&lt;/a&gt; aims to be the &lt;code&gt;sed&lt;/code&gt; of working with JSON files.&lt;/p&gt;
+&lt;h4 id=&#34;file-managers&#34;&gt;File Managers&lt;/h4&gt;
+&lt;p&gt;There are &lt;em&gt;a lot&lt;/em&gt; of file managers to choose from these days. There are lots of popular options like mc, ranger, nnn, but I tend to keep falling back on 
+&lt;a href=&#34;https://github.com/vifm/vifm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;vifm&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;development&#34;&gt;Development&lt;/h2&gt;
+&lt;p&gt;If you need to benchmark something, try Rusty old 
+&lt;a href=&#34;https://github.com/sharkdp/hyperfine&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hyperfine&lt;/a&gt;. There is an interesting make alternative called 
+&lt;a href=&#34;https://github.com/casey/just&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;just&lt;/a&gt;, which looks promising but I haven&amp;rsquo;t played with it yet.&lt;/p&gt;
+&lt;h2 id=&#34;resource-management&#34;&gt;Resource Management&lt;/h2&gt;
+&lt;h4 id=&#34;disk-space&#34;&gt;Disk Space&lt;/h4&gt;
+&lt;p&gt;There are several excellent tools here. One that can be found in most repos I&amp;rsquo;ve encountered is 
+&lt;a href=&#34;https://dev.yorhel.nl/ncdu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ncdu&lt;/a&gt;, a disk usage analyzer with an ncurses interface written in C. It is reasonably fast and let&amp;rsquo;s you interactively delete folders while you&amp;rsquo;re at it. A parallel implementation of the same idea but written in Go can be found with 
+&lt;a href=&#34;https://github.com/dundee/gdu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gdu&lt;/a&gt;. For non-interactive use, 
+&lt;a href=&#34;https://github.com/bootandy/dust&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;dust&lt;/a&gt; (du + rust) is available.&lt;/p&gt;
+&lt;h4 id=&#34;system-status---general&#34;&gt;System Status - General&lt;/h4&gt;
+&lt;p&gt;One of the first tools I usually install is 
+&lt;a href=&#34;https://github.com/htop-dev/htop&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;htop&lt;/a&gt;. It is a widely available and fast process viewer written in C. You can use it to kill or renice a process interactively without needing to find its PID. An alternative to this is 
+&lt;a href=&#34;https://github.com/nicolargo/glances&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;glances&lt;/a&gt;, &amp;ldquo;an eye on your system&amp;rdquo; written in Python. It has a lot more information, including disk usage, sensor temperatures, battery information (on laptops), etc. and can be extended with plugins. It can be used interactively on the CLI, but it also gives the option of running in client/server mode which is nifty.&lt;/p&gt;
+&lt;p&gt;Similar to glances, 
+&lt;a href=&#34;https://github.com/ClementTsang/bottom&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bottom&lt;/a&gt; is a Rust program giving general system information including plots, but it does not have quite the same range of information to it as glances does.&lt;/p&gt;
+&lt;h4 id=&#34;system-status---networking&#34;&gt;System Status - Networking&lt;/h4&gt;
+&lt;p&gt;To see what is clogging up your internet pipes, try 
+&lt;a href=&#34;https://github.com/raboof/nethogs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nethogs&lt;/a&gt; written in C++. A nice rusty alternative is 
+&lt;a href=&#34;https://github.com/imsnif/bandwhich&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bandwhich&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;
+&lt;p&gt;Trying to figure out when it&amp;rsquo;s a good time to speak with a colleague in a different time zone? Install the Python package 
+&lt;a href=&#34;https://gitlab.com/anarcat/undertime&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;undertime&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>CSV2DS</title>
