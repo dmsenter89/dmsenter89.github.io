@@ -66,6 +66,8 @@
 &lt;h2 id=&#34;other&#34;&gt;Other&lt;/h2&gt;
 &lt;p&gt;Trying to figure out when it&amp;rsquo;s a good time to speak with a colleague in a different time zone? Install the Python package 
 &lt;a href=&#34;https://gitlab.com/anarcat/undertime&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;undertime&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t want to remeber different package manager&amp;rsquo;s syntax? Install 
+&lt;a href=&#34;https://github.com/icy/pacapt&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pacapt&lt;/a&gt; and use ArchLinux&#39; pacman syntax on your system instead.&lt;/p&gt;
 </description>
     </item>
     
