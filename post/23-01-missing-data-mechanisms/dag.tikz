@@ -1,0 +1,42 @@
+﻿% for tips on making DAGs in with TikZ:
+% https://www.nsgrantham.com/draw-dags-tikz
+
+\begin{tikzpicture}
+\tikzset{> = stealth}
+	% a) Missing Completely at Random
+	\node at (-0.25,0.5) {1) MCAR};
+	\node (s) at (0,0) {$S$};
+	\node[draw, circle,inner sep = 1.5pt] (h) at (2,0) {$H$};
+	\node (hm) at (2,-2) {$H^*$};
+	\node (d) at (0,-2) {$D$};
+
+	\path[->] (s) edge (h);
+	\path[->] (h) edge (hm);
+	\path[->] (d) edge (hm);
+
+
+	% b) Missing at Random
+	\node at (3.75,0.5) {2) MAR};
+	\node (s)  at (4,0) {$S$};
+	\node[draw, circle, inner sep = 1.5pt] (h) at (6,0) {$H$};
+	\node (hm) at (6,-2) {$H^*$};
+	\node (d) at (4,-2) {$D$};
+
+	\path[->] (s) edge (h);
+	\path[->] (s) edge (d);
+	\path[->] (d) edge (hm);
+	\path[->] (h) edge (hm);
+
+	% d) Missing not at Random
+	\node at (7.75,0.5) {3) MNAR};
+	\node (s) at (8, 0) {$S$};
+	\node[draw, circle, inner sep = 1.5pt] (h) at (10,0) {$H$};
+	\node (hm) at (10,-2) {$H^*$};
+	\node (d) at (8,-2) {$D$};
+
+	\path[->] (s) edge (h);
+	\path[->] (h) edge (hm);
+	\path[->] (d) edge (hm);
+	\path[->] (h) edge (d);
+
+\end{tikzpicture}

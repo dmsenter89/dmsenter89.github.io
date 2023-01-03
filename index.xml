@@ -5,7 +5,7 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 07 Dec 2022 15:38:16 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 03 Jan 2023 10:00:00 -0500</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
@@ -13,18 +13,245 @@
     </image>
     
     <item>
+      <title>Missing Data Mechanisms</title>
+      <link>https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/</link>
+      <pubDate>Tue, 03 Jan 2023 10:00:00 -0500</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/</guid>
+      <description>&lt;p&gt;Understanding whether a variable&amp;rsquo;s missingness from a dataset is related to the underlying value of the data is a key concept in the field of missing data analysis. We distinguish three broad categories: missing completely at random (MCAR), missing at random (MAR), and missing not at random (MNAR). In his book &lt;em&gt;Statistical Rethinking&lt;/em&gt;, McElreath&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; gives an amusing example to illustrate this concept: he considers variants of a dog eating homework and how the dog chooses - if at all - to eat the homework. The examples he give show substantial shifts in observed values, which make for a good illustration of the types of problems you might encounter. A lecture corresponding to the  example from the book can be found on 
+&lt;a href=&#34;https://www.youtube.com/watch?v=oMiSb8GKR0o&amp;amp;list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&amp;amp;index=18&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;YouTube&lt;/a&gt;. In this post, I will first briefly review the different missing data mechanisms before implementing McElreath&amp;rsquo;s examples in SAS.&lt;/p&gt;
+&lt;h3 id=&#34;overview-of-missing-data-mechanisms&#34;&gt;Overview of Missing Data Mechanisms&lt;/h3&gt;
+&lt;p&gt;My presentation here follows van Buuren&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. Let $Y$ be a $n \times p$ matrix representing a sample of $p$ variables for $n$ units of the sample and $R$ be a corresponding $n \times p$ indicator matrix, so that&lt;/p&gt;
+&lt;p&gt;$$r_{i,j} = \begin{cases} 1 &amp;amp; y_{i,j} \text{ is observed} \\ 0 &amp;amp; y_{i,j} \text{ not observed.}\end{cases} $$&lt;/p&gt;
+&lt;p&gt;We denote the observed data by $Y_\text{obs}$ and the missing data that $Y_\text{miss}$ so that $Y=(Y_\text{obs},Y_\text{miss})$.&lt;/p&gt;
+&lt;p&gt;We distinguish three main categories for how the distribution of $R$ may depend on $Y$. This relationship is described as the &lt;em&gt;missing data model&lt;/em&gt;. Let $\psi$ contain the parameters of this model. The general expression of the missing data model is $\mathrm{Pr}(R|Y_\text{obs}, Y_\text{miss}, \psi)$, where $\psi$ consists of the parameters of the missing data model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Missing Completely at Random (MCAR).&lt;/strong&gt; This implies that the cause of the missing data is unrelated to the data itself. In this case,&lt;/p&gt;
+&lt;p&gt;$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0|\psi).$$&lt;/p&gt;
+&lt;p&gt;This is the ideal case, but unfortunately rare in practice. Many researchers implicitly assume this when using methods such as list-wise deletion, otherwise known as complete case analysis, which can produce unbiased estimates of sample means if the data are MCAR, although the reported standard error will be too large.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Missing at Random (MAR).&lt;/strong&gt; Missingness is the same within groups defined by the observed data, so that&lt;/p&gt;
+&lt;p&gt;$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0|Y_\text{obs},\psi).$$&lt;/p&gt;
+&lt;p&gt;This is a often a more reasonable assumption in practice and the starting point for modern missing data methods.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Missing not at Random (MNAR).&lt;/strong&gt; If neither the MCAR or MAR assumptions hold, then we may find that missingness depends on the missing data itself, in which case there is no simplification and
+$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi).$$&lt;/p&gt;
+&lt;p&gt;As you can imagine, this is the most tricky case to deal with.&lt;/p&gt;
+&lt;h3 id=&#34;dogs-eating-homework&#34;&gt;Dogs Eating Homework&lt;/h3&gt;
+&lt;p&gt;Consider dogs (D) eating students&#39; homework. Each student&amp;rsquo;s homework score (H) is graded on a 10-point scale and each student&amp;rsquo;s score varies in proportion to how much they study (S). We assume the amount of time they study is normally distributed. A binomial is used to generate homework scores from the normed time spent studying. McElreath uses the following code to simulate the full data set:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;N &amp;lt;- 100
+S &amp;lt;- rnorm( N )
+H &amp;lt;- rbinom( N, size=10, inv_logit(S) )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where &lt;code&gt;inv_logit(x) = exp(x)+(1+exp(x))&lt;/code&gt;, the definition used by the &lt;code&gt;LOGISTIC&lt;/code&gt; function in SAS. With a data step, this can be represented in SAS as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data full;
+    DO i=1 to 100;
+        S=RAND(&#39;NORM&#39;);
+        H=RAND(&#39;BINO&#39;, LOGISTIC(S), 10);
+        output;
+    END;
+    label S=&#39;Amount of Studying&#39; H=&#39;Homework Score&#39;;
+    drop i;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can get closer in form to the R code by using PROC IML, but that&amp;rsquo;s a story for a different post.&lt;/p&gt;
+&lt;p&gt;Say we are interested in estimating the relationship between $S$ and $H$. In our example, we assume that $H$ is not directly observable. Instead, $H^*$ is observed - a subset of the full data set $H$ with some homework values missing. We can now look at &lt;em&gt;why&lt;/em&gt; some of those values are missing. Specifically, in McElreath&amp;rsquo;s example each student has a dog $D$ and sometimes the dog eats the homework. But here we can again ask, why is the dog eating the homework? McElreath uses  
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Directed_acyclic_graph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;directed acyclic graphs&lt;/a&gt; (DAGs) to represent different missing data models, reproduced below. As we will see, these are some intuitive examples for our three missing data mechanism categories.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-directed-acyclic-graphs-corresponding-to-mcelreaths-examples-of-missing-data-models-s-represents-the-amount-of-time-spent-studying-which-in-turn-influences-the-homework-score-h-which-is-only-partially-observed-indicated-by-the-circle-alas-dogs-d-eat-some-of-the-homework-the-actually-observed-scores---those-not-eaten---are-indicated-by-h-adapted-from-figure-154-in-_statistical-rehinking_&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/dag_hu9d4aa2d4b53fa51c30ec3b81dc4e20f1_14343_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The directed acyclic graphs corresponding to McElreath&amp;amp;rsquo;s examples of missing data models. $S$ represents the amount of time spent studying, which in turn influences the homework score $H$, which is only partially observed (indicated by the circle). Alas, dogs $D$ eat some of the homework. The actually observed scores - those not eaten - are indicated by $H^*$. Adapted from figure 15.4 in &amp;lt;em&amp;gt;Statistical Rehinking&amp;lt;/em&amp;gt;.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/dag_hu9d4aa2d4b53fa51c30ec3b81dc4e20f1_14343_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;665&#34; height=&#34;179&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    The directed acyclic graphs corresponding to McElreath&amp;rsquo;s examples of missing data models. $S$ represents the amount of time spent studying, which in turn influences the homework score $H$, which is only partially observed (indicated by the circle). Alas, dogs $D$ eat some of the homework. The actually observed scores - those not eaten - are indicated by $H^*$. Adapted from figure 15.4 in &lt;em&gt;Statistical Rehinking&lt;/em&gt;.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h4 id=&#34;missing-completely-at-random-mcar&#34;&gt;Missing Completely At Random (MCAR)&lt;/h4&gt;
+&lt;p&gt;In the first example, the dogs eat homework completely at random. This is the most basic and benign case, and corresponds to DAG 1) in Figure 1. McElreath&amp;rsquo;s R code is given by&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;D &amp;lt;- rbern( N ) 
+Hm &amp;lt;- H  # H*, but * is not a valid char for varnames in R
+Hm[D==1] &amp;lt;- NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can implement this in SAS by using the &lt;code&gt;RAND&lt;/code&gt; function with the Bernoulli argument in an if/else clause:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;if RAND(&#39;BERN&#39;, 0.5) then Hm = .;
+    else Hm = H;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This causes about half of our data to be hidden, but not in a biased way.&lt;/p&gt;
+&lt;h4 id=&#34;missing-at-random-mar&#34;&gt;Missing at Random (MAR)&lt;/h4&gt;
+&lt;p&gt;In the second example, we assume the amount of time a student spends studying decreases the amount of time they have to play with and exercise their dog. This, in turn, influences whether the homework gets eaten. Or, as McElreath puts it, the &amp;ldquo;dog eats conditional on the cause of homework.&amp;rdquo; In his particular example, the homework is eaten whenever a student spends more time studying than the average $S=0$. This corresponds to DAG 2) in Figure 1.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;D &amp;lt;- ifelse( S&amp;gt;0 , 1 , 0 )
+Hm &amp;lt;- H
+Hm[D==1] &amp;lt;-NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In SAS:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;if S&amp;gt;0 then Hm = .;
+    else Hm = H;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;missing-not-at-random-mnar&#34;&gt;Missing not at Random (MNAR)&lt;/h4&gt;
+&lt;p&gt;In this case, we have some correspondence between the missing variable&amp;rsquo;s value and whether or not it is missing from the data set. Here, the &amp;ldquo;dog eats conditional on the homework itself.&amp;rdquo; Suppose that dogs prefer to eat bad homework. In such a case, the value of $H$ is directly related to whether or not $H$ is observed in the particular unit or not. His example R code is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;# dogs prefer bad homework
+D &amp;lt;- ifelse( H&amp;lt;5 , 1 , 0 )
+Hm &amp;lt;- H
+Hm[D==1] &amp;lt;- NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And in SAS:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;if H&amp;lt;5 then Hm = .;
+    else Hm = H;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;the-full-sas-code&#34;&gt;The Full SAS Code&lt;/h3&gt;
+&lt;p&gt;We can now build a SAS data set that contains a full copy of the original data set, together with our various examples of missing data mechanisms. I have added a seed to the data step for reproducibility.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data full;
+    CALL streaminit( 451 ); 
+    
+    LABEL
+        Type = &#39;Missing Data Mechanism&#39;
+        S = &#39;Amount of Studying&#39;
+        H = &#39;Homework Score&#39;
+        Hm = &#39;Observed Homework Score&#39;
+    ;
+
+    DO i=1 to 100;
+        TYPE = &#39;FULL&#39;;
+        S = RAND(&#39;NORM&#39;);
+        H = RAND(&#39;BINO&#39;, LOGISTIC(S), 10);
+        Hm = H;
+        output;
+        
+        /* Example 1) MCAR */
+        TYPE = &#39;MCAR&#39;;
+        if RAND(&#39;BERN&#39;, 0.5) then Hm = .;
+            else Hm = H;
+        output;
+        
+        /* Example 2) MAR */
+        TYPE = &#39;MAR&#39;;
+        if S&amp;gt;0 then Hm = .;
+            else Hm = H;
+        output;
+        
+        /* Example 3) MNAR */
+        TYPE = &#39;MNAR&#39;;
+        if H&amp;lt;5 then Hm = .;
+            else Hm = H;
+        output;
+    
+    END;
+    
+    drop i;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You may want to run a &lt;code&gt;PROC SORT&lt;/code&gt; or &lt;code&gt;PROC SQL&lt;/code&gt; afterwards to group the different categories together, as they will be alternating in this data set.&lt;/p&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-boxplot-of-our-example-data-note-that-the-mcar-data-looks-very-similar-to-the-original-data-set-unlike-the-mar-and-mnar-versions&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/mdm_boxplot_hu7d089ca360b9b11aaf1a482082b6d8dc_11177_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Boxplot of our example data. Note that the MCAR data looks very similar to the original data set, unlike the MAR and MNAR versions.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/mdm_boxplot_hu7d089ca360b9b11aaf1a482082b6d8dc_11177_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Boxplot of our example data. Note that the MCAR data looks very similar to the original data set, unlike the MAR and MNAR versions.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;We can see that MCAR leads to minimal bias in our example data, while both the MAR and MNAR variations lead to substantial differences in observed vs actual homework scores for our synthetic population. For a more subtle example, see section 2.2.4 in van Buuren,&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; available 
+&lt;a href=&#34;https://stefvanbuuren.name/fimd/sec-idconcepts.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online here&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;R. McElreath, &lt;em&gt;Statistical Rethinking&lt;/em&gt;, 2nd ed, Chapman and Hall/CRC, Boca Raton, FL, 2020. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;S. van Buuren, &lt;em&gt;Flexible Imputation of Missing Data&lt;/em&gt;, 2nd ed, Chapman and Hall/CRC, Boca Raton, FL, 2019. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Some CLI Tools</title>
       <link>https://dmsenter89.github.io/post/22-12-some-cli-tools/</link>
       <pubDate>Wed, 07 Dec 2022 15:38:16 +0000</pubDate>
       <guid>https://dmsenter89.github.io/post/22-12-some-cli-tools/</guid>
       <description>&lt;p&gt;There are certain CLI tools that I find myself installing whenever I set up a new system. I&amp;rsquo;m not talking about the general system setup, like installing vim or Python, but some drop-in replacements for older Linux tools and some cli solutions that I use quite regularly. I thought I would collect them here for convenience. The headers are sorted alphabetically, except that &amp;ldquo;Other&amp;rdquo; is last because that seems most sensible.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#better-drop-ins&#34;&gt;&amp;ldquo;Better&amp;rdquo; Drop-Ins&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#data-and-file-wrangling&#34;&gt;Data and File Wrangling&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#development&#34;&gt;Development&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#resource-management&#34;&gt;Resource Management&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#other&#34;&gt;Other&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
 &lt;h2 id=&#34;better-drop-ins&#34;&gt;&amp;ldquo;Better&amp;rdquo; Drop-Ins&lt;/h2&gt;
 &lt;p&gt;The following tools I use as &amp;ldquo;better&amp;rdquo; drop-ins for other commands. Instead of &lt;code&gt;ls&lt;/code&gt;, I typically now use 
 &lt;a href=&#34;https://github.com/ogham/exa&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;exa&lt;/a&gt;. Instead of grep, I tend to use 
-&lt;a href=&#34;https://github.com/BurntSushi/ripgrep&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ripgrep&lt;/a&gt;. Instead of find, I tend to use 
+&lt;a href=&#34;https://github.com/BurntSushi/ripgrep&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ripgrep&lt;/a&gt;. Instead of &lt;code&gt;find&lt;/code&gt;, I tend to use 
 &lt;a href=&#34;https://github.com/sharkdp/fd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fd&lt;/a&gt;. For quick viewing of text-files with syntax highlighting, I like 
-&lt;a href=&#34;https://github.com/sharkdp/bat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bat&lt;/a&gt;. As a git/diff pager with syntax highlighting I use 
-&lt;a href=&#34;https://github.com/dandavison/delta&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;delta&lt;/a&gt;. All of these tools are written in Rust.&lt;/p&gt;
+&lt;a href=&#34;https://github.com/sharkdp/bat&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;bat&lt;/a&gt; over &lt;code&gt;cat&lt;/code&gt;. As a git/diff pager with syntax highlighting I use 
+&lt;a href=&#34;https://github.com/dandavison/delta&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;delta&lt;/a&gt;. All of these tools are written in Rust. The old &lt;code&gt;df&lt;/code&gt; command can be improved with 
+&lt;a href=&#34;https://github.com/muesli/duf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;duf&lt;/a&gt;, a Go implementation with output that&amp;rsquo;s nicer to read (and alternatively, outputs as JSON).&lt;/p&gt;
 &lt;h2 id=&#34;data-and-file-wrangling&#34;&gt;Data and File Wrangling&lt;/h2&gt;
 &lt;h4 id=&#34;calculator&#34;&gt;Calculator&lt;/h4&gt;
 &lt;p&gt;A great CLI calculator implemented in C++ is 
