@@ -1,0 +1,1284 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="D. Michael Senter">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Dealing with computer resources in a modern lab can be tricky. Even if all participating researchers have laptops, a central location for storage or to host licensed software is desirable. While a physical computer can be setup for such a use, that is not always the most desirable solution.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-01-virtual-lab/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-88798177-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-88798177-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://dmsenter89.github.io/post/23-01-virtual-lab/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Michael&#39;s Site">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/23-01-virtual-lab/">
+  <meta property="og:title" content="Setting up a Virtual Lab Computer | Michael&#39;s Site">
+  <meta property="og:description" content="Dealing with computer resources in a modern lab can be tricky. Even if all participating researchers have laptops, a central location for storage or to host licensed software is desirable. While a physical computer can be setup for such a use, that is not always the most desirable solution."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2023-01-06T19:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2023-01-06T19:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://dmsenter89.github.io/post/23-01-virtual-lab/"
+  },
+  "headline": "Setting up a Virtual Lab Computer",
+  
+  "datePublished": "2023-01-06T19:00:00Z",
+  "dateModified": "2023-01-06T19:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "D. Michael Senter"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Michael's Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "Dealing with computer resources in a modern lab can be tricky. Even if all participating researchers have laptops, a central location for storage or to host licensed software is desirable. While a physical computer can be setup for such a use, that is not always the most desirable solution."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Setting up a Virtual Lab Computer | Michael&#39;s Site</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Michael&#39;s Site</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Michael&#39;s Site</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Setting up a Virtual Lab Computer</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jan 6, 2023
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    10 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>Dealing with computer resources in a modern lab can be tricky. Even if all participating researchers have laptops, a central location for storage or to host licensed software is desirable. While a physical computer can be setup for such a use, that is not always the most desirable solution. We want multiple people to have concurrent access to our resources while providing safe, sandboxed environments. Sometimes lab members want/need root access to learn certain tasks, but we don&rsquo;t want them to accidentally take down our carefully configured systems. This leads us to the idea of containerization which can provide various failsafes. In this post, we will be setting up the 
+<a href="https://wiki.archlinux.org/title/LXD" target="_blank" rel="noopener">LXD (ArchWiki)</a> environment as a virtual lab computer. This solution gives an entire working system, including systemd, similar to but more lightweight than VirtualBox.</p>
+<p>Setting up a successful virtual computer is very similar to setting up a regular Linux machine, with some minor LXD overhead. Note that only the individual administering the containers will need to deal with that LXD overhead. From the point of view of the end user, it&rsquo;ll look the same as if they were interacting with a &ldquo;regular&rdquo; computer.  This post deals with the setup from the point of view of the admin. The lab members should be setup as users inside the container and can then SSH into the container or use VNC if a GUI is needed, similar to how they interact with a regular remote computer.</p>
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#install-and-setup-of-lxd">Install and Setup of LXD</a></li>
+    <li><a href="#container-setup">Container Setup</a>
+      <ul>
+        <li><a href="#getting-the-image">Getting the Image</a></li>
+        <li><a href="#basic-container-management">Basic Container Management</a></li>
+        <li><a href="#setting-up-the-container">Setting up the Container</a></li>
+      </ul>
+    </li>
+    <li><a href="#networking">Networking</a>
+      <ul>
+        <li><a href="#giving-the-container-access-to-the-internet">Giving the Container Access to the Internet</a></li>
+        <li><a href="#network-forwarding">Network Forwarding</a></li>
+      </ul>
+    </li>
+    <li><a href="#getting-a-gui-running">Getting a GUI Running</a></li>
+  </ul>
+</nav>
+
+<h2 id="install-and-setup-of-lxd">Install and Setup of LXD</h2>
+<p>LXD can be installed from a snap with <code>sudo snap install lxd</code>, but that requires you to have snap running. On Arch, LXD is available in the repos with <code>pacman -S lxd</code>. To get a RPM install in Fedora, you&rsquo;ll need to use an additional COPR repository like this:</p>
+<pre><code class="language-sh">dnf copr enable ganto/lxc4
+dnf install lxd
+</code></pre>
+<p>Once installed, you&rsquo;ll need to either enable the <code>lxd.socket</code> or <code>lxd.service</code> (if you want instances to be able to autostart). You&rsquo;ll want to modify the subuid and subgid files so you can run unpriviliged containers (recommended), e.g.:</p>
+<pre><code class="language-sh"># for root user and systemd:
+usermod -v 1000000-1000999999 -w 1000000-1000999999 root 
+</code></pre>
+<p>With this done, run <code>lxd init</code> to go through a configuration guide for your new setup. If this is your first time using LXD, you will likely be fine just using the default settings, except maybe the size of the storage pool - but you can always attach other storage to your containers later, so if you will run tasks producing a lot of data you might want to consider just mounting a dedicated filesystem later. If you have multiple computers available in your lab, you might want to consider turning on 
+<a href="https://linuxcontainers.org/lxd/docs/latest/explanation/clustering/" target="_blank" rel="noopener">clustering (documentation)</a>.</p>
+<p>For more details, see the 
+<a href="https://wiki.archlinux.org/title/LXD#Setup" target="_blank" rel="noopener">ArchWiki</a> or the 
+<a href="https://linuxcontainers.org/lxd/getting-started-cli/#initial-configuration" target="_blank" rel="noopener">Official Getting Started Guide</a>.</p>
+<h2 id="container-setup">Container Setup</h2>
+<h3 id="getting-the-image">Getting the Image</h3>
+<p>The first step in setting up a container is picking a suitable image to start from. Similar to Docker, many distributions are available to chose from. There are also arm and amd64 images available, so you can pick what works with your platform. To list available images on the image server, use the syntax <code>lxc image list images:&lt;keyword&gt;</code>.</p>
+<pre><code class="language-sh"># ArchLinux images:
+lxc image list images:archlinux amd64 
+# Fedora images, using key/value pairs:
+lxc image list images:fedora arch=amd64 type=container
+</code></pre>
+<p>To create a new image without starting it, use <code>lxc init &lt;image&gt; &lt;container-name&gt;</code>. To both initialize and start a new container, use <code>lxc init &lt;image&gt; &lt;container-name&gt;</code>. For example:</p>
+<pre><code class="language-sh"># create a base image called myarch without starting:
+lxc init images:archlinux myarch
+# you can also specify version and arch, e.g. Fedora 36 / 64bit:
+lxc init images:fedora/36/amd64 myfedora
+# create and launch an image:
+lxc init images:rockylinux/9 myrocky
+</code></pre>
+<p>Note that you can have a large number of concurrent containers in use, which may but need not share the same base image. This can be useful for larger teams, where you can setup systems for particular tasks or projects. For example, you could have a main machine for your graduate students, a separate one for people moving in and out of the lab like REU students, and a third container for a class that you&rsquo;re teaching to use.</p>
+<h3 id="basic-container-management">Basic Container Management</h3>
+<pre><code class="language-sh"># Starting, stopping etc. is intuitive
+lxc start   &lt;container&gt; # starts container
+lxc stop    &lt;container&gt; [--force] # stops the container
+lxc restart &lt;container&gt; [--force] # restart
+lxc pause   &lt;container&gt; # send SIGSTOP to all container processes
+
+# what containers do I have?
+lxc list 
+lxc info myarch # get detailed info about this container
+lxc copy &lt;name1&gt; &lt;name2&gt; # make a copy of an existing container
+lxc delete &lt;container&gt; [--force]
+
+# edit container configuration
+lxc config edit &lt;container&gt; # launches config in VISUAL editor
+lxc config set &lt;container&gt; &lt;key&gt; &lt;value&gt;  # change a single config item
+lxc config device add &lt;container&gt; &lt;dev&gt; &lt;type&gt; &lt;key&gt;=&lt;value&gt;
+lxc config show [--expanded] &lt;container&gt;
+</code></pre>
+<p>In addition to these commmands, you can also snapshot your containers. This creates a restorable copy of your container in case something bad happens - like someone typing <code>rm -rf *</code> into the wrong root shell. By default, snapshots are named in a numbered pattern snapX where X is an integer.</p>
+<pre><code class="language-sh">lxc snapshot &lt;container&gt; &lt;snap&gt; # create new snapshot
+lxc restore  &lt;container&gt; &lt;snap&gt; # restore container to snapshot
+lxc copy &lt;container&gt;/&lt;snap&gt; &lt;new-container&gt; # new container from snapshot
+lxc delete &lt;container&gt;/&lt;snap&gt;   # delete the snapshot
+lxc info &lt;container&gt;            # lists available snapshots, plus other info
+lxc move &lt;container&gt;/&lt;snap&gt; &lt;container&gt;/&lt;new-snap&gt; # rename snapshot
+</code></pre>
+<h3 id="setting-up-the-container">Setting up the Container</h3>
+<p>You can enter your container immediately with a root shell with <code>lxc shell &lt;container&gt;</code> and proceed with your regular setup, such as updating and installing packages, setting up new users, etc. To make this process more repeatedly, you can also just move a setup script from the host to the container first, and then execute that script inside the container. That way you can have a record of what you did when you first set up the container.</p>
+<pre><code class="language-sh"># drop into root shell
+lxc shell &lt;container&gt;
+# execute arbitrary command in container
+lxc exec &lt;container&gt; -- &lt;program&gt; [&lt;options&gt;]
+
+# move a file from host to container
+lxc file push /host/file &lt;container&gt;/path/on/container 
+# move a file from container to host
+lxc file pull &lt;container&gt;/path/to/file /path/on/host
+# edit a file inside container
+lxc file edit &lt;container&gt;/etc/passwd 
+</code></pre>
+<p>See my earlier blog post for a list of 
+<a href="/post/22-12-some-cli-tools/">some CLI tools</a> I like to install on new systems.</p>
+<h2 id="networking">Networking</h2>
+<h3 id="giving-the-container-access-to-the-internet">Giving the Container Access to the Internet</h3>
+<p>The first step in container networking is to make sure your container can access the network. This may require your firewall to let traffic through on the default bridge. On an ArchLinux host, use</p>
+<pre><code class="language-sh">ufw route allow in on lxdbr0
+ufw allow in on lxdbr0
+</code></pre>
+<p>while on a Fedora host you might use</p>
+<pre><code class="language-sh">firewall-cmd --zone=trusted --change-interface=lxdbr0 --permanent
+</code></pre>
+<h3 id="network-forwarding">Network Forwarding</h3>
+<p>At this point your container is available from the host on wich the LXD service is running. But the whole point of the exercise is to make the container accessible from the lab members' various devices. I&rsquo;ll present two options here for setting this up, depending on whether you need access from outside of your local network or not. Either way, make sure SSH is 
+<a href="https://wiki.archlinux.org/title/OpenSSH" target="_blank" rel="noopener">set up</a> inside your container and you can SSH into the container from the host shell. Both methods rely on using the network forward feature built into LXD. See the 
+<a href="https://linuxcontainers.org/lxd/docs/master/howto/network_forwards/" target="_blank" rel="noopener">documentation</a> for details.</p>
+<p>For network forwarding to work we need to know two things about our container: what device our container is using to connect to the internet; on a default setup, this will be lxdbr0 but check with <code>lxc network list</code> to be sure. The second item we need is the IP address of our container, which can be displayed with <code>lxc list &lt;container&gt;</code>.</p>
+<p>The next item we need is an IP address to forward from. We can either get an IP address dedicated to the container, or hijack some ports from our host for re-routing.</p>
+<p>To add a second IP to your existing network device, use the <code>ip a</code> command to find the device name (on your host) of the network device connected to your network. If you use wifi, this might be something like wlp4s0 or similar. Then pick an IP not otherwise assigned by the router and assign it to this device - in addition to the existing IP - using the following command:</p>
+<pre><code class="language-sh">ip -4 a add dev &lt;device-name&gt; &lt;free-ip&gt;/24
+</code></pre>
+<p>Note that this will only persist until the host reboots. You can then create a network forward on the container&rsquo;s device (e.g., lxdbr0) with the newly assigned IP as the listening address. Using this command will let the container handle all incoming traffic to the new IP:</p>
+<pre><code class="language-sh">lxc network forward create lxdbr0 &lt;listening_address&gt;
+</code></pre>
+<p>You can then edit the target address with</p>
+<pre><code class="language-sh">lxc network forward edit lxdbr0 &lt;listening_address&gt;
+</code></pre>
+<p>and specify the container&rsquo;s IP as the <code>target_address</code>.</p>
+<p>The alternative method is to use the host&rsquo;s IP as the listening address and then just forward particular ports to the container, e.g. port 22 for SSH or 590x for VNC servers. This way you skip creating the second IP above, and just start by creating and editing a network forward with the the host IP as listening address. The edit can then list the ports you want forwarded. Here&rsquo;s an example of a valid file:</p>
+<pre><code>description: Sample Forward
+config: {}
+ports:
+- description: ssh
+  protocol: tcp
+  listen_port: &quot;10022&quot;  # any unused host port
+  target_port: &quot;22&quot;    
+  target_address: &lt;container-ip&gt;
+- description: VNC servers
+  protocol: tcp
+  listen_port:  105901-105904 # any unused host port
+  target_port:  5901-5904   
+  target_address: &lt;container-ip&gt;
+listen_address: &lt;host-ip&gt;
+</code></pre>
+<p>Aside from these forwards, you may consider setting up a 
+<a href="https://wiki.archlinux.org/title/Postfix" target="_blank" rel="noopener">postfix</a> server and associated forward so you can use the mail command to programmatically send emails to users. One great use case for this is the sending of log files after completion of long running jobs. This keeps your users from needing to manually log in and check the status of their jobs. If you have used HPC services at your campus, you may have experienced the utility of this first hand.</p>
+<p>Network forwarding options are explained in more detail in the 
+<a href="https://linuxcontainers.org/lxd/docs/master/howto/network_forwards/#" target="_blank" rel="noopener">documentation</a>, which also contains a link to a short YouTube video demonstring these commands in a shell session.</p>
+<h2 id="getting-a-gui-running">Getting a GUI Running</h2>
+<p>First, think about whether the tools you use require a GUI. A lot of research work can be done entirely within the command line or by using servers with particular software. So instead of installing a regular RStudio instance, you could install RStudio Server. Jupyter is already designed around the client/server model, as are RDBMS systems. If your team doesn&rsquo;t feel comfortable with ViM and prefers VS Code, use the 
+<a href="https://code.visualstudio.com/docs/remote/ssh" target="_blank" rel="noopener">remote extension</a> to use a VS Code server that can be opened up from your teams' local computers using SSH.</p>
+<p>If you only need a GUI to use one GUI app at a time, say Mathematica/Matlab, then the simplest option will be to use X-forwarding via SSH. Make sure that <code>X11Forwarding yes</code> is set in your sshd_config file and restart the sshd service to turn it on. You&rsquo;ll also need to install <code>xorg-xauth</code> on an ArchLinux container. From then on, connecting via  SSH with the <code>-X</code> flag should work as desired.</p>
+<p>If you need an entire desktop environment available, you can set up 
+<a href="https://wiki.archlinux.org/title/TigerVNC" target="_blank" rel="noopener">VNC</a> or 
+<a href="https://wiki.archlinux.org/title/NoMachine" target="_blank" rel="noopener">NoMachine</a> the same way you would for a regular system. I have seen a lot of comments arguing for NoMachine being more performant, but the default TigerVNC on Arch/Fedora has worked sufficiently well for most of my needs.</p>
+
+    </div>
+
+    
+
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/containers/">containers</a>
+  
+  <a class="badge badge-light" href="/tag/virtual-lab/">virtual-lab</a>
+  
+  <a class="badge badge-light" href="/tag/networking/">networking</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-01-virtual-lab/&amp;text=Setting%20up%20a%20Virtual%20Lab%20Computer" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-01-virtual-lab/&amp;t=Setting%20up%20a%20Virtual%20Lab%20Computer" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Setting%20up%20a%20Virtual%20Lab%20Computer&amp;body=https://dmsenter89.github.io/post/23-01-virtual-lab/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-01-virtual-lab/&amp;title=Setting%20up%20a%20Virtual%20Lab%20Computer" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Setting%20up%20a%20Virtual%20Lab%20Computer%20https://dmsenter89.github.io/post/23-01-virtual-lab/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-01-virtual-lab/&amp;title=Setting%20up%20a%20Virtual%20Lab%20Computer" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/d.-michael-senter/avatar_hu9d01c61c86bcbccf229bab33cc03765b_1162188_270x270_fill_q90_lanczos_center.jpg" alt="D. Michael Senter">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://dmsenter89.github.io/">D. Michael Senter</a></h5>
+        <h6 class="card-subtitle">Research Statistician Developer</h6>
+        <p class="card-text">My research interests include data analytics and missing data.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=DPyUrhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/dmsenter89" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/michaelsenter9a13a642/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/MichaelSenterCV.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/sas.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/matlab.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/mathematica.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/julia.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

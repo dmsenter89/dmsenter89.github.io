@@ -5,12 +5,170 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 03 Jan 2023 10:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Jan 2023 19:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Setting up a Virtual Lab Computer</title>
+      <link>https://dmsenter89.github.io/post/23-01-virtual-lab/</link>
+      <pubDate>Fri, 06 Jan 2023 19:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-01-virtual-lab/</guid>
+      <description>&lt;p&gt;Dealing with computer resources in a modern lab can be tricky. Even if all participating researchers have laptops, a central location for storage or to host licensed software is desirable. While a physical computer can be setup for such a use, that is not always the most desirable solution. We want multiple people to have concurrent access to our resources while providing safe, sandboxed environments. Sometimes lab members want/need root access to learn certain tasks, but we don&amp;rsquo;t want them to accidentally take down our carefully configured systems. This leads us to the idea of containerization which can provide various failsafes. In this post, we will be setting up the 
+&lt;a href=&#34;https://wiki.archlinux.org/title/LXD&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LXD (ArchWiki)&lt;/a&gt; environment as a virtual lab computer. This solution gives an entire working system, including systemd, similar to but more lightweight than VirtualBox.&lt;/p&gt;
+&lt;p&gt;Setting up a successful virtual computer is very similar to setting up a regular Linux machine, with some minor LXD overhead. Note that only the individual administering the containers will need to deal with that LXD overhead. From the point of view of the end user, it&amp;rsquo;ll look the same as if they were interacting with a &amp;ldquo;regular&amp;rdquo; computer.  This post deals with the setup from the point of view of the admin. The lab members should be setup as users inside the container and can then SSH into the container or use VNC if a GUI is needed, similar to how they interact with a regular remote computer.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#install-and-setup-of-lxd&#34;&gt;Install and Setup of LXD&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#container-setup&#34;&gt;Container Setup&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#getting-the-image&#34;&gt;Getting the Image&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#basic-container-management&#34;&gt;Basic Container Management&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#setting-up-the-container&#34;&gt;Setting up the Container&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#networking&#34;&gt;Networking&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#giving-the-container-access-to-the-internet&#34;&gt;Giving the Container Access to the Internet&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#network-forwarding&#34;&gt;Network Forwarding&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#getting-a-gui-running&#34;&gt;Getting a GUI Running&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;install-and-setup-of-lxd&#34;&gt;Install and Setup of LXD&lt;/h2&gt;
+&lt;p&gt;LXD can be installed from a snap with &lt;code&gt;sudo snap install lxd&lt;/code&gt;, but that requires you to have snap running. On Arch, LXD is available in the repos with &lt;code&gt;pacman -S lxd&lt;/code&gt;. To get a RPM install in Fedora, you&amp;rsquo;ll need to use an additional COPR repository like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;dnf copr enable ganto/lxc4
+dnf install lxd
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once installed, you&amp;rsquo;ll need to either enable the &lt;code&gt;lxd.socket&lt;/code&gt; or &lt;code&gt;lxd.service&lt;/code&gt; (if you want instances to be able to autostart). You&amp;rsquo;ll want to modify the subuid and subgid files so you can run unpriviliged containers (recommended), e.g.:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# for root user and systemd:
+usermod -v 1000000-1000999999 -w 1000000-1000999999 root 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With this done, run &lt;code&gt;lxd init&lt;/code&gt; to go through a configuration guide for your new setup. If this is your first time using LXD, you will likely be fine just using the default settings, except maybe the size of the storage pool - but you can always attach other storage to your containers later, so if you will run tasks producing a lot of data you might want to consider just mounting a dedicated filesystem later. If you have multiple computers available in your lab, you might want to consider turning on 
+&lt;a href=&#34;https://linuxcontainers.org/lxd/docs/latest/explanation/clustering/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;clustering (documentation)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For more details, see the 
+&lt;a href=&#34;https://wiki.archlinux.org/title/LXD#Setup&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ArchWiki&lt;/a&gt; or the 
+&lt;a href=&#34;https://linuxcontainers.org/lxd/getting-started-cli/#initial-configuration&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Official Getting Started Guide&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;container-setup&#34;&gt;Container Setup&lt;/h2&gt;
+&lt;h3 id=&#34;getting-the-image&#34;&gt;Getting the Image&lt;/h3&gt;
+&lt;p&gt;The first step in setting up a container is picking a suitable image to start from. Similar to Docker, many distributions are available to chose from. There are also arm and amd64 images available, so you can pick what works with your platform. To list available images on the image server, use the syntax &lt;code&gt;lxc image list images:&amp;lt;keyword&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# ArchLinux images:
+lxc image list images:archlinux amd64 
+# Fedora images, using key/value pairs:
+lxc image list images:fedora arch=amd64 type=container
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To create a new image without starting it, use &lt;code&gt;lxc init &amp;lt;image&amp;gt; &amp;lt;container-name&amp;gt;&lt;/code&gt;. To both initialize and start a new container, use &lt;code&gt;lxc init &amp;lt;image&amp;gt; &amp;lt;container-name&amp;gt;&lt;/code&gt;. For example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# create a base image called myarch without starting:
+lxc init images:archlinux myarch
+# you can also specify version and arch, e.g. Fedora 36 / 64bit:
+lxc init images:fedora/36/amd64 myfedora
+# create and launch an image:
+lxc init images:rockylinux/9 myrocky
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that you can have a large number of concurrent containers in use, which may but need not share the same base image. This can be useful for larger teams, where you can setup systems for particular tasks or projects. For example, you could have a main machine for your graduate students, a separate one for people moving in and out of the lab like REU students, and a third container for a class that you&amp;rsquo;re teaching to use.&lt;/p&gt;
+&lt;h3 id=&#34;basic-container-management&#34;&gt;Basic Container Management&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# Starting, stopping etc. is intuitive
+lxc start   &amp;lt;container&amp;gt; # starts container
+lxc stop    &amp;lt;container&amp;gt; [--force] # stops the container
+lxc restart &amp;lt;container&amp;gt; [--force] # restart
+lxc pause   &amp;lt;container&amp;gt; # send SIGSTOP to all container processes
+
+# what containers do I have?
+lxc list 
+lxc info myarch # get detailed info about this container
+lxc copy &amp;lt;name1&amp;gt; &amp;lt;name2&amp;gt; # make a copy of an existing container
+lxc delete &amp;lt;container&amp;gt; [--force]
+
+# edit container configuration
+lxc config edit &amp;lt;container&amp;gt; # launches config in VISUAL editor
+lxc config set &amp;lt;container&amp;gt; &amp;lt;key&amp;gt; &amp;lt;value&amp;gt;  # change a single config item
+lxc config device add &amp;lt;container&amp;gt; &amp;lt;dev&amp;gt; &amp;lt;type&amp;gt; &amp;lt;key&amp;gt;=&amp;lt;value&amp;gt;
+lxc config show [--expanded] &amp;lt;container&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In addition to these commmands, you can also snapshot your containers. This creates a restorable copy of your container in case something bad happens - like someone typing &lt;code&gt;rm -rf *&lt;/code&gt; into the wrong root shell. By default, snapshots are named in a numbered pattern snapX where X is an integer.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;lxc snapshot &amp;lt;container&amp;gt; &amp;lt;snap&amp;gt; # create new snapshot
+lxc restore  &amp;lt;container&amp;gt; &amp;lt;snap&amp;gt; # restore container to snapshot
+lxc copy &amp;lt;container&amp;gt;/&amp;lt;snap&amp;gt; &amp;lt;new-container&amp;gt; # new container from snapshot
+lxc delete &amp;lt;container&amp;gt;/&amp;lt;snap&amp;gt;   # delete the snapshot
+lxc info &amp;lt;container&amp;gt;            # lists available snapshots, plus other info
+lxc move &amp;lt;container&amp;gt;/&amp;lt;snap&amp;gt; &amp;lt;container&amp;gt;/&amp;lt;new-snap&amp;gt; # rename snapshot
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;setting-up-the-container&#34;&gt;Setting up the Container&lt;/h3&gt;
+&lt;p&gt;You can enter your container immediately with a root shell with &lt;code&gt;lxc shell &amp;lt;container&amp;gt;&lt;/code&gt; and proceed with your regular setup, such as updating and installing packages, setting up new users, etc. To make this process more repeatedly, you can also just move a setup script from the host to the container first, and then execute that script inside the container. That way you can have a record of what you did when you first set up the container.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;# drop into root shell
+lxc shell &amp;lt;container&amp;gt;
+# execute arbitrary command in container
+lxc exec &amp;lt;container&amp;gt; -- &amp;lt;program&amp;gt; [&amp;lt;options&amp;gt;]
+
+# move a file from host to container
+lxc file push /host/file &amp;lt;container&amp;gt;/path/on/container 
+# move a file from container to host
+lxc file pull &amp;lt;container&amp;gt;/path/to/file /path/on/host
+# edit a file inside container
+lxc file edit &amp;lt;container&amp;gt;/etc/passwd 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See my earlier blog post for a list of 
+&lt;a href=&#34;https://dmsenter89.github.io/post/22-12-some-cli-tools/&#34;&gt;some CLI tools&lt;/a&gt; I like to install on new systems.&lt;/p&gt;
+&lt;h2 id=&#34;networking&#34;&gt;Networking&lt;/h2&gt;
+&lt;h3 id=&#34;giving-the-container-access-to-the-internet&#34;&gt;Giving the Container Access to the Internet&lt;/h3&gt;
+&lt;p&gt;The first step in container networking is to make sure your container can access the network. This may require your firewall to let traffic through on the default bridge. On an ArchLinux host, use&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ufw route allow in on lxdbr0
+ufw allow in on lxdbr0
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;while on a Fedora host you might use&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;firewall-cmd --zone=trusted --change-interface=lxdbr0 --permanent
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;network-forwarding&#34;&gt;Network Forwarding&lt;/h3&gt;
+&lt;p&gt;At this point your container is available from the host on wich the LXD service is running. But the whole point of the exercise is to make the container accessible from the lab members&#39; various devices. I&amp;rsquo;ll present two options here for setting this up, depending on whether you need access from outside of your local network or not. Either way, make sure SSH is 
+&lt;a href=&#34;https://wiki.archlinux.org/title/OpenSSH&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;set up&lt;/a&gt; inside your container and you can SSH into the container from the host shell. Both methods rely on using the network forward feature built into LXD. See the 
+&lt;a href=&#34;https://linuxcontainers.org/lxd/docs/master/howto/network_forwards/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;For network forwarding to work we need to know two things about our container: what device our container is using to connect to the internet; on a default setup, this will be lxdbr0 but check with &lt;code&gt;lxc network list&lt;/code&gt; to be sure. The second item we need is the IP address of our container, which can be displayed with &lt;code&gt;lxc list &amp;lt;container&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The next item we need is an IP address to forward from. We can either get an IP address dedicated to the container, or hijack some ports from our host for re-routing.&lt;/p&gt;
+&lt;p&gt;To add a second IP to your existing network device, use the &lt;code&gt;ip a&lt;/code&gt; command to find the device name (on your host) of the network device connected to your network. If you use wifi, this might be something like wlp4s0 or similar. Then pick an IP not otherwise assigned by the router and assign it to this device - in addition to the existing IP - using the following command:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;ip -4 a add dev &amp;lt;device-name&amp;gt; &amp;lt;free-ip&amp;gt;/24
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that this will only persist until the host reboots. You can then create a network forward on the container&amp;rsquo;s device (e.g., lxdbr0) with the newly assigned IP as the listening address. Using this command will let the container handle all incoming traffic to the new IP:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;lxc network forward create lxdbr0 &amp;lt;listening_address&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can then edit the target address with&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;lxc network forward edit lxdbr0 &amp;lt;listening_address&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and specify the container&amp;rsquo;s IP as the &lt;code&gt;target_address&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The alternative method is to use the host&amp;rsquo;s IP as the listening address and then just forward particular ports to the container, e.g. port 22 for SSH or 590x for VNC servers. This way you skip creating the second IP above, and just start by creating and editing a network forward with the the host IP as listening address. The edit can then list the ports you want forwarded. Here&amp;rsquo;s an example of a valid file:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;description: Sample Forward
+config: {}
+ports:
+- description: ssh
+  protocol: tcp
+  listen_port: &amp;quot;10022&amp;quot;  # any unused host port
+  target_port: &amp;quot;22&amp;quot;    
+  target_address: &amp;lt;container-ip&amp;gt;
+- description: VNC servers
+  protocol: tcp
+  listen_port:  105901-105904 # any unused host port
+  target_port:  5901-5904   
+  target_address: &amp;lt;container-ip&amp;gt;
+listen_address: &amp;lt;host-ip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Aside from these forwards, you may consider setting up a 
+&lt;a href=&#34;https://wiki.archlinux.org/title/Postfix&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;postfix&lt;/a&gt; server and associated forward so you can use the mail command to programmatically send emails to users. One great use case for this is the sending of log files after completion of long running jobs. This keeps your users from needing to manually log in and check the status of their jobs. If you have used HPC services at your campus, you may have experienced the utility of this first hand.&lt;/p&gt;
+&lt;p&gt;Network forwarding options are explained in more detail in the 
+&lt;a href=&#34;https://linuxcontainers.org/lxd/docs/master/howto/network_forwards/#&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;, which also contains a link to a short YouTube video demonstring these commands in a shell session.&lt;/p&gt;
+&lt;h2 id=&#34;getting-a-gui-running&#34;&gt;Getting a GUI Running&lt;/h2&gt;
+&lt;p&gt;First, think about whether the tools you use require a GUI. A lot of research work can be done entirely within the command line or by using servers with particular software. So instead of installing a regular RStudio instance, you could install RStudio Server. Jupyter is already designed around the client/server model, as are RDBMS systems. If your team doesn&amp;rsquo;t feel comfortable with ViM and prefers VS Code, use the 
+&lt;a href=&#34;https://code.visualstudio.com/docs/remote/ssh&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;remote extension&lt;/a&gt; to use a VS Code server that can be opened up from your teams&#39; local computers using SSH.&lt;/p&gt;
+&lt;p&gt;If you only need a GUI to use one GUI app at a time, say Mathematica/Matlab, then the simplest option will be to use X-forwarding via SSH. Make sure that &lt;code&gt;X11Forwarding yes&lt;/code&gt; is set in your sshd_config file and restart the sshd service to turn it on. You&amp;rsquo;ll also need to install &lt;code&gt;xorg-xauth&lt;/code&gt; on an ArchLinux container. From then on, connecting via  SSH with the &lt;code&gt;-X&lt;/code&gt; flag should work as desired.&lt;/p&gt;
+&lt;p&gt;If you need an entire desktop environment available, you can set up 
+&lt;a href=&#34;https://wiki.archlinux.org/title/TigerVNC&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;VNC&lt;/a&gt; or 
+&lt;a href=&#34;https://wiki.archlinux.org/title/NoMachine&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NoMachine&lt;/a&gt; the same way you would for a regular system. I have seen a lot of comments arguing for NoMachine being more performant, but the default TigerVNC on Arch/Fedora has worked sufficiently well for most of my needs.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Missing Data Mechanisms</title>
