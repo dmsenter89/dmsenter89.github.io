@@ -5,12 +5,27 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Jan 2023 19:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 09 Jan 2023 15:20:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>SAS ODA Update - Impact on SASPy Users</title>
+      <link>https://dmsenter89.github.io/post/23-sas-oda-update-saspy-impact/</link>
+      <pubDate>Mon, 09 Jan 2023 15:20:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-sas-oda-update-saspy-impact/</guid>
+      <description>&lt;p&gt;During December 2022, SAS ODA received substantial updates - see the 
+&lt;a href=&#34;https://support.sas.com/ondemand/upgrade2022.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;upgrade page&lt;/a&gt; for details. It&amp;rsquo;s really nice to see that ODA is now using SAS 9.4M7. If you are a SASPy user, you may now bump into an error while logging in with your existing configuration. The specific error I encountered was &amp;ldquo;An exception was thrown during the encryption key exchange.&amp;rdquo; Nothing is wrong with your password, however. Due to changes with the AES encryption, SASPy will now need access to 3 encrpytion JARs in its classpath. See 
+&lt;a href=&#34;https://sassoftware.github.io/saspy/configuration.html#attn-as-of-saspy-version-3-3-3-the-classpath-is-no-longer-required-in-your-configuration-file&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this note&lt;/a&gt; in the official SASPy docs. Download the required JAR files 
+&lt;a href=&#34;https://support.sas.com/downloads/package.htm?pid=2494&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; (requires login) and add them to your SASPy package&amp;rsquo;s path here:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;path/to/python/site-packages/saspy/java/iomclient/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Make sure your JAR files are set to executable and you&amp;rsquo;ll be good to go again.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Setting up a Virtual Lab Computer</title>
