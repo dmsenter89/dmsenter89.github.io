@@ -1,0 +1,1356 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sas | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/sas/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/sas/index.xml" rel="self" type="application/rss+xml" />
+    <description>sas</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 03 Jan 2023 10:00:00 -0500</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>sas</title>
+      <link>https://dmsenter89.github.io/tag/sas/</link>
+    </image>
+    
+    <item>
+      <title>Missing Data Mechanisms</title>
+      <link>https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/</link>
+      <pubDate>Tue, 03 Jan 2023 10:00:00 -0500</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/</guid>
+      <description>&lt;p&gt;Understanding whether a variable&amp;rsquo;s missingness from a dataset is related to the underlying value of the data is a key concept in the field of missing data analysis. We distinguish three broad categories: missing completely at random (MCAR), missing at random (MAR), and missing not at random (MNAR). In his book &lt;em&gt;Statistical Rethinking&lt;/em&gt;, McElreath&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; gives an amusing example to illustrate this concept: he considers variants of a dog eating homework and how the dog chooses - if at all - to eat the homework. The examples he give show substantial shifts in observed values, which make for a good illustration of the types of problems you might encounter. A lecture corresponding to the  example from the book can be found on 
+&lt;a href=&#34;https://www.youtube.com/watch?v=oMiSb8GKR0o&amp;amp;list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&amp;amp;index=18&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;YouTube&lt;/a&gt;. In this post, I will first briefly review the different missing data mechanisms before implementing McElreath&amp;rsquo;s examples in SAS.&lt;/p&gt;
+&lt;h3 id=&#34;overview-of-missing-data-mechanisms&#34;&gt;Overview of Missing Data Mechanisms&lt;/h3&gt;
+&lt;p&gt;My presentation here follows van Buuren&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;. Let $Y$ be a $n \times p$ matrix representing a sample of $p$ variables for $n$ units of the sample and $R$ be a corresponding $n \times p$ indicator matrix, so that&lt;/p&gt;
+&lt;p&gt;$$r_{i,j} = \begin{cases} 1 &amp;amp; y_{i,j} \text{ is observed} \\ 0 &amp;amp; y_{i,j} \text{ not observed.}\end{cases} $$&lt;/p&gt;
+&lt;p&gt;We denote the observed data by $Y_\text{obs}$ and the missing data that $Y_\text{miss}$ so that $Y=(Y_\text{obs},Y_\text{miss})$.&lt;/p&gt;
+&lt;p&gt;We distinguish three main categories for how the distribution of $R$ may depend on $Y$. This relationship is described as the &lt;em&gt;missing data model&lt;/em&gt;. Let $\psi$ contain the parameters of this model. The general expression of the missing data model is $\mathrm{Pr}(R|Y_\text{obs}, Y_\text{miss}, \psi)$, where $\psi$ consists of the parameters of the missing data model.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Missing Completely at Random (MCAR).&lt;/strong&gt; This implies that the cause of the missing data is unrelated to the data itself. In this case,&lt;/p&gt;
+&lt;p&gt;$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0|\psi).$$&lt;/p&gt;
+&lt;p&gt;This is the ideal case, but unfortunately rare in practice. Many researchers implicitly assume this when using methods such as list-wise deletion, otherwise known as complete case analysis, which can produce unbiased estimates of sample means if the data are MCAR, although the reported standard error will be too large.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Missing at Random (MAR).&lt;/strong&gt; Missingness is the same within groups defined by the observed data, so that&lt;/p&gt;
+&lt;p&gt;$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0|Y_\text{obs},\psi).$$&lt;/p&gt;
+&lt;p&gt;This is a often a more reasonable assumption in practice and the starting point for modern missing data methods.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Missing not at Random (MNAR).&lt;/strong&gt; If neither the MCAR or MAR assumptions hold, then we may find that missingness depends on the missing data itself, in which case there is no simplification and
+$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi).$$&lt;/p&gt;
+&lt;p&gt;As you can imagine, this is the most tricky case to deal with.&lt;/p&gt;
+&lt;h3 id=&#34;dogs-eating-homework&#34;&gt;Dogs Eating Homework&lt;/h3&gt;
+&lt;p&gt;Consider dogs (D) eating students&#39; homework. Each student&amp;rsquo;s homework score (H) is graded on a 10-point scale and each student&amp;rsquo;s score varies in proportion to how much they study (S). We assume the amount of time they study is normally distributed. A binomial is used to generate homework scores from the normed time spent studying. McElreath uses the following code to simulate the full data set:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;N &amp;lt;- 100
+S &amp;lt;- rnorm( N )
+H &amp;lt;- rbinom( N, size=10, inv_logit(S) )
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;where &lt;code&gt;inv_logit(x) = exp(x)+(1+exp(x))&lt;/code&gt;, the definition used by the &lt;code&gt;LOGISTIC&lt;/code&gt; function in SAS. With a data step, this can be represented in SAS as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data full;
+    DO i=1 to 100;
+        S=RAND(&#39;NORM&#39;);
+        H=RAND(&#39;BINO&#39;, LOGISTIC(S), 10);
+        output;
+    END;
+    label S=&#39;Amount of Studying&#39; H=&#39;Homework Score&#39;;
+    drop i;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can get closer in form to the R code by using PROC IML, but that&amp;rsquo;s a story for a different post.&lt;/p&gt;
+&lt;p&gt;Say we are interested in estimating the relationship between $S$ and $H$. In our example, we assume that $H$ is not directly observable. Instead, $H^*$ is observed - a subset of the full data set $H$ with some homework values missing. We can now look at &lt;em&gt;why&lt;/em&gt; some of those values are missing. Specifically, in McElreath&amp;rsquo;s example each student has a dog $D$ and sometimes the dog eats the homework. But here we can again ask, why is the dog eating the homework? McElreath uses  
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Directed_acyclic_graph&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;directed acyclic graphs&lt;/a&gt; (DAGs) to represent different missing data models, reproduced below. As we will see, these are some intuitive examples for our three missing data mechanism categories.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-directed-acyclic-graphs-corresponding-to-mcelreaths-examples-of-missing-data-models-s-represents-the-amount-of-time-spent-studying-which-in-turn-influences-the-homework-score-h-which-is-only-partially-observed-indicated-by-the-circle-alas-dogs-d-eat-some-of-the-homework-the-actually-observed-scores---those-not-eaten---are-indicated-by-h-adapted-from-figure-154-in-_statistical-rehinking_&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/dag_hu9d4aa2d4b53fa51c30ec3b81dc4e20f1_14343_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The directed acyclic graphs corresponding to McElreath&amp;amp;rsquo;s examples of missing data models. $S$ represents the amount of time spent studying, which in turn influences the homework score $H$, which is only partially observed (indicated by the circle). Alas, dogs $D$ eat some of the homework. The actually observed scores - those not eaten - are indicated by $H^*$. Adapted from figure 15.4 in &amp;lt;em&amp;gt;Statistical Rehinking&amp;lt;/em&amp;gt;.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/dag_hu9d4aa2d4b53fa51c30ec3b81dc4e20f1_14343_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;665&#34; height=&#34;179&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    The directed acyclic graphs corresponding to McElreath&amp;rsquo;s examples of missing data models. $S$ represents the amount of time spent studying, which in turn influences the homework score $H$, which is only partially observed (indicated by the circle). Alas, dogs $D$ eat some of the homework. The actually observed scores - those not eaten - are indicated by $H^*$. Adapted from figure 15.4 in &lt;em&gt;Statistical Rehinking&lt;/em&gt;.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h4 id=&#34;missing-completely-at-random-mcar&#34;&gt;Missing Completely At Random (MCAR)&lt;/h4&gt;
+&lt;p&gt;In the first example, the dogs eat homework completely at random. This is the most basic and benign case, and corresponds to DAG 1) in Figure 1. McElreath&amp;rsquo;s R code is given by&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;D &amp;lt;- rbern( N ) 
+Hm &amp;lt;- H  # H*, but * is not a valid char for varnames in R
+Hm[D==1] &amp;lt;- NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can implement this in SAS by using the &lt;code&gt;RAND&lt;/code&gt; function with the Bernoulli argument in an if/else clause:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;if RAND(&#39;BERN&#39;, 0.5) then Hm = .;
+    else Hm = H;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This causes about half of our data to be hidden, but not in a biased way.&lt;/p&gt;
+&lt;h4 id=&#34;missing-at-random-mar&#34;&gt;Missing at Random (MAR)&lt;/h4&gt;
+&lt;p&gt;In the second example, we assume the amount of time a student spends studying decreases the amount of time they have to play with and exercise their dog. This, in turn, influences whether the homework gets eaten. Or, as McElreath puts it, the &amp;ldquo;dog eats conditional on the cause of homework.&amp;rdquo; In his particular example, the homework is eaten whenever a student spends more time studying than the average $S=0$. This corresponds to DAG 2) in Figure 1.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;D &amp;lt;- ifelse( S&amp;gt;0 , 1 , 0 )
+Hm &amp;lt;- H
+Hm[D==1] &amp;lt;-NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In SAS:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;if S&amp;gt;0 then Hm = .;
+    else Hm = H;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h4 id=&#34;missing-not-at-random-mnar&#34;&gt;Missing not at Random (MNAR)&lt;/h4&gt;
+&lt;p&gt;In this case, we have some correspondence between the missing variable&amp;rsquo;s value and whether or not it is missing from the data set. Here, the &amp;ldquo;dog eats conditional on the homework itself.&amp;rdquo; Suppose that dogs prefer to eat bad homework. In such a case, the value of $H$ is directly related to whether or not $H$ is observed in the particular unit or not. His example R code is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-R&#34;&gt;# dogs prefer bad homework
+D &amp;lt;- ifelse( H&amp;lt;5 , 1 , 0 )
+Hm &amp;lt;- H
+Hm[D==1] &amp;lt;- NA
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And in SAS:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;if H&amp;lt;5 then Hm = .;
+    else Hm = H;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;the-full-sas-code&#34;&gt;The Full SAS Code&lt;/h3&gt;
+&lt;p&gt;We can now build a SAS data set that contains a full copy of the original data set, together with our various examples of missing data mechanisms. I have added a seed to the data step for reproducibility.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data full;
+    CALL streaminit( 451 ); 
+    
+    LABEL
+        Type = &#39;Missing Data Mechanism&#39;
+        S = &#39;Amount of Studying&#39;
+        H = &#39;Homework Score&#39;
+        Hm = &#39;Observed Homework Score&#39;
+    ;
+
+    DO i=1 to 100;
+        TYPE = &#39;FULL&#39;;
+        S = RAND(&#39;NORM&#39;);
+        H = RAND(&#39;BINO&#39;, LOGISTIC(S), 10);
+        Hm = H;
+        output;
+        
+        /* Example 1) MCAR */
+        TYPE = &#39;MCAR&#39;;
+        if RAND(&#39;BERN&#39;, 0.5) then Hm = .;
+            else Hm = H;
+        output;
+        
+        /* Example 2) MAR */
+        TYPE = &#39;MAR&#39;;
+        if S&amp;gt;0 then Hm = .;
+            else Hm = H;
+        output;
+        
+        /* Example 3) MNAR */
+        TYPE = &#39;MNAR&#39;;
+        if H&amp;lt;5 then Hm = .;
+            else Hm = H;
+        output;
+    
+    END;
+    
+    drop i;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You may want to run a &lt;code&gt;PROC SORT&lt;/code&gt; or &lt;code&gt;PROC SQL&lt;/code&gt; afterwards to group the different categories together, as they will be alternating in this data set.&lt;/p&gt;
+&lt;h3 id=&#34;results&#34;&gt;Results&lt;/h3&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-boxplot-of-our-example-data-note-that-the-mcar-data-looks-very-similar-to-the-original-data-set-unlike-the-mar-and-mnar-versions&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/mdm_boxplot_hu7d089ca360b9b11aaf1a482082b6d8dc_11177_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Boxplot of our example data. Note that the MCAR data looks very similar to the original data set, unlike the MAR and MNAR versions.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/mdm_boxplot_hu7d089ca360b9b11aaf1a482082b6d8dc_11177_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Boxplot of our example data. Note that the MCAR data looks very similar to the original data set, unlike the MAR and MNAR versions.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;We can see that MCAR leads to minimal bias in our example data, while both the MAR and MNAR variations lead to substantial differences in observed vs actual homework scores for our synthetic population. For a more subtle example, see section 2.2.4 in van Buuren,&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; available 
+&lt;a href=&#34;https://stefvanbuuren.name/fimd/sec-idconcepts.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;online here&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;R. McElreath, &lt;em&gt;Statistical Rethinking&lt;/em&gt;, 2nd ed, Chapman and Hall/CRC, Boca Raton, FL, 2020. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;S. van Buuren, &lt;em&gt;Flexible Imputation of Missing Data&lt;/em&gt;, 2nd ed, Chapman and Hall/CRC, Boca Raton, FL, 2019. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>CSV2DS</title>
+      <link>https://dmsenter89.github.io/post/22-11-csv2ds/</link>
+      <pubDate>Wed, 23 Nov 2022 16:43:28 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-11-csv2ds/</guid>
+      <description>&lt;p&gt;Creating a minimum working example (MWE) is a relatively frequent task. It is no problem to share an MWE for a feature in SAS because a large number of example data sets are shipped and installed by default. But sometimes you need an MWE because you are having trouble accomplishing a particular task with particular input data. At that point, you will need to share the data or a subset thereof together with your code. In SAS Forums, the preferred way to do this is with a datastep using a datalines/cards statement. Writing these by hand can be tedious since the data source is not typically a datalines statement to begin with. I have previously seen a SAS macro that can be used to generate a datalines statement from a SAS data set, but can&amp;rsquo;t seem to locate it at the moment. The data source I personally encounter the most often in my work is either in CSV or Excel formats. Since the latter can easily be exported to CSV, I decided to write a program that generates a SAS data step given a CSV file.&lt;/p&gt;
+&lt;p&gt;For the implementation language I chose to use 
+&lt;a href=&#34;https://go.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Go&lt;/a&gt;. I started learning about Go back in May when I implemented a 
+&lt;a href=&#34;https://dmsenter89.github.io/post/22-05-go-wordle/&#34;&gt;simple CLI version of Wordle&lt;/a&gt;. Since then I have increasingly used Go to write various small tools at work. It has been a very enjoyable language to write in and distribution via GitHub is easy. If you have the Go toolchain installed, you can get the latest copy of csv2ds using&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go install github.com/dmsenter89/csv2ds@latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The tool is very simple to use. Give it a CSV file or list of CSV files and it will generate a data step for each file using the CSV&amp;rsquo;s base name as the data set name. To ensure compatibility, variable names and the data set name are processed to be compatible with SAS&#39; naming scheme. The tool will attempt to guess if a particular column is numeric or not. If a column is determined to not be numeric, the longest cell will be used to set that variable&amp;rsquo;s length via a length statement to prevent truncation.&lt;/p&gt;
+&lt;p&gt;I often work with the 
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;csvkit&lt;/a&gt; suite of command-line tools. It&amp;rsquo;s a wonderful collection of Python programs that can import data into CSV, generate basic column statistics, and use grep and SQL to extract data from a CSV file, amongst other things. This collection is designed to allow you to pipe the output from one as input to the next. Consider 
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/tutorial/2_examining_the_data.html#csvsort-order-matters&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this example&lt;/a&gt;. Csvcut is used to extract only certain columns from the file data.csv. Then csvgrep is used to subset to use only the data pertaining to one particular county. Then the data is sorted by the total_cost variable and displayed. I wanted my tool to be compatible with this suite, so if &lt;code&gt;-&lt;/code&gt; is passed as the filename, csv2ds will read the contents of STDIN instead. Changing the above csvkit example by replacing csvlook with my tool will generate the corresponding SAS data set:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;csvcut -c county,item_name,total_cost data.csv | csvgrep -c county -m LANCASTER | csvsort -c total_cost -r | csv2ds -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At this point csv2ds is quite simple, but sufficient for my needs. Some minor intervention may be needed to make the data step template work for your data. Informats like DOLLAR are not recognized as numeric and minor edits would need to be made to the produced template.&lt;/p&gt;
+&lt;p&gt;Checkout my new tool over on 
+&lt;a href=&#34;https://github.com/dmsenter89/csv2ds&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SAS Markdown for Reproducibility</title>
+      <link>https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/</link>
+      <pubDate>Fri, 11 Nov 2022 15:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/</guid>
+      <description>&lt;p&gt;One of the coolest packages for R is 
+&lt;a href=&#34;https://yihui.org/knitr/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;knitr&lt;/a&gt;. Essentially, it allows you to combine explanatory writing, such as a paper or blog post, directly with your analysis code in a Markdown document. When the target document
+is compiled (&amp;lsquo;knitted&amp;rsquo;), the R code in the document is run and the results inserted into the final document. The target document could
+be an HTML or a PDF file, for example. This is great for many reasons. You have a regular report you want to run, but the data updates?
+Just re-knit and your entire report is updated. No more separate running of the code followed by copying the results into whatever
+software you use to build the report itself. This makes it not just less cumbersome, but less error prone. It also improves reproducibility.
+Somebody wants to see your work, perhaps because they are unsure of your results or they want to extend your work? You can share the
+markdown file and the other party can see exactly what code was used to generate what part of your report or paper.&lt;/p&gt;
+&lt;p&gt;While knitr is certainly not the first package that allows for this workflow, and also not the only one, I have found it to be the most consistent and easy to use.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; Luckily, knitr supports 
+&lt;a href=&#34;https://yihui.org/knitr/demo/engines/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a variety&lt;/a&gt; of 
+&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown/language-engines.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;languages&lt;/a&gt;, including 
+&lt;a href=&#34;https://bookdown.org/yihui/rmarkdown-cookbook/eng-sas.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS&lt;/a&gt;. And you can even mix and match multiple languages in 
+&lt;a href=&#34;https://github.com/yihui/knitr-examples/blob/master/106-polyglot.Rmd&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;one document&lt;/a&gt;.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;You might think that this sounds similar to Jupyter notebooks. While that is true, and there is a 
+&lt;a href=&#34;https://github.com/sassoftware/sas_kernel&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Jupyter kernel for SAS&lt;/a&gt; as well, knitr has some advantages over Jupyter for report-generation. Without additional tools, you have the option to execute but not display the code that generates your results, making a cleaner report. You can also elect to only show part of the code, with manual setup code running behind the scenes without being printed to the report itself. Additionally, the entire document is executed linearly. That means that if you update a code chunk towards the beginning of your document, it affects the code chunks following it, while in Jupyter you easily get in the habit of executing the chunks independently which can lead to inconsistencies if you don&amp;rsquo;t pay attention to the cell numbers.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;In this post, I&amp;rsquo;ll demonstrate the basics of setting up a reproducible report using the SAS engine in knitr.&lt;/p&gt;
+&lt;h2 id=&#34;install&#34;&gt;Install&lt;/h2&gt;
+&lt;p&gt;Perhaps the easiest way to get started for beginners is to use RStudio and Anaconda. With that you can create a sample R Markdown document (&lt;code&gt;File -&amp;gt; New File -&amp;gt; R Markdown&lt;/code&gt;). Press the &lt;code&gt;knit&lt;/code&gt; button. If any packages required by knitr are missing, RStudio will install them for you. This way you can be sure that all the R parts are set up correctly. Additionally, I recommend installing the 
+&lt;a href=&#34;https://github.com/Hemken/SASmarkdown&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SASmarkdown&lt;/a&gt; package with&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-r&#34;&gt;# from CRAN:
+install.packages(&amp;quot;SASmarkdown&amp;quot;)
+# from GitHub: 
+devtools::install_github(&amp;quot;Hemken/SASmarkdown&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once install is complete, load the package (&lt;code&gt;library(SASmarkdown)&lt;/code&gt;) and check the output. If you see a message that SAS was found, you are good to go. If not, you will either need to add SAS to your PATH or simply provide the path to SAS as an option in your document (see below).&lt;/p&gt;
+&lt;h2 id=&#34;a-basic-markdown-file&#34;&gt;A Basic Markdown File&lt;/h2&gt;
+&lt;p&gt;The important thing is to load the SASMarkdown package in your document. I recommend making a setup chunk at the very top of your document and setting include to FALSE.
+That way the setup chunk is executed, but not printed to your final document.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;```{r setup, include=FALSE}
+library(SASMarkdown)
+# if SAS is not in your path, define it manually:
+saspath &amp;lt;- &amp;quot;C:/Program Files/SASHome/SASFoundation/9.4/sas.exe&amp;quot;
+knitr::opts_chunk$set(engine=&amp;quot;sashtml&amp;quot;, engine.path=saspath)
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With that, we&amp;rsquo;re ready to run a basic SAS chunk using just the SAS option. This produces the typewriter-style output that is familiar from Enterprise Guide for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;```{sas example1}
+proc print data=sashelp.class; run;
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we want to take advantage of the modern HTML output that is standard in SAS Studio, we use the &lt;code&gt;sashtml&lt;/code&gt; engine instead:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;```{sashtml example2}
+/* if you want, you can set an ODS style for HTML output: */
+ods html style=journal;
+proc print data=sashelp.class; run;
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you want graphical output, for example from SGPLOT, you&amp;rsquo;ll need to use the &lt;code&gt;sashtml&lt;/code&gt; engine. To get the default blue look from SAS Studio, use the HTMLBLUE style:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;```{sashtml example3}
+ods html style=HTMLBLUE;
+proc sgplot data=sashelp.cars;
+  scatter x=EngineSize y=MPG_CITY;
+run;
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;some-additional-comments&#34;&gt;Some Additional Comments&lt;/h2&gt;
+&lt;p&gt;The first thing that is important to note is that each chunk is processed &lt;em&gt;separately&lt;/em&gt;. That means each chunk should be written so as to be capable of being executed independent of the others. It is possible to get around this using the &lt;code&gt;collectcode=TRUE&lt;/code&gt; chunk option. This chunk will then subsequently be executed prior to the code from a following chunk. So for example:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;```{sashtml save1, collectcode=TRUE}
+data sample;
+  set sashelp.class;
+run;
+```
+  And now use it again:
+```{sashtml save2}
+proc means data=sample; run;
+```
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is particularly useful for libnames and setting the preferred ODS style, so you don&amp;rsquo;t have to keep doing it again in each cell.&lt;/p&gt;
+&lt;p&gt;The other thing to note is that knitr for SAS works best with HTML output. It can use SAS styles and produce output looking like what
+you would expect running in SAS Studio. If you want PDF output, you can get nicer output using 
+&lt;a href=&#34;https://support.sas.com/rnd/base/ods/odsmarkup/latex.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LaTeX Tagsets for ODS&lt;/a&gt; and the 
+&lt;a href=&#34;https://support.sas.com/rnd/app/papers/statrep.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StatRep System&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;knitr itself was based on Sweave, but uses Markdown instead of LaTeX code. Other languages have similar packages, for
+example 
+&lt;a href=&#34;https://mpastell.com/pweave/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;pweave&lt;/a&gt; for Python or 
+&lt;a href=&#34;https://docs.juliahub.com/Weave/9EzOc/0.9.4/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Weave&lt;/a&gt; for Julia. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;The chunks from different languages do not have access to each other&amp;rsquo;s data. To move data between the different engines,
+more setup work is needed. &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;If you code in Julia, there is an interesting new reactive notebook called 
+&lt;a href=&#34;https://github.com/fonsp/Pluto.jl&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pluto&lt;/a&gt; that
+promises to always keep your cells in sync, while being geared towards a Jupyter-style workflow. &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Loading Zillow Housing Data in SAS</title>
+      <link>https://dmsenter89.github.io/post/22-08-zillow-data/</link>
+      <pubDate>Mon, 01 Aug 2022 17:21:38 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-08-zillow-data/</guid>
+      <description>&lt;p&gt;Zillow is a well-known website widely used by those searching for a home or curious to find out
+the value of their current home. What you may not know is that Zillow has a dedicated research page.
+To make their website work optimally, they churn through tons of data on the American housing market.
+They share insights they gleaned via 
+&lt;a href=&#34;https://www.zillow.com/research/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zillow.com/research&lt;/a&gt;. If you
+visit their research  website you&amp;rsquo;ll notice they have a data page where you can download some really
+cool data sets for your own research. They even have an API with which you can load data directly, but
+you&amp;rsquo;ll have to register for access. In this post, we&amp;rsquo;ll look at how to load the CSV files that are
+available for direct download into SAS for analysis.&lt;/p&gt;
+&lt;p&gt;The CSV files can be downloaded 
+&lt;a href=&#34;https://www.zillow.com/research/data/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. In the example below,
+I&amp;rsquo;m working with the Zillow Home Value Index file for all homes, seasonally adjusted at the ZIP code level.
+Tha file is fairly large. It has data going from January 2000 through June 2022 in more than 27,000 rows of data
+and about 280 columns. Below is an image of the beginning of this file.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zhvi_data_preview.png&#34; alt=&#34;&#34; title=&#34;The beginning of the of the ZHVI &#39;flagship&#39; data file.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When working with large CSV files, I find it useful to get a feel for it in the CLI with
+
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;csvkit&lt;/a&gt;. This is especially important when importing
+with a SAS data step, because we need to know the number of columns and their order, amongst other things,
+for our code. To get an overview of the total number of columns and their contents, run&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;csvcut -n Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The output is fairly long, so you may prefer piping to a pager. I don&amp;rsquo;t need all the different identifiers
+in the file, so I&amp;rsquo;m going to exclude those I won&amp;rsquo;t need and put them into a separate, smaller CSV.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# ignore these four columns which I won&#39;t need
+csvcut -C RegionID,SizeRank,RegionType,StateName Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv &amp;gt; Zip_zhvi_small.csv
+# alternatively, also cut down on date columns to only 2022 for debugging 
+csvcut -C RegionID,SizeRank,RegionType,StateName,10-273 Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv &amp;gt; Zip_zhvi_small.csv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also reduce the file size by using &lt;code&gt;csvgrep&lt;/code&gt; to filter any of the columns. For example, if we only wanted
+the data for North Carolina we could run &lt;code&gt;csvgrep -c State -m NC&lt;/code&gt; in the pipe.&lt;/p&gt;
+&lt;p&gt;For SAS, we need to know the maximum length of string columns so we can allocate the appropriate length to the
+corresponding SAS variables. This is easily done with the csvstat tool:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;csvcut -c Metro,City,CountyName Zip_zhvi_small.csv | csvstat --len
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also specify the list of columns in csvstat directly, but in my experience that tends to be slower.&lt;/p&gt;
+&lt;p&gt;Alright, now we have everything we need to start on our DATA step! We start with the attribute statement.
+One problem with importing this file is that everyhing is in wide format, with the dates used as headers.
+We will get around this shortly. I have seen people use transpose etc for similar problems online, but this
+is unnecessary if we feel comfortable with the DATA step. We&amp;rsquo;ll start by naming the identifying columns
+just as in the CSV file. For the date columns, we will use a numeric range prefixed by date (&lt;code&gt;date1-date270&lt;/code&gt;).
+You can use csvcut to find the exact number of date columns you have. We will also allocate the same number of
+columns for the ZHVI values, so we&amp;rsquo;ll need to add a &lt;code&gt;val1-val270&lt;/code&gt;. This and the date variable are temporary
+and will be dropped later, in favor of the &lt;code&gt;Date&lt;/code&gt; and &lt;code&gt;ZHVI&lt;/code&gt; variables.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;attrib 
+    ZIP           informat=best12.    format=z5.
+    State         informat=$2.
+    City          informat=$30.
+    Metro         informat=$42.
+    CountyName    informat=$29.
+    date1-date270 informat=YYMMDD10.  format=DATE9.
+    val1-val270   informat=best16.
+    Date                              format=Date9.
+    ZHVI                              format=Dollar16.
+  ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we will allocate an array to hold &lt;em&gt;all&lt;/em&gt; of the date and ZHVI values during the processing of each row.
+Since the date column won&amp;rsquo;t change, we&amp;rsquo;ll tell SAS to retain its values.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;   retain date1-date270;
+   array d(270) date1-date270;
+   array v(270) val1-val270;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is where the magic happens now. You may not know it, but you are not limited to a single INPUT statement
+in a DATA step. We use this and start by reading in only the first row. Because we use an OUTPUT
+statement later, this reading of row 1 will be processed, but not saved into the output data set.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;if _n_ = 1 then do;
+  input ZIP $ State $ City $ Metro $ CountyName $ date1-date270;
+  PUT _ALL_; /* if you want to see what that looks like */
+end;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With this if clause, the date1 through date270 variables will be populated, and because we used a retain
+statement earlier, these values remain available to us during the processing of every other row. You can
+probably guess where this is going now: we will process each row, and then OUTPUT one line per date which
+we have access to now thanks to our array and the retain statement.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;input ZIP $ State $ City $ Metro $ CountyName $ val1-val270;
+do i=1 to 270;
+  Date  = d(i); /* look up date for column i */
+  ZHVI =  v(i); /* use the corresponding i-th value for ZHVI */
+  OUTPUT;       /* This output creates one line per date column */
+end;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At the end of your data step, don&amp;rsquo;t forget to&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;drop i date1-date270 val1-val270;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;so those variables don&amp;rsquo;t clutter your data set. And that&amp;rsquo;s it! You now
+have the data set loaded and available in SAS.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SAS_data_set.png&#34; alt=&#34;&#34; title=&#34;The beginning of the resulting SAS data set.&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>The INDSNAME Option in SAS</title>
+      <link>https://dmsenter89.github.io/post/22-04-sas-indsname-option/</link>
+      <pubDate>Wed, 20 Apr 2022 11:42:02 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-04-sas-indsname-option/</guid>
+      <description>&lt;p&gt;I frequently find myself needing to concatenate data sets but also wanting to be able to distinguish
+which row came from which data set originally. Introductory SAS courses tend to teach the &lt;code&gt;in&lt;/code&gt; keyword,
+for a workflow similar to this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data Concat1;
+set data1(in = ds0)  
+    data2(in = ds1);
+if ds0 then source = &amp;quot;data1&amp;quot;;
+else if ds1 then source = &amp;quot;data2&amp;quot;;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With more than two input data sets, this can get unwieldy and repetitive. In an old 
+&lt;a href=&#34;https://blogs.sas.com/content/iml/2015/08/03/indsname-option.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt;
+on Rick Wicklin&amp;rsquo;s DO LOOP, a better method is introduced - the &lt;code&gt;indsname&lt;/code&gt; option. Using this method, the above code looks much nicer:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data Concat2;
+set data1-data2 indsname = source;  /* the INDSNAME= option is on the SET statement */
+libref = scan(source,1,&#39;.&#39;);        /* extract the libref */
+dsname = scan(source,2,&#39;.&#39;);        /* extract the data set name */
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;As long as your input data sets are reasonably named, you&amp;rsquo;ll now have access to all the information needed.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Working with the Census API Directly from SAS</title>
+      <link>https://dmsenter89.github.io/post/22-04-census-api-with-sas/</link>
+      <pubDate>Wed, 13 Apr 2022 08:27:35 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-04-census-api-with-sas/</guid>
+      <description>&lt;p&gt;In a previous 
+&lt;a href=&#34;https://dmsenter89.github.io/post/20-08-census-api/&#34;&gt;post&lt;/a&gt;, I have shown how to connect to the Census API and load data
+with Python. In this post, I will do the same using SAS instead. Before we get started, two important links
+from last time: a guide to the API can be found 
+&lt;a href=&#34;https://www.census.gov/data/developers/guidance/api-user-guide.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and a list of the
+available data sets can be accessed 
+&lt;a href=&#34;https://api.census.gov/data.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;picking-the-data&#34;&gt;Picking the Data&lt;/h2&gt;
+&lt;p&gt;For this post, I&amp;rsquo;ll use the same data as last time. There we used the 2018 American Community Survey 1-Year Detailed Table
+and asked for three variables - total population, household income, and median monthly cost for Alamance and Orange
+counties in North Carolina (FIPS codes 37001 and 37135). The variable names are not very intuitive, so I highly recommend starting
+your code with a comment section that includes a markdown-style table of the variables that you want to use. Here is
+an example table for our data:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Variable&lt;/th&gt;
+&lt;th&gt;Label&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;B01003_001E&lt;/td&gt;
+&lt;td&gt;Total Population&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B19001_001E&lt;/td&gt;
+&lt;td&gt;Household Income (12 Month)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;B25105_001E&lt;/td&gt;
+&lt;td&gt;Median Monthly Housing Cost&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;building-the-query&#34;&gt;Building the Query&lt;/h2&gt;
+&lt;p&gt;The next step is to build the query. Like last time, the API consists of a base
+URL that points us to the data set we are looking for, a list of the variables
+we want to request, and a description of the geography for which we want to
+request those variables. Just like last time, I&amp;rsquo;ll build the query using several
+macros for flexibility purposes. Note that since &lt;code&gt;&amp;amp;&lt;/code&gt; has a special meaning in SAS,
+we need to use &lt;code&gt;%str(&amp;amp;)&lt;/code&gt; when referring to it to avoid having the log clobbered with
+warnings about unresolved macros.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;%let baseurl=https://api.census.gov/data/2018/acs/acs1;
+%let varlist=NAME,B01003_001E,B19001_001E,B25105_001E;
+%let geolist=for=county:001,135%str(&amp;amp;)in=state:37;
+%let fullurl=&amp;amp;baseurl.?get=&amp;amp;varlist.%str(&amp;amp;)&amp;amp;geolist.;
+%put &amp;amp;=fullurl;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Your log should now show the full query URL:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;FULLURL=https://api.census.gov/data/2018/acs/acs1?get=NAME,B01003_001E,B19001_001E,B25105_001E&amp;amp;for=county:001,135&amp;amp;in=state:37
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;making-the-api-request&#34;&gt;Making the API Request&lt;/h2&gt;
+&lt;p&gt;The API call is achieved with a simple PROC HTTP call using a temporary file to hold the response from the server.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;filename response temp;
+
+proc http url=&amp;quot;&amp;amp;fullurl.&amp;quot; method=&amp;quot;GET&amp;quot; out=response;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;handling-the-json-response&#34;&gt;Handling the JSON Response&lt;/h2&gt;
+&lt;p&gt;We read the JSON response by utilizing the
+
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lestmtsglobal/n1jfdetszx99ban1rl4zll6tej7j.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;LIBNAME JSON Engine&lt;/a&gt;
+in SAS.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;libname manual JSON fileref=response;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now run &lt;code&gt;proc datasets lib=manual; quit;&lt;/code&gt;. You&amp;rsquo;ll see two data sets that were created: ALLDATA which contains the whole JSON file&amp;rsquo;s contents
+in a single data set, and ROOT which is a data set of all the root-level data. The latter one is the one we want. Here&amp;rsquo;s what the
+first few observations in each look like:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-first-few-observations-in-the-automatically-created-data-sets&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/auto_datasets_hu58f00ccbf67d7d2f36e2c3ae0591a33b_44045_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;First few observations in the automatically created data sets.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/auto_datasets_hu58f00ccbf67d7d2f36e2c3ae0591a33b_44045_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1073&#34; height=&#34;490&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    First few observations in the automatically created data sets.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Just like with Python, all columns are treated as character variables at first. Because of the way the Census API is structured,
+the first row consists of headers, which SAS didn&amp;rsquo;t use. This is something we&amp;rsquo;ll need to fix. At this point we have two main routes we can use to fix
+these issues - we can manually create a new data set from ROOT with PROC SQL and address the issues in that way, or we can take
+advantage of SAS&#39; JSON map feature to define how we want to load the JSON when the LIBNAME statement is executed. There are good use cases for each,
+so I will show both methods.&lt;/p&gt;
+&lt;h3 id=&#34;cleaning-up-via-proc-sql&#34;&gt;Cleaning up via PROC SQL&lt;/h3&gt;
+&lt;p&gt;Using PROC SQL, you can rename all the character variables you want to keep. To change from character to numeric,
+you&amp;rsquo;ll use the &lt;code&gt;input&lt;/code&gt; function. You can then assign formats and labels as desired. To get rid of the first row,
+you can just add a conditional &lt;code&gt;having ordinal_root ne 1&lt;/code&gt; to avoid loading that line.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;proc sql;
+	create table census as
+	select
+		element1 as Name,
+		input(element2, best12.) as B01003_001E format=COMMA12.  label=&#39;Total Population&#39;,
+		input(element3, best12.) as B19001_001E format=DOLLAR12. label=&#39;Household Income (12 Month)&#39;,
+		input(element4, best12.) as B25105_001E format=DOLLAR12. label=&#39;Median Monthly Housing Cost&#39;,
+		element5 as state,
+		element6 as county
+	from manual.root
+	having ordinal_root ne 1;
+quit;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-result-from-the-proc-sql-method&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/CensusData_SQL_hu13384c4c5502c575dbc7b9e51c49ebcb_20401_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Result from the PROC SQL method.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/CensusData_SQL_hu13384c4c5502c575dbc7b9e51c49ebcb_20401_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1022&#34; height=&#34;124&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Result from the PROC SQL method.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;A benefit of this method is that as you fix the input table, you can already begin to work with
+it thanks to the &lt;code&gt;calculated&lt;/code&gt; keyword in PROC SQL. Say we weren&amp;rsquo;t actually interested in housing cost and
+household income, but instead would like to know what percent of their annual income a household spends on
+housing in a given county. We could just add a new variable to our PROC SQL call and build our table like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;proc sql;
+	create table census as
+	select
+		element1 as Name,
+		input(element2, best12.) as B01003_001E format=COMMA12. label=&#39;Total Population&#39;,
+		input(element3, best12.) as B19001_001E format=DOLLAR12. label=&#39;Household Income (12 Month)&#39;,
+		input(element4, best12.) as B25105_001E format=DOLLAR12. label=&#39;Median Monthly Housing Cost&#39;,
+		/* Now calculate what we want from the new columns: */
+		12*(calculated B25105_001E)/calculated B19001_001E as HousingCostPCT format=PERCENT10.2,
+		element5 as state,
+		element6 as county
+	from manual.root
+	having ordinal_root ne 1;
+quit;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;using-a-json-map&#34;&gt;Using a JSON MAP&lt;/h3&gt;
+&lt;p&gt;Alternatively, we could change the way SAS reads the JSON data by editing the JSON map it uses to decode
+the JSON file. The first step is to ask SAS to create a map for us to edit:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;filename automap &amp;quot;sas.map&amp;quot;;
+libname autodata JSON fileref=response map=automap automap=create;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The map will look something like this:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-beginning-of-the-automatically-created-json-map&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/AUTO_MAP_hu793d98e625aa154a8d9815a25890d65f_22860_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Beginning of the automatically created JSON map.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/AUTO_MAP_hu793d98e625aa154a8d9815a25890d65f_22860_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;460&#34; height=&#34;426&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Beginning of the automatically created JSON map.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Note that this is also a JSON file which you can edit in a text editor. With this map, you can change the names
+of the data sets and variables, assign labels and formats, and also re-format incoming data. Variables and data sets
+you don&amp;rsquo;t want to read can simply be deleted from the map. Here&amp;rsquo;s the beginning of my edited file:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-beginning-of-my-edited-json-map&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/AUTO_MAP_EDITED_hua840053fe8872e6ad1fe911a8f4abee6_59487_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Beginning of my edited JSON map.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/AUTO_MAP_EDITED_hua840053fe8872e6ad1fe911a8f4abee6_59487_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;475&#34; height=&#34;575&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Beginning of my edited JSON map.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Since the first row of observations in the JSON are actually a header and non-numeric, I add &lt;code&gt;?&lt;/code&gt; prior to the
+specified informat. This prevents errors in the log and simply replaces non-matching variables with missing values.
+We can now reload the JSON using our custom map by dropping the &lt;code&gt;automap=create&lt;/code&gt; option from the LIBNAME statement:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;libname autodata JSON fileref=response map=automap;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;When I now print the resulting data set, the header row is still there, but replaced by missing values in numeric
+columns:
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-data-set-as-a-result-of-the-edited-json-map&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/MAP_RESULT_hua2828dd6a29f70dd2548d0bd22c856b1_25610_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;The data set as a result of the edited JSON map.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-04-census-api-with-sas/MAP_RESULT_hua2828dd6a29f70dd2548d0bd22c856b1_25610_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1026&#34; height=&#34;165&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The data set as a result of the edited JSON map.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;This means we&amp;rsquo;ll need to additionally drop this row in a separate step using a delete statement either in
+a PROC SQL or DATA step.&lt;/p&gt;
+&lt;p&gt;Whichever method you choose, you now can access data via an API call from SAS. Happy exploring!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cleaning up a Date String with RegEx in SAS</title>
+      <link>https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/</link>
+      <pubDate>Wed, 29 Sep 2021 13:41:36 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/</guid>
+      <description>&lt;p&gt;Sometimes we have to deal with manually entered data, which means there is a good chance that the data needs to be cleaned for consistency due to the
+inevitable errors that creep in when typing in data, not to speak of any inconsistencies between individuals entering data.&lt;/p&gt;
+&lt;p&gt;In my particular case, I was recently dealing with a data set that included
+manually calculated ages that had been entered as a complete string
+of the number of years, months, and days of an individual. Such a string
+is not particularly useful for analysis and I wanted to have the age as
+a numeric variable instead. Regular expressions can help out a lot in this
+type of situation. In this post, we will look at a few representative examples
+of the type of entries I&amp;rsquo;ve encountered and how to read them using RegEx in SAS.&lt;/p&gt;
+&lt;h2 id=&#34;lets-look-at-the-data&#34;&gt;Let&amp;rsquo;s Look at the Data&lt;/h2&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-what-were-starting-from&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/RAW_DS_hu83735545411e40d8d73c711ad73aa038_21697_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;What we&amp;amp;rsquo;re starting from.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/RAW_DS_hu83735545411e40d8d73c711ad73aa038_21697_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;508&#34; height=&#34;250&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    What we&amp;rsquo;re starting from.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;If we look at our sample data, we notice a few things. The data is consistently
+ordered from largest to smallest, in the order of year, month, and day.
+For some lines, only the year variable is available. In all cases, the string
+starts with two digits.&lt;/p&gt;
+&lt;p&gt;Separation of the time units is inconsistent; occasionally they are separated
+by commas, sometimes by hyphens, and in some cases by spaces alone. The terms
+indicating the units are spelled and capitalized inconsistently as well. There
+are some abbreviations and occasionally the plural &amp;rsquo;s&#39; in days is wrapped in
+parentheses.&lt;/p&gt;
+&lt;p&gt;If you want to follow along, you can create the sample data with the
+following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data raw;
+    infile datalines delimiter = &#39;,&#39; MISSOVER DSD;
+    attrib
+        ID     informat=best32. format=1.
+        STR_AGE informat=$500.   format=$500. label=&#39;Age String&#39;
+        VAR1   informat=best32. format=1.;
+    input ID STR_AGE $ VAR1;
+
+    datalines;
+    1,&amp;quot;62 Years, 5 Months, 8 Days&amp;quot;,1
+    2,43 Yrs. -2 Months -4 Day(s), 2
+    3,33 years * months 24 days, 1
+    4,58,1
+    5,&amp;quot;47 Yrs. -11 Months -27 Day(s)&amp;quot;,2
+    ;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;the-regex-patterns&#34;&gt;The RegEx Patterns&lt;/h2&gt;
+&lt;p&gt;We will use a total of three regex patterns, one for each of the time units:
+year, month, day.  SAS uses Pearl regex and the function &lt;code&gt;prxparse&lt;/code&gt; to define
+the regex patterns that are supposed to be searched for.&lt;/p&gt;
+&lt;p&gt;For the year variable, we need to match the first two digits in our string.
+Therefore, the correct call is &lt;code&gt;prxparse(&#39;/^(\d{2}).*/&#39;)&lt;/code&gt;. Note that the
+&lt;code&gt;(&lt;/code&gt; and &lt;code&gt;)&lt;/code&gt; delimit the capture group.&lt;/p&gt;
+&lt;p&gt;The month and day regex patterns are very similar. For the months, we want to
+lazy-match the until we hit between one or two digits followed by
+an &amp;rsquo;m&#39; and some number of other characters. We use the &lt;code&gt;i&lt;/code&gt; flag since
+we cannot guarantee capitalization: &lt;code&gt;prxparse(&#39;/.*?(\d{1,2}).M.*/i&#39;)&lt;/code&gt;.
+The day pattern is nearly identical: &lt;code&gt;prxparse(&#39;/.*?(\d{1,2}).D\D*$/i&#39;)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can extract our matches using the &lt;code&gt;prxposn&lt;/code&gt; function. We use the
+&lt;code&gt;prxmatch&lt;/code&gt; function to check if we actually have a match:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;/* match into strings */
+if prxmatch(year_rxid, STR_AGE)  then year_dig_str = prxposn(year_rxid,1,STR_AGE);
+if prxmatch(month_rxid, STR_AGE) then month_dig_str = prxposn(month_rxid,1,STR_AGE);
+if prxmatch(day_rxid, STR_AGE)   then day_dig_str = prxposn(day_rxid,1, STR_AGE);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The extracted strings can then be converted to numeric variables using
+the &lt;code&gt;input&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;The last step is the calculation of the age from the three components.
+Since not all three time units are specified for every row, we cannot use
+the standard arithmetic of &lt;code&gt;years + months + days&lt;/code&gt;, because the missing
+values would propagate. We need to use the &lt;code&gt;sum&lt;/code&gt; function instead.&lt;/p&gt;
+&lt;p&gt;Putting it all together, we get the correct output:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-result&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/FIXED_DS_hu37f587f0a5cd00ab598beb8689b70b5f_34165_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;The Result&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/FIXED_DS_hu37f587f0a5cd00ab598beb8689b70b5f_34165_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;867&#34; height=&#34;251&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The Result
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;complete-code&#34;&gt;Complete Code&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data fixed;
+    set raw;
+    
+   /* define the regex patterns */
+   year_rxid  = prxparse(&#39;/^(\d{2}).*/&#39;);
+   month_rxid = prxparse(&#39;/.*?(\d{1,2}).M.*/i&#39;);
+   day_rxid   = prxparse(&#39;/.*?(\d{1,2}).D\D*$/i&#39;);   /* match 2 digits followed by D and non-digit chars  */
+  
+   /* make sure we have enough space to store the extraction */
+   length year_dig_str month_dig_str day_dig_str $4;
+   
+   /* match into strings */
+   /* match into strings */
+   if prxmatch(year_rxid, STR_AGE)  then year_dig_str = prxposn(year_rxid,1,STR_AGE);
+   if prxmatch(month_rxid, STR_AGE) then month_dig_str = prxposn(month_rxid,1,STR_AGE);
+   if prxmatch(day_rxid, STR_AGE)   then day_dig_str = prxposn(day_rxid,1, STR_AGE);
+   
+   /* use input to convert str -&amp;gt; numeric */
+   years  = input(year_dig_str, ? 12.);
+   months = input(month_dig_str, ? 12.);
+   days   = input(day_dig_str, ? 12.);
+   
+   /* Use SUM function when calculating age
+    to avoid missing values propagating  */
+   age = sum(years,months/12,days/365.25);
+   
+   /* get rid of temporary variables */ 
+   drop month_rxid month_dig_str year_rxid year_dig_str day_rxid day_dig_str;
+   run;
+   
+proc print data=fixed; run;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>From Proc Import to a Data Step with Regex</title>
+      <link>https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/</link>
+      <pubDate>Thu, 29 Jul 2021 08:46:10 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/</guid>
+      <description>&lt;p&gt;I find myself needing to import CSV files with a relatively large number of columns. In many cases, &lt;code&gt;proc import&lt;/code&gt; works surprisingly well in giving me what I want. But sometimes, I need to do some work while reading in the file and it would be nice to just use a data step to do so, but I don&amp;rsquo;t want to type it in by hand. That&amp;rsquo;s when a combination of &lt;code&gt;proc import&lt;/code&gt; and some regex substitution can come in handy.&lt;/p&gt;
+&lt;p&gt;For the first step, run a &lt;code&gt;proc import&lt;/code&gt;, like this sample code that is provided by SAS Studio when you double click on a CSV file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;FILENAME REFFILE &#39;/path/to/file/data.csv&#39;;
+
+PROC IMPORT DATAFILE=REFFILE
+    DBMS=CSV
+    OUT=WORK.IMPORT;
+    GETNAMES=YES;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you run this code, you will see that SAS generates a complete data step for you. This is what the beginning of one looks like:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-sample-log-output&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/log_hu417e5750fec5319adb043ca92305efb0_26856_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Sample log output.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/log_hu417e5750fec5319adb043ca92305efb0_26856_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;797&#34; height=&#34;461&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Sample log output.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;There will be be two lines for each variable, one giving the &lt;code&gt;informat&lt;/code&gt; and one giving the &lt;code&gt;format&lt;/code&gt; that SAS decided on. This will be followed by an &lt;code&gt;input&lt;/code&gt; statement. You can copy that from the log into a text editor such as VSCode, but unfortunately the line numbering of the LOG will carry over. One convenient way of fixing this is to use regex search-and-replace. Each line starts with a space followed by 1-3 digits, followed by a variable number of spaces until the next word. To capture this I use &lt;code&gt;^\s\d{1,3}\s+&lt;/code&gt; as my search term and replace with nothing. This will left align the whole data step, but this can be adjusted later.&lt;/p&gt;
+&lt;p&gt;At this point the data step can be saved as a SAS file or copied back over to the file you are working within SAS Studio, but I like to do one more adjustment. I really like using the &lt;code&gt;attrib&lt;/code&gt; statement, 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lestmtsref/n1wxb7p9jkxycin16lz2db7idbnt.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;see documentation&lt;/a&gt;, because it allows me to see the informat, format, and label of a variable all in one place. So I use regex to re-arrange my informat statement into the beginnings of an attribute statement. Use the search term &lt;code&gt;informat\s([^\s]+)\s([^\s]+)\s+;&lt;/code&gt; to capture each informat line and create two capture groups - the variable name as group 1 and the informat as group 2. If you use the replace code &lt;code&gt;$1 informat=$2 format=$2&lt;/code&gt;, you will see the beginnings of an attribute statement. In this replacement scheme, each informat matches each format. This is fine for date and character variables, but you may want to adjust the display format for some of your numeric variables.&lt;/p&gt;
+&lt;p&gt;To clean this up, get rid of the format lines (you can search for &lt;code&gt;^format.+\n&lt;/code&gt; and replace with an empty replace to delete them), add the &lt;code&gt;attrib&lt;/code&gt; statement below the &lt;code&gt;infile&lt;/code&gt; and make sure to end the block of attributes with a semicolon, and indent your code as desired.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-sample-data-step-view&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/code_snip_hub5c78044ade6674b35a08b503d783f3d_19917_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Sample data step view.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/code_snip_hub5c78044ade6674b35a08b503d783f3d_19917_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;843&#34; height=&#34;190&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Sample data step view.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;And there you have it! The beginning of a nicely formatted data step that you can start to work with.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Making INPUT and LABEL Statements with AWK</title>
+      <link>https://dmsenter89.github.io/post/21-07-awk-for-sas/</link>
+      <pubDate>Tue, 06 Jul 2021 10:38:27 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-07-awk-for-sas/</guid>
+      <description>&lt;p&gt;I am currently working with a database provided by the North Carolina Department of Public Safety
+that consists of several fixed-width files. Each of these has an associated codebook that gives the
+internal variable name, a label of the variable, its data type, as well as the start column and
+the length of the fields for each column. To import the data sets into SAS, I could copy and paste
+part of that data into my INPUT and LABEL statements, but that gets tedious pretty fast when dealing
+with dozens of lines. And since I have multiple data sets like that, I didn&amp;rsquo;t really want to do it that way.
+In this post I show how a simple command-line script can be written to deal with this problem.&lt;/p&gt;
+&lt;h2 id=&#34;introducing-awk&#34;&gt;Introducing AWK&lt;/h2&gt;
+&lt;p&gt;Here are the first few lines of one of these files:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;CMDORNUM      OFFENDER NC DOC ID NUMBER          CHAR      1       7     
+CMCLBRTH      OFFENDER BIRTH DATE                DATE      8       10    
+CMCLSEX       OFFENDER GENDER CODE               CHAR      18      30    
+CMCLRACE      OFFENDER RACE CODE                 CHAR      48      30    
+CMCLHITE      OFFENDER HEIGHT (IN INCHES)        CHAR      78      2     
+CMWEIGHT      OFFENDER WEIGHT (IN LBS)           CHAR      80      3     
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can see that the data is tabular and separated by multiple spaces. Linux programs often deal
+with column data and a tool is available for manipulating column-based data on the command-line:
+AWK, a program that can be used for complex text manipulation from the command-line. Some useful
+tutorials on AWK in general are available at 
+&lt;a href=&#34;https://www.grymoire.com/Unix/Awk.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;grymoire.com&lt;/a&gt;
+and at 
+&lt;a href=&#34;https://www.tutorialspoint.com/awk/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tutorialspoint&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For our purposes, we want to know about the &lt;code&gt;print&lt;/code&gt; and &lt;code&gt;printf&lt;/code&gt; commands for AWK. To illustrate
+how this works, make a simple list of three lines with each term separated by a space:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt; cat &amp;lt;&amp;lt; EOF &amp;gt; list.txt
+1 one apple pie
+2 two orange cake
+3 three banana shake
+EOF
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To print the whole file, you&amp;rsquo;d use the print statement: &lt;code&gt;awk &#39;{print}&#39; list.txt&lt;/code&gt;. But I could do that with
+&lt;code&gt;cat&lt;/code&gt;, so what&amp;rsquo;s the point? Well, what if I only want &lt;em&gt;one&lt;/em&gt; of the columns? By default, &lt;code&gt;$n&lt;/code&gt; refers to the
+&lt;em&gt;n&lt;/em&gt;th column in AWK. So to print only the fruits I could write &lt;code&gt;awk &#39;{print $3}&#39; list.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Multiple columns can be printed by listing multiple columns separated by a comma:
+&lt;code&gt;awk &#39;{print $2,$3}&#39; list.txt&lt;/code&gt;. Note that if you omit the comma the two columns get concatenated into
+a single column.&lt;/p&gt;
+&lt;p&gt;If additional formatting is required, we can use the &lt;code&gt;printf&lt;/code&gt; command. So to create a hyphenated
+fruit and food-item column, we could use &lt;code&gt;awk &#39;{printf &amp;quot;%s-%s\n&amp;quot;, $3, $4}&#39; list.txt&lt;/code&gt;. Note that we
+have to indicate the end-of line or else everything will be printed into a single line of text.&lt;/p&gt;
+&lt;p&gt;Now we almost have all of the skills to create the label and input statements in SAS! Let&amp;rsquo;s create
+a comma-delimited list for practice:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat &amp;lt;&amp;lt; EOF &amp;gt; list.txt
+1,one,apple pie
+2,two,orange cake
+3,three,banana shake
+EOF
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;-F&lt;/code&gt; flag is used to tell AWK to use a different column separator. So to print the
+third column, we&amp;rsquo;d use &lt;code&gt;awk -F &#39;,&#39; &#39;{print $3}&#39; list.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;making-the-sas-statements&#34;&gt;Making the SAS statements&lt;/h2&gt;
+&lt;p&gt;Now we know everything we need to know about AWK to create code we want. First we note that
+our coding file uses multiple spaces as column separators as opposed to single spaces. If
+each item was a single word, this wouldn&amp;rsquo;t be a problem. Unfortunately, our second column
+reads &amp;ldquo;OFFENDER NC DOC ID NUMBER&amp;rdquo; which would be split into five columns by default. So we
+will need to use the column separator flag as &lt;code&gt;-F &#39;[[:space:]][[:space:]]+&#39;&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;the-label-statement&#34;&gt;The LABEL Statement&lt;/h3&gt;
+&lt;p&gt;A SAS label has the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/v_011/lestmtsref/n1r8ub0jx34xfsn1ppcjfe0u16pc.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;general form&lt;/a&gt;
+&lt;code&gt;LABEL variable-1=label-1&amp;lt;...variable-n=label-n&amp;gt;;&lt;/code&gt;, so for example&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;label score1=&amp;quot;Grade on April 1 Test&amp;quot;  
+      score2=&amp;quot;Grade on May 1 Test&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;is a valid label statement. In our file the variable names are given in column 1
+and the appropriate labels in column 2. So an AWK script to print the appropriate
+labels can be written like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;awk -F &#39;[[:space:]][[:space:]]+&#39; &#39;{printf &amp;quot;\t%s=\&amp;quot;%s\&amp;quot;\n&amp;quot;, $1, $2}&#39; FILE.DAT
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is what everything looks like given our code:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;label.PNG&#34; alt=&#34;Sample Code returned by AWK.&#34; title=&#34;Sample Code returned by AWK.&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-input-statement&#34;&gt;The INPUT STATEMENT&lt;/h3&gt;
+&lt;p&gt;The INPUT statement can be made in a similar way, it just requires some minor tweaking as
+INPUT can be a bit more complex to handle a variety of data, see the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lestmtsref/n0oaql83drile0n141pdacojq97s.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;.
+In our case we are dealing with a fixed-width record. The fourth column gives the starting column
+of the data and the fifth gives us the width of that field. The third gives us the data type.
+The majority of ours are character, so it seems easiest to just have the AWK script print each
+line as though it were a character together with a SAS comment giving the name and &amp;ldquo;official&amp;rdquo; data
+type. Then the few lines that need adjustment can be manually adjusted. The corresponding code would
+look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;awk -F &#39;[[:space:]][[:space:]]+&#39; &#39;{printf &amp;quot;\t@%s %s $%s. /*%s - %s*/\n&amp;quot;,$4, $1, $5, $3, $2}&#39; FILE.DAT
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is what is returned by our code (highlighted part has been manually edited):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;input.PNG&#34; alt=&#34;Sample Code returned by AWK.&#34; title=&#34;Sample Code returned by AWK.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I hope you all find this useful and that it will save you some typing!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>SASPy Video Tutorial</title>
+      <link>https://dmsenter89.github.io/post/21-06-youtube-tutorial/</link>
+      <pubDate>Tue, 29 Jun 2021 10:57:05 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-06-youtube-tutorial/</guid>
+      <description>&lt;p&gt;I have been using both SAS and Python extensively for a while now. With each having great features, it was very useful to combine my
+skills in both languages by seamlessly moving between SAS and Python in
+a single notebook. In the video below, fellow SAS intern Ariel Chien and I show how easy it is to connect the SAS and Python kernels using the open-source SASPy package together with SAS OnDemand for Academics.
+I hope you will also find that this adds to your workflow!&lt;/p&gt;
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/6mcsbeKwSqM&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The Jupyter notebook from the video can be viewed 
+&lt;a href=&#34;https://github.com/sascommunities/sas-howto-tutorials/tree/master/sastopython&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;on GitHub&lt;/a&gt;. For installation instructions, check out the 
+&lt;a href=&#34;https://github.com/sassoftware/saspy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SASPy GitHub page&lt;/a&gt;. Configuration for SASPy to connect to ODA can be found 
+&lt;a href=&#34;https://support.sas.com/ondemand/saspy.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;at this support page&lt;/a&gt;. For more information on SAS OnDemand for Academics, 
+&lt;a href=&#34;https://www.sas.com/en_us/software/on-demand-for-academics.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;click here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Census 2020 Population Estimates Updated</title>
+      <link>https://dmsenter89.github.io/post/21-06-covid-county-incidence/</link>
+      <pubDate>Wed, 09 Jun 2021 16:00:34 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-06-covid-county-incidence/</guid>
+      <description>&lt;p&gt;The Census Bureau has updated its population estimates for 2020 with county level data. This means any
+projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates.&lt;/p&gt;
+&lt;p&gt;This is particularly useful for those of us who have been trying to track the development of COVID-19. The
+average incidence rates are typically rescaled to new cases per 100,000 people. Previous graphs and maps I
+have created used the 2019 estimates. I have now updated my code for mapping North Carolina developments to
+use the 2020 estimates.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-county-level-data-for-north-carolina-using-the-nyt-covid-data-set-date-set-to-june-8-2021&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-06-covid-county-incidence/nc_avg_incidence_08jun2021_hu8396d2a41a978826522d96cfe881f35d_68326_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;County level data for North Carolina using the NYT COVID data set. Date set to June 8, 2021.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-06-covid-county-incidence/nc_avg_incidence_08jun2021_hu8396d2a41a978826522d96cfe881f35d_68326_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    County level data for North Carolina using the NYT COVID data set. Date set to June 8, 2021.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Below this post is my code for loading the necessary data using SAS.
+Note that I&amp;rsquo;m using a macro called &lt;code&gt;mystate&lt;/code&gt; that can be set to the statecode abbreviation of your choice.
+The conditional &lt;code&gt;County ne 0&lt;/code&gt; is in the code because the county level CSV includes both the county data as
+well as the totals for each state.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;
+filename popdat url &#39;https://www2.census.gov/programs-surveys/popest/datasets/2010-2020/counties/totals/co-est2020-alldata.csv&#39;;
+
+data censusdata;
+	infile POPDAT delimiter=&#39;,&#39; MISSOVER DSD lrecl=32767 firstobs=2;
+	informat SUMLEV REGION DIVISION State County best32.
+                         STNAME $20. CTYNAME $35. 
+		CENSUS2010POP ESTIMATESBASE2010 POPESTIMATE2010-POPESTIMATE2020 best32.;
+	format SUMLEV REGION DIVISION STATE best32. COUNTY 5. STNAME $20. CTYNAME $35. 
+		CENSUS2010POP ESTIMATESBASE2010 POPESTIMATE2010-POPESTIMATE2020 
+		COMMA12. StateCode $2.;
+	input SUMLEV REGION DIVISION STATE COUNTY STNAME $ CTYNAME $
+                        CENSUS2010POP ESTIMATESBASE2010 
+		POPESTIMATE2010-POPESTIMATE2020;
+
+	if (State ne 0) and (State ne 72) then
+		do;
+			FIPS=put(State, Z2.);
+			Statecode=fipstate(FIPS);
+
+			if Statecode eq &amp;amp;mystate and County ne 0 then
+				output;
+		end;
+	keep STNAME CTYNAME County FIPS Statecode Popestimate2020;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The media release can be 
+&lt;a href=&#34;https://www.census.gov/newsroom/press-releases/2021/2020-vintage-population-estimates.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;viewed here&lt;/a&gt;. The county-level data set can be downloaded 
+&lt;a href=&#34;https://www.census.gov/programs-surveys/popest/technical-documentation/research/evaluation-estimates/2020-evaluation-estimates/2010s-counties-total.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;at this page&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Git with SAS Studio</title>
+      <link>https://dmsenter89.github.io/post/21-01-git-with-sas-studio/</link>
+      <pubDate>Mon, 11 Jan 2021 14:42:50 -0500</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-01-git-with-sas-studio/</guid>
+      <description>&lt;p&gt;Git is a widely used version control system that allows users to track their software
+development in both public and private repositories. It is also increasingly used to store
+data in text formats, see for example the 
+&lt;a href=&#34;https://github.com/nytimes/covid-19-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Times COVID-19 data set&lt;/a&gt;.
+This post will briefly demonstrate how to clone and pull updates from a GitHub repository
+using the git functions that are built into SAS Studio.&lt;/p&gt;
+&lt;p&gt;Git functionality has been built into SAS Studio for a little while, so there are actually
+two slightly different iterations of the git functions. The examples in this post will use the versions
+compatible with SAS Studio 3.8, which is the current version available at SAS OnDemand for Academics.
+All git functions use the same prefix. In older versions such as SAS Studio 3.8 the prefix is &lt;code&gt;gitfn_&lt;/code&gt;,
+which is followed by a git command such as &amp;ldquo;clone&amp;rdquo; or &amp;ldquo;pull&amp;rdquo;. In SAS Studio 5, the prefix has been
+simplified to just &lt;code&gt;git_&lt;/code&gt;. Most git functions have the same name between the&lt;br&gt;
+two versions, so that the only difference is the prefix. A complete table of the old and new
+versions of the git functions is available 
+&lt;a href=&#34;https://go.documentation.sas.com/?cdcId=pgmsascdc&amp;amp;cdcVersion=9.4_3.5&amp;amp;docsetId=lefunctionsref&amp;amp;docsetTarget=n1mlc3f9w9zh9fn13qswiq6hrta0.htm&amp;amp;locale=en#p0evl64wd2dljrn1l43t739qtwba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in the documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We use the git functions by calling them in an otherwise empty DATA step. In other words, we use the
+format&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;
+    /* use your git functions here */
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;cloning-a-repo&#34;&gt;Cloning a Repo&lt;/h2&gt;
+&lt;p&gt;To clone a repo from github we use &lt;code&gt;gitfn_clone&lt;/code&gt;. It takes two arguments -
+the URL of the repository of interest and the path to an &lt;em&gt;empty&lt;/em&gt; folder. You can
+have SAS create the folder for you by using &lt;code&gt;OPTIONS DLCREATEDIR&lt;/code&gt;. The basic
+syntax for the clone is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;
+    rc = gitfn_clone (
+     &amp;quot;&amp;amp;repoURL.&amp;quot;,    /* URL to repo */
+     &amp;quot;&amp;amp;targetDIR.&amp;quot;); /* folder to put repo in */
+    put rc=;         /* equals 0 if successful */
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It doesn&amp;rsquo;t matter if the URL you use ends in &amp;ldquo;.git&amp;rdquo; or not. In other words, the
+following two macros would both work the same:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;%LET repoURL=https://github.com/nytimes/covid-19-data;
+/* works the same as */
+%LET repoURL=https://github.com/nytimes/covid-19-data.git;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also use password based authentication to pull in private repositories:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;
+    rc = gitfn_clone (
+     &amp;quot;&amp;amp;repoURL.&amp;quot;,   
+     &amp;quot;&amp;amp;targetDIR.&amp;quot;,
+     &amp;quot;&amp;amp;githubUSER.&amp;quot;,   /* your GitHub username */
+     &amp;quot;&amp;amp;githubPASSW.&amp;quot;); /* your GitHub password */
+    put rc=;         /* equals 0 if successful */
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; GitHub is &lt;em&gt;deprecating&lt;/em&gt; 
+&lt;a href=&#34;https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;password-based authentication&lt;/a&gt;; you will need to switch to OAuth authentication or SSH keys
+if you are not already using them. To access a repository using an SSH key, use the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;                             
+ rc = gitfn_clone(
+  &amp;quot;&amp;amp;repoURL.&amp;quot;,
+  &amp;quot;&amp;amp;targetDIR.&amp;quot;,
+  &amp;quot;&amp;amp;sshUSER.&amp;quot;,
+  &amp;quot;&amp;amp;sshPASSW.&amp;quot;,
+  &amp;quot;&amp;amp;sshPUBkey.&amp;quot;,
+  &amp;quot;&amp;amp;sshPRIVkey.&amp;quot;);
+ put rc=;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;pull-ing-in-updates&#34;&gt;Pull-ing in Updates&lt;/h2&gt;
+&lt;p&gt;It is just as easy to pull in updates to a local repository by using
+&lt;code&gt;gitfn_pull(&amp;quot;&amp;amp;repoDIR.&amp;quot;)&lt;/code&gt;. This also works with SSH keys for private
+repositories:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;
+ rc = gitfn_pull(
+  &amp;quot;&amp;amp;repoDIR.&amp;quot;,
+  &amp;quot;&amp;amp;sshUSER.&amp;quot;,
+  &amp;quot;&amp;amp;sshPASSW.&amp;quot;,
+  &amp;quot;&amp;amp;sshPUBkey.&amp;quot;,
+  &amp;quot;&amp;amp;sshPRIVkey.&amp;quot;);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;other-functions&#34;&gt;Other Functions&lt;/h2&gt;
+&lt;p&gt;SAS also offers other built-in functions, such as &lt;code&gt;_diff&lt;/code&gt;, &lt;code&gt;_status&lt;/code&gt;, &lt;code&gt;_push&lt;/code&gt;,
+&lt;code&gt;_commit&lt;/code&gt;, and others. For a complete list, see the SAS documentation 
+&lt;a href=&#34;https://go.documentation.sas.com/?cdcId=pgmsascdc&amp;amp;cdcVersion=9.4_3.5&amp;amp;docsetId=lefunctionsref&amp;amp;docsetTarget=n1mlc3f9w9zh9fn13qswiq6hrta0.htm&amp;amp;locale=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

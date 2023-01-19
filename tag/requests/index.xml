@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>requests | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/requests/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/requests/index.xml" rel="self" type="application/rss+xml" />
+    <description>requests</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 22 Aug 2020 08:53:55 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>requests</title>
+      <link>https://dmsenter89.github.io/tag/requests/</link>
+    </image>
+    
+    <item>
+      <title>Accessing Census Data via API</title>
+      <link>https://dmsenter89.github.io/post/20-08-census-api/</link>
+      <pubDate>Sat, 22 Aug 2020 08:53:55 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/20-08-census-api/</guid>
+      <description>&lt;p&gt;The Census Bureau makes an incredible amount of data available online. In this post, I will summarize how to get access to this data via Python by using the Census Bureau&amp;rsquo;s API. The Census Bureau makes a pretty useful guide available 
+&lt;a href=&#34;https://www.census.gov/data/developers/guidance/api-user-guide.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; - I recommend checking it out.&lt;/p&gt;
+ &lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#api-basics&#34;&gt;API Basics&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#building-an-the-base-url&#34;&gt;Building an the Base URL&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#building-the-query&#34;&gt;Building the Query&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-get-variables&#34;&gt;The &amp;lsquo;Get&amp;rsquo; Variables&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#location-variables&#34;&gt;Location Variables&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-complete-call&#34;&gt;The Complete Call&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#making-the-api-request&#34;&gt;Making the API Request&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#reading-the-json-into-pandas&#34;&gt;Reading the JSON into Pandas&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;api-basics&#34;&gt;API Basics&lt;/h2&gt;
+&lt;p&gt;We can think of an API query of consisting of two main parts: a &lt;em&gt;base URL&lt;/em&gt; (also called a root URL) and a &lt;em&gt;query&lt;/em&gt; string. These two strings are joined together with the query character &amp;ldquo;?&amp;rdquo; to create an API call. The resulting API call can in theory be copy-and-pasted into the URL bar of your browser, and I recommend this when first playing around with a new API. Seeing the raw text returned in the browser can help you understand the structure of what is being returned. In the case of the Census Bureau&amp;rsquo;s API, it returns a string that essentially looks like a list of lists from a Python perspective. This can easily be turned into a Pandas dataset. Be aware that all values are returned as strings. You&amp;rsquo;ll have to convert number columns to numeric by yourself.&lt;/p&gt;
+&lt;p&gt;To get an overview of all available data sets, you can go to the 
+&lt;a href=&#34;https://api.census.gov/data.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;data page&lt;/a&gt; which contains a long list of data sets. This data page is incredibly useful because it gives access to all of the information needed to build a correct API call, including the base URLs of all data sets and the variables available in each.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-a-snapshot-of-two-datasets-available-as-part-of-the-2018-american-community-survey-acs&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/20-08-census-api/census_overview_hu401560307af60bd2eb326d2765e64aa0_85308_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;A snapshot of two datasets available as part of the 2018 American Community Survey (ACS).&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/20-08-census-api/census_overview_hu401560307af60bd2eb326d2765e64aa0_85308_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1805&#34; height=&#34;372&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    A snapshot of two datasets available as part of the 2018 American Community Survey (ACS).
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;building-an-the-base-url&#34;&gt;Building an the Base URL&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s build a sample API call for the 2018 American Community Survey 1-Year Detailed Table. While we could just copy the base URL from the data page, I like to assemble mine manually from its component parts. This makes it easier to write a wrapper for the API calls if you plan on scraping the same data from multiple years.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;host_name = &amp;quot;https://api.census.gov/data&amp;quot;
+year = &amp;quot;2018&amp;quot;
+dataset_name = &amp;quot;acs/acs1&amp;quot;
+base_URL = f&amp;quot;{host_name}/{year}/{dataset_name}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;building-the-query&#34;&gt;Building the Query&lt;/h2&gt;
+&lt;p&gt;Now that we have the base URL, we can work on building the query. For purposes of the Census Bureau, you will need two components: the variables of interest, which are listed after the &lt;code&gt;get=&lt;/code&gt; keyword, and the geography for which you would like the data listed after the &lt;code&gt;for=&lt;/code&gt; keyword. For certain subdivisions, like counties, you can specify two levels of geography by adding an &lt;code&gt;in=&lt;/code&gt; keyword at at the end.&lt;/p&gt;
+&lt;h3 id=&#34;the-get-variables&#34;&gt;The &amp;lsquo;Get&amp;rsquo; Variables&lt;/h3&gt;
+&lt;p&gt;Since many of the data sets have a large amount of variables in them, it often makes sense to take a look at the &amp;ldquo;groups&amp;rdquo; page first. This page lists variables as groups, giving you a better overview of what data is available. This page is available at &lt;code&gt;{base_URL}/groups.html&lt;/code&gt;. A complete list of all variables in the data set is available at &lt;code&gt;{base_URL}/variables.html&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s find some variables. The most basic variable we&amp;rsquo;d expect to find here is total population. We can find this variable in group &amp;ldquo;B01003&amp;rdquo;. The total estimate is in sub-variable &amp;ldquo;001E&amp;rdquo;, meaning that the variable for total population is &amp;ldquo;B01003_001E&amp;rdquo;. Let&amp;rsquo;s also get household income (group &amp;ldquo;B19001&amp;rdquo;) not broken down by race: &amp;ldquo;B19001_001E&amp;rdquo;. There is also median monthly housing cost (group B25105) with variable &amp;ldquo;B25105_001E&amp;rdquo;. Since the variable names can be a little difficult to parse, I recommend making a data dictionary as you prepare the list of variables to fetch.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;data_dictionary = {
+    &amp;quot;B01003_001E&amp;quot; : &amp;quot;Total Population&amp;quot;,
+    &amp;quot;B19001_001E&amp;quot; : &amp;quot;Household Income (12 Month)&amp;quot;,
+    &amp;quot;B25105_001E&amp;quot; : &amp;quot;Median Monthly Housing Cost&amp;quot;,
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This way, the list of variables can easily be created from the data dictionary:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;get_vars = &#39;,&#39;.join(data_dictionary.keys())
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;location-variables&#34;&gt;Location Variables&lt;/h3&gt;
+&lt;p&gt;Which geographic variables are available for a particular data set can be found &lt;code&gt;{base_URL}/geography.html&lt;/code&gt;. The Census Bureau uses FIPS codes to reference the different geographies. To find the relevant codes, see 
+&lt;a href=&#34;https://www.census.gov/geographies/reference-files.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. Delaware for example has FIPS code 10 while North Carolina is 37. So to get information for these two states, we&amp;rsquo;d use &lt;code&gt;for=state:10,37&lt;/code&gt;. You can also use &amp;lsquo;*&amp;rsquo; as a wildcard. So to get all the states&#39; info you&amp;rsquo;d write &lt;code&gt;for=state:*&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Subdivisions for similarly. To get information for Orange County (FIPS 135) in North Carolina (FIPS 37), you could write &lt;code&gt;for=county:135&lt;/code&gt; with the keyword &lt;code&gt;in=state:37&lt;/code&gt;. Let&amp;rsquo;s get the information for Orange and Alamance counties in North Carolina.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;county_dict = {
+    &amp;quot;001&amp;quot; : &amp;quot;Alamance County&amp;quot;,
+    &amp;quot;135&amp;quot; : &amp;quot;Orange County&amp;quot;,
+}
+county_fips = &#39;,&#39;.join(county_dict.keys())
+
+state_dict = {&amp;quot;37&amp;quot; : &amp;quot;North Carolina&amp;quot;}
+state_fips = &#39;,&#39;.join(state_dict.keys())
+
+query_str = f&amp;quot;get={get_vars}&amp;amp;for=county:{county_fips}&amp;amp;in=state:{state_fips}&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;the-complete-call&#34;&gt;The Complete Call&lt;/h3&gt;
+&lt;p&gt;The complete API call can now be easily assembled from the previous two pieces:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;api_call = base_URL + &amp;quot;?&amp;quot; + query_str
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If we copy-and-paste this output into our browser, we can see the result looks as follows:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-result-of-our-sample-api-query&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/20-08-census-api/API_return_hu0ee03133ff661cb0ce10ab25f3a6aced_3573_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;The result of our sample API query.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/20-08-census-api/API_return_hu0ee03133ff661cb0ce10ab25f3a6aced_3573_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;454&#34; height=&#34;55&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The result of our sample API query.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;making-the-api-request&#34;&gt;Making the API Request&lt;/h2&gt;
+&lt;p&gt;We can make the API request with Python&amp;rsquo;s requests package:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import requests
+
+r = requests.get(api_call)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And that&amp;rsquo;s it! We now have the response we wanted. To interpret the response as JSON, we would call the json method of the response object: &lt;code&gt;r.json()&lt;/code&gt;. The result can then be fed into Pandas to generate our data set.&lt;/p&gt;
+&lt;h2 id=&#34;reading-the-json-into-pandas&#34;&gt;Reading the JSON into Pandas&lt;/h2&gt;
+&lt;p&gt;We can use Pandas&#39; DataFrame method directly on our data, making sure to specify that the first row consists of column headers.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import pandas as pd
+
+data = r.json()
+
+df = pd.DataFrame(data[1:], columns=data[0])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can then do any renaming based on the dictionaries we have created previously.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df.rename(columns=data_dictionary, inplace=True)
+df[&#39;county&#39;] = df[&#39;county&#39;].replace(county_dict)
+df[&#39;state&#39;]  = df[&#39;state&#39;].replace(state_dict)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The last step is to make sure our numeric columns are interpreted as such. Since all of the requested variables are in fact numeric,
+we can use the dictionary of variables to convert what we need to numeric variables.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for col in data_dictionary.values():
+    df[col] = pd.to_numeric(df[col])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And that&amp;rsquo;s it! We&amp;rsquo;re now ready to work with our data.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

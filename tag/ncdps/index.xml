@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ncdps | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/ncdps/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/ncdps/index.xml" rel="self" type="application/rss+xml" />
+    <description>ncdps</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 06 Jul 2021 10:38:27 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>ncdps</title>
+      <link>https://dmsenter89.github.io/tag/ncdps/</link>
+    </image>
+    
+    <item>
+      <title>Making INPUT and LABEL Statements with AWK</title>
+      <link>https://dmsenter89.github.io/post/21-07-awk-for-sas/</link>
+      <pubDate>Tue, 06 Jul 2021 10:38:27 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-07-awk-for-sas/</guid>
+      <description>&lt;p&gt;I am currently working with a database provided by the North Carolina Department of Public Safety
+that consists of several fixed-width files. Each of these has an associated codebook that gives the
+internal variable name, a label of the variable, its data type, as well as the start column and
+the length of the fields for each column. To import the data sets into SAS, I could copy and paste
+part of that data into my INPUT and LABEL statements, but that gets tedious pretty fast when dealing
+with dozens of lines. And since I have multiple data sets like that, I didn&amp;rsquo;t really want to do it that way.
+In this post I show how a simple command-line script can be written to deal with this problem.&lt;/p&gt;
+&lt;h2 id=&#34;introducing-awk&#34;&gt;Introducing AWK&lt;/h2&gt;
+&lt;p&gt;Here are the first few lines of one of these files:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;CMDORNUM      OFFENDER NC DOC ID NUMBER          CHAR      1       7     
+CMCLBRTH      OFFENDER BIRTH DATE                DATE      8       10    
+CMCLSEX       OFFENDER GENDER CODE               CHAR      18      30    
+CMCLRACE      OFFENDER RACE CODE                 CHAR      48      30    
+CMCLHITE      OFFENDER HEIGHT (IN INCHES)        CHAR      78      2     
+CMWEIGHT      OFFENDER WEIGHT (IN LBS)           CHAR      80      3     
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can see that the data is tabular and separated by multiple spaces. Linux programs often deal
+with column data and a tool is available for manipulating column-based data on the command-line:
+AWK, a program that can be used for complex text manipulation from the command-line. Some useful
+tutorials on AWK in general are available at 
+&lt;a href=&#34;https://www.grymoire.com/Unix/Awk.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;grymoire.com&lt;/a&gt;
+and at 
+&lt;a href=&#34;https://www.tutorialspoint.com/awk/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;tutorialspoint&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For our purposes, we want to know about the &lt;code&gt;print&lt;/code&gt; and &lt;code&gt;printf&lt;/code&gt; commands for AWK. To illustrate
+how this works, make a simple list of three lines with each term separated by a space:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt; cat &amp;lt;&amp;lt; EOF &amp;gt; list.txt
+1 one apple pie
+2 two orange cake
+3 three banana shake
+EOF
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;To print the whole file, you&amp;rsquo;d use the print statement: &lt;code&gt;awk &#39;{print}&#39; list.txt&lt;/code&gt;. But I could do that with
+&lt;code&gt;cat&lt;/code&gt;, so what&amp;rsquo;s the point? Well, what if I only want &lt;em&gt;one&lt;/em&gt; of the columns? By default, &lt;code&gt;$n&lt;/code&gt; refers to the
+&lt;em&gt;n&lt;/em&gt;th column in AWK. So to print only the fruits I could write &lt;code&gt;awk &#39;{print $3}&#39; list.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Multiple columns can be printed by listing multiple columns separated by a comma:
+&lt;code&gt;awk &#39;{print $2,$3}&#39; list.txt&lt;/code&gt;. Note that if you omit the comma the two columns get concatenated into
+a single column.&lt;/p&gt;
+&lt;p&gt;If additional formatting is required, we can use the &lt;code&gt;printf&lt;/code&gt; command. So to create a hyphenated
+fruit and food-item column, we could use &lt;code&gt;awk &#39;{printf &amp;quot;%s-%s\n&amp;quot;, $3, $4}&#39; list.txt&lt;/code&gt;. Note that we
+have to indicate the end-of line or else everything will be printed into a single line of text.&lt;/p&gt;
+&lt;p&gt;Now we almost have all of the skills to create the label and input statements in SAS! Let&amp;rsquo;s create
+a comma-delimited list for practice:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;cat &amp;lt;&amp;lt; EOF &amp;gt; list.txt
+1,one,apple pie
+2,two,orange cake
+3,three,banana shake
+EOF
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The &lt;code&gt;-F&lt;/code&gt; flag is used to tell AWK to use a different column separator. So to print the
+third column, we&amp;rsquo;d use &lt;code&gt;awk -F &#39;,&#39; &#39;{print $3}&#39; list.txt&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;making-the-sas-statements&#34;&gt;Making the SAS statements&lt;/h2&gt;
+&lt;p&gt;Now we know everything we need to know about AWK to create code we want. First we note that
+our coding file uses multiple spaces as column separators as opposed to single spaces. If
+each item was a single word, this wouldn&amp;rsquo;t be a problem. Unfortunately, our second column
+reads &amp;ldquo;OFFENDER NC DOC ID NUMBER&amp;rdquo; which would be split into five columns by default. So we
+will need to use the column separator flag as &lt;code&gt;-F &#39;[[:space:]][[:space:]]+&#39;&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;the-label-statement&#34;&gt;The LABEL Statement&lt;/h3&gt;
+&lt;p&gt;A SAS label has the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/v_011/lestmtsref/n1r8ub0jx34xfsn1ppcjfe0u16pc.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;general form&lt;/a&gt;
+&lt;code&gt;LABEL variable-1=label-1&amp;lt;...variable-n=label-n&amp;gt;;&lt;/code&gt;, so for example&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;label score1=&amp;quot;Grade on April 1 Test&amp;quot;  
+      score2=&amp;quot;Grade on May 1 Test&amp;quot;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;is a valid label statement. In our file the variable names are given in column 1
+and the appropriate labels in column 2. So an AWK script to print the appropriate
+labels can be written like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;awk -F &#39;[[:space:]][[:space:]]+&#39; &#39;{printf &amp;quot;\t%s=\&amp;quot;%s\&amp;quot;\n&amp;quot;, $1, $2}&#39; FILE.DAT
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is what everything looks like given our code:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;label.PNG&#34; alt=&#34;Sample Code returned by AWK.&#34; title=&#34;Sample Code returned by AWK.&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-input-statement&#34;&gt;The INPUT STATEMENT&lt;/h3&gt;
+&lt;p&gt;The INPUT statement can be made in a similar way, it just requires some minor tweaking as
+INPUT can be a bit more complex to handle a variety of data, see the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lestmtsref/n0oaql83drile0n141pdacojq97s.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;.
+In our case we are dealing with a fixed-width record. The fourth column gives the starting column
+of the data and the fifth gives us the width of that field. The third gives us the data type.
+The majority of ours are character, so it seems easiest to just have the AWK script print each
+line as though it were a character together with a SAS comment giving the name and &amp;ldquo;official&amp;rdquo; data
+type. Then the few lines that need adjustment can be manually adjusted. The corresponding code would
+look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;awk -F &#39;[[:space:]][[:space:]]+&#39; &#39;{printf &amp;quot;\t@%s %s $%s. /*%s - %s*/\n&amp;quot;,$4, $1, $5, $3, $2}&#39; FILE.DAT
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is what is returned by our code (highlighted part has been manually edited):&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;input.PNG&#34; alt=&#34;Sample Code returned by AWK.&#34; title=&#34;Sample Code returned by AWK.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I hope you all find this useful and that it will save you some typing!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

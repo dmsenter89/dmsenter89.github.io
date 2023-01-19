@@ -13,10 +13,10 @@
     </image>
     
     <item>
-      <title>SAS ODA Update - Impact on SASPy Users</title>
-      <link>https://dmsenter89.github.io/post/23-sas-oda-update-saspy-impact/</link>
+      <title>Dec22 SAS ODA Update - Impact on SASPy Users</title>
+      <link>https://dmsenter89.github.io/post/23-01-sas-oda-update-saspy-impact/</link>
       <pubDate>Mon, 09 Jan 2023 15:20:00 +0000</pubDate>
-      <guid>https://dmsenter89.github.io/post/23-sas-oda-update-saspy-impact/</guid>
+      <guid>https://dmsenter89.github.io/post/23-01-sas-oda-update-saspy-impact/</guid>
       <description>&lt;p&gt;During December 2022, SAS ODA received substantial updates - see the 
 &lt;a href=&#34;https://support.sas.com/ondemand/upgrade2022.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;upgrade page&lt;/a&gt; for details. It&amp;rsquo;s really nice to see that ODA is now using SAS 9.4M7. If you are a SASPy user, you may now bump into an error while logging in with your existing configuration. The specific error I encountered was &amp;ldquo;An exception was thrown during the encryption key exchange.&amp;rdquo; Nothing is wrong with your password, however. Due to changes with the AES encryption, SASPy will now need access to 3 encrpytion JARs in its classpath. See 
 &lt;a href=&#34;https://sassoftware.github.io/saspy/configuration.html#attn-as-of-saspy-version-3-3-3-the-classpath-is-no-longer-required-in-your-configuration-file&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this note&lt;/a&gt; in the official SASPy docs. Download the required JAR files 
@@ -2352,9 +2352,9 @@ Just open the command palette (CTRL+SHIFT+P), search &amp;ldquo;Terminal: Select
     
     <item>
       <title>Making INPUT and LABEL Statements with AWK</title>
-      <link>https://dmsenter89.github.io/post/2021-07-awk-for-sas/</link>
+      <link>https://dmsenter89.github.io/post/21-07-awk-for-sas/</link>
       <pubDate>Tue, 06 Jul 2021 10:38:27 -0400</pubDate>
-      <guid>https://dmsenter89.github.io/post/2021-07-awk-for-sas/</guid>
+      <guid>https://dmsenter89.github.io/post/21-07-awk-for-sas/</guid>
       <description>&lt;p&gt;I am currently working with a database provided by the North Carolina Department of Public Safety
 that consists of several fixed-width files. Each of these has an associated codebook that gives the
 internal variable name, a label of the variable, its data type, as well as the start column and
@@ -2445,9 +2445,9 @@ look like this:&lt;/p&gt;
     
     <item>
       <title>SASPy Video Tutorial</title>
-      <link>https://dmsenter89.github.io/post/2021-06-youtube-tutorial/</link>
+      <link>https://dmsenter89.github.io/post/21-06-youtube-tutorial/</link>
       <pubDate>Tue, 29 Jun 2021 10:57:05 -0400</pubDate>
-      <guid>https://dmsenter89.github.io/post/2021-06-youtube-tutorial/</guid>
+      <guid>https://dmsenter89.github.io/post/21-06-youtube-tutorial/</guid>
       <description>&lt;p&gt;I have been using both SAS and Python extensively for a while now. With each having great features, it was very useful to combine my
 skills in both languages by seamlessly moving between SAS and Python in
 a single notebook. In the video below, fellow SAS intern Ariel Chien and I show how easy it is to connect the SAS and Python kernels using the open-source SASPy package together with SAS OnDemand for Academics.
@@ -2551,9 +2551,9 @@ run;
     
     <item>
       <title>Using Git with SAS Studio</title>
-      <link>https://dmsenter89.github.io/post/git-with-sas-studio/</link>
+      <link>https://dmsenter89.github.io/post/21-01-git-with-sas-studio/</link>
       <pubDate>Mon, 11 Jan 2021 14:42:50 -0500</pubDate>
-      <guid>https://dmsenter89.github.io/post/git-with-sas-studio/</guid>
+      <guid>https://dmsenter89.github.io/post/21-01-git-with-sas-studio/</guid>
       <description>&lt;p&gt;Git is a widely used version control system that allows users to track their software
 development in both public and private repositories. It is also increasingly used to store
 data in text formats, see for example the 

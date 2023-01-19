@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>analysis | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/analysis/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/analysis/index.xml" rel="self" type="application/rss+xml" />
+    <description>analysis</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 30 Sep 2022 15:40:00 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>analysis</title>
+      <link>https://dmsenter89.github.io/tag/analysis/</link>
+    </image>
+    
+    <item>
+      <title>Does it ever make sense to play the Lottery?</title>
+      <link>https://dmsenter89.github.io/post/22-09-lottery/</link>
+      <pubDate>Fri, 30 Sep 2022 15:40:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-09-lottery/</guid>
+      <description>&lt;p&gt;In a first semester probability course, students encounter combinatorics and point estimates such as the mean and median of a data set. A common example is the low odds of winning the lottery. When discussing the topic of point estimates, students are exposed to the idea of a &amp;ldquo;fair bet&amp;rdquo; or &amp;ldquo;fair game&amp;rdquo; - one in which the expected value of the random variable associated with the game is equal to the cost of participation or zero, depending on if a fixed cost is included in the game or tracked separately. This year, the Mega Millions had a jackpot in excess of one billion dollars. This had me thinking - mathematically, this is likely a fair game. But I still would expect to loose out playing it. In this article, I want to explore this idea further using the Mega Millions lottery as a particular example.&lt;/p&gt;
+&lt;p&gt;Mega Millions is played by a choosing five numbers from 1 to 70 (the white balls) and one number from 1 to 25 (the golden &amp;ldquo;Mega Ball&amp;rdquo;). Five white balls (W) and one golden ball (G) are drawn without replacement twice per week. Prizes are earned by matching the drawn numbers. Payouts generally follow a fixed schedule for everything but the jackpot, at least outside of California where the payouts for all prizes are pari-mutual instead. Below is a table of all possible events as given on the Mega Millions 
+&lt;a href=&#34;https://www.megamillions.com/How-to-Play.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;, sorted by increasing odds.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Event&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Variable&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Value&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Odds&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;5 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_1$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Jackpot&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/302,575,350&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5 W&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_2$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$1,000,000&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/12,607,306&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_3$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$10,000&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/931,001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4 W&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_4$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$500&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/38,792&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_5$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$200&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/14,547&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_6$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/693&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3 W&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_7$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/606&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_8$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/89&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_9$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/37&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;No Match&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_{10}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;24/1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;the-fair-bet-analysis&#34;&gt;The Fair Bet Analysis&lt;/h2&gt;
+&lt;p&gt;A Fair Bet or Fair game is one in which the expected value of the random variable doesn&amp;rsquo;t favor either the player or the house. Given a cost of 2 USD per game,
+we can say that Mega Millions is fair when $E[X]=2$, or more specifically when&lt;/p&gt;
+&lt;p&gt;$$E[X] = \sum_{i=1}^{10} x_i P(X=x_i) = \frac{n}{302,575,351}  + \sum_{i=2}^{10} x_i P(X=x_i) = 2$$&lt;/p&gt;
+&lt;p&gt;I use Maxima to solve for the jackpot representing a fair game and to print a few representative values of the expected value for some jackpot options.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-maxima&#34;&gt;/* Define Expectation as dependent on n */
+E(n) := n/302575351 + 1000000/12607307 + 10000/931002 + 
+		500/38793 + 200/14548 +  10/694 + 10/607 + 4/90 + 2/38;
+/* solve for fair game */
+float(solve(E(n)=2,n));
+
+/* give expected return for different jackpot values */
+jackpots : [5e7, 1e8, 2.5e8, 5e8, 7.5e8, 1e9, 2e9];
+for i in jackpots do printf(true, &amp;quot;E(~:D) = $~$ ~%&amp;quot;, i, E(i))$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From this we learn that to have a fair jackpot, we require $n = 531,123,698.80$. Even with a fair pet, the expected value is very modest. For example, a 2 billion USD jackpot has $E[X]~=6.85$ - less than 5 USD above the ticket price.&lt;/p&gt;
+&lt;h2 id=&#34;how-long-until-we-profit&#34;&gt;How long until we Profit?&lt;/h2&gt;
+&lt;p&gt;Most people don&amp;rsquo;t play the lottery to win small amounts like 5 USD. They want to become millionaires. Given that our expected values are so low, let&amp;rsquo;s take a look at how long it will take us to become rich if we take the lottery game route.&lt;/p&gt;
+&lt;h3 id=&#34;the-geometric-distribution-and-our-lottery&#34;&gt;The Geometric Distribution and Our Lottery&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s start by considering only the events that would result in a win of a million dollars or more. In other words, events $x_1$ and $x_2$. We have&lt;/p&gt;
+&lt;p&gt;$$P(x_1 \vee x_2) = \frac{315,182,658}{3,814,660,340,689,757} \approx 8.262\times 10^{-8}. $$&lt;/p&gt;
+&lt;p&gt;If we are only interested in this outcome, we can treat our outcome as a Bernoulli variable with $p=P(x_1 \vee x_2)$. Then the expected number of games we need to play to win a million dollars or more is distributed like a geometric with $E[G] = 1/p$. For our specific case:&lt;/p&gt;
+&lt;p&gt;$$ E[G] = \frac 1 p = \frac{3,814,660,340,689,757}{315,182,658} \approx 12,103,014.$$&lt;/p&gt;
+&lt;p&gt;Recall that two games are played per week. Converting this expected number of games to years, it would take approximately $115,977$ years for us to win. Even if one drawing were held each day, we would expect to take more than $33,000$ years to win.&lt;/p&gt;
+&lt;p&gt;Since the CDF of the geometric distribution is well defined, we can use it to estimate the number of games required for a certain likelihood of having a win of at least a million dollars. To have roughly 50% odds of winning, we need to play about $8,400,000$ games of Mega Millions. Note that in this case you would still likely be in the hole since the $1,000,000$ USD jackpot is nearly 24 times more likely than the main jackpot and each game costs 2 USD to play.&lt;/p&gt;
+&lt;h3 id=&#34;simulating-a-lifetime-of-playing&#34;&gt;Simulating a Lifetime of Playing&lt;/h3&gt;
+&lt;p&gt;At this point you might agree that the lottery is not a good get-rich-quick scheme. That alone doesn&amp;rsquo;t mean that you are all but guaranteed to loose money over a lifetime of playing. So let&amp;rsquo;s run some simulations and see what the distribution of our net worth is after taking everything into account. To make things as fair as possible, we will assume a constant jackpot of 750 million USD.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say you spend 50 years playing the Mega Millions at 2 USD for one ticket at each of the two weekly drawings. That comes out to just about $2,609$ weeks or $5,218$ games for a total price of $10,436$ USD. I simulated $50,000$ individuals each playing $5,218$ games for a constant jackpot of $750,000,000$ USD - much higher than the 
+&lt;a href=&#34;https://www.megamillions.com/jackpot-history&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;typical jackpot&lt;/a&gt; and advantageous to the players. This will cost them each $10,436$ USD in ticket costs over the 50 years they play. Yet, despite the simulated lottery being rigged in the players&#39; favor, 99% of my players win less than 600 USD total over this 50 year time period.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Statistic&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Value ($)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Mean&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,169.43&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SD&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20,985.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Min&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,974.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25%&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,912.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50%&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,898.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;75%&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,890.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;99%&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,884.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Max&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1,990,204.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From these results it is clear that for all but the luckiest few, even just saving the money under a mattress outperforms playing the lottery. You can explore a distribution plot of my simulation with Plotly 
+&lt;a href=&#34;results.html&#34;&gt;here&lt;/a&gt;. Note that this page may take a moment to load due to the many data points. You will need to zoom in on the left-hand side to be able really make anything out.&lt;/p&gt;
+&lt;h4 id=&#34;implementation-note&#34;&gt;Implementation Note&lt;/h4&gt;
+&lt;p&gt;The number of simulations grows quickly given the $5,218$ games we are using. Doing $50,000$ simulations of that many games requires over 260 million random draws. Prototyping in Python often makes sense because of the many features available for analysis and plotting, but this seems like an example where a compiled language might outperform by a considerable amount. I decided to 
+&lt;a href=&#34;https://github.com/dmsenter89/lottery-sims&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;try this out (GitHub)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All of the programs were written with an emphasis on simplicity over performance so as to avoid biasing the results. Since the different individuals play their games independently, I wrote both a single-threaded C++ version as well as one utilizing OpenMP&amp;rsquo;s parallel for loop. As alternative compiled languages I added implementations in Go and Rust.&lt;/p&gt;
+&lt;p&gt;For scripting languages I included Python and Julia. In Julia the main loop can trivially be set to run concurrently by prepending &lt;code&gt;Threads.@threads&lt;/code&gt; to the for loop, so inlcuded that as an option as well. This instructs the Julia interpreter to run this loop with the available threads. By default this is one, but can be set higher using an environment variable or by starting Julia with the &lt;code&gt;-t&lt;/code&gt; flag and specifying the desired number of threads.&lt;/p&gt;
+&lt;p&gt;I used 
+&lt;a href=&#34;https://github.com/sharkdp/hyperfine&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hyperfine (GitHub)&lt;/a&gt; to benchmark the performance of my programs in WSL; see output below for details.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Command&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Mean [s]&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Min [s]&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Max [s]&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Relative&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;C++ (Single Thread)&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4.602 ± 0.087&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4.514&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4.828&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.88 ± 0.06&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;C++ (OpenMP)&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.653 ± 0.170&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.506&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3.092&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.08 ± 0.07&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Go&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9.362 ± 0.058&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9.258&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9.417&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3.83 ± 0.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Julia&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;28.606 ± 0.372&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;28.198&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;29.520&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;11.69 ± 0.33&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Julia (4 Threads)&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;19.016 ± 0.274&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;18.673&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;19.511&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;7.77 ± 0.23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Python&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;57.727 ± 0.530&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;59.783 ± 3.811&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;57.833&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;70.242&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Rust&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.447 ± 0.062&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.391&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.579&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I was surprised by Rust&amp;rsquo;s performance. I only looked up enough Rust to be able to implement this simple example, so I find it surprising that it can keep up with a multi-threaded C++ implementation.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Updates: This blogpost has been updated with new benchmark values. The original post did not include results in Rust.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Life Expectancy Data</title>
+      <link>https://dmsenter89.github.io/post/22-09-life-expectancy/</link>
+      <pubDate>Fri, 02 Sep 2022 13:11:30 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-09-life-expectancy/</guid>
+      <description>&lt;p&gt;Most people can guess the current life expectancy for Americans at birth as being in the high 70s or around 80. In fact, given the 
+&lt;a href=&#34;https://www.ssa.gov/oact/STATS/table4c6.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;current mortality table&lt;/a&gt; published by the Social Security Administration (SSA), males have a life expectancy of about 76 compared to a female life expectancy of about 81. Of course that is only an expected value. Guessing the &lt;em&gt;distribution&lt;/em&gt; of a person&amp;rsquo;s life expectancy is somewhat more difficult. In this post, we&amp;rsquo;ll take a look at some simulated lives to get a feel for the distribution of life expectancy and its implications for retirement planning.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s begin by looking at our mortality table. The rows indicate an individual&amp;rsquo;s current age. For both a male and a female, three values are then given: the probability of death in a given year, the &amp;ldquo;Number of Lives&amp;rdquo;, and the life expectancy for this individual. The probability of death in a given year is somewhat self-explanatory. The &amp;ldquo;Number of Lives&amp;rdquo; variable starts with 100,000 individuals and gives the number of survivors at a given age. So for example, of the 100,000 males &amp;ldquo;born&amp;rdquo; at age 0, we expect 99,392 to be alive at age 1. The life expectancy is the expected number of years of life remaining for an individual. We can start by plotting this to get a feel for the data.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-survival-curve-for-100000-males-and-females-given-the-2019-ssa-mortality-tables-the-dashed-line-indicates-the-typical-retirement-age-of-67&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/survivalPlot_hu8976ee6293875d841810953bda6bf5f5_123683_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Survival curve for 100,000 males and females given the 2019 SSA mortality tables. The dashed line indicates the typical retirement age of 67.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/survivalPlot_hu8976ee6293875d841810953bda6bf5f5_123683_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2606&#34; height=&#34;1684&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Survival curve for 100,000 males and females given the 2019 SSA mortality tables. The dashed line indicates the typical retirement age of 67.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;To get a feeling for the distribution of age at death, I ran 10,000 simulations each for males and females starting at ages 0, 25, 40, 60, and 80. These ages were chosen to represent the full range of possibilities at birth, followed by early, mid- and late career individuals. Age 80 was included for comparison as an older retiree value. Since the probability of death by age 50 is so low, we expect very little difference for the first three ages, with differences becoming more pronounced as age progresses, but it is still useful to visualize.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-overview-of-the-distribution-of-age-at-death-by-sex-for-different-ages-at-the-beginning-of-the-simulation-outliers-are-are-not-represented-note-how-the-results-for-ages-0-to-40-are-nearly-indistinguishable&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/Sample_Overview_hub6662c611b080d5ff9aca3d611ac8c57_52510_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Overview of the distribution of age at death by sex for different ages at the beginning of the simulation. Outliers are are not represented. Note how the results for ages 0 to 40 are nearly indistinguishable.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/Sample_Overview_hub6662c611b080d5ff9aca3d611ac8c57_52510_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2606&#34; height=&#34;1684&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Overview of the distribution of age at death by sex for different ages at the beginning of the simulation. Outliers are are not represented. Note how the results for ages 0 to 40 are nearly indistinguishable.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;As expected, we see relatively little variation between birth and age 40, with some recognizable changes beginning at age 60. Given that, I will visualize the distribution for an individual starting at age 40. A 40 year old is about 25-30 years away from retirement and has probably at least started thinking about saving and how much they&amp;rsquo;ll need to put away to last through retirement.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-distribution-of-age-at-death-for-males-and-females-given-a-starting-age-of-40-half-of-the-starting-population-is-expected-to-make-it-to-at-least-8185-malefemale-and-a-quarter-will-make-it-at-least-to-8891&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/distributionPlot_hue89b8b06e05cd8b82745d76fbdceaf60_146013_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Distribution of age at death for males and females given a starting age of 40. Half of the starting population is expected to make it to at least 81/85 (Male/Female), and a quarter will make it at least to 88/91.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/distributionPlot_hue89b8b06e05cd8b82745d76fbdceaf60_146013_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2606&#34; height=&#34;1684&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Distribution of age at death for males and females given a starting age of 40. Half of the starting population is expected to make it to at least 81/85 (Male/Female), and a quarter will make it at least to 88/91.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;So now that have seen the distribution, let&amp;rsquo;s consider how long we&amp;rsquo;ll live past the typical retirement age of 67. The table below lists the ages by sex for the top percentiles given a starting age of 40.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Top Percentiles - Age at Death&lt;/th&gt;
+&lt;th&gt;Males&lt;/th&gt;
+&lt;th&gt;Females&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5%&lt;/td&gt;
+&lt;td&gt;95&lt;/td&gt;
+&lt;td&gt;98&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10%&lt;/td&gt;
+&lt;td&gt;93&lt;/td&gt;
+&lt;td&gt;95&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;20%&lt;/td&gt;
+&lt;td&gt;89&lt;/td&gt;
+&lt;td&gt;92&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;30%&lt;/td&gt;
+&lt;td&gt;86&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;40%&lt;/td&gt;
+&lt;td&gt;84&lt;/td&gt;
+&lt;td&gt;87&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;50%&lt;/td&gt;
+&lt;td&gt;81&lt;/td&gt;
+&lt;td&gt;85&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We see that 40% of females and 30% of males are expected to live at least 20 years past retirement age. A little more than 5% of females will make it thirty years past retirement, but only 2.5% of males will. While only a small minority of retirees will need to fund their retirement for thirty or more years, it is not unreasonable to target retirement funds to last until we reach age 90.&lt;/p&gt;
+&lt;p&gt;Unfortunately, a large share of Americans have insufficient 401k balances to cover their expected longevity (see 
+&lt;a href=&#34;https://www.forbes.com/advisor/retirement/average-401k-balance-by-age/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, 
+&lt;a href=&#34;https://www.investopedia.com/articles/personal-finance/010616/whats-average-401k-balance-age.asp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, and 
+&lt;a href=&#34;https://mint.intuit.com/blog/retirement/average-401k-balance-by-age/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for some estimates of savings by age group). Many are likely relying on social security benefits to cover some of the difference. This system may not last that long, or at least not with current benefit levels. Social Security outlays have exceeded allocated revenues since 2010 and are currently expected to continue to do so well into the 2090s (see 
+&lt;a href=&#34;https://www.cbo.gov/publication/57342&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Table A-1&lt;/a&gt;). Social security trust fund balances for old-age and survivor benefits are rapidly declining. Between 2020 and 2030, the CBO expects a drop of 80% in this fund. Curiously, over the same time period the trust fund for military personnel is expected to grow by more than 70%, while the fund for civilian government employees is expected to grow by more than 20% (see 
+&lt;a href=&#34;https://www.cbo.gov/publication/56541&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CBO report&lt;/a&gt;). As such, younger Americans not working for the government will need to consider how to fund a multi-decade retirement in the face of potentially large reductions in social security benefits.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Is it better to buy or rent housing?</title>
+      <link>https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/</link>
+      <pubDate>Sat, 20 Aug 2022 16:21:38 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/</guid>
+      <description>&lt;p&gt;This post is a follow-up to my post on how to load 
+&lt;a href=&#34;https://dmsenter89.github.io/post/22-08-zillow-data/&#34;&gt;data from Zillow&lt;/a&gt;. Housing prices have soared through the COVID-19 pandemic, leading to a lot of discussion about housing affordability. The quickly growing home values coupled with the subsequent raising of interest rates on mortgages are seeing more and more people priced out of  the ability to purchase a home. While rent prices have increased as well, they haven&amp;rsquo;t increased as sharply as home prices.&lt;/p&gt;
+&lt;p&gt;In this post, I will look at the Zillow data set and consider a popular question for millennials - is it better to buy or rent in the current market?
+For this analysis, I will use the zip code level data of the Zillow Home Value Index (ZHVI) and the Zillow Observed Rent Index (ZORI) for North Carolina metropolitan areas in the years 2019 through June 2022. To evaluate the monthly costs of owning a home, I will utilize the 30 year fixed rate mortgage average from the 
+&lt;a href=&#34;https://fred.stlouisfed.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FRED database&lt;/a&gt;, a comprehensive database aggregating various economic time series maintained by the St. Louis Federal Reserve.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer: This post is not financial advice. We are only exploring some aggregate data sets. Past performance is not indicative of future performance.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#initial-thoughts&#34;&gt;Initial Thoughts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#crafting-a-mortgage-to-rent-index&#34;&gt;Crafting a Mortgage-to-Rent Index&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#a-naive-implementation&#34;&gt;A Naive Implementation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#a-slightly-better-implementation&#34;&gt;A Slightly Better Implementation&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#further-thoughts&#34;&gt;Further Thoughts&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#risk-and-other-costs&#34;&gt;Risk and Other Costs&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#housing-as-an-investment&#34;&gt;Housing as an Investment&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#last-thoughts&#34;&gt;Last Thoughts&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;initial-thoughts&#34;&gt;Initial Thoughts&lt;/h2&gt;
+&lt;p&gt;Both Zillow data sets are available with monthly data published at the
+zip code level. As such, they are equally well-spaced in time. One issue
+we notice at initial inspection is that the ZHVI observations are dated to
+the last day of every month, while the ZORI observations are dated to the first of the month. For merging and comparison, we will set the ZHVI to the first of the month.&lt;/p&gt;
+&lt;p&gt;Both data sets are available for download at the zip code level. The ZORI data set is much smaller, however. It covers 2,453 distinct zip codes compared to the ZHVI&amp;rsquo;s 27,366 distinct zip codes.&lt;/p&gt;
+&lt;p&gt;An initial graph of average ZHVI and ZORI for North Carolina shows the dramatic growth in home values and the degree to which rent is lagging behind. Both y-axes have been scaled proportionally.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-average-zillow-home-value-index-zhvi-and-zillow-observed-rent-index-zori-values-for-north-carolina-the-left-and-right-axes-have-been-scaled-proportionally&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/average_ZHVI_ZORI_huc9fc43bcc57fade6a9155dc83f0fbcac_25161_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Average Zillow Home Value Index (ZHVI) and Zillow Observed Rent Index (ZORI) values for North Carolina. The left and right axes have been scaled proportionally.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/average_ZHVI_ZORI_huc9fc43bcc57fade6a9155dc83f0fbcac_25161_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Average Zillow Home Value Index (ZHVI) and Zillow Observed Rent Index (ZORI) values for North Carolina. The left and right axes have been scaled proportionally.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The FRED data set is published weekly on Thursdays
+and provides a seasonally unadjusted look at the average, actual mortgage rates that
+homebuyers have received throughout the US. So while this data set has the largest number of data points in time, it is the least granular on a geographic level. I don&amp;rsquo;t have detailed information about the geographic variability in mortgage rates and will ignore this for now. To allow merging with the Zillow data, the FRED data set will need to be averaged in some form. For this post, I will use simple averages by month. It is important to note that the FRED data is not in decimal notation. That means that 3.5% is written as 3.5 as opposed to 0.035.&lt;/p&gt;
+&lt;p&gt;One thing that is interesting about the FRED data is that it goes back as far as 1971. Looking at the overall historic values, we see that the past decade&amp;rsquo;s very low interest rates (less than 5%) are an anomaly.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/fredgraph_hucd93d0035b9764d5c892e209e7d9935a_74003_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/fredgraph_hucd93d0035b9764d5c892e209e7d9935a_74003_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1168&#34; height=&#34;450&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;crafting-a-mortgage-to-rent-index&#34;&gt;Crafting a Mortgage-to-Rent Index&lt;/h2&gt;
+&lt;p&gt;I will create two indices, one being a very naive implementation focusing just on the actual monthly payment on the mortgage loan and the monthly rent payments. This is followed by an improved index that takes into account additional monthly expenses. After both indices have been created, I will discuss some of their shortcomings.&lt;/p&gt;
+&lt;h3 id=&#34;a-naive-implementation&#34;&gt;A Naive Implementation&lt;/h3&gt;
+&lt;p&gt;For monthly cost comparisons, we don&amp;rsquo;t actually care about the value of the home directly. What matters is the monthly mortgage cost. There is a lot of variability here and I will make the following assumptions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The mortgage originates in the month given by &lt;code&gt;Date&lt;/code&gt; at the rate given by the monthly average of the Mortgage30US time series.&lt;/li&gt;
+&lt;li&gt;A 20% down payment was made, so that the mortgage amount is for 80% of the ZHVI. A 20% down payment is often recommended because it avoids the need for mortgage insurance, which would create an additional monthly expense.&lt;/li&gt;
+&lt;li&gt;Closing costs are handled separately and not rolled into the mortgage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Monthly mortgage payments can be calculated with the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/vdmmlcdc/8.1/ds2ref/n0a5e0wwqhslcvn1y173c5c4nbg2.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PMT function&lt;/a&gt; in SAS. The general syntax is &lt;code&gt;PMT( rate, number-of-periods, principal-amount [, future-amount] [, type])&lt;/code&gt;. The &lt;code&gt;rate&lt;/code&gt; is the APR divided by the number of periods in a year, in our case 12. The number of periods is 12 payments over 30 years, i.e. 360. The principal amount is 80% of ZHVI, while the future amount is zero (default value). SAS allows us to pick of we want to use end of period (&lt;code&gt;type=0&lt;/code&gt;) or beginning of period (&lt;code&gt;type=1&lt;/code&gt;) payments. For the monthly amount the difference is small, so I will use the default end of period scheme. With that, our formula for the monthly payment is &lt;code&gt;PMT(M30Rate/12, 360, 0.8*ZHVI)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can now construct a simple unit-less ratio of monthly mortgage costs over monthly rent. If this index is greater than 1, it is cheaper to rent while if it is less than 1 it is cheaper to purchase a home. Below is a figure demonstrating the distribution of this index in North Carolina for 2019 through June 2022.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-mean-index-value-for-north-carolina-the-shaded-region-represents-the-25th-through-75th-percentile-of-index-values-note-that-the-index-is-1-until-2022-despite-the-sharp-increase-in-zhvi-across-the-state-seen-above&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/index_mean_q1_q3_huadcd954adcdbd90973c926bbc7d2269a_19435_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Mean index value for North Carolina. The shaded region represents the 25th through 75th percentile of index values. Note that the index is &amp;amp;lt;1 until 2022, despite the sharp increase in ZHVI across the state seen above.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/index_mean_q1_q3_huadcd954adcdbd90973c926bbc7d2269a_19435_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Mean index value for North Carolina. The shaded region represents the 25th through 75th percentile of index values. Note that the index is &amp;lt;1 until 2022, despite the sharp increase in ZHVI across the state seen above.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The index indicates that the situation was favorable to home buyers until 2022, when it flips to being generally favorable to renters. FRED data indicate that the average mortgage rate didn&amp;rsquo;t substantially begin growing until winter 2021. This lends credence to the view that historically low interest rates have helped buffer would-be homeowners from increases in home value.&lt;/p&gt;
+&lt;p&gt;Individual zip codes&#39; index values behave similar in pattern to the the figure above, making it a good approximation to observed behavior.&lt;/p&gt;
+&lt;h3 id=&#34;a-slightly-better-implementation&#34;&gt;A Slightly Better Implementation&lt;/h3&gt;
+&lt;p&gt;The previous implementation underestimates the true monthly cost of home ownership. For one, homeowners are required to pay property taxes each year. While an individual doesn&amp;rsquo;t directly pay the local government on a monthly basis, funds for this purpose are typically collected in an escrow account so it is an ongoing cost. Property tax rates are set at the county and municipal levels and mapping them directly to the ZIP codes requires some work. The rates themselves are fixed fees for every $100 of assessed home value. For the purpose of taxation, the home value used is &lt;em&gt;not&lt;/em&gt; the ZHVI, but the value assigned to the home by the county. In North Carolina these assessments must take place at least once every 8 years, but individual counties may choose to do more frequent assessments. As such, there can be a large discrepancy between the ZHVI and the assessed value. I have seen cases where the ZHVI is roughly double that of the county&amp;rsquo;s assessed value. Finding the average assessed value is easy for individual homes (Zillow displays it on its website), but finding an aggregate value that can be used for analysis is tricky. For ease of use I&amp;rsquo;ll assume that assessed value is 70% of ZHVI. I expect this measure to underestimate the assessed values of homes in 2019 but to be close to target in 2022.&lt;/p&gt;
+&lt;p&gt;Based on the 
+&lt;a href=&#34;https://www.ncdor.gov/taxes-forms/property-tax/property-tax-rates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;most recent&lt;/a&gt; effective tax rates published by the North Carolina Department of Revenue, the average tax rate is approximately 1.02%, with a minimum of 0.33% and a maximum of 1.7%.&lt;/p&gt;
+&lt;p&gt;In addition to taxes, escrow accounts will typically collect monthly insurance fees as well. The two main types of insurance included are homeowners insurance and mortgage insurance. Mortgage insurance is mandatory when purchasing a home with less than a 20% down payment and protects the lender from the borrower defaulting on the loan repayment. In the above example we assumed a 20% down payment, so mortgage insurance would be optional.&lt;/p&gt;
+&lt;p&gt;The cost of homeowners insurance varies wildly as can be seen in 
+&lt;a href=&#34;https://www.nerdwallet.com/article/insurance/average-homeowners-insurance-cost&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this article&lt;/a&gt; from NerdWallet. Their calculated average monthly cost for North Carolina is $142. Renters may be required to purchase renters insurance, but this is not a requirement for all properties and the cost is substantially lower than homeowners insurance. NerdWallet&amp;rsquo;s 
+&lt;a href=&#34;https://www.nerdwallet.com/article/insurance/how-much-is-renters-insurance&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;analysis&lt;/a&gt; gives a monthly average cost of $12 for North Carolina.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-mean-adjusted-index-value-for-north-carolina-the-shaded-region-represents-the-25th-through-75th-percentile-of-index-values&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/index_mean_q1_q3_adj_huce0c902e7276254854e7cbbd20be94dc_20731_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Mean adjusted index value for North Carolina. The shaded region represents the 25th through 75th percentile of index values.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/index_mean_q1_q3_adj_huce0c902e7276254854e7cbbd20be94dc_20731_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Mean adjusted index value for North Carolina. The shaded region represents the 25th through 75th percentile of index values.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;As expected, the adjusted index shows the same overall behavior but is shifted up. This index gives a more complicated picture, in which the zip code starts mattering somewhat more in whether renting or buying is cheaper on a monthly basis.&lt;/p&gt;
+&lt;h2 id=&#34;further-thoughts&#34;&gt;Further Thoughts&lt;/h2&gt;
+&lt;p&gt;The above analysis was relatively simple, but a good excuse to take a look at the data made available by Zillow. This is not the end of the story, however. I have made several simplifications here, although on average I would argue they were in favor of home purchases. There additional matters to consider,  which I will take up below. We also only discussed aggregate data. Particular housing may offer other benefits, especially if you have knowledge of some likely future events. For example, a large tech company planning to move to an area tends to increase both rent and housing prices, so purchasing now may be beneficial by locking in today&amp;rsquo;s prices. We also haven&amp;rsquo;t considered whether there are differences in housing stock and location that may outweigh purely financial considerations.&lt;/p&gt;
+&lt;h3 id=&#34;risk-and-other-costs&#34;&gt;Risk and Other Costs&lt;/h3&gt;
+&lt;p&gt;Another item to consider is the question of risk in either scenario. A homeowner incurs somewhat larger risks of on-going expenses that we have conveniently ignored. Roofs, HVAC systems, etc. need maintenance and eventually will need to be repaired. Neither last forever either, so they will each need to be replaced at least once, if not more often, during the 30 years the house is being paid down. A 
+&lt;a href=&#34;https://ipropertymanagement.com/research/hoa-statistics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;majority&lt;/a&gt; of new construction and a large number of existing homes are part of a Home Owners Association (HOA). Being part of an HOA not only increases monthly cost due to HOA fees, but also exposes a homeowner to the risk of special assessments. These are one-time financial obligations on homeowners to cover some expense for the HOA.&lt;/p&gt;
+&lt;p&gt;While a renter may be immune to costs such as these, they are not immune to changing rent prices. By having a fixed-rate mortgage on the other hand, monthly housing expenses stay locked at current rates. Furthermore, while rent is not tax deductible, mortgage interest is. Under current guidelines, up to 750,000 USD in mortgage interest on your primary home can be deducted from your income tax. This is especially valuable during the first 15 years of the loan, when interest accounts for the majority of the mortgage payment.&lt;/p&gt;
+&lt;h3 id=&#34;housing-as-an-investment&#34;&gt;Housing as an Investment&lt;/h3&gt;
+&lt;p&gt;One issue that we have ignored so far is the idea of home purchases as investments. Home prices have historically increased. Each year lived and mortgage paid on a property increases your share in the home&amp;rsquo;s value, otherwise known as equity. Some would argue that even if the monthly cost of homeownership is in excess of the cost of renting an equivalent home, it&amp;rsquo;s worth it in the long run as an investment in your financial future. Proponents may point to homeownership being a key component in long term wealth accrual.&lt;/p&gt;
+&lt;p&gt;Assessing the value of equity growth in wealth building needs to be viewed in opposition to investing the potential price differential. We are only talking about the difference in housing cost being utilized here, not in using additional funds to pay down a mortgage early. This has not been an effective strategy for nearly 30 years.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; The S&amp;amp;P 500&amp;rsquo;s average annual return during the period of 1975-2021 has been 10.2%. Home values on the other hand increased annually by an average of only 4.5% between 1975 and today.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; This would indicate investment in the S&amp;amp;P 500 would be expected to outperform real estate investment for the average person over the long run.&lt;/p&gt;
+&lt;p&gt;The variability of the two is rather different, however. For comparison, we can show a distribution of annual returns from the S&amp;amp;P 500 compared to FRED&amp;rsquo;s All-Transactions House Price Index.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-histograms-showing-the-distribution-of-annual-returns-of-the-all-transactions-house-price-index-for-north-carolina-and-the-sp-500-for-1976-2021&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/investment_housing_sp_comp_hu4e2264ca40b96fcef6fef1eaaeebef26_27041_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Histograms showing the distribution of annual returns of the All-Transactions House Price Index for North Carolina and the S&amp;amp;amp;P 500 for 1976-2021.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/investment_housing_sp_comp_hu4e2264ca40b96fcef6fef1eaaeebef26_27041_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;960&#34; height=&#34;720&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Histograms showing the distribution of annual returns of the All-Transactions House Price Index for North Carolina and the S&amp;amp;P 500 for 1976-2021.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;While this shows that we can expect greater payoff from stock market investments compared to real estate, this is not helpful if we have to pay for housing and don&amp;rsquo;t have excess funds to throw at the stock market. If the actual monthly cost of homeownership and rent are about equal and max out our available funds, then purchasing a home builds at least &lt;em&gt;some&lt;/em&gt; equity, no matter how small, compared to no investment being made. Only when rent is lower than mortgage costs and fees does it make sense to start comparing rates of return.&lt;/p&gt;
+&lt;p&gt;We should never underestimate the power of compounding, however. Consider the following example: you have the option of purchasing a 400,000 USD home with a 80,000 USD (20%) down payment at 5% interest as a 30 year fixed rate mortgage. Assume no other costs. In total, this housing purchase will cost you approximately 698,000 USD over the course of 30 years.  Assuming 4.53% annual increase in housing value, this leaves you with about 1,553,000 USD in equity at the end. Given your total cost you have made a profit of approximately 855,000 USD. Now compare this to stock market returns, assuming the 10.22% annual growth we found above. Investing the down payment only, with no further payments made, would leave you with approximately 1,695,000 USD after 30 years. To match the amount of equity in our example home after 30 years would require only a 73,500 USD in initial investment. If we only wanted to match the profit of about 855,000 USD with a one-time investment, we would require an initial investment of approximately 42,500 USD.&lt;/p&gt;
+&lt;p&gt;Despite these superior returns from investment, we still need to live somewhere. I have already mentioned that unlike a mortgage payment, rent is not fixed over the 30 year timespan. How much should I expect renting to cost me? Let&amp;rsquo;s assume we invest the entire down payment and rent a home that costs exactly the same as the mortgage would have cost. Assuming once annual 
+&lt;a href=&#34;https://ipropertymanagement.com/research/average-rent-by-year&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;increases in rent of 4.17%&lt;/a&gt;, we spend a total of nearly 1,190,000 USD on rent over the course of 30 years. Given these expenses, the profit from investing the 80,000 USD shrinks to a mere 500,000 USD.&lt;/p&gt;
+&lt;p&gt;This suggests a strategy of minimizing the down payment and investing the difference, if possible. One downside of this is that having a smaller down payment may lead to less favorable mortgage terms. In this second scenario, let&amp;rsquo;s assume that we make a 40,000 USD down payment on a 400,000 USD home with an increased, but still fixed, mortgage rate of 5.25% over 30 years coupled with a 40,000 USD initial investment in the S&amp;amp;P 500 at 10.22% increase annually with no additional investments made. Here we invest a total of approximately 766,000 USD into our home, reducing our profit on the home purchase to approximately 797,000 USD. But our initial 40,000 USD investment has accumulated to about 847,000 USD. This brings our total profit to approximately 1,644,000 USD in this scenario - nearly double the 855,000 USD profit in the 80,000 USD down payment scenario.&lt;/p&gt;
+&lt;h3 id=&#34;last-thoughts&#34;&gt;Last Thoughts&lt;/h3&gt;
+&lt;p&gt;Overall, we see that the more precise we want to be, the more difficult it becomes to estimate an ideal strategy as there are a lot of moving pieces, not all of which can best be approximated by a geographic average value. Given the very different variability in housing value increase compared to stock market returns, it may make sense to generate a large number of random walks to get a better feel for the distribution of outcomes after 30 years. Finally, this entire post has assumed that we remain living in the same home for the entire 30 year life of the mortgage. Many will want to move at some point during their next thirty years, perhaps to make room for a larger  family, to down-size, or to follow a job opportunity. This creates additional costs and considerations for deciding between renting and owning a home.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Average mortgage rates have been below average annual return of the S&amp;amp;P 500 since the 1990s. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Annual returns of S&amp;amp;P 500 were calculated from data provided by 
+&lt;a href=&#34;https://www.investopedia.com/ask/answers/042415/what-average-annual-return-sp-500.asp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Investopedia&lt;/a&gt;. Annual returns of housing prices were calculated from the All-Transactions House Price Index for North Carolina (FRED time series NCSTHPI). &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;I have chosen this measure for historic house price increases as this index is available on a quarterly basis starting in 1975, unlike Zillow data which only goes back a little more than 20 years. Both US wide data (USSTHPI) and state specific data (e.g., for North Carolina: NCSTHPI) are available from FRED. I will use the North Carolina data set for my comparison. An alternative measure to consider is the median sales price of houses sold in the South census region, available on a quarterly basis starting in 1965 from FRED (MSPS). &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

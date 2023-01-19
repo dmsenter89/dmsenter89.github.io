@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tabula | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/tabula/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/tabula/index.xml" rel="self" type="application/rss+xml" />
+    <description>tabula</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 29 Oct 2020 22:39:00 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>tabula</title>
+      <link>https://dmsenter89.github.io/tag/tabula/</link>
+    </image>
+    
+    <item>
+      <title>Teacher Salaries</title>
+      <link>https://dmsenter89.github.io/post/20-10-tabula/</link>
+      <pubDate>Thu, 29 Oct 2020 22:39:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/20-10-tabula/</guid>
+      <description>&lt;p&gt;After reading a news article about teacher pay in the US, I was curious and wanted to look into the source data myself. Unfortunately, the source that was mentioned was a publication by the 
+&lt;a href=&#34;https://www.nea.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;National Education Association (NEA)&lt;/a&gt; which had the data as tables embedded inside a PDF report. As those who know me can attest, I don&amp;rsquo;t like hand-copying data. It is slow and error-prone. Instead, I decided to use the tabula package to extract the information from the PDFs directly into a Pandas dataframe. In this post, I will show you how to extract the data and how to clean it up for analysis.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-data-source&#34;&gt;The Data Source&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#loading-the-data&#34;&gt;Loading the Data&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#cleaning-the-data&#34;&gt;Cleaning the Data&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#numeric-conversion&#34;&gt;Numeric Conversion&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#table-b-6&#34;&gt;Table B-6&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;the-data-source&#34;&gt;The Data Source&lt;/h2&gt;
+&lt;p&gt;Several years worth of data are available in PDF form on the 
+&lt;a href=&#34;https://www.nea.org/research-publications&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NEA website&lt;/a&gt;. Reading through the technical notes, they highlight that they did not collect all of their own salary information. Some states&#39; information is calculated from the American Community Survey (ACS) done by the Census Bureau - a great resource whose API I have covered in a 
+&lt;a href=&#34;https://dmsenter89.github.io/post/20-08-census-api/&#34;&gt;different post&lt;/a&gt;. Each report includes accurate data for the previous school year, as well as estimates for the current school year. As of this post, the newest report is the 2020 report which includes data for the the 2018-2019 school year, as well as estimates of the 2019-2020 school year.&lt;/p&gt;
+&lt;p&gt;The 2020 report has the desired teacher salary information in two separate locations. One is in table B-6 on page 26 of the PDF, which shows a ranking of the different states&#39; average salary in addition to the average salary:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;table_B-6.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A second location is in table E-7 on page 46, which gives salary data for the completed school year as well as different states&#39; estimates for the 2019-2020 school year:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;table_E-7.PNG&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Note that table E-7 lacks the star-annotation marking NEA estimated values. This, and the lack of the ranking column, makes Table E-7 easier to parse. In the main example below, this will be the source of the five years of data. I will however also show how to parse table B-6 at the end of this post for completion.&lt;/p&gt;
+&lt;h2 id=&#34;loading-the-data&#34;&gt;Loading the Data&lt;/h2&gt;
+&lt;p&gt;As of October 2020, the NEA site has five years worth of reports online. Unfortunately, these are not labeled consistently for all five years. Similarly the page numbers differ for each report. Prior to the 2018 report, inconsistent formats were used for the tables which require previous years to be parsed separately from the newer tables. For this reason, I&amp;rsquo;ll make a dictionary for the 2018-2020 reports only, which will simplify the example below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;report = {
+    &#39;2020&#39; : {
+        &#39;url&#39;  : &amp;quot;https://www.nea.org/sites/default/files/2020-10/2020%20Rankings%20and%20Estimates%20Report.pdf&amp;quot;,
+        &#39;page&#39; : 46,
+    },
+    &#39;2019&#39; : {
+        &#39;url&#39;  : &amp;quot;https://www.nea.org/sites/default/files/2020-06/2019%20Rankings%20and%20Estimates%20Report.pdf&amp;quot;,
+        &#39;page&#39; : 49,
+    },
+    &#39;2018&#39; : {
+        &#39;url&#39;  : &amp;quot;https://www.nea.org/sites/default/files/2020-07/180413-Rankings_And_Estimates_Report_2018.pdf&amp;quot;,
+        &#39;page&#39; : 51,
+    },
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can now use dictionary comprehension to fill in a dictionary with all the source tables of interest. We will be using the tabula package to extract data from the PDFs. If you don&amp;rsquo;t have it installed, you can use &lt;code&gt;pip install tabula-py&lt;/code&gt; to get a copy. The method that reads in a PDF is aptly called &lt;code&gt;read_pdf&lt;/code&gt;. Its first argument is a file path to the PDF. Since we want to use a URL, we will use the keyword argument &lt;code&gt;stream=True&lt;/code&gt; and then name the specific page in each PDF that contains the information we are after. By default, &lt;code&gt;read_pdf&lt;/code&gt; returns a list of dataframes, so we just save the first element from the list, which is the report we are interested in.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; if you are using WSL, depending on your settings, you may get the error &lt;code&gt;Exception in thread &amp;quot;main&amp;quot; java.awt.AWTError: Can&#39;t connect to X11 window server using &#39;XXX.XXX.XXX.XXX:0&#39; as the value of the DISPLAY variable.&lt;/code&gt; error when running &lt;code&gt;read_pdf&lt;/code&gt;. This is fixed by having an X11 server running.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import tabula
+import pandas as pd
+
+source_df = {year : tabula.read_pdf(report[year][&#39;url&#39;], stream=True, pages=report[year][&#39;page&#39;])[0] 
+             for year in report.keys()}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And that&amp;rsquo;s it in principle. How cool is that! Of course, we still need to clean our data a little bit.&lt;/p&gt;
+&lt;h3 id=&#34;cleaning-the-data&#34;&gt;Cleaning the Data&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s take a look at the first and last few entries of the 2020 report:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;pd.concat([source_df[&#39;2020&#39;].head(), 
+           source_df[&#39;2020&#39;].tail()])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;th&gt;2018-19&lt;/th&gt;
+      &lt;th&gt;2019-20&lt;/th&gt;
+      &lt;th&gt;From 2018-19 to 2019-20&lt;/th&gt;
+      &lt;th&gt;From 2010-11 to 2019-20 (%)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;State&lt;/td&gt;
+      &lt;td&gt;Salary($)&lt;/td&gt;
+      &lt;td&gt;Salary($)&lt;/td&gt;
+      &lt;td&gt;Change(%)&lt;/td&gt;
+      &lt;td&gt;Current Dollar Constant Dollar&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Alabama&lt;/td&gt;
+      &lt;td&gt;52,009&lt;/td&gt;
+      &lt;td&gt;54,095&lt;/td&gt;
+      &lt;td&gt;4.01&lt;/td&gt;
+      &lt;td&gt;13.16 -2.58&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Alaska&lt;/td&gt;
+      &lt;td&gt;70,277&lt;/td&gt;
+      &lt;td&gt;70,877&lt;/td&gt;
+      &lt;td&gt;0.85&lt;/td&gt;
+      &lt;td&gt;15.36 -0.69&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Arizona&lt;/td&gt;
+      &lt;td&gt;50,353&lt;/td&gt;
+      &lt;td&gt;50,381&lt;/td&gt;
+      &lt;td&gt;0.06&lt;/td&gt;
+      &lt;td&gt;8.03 -7.00&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Arkansas&lt;/td&gt;
+      &lt;td&gt;49,438&lt;/td&gt;
+      &lt;td&gt;49,822&lt;/td&gt;
+      &lt;td&gt;0.78&lt;/td&gt;
+      &lt;td&gt;8.31 -6.75&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;48&lt;/th&gt;
+      &lt;td&gt;Washington&lt;/td&gt;
+      &lt;td&gt;73,049&lt;/td&gt;
+      &lt;td&gt;72,965&lt;/td&gt;
+      &lt;td&gt;-0.11&lt;/td&gt;
+      &lt;td&gt;37.86 18.69&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;49&lt;/th&gt;
+      &lt;td&gt;West Virginia&lt;/td&gt;
+      &lt;td&gt;47,681&lt;/td&gt;
+      &lt;td&gt;50,238&lt;/td&gt;
+      &lt;td&gt;5.36&lt;/td&gt;
+      &lt;td&gt;13.51 -2.28&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;50&lt;/th&gt;
+      &lt;td&gt;Wisconsin&lt;/td&gt;
+      &lt;td&gt;58,277&lt;/td&gt;
+      &lt;td&gt;59,176&lt;/td&gt;
+      &lt;td&gt;1.54&lt;/td&gt;
+      &lt;td&gt;9.17 -6.02&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;51&lt;/th&gt;
+      &lt;td&gt;Wyoming&lt;/td&gt;
+      &lt;td&gt;58,861&lt;/td&gt;
+      &lt;td&gt;59,014&lt;/td&gt;
+      &lt;td&gt;0.26&lt;/td&gt;
+      &lt;td&gt;5.19 -9.44&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;52&lt;/th&gt;
+      &lt;td&gt;United States&lt;/td&gt;
+      &lt;td&gt;62,304&lt;/td&gt;
+      &lt;td&gt;63,645&lt;/td&gt;
+      &lt;td&gt;2.15&lt;/td&gt;
+      &lt;td&gt;14.14 -1.73&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;We see that each column is treated as a string object (which you can confirm by running &lt;code&gt;source_df[&#39;2020&#39;].dtypes&lt;/code&gt;) and that the first row of data is actually at index 1 due to the fact that the PDF report used a two-row header. This means we can safely drop the first row of every dataframe. We can also drop the last row of every dataframe since that just contains summary data of the US as a whole, which we can easily regenerate as necessary. So row indices 0 and 52 can go for all of our data sets.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for df in source_df.values():
+    df.drop([0, 52], inplace=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Next up I&amp;rsquo;d like to fix the column names. The fist column is clearly the name of the state (except in the case of Washington D.C.), while the next two columns give the years for which the salary information is given. Let&amp;rsquo;s rename the second and third columns according to the pattern &lt;code&gt;Salary %YYYY-YY&lt;/code&gt; using Python&amp;rsquo;s f-string syntax.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for df in source_df.values():
+    df.rename(columns={
+        df.columns[0] : &amp;quot;State&amp;quot;,
+        df.columns[1] : f&amp;quot;Salary {str(df.columns[1])}&amp;quot;,
+        df.columns[2] : f&amp;quot;Salary {str(df.columns[2])}&amp;quot;,
+    }, 
+              inplace=True)
+    
+source_df[&amp;quot;2020&amp;quot;].head()  # show the result of our edits so far
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;State&lt;/th&gt;
+      &lt;th&gt;Salary 2018-19&lt;/th&gt;
+      &lt;th&gt;Salary 2019-20&lt;/th&gt;
+      &lt;th&gt;From 2018-19 to 2019-20&lt;/th&gt;
+      &lt;th&gt;From 2010-11 to 2019-20 (%)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Alabama&lt;/td&gt;
+      &lt;td&gt;52,009&lt;/td&gt;
+      &lt;td&gt;54,095&lt;/td&gt;
+      &lt;td&gt;4.01&lt;/td&gt;
+      &lt;td&gt;13.16 -2.58&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Alaska&lt;/td&gt;
+      &lt;td&gt;70,277&lt;/td&gt;
+      &lt;td&gt;70,877&lt;/td&gt;
+      &lt;td&gt;0.85&lt;/td&gt;
+      &lt;td&gt;15.36 -0.69&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Arizona&lt;/td&gt;
+      &lt;td&gt;50,353&lt;/td&gt;
+      &lt;td&gt;50,381&lt;/td&gt;
+      &lt;td&gt;0.06&lt;/td&gt;
+      &lt;td&gt;8.03 -7.00&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Arkansas&lt;/td&gt;
+      &lt;td&gt;49,438&lt;/td&gt;
+      &lt;td&gt;49,822&lt;/td&gt;
+      &lt;td&gt;0.78&lt;/td&gt;
+      &lt;td&gt;8.31 -6.75&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;5&lt;/th&gt;
+      &lt;td&gt;California&lt;/td&gt;
+      &lt;td&gt;83,059&lt;/td&gt;
+      &lt;td&gt;84,659&lt;/td&gt;
+      &lt;td&gt;1.93&lt;/td&gt;
+      &lt;td&gt;24.74 7.39&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;Looks like we&amp;rsquo;re almost done! Let&amp;rsquo;s drop the unnecessary columns and check our remaining column names:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;for year, df in source_df.items():
+    df.drop(df.columns[3:], axis=1, inplace=True)
+    print(f&amp;quot;{year}:\t{df.columns}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;2020:	Index([&#39;State&#39;, &#39;Salary 2018-19&#39;, &#39;Salary 2019-20&#39;], dtype=&#39;object&#39;)
+2019:	Index([&#39;State&#39;, &#39;Salary 2017-18&#39;, &#39;Salary 2018-19&#39;], dtype=&#39;object&#39;)
+2018:	Index([&#39;State&#39;, &#39;Salary 2017&#39;, &#39;Salary 2018&#39;], dtype=&#39;object&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We can see that the column naming scheme in 2018 was different than in the previous reports. To make them all compatible for our merge, we&amp;rsquo;re going to have to do some more editing. Based on the other reports, it appears as though the 2018 report used the calendar year of the &lt;em&gt;end&lt;/em&gt; of the school year, while the others utilized a range. This can easily be solved using regex substitution. We&amp;rsquo;ll do that now.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import re
+
+for year, df in source_df.items():
+    if year != &amp;quot;2018&amp;quot;:
+        df.rename(columns={
+            df.columns[1] : re.sub(r&amp;quot;\d{2}-&amp;quot;, &#39;&#39;, df.columns[1]),
+            df.columns[2] : re.sub(r&amp;quot;\d{2}-&amp;quot;, &#39;&#39;, df.columns[2]),
+        }, 
+                  inplace=True)
+    # print the output for verification
+    print(f&amp;quot;{year}:\t{df.columns}&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;2020:	Index([&#39;State&#39;, &#39;Salary 2019&#39;, &#39;Salary 2020&#39;], dtype=&#39;object&#39;)
+2019:	Index([&#39;State&#39;, &#39;Salary 2018&#39;, &#39;Salary 2019&#39;], dtype=&#39;object&#39;)
+2018:	Index([&#39;State&#39;, &#39;Salary 2017&#39;, &#39;Salary 2018&#39;], dtype=&#39;object&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now that everything works, we can do our merge to create a single dataframe with the information for all of the school years we have downloaded.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;merge_df = source_df[&amp;quot;2018&amp;quot;].drop([&amp;quot;Salary 2018&amp;quot;], axis=1).merge(
+                    source_df[&amp;quot;2019&amp;quot;].drop([&amp;quot;Salary 2019&amp;quot;], axis=1)).merge(
+                    source_df[&amp;quot;2020&amp;quot;])
+
+merge_df.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;State&lt;/th&gt;
+      &lt;th&gt;Salary 2017&lt;/th&gt;
+      &lt;th&gt;Salary 2018&lt;/th&gt;
+      &lt;th&gt;Salary 2019&lt;/th&gt;
+      &lt;th&gt;Salary 2020&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Alabama&lt;/td&gt;
+      &lt;td&gt;50,391&lt;/td&gt;
+      &lt;td&gt;50,568&lt;/td&gt;
+      &lt;td&gt;52,009&lt;/td&gt;
+      &lt;td&gt;54,095&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Alaska&lt;/td&gt;
+      &lt;td&gt;6 8,138&lt;/td&gt;
+      &lt;td&gt;69,682&lt;/td&gt;
+      &lt;td&gt;70,277&lt;/td&gt;
+      &lt;td&gt;70,877&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Arizona&lt;/td&gt;
+      &lt;td&gt;4 7,403&lt;/td&gt;
+      &lt;td&gt;48,723&lt;/td&gt;
+      &lt;td&gt;50,353&lt;/td&gt;
+      &lt;td&gt;50,381&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Arkansas&lt;/td&gt;
+      &lt;td&gt;4 8,304&lt;/td&gt;
+      &lt;td&gt;50,544&lt;/td&gt;
+      &lt;td&gt;49,438&lt;/td&gt;
+      &lt;td&gt;49,822&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;California&lt;/td&gt;
+      &lt;td&gt;7 9,128&lt;/td&gt;
+      &lt;td&gt;80,680&lt;/td&gt;
+      &lt;td&gt;83,059&lt;/td&gt;
+      &lt;td&gt;84,659&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;numeric-conversion&#34;&gt;Numeric Conversion&lt;/h3&gt;
+&lt;p&gt;We&amp;rsquo;re almost done! Notice that we still have not dealt with the fact that every column is still treated as a string. Before we can use the &lt;code&gt;to_numeric&lt;/code&gt; function, we still need to take care of two issues:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The commas in the numbers. While they are nice for our human eyes, Pandas doesn&amp;rsquo;t like them.&lt;/li&gt;
+&lt;li&gt;In the 2017 salary column, there appears to be extraneous white space after the first digit for some entries.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Luckily, both of these problems can be remedied with a simple string replacement operation.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;merge_df.iloc[:,1:] = merge_df.iloc[:,1:].replace(r&amp;quot;[,| ]&amp;quot;, &#39;&#39;, regex=True)
+
+for col in merge_df.columns[1:]:
+    merge_df[col] = pd.to_numeric(merge_df[col])
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we&amp;rsquo;re done! We have created an overview of annual teacher salaries from the 2016-17 school year until 2019-20 extracted from a series of PDFs published by the NEA. We have cleaned up the data and converted everything to numerical values. We can now get summary statistics and do any analysis of interest with this data.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;merge_df.describe() # summary stats of our numeric columns
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Salary 2017&lt;/th&gt;
+      &lt;th&gt;Salary 2018&lt;/th&gt;
+      &lt;th&gt;Salary 2019&lt;/th&gt;
+      &lt;th&gt;Salary 2020&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;count&lt;/th&gt;
+      &lt;td&gt;51.000000&lt;/td&gt;
+      &lt;td&gt;51.000000&lt;/td&gt;
+      &lt;td&gt;51.000000&lt;/td&gt;
+      &lt;td&gt;51.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;mean&lt;/th&gt;
+      &lt;td&gt;56536.196078&lt;/td&gt;
+      &lt;td&gt;57313.039216&lt;/td&gt;
+      &lt;td&gt;58983.254902&lt;/td&gt;
+      &lt;td&gt;60170.647059&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;std&lt;/th&gt;
+      &lt;td&gt;9569.444674&lt;/td&gt;
+      &lt;td&gt;9795.914601&lt;/td&gt;
+      &lt;td&gt;10286.843230&lt;/td&gt;
+      &lt;td&gt;10410.259274&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;min&lt;/th&gt;
+      &lt;td&gt;42925.000000&lt;/td&gt;
+      &lt;td&gt;44926.000000&lt;/td&gt;
+      &lt;td&gt;45105.000000&lt;/td&gt;
+      &lt;td&gt;45192.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;25%&lt;/th&gt;
+      &lt;td&gt;49985.000000&lt;/td&gt;
+      &lt;td&gt;50451.500000&lt;/td&gt;
+      &lt;td&gt;51100.500000&lt;/td&gt;
+      &lt;td&gt;52441.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;50%&lt;/th&gt;
+      &lt;td&gt;54308.000000&lt;/td&gt;
+      &lt;td&gt;53815.000000&lt;/td&gt;
+      &lt;td&gt;54935.000000&lt;/td&gt;
+      &lt;td&gt;57091.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;75%&lt;/th&gt;
+      &lt;td&gt;61038.000000&lt;/td&gt;
+      &lt;td&gt;61853.000000&lt;/td&gt;
+      &lt;td&gt;64393.500000&lt;/td&gt;
+      &lt;td&gt;66366.000000&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;max&lt;/th&gt;
+      &lt;td&gt;81902.000000&lt;/td&gt;
+      &lt;td&gt;84227.000000&lt;/td&gt;
+      &lt;td&gt;85889.000000&lt;/td&gt;
+      &lt;td&gt;87543.000000&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;table-b-6&#34;&gt;Table B-6&lt;/h2&gt;
+&lt;p&gt;As mentioned above, table B-6 in the 2020 Report presents slightly greater challenges. A lot of the cleaning is similar or identical, so I will not reproduce it in full. Instead, I have loaded a subsetted part of table B-6 and will show how this can be cleaned up as well. But first, let&amp;rsquo;s look at the first several entries:&lt;/p&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;th&gt;2017-18 (Revised)&lt;/th&gt;
+      &lt;th&gt;2018-19&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;State&lt;/td&gt;
+      &lt;td&gt;Salary($) Rank&lt;/td&gt;
+      &lt;td&gt;Salary($)&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Alabama&lt;/td&gt;
+      &lt;td&gt;50,568 36&lt;/td&gt;
+      &lt;td&gt;52,009&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Alaska&lt;/td&gt;
+      &lt;td&gt;69,682 7&lt;/td&gt;
+      &lt;td&gt;70,277&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Arizona&lt;/td&gt;
+      &lt;td&gt;48,315 45&lt;/td&gt;
+      &lt;td&gt;50,353&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Arkansas&lt;/td&gt;
+      &lt;td&gt;49,096 44&lt;/td&gt;
+      &lt;td&gt;49,438&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;5&lt;/th&gt;
+      &lt;td&gt;California&lt;/td&gt;
+      &lt;td&gt;80,680 2&lt;/td&gt;
+      &lt;td&gt;83,059 *&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;6&lt;/th&gt;
+      &lt;td&gt;Colorado&lt;/td&gt;
+      &lt;td&gt;52,695 32&lt;/td&gt;
+      &lt;td&gt;54,935&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;7&lt;/th&gt;
+      &lt;td&gt;Connecticut&lt;/td&gt;
+      &lt;td&gt;74,517 * 5&lt;/td&gt;
+      &lt;td&gt;76,465 *&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;8&lt;/th&gt;
+      &lt;td&gt;Delaware&lt;/td&gt;
+      &lt;td&gt;62,422 13&lt;/td&gt;
+      &lt;td&gt;63,662&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;We can see that there is an additional hurdle compared to the previous tables: the second column now contains data from two columns, both the Salary information as well as a ranking of the salary as it compares to the different states. For a few states, there is additionally a &amp;lsquo;*&amp;rsquo; to denote values that were estimated as opposed to received. We can again use a simple regex replace together with a capture group to parse out only those values that we are interested in, while dropping the extraneous information using the code below.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;b6.iloc[:,1:] = b6.iloc[:,1:].replace(r&amp;quot;([\d,]+).*&amp;quot;, r&amp;quot;\1&amp;quot;, regex=True)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And now we&amp;rsquo;re back to where we were above before we did the string conversion. This is what it looks like after also dropping the first row and renaming the columns:&lt;/p&gt;
+&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;State&lt;/th&gt;
+      &lt;th&gt;Salary 2018&lt;/th&gt;
+      &lt;th&gt;Salary 2019&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Alabama&lt;/td&gt;
+      &lt;td&gt;50,568&lt;/td&gt;
+      &lt;td&gt;52,009&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Alaska&lt;/td&gt;
+      &lt;td&gt;69,682&lt;/td&gt;
+      &lt;td&gt;70,277&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Arizona&lt;/td&gt;
+      &lt;td&gt;48,315&lt;/td&gt;
+      &lt;td&gt;50,353&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Arkansas&lt;/td&gt;
+      &lt;td&gt;49,096&lt;/td&gt;
+      &lt;td&gt;49,438&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;5&lt;/th&gt;
+      &lt;td&gt;California&lt;/td&gt;
+      &lt;td&gt;80,680&lt;/td&gt;
+      &lt;td&gt;83,059&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;6&lt;/th&gt;
+      &lt;td&gt;Colorado&lt;/td&gt;
+      &lt;td&gt;52,695&lt;/td&gt;
+      &lt;td&gt;54,935&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;7&lt;/th&gt;
+      &lt;td&gt;Connecticut&lt;/td&gt;
+      &lt;td&gt;74,517&lt;/td&gt;
+      &lt;td&gt;76,465&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;8&lt;/th&gt;
+      &lt;td&gt;Delaware&lt;/td&gt;
+      &lt;td&gt;62,422&lt;/td&gt;
+      &lt;td&gt;63,662&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;p&gt;From here on out, we can proceed as in the previous example.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

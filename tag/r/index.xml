@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>r | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/r/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/r/index.xml" rel="self" type="application/rss+xml" />
+    <description>r</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 02 Sep 2022 13:11:30 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>r</title>
+      <link>https://dmsenter89.github.io/tag/r/</link>
+    </image>
+    
+    <item>
+      <title>Life Expectancy Data</title>
+      <link>https://dmsenter89.github.io/post/22-09-life-expectancy/</link>
+      <pubDate>Fri, 02 Sep 2022 13:11:30 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-09-life-expectancy/</guid>
+      <description>&lt;p&gt;Most people can guess the current life expectancy for Americans at birth as being in the high 70s or around 80. In fact, given the 
+&lt;a href=&#34;https://www.ssa.gov/oact/STATS/table4c6.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;current mortality table&lt;/a&gt; published by the Social Security Administration (SSA), males have a life expectancy of about 76 compared to a female life expectancy of about 81. Of course that is only an expected value. Guessing the &lt;em&gt;distribution&lt;/em&gt; of a person&amp;rsquo;s life expectancy is somewhat more difficult. In this post, we&amp;rsquo;ll take a look at some simulated lives to get a feel for the distribution of life expectancy and its implications for retirement planning.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s begin by looking at our mortality table. The rows indicate an individual&amp;rsquo;s current age. For both a male and a female, three values are then given: the probability of death in a given year, the &amp;ldquo;Number of Lives&amp;rdquo;, and the life expectancy for this individual. The probability of death in a given year is somewhat self-explanatory. The &amp;ldquo;Number of Lives&amp;rdquo; variable starts with 100,000 individuals and gives the number of survivors at a given age. So for example, of the 100,000 males &amp;ldquo;born&amp;rdquo; at age 0, we expect 99,392 to be alive at age 1. The life expectancy is the expected number of years of life remaining for an individual. We can start by plotting this to get a feel for the data.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-survival-curve-for-100000-males-and-females-given-the-2019-ssa-mortality-tables-the-dashed-line-indicates-the-typical-retirement-age-of-67&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/survivalPlot_hu8976ee6293875d841810953bda6bf5f5_123683_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Survival curve for 100,000 males and females given the 2019 SSA mortality tables. The dashed line indicates the typical retirement age of 67.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/survivalPlot_hu8976ee6293875d841810953bda6bf5f5_123683_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2606&#34; height=&#34;1684&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Survival curve for 100,000 males and females given the 2019 SSA mortality tables. The dashed line indicates the typical retirement age of 67.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;To get a feeling for the distribution of age at death, I ran 10,000 simulations each for males and females starting at ages 0, 25, 40, 60, and 80. These ages were chosen to represent the full range of possibilities at birth, followed by early, mid- and late career individuals. Age 80 was included for comparison as an older retiree value. Since the probability of death by age 50 is so low, we expect very little difference for the first three ages, with differences becoming more pronounced as age progresses, but it is still useful to visualize.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-overview-of-the-distribution-of-age-at-death-by-sex-for-different-ages-at-the-beginning-of-the-simulation-outliers-are-are-not-represented-note-how-the-results-for-ages-0-to-40-are-nearly-indistinguishable&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/Sample_Overview_hub6662c611b080d5ff9aca3d611ac8c57_52510_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Overview of the distribution of age at death by sex for different ages at the beginning of the simulation. Outliers are are not represented. Note how the results for ages 0 to 40 are nearly indistinguishable.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/Sample_Overview_hub6662c611b080d5ff9aca3d611ac8c57_52510_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2606&#34; height=&#34;1684&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Overview of the distribution of age at death by sex for different ages at the beginning of the simulation. Outliers are are not represented. Note how the results for ages 0 to 40 are nearly indistinguishable.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;As expected, we see relatively little variation between birth and age 40, with some recognizable changes beginning at age 60. Given that, I will visualize the distribution for an individual starting at age 40. A 40 year old is about 25-30 years away from retirement and has probably at least started thinking about saving and how much they&amp;rsquo;ll need to put away to last through retirement.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-distribution-of-age-at-death-for-males-and-females-given-a-starting-age-of-40-half-of-the-starting-population-is-expected-to-make-it-to-at-least-8185-malefemale-and-a-quarter-will-make-it-at-least-to-8891&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/distributionPlot_hue89b8b06e05cd8b82745d76fbdceaf60_146013_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Distribution of age at death for males and females given a starting age of 40. Half of the starting population is expected to make it to at least 81/85 (Male/Female), and a quarter will make it at least to 88/91.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-09-life-expectancy/distributionPlot_hue89b8b06e05cd8b82745d76fbdceaf60_146013_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2606&#34; height=&#34;1684&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Distribution of age at death for males and females given a starting age of 40. Half of the starting population is expected to make it to at least 81/85 (Male/Female), and a quarter will make it at least to 88/91.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;So now that have seen the distribution, let&amp;rsquo;s consider how long we&amp;rsquo;ll live past the typical retirement age of 67. The table below lists the ages by sex for the top percentiles given a starting age of 40.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Top Percentiles - Age at Death&lt;/th&gt;
+&lt;th&gt;Males&lt;/th&gt;
+&lt;th&gt;Females&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5%&lt;/td&gt;
+&lt;td&gt;95&lt;/td&gt;
+&lt;td&gt;98&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;10%&lt;/td&gt;
+&lt;td&gt;93&lt;/td&gt;
+&lt;td&gt;95&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;20%&lt;/td&gt;
+&lt;td&gt;89&lt;/td&gt;
+&lt;td&gt;92&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;30%&lt;/td&gt;
+&lt;td&gt;86&lt;/td&gt;
+&lt;td&gt;90&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;40%&lt;/td&gt;
+&lt;td&gt;84&lt;/td&gt;
+&lt;td&gt;87&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;50%&lt;/td&gt;
+&lt;td&gt;81&lt;/td&gt;
+&lt;td&gt;85&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;We see that 40% of females and 30% of males are expected to live at least 20 years past retirement age. A little more than 5% of females will make it thirty years past retirement, but only 2.5% of males will. While only a small minority of retirees will need to fund their retirement for thirty or more years, it is not unreasonable to target retirement funds to last until we reach age 90.&lt;/p&gt;
+&lt;p&gt;Unfortunately, a large share of Americans have insufficient 401k balances to cover their expected longevity (see 
+&lt;a href=&#34;https://www.forbes.com/advisor/retirement/average-401k-balance-by-age/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, 
+&lt;a href=&#34;https://www.investopedia.com/articles/personal-finance/010616/whats-average-401k-balance-age.asp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, and 
+&lt;a href=&#34;https://mint.intuit.com/blog/retirement/average-401k-balance-by-age/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for some estimates of savings by age group). Many are likely relying on social security benefits to cover some of the difference. This system may not last that long, or at least not with current benefit levels. Social Security outlays have exceeded allocated revenues since 2010 and are currently expected to continue to do so well into the 2090s (see 
+&lt;a href=&#34;https://www.cbo.gov/publication/57342&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Table A-1&lt;/a&gt;). Social security trust fund balances for old-age and survivor benefits are rapidly declining. Between 2020 and 2030, the CBO expects a drop of 80% in this fund. Curiously, over the same time period the trust fund for military personnel is expected to grow by more than 70%, while the fund for civilian government employees is expected to grow by more than 20% (see 
+&lt;a href=&#34;https://www.cbo.gov/publication/56541&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CBO report&lt;/a&gt;). As such, younger Americans not working for the government will need to consider how to fund a multi-decade retirement in the face of potentially large reductions in social security benefits.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/git/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/git/index.xml" rel="self" type="application/rss+xml" />
+    <description>git</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 11 Jan 2021 14:42:50 -0500</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>git</title>
+      <link>https://dmsenter89.github.io/tag/git/</link>
+    </image>
+    
+    <item>
+      <title>Using Git with SAS Studio</title>
+      <link>https://dmsenter89.github.io/post/21-01-git-with-sas-studio/</link>
+      <pubDate>Mon, 11 Jan 2021 14:42:50 -0500</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-01-git-with-sas-studio/</guid>
+      <description>&lt;p&gt;Git is a widely used version control system that allows users to track their software
+development in both public and private repositories. It is also increasingly used to store
+data in text formats, see for example the 
+&lt;a href=&#34;https://github.com/nytimes/covid-19-data&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;New York Times COVID-19 data set&lt;/a&gt;.
+This post will briefly demonstrate how to clone and pull updates from a GitHub repository
+using the git functions that are built into SAS Studio.&lt;/p&gt;
+&lt;p&gt;Git functionality has been built into SAS Studio for a little while, so there are actually
+two slightly different iterations of the git functions. The examples in this post will use the versions
+compatible with SAS Studio 3.8, which is the current version available at SAS OnDemand for Academics.
+All git functions use the same prefix. In older versions such as SAS Studio 3.8 the prefix is &lt;code&gt;gitfn_&lt;/code&gt;,
+which is followed by a git command such as &amp;ldquo;clone&amp;rdquo; or &amp;ldquo;pull&amp;rdquo;. In SAS Studio 5, the prefix has been
+simplified to just &lt;code&gt;git_&lt;/code&gt;. Most git functions have the same name between the&lt;br&gt;
+two versions, so that the only difference is the prefix. A complete table of the old and new
+versions of the git functions is available 
+&lt;a href=&#34;https://go.documentation.sas.com/?cdcId=pgmsascdc&amp;amp;cdcVersion=9.4_3.5&amp;amp;docsetId=lefunctionsref&amp;amp;docsetTarget=n1mlc3f9w9zh9fn13qswiq6hrta0.htm&amp;amp;locale=en#p0evl64wd2dljrn1l43t739qtwba&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;in the documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We use the git functions by calling them in an otherwise empty DATA step. In other words, we use the
+format&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;
+    /* use your git functions here */
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;cloning-a-repo&#34;&gt;Cloning a Repo&lt;/h2&gt;
+&lt;p&gt;To clone a repo from github we use &lt;code&gt;gitfn_clone&lt;/code&gt;. It takes two arguments -
+the URL of the repository of interest and the path to an &lt;em&gt;empty&lt;/em&gt; folder. You can
+have SAS create the folder for you by using &lt;code&gt;OPTIONS DLCREATEDIR&lt;/code&gt;. The basic
+syntax for the clone is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;
+    rc = gitfn_clone (
+     &amp;quot;&amp;amp;repoURL.&amp;quot;,    /* URL to repo */
+     &amp;quot;&amp;amp;targetDIR.&amp;quot;); /* folder to put repo in */
+    put rc=;         /* equals 0 if successful */
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It doesn&amp;rsquo;t matter if the URL you use ends in &amp;ldquo;.git&amp;rdquo; or not. In other words, the
+following two macros would both work the same:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;%LET repoURL=https://github.com/nytimes/covid-19-data;
+/* works the same as */
+%LET repoURL=https://github.com/nytimes/covid-19-data.git;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also use password based authentication to pull in private repositories:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;
+    rc = gitfn_clone (
+     &amp;quot;&amp;amp;repoURL.&amp;quot;,   
+     &amp;quot;&amp;amp;targetDIR.&amp;quot;,
+     &amp;quot;&amp;amp;githubUSER.&amp;quot;,   /* your GitHub username */
+     &amp;quot;&amp;amp;githubPASSW.&amp;quot;); /* your GitHub password */
+    put rc=;         /* equals 0 if successful */
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; GitHub is &lt;em&gt;deprecating&lt;/em&gt; 
+&lt;a href=&#34;https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;password-based authentication&lt;/a&gt;; you will need to switch to OAuth authentication or SSH keys
+if you are not already using them. To access a repository using an SSH key, use the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;                             
+ rc = gitfn_clone(
+  &amp;quot;&amp;amp;repoURL.&amp;quot;,
+  &amp;quot;&amp;amp;targetDIR.&amp;quot;,
+  &amp;quot;&amp;amp;sshUSER.&amp;quot;,
+  &amp;quot;&amp;amp;sshPASSW.&amp;quot;,
+  &amp;quot;&amp;amp;sshPUBkey.&amp;quot;,
+  &amp;quot;&amp;amp;sshPRIVkey.&amp;quot;);
+ put rc=;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;pull-ing-in-updates&#34;&gt;Pull-ing in Updates&lt;/h2&gt;
+&lt;p&gt;It is just as easy to pull in updates to a local repository by using
+&lt;code&gt;gitfn_pull(&amp;quot;&amp;amp;repoDIR.&amp;quot;)&lt;/code&gt;. This also works with SSH keys for private
+repositories:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data _null_;
+ rc = gitfn_pull(
+  &amp;quot;&amp;amp;repoDIR.&amp;quot;,
+  &amp;quot;&amp;amp;sshUSER.&amp;quot;,
+  &amp;quot;&amp;amp;sshPASSW.&amp;quot;,
+  &amp;quot;&amp;amp;sshPUBkey.&amp;quot;,
+  &amp;quot;&amp;amp;sshPRIVkey.&amp;quot;);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;other-functions&#34;&gt;Other Functions&lt;/h2&gt;
+&lt;p&gt;SAS also offers other built-in functions, such as &lt;code&gt;_diff&lt;/code&gt;, &lt;code&gt;_status&lt;/code&gt;, &lt;code&gt;_push&lt;/code&gt;,
+&lt;code&gt;_commit&lt;/code&gt;, and others. For a complete list, see the SAS documentation 
+&lt;a href=&#34;https://go.documentation.sas.com/?cdcId=pgmsascdc&amp;amp;cdcVersion=9.4_3.5&amp;amp;docsetId=lefunctionsref&amp;amp;docsetTarget=n1mlc3f9w9zh9fn13qswiq6hrta0.htm&amp;amp;locale=en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

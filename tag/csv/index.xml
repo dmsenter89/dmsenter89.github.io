@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>csv | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/csv/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/csv/index.xml" rel="self" type="application/rss+xml" />
+    <description>csv</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 23 Nov 2022 16:43:28 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>csv</title>
+      <link>https://dmsenter89.github.io/tag/csv/</link>
+    </image>
+    
+    <item>
+      <title>CSV2DS</title>
+      <link>https://dmsenter89.github.io/post/22-11-csv2ds/</link>
+      <pubDate>Wed, 23 Nov 2022 16:43:28 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-11-csv2ds/</guid>
+      <description>&lt;p&gt;Creating a minimum working example (MWE) is a relatively frequent task. It is no problem to share an MWE for a feature in SAS because a large number of example data sets are shipped and installed by default. But sometimes you need an MWE because you are having trouble accomplishing a particular task with particular input data. At that point, you will need to share the data or a subset thereof together with your code. In SAS Forums, the preferred way to do this is with a datastep using a datalines/cards statement. Writing these by hand can be tedious since the data source is not typically a datalines statement to begin with. I have previously seen a SAS macro that can be used to generate a datalines statement from a SAS data set, but can&amp;rsquo;t seem to locate it at the moment. The data source I personally encounter the most often in my work is either in CSV or Excel formats. Since the latter can easily be exported to CSV, I decided to write a program that generates a SAS data step given a CSV file.&lt;/p&gt;
+&lt;p&gt;For the implementation language I chose to use 
+&lt;a href=&#34;https://go.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Go&lt;/a&gt;. I started learning about Go back in May when I implemented a 
+&lt;a href=&#34;https://dmsenter89.github.io/post/22-05-go-wordle/&#34;&gt;simple CLI version of Wordle&lt;/a&gt;. Since then I have increasingly used Go to write various small tools at work. It has been a very enjoyable language to write in and distribution via GitHub is easy. If you have the Go toolchain installed, you can get the latest copy of csv2ds using&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go install github.com/dmsenter89/csv2ds@latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The tool is very simple to use. Give it a CSV file or list of CSV files and it will generate a data step for each file using the CSV&amp;rsquo;s base name as the data set name. To ensure compatibility, variable names and the data set name are processed to be compatible with SAS&#39; naming scheme. The tool will attempt to guess if a particular column is numeric or not. If a column is determined to not be numeric, the longest cell will be used to set that variable&amp;rsquo;s length via a length statement to prevent truncation.&lt;/p&gt;
+&lt;p&gt;I often work with the 
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;csvkit&lt;/a&gt; suite of command-line tools. It&amp;rsquo;s a wonderful collection of Python programs that can import data into CSV, generate basic column statistics, and use grep and SQL to extract data from a CSV file, amongst other things. This collection is designed to allow you to pipe the output from one as input to the next. Consider 
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/tutorial/2_examining_the_data.html#csvsort-order-matters&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this example&lt;/a&gt;. Csvcut is used to extract only certain columns from the file data.csv. Then csvgrep is used to subset to use only the data pertaining to one particular county. Then the data is sorted by the total_cost variable and displayed. I wanted my tool to be compatible with this suite, so if &lt;code&gt;-&lt;/code&gt; is passed as the filename, csv2ds will read the contents of STDIN instead. Changing the above csvkit example by replacing csvlook with my tool will generate the corresponding SAS data set:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;csvcut -c county,item_name,total_cost data.csv | csvgrep -c county -m LANCASTER | csvsort -c total_cost -r | csv2ds -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At this point csv2ds is quite simple, but sufficient for my needs. Some minor intervention may be needed to make the data step template work for your data. Informats like DOLLAR are not recognized as numeric and minor edits would need to be made to the produced template.&lt;/p&gt;
+&lt;p&gt;Checkout my new tool over on 
+&lt;a href=&#34;https://github.com/dmsenter89/csv2ds&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Loading Zillow Housing Data in SAS</title>
+      <link>https://dmsenter89.github.io/post/22-08-zillow-data/</link>
+      <pubDate>Mon, 01 Aug 2022 17:21:38 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-08-zillow-data/</guid>
+      <description>&lt;p&gt;Zillow is a well-known website widely used by those searching for a home or curious to find out
+the value of their current home. What you may not know is that Zillow has a dedicated research page.
+To make their website work optimally, they churn through tons of data on the American housing market.
+They share insights they gleaned via 
+&lt;a href=&#34;https://www.zillow.com/research/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zillow.com/research&lt;/a&gt;. If you
+visit their research  website you&amp;rsquo;ll notice they have a data page where you can download some really
+cool data sets for your own research. They even have an API with which you can load data directly, but
+you&amp;rsquo;ll have to register for access. In this post, we&amp;rsquo;ll look at how to load the CSV files that are
+available for direct download into SAS for analysis.&lt;/p&gt;
+&lt;p&gt;The CSV files can be downloaded 
+&lt;a href=&#34;https://www.zillow.com/research/data/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. In the example below,
+I&amp;rsquo;m working with the Zillow Home Value Index file for all homes, seasonally adjusted at the ZIP code level.
+Tha file is fairly large. It has data going from January 2000 through June 2022 in more than 27,000 rows of data
+and about 280 columns. Below is an image of the beginning of this file.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zhvi_data_preview.png&#34; alt=&#34;&#34; title=&#34;The beginning of the of the ZHVI &#39;flagship&#39; data file.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When working with large CSV files, I find it useful to get a feel for it in the CLI with
+
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;csvkit&lt;/a&gt;. This is especially important when importing
+with a SAS data step, because we need to know the number of columns and their order, amongst other things,
+for our code. To get an overview of the total number of columns and their contents, run&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;csvcut -n Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The output is fairly long, so you may prefer piping to a pager. I don&amp;rsquo;t need all the different identifiers
+in the file, so I&amp;rsquo;m going to exclude those I won&amp;rsquo;t need and put them into a separate, smaller CSV.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# ignore these four columns which I won&#39;t need
+csvcut -C RegionID,SizeRank,RegionType,StateName Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv &amp;gt; Zip_zhvi_small.csv
+# alternatively, also cut down on date columns to only 2022 for debugging 
+csvcut -C RegionID,SizeRank,RegionType,StateName,10-273 Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv &amp;gt; Zip_zhvi_small.csv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also reduce the file size by using &lt;code&gt;csvgrep&lt;/code&gt; to filter any of the columns. For example, if we only wanted
+the data for North Carolina we could run &lt;code&gt;csvgrep -c State -m NC&lt;/code&gt; in the pipe.&lt;/p&gt;
+&lt;p&gt;For SAS, we need to know the maximum length of string columns so we can allocate the appropriate length to the
+corresponding SAS variables. This is easily done with the csvstat tool:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;csvcut -c Metro,City,CountyName Zip_zhvi_small.csv | csvstat --len
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also specify the list of columns in csvstat directly, but in my experience that tends to be slower.&lt;/p&gt;
+&lt;p&gt;Alright, now we have everything we need to start on our DATA step! We start with the attribute statement.
+One problem with importing this file is that everyhing is in wide format, with the dates used as headers.
+We will get around this shortly. I have seen people use transpose etc for similar problems online, but this
+is unnecessary if we feel comfortable with the DATA step. We&amp;rsquo;ll start by naming the identifying columns
+just as in the CSV file. For the date columns, we will use a numeric range prefixed by date (&lt;code&gt;date1-date270&lt;/code&gt;).
+You can use csvcut to find the exact number of date columns you have. We will also allocate the same number of
+columns for the ZHVI values, so we&amp;rsquo;ll need to add a &lt;code&gt;val1-val270&lt;/code&gt;. This and the date variable are temporary
+and will be dropped later, in favor of the &lt;code&gt;Date&lt;/code&gt; and &lt;code&gt;ZHVI&lt;/code&gt; variables.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;attrib 
+    ZIP           informat=best12.    format=z5.
+    State         informat=$2.
+    City          informat=$30.
+    Metro         informat=$42.
+    CountyName    informat=$29.
+    date1-date270 informat=YYMMDD10.  format=DATE9.
+    val1-val270   informat=best16.
+    Date                              format=Date9.
+    ZHVI                              format=Dollar16.
+  ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we will allocate an array to hold &lt;em&gt;all&lt;/em&gt; of the date and ZHVI values during the processing of each row.
+Since the date column won&amp;rsquo;t change, we&amp;rsquo;ll tell SAS to retain its values.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;   retain date1-date270;
+   array d(270) date1-date270;
+   array v(270) val1-val270;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is where the magic happens now. You may not know it, but you are not limited to a single INPUT statement
+in a DATA step. We use this and start by reading in only the first row. Because we use an OUTPUT
+statement later, this reading of row 1 will be processed, but not saved into the output data set.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;if _n_ = 1 then do;
+  input ZIP $ State $ City $ Metro $ CountyName $ date1-date270;
+  PUT _ALL_; /* if you want to see what that looks like */
+end;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With this if clause, the date1 through date270 variables will be populated, and because we used a retain
+statement earlier, these values remain available to us during the processing of every other row. You can
+probably guess where this is going now: we will process each row, and then OUTPUT one line per date which
+we have access to now thanks to our array and the retain statement.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;input ZIP $ State $ City $ Metro $ CountyName $ val1-val270;
+do i=1 to 270;
+  Date  = d(i); /* look up date for column i */
+  ZHVI =  v(i); /* use the corresponding i-th value for ZHVI */
+  OUTPUT;       /* This output creates one line per date column */
+end;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At the end of your data step, don&amp;rsquo;t forget to&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;drop i date1-date270 val1-val270;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;so those variables don&amp;rsquo;t clutter your data set. And that&amp;rsquo;s it! You now
+have the data set loaded and available in SAS.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SAS_data_set.png&#34; alt=&#34;&#34; title=&#34;The beginning of the resulting SAS data set.&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

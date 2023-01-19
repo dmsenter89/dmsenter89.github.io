@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>regex | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/regex/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/regex/index.xml" rel="self" type="application/rss+xml" />
+    <description>regex</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 19 May 2022 21:45:46 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>regex</title>
+      <link>https://dmsenter89.github.io/tag/regex/</link>
+    </image>
+    
+    <item>
+      <title>Conditional RegEx Matching with Python</title>
+      <link>https://dmsenter89.github.io/post/22-05-conditional-regex-python/</link>
+      <pubDate>Thu, 19 May 2022 21:45:46 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-05-conditional-regex-python/</guid>
+      <description>&lt;p&gt;Recently I&amp;rsquo;ve needed to capture the entries of a datalines statement in SAS for editing. Generally,
+this is a straight forward problem if I only need to do it with one file or all of the files that
+I am using are formatted identically. But then I started thinking about the more general case. SAS
+doesn&amp;rsquo;t care about the case of my keywords, so I need a case insensitive match. I need to account for
+possible extra whitespace. So far so good. But what if I have two different keywords that can start
+my data section, and the end of the data section is indicated with different characters depending on
+the chosen keyword? Could I still use a single regular expression?&lt;/p&gt;
+&lt;p&gt;SAS does in fact allow a number of different keywords to enter data in a data step.
+In my experience, the most common are the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/v_027/lestmtsref/p0114gachtut3nn1and4ap8ke9nf.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;datalines&lt;/a&gt;
+and 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/v_027/lestmtsref/p1mm9b070wj962n16q0v1d9uku5q.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;datalines4&lt;/a&gt;
+statements. The main difference between them is how the end of the data is indicated. For datalines,
+a single semicolon is used, while datalines4 uses a sequence of four semicolons, thereby allowing
+the use of semicolons in the data itself. There are some aliases for these commands that can be used:
+cards/lines and cards4/lines4 with matching behavior. A simple data step with these statements
+could look like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;data person;
+  input name $ sex $ age;
+  datalines; /* or `cards` or `lines` */
+Alfred M 14
+Alice F 13
+;
+
+data person4;
+  input name $ sex $ age;
+  datalines4; /* or `cards4` or `lines4` */
+Alfred M 14
+Alice F 13
+;;;;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We could write two separate RegEx expressions, one for the datalines/cards/lines statement and
+a second one for the datalines4/cards4/lines4 statement. But, if the RegEx engine we are using allows
+conditionals, e.g. the Python RegEx engine, then we can write a single statement that can capture
+both types of statements. The basic format of the conditonal capture is &lt;code&gt;(?(D)A|B)&lt;/code&gt;, which can be read as &amp;ldquo;if capture
+group D is set, then match A, otherwise match B.&amp;rdquo; For more details, see 
+&lt;a href=&#34;https://www.regular-expressions.info/conditional.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using this technique, we can capture both types of statements in one go.
+The short form of the solution I found is this
+regular expression: &lt;code&gt;r&amp;quot;(?:(?:(?:data)?lines)|cards)(4)?\s*;(.*?)(?(1);{4}|;)&amp;quot;&lt;/code&gt;
+with two flags set: case insensitive and dot-all. If we utilize Python&amp;rsquo;s verbose flag,
+we can format this a bit nicer as well:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-Python&#34;&gt;re.compile(
+  r&amp;quot;&amp;quot;&amp;quot;(?:(?:    # mark groups as non-capture groups
+      (?:data)? # maybe match `data`, but don&#39;t capture
+       lines)   # matches `lines`
+      |cards)   # alternatively, matches `cards`
+      (4)?      # a `4` may be present
+      \s*;      # there might be whitespace before the ;
+      (.*?)     # lazy-match data content
+      (?(1)     # check if capture group 1 is set, if so
+      ;{4}      # match `;;;;`
+      |;)       # otherwise, match a single ;
+  &amp;quot;&amp;quot;&amp;quot;, flags=re.DOTALL | re.X | re.I)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;A great website to help you build up a regular expression is 
+&lt;a href=&#34;https://regex101.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;regex101.com&lt;/a&gt;.
+It allows you to copy a sample text and regular expression. It then explains your expression and lists
+the capture groups by number, which can be convenient. It also allows you to try out different RegEx engines.
+Try setting it to Python with the flags we mentioned, and see how it works!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cleaning up a Date String with RegEx in SAS</title>
+      <link>https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/</link>
+      <pubDate>Wed, 29 Sep 2021 13:41:36 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/</guid>
+      <description>&lt;p&gt;Sometimes we have to deal with manually entered data, which means there is a good chance that the data needs to be cleaned for consistency due to the
+inevitable errors that creep in when typing in data, not to speak of any inconsistencies between individuals entering data.&lt;/p&gt;
+&lt;p&gt;In my particular case, I was recently dealing with a data set that included
+manually calculated ages that had been entered as a complete string
+of the number of years, months, and days of an individual. Such a string
+is not particularly useful for analysis and I wanted to have the age as
+a numeric variable instead. Regular expressions can help out a lot in this
+type of situation. In this post, we will look at a few representative examples
+of the type of entries I&amp;rsquo;ve encountered and how to read them using RegEx in SAS.&lt;/p&gt;
+&lt;h2 id=&#34;lets-look-at-the-data&#34;&gt;Let&amp;rsquo;s Look at the Data&lt;/h2&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-what-were-starting-from&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/RAW_DS_hu83735545411e40d8d73c711ad73aa038_21697_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;What we&amp;amp;rsquo;re starting from.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/RAW_DS_hu83735545411e40d8d73c711ad73aa038_21697_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;508&#34; height=&#34;250&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    What we&amp;rsquo;re starting from.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;If we look at our sample data, we notice a few things. The data is consistently
+ordered from largest to smallest, in the order of year, month, and day.
+For some lines, only the year variable is available. In all cases, the string
+starts with two digits.&lt;/p&gt;
+&lt;p&gt;Separation of the time units is inconsistent; occasionally they are separated
+by commas, sometimes by hyphens, and in some cases by spaces alone. The terms
+indicating the units are spelled and capitalized inconsistently as well. There
+are some abbreviations and occasionally the plural &amp;rsquo;s&#39; in days is wrapped in
+parentheses.&lt;/p&gt;
+&lt;p&gt;If you want to follow along, you can create the sample data with the
+following code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data raw;
+    infile datalines delimiter = &#39;,&#39; MISSOVER DSD;
+    attrib
+        ID     informat=best32. format=1.
+        STR_AGE informat=$500.   format=$500. label=&#39;Age String&#39;
+        VAR1   informat=best32. format=1.;
+    input ID STR_AGE $ VAR1;
+
+    datalines;
+    1,&amp;quot;62 Years, 5 Months, 8 Days&amp;quot;,1
+    2,43 Yrs. -2 Months -4 Day(s), 2
+    3,33 years * months 24 days, 1
+    4,58,1
+    5,&amp;quot;47 Yrs. -11 Months -27 Day(s)&amp;quot;,2
+    ;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;the-regex-patterns&#34;&gt;The RegEx Patterns&lt;/h2&gt;
+&lt;p&gt;We will use a total of three regex patterns, one for each of the time units:
+year, month, day.  SAS uses Pearl regex and the function &lt;code&gt;prxparse&lt;/code&gt; to define
+the regex patterns that are supposed to be searched for.&lt;/p&gt;
+&lt;p&gt;For the year variable, we need to match the first two digits in our string.
+Therefore, the correct call is &lt;code&gt;prxparse(&#39;/^(\d{2}).*/&#39;)&lt;/code&gt;. Note that the
+&lt;code&gt;(&lt;/code&gt; and &lt;code&gt;)&lt;/code&gt; delimit the capture group.&lt;/p&gt;
+&lt;p&gt;The month and day regex patterns are very similar. For the months, we want to
+lazy-match the until we hit between one or two digits followed by
+an &amp;rsquo;m&#39; and some number of other characters. We use the &lt;code&gt;i&lt;/code&gt; flag since
+we cannot guarantee capitalization: &lt;code&gt;prxparse(&#39;/.*?(\d{1,2}).M.*/i&#39;)&lt;/code&gt;.
+The day pattern is nearly identical: &lt;code&gt;prxparse(&#39;/.*?(\d{1,2}).D\D*$/i&#39;)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can extract our matches using the &lt;code&gt;prxposn&lt;/code&gt; function. We use the
+&lt;code&gt;prxmatch&lt;/code&gt; function to check if we actually have a match:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;/* match into strings */
+if prxmatch(year_rxid, STR_AGE)  then year_dig_str = prxposn(year_rxid,1,STR_AGE);
+if prxmatch(month_rxid, STR_AGE) then month_dig_str = prxposn(month_rxid,1,STR_AGE);
+if prxmatch(day_rxid, STR_AGE)   then day_dig_str = prxposn(day_rxid,1, STR_AGE);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The extracted strings can then be converted to numeric variables using
+the &lt;code&gt;input&lt;/code&gt; function.&lt;/p&gt;
+&lt;p&gt;The last step is the calculation of the age from the three components.
+Since not all three time units are specified for every row, we cannot use
+the standard arithmetic of &lt;code&gt;years + months + days&lt;/code&gt;, because the missing
+values would propagate. We need to use the &lt;code&gt;sum&lt;/code&gt; function instead.&lt;/p&gt;
+&lt;p&gt;Putting it all together, we get the correct output:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-result&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/FIXED_DS_hu37f587f0a5cd00ab598beb8689b70b5f_34165_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;The Result&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/FIXED_DS_hu37f587f0a5cd00ab598beb8689b70b5f_34165_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;867&#34; height=&#34;251&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The Result
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;complete-code&#34;&gt;Complete Code&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data fixed;
+    set raw;
+    
+   /* define the regex patterns */
+   year_rxid  = prxparse(&#39;/^(\d{2}).*/&#39;);
+   month_rxid = prxparse(&#39;/.*?(\d{1,2}).M.*/i&#39;);
+   day_rxid   = prxparse(&#39;/.*?(\d{1,2}).D\D*$/i&#39;);   /* match 2 digits followed by D and non-digit chars  */
+  
+   /* make sure we have enough space to store the extraction */
+   length year_dig_str month_dig_str day_dig_str $4;
+   
+   /* match into strings */
+   /* match into strings */
+   if prxmatch(year_rxid, STR_AGE)  then year_dig_str = prxposn(year_rxid,1,STR_AGE);
+   if prxmatch(month_rxid, STR_AGE) then month_dig_str = prxposn(month_rxid,1,STR_AGE);
+   if prxmatch(day_rxid, STR_AGE)   then day_dig_str = prxposn(day_rxid,1, STR_AGE);
+   
+   /* use input to convert str -&amp;gt; numeric */
+   years  = input(year_dig_str, ? 12.);
+   months = input(month_dig_str, ? 12.);
+   days   = input(day_dig_str, ? 12.);
+   
+   /* Use SUM function when calculating age
+    to avoid missing values propagating  */
+   age = sum(years,months/12,days/365.25);
+   
+   /* get rid of temporary variables */ 
+   drop month_rxid month_dig_str year_rxid year_dig_str day_rxid day_dig_str;
+   run;
+   
+proc print data=fixed; run;
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>From Proc Import to a Data Step with Regex</title>
+      <link>https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/</link>
+      <pubDate>Thu, 29 Jul 2021 08:46:10 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/</guid>
+      <description>&lt;p&gt;I find myself needing to import CSV files with a relatively large number of columns. In many cases, &lt;code&gt;proc import&lt;/code&gt; works surprisingly well in giving me what I want. But sometimes, I need to do some work while reading in the file and it would be nice to just use a data step to do so, but I don&amp;rsquo;t want to type it in by hand. That&amp;rsquo;s when a combination of &lt;code&gt;proc import&lt;/code&gt; and some regex substitution can come in handy.&lt;/p&gt;
+&lt;p&gt;For the first step, run a &lt;code&gt;proc import&lt;/code&gt;, like this sample code that is provided by SAS Studio when you double click on a CSV file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;FILENAME REFFILE &#39;/path/to/file/data.csv&#39;;
+
+PROC IMPORT DATAFILE=REFFILE
+    DBMS=CSV
+    OUT=WORK.IMPORT;
+    GETNAMES=YES;
+RUN;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you run this code, you will see that SAS generates a complete data step for you. This is what the beginning of one looks like:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-sample-log-output&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/log_hu417e5750fec5319adb043ca92305efb0_26856_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Sample log output.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/log_hu417e5750fec5319adb043ca92305efb0_26856_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;797&#34; height=&#34;461&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Sample log output.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;There will be be two lines for each variable, one giving the &lt;code&gt;informat&lt;/code&gt; and one giving the &lt;code&gt;format&lt;/code&gt; that SAS decided on. This will be followed by an &lt;code&gt;input&lt;/code&gt; statement. You can copy that from the log into a text editor such as VSCode, but unfortunately the line numbering of the LOG will carry over. One convenient way of fixing this is to use regex search-and-replace. Each line starts with a space followed by 1-3 digits, followed by a variable number of spaces until the next word. To capture this I use &lt;code&gt;^\s\d{1,3}\s+&lt;/code&gt; as my search term and replace with nothing. This will left align the whole data step, but this can be adjusted later.&lt;/p&gt;
+&lt;p&gt;At this point the data step can be saved as a SAS file or copied back over to the file you are working within SAS Studio, but I like to do one more adjustment. I really like using the &lt;code&gt;attrib&lt;/code&gt; statement, 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/lestmtsref/n1wxb7p9jkxycin16lz2db7idbnt.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;see documentation&lt;/a&gt;, because it allows me to see the informat, format, and label of a variable all in one place. So I use regex to re-arrange my informat statement into the beginnings of an attribute statement. Use the search term &lt;code&gt;informat\s([^\s]+)\s([^\s]+)\s+;&lt;/code&gt; to capture each informat line and create two capture groups - the variable name as group 1 and the informat as group 2. If you use the replace code &lt;code&gt;$1 informat=$2 format=$2&lt;/code&gt;, you will see the beginnings of an attribute statement. In this replacement scheme, each informat matches each format. This is fine for date and character variables, but you may want to adjust the display format for some of your numeric variables.&lt;/p&gt;
+&lt;p&gt;To clean this up, get rid of the format lines (you can search for &lt;code&gt;^format.+\n&lt;/code&gt; and replace with an empty replace to delete them), add the &lt;code&gt;attrib&lt;/code&gt; statement below the &lt;code&gt;infile&lt;/code&gt; and make sure to end the block of attributes with a semicolon, and indent your code as desired.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-sample-data-step-view&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/code_snip_hub5c78044ade6674b35a08b503d783f3d_19917_2000x2000_fit_lanczos_2.PNG&#34; data-caption=&#34;Sample data step view.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/code_snip_hub5c78044ade6674b35a08b503d783f3d_19917_2000x2000_fit_lanczos_2.PNG&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;843&#34; height=&#34;190&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Sample data step view.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;And there you have it! The beginning of a nicely formatted data step that you can start to work with.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

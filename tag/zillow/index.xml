@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zillow | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/zillow/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/zillow/index.xml" rel="self" type="application/rss+xml" />
+    <description>zillow</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sat, 20 Aug 2022 16:21:38 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>zillow</title>
+      <link>https://dmsenter89.github.io/tag/zillow/</link>
+    </image>
+    
+    <item>
+      <title>Is it better to buy or rent housing?</title>
+      <link>https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/</link>
+      <pubDate>Sat, 20 Aug 2022 16:21:38 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/</guid>
+      <description>&lt;p&gt;This post is a follow-up to my post on how to load 
+&lt;a href=&#34;https://dmsenter89.github.io/post/22-08-zillow-data/&#34;&gt;data from Zillow&lt;/a&gt;. Housing prices have soared through the COVID-19 pandemic, leading to a lot of discussion about housing affordability. The quickly growing home values coupled with the subsequent raising of interest rates on mortgages are seeing more and more people priced out of  the ability to purchase a home. While rent prices have increased as well, they haven&amp;rsquo;t increased as sharply as home prices.&lt;/p&gt;
+&lt;p&gt;In this post, I will look at the Zillow data set and consider a popular question for millennials - is it better to buy or rent in the current market?
+For this analysis, I will use the zip code level data of the Zillow Home Value Index (ZHVI) and the Zillow Observed Rent Index (ZORI) for North Carolina metropolitan areas in the years 2019 through June 2022. To evaluate the monthly costs of owning a home, I will utilize the 30 year fixed rate mortgage average from the 
+&lt;a href=&#34;https://fred.stlouisfed.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FRED database&lt;/a&gt;, a comprehensive database aggregating various economic time series maintained by the St. Louis Federal Reserve.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Disclaimer: This post is not financial advice. We are only exploring some aggregate data sets. Past performance is not indicative of future performance.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#initial-thoughts&#34;&gt;Initial Thoughts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#crafting-a-mortgage-to-rent-index&#34;&gt;Crafting a Mortgage-to-Rent Index&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#a-naive-implementation&#34;&gt;A Naive Implementation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#a-slightly-better-implementation&#34;&gt;A Slightly Better Implementation&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#further-thoughts&#34;&gt;Further Thoughts&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#risk-and-other-costs&#34;&gt;Risk and Other Costs&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#housing-as-an-investment&#34;&gt;Housing as an Investment&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#last-thoughts&#34;&gt;Last Thoughts&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;initial-thoughts&#34;&gt;Initial Thoughts&lt;/h2&gt;
+&lt;p&gt;Both Zillow data sets are available with monthly data published at the
+zip code level. As such, they are equally well-spaced in time. One issue
+we notice at initial inspection is that the ZHVI observations are dated to
+the last day of every month, while the ZORI observations are dated to the first of the month. For merging and comparison, we will set the ZHVI to the first of the month.&lt;/p&gt;
+&lt;p&gt;Both data sets are available for download at the zip code level. The ZORI data set is much smaller, however. It covers 2,453 distinct zip codes compared to the ZHVI&amp;rsquo;s 27,366 distinct zip codes.&lt;/p&gt;
+&lt;p&gt;An initial graph of average ZHVI and ZORI for North Carolina shows the dramatic growth in home values and the degree to which rent is lagging behind. Both y-axes have been scaled proportionally.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-average-zillow-home-value-index-zhvi-and-zillow-observed-rent-index-zori-values-for-north-carolina-the-left-and-right-axes-have-been-scaled-proportionally&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/average_ZHVI_ZORI_huc9fc43bcc57fade6a9155dc83f0fbcac_25161_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Average Zillow Home Value Index (ZHVI) and Zillow Observed Rent Index (ZORI) values for North Carolina. The left and right axes have been scaled proportionally.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/average_ZHVI_ZORI_huc9fc43bcc57fade6a9155dc83f0fbcac_25161_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Average Zillow Home Value Index (ZHVI) and Zillow Observed Rent Index (ZORI) values for North Carolina. The left and right axes have been scaled proportionally.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The FRED data set is published weekly on Thursdays
+and provides a seasonally unadjusted look at the average, actual mortgage rates that
+homebuyers have received throughout the US. So while this data set has the largest number of data points in time, it is the least granular on a geographic level. I don&amp;rsquo;t have detailed information about the geographic variability in mortgage rates and will ignore this for now. To allow merging with the Zillow data, the FRED data set will need to be averaged in some form. For this post, I will use simple averages by month. It is important to note that the FRED data is not in decimal notation. That means that 3.5% is written as 3.5 as opposed to 0.035.&lt;/p&gt;
+&lt;p&gt;One thing that is interesting about the FRED data is that it goes back as far as 1971. Looking at the overall historic values, we see that the past decade&amp;rsquo;s very low interest rates (less than 5%) are an anomaly.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/fredgraph_hucd93d0035b9764d5c892e209e7d9935a_74003_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/fredgraph_hucd93d0035b9764d5c892e209e7d9935a_74003_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1168&#34; height=&#34;450&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;crafting-a-mortgage-to-rent-index&#34;&gt;Crafting a Mortgage-to-Rent Index&lt;/h2&gt;
+&lt;p&gt;I will create two indices, one being a very naive implementation focusing just on the actual monthly payment on the mortgage loan and the monthly rent payments. This is followed by an improved index that takes into account additional monthly expenses. After both indices have been created, I will discuss some of their shortcomings.&lt;/p&gt;
+&lt;h3 id=&#34;a-naive-implementation&#34;&gt;A Naive Implementation&lt;/h3&gt;
+&lt;p&gt;For monthly cost comparisons, we don&amp;rsquo;t actually care about the value of the home directly. What matters is the monthly mortgage cost. There is a lot of variability here and I will make the following assumptions:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The mortgage originates in the month given by &lt;code&gt;Date&lt;/code&gt; at the rate given by the monthly average of the Mortgage30US time series.&lt;/li&gt;
+&lt;li&gt;A 20% down payment was made, so that the mortgage amount is for 80% of the ZHVI. A 20% down payment is often recommended because it avoids the need for mortgage insurance, which would create an additional monthly expense.&lt;/li&gt;
+&lt;li&gt;Closing costs are handled separately and not rolled into the mortgage.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Monthly mortgage payments can be calculated with the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/vdmmlcdc/8.1/ds2ref/n0a5e0wwqhslcvn1y173c5c4nbg2.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PMT function&lt;/a&gt; in SAS. The general syntax is &lt;code&gt;PMT( rate, number-of-periods, principal-amount [, future-amount] [, type])&lt;/code&gt;. The &lt;code&gt;rate&lt;/code&gt; is the APR divided by the number of periods in a year, in our case 12. The number of periods is 12 payments over 30 years, i.e. 360. The principal amount is 80% of ZHVI, while the future amount is zero (default value). SAS allows us to pick of we want to use end of period (&lt;code&gt;type=0&lt;/code&gt;) or beginning of period (&lt;code&gt;type=1&lt;/code&gt;) payments. For the monthly amount the difference is small, so I will use the default end of period scheme. With that, our formula for the monthly payment is &lt;code&gt;PMT(M30Rate/12, 360, 0.8*ZHVI)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;We can now construct a simple unit-less ratio of monthly mortgage costs over monthly rent. If this index is greater than 1, it is cheaper to rent while if it is less than 1 it is cheaper to purchase a home. Below is a figure demonstrating the distribution of this index in North Carolina for 2019 through June 2022.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-mean-index-value-for-north-carolina-the-shaded-region-represents-the-25th-through-75th-percentile-of-index-values-note-that-the-index-is-1-until-2022-despite-the-sharp-increase-in-zhvi-across-the-state-seen-above&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/index_mean_q1_q3_huadcd954adcdbd90973c926bbc7d2269a_19435_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Mean index value for North Carolina. The shaded region represents the 25th through 75th percentile of index values. Note that the index is &amp;amp;lt;1 until 2022, despite the sharp increase in ZHVI across the state seen above.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/index_mean_q1_q3_huadcd954adcdbd90973c926bbc7d2269a_19435_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Mean index value for North Carolina. The shaded region represents the 25th through 75th percentile of index values. Note that the index is &amp;lt;1 until 2022, despite the sharp increase in ZHVI across the state seen above.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;The index indicates that the situation was favorable to home buyers until 2022, when it flips to being generally favorable to renters. FRED data indicate that the average mortgage rate didn&amp;rsquo;t substantially begin growing until winter 2021. This lends credence to the view that historically low interest rates have helped buffer would-be homeowners from increases in home value.&lt;/p&gt;
+&lt;p&gt;Individual zip codes&#39; index values behave similar in pattern to the the figure above, making it a good approximation to observed behavior.&lt;/p&gt;
+&lt;h3 id=&#34;a-slightly-better-implementation&#34;&gt;A Slightly Better Implementation&lt;/h3&gt;
+&lt;p&gt;The previous implementation underestimates the true monthly cost of home ownership. For one, homeowners are required to pay property taxes each year. While an individual doesn&amp;rsquo;t directly pay the local government on a monthly basis, funds for this purpose are typically collected in an escrow account so it is an ongoing cost. Property tax rates are set at the county and municipal levels and mapping them directly to the ZIP codes requires some work. The rates themselves are fixed fees for every $100 of assessed home value. For the purpose of taxation, the home value used is &lt;em&gt;not&lt;/em&gt; the ZHVI, but the value assigned to the home by the county. In North Carolina these assessments must take place at least once every 8 years, but individual counties may choose to do more frequent assessments. As such, there can be a large discrepancy between the ZHVI and the assessed value. I have seen cases where the ZHVI is roughly double that of the county&amp;rsquo;s assessed value. Finding the average assessed value is easy for individual homes (Zillow displays it on its website), but finding an aggregate value that can be used for analysis is tricky. For ease of use I&amp;rsquo;ll assume that assessed value is 70% of ZHVI. I expect this measure to underestimate the assessed values of homes in 2019 but to be close to target in 2022.&lt;/p&gt;
+&lt;p&gt;Based on the 
+&lt;a href=&#34;https://www.ncdor.gov/taxes-forms/property-tax/property-tax-rates&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;most recent&lt;/a&gt; effective tax rates published by the North Carolina Department of Revenue, the average tax rate is approximately 1.02%, with a minimum of 0.33% and a maximum of 1.7%.&lt;/p&gt;
+&lt;p&gt;In addition to taxes, escrow accounts will typically collect monthly insurance fees as well. The two main types of insurance included are homeowners insurance and mortgage insurance. Mortgage insurance is mandatory when purchasing a home with less than a 20% down payment and protects the lender from the borrower defaulting on the loan repayment. In the above example we assumed a 20% down payment, so mortgage insurance would be optional.&lt;/p&gt;
+&lt;p&gt;The cost of homeowners insurance varies wildly as can be seen in 
+&lt;a href=&#34;https://www.nerdwallet.com/article/insurance/average-homeowners-insurance-cost&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this article&lt;/a&gt; from NerdWallet. Their calculated average monthly cost for North Carolina is $142. Renters may be required to purchase renters insurance, but this is not a requirement for all properties and the cost is substantially lower than homeowners insurance. NerdWallet&amp;rsquo;s 
+&lt;a href=&#34;https://www.nerdwallet.com/article/insurance/how-much-is-renters-insurance&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;analysis&lt;/a&gt; gives a monthly average cost of $12 for North Carolina.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-mean-adjusted-index-value-for-north-carolina-the-shaded-region-represents-the-25th-through-75th-percentile-of-index-values&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/index_mean_q1_q3_adj_huce0c902e7276254854e7cbbd20be94dc_20731_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Mean adjusted index value for North Carolina. The shaded region represents the 25th through 75th percentile of index values.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/index_mean_q1_q3_adj_huce0c902e7276254854e7cbbd20be94dc_20731_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Mean adjusted index value for North Carolina. The shaded region represents the 25th through 75th percentile of index values.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;As expected, the adjusted index shows the same overall behavior but is shifted up. This index gives a more complicated picture, in which the zip code starts mattering somewhat more in whether renting or buying is cheaper on a monthly basis.&lt;/p&gt;
+&lt;h2 id=&#34;further-thoughts&#34;&gt;Further Thoughts&lt;/h2&gt;
+&lt;p&gt;The above analysis was relatively simple, but a good excuse to take a look at the data made available by Zillow. This is not the end of the story, however. I have made several simplifications here, although on average I would argue they were in favor of home purchases. There additional matters to consider,  which I will take up below. We also only discussed aggregate data. Particular housing may offer other benefits, especially if you have knowledge of some likely future events. For example, a large tech company planning to move to an area tends to increase both rent and housing prices, so purchasing now may be beneficial by locking in today&amp;rsquo;s prices. We also haven&amp;rsquo;t considered whether there are differences in housing stock and location that may outweigh purely financial considerations.&lt;/p&gt;
+&lt;h3 id=&#34;risk-and-other-costs&#34;&gt;Risk and Other Costs&lt;/h3&gt;
+&lt;p&gt;Another item to consider is the question of risk in either scenario. A homeowner incurs somewhat larger risks of on-going expenses that we have conveniently ignored. Roofs, HVAC systems, etc. need maintenance and eventually will need to be repaired. Neither last forever either, so they will each need to be replaced at least once, if not more often, during the 30 years the house is being paid down. A 
+&lt;a href=&#34;https://ipropertymanagement.com/research/hoa-statistics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;majority&lt;/a&gt; of new construction and a large number of existing homes are part of a Home Owners Association (HOA). Being part of an HOA not only increases monthly cost due to HOA fees, but also exposes a homeowner to the risk of special assessments. These are one-time financial obligations on homeowners to cover some expense for the HOA.&lt;/p&gt;
+&lt;p&gt;While a renter may be immune to costs such as these, they are not immune to changing rent prices. By having a fixed-rate mortgage on the other hand, monthly housing expenses stay locked at current rates. Furthermore, while rent is not tax deductible, mortgage interest is. Under current guidelines, up to 750,000 USD in mortgage interest on your primary home can be deducted from your income tax. This is especially valuable during the first 15 years of the loan, when interest accounts for the majority of the mortgage payment.&lt;/p&gt;
+&lt;h3 id=&#34;housing-as-an-investment&#34;&gt;Housing as an Investment&lt;/h3&gt;
+&lt;p&gt;One issue that we have ignored so far is the idea of home purchases as investments. Home prices have historically increased. Each year lived and mortgage paid on a property increases your share in the home&amp;rsquo;s value, otherwise known as equity. Some would argue that even if the monthly cost of homeownership is in excess of the cost of renting an equivalent home, it&amp;rsquo;s worth it in the long run as an investment in your financial future. Proponents may point to homeownership being a key component in long term wealth accrual.&lt;/p&gt;
+&lt;p&gt;Assessing the value of equity growth in wealth building needs to be viewed in opposition to investing the potential price differential. We are only talking about the difference in housing cost being utilized here, not in using additional funds to pay down a mortgage early. This has not been an effective strategy for nearly 30 years.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; The S&amp;amp;P 500&amp;rsquo;s average annual return during the period of 1975-2021 has been 10.2%. Home values on the other hand increased annually by an average of only 4.5% between 1975 and today.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; This would indicate investment in the S&amp;amp;P 500 would be expected to outperform real estate investment for the average person over the long run.&lt;/p&gt;
+&lt;p&gt;The variability of the two is rather different, however. For comparison, we can show a distribution of annual returns from the S&amp;amp;P 500 compared to FRED&amp;rsquo;s All-Transactions House Price Index.&lt;sup id=&#34;fnref:3&#34;&gt;&lt;a href=&#34;#fn:3&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;3&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-histograms-showing-the-distribution-of-annual-returns-of-the-all-transactions-house-price-index-for-north-carolina-and-the-sp-500-for-1976-2021&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/investment_housing_sp_comp_hu4e2264ca40b96fcef6fef1eaaeebef26_27041_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Histograms showing the distribution of annual returns of the All-Transactions House Price Index for North Carolina and the S&amp;amp;amp;P 500 for 1976-2021.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/investment_housing_sp_comp_hu4e2264ca40b96fcef6fef1eaaeebef26_27041_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;960&#34; height=&#34;720&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Histograms showing the distribution of annual returns of the All-Transactions House Price Index for North Carolina and the S&amp;amp;P 500 for 1976-2021.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;While this shows that we can expect greater payoff from stock market investments compared to real estate, this is not helpful if we have to pay for housing and don&amp;rsquo;t have excess funds to throw at the stock market. If the actual monthly cost of homeownership and rent are about equal and max out our available funds, then purchasing a home builds at least &lt;em&gt;some&lt;/em&gt; equity, no matter how small, compared to no investment being made. Only when rent is lower than mortgage costs and fees does it make sense to start comparing rates of return.&lt;/p&gt;
+&lt;p&gt;We should never underestimate the power of compounding, however. Consider the following example: you have the option of purchasing a 400,000 USD home with a 80,000 USD (20%) down payment at 5% interest as a 30 year fixed rate mortgage. Assume no other costs. In total, this housing purchase will cost you approximately 698,000 USD over the course of 30 years.  Assuming 4.53% annual increase in housing value, this leaves you with about 1,553,000 USD in equity at the end. Given your total cost you have made a profit of approximately 855,000 USD. Now compare this to stock market returns, assuming the 10.22% annual growth we found above. Investing the down payment only, with no further payments made, would leave you with approximately 1,695,000 USD after 30 years. To match the amount of equity in our example home after 30 years would require only a 73,500 USD in initial investment. If we only wanted to match the profit of about 855,000 USD with a one-time investment, we would require an initial investment of approximately 42,500 USD.&lt;/p&gt;
+&lt;p&gt;Despite these superior returns from investment, we still need to live somewhere. I have already mentioned that unlike a mortgage payment, rent is not fixed over the 30 year timespan. How much should I expect renting to cost me? Let&amp;rsquo;s assume we invest the entire down payment and rent a home that costs exactly the same as the mortgage would have cost. Assuming once annual 
+&lt;a href=&#34;https://ipropertymanagement.com/research/average-rent-by-year&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;increases in rent of 4.17%&lt;/a&gt;, we spend a total of nearly 1,190,000 USD on rent over the course of 30 years. Given these expenses, the profit from investing the 80,000 USD shrinks to a mere 500,000 USD.&lt;/p&gt;
+&lt;p&gt;This suggests a strategy of minimizing the down payment and investing the difference, if possible. One downside of this is that having a smaller down payment may lead to less favorable mortgage terms. In this second scenario, let&amp;rsquo;s assume that we make a 40,000 USD down payment on a 400,000 USD home with an increased, but still fixed, mortgage rate of 5.25% over 30 years coupled with a 40,000 USD initial investment in the S&amp;amp;P 500 at 10.22% increase annually with no additional investments made. Here we invest a total of approximately 766,000 USD into our home, reducing our profit on the home purchase to approximately 797,000 USD. But our initial 40,000 USD investment has accumulated to about 847,000 USD. This brings our total profit to approximately 1,644,000 USD in this scenario - nearly double the 855,000 USD profit in the 80,000 USD down payment scenario.&lt;/p&gt;
+&lt;h3 id=&#34;last-thoughts&#34;&gt;Last Thoughts&lt;/h3&gt;
+&lt;p&gt;Overall, we see that the more precise we want to be, the more difficult it becomes to estimate an ideal strategy as there are a lot of moving pieces, not all of which can best be approximated by a geographic average value. Given the very different variability in housing value increase compared to stock market returns, it may make sense to generate a large number of random walks to get a better feel for the distribution of outcomes after 30 years. Finally, this entire post has assumed that we remain living in the same home for the entire 30 year life of the mortgage. Many will want to move at some point during their next thirty years, perhaps to make room for a larger  family, to down-size, or to follow a job opportunity. This creates additional costs and considerations for deciding between renting and owning a home.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Average mortgage rates have been below average annual return of the S&amp;amp;P 500 since the 1990s. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:2&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Annual returns of S&amp;amp;P 500 were calculated from data provided by 
+&lt;a href=&#34;https://www.investopedia.com/ask/answers/042415/what-average-annual-return-sp-500.asp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Investopedia&lt;/a&gt;. Annual returns of housing prices were calculated from the All-Transactions House Price Index for North Carolina (FRED time series NCSTHPI). &lt;a href=&#34;#fnref:2&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li id=&#34;fn:3&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;I have chosen this measure for historic house price increases as this index is available on a quarterly basis starting in 1975, unlike Zillow data which only goes back a little more than 20 years. Both US wide data (USSTHPI) and state specific data (e.g., for North Carolina: NCSTHPI) are available from FRED. I will use the North Carolina data set for my comparison. An alternative measure to consider is the median sales price of houses sold in the South census region, available on a quarterly basis starting in 1965 from FRED (MSPS). &lt;a href=&#34;#fnref:3&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Loading Zillow Housing Data in SAS</title>
+      <link>https://dmsenter89.github.io/post/22-08-zillow-data/</link>
+      <pubDate>Mon, 01 Aug 2022 17:21:38 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-08-zillow-data/</guid>
+      <description>&lt;p&gt;Zillow is a well-known website widely used by those searching for a home or curious to find out
+the value of their current home. What you may not know is that Zillow has a dedicated research page.
+To make their website work optimally, they churn through tons of data on the American housing market.
+They share insights they gleaned via 
+&lt;a href=&#34;https://www.zillow.com/research/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;zillow.com/research&lt;/a&gt;. If you
+visit their research  website you&amp;rsquo;ll notice they have a data page where you can download some really
+cool data sets for your own research. They even have an API with which you can load data directly, but
+you&amp;rsquo;ll have to register for access. In this post, we&amp;rsquo;ll look at how to load the CSV files that are
+available for direct download into SAS for analysis.&lt;/p&gt;
+&lt;p&gt;The CSV files can be downloaded 
+&lt;a href=&#34;https://www.zillow.com/research/data/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;. In the example below,
+I&amp;rsquo;m working with the Zillow Home Value Index file for all homes, seasonally adjusted at the ZIP code level.
+Tha file is fairly large. It has data going from January 2000 through June 2022 in more than 27,000 rows of data
+and about 280 columns. Below is an image of the beginning of this file.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;zhvi_data_preview.png&#34; alt=&#34;&#34; title=&#34;The beginning of the of the ZHVI &#39;flagship&#39; data file.&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When working with large CSV files, I find it useful to get a feel for it in the CLI with
+
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;csvkit&lt;/a&gt;. This is especially important when importing
+with a SAS data step, because we need to know the number of columns and their order, amongst other things,
+for our code. To get an overview of the total number of columns and their contents, run&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;csvcut -n Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The output is fairly long, so you may prefer piping to a pager. I don&amp;rsquo;t need all the different identifiers
+in the file, so I&amp;rsquo;m going to exclude those I won&amp;rsquo;t need and put them into a separate, smaller CSV.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# ignore these four columns which I won&#39;t need
+csvcut -C RegionID,SizeRank,RegionType,StateName Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv &amp;gt; Zip_zhvi_small.csv
+# alternatively, also cut down on date columns to only 2022 for debugging 
+csvcut -C RegionID,SizeRank,RegionType,StateName,10-273 Zip_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv &amp;gt; Zip_zhvi_small.csv
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also reduce the file size by using &lt;code&gt;csvgrep&lt;/code&gt; to filter any of the columns. For example, if we only wanted
+the data for North Carolina we could run &lt;code&gt;csvgrep -c State -m NC&lt;/code&gt; in the pipe.&lt;/p&gt;
+&lt;p&gt;For SAS, we need to know the maximum length of string columns so we can allocate the appropriate length to the
+corresponding SAS variables. This is easily done with the csvstat tool:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;csvcut -c Metro,City,CountyName Zip_zhvi_small.csv | csvstat --len
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can also specify the list of columns in csvstat directly, but in my experience that tends to be slower.&lt;/p&gt;
+&lt;p&gt;Alright, now we have everything we need to start on our DATA step! We start with the attribute statement.
+One problem with importing this file is that everyhing is in wide format, with the dates used as headers.
+We will get around this shortly. I have seen people use transpose etc for similar problems online, but this
+is unnecessary if we feel comfortable with the DATA step. We&amp;rsquo;ll start by naming the identifying columns
+just as in the CSV file. For the date columns, we will use a numeric range prefixed by date (&lt;code&gt;date1-date270&lt;/code&gt;).
+You can use csvcut to find the exact number of date columns you have. We will also allocate the same number of
+columns for the ZHVI values, so we&amp;rsquo;ll need to add a &lt;code&gt;val1-val270&lt;/code&gt;. This and the date variable are temporary
+and will be dropped later, in favor of the &lt;code&gt;Date&lt;/code&gt; and &lt;code&gt;ZHVI&lt;/code&gt; variables.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;attrib 
+    ZIP           informat=best12.    format=z5.
+    State         informat=$2.
+    City          informat=$30.
+    Metro         informat=$42.
+    CountyName    informat=$29.
+    date1-date270 informat=YYMMDD10.  format=DATE9.
+    val1-val270   informat=best16.
+    Date                              format=Date9.
+    ZHVI                              format=Dollar16.
+  ;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we will allocate an array to hold &lt;em&gt;all&lt;/em&gt; of the date and ZHVI values during the processing of each row.
+Since the date column won&amp;rsquo;t change, we&amp;rsquo;ll tell SAS to retain its values.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;   retain date1-date270;
+   array d(270) date1-date270;
+   array v(270) val1-val270;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is where the magic happens now. You may not know it, but you are not limited to a single INPUT statement
+in a DATA step. We use this and start by reading in only the first row. Because we use an OUTPUT
+statement later, this reading of row 1 will be processed, but not saved into the output data set.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;if _n_ = 1 then do;
+  input ZIP $ State $ City $ Metro $ CountyName $ date1-date270;
+  PUT _ALL_; /* if you want to see what that looks like */
+end;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With this if clause, the date1 through date270 variables will be populated, and because we used a retain
+statement earlier, these values remain available to us during the processing of every other row. You can
+probably guess where this is going now: we will process each row, and then OUTPUT one line per date which
+we have access to now thanks to our array and the retain statement.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;input ZIP $ State $ City $ Metro $ CountyName $ val1-val270;
+do i=1 to 270;
+  Date  = d(i); /* look up date for column i */
+  ZHVI =  v(i); /* use the corresponding i-th value for ZHVI */
+  OUTPUT;       /* This output creates one line per date column */
+end;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At the end of your data step, don&amp;rsquo;t forget to&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-SAS&#34;&gt;drop i date1-date270 val1-val270;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;so those variables don&amp;rsquo;t clutter your data set. And that&amp;rsquo;s it! You now
+have the data set loaded and available in SAS.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;SAS_data_set.png&#34; alt=&#34;&#34; title=&#34;The beginning of the resulting SAS data set.&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

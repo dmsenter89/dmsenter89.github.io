@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>performance | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/performance/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/performance/index.xml" rel="self" type="application/rss+xml" />
+    <description>performance</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 30 Sep 2022 15:40:00 -0400</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>performance</title>
+      <link>https://dmsenter89.github.io/tag/performance/</link>
+    </image>
+    
+    <item>
+      <title>Does it ever make sense to play the Lottery?</title>
+      <link>https://dmsenter89.github.io/post/22-09-lottery/</link>
+      <pubDate>Fri, 30 Sep 2022 15:40:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-09-lottery/</guid>
+      <description>&lt;p&gt;In a first semester probability course, students encounter combinatorics and point estimates such as the mean and median of a data set. A common example is the low odds of winning the lottery. When discussing the topic of point estimates, students are exposed to the idea of a &amp;ldquo;fair bet&amp;rdquo; or &amp;ldquo;fair game&amp;rdquo; - one in which the expected value of the random variable associated with the game is equal to the cost of participation or zero, depending on if a fixed cost is included in the game or tracked separately. This year, the Mega Millions had a jackpot in excess of one billion dollars. This had me thinking - mathematically, this is likely a fair game. But I still would expect to loose out playing it. In this article, I want to explore this idea further using the Mega Millions lottery as a particular example.&lt;/p&gt;
+&lt;p&gt;Mega Millions is played by a choosing five numbers from 1 to 70 (the white balls) and one number from 1 to 25 (the golden &amp;ldquo;Mega Ball&amp;rdquo;). Five white balls (W) and one golden ball (G) are drawn without replacement twice per week. Prizes are earned by matching the drawn numbers. Payouts generally follow a fixed schedule for everything but the jackpot, at least outside of California where the payouts for all prizes are pari-mutual instead. Below is a table of all possible events as given on the Mega Millions 
+&lt;a href=&#34;https://www.megamillions.com/How-to-Play.aspx&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;website&lt;/a&gt;, sorted by increasing odds.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Event&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Variable&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Value&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Odds&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;5 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_1$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Jackpot&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/302,575,350&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;5 W&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_2$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$1,000,000&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/12,607,306&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_3$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$10,000&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/931,001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;4 W&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_4$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$500&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/38,792&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_5$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$200&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/14,547&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_6$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/693&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3 W&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_7$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$10&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/606&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1 W + G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_8$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/89&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;G&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_9$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1/37&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;No Match&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$x_{10}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;24/1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;the-fair-bet-analysis&#34;&gt;The Fair Bet Analysis&lt;/h2&gt;
+&lt;p&gt;A Fair Bet or Fair game is one in which the expected value of the random variable doesn&amp;rsquo;t favor either the player or the house. Given a cost of 2 USD per game,
+we can say that Mega Millions is fair when $E[X]=2$, or more specifically when&lt;/p&gt;
+&lt;p&gt;$$E[X] = \sum_{i=1}^{10} x_i P(X=x_i) = \frac{n}{302,575,351}  + \sum_{i=2}^{10} x_i P(X=x_i) = 2$$&lt;/p&gt;
+&lt;p&gt;I use Maxima to solve for the jackpot representing a fair game and to print a few representative values of the expected value for some jackpot options.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-maxima&#34;&gt;/* Define Expectation as dependent on n */
+E(n) := n/302575351 + 1000000/12607307 + 10000/931002 + 
+		500/38793 + 200/14548 +  10/694 + 10/607 + 4/90 + 2/38;
+/* solve for fair game */
+float(solve(E(n)=2,n));
+
+/* give expected return for different jackpot values */
+jackpots : [5e7, 1e8, 2.5e8, 5e8, 7.5e8, 1e9, 2e9];
+for i in jackpots do printf(true, &amp;quot;E(~:D) = $~$ ~%&amp;quot;, i, E(i))$
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;From this we learn that to have a fair jackpot, we require $n = 531,123,698.80$. Even with a fair pet, the expected value is very modest. For example, a 2 billion USD jackpot has $E[X]~=6.85$ - less than 5 USD above the ticket price.&lt;/p&gt;
+&lt;h2 id=&#34;how-long-until-we-profit&#34;&gt;How long until we Profit?&lt;/h2&gt;
+&lt;p&gt;Most people don&amp;rsquo;t play the lottery to win small amounts like 5 USD. They want to become millionaires. Given that our expected values are so low, let&amp;rsquo;s take a look at how long it will take us to become rich if we take the lottery game route.&lt;/p&gt;
+&lt;h3 id=&#34;the-geometric-distribution-and-our-lottery&#34;&gt;The Geometric Distribution and Our Lottery&lt;/h3&gt;
+&lt;p&gt;Let&amp;rsquo;s start by considering only the events that would result in a win of a million dollars or more. In other words, events $x_1$ and $x_2$. We have&lt;/p&gt;
+&lt;p&gt;$$P(x_1 \vee x_2) = \frac{315,182,658}{3,814,660,340,689,757} \approx 8.262\times 10^{-8}. $$&lt;/p&gt;
+&lt;p&gt;If we are only interested in this outcome, we can treat our outcome as a Bernoulli variable with $p=P(x_1 \vee x_2)$. Then the expected number of games we need to play to win a million dollars or more is distributed like a geometric with $E[G] = 1/p$. For our specific case:&lt;/p&gt;
+&lt;p&gt;$$ E[G] = \frac 1 p = \frac{3,814,660,340,689,757}{315,182,658} \approx 12,103,014.$$&lt;/p&gt;
+&lt;p&gt;Recall that two games are played per week. Converting this expected number of games to years, it would take approximately $115,977$ years for us to win. Even if one drawing were held each day, we would expect to take more than $33,000$ years to win.&lt;/p&gt;
+&lt;p&gt;Since the CDF of the geometric distribution is well defined, we can use it to estimate the number of games required for a certain likelihood of having a win of at least a million dollars. To have roughly 50% odds of winning, we need to play about $8,400,000$ games of Mega Millions. Note that in this case you would still likely be in the hole since the $1,000,000$ USD jackpot is nearly 24 times more likely than the main jackpot and each game costs 2 USD to play.&lt;/p&gt;
+&lt;h3 id=&#34;simulating-a-lifetime-of-playing&#34;&gt;Simulating a Lifetime of Playing&lt;/h3&gt;
+&lt;p&gt;At this point you might agree that the lottery is not a good get-rich-quick scheme. That alone doesn&amp;rsquo;t mean that you are all but guaranteed to loose money over a lifetime of playing. So let&amp;rsquo;s run some simulations and see what the distribution of our net worth is after taking everything into account. To make things as fair as possible, we will assume a constant jackpot of 750 million USD.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say you spend 50 years playing the Mega Millions at 2 USD for one ticket at each of the two weekly drawings. That comes out to just about $2,609$ weeks or $5,218$ games for a total price of $10,436$ USD. I simulated $50,000$ individuals each playing $5,218$ games for a constant jackpot of $750,000,000$ USD - much higher than the 
+&lt;a href=&#34;https://www.megamillions.com/jackpot-history&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;typical jackpot&lt;/a&gt; and advantageous to the players. This will cost them each $10,436$ USD in ticket costs over the 50 years they play. Yet, despite the simulated lottery being rigged in the players&#39; favor, 99% of my players win less than 600 USD total over this 50 year time period.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Statistic&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Value ($)&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Mean&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,169.43&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SD&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;20,985.05&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Min&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,974.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;25%&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,912.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;50%&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,898.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;75%&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,890.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;99%&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;-9,884.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Max&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1,990,204.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;From these results it is clear that for all but the luckiest few, even just saving the money under a mattress outperforms playing the lottery. You can explore a distribution plot of my simulation with Plotly 
+&lt;a href=&#34;results.html&#34;&gt;here&lt;/a&gt;. Note that this page may take a moment to load due to the many data points. You will need to zoom in on the left-hand side to be able really make anything out.&lt;/p&gt;
+&lt;h4 id=&#34;implementation-note&#34;&gt;Implementation Note&lt;/h4&gt;
+&lt;p&gt;The number of simulations grows quickly given the $5,218$ games we are using. Doing $50,000$ simulations of that many games requires over 260 million random draws. Prototyping in Python often makes sense because of the many features available for analysis and plotting, but this seems like an example where a compiled language might outperform by a considerable amount. I decided to 
+&lt;a href=&#34;https://github.com/dmsenter89/lottery-sims&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;try this out (GitHub)&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;All of the programs were written with an emphasis on simplicity over performance so as to avoid biasing the results. Since the different individuals play their games independently, I wrote both a single-threaded C++ version as well as one utilizing OpenMP&amp;rsquo;s parallel for loop. As alternative compiled languages I added implementations in Go and Rust.&lt;/p&gt;
+&lt;p&gt;For scripting languages I included Python and Julia. In Julia the main loop can trivially be set to run concurrently by prepending &lt;code&gt;Threads.@threads&lt;/code&gt; to the for loop, so inlcuded that as an option as well. This instructs the Julia interpreter to run this loop with the available threads. By default this is one, but can be set higher using an environment variable or by starting Julia with the &lt;code&gt;-t&lt;/code&gt; flag and specifying the desired number of threads.&lt;/p&gt;
+&lt;p&gt;I used 
+&lt;a href=&#34;https://github.com/sharkdp/hyperfine&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hyperfine (GitHub)&lt;/a&gt; to benchmark the performance of my programs in WSL; see output below for details.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;Command&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Mean [s]&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Min [s]&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Max [s]&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;Relative&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;C++ (Single Thread)&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4.602 ± 0.087&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4.514&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;4.828&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.88 ± 0.06&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;C++ (OpenMP)&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.653 ± 0.170&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.506&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3.092&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.08 ± 0.07&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Go&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9.362 ± 0.058&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9.258&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;9.417&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;3.83 ± 0.10&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Julia&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;28.606 ± 0.372&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;28.198&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;29.520&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;11.69 ± 0.33&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Julia (4 Threads)&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;19.016 ± 0.274&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;18.673&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;19.511&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;7.77 ± 0.23&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Python&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;57.727 ± 0.530&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;59.783 ± 3.811&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;57.833&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;70.242&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Rust&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.447 ± 0.062&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.391&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;2.579&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1.00&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;I was surprised by Rust&amp;rsquo;s performance. I only looked up enough Rust to be able to implement this simple example, so I find it surprising that it can keep up with a multi-threaded C++ implementation.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Updates: This blogpost has been updated with new benchmark values. The original post did not include results in Rust.&lt;/em&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

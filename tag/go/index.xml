@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/go/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/go/index.xml" rel="self" type="application/rss+xml" />
+    <description>go</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 23 Nov 2022 16:43:28 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>go</title>
+      <link>https://dmsenter89.github.io/tag/go/</link>
+    </image>
+    
+    <item>
+      <title>CSV2DS</title>
+      <link>https://dmsenter89.github.io/post/22-11-csv2ds/</link>
+      <pubDate>Wed, 23 Nov 2022 16:43:28 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-11-csv2ds/</guid>
+      <description>&lt;p&gt;Creating a minimum working example (MWE) is a relatively frequent task. It is no problem to share an MWE for a feature in SAS because a large number of example data sets are shipped and installed by default. But sometimes you need an MWE because you are having trouble accomplishing a particular task with particular input data. At that point, you will need to share the data or a subset thereof together with your code. In SAS Forums, the preferred way to do this is with a datastep using a datalines/cards statement. Writing these by hand can be tedious since the data source is not typically a datalines statement to begin with. I have previously seen a SAS macro that can be used to generate a datalines statement from a SAS data set, but can&amp;rsquo;t seem to locate it at the moment. The data source I personally encounter the most often in my work is either in CSV or Excel formats. Since the latter can easily be exported to CSV, I decided to write a program that generates a SAS data step given a CSV file.&lt;/p&gt;
+&lt;p&gt;For the implementation language I chose to use 
+&lt;a href=&#34;https://go.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Go&lt;/a&gt;. I started learning about Go back in May when I implemented a 
+&lt;a href=&#34;https://dmsenter89.github.io/post/22-05-go-wordle/&#34;&gt;simple CLI version of Wordle&lt;/a&gt;. Since then I have increasingly used Go to write various small tools at work. It has been a very enjoyable language to write in and distribution via GitHub is easy. If you have the Go toolchain installed, you can get the latest copy of csv2ds using&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;go install github.com/dmsenter89/csv2ds@latest
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The tool is very simple to use. Give it a CSV file or list of CSV files and it will generate a data step for each file using the CSV&amp;rsquo;s base name as the data set name. To ensure compatibility, variable names and the data set name are processed to be compatible with SAS&#39; naming scheme. The tool will attempt to guess if a particular column is numeric or not. If a column is determined to not be numeric, the longest cell will be used to set that variable&amp;rsquo;s length via a length statement to prevent truncation.&lt;/p&gt;
+&lt;p&gt;I often work with the 
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;csvkit&lt;/a&gt; suite of command-line tools. It&amp;rsquo;s a wonderful collection of Python programs that can import data into CSV, generate basic column statistics, and use grep and SQL to extract data from a CSV file, amongst other things. This collection is designed to allow you to pipe the output from one as input to the next. Consider 
+&lt;a href=&#34;https://csvkit.readthedocs.io/en/latest/tutorial/2_examining_the_data.html#csvsort-order-matters&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this example&lt;/a&gt;. Csvcut is used to extract only certain columns from the file data.csv. Then csvgrep is used to subset to use only the data pertaining to one particular county. Then the data is sorted by the total_cost variable and displayed. I wanted my tool to be compatible with this suite, so if &lt;code&gt;-&lt;/code&gt; is passed as the filename, csv2ds will read the contents of STDIN instead. Changing the above csvkit example by replacing csvlook with my tool will generate the corresponding SAS data set:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;csvcut -c county,item_name,total_cost data.csv | csvgrep -c county -m LANCASTER | csvsort -c total_cost -r | csv2ds -
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At this point csv2ds is quite simple, but sufficient for my needs. Some minor intervention may be needed to make the data step template work for your data. Informats like DOLLAR are not recognized as numeric and minor edits would need to be made to the produced template.&lt;/p&gt;
+&lt;p&gt;Checkout my new tool over on 
+&lt;a href=&#34;https://github.com/dmsenter89/csv2ds&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Cross Compiling With Go</title>
+      <link>https://dmsenter89.github.io/post/22-08-cross-compiling-with-go/</link>
+      <pubDate>Thu, 11 Aug 2022 09:15:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-08-cross-compiling-with-go/</guid>
+      <description>&lt;p&gt;A big difference between using compiled languages like C/C++ compared to scripting languages
+like Javascript or Python is that prior to execution, compiled languages require an explicit
+compilation step where the human readable code is translated to machine code for execution,
+the so-called &amp;ldquo;binary&amp;rdquo; of the code. Typically, a separate binary needs to be compiled for
+each target operating system and architecture. Compiling for your own machine is not a problem.
+The difficulty lies in creating binaries for machines that you don&amp;rsquo;t normally use, so you might
+not have an extra Mac lying around just to compile your program on for other Mac users.
+Compiling programs for an operating system or architecture other than the one you are working
+with is called cross-compiling. This would allow a Linux developer to create binaries for
+Windows and Mac computers, for example.&lt;/p&gt;
+&lt;p&gt;For most languages, this requires installing additional development tools and increases the
+complexity of the compilation workflow. I have found Go to be a pleasant exception to this,
+because cross-compilation is built into the standard Go tools. There is no need to learn
+any additional build-tools. All you need to learn about are some system variables that you
+need to set when compiling.&lt;/p&gt;
+&lt;p&gt;Go build tools know which system you are building for by checking the GOOS and GOARCH environment
+variables. If they are unset, the tools fall back to GOHOSTOS and GOHOSTARCH. In other words,
+to change the target OS/architecture for your build, all you have to do is set the GOOS and GOARCH
+variables during the build. So say you want to build a simple program hello.go for a Windows
+computer with the same architecture as your development machine. All you have to do is write&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;GOOS=windows go build hello.go
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;instead of just &lt;code&gt;go build hello.go&lt;/code&gt; and you&amp;rsquo;re good to go. This would produce a &lt;code&gt;hello.exe&lt;/code&gt;
+binary you could copy to a Windows machine to run.&lt;/p&gt;
+&lt;p&gt;To check what combinations of GOOS and GOARCH are valid, run &lt;code&gt;go tool dist list&lt;/code&gt;. To see
+which environment variables Go is currently seeing, run &lt;code&gt;go env&lt;/code&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wordle in Golang</title>
+      <link>https://dmsenter89.github.io/post/22-05-go-wordle/</link>
+      <pubDate>Thu, 05 May 2022 16:30:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/post/22-05-go-wordle/</guid>
+      <description>&lt;p&gt;Lately I&amp;rsquo;ve been playing around with 
+&lt;a href=&#34;https://go.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Go&lt;/a&gt;. I&amp;rsquo;ve read about Go for a few years
+and have been using some software written in Go (this website is built with 
+&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hugo&lt;/a&gt;),
+but never tried it before. So what better way to give Go a shake
+than to write some code. Since Wordle has been popular, I thought I&amp;rsquo;d write a very simple
+Wordle implementation in Go; you can check it out on 
+&lt;a href=&#34;https://github.com/dmsenter89/go-wordle&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.
+It&amp;rsquo;s been a good way for me to get familiar with some of the
+basisc of Go, such as variables and their types, functions, etc. So far I&amp;rsquo;ve been enjoying it.&lt;/p&gt;
+&lt;p&gt;The Go website has a very nicely written 
+&lt;a href=&#34;https://go.dev/doc/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; and
+
+&lt;a href=&#34;https://pkg.go.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;package page&lt;/a&gt;. The 
+&lt;a href=&#34;https://go.dev/play/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Go Playground&lt;/a&gt;
+let&amp;rsquo;s you test out Go in your browser without needing to install anything. I&amp;rsquo;ve also found
+Bodner&amp;rsquo;s &amp;ldquo;
+&lt;a href=&#34;https://www.oreilly.com/library/view/learning-go/9781492077206/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Learning Go&lt;/a&gt;&amp;rdquo; to be helpful.&lt;/p&gt;
+&lt;p&gt;Go is a compiled language with a pretty picky compiler. It won&amp;rsquo;t let you compile code
+with unnecessary imports and variable declarations, which help keeps your code clean.
+Cross-compilation is 
+&lt;a href=&#34;https://freshman.tech/snippets/go/cross-compile-go-programs/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;built-in&lt;/a&gt;.
+While Go is not a common language in scientific computing, the 
+&lt;a href=&#34;https://www.gonum.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;gonum&lt;/a&gt; package
+has implemented a number of important functions and seems to be well developed. I look forward
+to learning more about Go in the future.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
