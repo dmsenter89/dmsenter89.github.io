@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chatgpt | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/chatgpt/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/chatgpt/index.xml" rel="self" type="application/rss+xml" />
+    <description>chatgpt</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Jan 2023 16:57:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>chatgpt</title>
+      <link>https://dmsenter89.github.io/tag/chatgpt/</link>
+    </image>
+    
+    <item>
+      <title>Why I&#39;m Not Worried About ChatGPT</title>
+      <link>https://dmsenter89.github.io/post/23-01-why-im-not-worried-about-chatgpt/</link>
+      <pubDate>Fri, 27 Jan 2023 16:57:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-01-why-im-not-worried-about-chatgpt/</guid>
+      <description>&lt;p&gt;ChatGPT has been all over my newsfeed lately, with a considerable amount of hype. In particular, many are wondering or  even worrying whether the emergence of this technology will threaten jobs with moderate to high education requirments. See for example 
+&lt;a href=&#34;https://www.theatlantic.com/ideas/archive/2023/01/chatgpt-ai-economy-automation-jobs/672767/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;How ChatGPT Will Destabilize White-Collar Work&amp;rdquo; (The Atlantic)&lt;/a&gt;, where Annie Lowrey leads with &amp;ldquo;In the next five years, it is likely that AI will begin to reduce employment for college-educated workers.&amp;rdquo; I do not share these views. In fact, I am somewhat underwhelmed by the threat of ChatGPT for a number of reasons. Since this topic has come up a few times for me lately, I will write down my thoughts here so I can reference them more easily.&lt;/p&gt;
+&lt;h2 id=&#34;chatgpt-cannot-think&#34;&gt;ChatGPT Cannot Think&lt;/h2&gt;
+&lt;p&gt;The first issue I take with many of the AI hype articles is that despite what the news coverage may imply, ChatGPT cannot think. To be honest, when I see articles talking about ChatGPT as &amp;ldquo;intelligent&amp;rdquo; or &amp;ldquo;thinking,&amp;rdquo; the first thing that comes to mind is 
+&lt;a href=&#34;http://smbc-comics.com/comic/2011-08-17&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this SMBC&lt;/a&gt; from 2011-08-17:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.smbc-comics.com/comics/20110817.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;In my view, ChatGPT is a lot like this parrot - except that I do think it is fundamentally different, and ChatGPT is not &amp;ldquo;conscious&amp;rdquo; and does not &amp;ldquo;think&amp;rdquo; in a meaningful way. Despite the many advances made, artificial intelligence (AI) functions differently than a natural intelligence (NI), and in any ChatGPT is not designed to &amp;ldquo;think.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Before giving a big picture view of how a large language model like ChatGPT works, I want to illustrate the limited flexibility of AI with an example from image recognition. An NI can readily distinguish between what is in the foreground and background of an image. Think of an image like this:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Insect_on_blue_flower.jpg/500px-Insect_on_blue_flower.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;A human will have no problem distinguishing between the insect in the image, the flower it is on, and the foliage in the background as distinct objects in different planes. This holds true even if the individual is not familiar with the particular plant or insect in the image. If given additional images of either the insect on a different background or the same background without the insect, we would not mistake the the plant for the insect or the other way around.&lt;/p&gt;
+&lt;p&gt;Now consider an AI model trained to recognize insects. The algorithm doesn&amp;rsquo;t have a concept of &amp;ldquo;insect&amp;rdquo; or &amp;ldquo;plant,&amp;rdquo; per se. Rather, it notices patterns in images that are labeled &amp;ldquo;insect&amp;rdquo; or labeled with a particular insect. The pattern it learns does not depend on it having a concept of &amp;ldquo;insect.&amp;rdquo; What that means in practice, is that our model might learn that the background is equally or even more important than the foreground. If we train our data set with bees on flowers, but not flowers without bees, we may end up with a model that declares flower photos &amp;ldquo;bees.&amp;rdquo; This phenomeon is known in image recognition, and people are actively working on methods around this problem. But it nicely illustrates how AI is not &amp;ldquo;smart,&amp;rdquo; and humans need to do a lot of heavy lifting to get the AI algorithm to perform as intended, even if the application domain is relatively limited. For more information on this application, see 
+&lt;a href=&#34;https://gradientscience.org/background/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this article&lt;/a&gt; from GradientScience.&lt;/p&gt;
+&lt;h2 id=&#34;how-does-it-work&#34;&gt;How does it Work?&lt;/h2&gt;
+&lt;p&gt;With this background, let&amp;rsquo;s get an overview of how models like ChatGPT work. A good summary of the techniques involved is detailed in 
+&lt;a href=&#34;https://www.assemblyai.com/blog/how-chatgpt-actually-works/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post&lt;/a&gt; by AssemblyAI. In simple terms, a model is exposed to large amounts of data in order to learn about the structure of words and how the are aligned in sentences. In principle, this is not too different from the text prediction feature you have on your phone while texting. But this methodology only works to help produce coherent or seemingly coherent sentences by completion. Marked language modeling is a method use to help the model learn about syntax as well to improve the output.&lt;/p&gt;
+&lt;p&gt;What is new with ChatGPT is that in addition labeled training material, it utilizes human feedback to improve its output. Deep down, AI models can be thought of as optimizing some (very complicated) function. This goal function need not necessarily be written down explicitly. OpenAI uses a method where a model gives two possible outputs for a prompt, and then a human judges which is &amp;ldquo;better,&amp;rdquo; somewhat similar to when an optometrist asks you if &amp;ldquo;1&amp;rdquo; or &amp;ldquo;2&amp;rdquo; is better. It then uses this feedback to improve its output iteratively. See 
+&lt;a href=&#34;https://openai.com/blog/deep-reinforcement-learning-from-human-preferences/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this blog post&lt;/a&gt; from OpenAI where they use this methodology to animate a backflip.&lt;/p&gt;
+&lt;p&gt;ChatGPT uses 
+&lt;a href=&#34;https://www.assemblyai.com/blog/how-chatgpt-actually-works/#reinforcement-learning-from-human-feedback&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;three steps&lt;/a&gt; for human feedback based reinforcement learning. You can already imagine some of the issues that can arise from using this method. For one, if human feedback is used to train the model, then we can expect the model to reflect the thoughts and opinions of the labelers to some degree. Labelers may be mistaken and might not be experts in whatever topic they are reviewing. They may be fundamentally mistaken or biased about what we would consider high school-level knowledge.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; This is on top of the issues of the large amount of source text used in the initial training phase. These source texts may vary wildly in style and accuracy. Even humans reviewing an article may not be able to distinguish facts from opinion, let alone a language model using many source texts as input. Which leads us to what I see as a main problem for ChatGPT.&lt;/p&gt;
+&lt;h2 id=&#34;factual-inaccuracies&#34;&gt;Factual Inaccuracies&lt;/h2&gt;
+&lt;p&gt;Despite the confidence exuded by ChatGPTs output, it will readily produce a number of factual inaccuracies or give bad advice when explaining how to do tasks. See for example Avram Piltch&amp;rsquo;s 
+&lt;a href=&#34;https://www.tomshardware.com/news/chatgpt-told-me-break-my-cpu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;I Asked ChatGPT How to Build a PC. It Told Me to Break My CPU&amp;rdquo; (Tom&amp;rsquo;s Hardware)&lt;/a&gt;, where ChatGPT gives instructions for a computer assembly that is potentially damaging to the hardware.&lt;/p&gt;
+&lt;p&gt;Or 
+&lt;a href=&#34;https://toolguyd.com/ai-chatgpt-cordless-drill-recommendation-2023/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this article (ToolGuyd)&lt;/a&gt; where Stuart asked ChatGPT to recommend a cordless powerdrill. ChatGPT made three recommendations. In explaining its recommendations, it gave several tech specs about the recommended products. The only problem is that it got several of these items wrong. It made mistakes about what type of drill a particular model was, whether the battery is included in the particular SKU it listed or not, and how many BPM the model delivers. It also recommended a discontinued model.&lt;/p&gt;
+&lt;p&gt;As a third example, consider 
+&lt;a href=&#34;https://betonit.substack.com/p/chatgpt-takes-my-midterm-and-gets&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post&lt;/a&gt; where economics professor Bryan Caplan attempts to let ChatGPT take one his more recent midterms. It&amp;rsquo;s quite detailed and includes the questions, answers, and grading rubric Bryan used. He gave ChatGPT a D on this exam, substantially below the average grade human students in the class received.&lt;/p&gt;
+&lt;p&gt;I would like to highlight that my argument isn&amp;rsquo;t that ChatGPT gets everything wrong - it doesn&amp;rsquo;t. It can even perform exceptionally well at certain tasks. See 
+&lt;a href=&#34;https://mackinstitute.wharton.upenn.edu/wp-content/uploads/2023/01/Christian-Terwiesch-Chat-GTP.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this white paper&lt;/a&gt; by Christian Terwiesch grading ChatGPT&amp;rsquo;s attempt at the final exam Wharton Business School MBA core course for just one example. A little googling will quickly lead to other examples, such as it passing law school exams or giving decent answers to tech sector interview questions.&lt;/p&gt;
+&lt;p&gt;My concern is that it sounds very confident in its answers, but it is not always trivial for the average person to verify whether or not ChatGPT&amp;rsquo;s output is trustworthy. As Rupert Goodwin 
+&lt;a href=&#34;https://www.theregister.com/2022/12/12/chatgpt_has_mastered_the_confidence/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;put it&lt;/a&gt;, ChatGPT is &amp;ldquo;a Dunning-Kruger effect knowledge simulator par excellence.&amp;rdquo; And that&amp;rsquo;s a problem if people decide to just trust it to produce truth, when ChatGPT has no idea what &amp;ldquo;truth&amp;rdquo; is. It&amp;rsquo;s important to know that OpenAI is aware of this and it even says so on it&amp;rsquo;s 
+&lt;a href=&#34;https://help.openai.com/en/articles/6783457-chatgpt-faq&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAQ page&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Can I trust that the AI is telling me the truth?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;a. ChatGPT is not connected to the internet, and it can occasionally produce incorrect answers. It has limited knowledge of world and events after 2021 and may also occasionally produce harmful instructions or biased content.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;d recommend checking whether responses from the model are accurate or not. If you find an answer is incorrect, please provide that feedback by using the &amp;ldquo;Thumbs Down&amp;rdquo; button.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In my opinion this is reasonable and to be expected. I think some people may get too excited and feel too confident in this technology when it just isn&amp;rsquo;t as reliable as many would wish at this stage. And for those reasons, I don&amp;rsquo;t think it&amp;rsquo;s coming for our jobs any time soon.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt;: If you use ChatGPT, be careful to not give it any sensitive information. OpenAI isn&amp;rsquo;t making this very expensive model available to you for free out of the goodness of their hearts. They&amp;rsquo;re using your interaction with it to 
+&lt;a href=&#34;https://help.openai.com/en/articles/6783457-chatgpt-faq&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;further train the model&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;For a good review of the many ways in which typical adults are uninformed and mistaken about issues contra accepted expert opinion, see: B. Caplan, &lt;em&gt;The Myth of the Rational Voter: Why Democracies Choose Bad Policies&lt;/em&gt;, Princeton University Press, Princeton, NJ, 2007. And B. Caplan, &lt;em&gt;The Case against Education: Why the Education System Is a Waste of Time and Money&lt;/em&gt;, Princeton University Press, Princeton, NJ, 2019. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
