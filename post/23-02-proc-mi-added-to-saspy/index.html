@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="I love using SASPy, but the setup can take a minute. I used to do the setup via the CLI until I started thinking I might be able to just do it straight from a Jupyter notebook.">
+  <meta name="description" content="I&rsquo;m excited to announce that the new SAPy v4.6.0 release includes a pull request of mine that adds PROC MI to the SAS/STAT procedures directly exposed in SASPy. This procedure allows you to analyze missing data patterns and create imputations for missing data.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/22-03-saspy-setup/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/22-03-saspy-setup/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/22-03-saspy-setup/">
-  <meta property="og:title" content="Easy SASPy Setup from Jupyter | Michael&#39;s Site">
-  <meta property="og:description" content="I love using SASPy, but the setup can take a minute. I used to do the setup via the CLI until I started thinking I might be able to just do it straight from a Jupyter notebook."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/">
+  <meta property="og:title" content="PROC MI Added to SASPy | Michael&#39;s Site">
+  <meta property="og:description" content="I&rsquo;m excited to announce that the new SAPy v4.6.0 release includes a pull request of mine that adds PROC MI to the SAS/STAT procedures directly exposed in SASPy. This procedure allows you to analyze missing data patterns and create imputations for missing data."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2022-03-11T08:30:29-04:00">
+      <meta property="article:published_time" content="2023-02-06T14:45:00-05:00">
     
-    <meta property="article:modified_time" content="2022-03-16T08:30:29-04:00">
+    <meta property="article:modified_time" content="2023-02-06T10:20:51-05:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/22-03-saspy-setup/"
+    "@id": "https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/"
   },
-  "headline": "Easy SASPy Setup from Jupyter",
+  "headline": "PROC MI Added to SASPy",
   
-  "datePublished": "2022-03-11T08:30:29-04:00",
-  "dateModified": "2022-03-16T08:30:29-04:00",
+  "datePublished": "2023-02-06T14:45:00-05:00",
+  "dateModified": "2023-02-06T10:20:51-05:00",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "I love using SASPy, but the setup can take a minute. I used to do the setup via the CLI until I started thinking I might be able to just do it straight from a Jupyter notebook."
+  "description": "I\u0026rsquo;m excited to announce that the new SAPy v4.6.0 release includes a pull request of mine that adds PROC MI to the SAS/STAT procedures directly exposed in SASPy. This procedure allows you to analyze missing data patterns and create imputations for missing data."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>Easy SASPy Setup from Jupyter | Michael&#39;s Site</title>
+  <title>PROC MI Added to SASPy | Michael&#39;s Site</title>
 
 </head>
 
@@ -626,7 +626,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Easy SASPy Setup from Jupyter</h1>
+  <h1>PROC MI Added to SASPy</h1>
 
   
 
@@ -647,7 +647,7 @@
           Last updated on
       
     
-    Mar 16, 2022
+    Feb 6, 2023
   </span>
   
 
@@ -656,7 +656,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -665,6 +665,10 @@
   
 
   
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/category/missing-data/">Missing Data</a></span>
   
 
 </div>
@@ -682,6 +686,58 @@
 
 
 
+
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    
+      
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/post/23-02-proc-mi-added-to-saspy/saspy_mi.py" >
+    <i class="fab fa-python "></i>
+    
+  </a>
+
+
+</div>
 
 
   
@@ -692,74 +748,99 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>I love using SASPy, but the setup can take a minute. I used to do the setup via the CLI until I
-started thinking I might be able to just do it straight from a Jupyter notebook. Having just a
-couple of cells in Jupyter notebook makes for easy copy-and-paste and reduces setup time. The code
-below has been tested on both Windows and Linux. As a bonus,
-this also works on  
-<a href="https://colab.research.google.com/" target="_blank" rel="noopener">Google Colab</a>.</p>
-<p>You can easily install packages via pip from Jupyter either by using a shell cell (<code>!</code>) or by
-using the pip magic command: <code>%pip install saspy</code>. Once done, copy and paste the following into
-a code cell and run to create the sascfg_personal.py file:</p>
-<pre><code class="language-python">import saspy, platform
-from pathlib import Path
-
-# get path for configuration file
-cfgpath = saspy.__file__.replace('__init__.py','sascfg_personal.py')
-
-# To pick the path for Java, we need to know whether we're on Windows or not
-if platform.system()=='Windows':
-    print(&quot;Windows detected.&quot;)
-    javapath = !where java
-    authfile = Path(Path.home(),&quot;_authinfo&quot;)
-else:
-    javapath = !which java
-    authfile = Path(Path.home(),&quot;.authinfo&quot;)
-    
-# the `!` command returns a string list, we want only the string
-javapath = javapath[0]
-print(f&quot;Java is present at {javapath}&quot;)
-
-# US home Region configuration string set up via string-replacement.
-# For other server addresses, see https://support.sas.com/ondemand/saspy.html
-cfgtext = f&quot;&quot;&quot;SAS_config_names=['oda']
-oda = {{'java' : '{repr(javapath).strip(&quot;'&quot;)}',
-#US Home Region
-'iomhost' : ['odaws01-usw2.oda.sas.com','odaws02-usw2.oda.sas.com','odaws03-usw2.oda.sas.com','odaws04-usw2.oda.sas.com'],
-'iomport' : 8591,
-'authkey' : 'oda',
-'encoding' : 'utf-8'
-}}&quot;&quot;&quot;
-
-# write the configuration file
-with open(cfgpath, 'w') as file:
-    file.write(cfgtext)
-    print(f&quot;Wrote configuration file to {cfgpath}&quot;)
-    print(f&quot;Content of file: \n```\n{cfgtext}\n```&quot;)
+      <p>I&rsquo;m excited to announce that the new 
+<a href="https://github.com/sassoftware/saspy/releases/tag/v4.6.0" target="_blank" rel="noopener">SAPy v4.6.0</a> release includes a pull request of mine that adds 
+<a href="https://go.documentation.sas.com/doc/en/statug/15.2/statug_mi_toc.htm" target="_blank" rel="noopener">PROC MI</a> to the SAS/STAT procedures directly exposed in SASPy. This procedure allows you to analyze missing data patterns and create imputations for missing data.</p>
+<h2 id="syntax">Syntax</h2>
+<p>PROC MI is accessed via the <code>mi</code> function that has been added to the <code>SASstat</code> class. Like other procedures, the SAS statements in MI are called as keyword arguments to the function whose name matches the SAS 
+<a href="https://go.documentation.sas.com/doc/en/statug/15.2/statug_mi_syntax.htm" target="_blank" rel="noopener">syntax</a>:<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<pre><code class="language-sas">PROC MI options;
+  BY variables;
+  CLASS variables;
+  EM &lt;options&gt;;
+  FCS &lt;options&gt;;
+  FREQ variable;
+  MCMC &lt;options&gt;;
+  MNAR options;
+  MONOTONE &lt;options&gt;;
+  TRANSFORM transform (variables&lt;/ options&gt;) &lt;…transform (variables&lt;/ options&gt;)&gt;;
+  VAR variables;
 </code></pre>
-<p>Optionally, you can set up an authentication file with your username and password. Without this file,
-you&rsquo;ll be prompted for your username and password each time you log in.</p>
-<pre><code class="language-python"># change variables to match your username and password
-omr_user_id = r&quot;max.mustermann@sample.com&quot;
-omr_user_password = r&quot;K5d7#QBPw&quot;
-with open(authfile, &quot;w&quot;) as file:
-    file.write(f&quot;oda user {omr_user_id} password {omr_user_password}&quot;)
+<p>Here is the corresponding function signature in Python:</p>
+<pre><code class="language-python">def mi(self, data: ('SASdata', str) = None,
+        by: (str, list) = None,
+        cls: (str, list) = None,
+        em: str = None,
+        fcs: str = None,
+        freq: str = None,
+        mcmc: str = None,
+        mnar: str = None,
+        monotone: str = None,
+        transform: str = None,
+        var: str = None,
+        procopts: str = None,
+        stmtpassthrough: str = None,
+        **kwargs: dict) -&gt; 'SASresults':
 </code></pre>
-<p>And that&rsquo;s it! You&rsquo;re now ready to connect to SASPy. In my experience you don&rsquo;t even need to restart
-the kernel to begin work with SAS on ODA. You can try the following snippet in a new cell:</p>
-<pre><code class="language-python"># starts a new SAS session with the `oda` configuration we set up
-sas_session = saspy.SASsession(cfgname='oda')
+<p>Statements  like <code>EM</code> or <code>MCMC</code>, which can stand alone in SAS, are called with an empty string argument in Python.</p>
+<h2 id="basic-example">Basic Example</h2>
+<!-- 
+```python saspy_mi.py
+#!/usr/bin/env python3
+#
+# Example: how to access PROC MI with SASPy. To accompany
+#   dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy
+# 
+# Author: Michael Senter, PhD
 
-# load a SAS data set and make a scatter plot
-cars = sas_session.sasdata('cars', 'sashelp')
-cars.scatter(x='msrp', y='horsepower')
+import saspy
 
-# directly run SAS code to print a table
-sas_session.submitLST(&quot;proc print data=sashelp.cars(obs=6); run;&quot;)
 
-# quit SAS connection
-sas_session.endsas()
+# starting the SAS Session
+<<<session>>>
+
+<<<procmi>>>
+
+<<<sasdata>>>
+
+
+# ending the SAS session 
+sas.endsas()
+```
+-->
+<p>To use the new MI functionality, make sure you have updated to the newest SASPy release. In addition to starting  a SAS Session as per usual, you will also want to enable access to the SAS/STAT procedures:</p>
+<pre><code class="language-python">sas = saspy.SASsession()  # loads a session using your default profile
+stat = sas.sasstat()      # gives access to SAS/STAT procedures 
 </code></pre>
+<p>Once these session objects are loaded, you can start using the mi function with <code>stat.mi</code>. The simplest possible call is to invoke MI with a built-in data set and all defaults as <code>stat.mi(data='sashelp.heart')</code>. For best results, store the output in a SASResults object. From there you can access the SAS log associated with the function call (<code>LOG</code>) as well as all ODS Output using the ODS 
+<a href="https://go.documentation.sas.com/doc/en/statug/15.2/statug_mi_details82.htm" target="_blank" rel="noopener">table names</a> in all caps. The default uses the EM method with 25 imputations.</p>
+<p>A more realistic use might look something like this:</p>
+<pre><code class="language-python">ods = stat.mi(data='sashelp.heart', em=&quot;outem=outem&quot;,
+              var=&quot;Cholesterol Height Smoking Weight&quot;,
+              procopts=&quot;simple nimpute=20 out=imp&quot;)
+</code></pre>
+<p>This is equivalent to running</p>
+<pre><code class="language-sas">proc mi data=sashelp.heart simple nimpute=20 out=imp;
+    em outem=outem;
+    var Cholesterol Height Smoking Weight;
+run;
+</code></pre>
+<p>in SAS. This call uses the EM procedure to impute values for the cholesterol, height, smoking, and weight variables. The <code>simple</code> option displays univariate statistics and correlations. The <code>outem</code> option saves a data set containing the computed MLE to <code>work.outem</code>. The imputed data sets are saved to <code>work.imp</code>, which contains the additional variable <code>_IMPUTATION_</code> with the imputation number. This can be used as a <code>by</code> variable in other procedures, and the results can later be pooled using PROC MIANALYZE.</p>
+<p>The resulting <code>ods</code> object for our example exposes the following ODS outputs to your Python instance, in addition to the log:</p>
+<pre><code>['CORR', 'EMESTIMATES', 'EMINITESTIMATES', 'EMPOSTESTIMATES', 'MISSPATTERN', 'MODELINFO', 'PARAMETERESTIMATES', 'UNIVARIATE', 'VARIANCEINFO']
+</code></pre>
+<p>See the SAS documentation for details. To use the imputed data with Python tools, create a SAS data object. We&rsquo;ll also print the first few entries so we can see what it looks like:</p>
+<pre><code class="language-python">imputed = sas.sasdata(table=&quot;imp&quot;, libref=&quot;work&quot;)
+imputed.head()
+</code></pre>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>One exception is the SAS <code>class</code> statement, which is implemented as <code>cls</code> due to <code>class</code> being a reserved keyword in Python. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
     </div>
 
@@ -772,9 +853,11 @@ sas_session.endsas()
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/jupyter/">jupyter</a>
+  <a class="badge badge-light" href="/tag/missing-data/">missing-data</a>
   
-  <a class="badge badge-light" href="/tag/oda/">oda</a>
+  <a class="badge badge-light" href="/tag/python/">python</a>
+  
+  <a class="badge badge-light" href="/tag/sas/">sas</a>
   
   <a class="badge badge-light" href="/tag/saspy/">saspy</a>
   
@@ -793,7 +876,7 @@ sas_session.endsas()
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/22-03-saspy-setup/&amp;text=Easy%20SASPy%20Setup%20from%20Jupyter" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/&amp;text=PROC%20MI%20Added%20to%20SASPy" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -806,7 +889,7 @@ sas_session.endsas()
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/22-03-saspy-setup/&amp;t=Easy%20SASPy%20Setup%20from%20Jupyter" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/&amp;t=PROC%20MI%20Added%20to%20SASPy" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -819,7 +902,7 @@ sas_session.endsas()
       
       
       <li>
-        <a href="mailto:?subject=Easy%20SASPy%20Setup%20from%20Jupyter&amp;body=https://dmsenter89.github.io/post/22-03-saspy-setup/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=PROC%20MI%20Added%20to%20SASPy&amp;body=https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -832,7 +915,7 @@ sas_session.endsas()
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/22-03-saspy-setup/&amp;title=Easy%20SASPy%20Setup%20from%20Jupyter" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/&amp;title=PROC%20MI%20Added%20to%20SASPy" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -845,7 +928,7 @@ sas_session.endsas()
       
       
       <li>
-        <a href="whatsapp://send?text=Easy%20SASPy%20Setup%20from%20Jupyter%20https://dmsenter89.github.io/post/22-03-saspy-setup/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=PROC%20MI%20Added%20to%20SASPy%20https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -858,7 +941,7 @@ sas_session.endsas()
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/22-03-saspy-setup/&amp;title=Easy%20SASPy%20Setup%20from%20Jupyter" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/&amp;title=PROC%20MI%20Added%20to%20SASPy" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1010,11 +1093,15 @@ sas_session.endsas()
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/23-01-sas-oda-update-saspy-impact/">Dec22 SAS ODA Update - Impact on SASPy Users</a></li>
-      
       <li><a href="/post/21-06-youtube-tutorial/">SASPy Video Tutorial</a></li>
       
-      <li><a href="/post/23-02-proc-mi-added-to-saspy/">PROC MI Added to SASPy</a></li>
+      <li><a href="/post/23-01-missing-data-mechanisms/">Missing Data Mechanisms</a></li>
+      
+      <li><a href="/post/23-01-sas-oda-update-saspy-impact/">Dec22 SAS ODA Update - Impact on SASPy Users</a></li>
+      
+      <li><a href="/post/22-11-sas-markdown-for-reproducibility/">SAS Markdown for Reproducibility</a></li>
+      
+      <li><a href="/post/22-08-zillow-data/">Loading Zillow Housing Data in SAS</a></li>
       
     </ul>
   </div>

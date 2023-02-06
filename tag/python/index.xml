@@ -5,12 +5,113 @@
     <link>https://dmsenter89.github.io/tag/python/</link>
       <atom:link href="https://dmsenter89.github.io/tag/python/index.xml" rel="self" type="application/rss+xml" />
     <description>python</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 19 May 2022 21:45:46 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 06 Feb 2023 14:45:00 -0500</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>python</title>
       <link>https://dmsenter89.github.io/tag/python/</link>
     </image>
+    
+    <item>
+      <title>PROC MI Added to SASPy</title>
+      <link>https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/</link>
+      <pubDate>Mon, 06 Feb 2023 14:45:00 -0500</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m excited to announce that the new 
+&lt;a href=&#34;https://github.com/sassoftware/saspy/releases/tag/v4.6.0&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAPy v4.6.0&lt;/a&gt; release includes a pull request of mine that adds 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/statug/15.2/statug_mi_toc.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PROC MI&lt;/a&gt; to the SAS/STAT procedures directly exposed in SASPy. This procedure allows you to analyze missing data patterns and create imputations for missing data.&lt;/p&gt;
+&lt;h2 id=&#34;syntax&#34;&gt;Syntax&lt;/h2&gt;
+&lt;p&gt;PROC MI is accessed via the &lt;code&gt;mi&lt;/code&gt; function that has been added to the &lt;code&gt;SASstat&lt;/code&gt; class. Like other procedures, the SAS statements in MI are called as keyword arguments to the function whose name matches the SAS 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/statug/15.2/statug_mi_syntax.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;syntax&lt;/a&gt;:&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;PROC MI options;
+  BY variables;
+  CLASS variables;
+  EM &amp;lt;options&amp;gt;;
+  FCS &amp;lt;options&amp;gt;;
+  FREQ variable;
+  MCMC &amp;lt;options&amp;gt;;
+  MNAR options;
+  MONOTONE &amp;lt;options&amp;gt;;
+  TRANSFORM transform (variables&amp;lt;/ options&amp;gt;) &amp;lt;…transform (variables&amp;lt;/ options&amp;gt;)&amp;gt;;
+  VAR variables;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here is the corresponding function signature in Python:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;def mi(self, data: (&#39;SASdata&#39;, str) = None,
+        by: (str, list) = None,
+        cls: (str, list) = None,
+        em: str = None,
+        fcs: str = None,
+        freq: str = None,
+        mcmc: str = None,
+        mnar: str = None,
+        monotone: str = None,
+        transform: str = None,
+        var: str = None,
+        procopts: str = None,
+        stmtpassthrough: str = None,
+        **kwargs: dict) -&amp;gt; &#39;SASresults&#39;:
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Statements  like &lt;code&gt;EM&lt;/code&gt; or &lt;code&gt;MCMC&lt;/code&gt;, which can stand alone in SAS, are called with an empty string argument in Python.&lt;/p&gt;
+&lt;h2 id=&#34;basic-example&#34;&gt;Basic Example&lt;/h2&gt;
+&lt;!-- 
+```python saspy_mi.py
+#!/usr/bin/env python3
+#
+# Example: how to access PROC MI with SASPy. To accompany
+#   dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy
+# 
+# Author: Michael Senter, PhD
+
+import saspy
+
+
+# starting the SAS Session
+&lt;&lt;&lt;session&gt;&gt;&gt;
+
+&lt;&lt;&lt;procmi&gt;&gt;&gt;
+
+&lt;&lt;&lt;sasdata&gt;&gt;&gt;
+
+
+# ending the SAS session 
+sas.endsas()
+```
+--&gt;
+&lt;p&gt;To use the new MI functionality, make sure you have updated to the newest SASPy release. In addition to starting  a SAS Session as per usual, you will also want to enable access to the SAS/STAT procedures:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;sas = saspy.SASsession()  # loads a session using your default profile
+stat = sas.sasstat()      # gives access to SAS/STAT procedures 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once these session objects are loaded, you can start using the mi function with &lt;code&gt;stat.mi&lt;/code&gt;. The simplest possible call is to invoke MI with a built-in data set and all defaults as &lt;code&gt;stat.mi(data=&#39;sashelp.heart&#39;)&lt;/code&gt;. For best results, store the output in a SASResults object. From there you can access the SAS log associated with the function call (&lt;code&gt;LOG&lt;/code&gt;) as well as all ODS Output using the ODS 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/statug/15.2/statug_mi_details82.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;table names&lt;/a&gt; in all caps. The default uses the EM method with 25 imputations.&lt;/p&gt;
+&lt;p&gt;A more realistic use might look something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ods = stat.mi(data=&#39;sashelp.heart&#39;, em=&amp;quot;outem=outem&amp;quot;,
+              var=&amp;quot;Cholesterol Height Smoking Weight&amp;quot;,
+              procopts=&amp;quot;simple nimpute=20 out=imp&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This is equivalent to running&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mi data=sashelp.heart simple nimpute=20 out=imp;
+    em outem=outem;
+    var Cholesterol Height Smoking Weight;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;in SAS. This call uses the EM procedure to impute values for the cholesterol, height, smoking, and weight variables. The &lt;code&gt;simple&lt;/code&gt; option displays univariate statistics and correlations. The &lt;code&gt;outem&lt;/code&gt; option saves a data set containing the computed MLE to &lt;code&gt;work.outem&lt;/code&gt;. The imputed data sets are saved to &lt;code&gt;work.imp&lt;/code&gt;, which contains the additional variable &lt;code&gt;_IMPUTATION_&lt;/code&gt; with the imputation number. This can be used as a &lt;code&gt;by&lt;/code&gt; variable in other procedures, and the results can later be pooled using PROC MIANALYZE.&lt;/p&gt;
+&lt;p&gt;The resulting &lt;code&gt;ods&lt;/code&gt; object for our example exposes the following ODS outputs to your Python instance, in addition to the log:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[&#39;CORR&#39;, &#39;EMESTIMATES&#39;, &#39;EMINITESTIMATES&#39;, &#39;EMPOSTESTIMATES&#39;, &#39;MISSPATTERN&#39;, &#39;MODELINFO&#39;, &#39;PARAMETERESTIMATES&#39;, &#39;UNIVARIATE&#39;, &#39;VARIANCEINFO&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See the SAS documentation for details. To use the imputed data with Python tools, create a SAS data object. We&amp;rsquo;ll also print the first few entries so we can see what it looks like:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;imputed = sas.sasdata(table=&amp;quot;imp&amp;quot;, libref=&amp;quot;work&amp;quot;)
+imputed.head()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;One exception is the SAS &lt;code&gt;class&lt;/code&gt; statement, which is implemented as &lt;code&gt;cls&lt;/code&gt; due to &lt;code&gt;class&lt;/code&gt; being a reserved keyword in Python. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
     
     <item>
       <title>Conditional RegEx Matching with Python</title>
