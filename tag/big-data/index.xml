@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>big-data | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/big-data/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/big-data/index.xml" rel="self" type="application/rss+xml" />
+    <description>big-data</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>big-data</title>
+      <link>https://dmsenter89.github.io/tag/big-data/</link>
+    </image>
+    
+    <item>
+      <title>Takeaways - &#39;Big Data Is Dead&#39;</title>
+      <link>https://dmsenter89.github.io/post/23-03-takeaways-big-data-is-dead/</link>
+      <pubDate>Wed, 22 Mar 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-03-takeaways-big-data-is-dead/</guid>
+      <description>&lt;p&gt;I recently read a great 
+&lt;a href=&#34;https://motherduck.com/blog/big-data-is-dead/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; by Jordan Tigani about Big Data. While Jordan&amp;rsquo;s post focuses on enterprise needs, I believe it contains relevant insights to individual researchers as well.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;ve had any exposure to the technology space in the past decade, you will have heard of big data. Advances in storage capabilities have unleashed a massive data collection effort across the board. Everyone was excited and assumed that soon we would be completely inundated by data. New methods and technology were needed so we won&amp;rsquo;t drown in all that data and lose out on important insights along the way.&lt;/p&gt;
+&lt;p&gt;While the amount of data stored has grown significantly, it has not grown as massively as many had feared. Jordan mentions that most enterprises require approximately 100 GB of storage for their data warehousing needs. More interesting to me though is the mentioned difference between compute and storage needs. In his experience, the vast majority of compute queries used 100 MB or less of data - even for companies with terrabytes of data in storage.&lt;/p&gt;
+&lt;p&gt;Intuitively this should make sense. As data accumulate, a large portion of it will be historic and won&amp;rsquo;t need continuing re-analyis. There are also many techniques that have been developed to update models as data come in, so that you don&amp;rsquo;t need to re-run the entire modeling process each time you get new data, further reducing compute needs. A good example are large language models like ChatGPT. Training the model requires massive amounts of data and compute capabilities, but once the model is trained, storing and working with the computed weights is nearly trivial by comparison.&lt;/p&gt;
+&lt;p&gt;So far for the blog post. Let&amp;rsquo;s turn to the academic space. The rising popularity of big data and big data concepts has started spilling over into academic research outside of cs/math/stats as well. I encounter incrising numbers of academics in other fields referring to their data as &amp;ldquo;big&amp;rdquo; or aspiring to have &amp;ldquo;big data.&amp;rdquo; The numbers in Jordan&amp;rsquo;s post are a good reminder of what we are actually talking about when discussing big data and related concepts. Jordan quotes the definition that I tend to give researchers that aren&amp;rsquo;t familiar with the big data field: big data is &amp;ldquo;whatever doesn&amp;rsquo;t fit on a single machine.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Using that definition, average researchers hoping for &amp;ldquo;big data&amp;rdquo; run into the issue of massive improvements in storage and RAM on consumer grade laptops. Hundreds of gigabytes of SSD storage are the norm and laptop reviews these days frequently complain if a laptop is equipped with less than 8 GB of RAM. Outgrowing those needs will be challening for individual researchers or small teams of researchers in most fields, considering an Excel file with 360,000 observations and 90 variables is still only about 90 MB.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; If you&amp;rsquo;re able to use Excel, you are very, very far removed from having big data - even if your data set is significantly larger than what is typical in your field.&lt;/p&gt;
+&lt;p&gt;But that&amp;rsquo;s frankly not a bad thing. Most research doesn&amp;rsquo;t require big data. Acquiring &lt;em&gt;quality&lt;/em&gt; big data is also very difficult. As is dealing with big data tools and infrastructure if you&amp;rsquo;re not used to it. And that&amp;rsquo;s not even touching on the analytical methodology relevant to big data. So most researchers who aren&amp;rsquo;t already in the big data field probably shouldn&amp;rsquo;t worry about it.&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;Tigani, J. (2023), &amp;ldquo;Big Data is Dead&amp;rdquo;, MotherDuck, Available at 
+&lt;a href=&#34;http://web.archive.org/web/20230318062005/https://motherduck.com/blog/big-data-is-dead/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;motherduck.com/blog/big-data-is-dead&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;See 
+&lt;a href=&#34;https://www.quora.com/Roughly-how-big-is-an-Excel-file-containing-1-million-rows-and-20-columns&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this quora answer&lt;/a&gt;. For illustration purposes only. Don&amp;rsquo;t use Excel for that many rows/columns. Just avoid Excel in general. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
