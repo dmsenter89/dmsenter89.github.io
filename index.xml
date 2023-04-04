@@ -5,12 +5,47 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 22 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 04 Apr 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Sharing SSH Keys With a Devcontainer</title>
+      <link>https://dmsenter89.github.io/post/23-04-sharing-ssh-keys-with-devcontainer/</link>
+      <pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-04-sharing-ssh-keys-with-devcontainer/</guid>
+      <description>&lt;p&gt;VS Code devcontainers are a great resource for creating reusable containers to share between developers on the same project. When properly setup, it automatically passes your SSH credentials to the container. When this is not set up, the git push/pull functionality in VS Code won&amp;rsquo;t work (you will still be able to make commits in the devcontainer and then push/pull from the CLI you launched Code with).&lt;/p&gt;
+&lt;p&gt;The way to do this is to use an SSH agent to forward your credentials. On most systems these aren&amp;rsquo;t started automatically, so for convenience you will probably want to add the start up to your &lt;code&gt;.bash_profile&lt;/code&gt; or &lt;code&gt;.bashrc&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;I have found the following useful; it includes a short check to make sure you aren&amp;rsquo;t running multiple ssh-agents in one session:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;SSH_ENV=&amp;quot;$HOME/.ssh/agent-environment&amp;quot;
+
+function start_agent {
+    echo &amp;quot;Initialising new SSH agent...&amp;quot;
+    /usr/bin/ssh-agent | sed &#39;s/^echo/#echo/&#39; &amp;gt; &amp;quot;${SSH_ENV}&amp;quot;
+    echo succeeded
+    chmod 600 &amp;quot;${SSH_ENV}&amp;quot;
+    . &amp;quot;${SSH_ENV}&amp;quot; &amp;gt; /dev/null
+    /usr/bin/ssh-add;
+}
+
+# Source SSH settings, if applicable
+if [ -f &amp;quot;${SSH_ENV}&amp;quot; ]; then
+    . &amp;quot;${SSH_ENV}&amp;quot; &amp;gt; /dev/null
+    ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ &amp;gt; /dev/null || {
+        start_agent;
+    }
+else
+    start_agent;
+fi
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can verify that your keys are working by running &lt;code&gt;ssh-add -l&lt;/code&gt; from the VS Code terminal. This should print your host SSH key.&lt;/p&gt;
+&lt;p&gt;See also the 
+&lt;a href=&#34;https://code.visualstudio.com/remote/advancedcontainers/sharing-git-credentials&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;official documentation&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Takeaways - &#39;Big Data Is Dead&#39;</title>
