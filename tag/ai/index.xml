@@ -5,7 +5,7 @@
     <link>https://dmsenter89.github.io/tag/ai/</link>
       <atom:link href="https://dmsenter89.github.io/tag/ai/index.xml" rel="self" type="application/rss+xml" />
     <description>ai</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Jan 2023 16:57:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 27 Jan 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>ai</title>
@@ -15,7 +15,7 @@
     <item>
       <title>Why I&#39;m Not Worried About ChatGPT</title>
       <link>https://dmsenter89.github.io/post/23-01-why-im-not-worried-about-chatgpt/</link>
-      <pubDate>Fri, 27 Jan 2023 16:57:00 +0000</pubDate>
+      <pubDate>Fri, 27 Jan 2023 00:00:00 +0000</pubDate>
       <guid>https://dmsenter89.github.io/post/23-01-why-im-not-worried-about-chatgpt/</guid>
       <description>&lt;p&gt;ChatGPT has been all over my newsfeed lately, with a considerable amount of hype. In particular, many are wondering or  even worrying whether the emergence of this technology will threaten jobs with moderate to high education requirments. See for example 
 &lt;a href=&#34;https://www.theatlantic.com/ideas/archive/2023/01/chatgpt-ai-economy-automation-jobs/672767/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;How ChatGPT Will Destabilize White-Collar Work&amp;rdquo; (The Atlantic)&lt;/a&gt;, where Annie Lowrey leads with &amp;ldquo;In the next five years, it is likely that AI will begin to reduce employment for college-educated workers.&amp;rdquo; I do not share these views. In fact, I am somewhat underwhelmed by the threat of ChatGPT for a number of reasons. Since this topic has come up a few times for me lately, I will write down my thoughts here so I can reference them more easily.&lt;/p&gt;
@@ -56,11 +56,13 @@
 &lt;p&gt;We&amp;rsquo;d recommend checking whether responses from the model are accurate or not. If you find an answer is incorrect, please provide that feedback by using the &amp;ldquo;Thumbs Down&amp;rdquo; button.&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;In my opinion this is reasonable and to be expected. I think some people may get too excited and feel too confident in this technology when it just isn&amp;rsquo;t as reliable as many would wish at this stage. And for those reasons, I don&amp;rsquo;t think it&amp;rsquo;s coming for our jobs any time soon.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt;: If you use ChatGPT, be careful to not give it any sensitive information. OpenAI isn&amp;rsquo;t making this very expensive model available to you for free out of the goodness of their hearts. They&amp;rsquo;re using your interaction with it to 
+&lt;p&gt;&lt;em&gt;Note:&lt;/em&gt; If you use ChatGPT, be careful to not give it any sensitive information. OpenAI isn&amp;rsquo;t making this very expensive model available to you for free out of the goodness of their hearts. They&amp;rsquo;re using your interaction with it to 
 &lt;a href=&#34;https://help.openai.com/en/articles/6783457-chatgpt-faq&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;further train the model&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Update 3/21:&lt;/em&gt; There is a 
 &lt;a href=&#34;http://web.archive.org/web/20230318145629/https://nymag.com/intelligencer/article/ai-artificial-intelligence-chatbots-emily-m-bender.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;good article&lt;/a&gt; in the New Yorker regarding my point that ChatGPT doesn&amp;rsquo;t &amp;ldquo;think.&amp;rdquo; This is &lt;em&gt;contra&lt;/em&gt; Daniel Miessler&amp;rsquo;s 
 &lt;a href=&#34;https://danielmiessler.com/blog/yes-gpts-llms-understand-argument/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;argument&lt;/a&gt; that ChatGPT and similar models exhibit &amp;ldquo;understanding.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Update 4/4:&lt;/em&gt; And here a 
+&lt;a href=&#34;https://fakenous.substack.com/p/how-much-should-you-freak-out-about&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;good post&lt;/a&gt; by Michael Huemer on this issue.&lt;/p&gt;
 &lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
 &lt;hr&gt;
 &lt;ol&gt;
