@@ -5,12 +5,28 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 05 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 02 Jun 2023 12:00:00 -0400</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>CMSRP Data Analytics Workshop</title>
+      <link>https://dmsenter89.github.io/talk/23-cmsrp-data-analytics-workshop/</link>
+      <pubDate>Fri, 02 Jun 2023 12:00:00 -0400</pubDate>
+      <guid>https://dmsenter89.github.io/talk/23-cmsrp-data-analytics-workshop/</guid>
+      <description>&lt;p&gt;This 1-hour workshop is intended to help funded 
+&lt;a href=&#34;https://www.med.unc.edu/omsr/resources-for-students/research-programs/carolina-medical-student-research-program-cmsrp-1/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CMSRP&lt;/a&gt; students prepare for their summer research project. Current best practices in data analytics will be discussed, with emphasis on the pre-analysis phase of the research cycle. Topics covered include the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using scientific knowledge to guide variable and model selection.&lt;/li&gt;
+&lt;li&gt;Best practices for data collection, storage, and documentation.&lt;/li&gt;
+&lt;li&gt;Validating data and dealing with formatting issues.&lt;/li&gt;
+&lt;li&gt;Reporting and analysis of missing data.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Statistical Tests as Linear Models</title>
