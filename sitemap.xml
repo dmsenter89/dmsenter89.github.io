@@ -1,769 +1,475 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://dmsenter89.github.io/talk/23-cmsrp-data-analytics-workshop/</loc>
     <lastmod>2023-06-02T12:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/</loc>
     <lastmod>2023-06-02T12:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/talk/</loc>
     <lastmod>2023-06-02T12:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://dmsenter89.github.io/tag/book/</loc>
+    <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/tag/deep-work/</loc>
+    <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/</loc>
-    <lastmod>2023-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+    <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/tag/summary/</loc>
+    <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/tags/</loc>
+    <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/tag/takeaways/</loc>
+    <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/post/23-04-takeaways-deep-work/</loc>
+    <lastmod>2023-04-13T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/23-04-statistical-tests-as-linear-models/</loc>
     <lastmod>2023-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/23-04-sharing-ssh-keys-with-devcontainer/</loc>
     <lastmod>2023-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/big-data/</loc>
     <lastmod>2023-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/blog/</loc>
     <lastmod>2023-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dmsenter89.github.io/tags/</loc>
-    <lastmod>2023-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dmsenter89.github.io/tag/takeaways/</loc>
-    <lastmod>2023-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/23-03-takeaways-big-data-is-dead/</loc>
     <lastmod>2023-03-22T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/categories/</loc>
     <lastmod>2023-02-06T14:45:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/category/missing-data/</loc>
     <lastmod>2023-02-06T14:45:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/missing-data/</loc>
     <lastmod>2023-02-06T14:45:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/23-02-proc-mi-added-to-saspy/</loc>
     <lastmod>2023-02-06T14:45:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/python/</loc>
     <lastmod>2023-02-06T14:45:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/sas/</loc>
     <lastmod>2023-02-06T14:45:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/saspy/</loc>
     <lastmod>2023-02-06T14:45:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/ai/</loc>
     <lastmod>2023-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/chatgpt/</loc>
     <lastmod>2023-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/machine-learning/</loc>
     <lastmod>2023-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/opinion/</loc>
     <lastmod>2023-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/23-01-why-im-not-worried-about-chatgpt/</loc>
     <lastmod>2023-04-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/23-01-sas-oda-update-saspy-impact/</loc>
     <lastmod>2023-01-09T15:20:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/oda/</loc>
     <lastmod>2023-01-09T15:20:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/containers/</loc>
     <lastmod>2023-01-06T19:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/linux/</loc>
     <lastmod>2023-01-06T19:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/networking/</loc>
     <lastmod>2023-01-06T19:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/23-01-virtual-lab/</loc>
     <lastmod>2023-01-06T19:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/virtual-lab/</loc>
     <lastmod>2023-01-06T19:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/</loc>
     <lastmod>2023-01-03T10:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/simulation/</loc>
     <lastmod>2023-01-03T10:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/cli/</loc>
     <lastmod>2023-01-03T10:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-12-some-cli-tools/</loc>
     <lastmod>2023-01-03T10:30:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/csv/</loc>
     <lastmod>2022-11-23T16:43:28+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-11-csv2ds/</loc>
     <lastmod>2022-11-23T16:43:28+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/data-step/</loc>
     <lastmod>2022-11-23T16:43:28+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/go/</loc>
     <lastmod>2022-11-23T16:43:28+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/archlinux/</loc>
     <lastmod>2022-11-14T22:34:25-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/fedora/</loc>
     <lastmod>2022-11-14T22:34:25-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-11-setup-an-arbitrary-wsl2-distro/</loc>
     <lastmod>2022-11-14T22:34:25-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/windows/</loc>
     <lastmod>2022-11-14T22:34:25-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/wsl/</loc>
     <lastmod>2022-11-14T22:34:25-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/knitr/</loc>
     <lastmod>2022-11-11T15:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/reproducibility/</loc>
     <lastmod>2022-11-11T15:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/rstudio/</loc>
     <lastmod>2022-11-11T15:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/</loc>
     <lastmod>2022-11-11T15:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/sasmarkdown/</loc>
     <lastmod>2022-11-11T15:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/analysis/</loc>
     <lastmod>2022-10-20T13:20:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-09-lottery/</loc>
     <lastmod>2022-10-20T13:20:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/performance/</loc>
     <lastmod>2022-10-20T13:20:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/probability/</loc>
     <lastmod>2022-10-20T13:20:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-09-life-expectancy/</loc>
     <lastmod>2022-09-02T13:11:30+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/life-expectancy/</loc>
     <lastmod>2022-09-02T13:11:30+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/mortality/</loc>
     <lastmod>2022-09-02T13:11:30+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/r/</loc>
     <lastmod>2022-09-02T13:11:30+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/retirement/</loc>
     <lastmod>2022-09-02T13:11:30+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/housing/</loc>
     <lastmod>2022-08-20T16:21:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-08-should-you-buy-or-rent/</loc>
     <lastmod>2022-08-20T16:21:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/mortgage/</loc>
     <lastmod>2022-08-20T16:21:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/zillow/</loc>
     <lastmod>2022-08-20T16:21:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-08-cross-compiling-with-go/</loc>
     <lastmod>2022-08-11T09:15:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/cross-compiling/</loc>
     <lastmod>2022-08-11T09:15:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/finding-data/</loc>
     <lastmod>2022-08-01T17:21:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/import/</loc>
     <lastmod>2022-08-01T17:21:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-08-zillow-data/</loc>
     <lastmod>2022-08-01T17:21:38-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication-type/1/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/anusha-doshi/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/authors/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/d.-michael-senter-phd/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/elizabeth-senter-mph/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication/doshi-2022-family-history/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/kaitlin-shartle-ma/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/owen-queen/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication_types/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/ross-j.-simpson-jr.-md-phd/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/susan-keen-md-mscr/</loc>
     <lastmod>2022-06-15T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-05-conditional-regex-python/</loc>
     <lastmod>2022-05-19T21:45:46-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/datalines/</loc>
     <lastmod>2022-05-19T21:45:46-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/regex/</loc>
     <lastmod>2022-05-19T21:45:46-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/wordle/</loc>
     <lastmod>2022-05-05T16:30:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-05-go-wordle/</loc>
     <lastmod>2022-05-05T16:30:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/merging/</loc>
     <lastmod>2022-04-20T11:42:02-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-04-sas-indsname-option/</loc>
     <lastmod>2022-04-20T11:42:02-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/acs/</loc>
     <lastmod>2022-04-13T08:27:35-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/api/</loc>
     <lastmod>2022-04-13T08:27:35-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/census/</loc>
     <lastmod>2022-04-13T08:27:35-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/json/</loc>
     <lastmod>2022-04-13T08:27:35-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-04-census-api-with-sas/</loc>
     <lastmod>2022-04-13T08:27:35-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/catherine-sauter/</loc>
     <lastmod>2022-04-02T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication/raghunathan-2022-incarceration/</loc>
     <lastmod>2022-04-02T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/hannah-vrooman-bs/</loc>
     <lastmod>2022-04-02T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication/vrooman-2022-housing-insecurity/</loc>
     <lastmod>2022-04-02T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/sahana-raghunathan/</loc>
     <lastmod>2022-04-02T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/susan-keen-md-mcsr/</loc>
     <lastmod>2022-04-02T10:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/awk/</loc>
     <lastmod>2022-03-16T09:23:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/bash/</loc>
     <lastmod>2022-03-16T09:23:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-03-multiline-replacement/</loc>
     <lastmod>2022-03-16T09:23:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/sed/</loc>
     <lastmod>2022-03-16T09:23:12-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/22-03-saspy-setup/</loc>
     <lastmod>2022-03-16T08:30:29-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/jupyter/</loc>
     <lastmod>2022-03-16T08:30:29-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/</loc>
     <lastmod>2021-09-29T13:41:36-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/data-cleaning/</loc>
     <lastmod>2021-09-29T13:41:36-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/category/data-cleaning/</loc>
     <lastmod>2021-09-29T13:41:36-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/21-07-proc-import-to-data-step-with-regex/</loc>
     <lastmod>2021-07-29T08:46:10-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/21-07-vsc-python-fix/</loc>
     <lastmod>2021-07-21T08:49:52-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/vscode/</loc>
     <lastmod>2021-07-21T08:49:52-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/codebook/</loc>
     <lastmod>2021-07-06T10:38:27-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/21-07-awk-for-sas/</loc>
     <lastmod>2021-07-06T10:38:27-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/ncdps/</loc>
     <lastmod>2021-07-06T10:38:27-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/21-06-youtube-tutorial/</loc>
     <lastmod>2021-06-29T10:57:05-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/21-06-covid-county-incidence/</loc>
     <lastmod>2021-06-09T16:00:34-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/covid/</loc>
     <lastmod>2021-06-09T16:00:34-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication-type/7/</loc>
     <lastmod>2021-05-15T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/d.-michael-senter/</loc>
     <lastmod>2021-05-15T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication/phd-dissertation/</loc>
     <lastmod>2021-05-15T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/talk/dissertation-defense/</loc>
     <lastmod>2021-04-07T10:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/project/metachronal-paddling/</loc>
     <lastmod>2021-03-22T13:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/project/</loc>
     <lastmod>2021-03-22T13:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/git/</loc>
     <lastmod>2021-01-11T14:42:50-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/21-01-git-with-sas-studio/</loc>
     <lastmod>2021-01-11T14:42:50-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/fips/</loc>
     <lastmod>2020-11-30T10:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/geoid/</loc>
     <lastmod>2020-11-30T10:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/kaggle/</loc>
     <lastmod>2020-11-30T10:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/20-11-north-carolina-housing/</loc>
     <lastmod>2020-11-30T10:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/pandas/</loc>
     <lastmod>2020-11-30T10:10:01-05:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/formatting/</loc>
     <lastmod>2020-11-03T12:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/pdf/</loc>
     <lastmod>2020-11-03T12:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/tabula/</loc>
     <lastmod>2020-11-03T12:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/20-10-tabula/</loc>
     <lastmod>2020-11-03T12:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/teachers/</loc>
     <lastmod>2020-11-03T12:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/20-08-census-api/</loc>
     <lastmod>2020-08-22T08:53:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/requests/</loc>
     <lastmod>2020-08-22T08:53:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication-type/2/</loc>
     <lastmod>2020-08-03T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication/senter-2020-meshmerizeme/</loc>
     <lastmod>2020-08-03T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/anne-m-talkington/</loc>
     <lastmod>2020-08-03T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/dylan-ray-douglas/</loc>
     <lastmod>2020-08-03T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/laura-miller/</loc>
     <lastmod>2020-08-03T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/steven-g.-thomas/</loc>
     <lastmod>2020-08-03T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/w.-christopher-strickland/</loc>
     <lastmod>2020-08-03T11:27:55-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/talk/webscraping-tutorial/</loc>
     <lastmod>2020-07-30T13:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/slides/</loc>
     <lastmod>2020-07-30T12:30:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/slides/webscraping-tutorial/</loc>
     <lastmod>2020-07-30T12:30:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/post/porting-forward/</loc>
     <lastmod>2021-07-06T10:15:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/talk/thesis-proposal/</loc>
     <lastmod>2020-04-17T09:00:00-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/project/clap-and-fling/</loc>
     <lastmod>2018-06-01T11:23:23-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/project/meshmerizeme/</loc>
     <lastmod>2017-09-20T11:35:06-04:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/c-hohenegger/</loc>
     <lastmod>2017-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/dm-senter/</loc>
     <lastmod>2017-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/publication/hohenegger-2017-mean/</loc>
     <lastmod>2017-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/r-durr/</loc>
     <lastmod>2017-04-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://dmsenter89.github.io/author/d.-michael-senter/</loc>
   </url>
-  
 </urlset>
