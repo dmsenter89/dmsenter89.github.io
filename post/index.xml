@@ -124,23 +124,23 @@ run;
 --&gt;
 &lt;p&gt;Today is tax day in the US. In celebration we&amp;rsquo;re going to take a look at some of the data available on the 
 &lt;a href=&#34;https://www.irs.gov/statistics&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;IRS Statistics&lt;/a&gt; page. Since the current administration focuses a lot of rhetoric on making the &amp;ldquo;rich pay their fair share,&amp;rdquo; I thought it might be interesting to see if any of the data made available by the IRS could be used to look at whether or not this is true at the moment. Luckily for us, the IRS makes an 
-&lt;a href=&#34;https://www.irs.gov/pub/irs-soi/20in41ts.xls&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Excel sheet&lt;/a&gt; available that includes what income percentiles earn what share of taxable income and what portion of the tax burden is borne by these same percentiles.&lt;/p&gt;
+&lt;a href=&#34;https://www.irs.gov/pub/irs-soi/20in41ts.xls&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Excel sheet&lt;/a&gt; available that includes what income percentiles earn what share of taxable income and what portion of the tax burden is born by these same percentiles.&lt;/p&gt;
 &lt;p&gt;It is important to note that this Excel sheet only reports on what the IRS refers to as &amp;ldquo;
-&lt;a href=&#34;https://www.irs.gov/e-file-providers/definition-of-adjusted-gross-income&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adjusted Gross Income&lt;/a&gt;,&amp;rdquo; which is - as the name suggests - gross income after adjustment by tax breaks and the like. While this accounts for capital gains, it does not account for all taxes paid by the population. Consumption taxes, for example sales tax revenue, is not included. State taxes are also excluded from this data set. Nevertheless I think this data set is interesting to look at.&lt;/p&gt;
+&lt;a href=&#34;https://www.irs.gov/e-file-providers/definition-of-adjusted-gross-income&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Adjusted Gross Income&lt;/a&gt;,&amp;rdquo; which is - as the name suggests - gross income after adjustment by tax breaks and the like. While this accounts for capital gains, it does not account for all taxes paid by the population. Consumption taxes, for example sales tax revenue, is not included. State taxes are also excluded from this data set. Nevertheless I think this data set is interesting to look at, and we will note a research paper below that shows this trend continues even after adding in consumption taxes.&lt;/p&gt;
 &lt;h2 id=&#34;defining-a-notion-of-fairness&#34;&gt;Defining a Notion of &amp;lsquo;Fairness&amp;rsquo;&lt;/h2&gt;
-&lt;p&gt;The question of &amp;ldquo;fairness&amp;rdquo; can be viewed as a question of proportion. There are two obvious ways to do this: tax share being proportional to one&amp;rsquo;s share in the population, or being proportional to one&amp;rsquo;s share of the income. Let&amp;rsquo;s use an example to illustrate these. You and two of your friends go out and have dinner together. The total tab amounts to 90 USD. What would be a fair way of paying that tab?&lt;/p&gt;
-&lt;p&gt;The simplest option would be to divide the entire bill by the number of people in the group. That way, everybody pays an equal amount, regardless of their respective incomes. In this case, everybody would pay 30 USD towards the bill.&lt;/p&gt;
-&lt;p&gt;A second option would be to make each person&amp;rsquo;s contribution equal to their ability to provide as measured by their income. Let&amp;rsquo;s say you have one friend between work and currently between jobs, i.e. with no income, and your other friend makes twice of what you make. If we wanted to scale by income, your friend between jobs would pay nothing towards the bill, you would pay 30 USD, and your friend with greater income would cover the remaining 60 USD of the bill.&lt;/p&gt;
-&lt;p&gt;We can expect neither of these to be the case with the US tax system, which is decidedly progressive - the more money you earn, the higher a percentage of your income goes towards the federal goverment.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; In my experience, many people actually underestimate how robust the American welfare system is. Blanchet, Chancel and Gethin (2020) for example have shown that the US redistributes a greater share of national income to its low-income population than any European country.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;The question of &amp;ldquo;fairness&amp;rdquo; can be viewed as a question of proportion. There are two obvious ways to do this: tax share being proportional to one&amp;rsquo;s share in the population, or being proportional to one&amp;rsquo;s share of the income. Let&amp;rsquo;s use an example to illustrate these two different options. You and two of your friends go out and have dinner together. The total tab amounts to 90 USD. What would be a fair way of splitting that tab?&lt;/p&gt;
+&lt;p&gt;The simplest option would be to divide the entire bill by the number of people in the group. That way, everybody pays an equal amount regardless of their respective incomes. In this case, everybody would pay 30 USD towards the bill.&lt;/p&gt;
+&lt;p&gt;A second option would be to make each person&amp;rsquo;s contribution equal to their ability to provide as measured by their income. Let&amp;rsquo;s say you have one friend who is currently between jobs, i.e. with no income, and your other friend makes twice what you make. If we wanted to scale by income, your friend between jobs would pay nothing towards the bill, you would pay 30 USD, and your friend with greater income would cover the remaining 60 USD of the bill.&lt;/p&gt;
+&lt;p&gt;We can expect neither of these two options to be the case with the US tax system, which is decidedly progressive - the more money you earn, the higher a percentage of your income goes towards the federal goverment.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; In my experience, many people actually underestimate how robust the American welfare system is. Blanchet, Chancel and Gethin (2020) for example have shown that the US redistributes a greater share of national income to its low-income population than any European country.&lt;sup id=&#34;fnref:2&#34;&gt;&lt;a href=&#34;#fn:2&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;2&lt;/a&gt;&lt;/sup&gt; This paper also shows that the trend in the taxes we find in the IRS data holds after considering additional taxes such as consumption taxes.&lt;/p&gt;
 &lt;h2 id=&#34;loading-the-data&#34;&gt;Loading the Data&lt;/h2&gt;
-&lt;p&gt;The data we are interested in come in two separate ranges. First, we&amp;rsquo;ll load the XLS file using a temporary object:&lt;/p&gt;
+&lt;p&gt;The data we are interested in come in two separate ranges of the Excel sheet. First, we&amp;rsquo;ll load the XLS file using a temporary object:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename _httpin temp;
 
 proc http method=&amp;quot;get&amp;quot; url=&amp;quot;https://www.irs.gov/pub/irs-soi/20in41ts.xls&amp;quot; 
 		out=_httpin;
 run;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;We can then use PROC IMPORT with the &lt;code&gt;range&lt;/code&gt; option to read the relevant ranges of the Excel sheet that we are interested in. For the AGI share information, that is the range given by &lt;code&gt;TAB1$A134:P153&lt;/code&gt; and for the tax share that is range &lt;code&gt;TAB1$A155:P174&lt;/code&gt;.  Both twables are in wide format and will need transposing. Since the code is nearly identical, I wrapped it in a macro function:&lt;/p&gt;
+&lt;p&gt;We can then use PROC IMPORT with the &lt;code&gt;range&lt;/code&gt; option to read the relevant ranges of the Excel sheet that we are interested in. For the AGI share information that is the range given by &lt;code&gt;TAB1$A134:P153&lt;/code&gt;. For the tax share, the relevant range is &lt;code&gt;TAB1$A155:P174&lt;/code&gt;.  Both tables are in wide format and will need transposing. Since the code is nearly identical for both ranges, I wrapped it in a macro function:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;%macro get_table(name=, range=);
 proc import datafile=_httpin out=&amp;amp;name. dbms=XLS replace;
     range=&amp;quot;&amp;amp;range.&amp;quot;;
@@ -164,7 +164,7 @@ run;
                  &#39;M&#39;=0.25 &#39;N&#39;=0.30 &#39;O&#39;=0.40 &#39;P&#39;=0.50;
 run;
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;At this point we&amp;rsquo;re ready to merge. Here&amp;rsquo;s what the 2020 data looks like:&lt;/p&gt;
+&lt;p&gt;This can now be used with the &lt;code&gt;input&lt;/code&gt; function to relabel our columns as percentiles. At this point we&amp;rsquo;re ready to merge. Here&amp;rsquo;s what the 2020 data looks like:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -261,9 +261,9 @@ run;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;We see from this table that US taxes are quite progressive. The Top 2% of tax payers pay about half of all the taxes paid to the federal government, while earning only a quarter of all the taxable income generated. The bottom 50% of tax payers contribute nearly nothing to these federal taxes (less than 3%). We can also see a glimpse of income inequality - nearly half of all income earned is earned by the top 10% of income earners.&lt;/p&gt;
+&lt;p&gt;We see from this table that US taxes are quite progressive. The Top 2% of tax payers pay about half of all the income taxes paid to the federal government, while earning only a quarter of all the taxable income generated. The bottom 50% of tax payers contribute nearly nothing to these federal taxes (less than 3%). We can also see a glimpse of income inequality - nearly half of all income earned is earned by the top 10% of income earners.&lt;/p&gt;
 &lt;h1 id=&#34;some-visualizations&#34;&gt;Some Visualizations&lt;/h1&gt;
-&lt;p&gt;Let&amp;rsquo;s start by looking at a few simple visualizations of the raw data. In both of the following images, the dashed grey line represents equality between the x and y coordinates. Anything above the line indicates larger-than-proportional.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s start by looking at a few simple visualizations of the data. In the following image, the dashed grey line represents equality between the top income percentiles (x-axis) and the cumulative tax share (y-axis). Anything above the line indicates larger-than-proportional contributions.&lt;/p&gt;
 
 
 
@@ -343,7 +343,7 @@ run;
 &lt;/figure&gt;
 
 &lt;p&gt;This TINI coefficient is centered at 0.74 over the data period. While quite stable from about 2008 to 2016, the overall trend has been upwards towards greater inequality. Compare this to the US&#39; 
-&lt;a href=&#34;https://fred.stlouisfed.org/graph/?g=12BAp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gini coefficient&lt;/a&gt; which has fluctuated around 0.4 during that same time period. This would appear to there is greater wealth equality than equality of the tax burden amongst taxpayers.&lt;/p&gt;
+&lt;a href=&#34;https://fred.stlouisfed.org/graph/?g=12BAp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Gini coefficient&lt;/a&gt; which has fluctuated around 0.4 during that same time period. From this, it would appear that the inequality is greater when looking at tax contributions than wealth distribution.&lt;/p&gt;
 &lt;p&gt;Another interesting way to look at this data is to think about the ratio of cumulative share of taxes paid over the cumulative share of AGI earned by the different percentiles. For the top 5% of earners, this ratio tends to hover between 1.6 and 1.9 over the data period as can be seen from the plot below.&lt;/p&gt;
 
 
