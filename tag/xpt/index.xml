@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xpt | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/xpt/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/xpt/index.xml" rel="self" type="application/rss+xml" />
+    <description>xpt</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 24 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>xpt</title>
+      <link>https://dmsenter89.github.io/tag/xpt/</link>
+    </image>
+    
+    <item>
+      <title>Loading Several XPT Files From a URL</title>
+      <link>https://dmsenter89.github.io/post/23-04-loading-several-xpt-files-from-a-url/</link>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-04-loading-several-xpt-files-from-a-url/</guid>
+      <description>&lt;p&gt;The SAS Transport File Format (XPORT) is an open file format maintained by SAS for exchanging datasets. Its use is mandated by the FDA for data set submission for new drug or device applications and the CDC uses this format to distribute public data. For details regrading this format, see 
+&lt;a href=&#34;https://www.loc.gov/preservation/digital/formats/fdd/fdd000464.shtml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this Library of Congress page&lt;/a&gt;. This post will explore how to read several of these files into a SAS session with the URL filename statement using the National Health and Nutrition Examination Survey, or 
+&lt;a href=&#34;https://www.cdc.gov/nchs/nhanes/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NHANES&lt;/a&gt;, as an example.&lt;/p&gt;
+&lt;h2 id=&#34;loading-a-single-xpt-file&#34;&gt;Loading a Single XPT File&lt;/h2&gt;
+&lt;p&gt;By far the easiest way to read an XPT file is to use the &lt;code&gt;XPT2LOC&lt;/code&gt; autocall macro if it is available on your SAS installation. As an example, this snippet would load the demographics table from the 2017-2018 NHANES data set into the work library:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename demo url &amp;quot;https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/DEMO_J.XPT&amp;quot;;
+%XPT2LOC(filespec=demo, libref=work);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This macro correctly resolves the name of the data set, and it would be available as &lt;code&gt;work.demo_j&lt;/code&gt; now. See the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/movefile/p1tp8gighlgeifn173i6kzw2w3bu.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; for more details on this macro.&lt;/p&gt;
+&lt;p&gt;If we cannot or do not want to use this macro, we&amp;rsquo;ll have to assign a LIBREF to the XPT file. This might seem weird at first, because you typically will only find a single data set in an XPT file. But if you consider that the file standard allows for multiple data sets to reside in the same XPT file, it makes sense. Using the LIBREF, we can achieve the same result as above using this snippet:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename xpt url &amp;quot;https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/DEMO_J.XPT&amp;quot;;
+libname xpt xport;
+
+proc copy in=xpt out=work; run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;loading-multiple-xpt-files-with-a-macro&#34;&gt;Loading Multiple XPT Files with a Macro&lt;/h2&gt;
+&lt;p&gt;This is all fine if you only need to load one or two files that way, but becomes tedious (and repetitive) if you have to load many data sets this way. Ignoring the restricted data sets for a minute, NHANES contains many data sets spread across five domains:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Domain&lt;/th&gt;
+&lt;th style=&#34;text-align:right&#34;&gt;# of Data Sets&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Demographics Data&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Dietary Data&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Examination Data&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;14&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Laboratory Data&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;51&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Questionnaire Data&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;44&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;TOTAL&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:right&#34;&gt;124&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Even if you only need a subset of this, you&amp;rsquo;ll find yourself wanting to shortcut having to type out all the repetitive information. This is where a macro call comes in handy.&lt;/p&gt;
+&lt;p&gt;A great trick for this is to use a codebook like data set that you can iterate over. Here is a minimal example using four data sets from NHANES:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;/* create a location to hold saved data */
+libname nhanes &#39;~/data/NHANES&#39;;
+
+data nhanes.datasets;
+    length df $10. dfname $100.;
+    input df $ dfname $;
+    infile datalines dsd;
+datalines;
+DEMO_J,Demographic Variables and Sample Weights
+BPX_J,Blood Pressure
+BMX_J,Body Measures
+OHXDEN_J,Oral Health - Dentition
+;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can either create this data set yourself or use a webscraping tool to make it for you. Wrapping the autocall macro or the PROC COPY into a macro is straightforward:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;%macro load_data(name=);
+  /* allow bad SSL; this is due to an issue with cdc.gov */
+  options set=SSLREQCERT=&amp;quot;allow&amp;quot;;
+
+  /* set up for import */
+  filename xpt url &amp;quot;https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/&amp;amp;name..XPT&amp;quot;;
+  libname xpt xport;
+
+  proc copy in=xpt out=nhanes; run;
+
+  /* make sure to clear libname &amp;amp; filename for next macro call */
+  filename xpt; libname xpt;
+%mend;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The only question now is how to trigger this macro for each data set listed in &lt;code&gt;nhanes.datasets&lt;/code&gt;. That&amp;rsquo;s where the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/lefunctionsref/p1blnvlvciwgs9n0zcilud6d6ei9.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CALL EXECUTE&lt;/a&gt; routine comes in. It allows us to invoke a macro for each line in the source data set while giving us access to the variables in the source data. Since this is executed as part of a data step, you can use more fine grained control by having if/else conditions, where clauses, etc. In our example, we&amp;rsquo;d use this data step:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data _NULL_;
+    set nhanes.datasets;
+    call execute(&#39;%load_data(name=&#39;||df||&#39;);&#39;);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;After running our script, the folder specified by &lt;code&gt;libname nhanes&lt;/code&gt; will contain both our &amp;ldquo;codebook&amp;rdquo; of data sets, as well as all of the data sets listed in the file.&lt;/p&gt;
+&lt;!-- 
+```sas nhanes_load.sas
+/*
+ * This code was generated for the blog post &#34;Loading Several XPT Files From a URL&#34;
+ * available at dmsenter89.github.io/post/23-04-loading-several-xpt-files-from-a-url/
+ *
+ * Author: Michael Senter, PhD
+ */
+
+options dlcreatedir;
+
+&lt;&lt;&lt;codebook&gt;&gt;&gt;
+
+&lt;&lt;&lt;macro&gt;&gt;&gt;
+
+&lt;&lt;&lt;iteration&gt;&gt;&gt;
+```
+
+--&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
