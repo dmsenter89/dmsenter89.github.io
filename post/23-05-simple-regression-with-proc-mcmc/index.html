@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Understanding whether a variable&rsquo;s missingness from a dataset is related to the underlying value of the data is a key concept in the field of missing data analysis. We distinguish three broad categories: missing completely at random (MCAR), missing at random (MAR), and missing not at random (MNAR).">
+  <meta name="description" content="In this post I&rsquo;ll show how to fit simple linear and logistic regression models using the MCMC procedure in SAS. Note that the point of this post is to show how the mathematical model is translated into PROC MCMC syntax and not to discuss the method itself.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/">
-  <meta property="og:title" content="Missing Data Mechanisms | Michael&#39;s Site">
-  <meta property="og:description" content="Understanding whether a variable&rsquo;s missingness from a dataset is related to the underlying value of the data is a key concept in the field of missing data analysis. We distinguish three broad categories: missing completely at random (MCAR), missing at random (MAR), and missing not at random (MNAR)."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/">
+  <meta property="og:title" content="Simple Regression With PROC MCMC | Michael&#39;s Site">
+  <meta property="og:description" content="In this post I&rsquo;ll show how to fit simple linear and logistic regression models using the MCMC procedure in SAS. Note that the point of this post is to show how the mathematical model is translated into PROC MCMC syntax and not to discuss the method itself."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2023-01-03T10:00:00-05:00">
+      <meta property="article:published_time" content="2023-05-02T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2023-01-03T10:00:00-05:00">
+    <meta property="article:modified_time" content="2023-05-02T00:00:00&#43;00:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/"
+    "@id": "https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/"
   },
-  "headline": "Missing Data Mechanisms",
+  "headline": "Simple Regression With PROC MCMC",
   
-  "datePublished": "2023-01-03T10:00:00-05:00",
-  "dateModified": "2023-01-03T10:00:00-05:00",
+  "datePublished": "2023-05-02T00:00:00Z",
+  "dateModified": "2023-05-02T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Understanding whether a variable\u0026rsquo;s missingness from a dataset is related to the underlying value of the data is a key concept in the field of missing data analysis. We distinguish three broad categories: missing completely at random (MCAR), missing at random (MAR), and missing not at random (MNAR)."
+  "description": "In this post I\u0026rsquo;ll show how to fit simple linear and logistic regression models using the MCMC procedure in SAS. Note that the point of this post is to show how the mathematical model is translated into PROC MCMC syntax and not to discuss the method itself."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>Missing Data Mechanisms | Michael&#39;s Site</title>
+  <title>Simple Regression With PROC MCMC | Michael&#39;s Site</title>
 
 </head>
 
@@ -597,10 +597,8 @@
   
   
 <div class="article-container pt-3">
-  <h1>Missing Data Mechanisms</h1>
+  <h1>Simple Regression With PROC MCMC</h1>
 
-  
-  <p class="page-subtitle">MCAR, MAR, and MNAR in an Example Dataset</p>
   
 
   
@@ -618,7 +616,7 @@
     
       
     
-    Jan 3, 2023
+    May 2, 2023
   </span>
   
 
@@ -627,7 +625,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    7 min read
+    5 min read
   </span>
   
 
@@ -637,10 +635,6 @@
 
   
   
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/missing-data/">Missing Data</a></span>
-  
 
 </div>
 
@@ -657,56 +651,6 @@
 
 
 
-
-<div class="btn-links mb-3">
-  
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-  
-  
-  
-  
-    
-    
-      
-    
-  
-  <a class="btn btn-outline-primary my-1 mr-1" href="/post/23-01-missing-data-mechanisms/MissingDataMechanisms.sas" >
-    <i class="fa fa-file-code "></i>
-    
-  </a>
-
-
-</div>
 
 
   
@@ -717,205 +661,138 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Understanding whether a variable&rsquo;s missingness from a dataset is related to the underlying value of the data is a key concept in the field of missing data analysis. We distinguish three broad categories: missing completely at random (MCAR), missing at random (MAR), and missing not at random (MNAR). In his book <em>Statistical Rethinking</em>, McElreath<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> gives an amusing example to illustrate this concept: he considers variants of a dog eating homework and how the dog chooses - if at all - to eat the homework. The examples he give show substantial shifts in observed values, which make for a good illustration of the types of problems you might encounter. A lecture corresponding to the  example from the book can be found on 
-<a href="https://www.youtube.com/watch?v=oMiSb8GKR0o&amp;list=PLDcUM9US4XdMROZ57-OIRtIK0aOynbgZN&amp;index=18" target="_blank" rel="noopener">YouTube</a>. In this post, I will first briefly review the different missing data mechanisms before implementing McElreath&rsquo;s examples in SAS.</p>
-<h3 id="overview-of-missing-data-mechanisms">Overview of Missing Data Mechanisms</h3>
-<p>My presentation here follows van Buuren<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>. Let $Y$ be a $n \times p$ matrix representing a sample of $p$ variables for $n$ units of the sample and $R$ be a corresponding $n \times p$ indicator matrix, so that</p>
-<p>$$r_{i,j} = \begin{cases} 1 &amp; y_{i,j} \text{ is observed} \\ 0 &amp; y_{i,j} \text{ not observed.}\end{cases} $$</p>
-<p>We denote the observed data by $Y_\text{obs}$ and the missing data that $Y_\text{miss}$ so that $Y=(Y_\text{obs},Y_\text{miss})$.</p>
-<p>We distinguish three main categories for how the distribution of $R$ may depend on $Y$. This relationship is described as the <em>missing data model</em>. Let $\psi$ contain the parameters of this model. The general expression of the missing data model is $\mathrm{Pr}(R|Y_\text{obs}, Y_\text{miss}, \psi)$, where $\psi$ consists of the parameters of the missing data model.</p>
-<p><strong>Missing Completely at Random (MCAR).</strong> This implies that the cause of the missing data is unrelated to the data itself. In this case,</p>
-<p>$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0|\psi).$$</p>
-<p>This is the ideal case, but unfortunately rare in practice. Many researchers implicitly assume this when using methods such as list-wise deletion, otherwise known as complete case analysis, which can produce unbiased estimates of sample means if the data are MCAR, although the reported standard error will be too large.</p>
-<p><strong>Missing at Random (MAR).</strong> Missingness is the same within groups defined by the observed data, so that</p>
-<p>$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0|Y_\text{obs},\psi).$$</p>
-<p>This is a often a more reasonable assumption in practice and the starting point for modern missing data methods.</p>
-<p><strong>Missing not at Random (MNAR).</strong> If neither the MCAR or MAR assumptions hold, then we may find that missingness depends on the missing data itself, in which case there is no simplification and
-$$ \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi) = \mathrm{Pr}(R=0| Y_\text{obs}, Y_\text{miss}, \psi).$$</p>
-<p>As you can imagine, this is the most tricky case to deal with.</p>
-<h3 id="dogs-eating-homework">Dogs Eating Homework</h3>
-<p>Consider dogs (D) eating students' homework. Each student&rsquo;s homework score (H) is graded on a 10-point scale and each student&rsquo;s score varies in proportion to how much they study (S). We assume the amount of time they study is normally distributed. A binomial is used to generate homework scores from the normed time spent studying. McElreath uses the following code to simulate the full data set:</p>
-<pre><code class="language-R">N &lt;- 100
-S &lt;- rnorm( N )
-H &lt;- rbinom( N, size=10, inv_logit(S) )
+      <p>In this post I&rsquo;ll show how to fit simple linear and logistic regression models using the 
+<a href="https://support.sas.com/rnd/app/stat/procedures/mcmc.html" target="_blank" rel="noopener">MCMC</a> procedure in SAS. Note that the point of this post is to show how the mathematical model is translated into PROC MCMC syntax and not to discuss the method itself. I will include links to relevant sections in Johnson, Ott, and Dogucu (2022) if you&rsquo;d like to read more about Bayesian modeling.</p>
+<h2 id="the-mcmc-statement">The MCMC Statement</h2>
+<p>The basic 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_syntax.htm" target="_blank" rel="noopener">syntax</a> for MCMC is as follows:</p>
+<pre><code class="language-nohighlight">proc mcmc &lt;options&gt;;
+    parms parameter &lt;=&gt; number &lt;/options&gt;;
+    prior parameter ~ distribution;
+    programming statements;
+    model varaiable ~ distribution &lt;/options&gt;; 
 </code></pre>
-<p>where <code>inv_logit(x) = exp(x)+(1+exp(x))</code>, the definition used by the <code>LOGISTIC</code> function in SAS. With a data step, this can be represented in SAS as follows:</p>
-<pre><code class="language-sas">data full;
-    DO i=1 to 100;
-        S=RAND('NORM');
-        H=RAND('BINO', LOGISTIC(S), 10);
-        output;
-    END;
-    label S='Amount of Studying' H='Homework Score';
-    drop i;
+<p>This covers the basic components of most Bayesian models - the model itself (<code>model</code>), the parameters that need to be fit (<code>parms</code>), and their prior distribution (<code>prior</code>). Note that PROC MCMC requires you to always specify your priors, unlike some Bayesian modeling software that will default to some diffuse priors when they are omitted from the problem statement.</p>
+<p>The most common options you&rsquo;ll use in the MCMC statement will be</p>
+<ul>
+<li><code>data=</code> the name of the input data set.</li>
+<li><code>outpost=</code> the name of the output data set for posterior samples of parameters.</li>
+<li><code>nbi=</code> the number of burn-in iterations.</li>
+<li><code>nmc=</code> the number of MCMC iterations, excluding the burn-in iterations.</li>
+<li><code>seed=</code> specify a random seed for the the simulation.</li>
+<li><code>thin=</code> specify the thinning rate; see 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_introbayes_sect016.htm#statug.introbayes.bayesburnin" target="_blank" rel="noopener">here</a> for more details.</li>
+</ul>
+<p>The names and function calls for the included distributions are described in the documentation on the 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_syntax09.htm#statug_mcmc002612" target="_blank" rel="noopener">MODEL statement</a>. Their density definitions are documented 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_details17.htm" target="_blank" rel="noopener">here</a>.</p>
+<h2 id="a-simple-linear-model">A Simple Linear Model</h2>
+<p>A basic linear model looks something like this:</p>
+<p>\begin{aligned}
+y_i &amp;\sim \mathrm{Normal}(\mu_i, \sigma) \\<br>
+\mu_i &amp;= \beta_0 + \beta_1 x_i
+\end{aligned}</p>
+<p>which will need to be combined with priors for $\alpha$, $\beta$, and $\sigma$. Assume we have a data set <code>work.mydata</code> that contains two variables: our predictor <code>x</code> and our measured variable <code>y</code>. Assume we use the above model together with the following priors:</p>
+<p>\begin{aligned}
+\beta_0 &amp;\sim \mathrm{Normal}(0, 10) \\<br>
+\beta_1 &amp;\sim \mathrm{Normal}(0, 10) \\<br>
+\sigma &amp;\sim \mathrm{Uniform}(0,50).
+\end{aligned}</p>
+<p>Translating this into PROC MCMC is straightforward. Even though we can specify the statements in any order, it is common to define the model &ldquo;upside down&rdquo; so that each line contains only variables that have already been defined. This is for convenience, so you don&rsquo;t forget to specify something before hitting &ldquo;run.&rdquo;</p>
+<pre><code class="language-sas">proc mcmc data=mydata
+      outpost=posterior /* posterior sim */
+      nmc=2000; /* # of data points in posterior */
+    /* define the parameters. Optionally give an initial value */
+    parms beta0 0 beta1 1;
+    parms sigma; /* no initial value - mcmc finds its own */
+    
+    * define your priors;
+    prior beta: ~ normal(mean=0, sd=10);
+    prior sigma ~ uniform(0, 50);
+    
+    * define the mean and the model;
+    mu = beta0 + beta1*x;
+    model y ~ normal(mu, sd=sigma);
 run;
 </code></pre>
-<p>We can get closer in form to the R code by using PROC IML, but that&rsquo;s a story for a different post.</p>
-<p>Say we are interested in estimating the relationship between $S$ and $H$. In our example, we assume that $H$ is not directly observable. Instead, $H^*$ is observed - a subset of the full data set $H$ with some homework values missing. We can now look at <em>why</em> some of those values are missing. Specifically, in McElreath&rsquo;s example each student has a dog $D$ and sometimes the dog eats the homework. But here we can again ask, why is the dog eating the homework? McElreath uses  
-<a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph" target="_blank" rel="noopener">directed acyclic graphs</a> (DAGs) to represent different missing data models, reproduced below. As we will see, these are some intuitive examples for our three missing data mechanism categories.</p>
+<p>For more info on simple regression, check out 
+<a href="https://www.bayesrulesbook.com/chapter-9.html" target="_blank" rel="noopener">chapters 9-11</a> in Bayes Rules!</p>
+<h2 id="a-simple-logistic-model">A Simple Logistic Model</h2>
+<p>A basic logistic model will look as follows:</p>
+<p>\begin{aligned}
+y_i &amp;\sim \mathrm{Binomial}(n_i, p_i) \\<br>
+\mathrm{logit}(p_i) &amp;= \beta_0 + \beta_1 x_i
+\end{aligned}</p>
+<p>combined with appropriate priors for $\beta_0$, $\beta_1$. Here $y_i$ is a positive integer response, $n_i$ is a count, and $x_i$ is still our predictor. In many medical studies we are interested in the special case where $y_i \in \{0,1\}$ so that the model becomes</p>
+<p>\begin{aligned}
+y_i &amp;\sim \mathrm{Bern}(p_i) \\<br>
+\mathrm{logit}(p_i) &amp;= \beta_0 + \beta_1 x_i.
+\end{aligned}</p>
+<p>Let&rsquo;s assume a diffuse prior like this:</p>
+<p>\begin{aligned}
+\beta_0 &amp;\sim \mathrm{Normal}(0, 100) \\<br>
+\beta_1 &amp;\sim \mathrm{Normal}(0, 100).
+\end{aligned}</p>
+<p>Then we can translate to PROC MCMC as follows:</p>
+<pre><code class="language-sas">proc mcmc data=mydata
+      outpost=posterior /* posterior sim */
+      nmc=2000; /* # of data points in posterior */
+    parms (beta0 beta1) 0;
+    prior beta: ~ normal(0, sd=100);
 
-
-
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-<figure id="figure-the-directed-acyclic-graphs-corresponding-to-mcelreaths-examples-of-missing-data-models-s-represents-the-amount-of-time-spent-studying-which-in-turn-influences-the-homework-score-h-which-is-only-partially-observed-indicated-by-the-circle-alas-dogs-d-eat-some-of-the-homework-the-actually-observed-scores---those-not-eaten---are-indicated-by-h-adapted-from-figure-154-in-_statistical-rehinking_">
-
-
-  <a data-fancybox="" href="/post/23-01-missing-data-mechanisms/dag_hu9d4aa2d4b53fa51c30ec3b81dc4e20f1_14343_2000x2000_fit_lanczos_2.png" data-caption="The directed acyclic graphs corresponding to McElreath&amp;rsquo;s examples of missing data models. $S$ represents the amount of time spent studying, which in turn influences the homework score $H$, which is only partially observed (indicated by the circle). Alas, dogs $D$ eat some of the homework. The actually observed scores - those not eaten - are indicated by $H^*$. Adapted from figure 15.4 in &lt;em&gt;Statistical Rehinking&lt;/em&gt;.">
-
-
-  <img data-src="/post/23-01-missing-data-mechanisms/dag_hu9d4aa2d4b53fa51c30ec3b81dc4e20f1_14343_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="665" height="179">
-</a>
-
-
-  
-  
-  <figcaption data-pre="Figure " data-post=":" class="numbered">
-    The directed acyclic graphs corresponding to McElreath&rsquo;s examples of missing data models. $S$ represents the amount of time spent studying, which in turn influences the homework score $H$, which is only partially observed (indicated by the circle). Alas, dogs $D$ eat some of the homework. The actually observed scores - those not eaten - are indicated by $H^*$. Adapted from figure 15.4 in <em>Statistical Rehinking</em>.
-  </figcaption>
-
-
-</figure>
-
-<h4 id="missing-completely-at-random-mcar">Missing Completely At Random (MCAR)</h4>
-<p>In the first example, the dogs eat homework completely at random. This is the most basic and benign case, and corresponds to DAG 1) in Figure 1. McElreath&rsquo;s R code is given by</p>
-<pre><code class="language-R">D &lt;- rbern( N ) 
-Hm &lt;- H  # H*, but * is not a valid char for varnames in R
-Hm[D==1] &lt;- NA
-</code></pre>
-<p>We can implement this in SAS by using the <code>RAND</code> function with the Bernoulli argument in an if/else clause:</p>
-<pre><code class="language-sas">if RAND('BERN', 0.5) then Hm = .;
-    else Hm = H;
-</code></pre>
-<p>This causes about half of our data to be hidden, but not in a biased way.</p>
-<h4 id="missing-at-random-mar">Missing at Random (MAR)</h4>
-<p>In the second example, we assume the amount of time a student spends studying decreases the amount of time they have to play with and exercise their dog. This, in turn, influences whether the homework gets eaten. Or, as McElreath puts it, the &ldquo;dog eats conditional on the cause of homework.&rdquo; In his particular example, the homework is eaten whenever a student spends more time studying than the average $S=0$. This corresponds to DAG 2) in Figure 1.</p>
-<pre><code class="language-R">D &lt;- ifelse( S&gt;0 , 1 , 0 )
-Hm &lt;- H
-Hm[D==1] &lt;-NA
-</code></pre>
-<p>In SAS:</p>
-<pre><code class="language-sas">if S&gt;0 then Hm = .;
-    else Hm = H;
-</code></pre>
-<h4 id="missing-not-at-random-mnar">Missing not at Random (MNAR)</h4>
-<p>In this case, we have some correspondence between the missing variable&rsquo;s value and whether or not it is missing from the data set. Here, the &ldquo;dog eats conditional on the homework itself.&rdquo; Suppose that dogs prefer to eat bad homework. In such a case, the value of $H$ is directly related to whether or not $H$ is observed in the particular unit or not. His example R code is as follows:</p>
-<pre><code class="language-R"># dogs prefer bad homework
-D &lt;- ifelse( H&lt;5 , 1 , 0 )
-Hm &lt;- H
-Hm[D==1] &lt;- NA
-</code></pre>
-<p>And in SAS:</p>
-<pre><code class="language-sas">if H&lt;5 then Hm = .;
-    else Hm = H;
-</code></pre>
-<h3 id="the-full-sas-code">The Full SAS Code</h3>
-<p>We can now build a SAS data set that contains a full copy of the original data set, together with our various examples of missing data mechanisms. I have added a seed to the data step for reproducibility.</p>
-<pre><code class="language-sas">data full;
-    CALL streaminit( 451 ); 
-    
-    LABEL
-        Type = 'Missing Data Mechanism'
-        S = 'Amount of Studying'
-        H = 'Homework Score'
-        Hm = 'Observed Homework Score'
-    ;
-
-    DO i=1 to 100;
-        TYPE = 'FULL';
-        S = RAND('NORM');
-        H = RAND('BINO', LOGISTIC(S), 10);
-        Hm = H;
-        output;
-        
-        /* Example 1) MCAR */
-        TYPE = 'MCAR';
-        if RAND('BERN', 0.5) then Hm = .;
-            else Hm = H;
-        output;
-        
-        /* Example 2) MAR */
-        TYPE = 'MAR';
-        if S&gt;0 then Hm = .;
-            else Hm = H;
-        output;
-        
-        /* Example 3) MNAR */
-        TYPE = 'MNAR';
-        if H&lt;5 then Hm = .;
-            else Hm = H;
-        output;
-    
-    END;
-    
-    drop i;
+    /* now define the logistic part: */
+    p = logistic(beta0 + beta1*x);
+    model y ~ bern(p);
 run;
 </code></pre>
-<p>You may want to run a <code>PROC SORT</code> or <code>PROC SQL</code> afterwards to group the different categories together, as they will be alternating in this data set.</p>
-<h3 id="results">Results</h3>
+<p>Often we are not so much directly interested in the $\beta$ coefficients, but in the odds $e^{\beta_0}$ and the multiplicative change in odds $e^{\beta_1}$. While these values can be calculated and analyzed from the <code>outpost</code> data set, we can use the <code>nodata</code> block (delimited by <code>beginnodata</code> and <code>endnodata</code> statements) to directly calculate these values in our simulation. The amended procedure reads like this:</p>
+<pre><code class="language-sas">proc mcmc data=mydata
+      outpost=posterior
+      nmc=2000
+      monitor=(odds modds);
+    parms (beta0 beta1) 0;
+    prior beta: ~ normal(0, sd=100);
 
+    beginnodata;
+      odds = exp(beta0);
+      modds = exp(beta1);
+    endnodata;
 
+    p = logistic(beta0 + beta1*x);
+    model y ~ bern(p);
+run;
+</code></pre>
+<p>See 
+<a href="https://www.bayesrulesbook.com/chapter-13.html" target="_blank" rel="noopener">chapter 13</a> in Bayes Rules! for more info on logistic regression models.</p>
+<h2 id="adding-a-random-effect">Adding a Random-Effect</h2>
+<p>Random-effects, also known as hierarchical modeling, looks at group structures in the data seta nd models group-specific effects. In a clinical setting, this might be the study site.</p>
+<p>As a simple example, assume we have a data set <code>ht</code> containing the height (<code>h</code>) and sex (<code>s</code>) of a population sample. Assume we are interested in modeling the distribution of height in our data set. We know that on average males are taller than females (mean 167 cm vs 156 cm based on NHANES 2006). We could build a model similar to this:</p>
+<p>\begin{aligned}
+h_i &amp;\sim \mathrm{Normal}(\mu_i, \sigma) \\<br>
+\mu_i &amp;= \alpha_{\mathrm{sex[i]}} \\<br>
+\alpha_j &amp;\sim \mathrm{Normal}(160, 20) \quad \text{for } j=1,2 \\<br>
+\sigma &amp;\sim \mathrm{Uniform}(0,50).
+\end{aligned}</p>
+<p>In SAS, the random effect is specified with the 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_gettingstarted03.htm" target="_blank" rel="noopener">random</a> statement. We specify the categories with the <code>subject</code> keyword in the random statement. SAS will then automatically create the necessary number of parameters for the random effect. Our model translates to the following MCMC call:</p>
+<pre><code class="language-sas">proc mcmc data=ht
+      outpost=posterior
+      nmc=2000;
+    parms sigma 5 sigmaA 6;
+    prior sigma: ~ uniform(0,50);
 
-
-
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-<figure id="figure-boxplot-of-our-example-data-note-that-the-mcar-data-looks-very-similar-to-the-original-data-set-unlike-the-mar-and-mnar-versions">
-
-
-  <a data-fancybox="" href="/post/23-01-missing-data-mechanisms/mdm_boxplot_hu7d089ca360b9b11aaf1a482082b6d8dc_11177_2000x2000_fit_lanczos_2.png" data-caption="Boxplot of our example data. Note that the MCAR data looks very similar to the original data set, unlike the MAR and MNAR versions.">
-
-
-  <img data-src="/post/23-01-missing-data-mechanisms/mdm_boxplot_hu7d089ca360b9b11aaf1a482082b6d8dc_11177_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="640" height="480">
-</a>
-
-
-  
-  
-  <figcaption data-pre="Figure " data-post=":" class="numbered">
-    Boxplot of our example data. Note that the MCAR data looks very similar to the original data set, unlike the MAR and MNAR versions.
-  </figcaption>
-
-
-</figure>
-
-<p>We can see that MCAR leads to minimal bias in our example data, while both the MAR and MNAR variations lead to substantial differences in observed vs actual homework scores for our synthetic population. For a more subtle example, see section 2.2.4 in van Buuren,<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup> available 
-<a href="https://stefvanbuuren.name/fimd/sec-idconcepts.html" target="_blank" rel="noopener">online here</a>.</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>R. McElreath, <em>Statistical Rethinking</em>, 2nd ed, Chapman and Hall/CRC, Boca Raton, FL, 2020. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p>S. van Buuren, <em>Flexible Imputation of Missing Data</em>, 2nd ed, Chapman and Hall/CRC, Boca Raton, FL, 2019. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+    random alpha ~ normal(160, sd=sigmaA) subject=s monitor=(alpha);
+    mu = alpha;
+    model h ~ normal(mu, sd=sigma);
+run;
+</code></pre>
+<p>Assuming $s\in\{1,2\}$ this will cause SAS to create two alpha variables for the two levels of <code>s</code>: <code>alpha_1</code> and <code>alpha_2</code>. Had <code>s</code> been a character variable, say with values m and f, then SAS would have created <code>alpha_m</code> and <code>alpha_f</code> instead.</p>
+<p>For more information on this, check out 
+<a href="https://www.bayesrulesbook.com/chapter-15.html" target="_blank" rel="noopener">unit IV</a> of Bayes Rules!</p>
+<h2 id="reference">Reference</h2>
+<p>Johnson, A. A., Ott, M. Q., and Dogucu, M. (2022), <em>Bayes Rules!: An Introduction to Applied Bayesian Modeling</em>, Boca Raton, FL: CRC Press, DOI: 
+<a href="https://doi.org/10.1201/9780429288340" target="_blank" rel="noopener">10.1201/9780429288340</a>. Available at 
+<a href="https://www.bayesrulesbook.com/" target="_blank" rel="noopener">www.bayesrulesbook.com</a>.</p>
 
     </div>
 
@@ -928,9 +805,11 @@ run;
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/missing-data/">missing-data</a>
+  <a class="badge badge-light" href="/tag/bayesian/">bayesian</a>
   
-  <a class="badge badge-light" href="/tag/simulation/">simulation</a>
+  <a class="badge badge-light" href="/tag/mcmc/">mcmc</a>
+  
+  <a class="badge badge-light" href="/tag/regression/">regression</a>
   
   <a class="badge badge-light" href="/tag/sas/">sas</a>
   
@@ -949,7 +828,7 @@ run;
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/&amp;text=Missing%20Data%20Mechanisms" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/&amp;text=Simple%20Regression%20With%20PROC%20MCMC" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -962,7 +841,7 @@ run;
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/&amp;t=Missing%20Data%20Mechanisms" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/&amp;t=Simple%20Regression%20With%20PROC%20MCMC" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -975,7 +854,7 @@ run;
       
       
       <li>
-        <a href="mailto:?subject=Missing%20Data%20Mechanisms&amp;body=https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Simple%20Regression%20With%20PROC%20MCMC&amp;body=https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -988,7 +867,7 @@ run;
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/&amp;title=Missing%20Data%20Mechanisms" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/&amp;title=Simple%20Regression%20With%20PROC%20MCMC" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -1001,7 +880,7 @@ run;
       
       
       <li>
-        <a href="whatsapp://send?text=Missing%20Data%20Mechanisms%20https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Simple%20Regression%20With%20PROC%20MCMC%20https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -1014,7 +893,7 @@ run;
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/&amp;title=Missing%20Data%20Mechanisms" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/&amp;title=Simple%20Regression%20With%20PROC%20MCMC" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1166,15 +1045,15 @@ run;
     <h3>Related</h3>
     <ul>
       
+      <li><a href="/post/23-04-loading-several-xpt-files-from-a-url/">Loading Several XPT Files From a URL</a></li>
+      
       <li><a href="/post/23-02-proc-mi-added-to-saspy/">PROC MI Added to SASPy</a></li>
       
-      <li><a href="/post/23-05-simple-regression-with-proc-mcmc/">Simple Regression With PROC MCMC</a></li>
-      
-      <li><a href="/post/23-04-loading-several-xpt-files-from-a-url/">Loading Several XPT Files From a URL</a></li>
+      <li><a href="/post/23-01-missing-data-mechanisms/">Missing Data Mechanisms</a></li>
       
       <li><a href="/post/22-11-sas-markdown-for-reproducibility/">SAS Markdown for Reproducibility</a></li>
       
-      <li><a href="/post/22-09-lottery/">Does it ever make sense to play the Lottery?</a></li>
+      <li><a href="/post/22-08-zillow-data/">Loading Zillow Housing Data in SAS</a></li>
       
     </ul>
   </div>

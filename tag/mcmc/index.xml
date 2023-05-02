@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mcmc | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/mcmc/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/mcmc/index.xml" rel="self" type="application/rss+xml" />
+    <description>mcmc</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>mcmc</title>
+      <link>https://dmsenter89.github.io/tag/mcmc/</link>
+    </image>
+    
+    <item>
+      <title>Simple Regression With PROC MCMC</title>
+      <link>https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/</link>
+      <pubDate>Tue, 02 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/</guid>
+      <description>&lt;p&gt;In this post I&amp;rsquo;ll show how to fit simple linear and logistic regression models using the 
+&lt;a href=&#34;https://support.sas.com/rnd/app/stat/procedures/mcmc.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MCMC&lt;/a&gt; procedure in SAS. Note that the point of this post is to show how the mathematical model is translated into PROC MCMC syntax and not to discuss the method itself. I will include links to relevant sections in Johnson, Ott, and Dogucu (2022) if you&amp;rsquo;d like to read more about Bayesian modeling.&lt;/p&gt;
+&lt;h2 id=&#34;the-mcmc-statement&#34;&gt;The MCMC Statement&lt;/h2&gt;
+&lt;p&gt;The basic 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_syntax.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;syntax&lt;/a&gt; for MCMC is as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-nohighlight&#34;&gt;proc mcmc &amp;lt;options&amp;gt;;
+    parms parameter &amp;lt;=&amp;gt; number &amp;lt;/options&amp;gt;;
+    prior parameter ~ distribution;
+    programming statements;
+    model varaiable ~ distribution &amp;lt;/options&amp;gt;; 
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This covers the basic components of most Bayesian models - the model itself (&lt;code&gt;model&lt;/code&gt;), the parameters that need to be fit (&lt;code&gt;parms&lt;/code&gt;), and their prior distribution (&lt;code&gt;prior&lt;/code&gt;). Note that PROC MCMC requires you to always specify your priors, unlike some Bayesian modeling software that will default to some diffuse priors when they are omitted from the problem statement.&lt;/p&gt;
+&lt;p&gt;The most common options you&amp;rsquo;ll use in the MCMC statement will be&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;data=&lt;/code&gt; the name of the input data set.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;outpost=&lt;/code&gt; the name of the output data set for posterior samples of parameters.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nbi=&lt;/code&gt; the number of burn-in iterations.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nmc=&lt;/code&gt; the number of MCMC iterations, excluding the burn-in iterations.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;seed=&lt;/code&gt; specify a random seed for the the simulation.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;thin=&lt;/code&gt; specify the thinning rate; see 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_introbayes_sect016.htm#statug.introbayes.bayesburnin&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; for more details.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The names and function calls for the included distributions are described in the documentation on the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_syntax09.htm#statug_mcmc002612&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MODEL statement&lt;/a&gt;. Their density definitions are documented 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_details17.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;a-simple-linear-model&#34;&gt;A Simple Linear Model&lt;/h2&gt;
+&lt;p&gt;A basic linear model looks something like this:&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+y_i &amp;amp;\sim \mathrm{Normal}(\mu_i, \sigma) \\&lt;br&gt;
+\mu_i &amp;amp;= \beta_0 + \beta_1 x_i
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;which will need to be combined with priors for $\alpha$, $\beta$, and $\sigma$. Assume we have a data set &lt;code&gt;work.mydata&lt;/code&gt; that contains two variables: our predictor &lt;code&gt;x&lt;/code&gt; and our measured variable &lt;code&gt;y&lt;/code&gt;. Assume we use the above model together with the following priors:&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+\beta_0 &amp;amp;\sim \mathrm{Normal}(0, 10) \\&lt;br&gt;
+\beta_1 &amp;amp;\sim \mathrm{Normal}(0, 10) \\&lt;br&gt;
+\sigma &amp;amp;\sim \mathrm{Uniform}(0,50).
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;Translating this into PROC MCMC is straightforward. Even though we can specify the statements in any order, it is common to define the model &amp;ldquo;upside down&amp;rdquo; so that each line contains only variables that have already been defined. This is for convenience, so you don&amp;rsquo;t forget to specify something before hitting &amp;ldquo;run.&amp;rdquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mcmc data=mydata
+      outpost=posterior /* posterior sim */
+      nmc=2000; /* # of data points in posterior */
+    /* define the parameters. Optionally give an initial value */
+    parms beta0 0 beta1 1;
+    parms sigma; /* no initial value - mcmc finds its own */
+    
+    * define your priors;
+    prior beta: ~ normal(mean=0, sd=10);
+    prior sigma ~ uniform(0, 50);
+    
+    * define the mean and the model;
+    mu = beta0 + beta1*x;
+    model y ~ normal(mu, sd=sigma);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;For more info on simple regression, check out 
+&lt;a href=&#34;https://www.bayesrulesbook.com/chapter-9.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chapters 9-11&lt;/a&gt; in Bayes Rules!&lt;/p&gt;
+&lt;h2 id=&#34;a-simple-logistic-model&#34;&gt;A Simple Logistic Model&lt;/h2&gt;
+&lt;p&gt;A basic logistic model will look as follows:&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+y_i &amp;amp;\sim \mathrm{Binomial}(n_i, p_i) \\&lt;br&gt;
+\mathrm{logit}(p_i) &amp;amp;= \beta_0 + \beta_1 x_i
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;combined with appropriate priors for $\beta_0$, $\beta_1$. Here $y_i$ is a positive integer response, $n_i$ is a count, and $x_i$ is still our predictor. In many medical studies we are interested in the special case where $y_i \in \{0,1\}$ so that the model becomes&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+y_i &amp;amp;\sim \mathrm{Bern}(p_i) \\&lt;br&gt;
+\mathrm{logit}(p_i) &amp;amp;= \beta_0 + \beta_1 x_i.
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s assume a diffuse prior like this:&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+\beta_0 &amp;amp;\sim \mathrm{Normal}(0, 100) \\&lt;br&gt;
+\beta_1 &amp;amp;\sim \mathrm{Normal}(0, 100).
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;Then we can translate to PROC MCMC as follows:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mcmc data=mydata
+      outpost=posterior /* posterior sim */
+      nmc=2000; /* # of data points in posterior */
+    parms (beta0 beta1) 0;
+    prior beta: ~ normal(0, sd=100);
+
+    /* now define the logistic part: */
+    p = logistic(beta0 + beta1*x);
+    model y ~ bern(p);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Often we are not so much directly interested in the $\beta$ coefficients, but in the odds $e^{\beta_0}$ and the multiplicative change in odds $e^{\beta_1}$. While these values can be calculated and analyzed from the &lt;code&gt;outpost&lt;/code&gt; data set, we can use the &lt;code&gt;nodata&lt;/code&gt; block (delimited by &lt;code&gt;beginnodata&lt;/code&gt; and &lt;code&gt;endnodata&lt;/code&gt; statements) to directly calculate these values in our simulation. The amended procedure reads like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mcmc data=mydata
+      outpost=posterior
+      nmc=2000
+      monitor=(odds modds);
+    parms (beta0 beta1) 0;
+    prior beta: ~ normal(0, sd=100);
+
+    beginnodata;
+      odds = exp(beta0);
+      modds = exp(beta1);
+    endnodata;
+
+    p = logistic(beta0 + beta1*x);
+    model y ~ bern(p);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;See 
+&lt;a href=&#34;https://www.bayesrulesbook.com/chapter-13.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;chapter 13&lt;/a&gt; in Bayes Rules! for more info on logistic regression models.&lt;/p&gt;
+&lt;h2 id=&#34;adding-a-random-effect&#34;&gt;Adding a Random-Effect&lt;/h2&gt;
+&lt;p&gt;Random-effects, also known as hierarchical modeling, looks at group structures in the data seta nd models group-specific effects. In a clinical setting, this might be the study site.&lt;/p&gt;
+&lt;p&gt;As a simple example, assume we have a data set &lt;code&gt;ht&lt;/code&gt; containing the height (&lt;code&gt;h&lt;/code&gt;) and sex (&lt;code&gt;s&lt;/code&gt;) of a population sample. Assume we are interested in modeling the distribution of height in our data set. We know that on average males are taller than females (mean 167 cm vs 156 cm based on NHANES 2006). We could build a model similar to this:&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+h_i &amp;amp;\sim \mathrm{Normal}(\mu_i, \sigma) \\&lt;br&gt;
+\mu_i &amp;amp;= \alpha_{\mathrm{sex[i]}} \\&lt;br&gt;
+\alpha_j &amp;amp;\sim \mathrm{Normal}(160, 20) \quad \text{for } j=1,2 \\&lt;br&gt;
+\sigma &amp;amp;\sim \mathrm{Uniform}(0,50).
+\end{aligned}&lt;/p&gt;
+&lt;p&gt;In SAS, the random effect is specified with the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_gettingstarted03.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;random&lt;/a&gt; statement. We specify the categories with the &lt;code&gt;subject&lt;/code&gt; keyword in the random statement. SAS will then automatically create the necessary number of parameters for the random effect. Our model translates to the following MCMC call:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mcmc data=ht
+      outpost=posterior
+      nmc=2000;
+    parms sigma 5 sigmaA 6;
+    prior sigma: ~ uniform(0,50);
+
+    random alpha ~ normal(160, sd=sigmaA) subject=s monitor=(alpha);
+    mu = alpha;
+    model h ~ normal(mu, sd=sigma);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Assuming $s\in\{1,2\}$ this will cause SAS to create two alpha variables for the two levels of &lt;code&gt;s&lt;/code&gt;: &lt;code&gt;alpha_1&lt;/code&gt; and &lt;code&gt;alpha_2&lt;/code&gt;. Had &lt;code&gt;s&lt;/code&gt; been a character variable, say with values m and f, then SAS would have created &lt;code&gt;alpha_m&lt;/code&gt; and &lt;code&gt;alpha_f&lt;/code&gt; instead.&lt;/p&gt;
+&lt;p&gt;For more information on this, check out 
+&lt;a href=&#34;https://www.bayesrulesbook.com/chapter-15.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;unit IV&lt;/a&gt; of Bayes Rules!&lt;/p&gt;
+&lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;Johnson, A. A., Ott, M. Q., and Dogucu, M. (2022), &lt;em&gt;Bayes Rules!: An Introduction to Applied Bayesian Modeling&lt;/em&gt;, Boca Raton, FL: CRC Press, DOI: 
+&lt;a href=&#34;https://doi.org/10.1201/9780429288340&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1201/9780429288340&lt;/a&gt;. Available at 
+&lt;a href=&#34;https://www.bayesrulesbook.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.bayesrulesbook.com&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
