@@ -5,12 +5,142 @@
     <link>https://dmsenter89.github.io/tag/sas/</link>
       <atom:link href="https://dmsenter89.github.io/tag/sas/index.xml" rel="self" type="application/rss+xml" />
     <description>sas</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 02 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 08 May 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>sas</title>
       <link>https://dmsenter89.github.io/tag/sas/</link>
     </image>
+    
+    <item>
+      <title>Sampling Regression Lines</title>
+      <link>https://dmsenter89.github.io/post/23-05-sample-regression-lines/</link>
+      <pubDate>Mon, 08 May 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-05-sample-regression-lines/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://dmsenter89.github.io/post/23-05-simple-regression-with-proc-mcmc/&#34;&gt;Last week&lt;/a&gt; we saw how to generate posterior samples using PROC MCMC for simple linear and logistic regression models. This week, I want to show how to sample regression lines from the data set returned by MCMC by plotting several sample regression linse on top of a scatter plot of the source data.&lt;/p&gt;
+&lt;h2 id=&#34;writing-the-macro&#34;&gt;Writing the Macro&lt;/h2&gt;
+&lt;p&gt;Since the majority of the steps are identical irrespective of what data set we use, and because we might want to use this iteretively during model building, I decided to write this up as a macro. To some degree this is required since I will be using a macro do-loop, which is only valid when embedded inside of a macro.&lt;/p&gt;
+&lt;p&gt;This macro will assume we have fitted a simple linear model of the form&lt;/p&gt;
+&lt;p&gt;\begin{aligned}
+y_i &amp;amp;\sim \mathrm{Normal}(\mu_i, \sigma) \\&lt;br&gt;
+\mu_i &amp;amp;= \beta_0 + \beta_1 x_i
+\end{aligned}&lt;/p&gt;
+&lt;h3 id=&#34;step-1-get-an-srs-sample&#34;&gt;Step 1: Get an SRS Sample&lt;/h3&gt;
+&lt;p&gt;The first step is the simplest - selecting a subset of the posterior samples. This is easily achieved by calling 
+&lt;a href=&#34;https://support.sas.com/rnd/app/stat/procedures/surveyselect.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PROC SURVEYSELECT&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc surveyselect data=&amp;amp;posterior. method=srs n=&amp;amp;n.
+                  out=SRS;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;step-2-make-a-macro-list-of-parameters&#34;&gt;Step 2: Make a Macro List of Parameters&lt;/h3&gt;
+&lt;p&gt;Next we need to generate a list of intercepts and slopes. I find it easiest to read those in PROC SQL using the &lt;code&gt;into&lt;/code&gt; operation. Additionally, we&amp;rsquo;ll also collect the $x$- and $y$-ranges of our data. This will be used to make sure our plot is centered on the scatter-plot values of our source data set.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc sql noprint;
+  select beta0, beta1 
+  into :intercepts separated by &#39; &#39;,
+       :slopes  separated by &#39; &#39;
+  from SRS;
+
+  select min(x), max(x),
+         min(y), max(y)
+  into :minx, :maxx,
+       :miny, :maxy
+  from &amp;amp;ds.;
+quit;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;step-3-macro-loop-to-add-lines-to-a-scatter-plot&#34;&gt;Step 3: Macro-Loop to Add Lines to a Scatter Plot&lt;/h3&gt;
+&lt;p&gt;Now all the parts have been assembled and you can call PROC SGPLOT. We use the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/grstatproc/p1lcbd3lhs3t3bn1jk6d8sjt2yqx.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;scatter&lt;/a&gt; statement to create a scatter plot of the source data. Then we use a do-loop to iteratively paste different 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/grstatproc/n1h6n82pw2uqo6n10avwmph63r7o.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;lineparm&lt;/a&gt; statements corresponding to our different samples into the SGPLOT statement. Lastly, use the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/grstatproc/n0n6uml63c6h8dn16phbd1arm9g9.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;xaxis&lt;/a&gt; and 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/grstatproc/n0n6uml63c6h8dn16phbd1arm9g9.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yaxis&lt;/a&gt; statements to focus the graph on the scatter plot data, and not forcing the x-intercepts of the different fitted lines into&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc sgplot data=&amp;amp;ds. noautolegend;
+  scatter x=x y=y;
+  %do i = 1 %to &amp;amp;n.;
+    lineparm x=0 y=%scan(&amp;amp;intercepts, &amp;amp;i, &#39; &#39;) 
+         slope=%scan(&amp;amp;slopes, &amp;amp;i, &#39; &#39;) / transparency=0.7;
+  %end;
+
+  xaxis min=&amp;amp;minx. max=&amp;amp;maxx.;
+  yaxis min=&amp;amp;miny. max=&amp;amp;maxy.;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;calling-the-macro&#34;&gt;Calling the Macro&lt;/h2&gt;
+&lt;p&gt;And that&amp;rsquo;s it. Assuming we declared the macro as follows&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;%macro sample_regression(ds=, posterior=, n=);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;we can now call it.&lt;/p&gt;
+&lt;p&gt;As a particular example, let&amp;rsquo;s run PROC MCMC&amp;rsquo;s getting started example 1 straight from 
+&lt;a href=&#34;https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/mcmcgs1.sas&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename url gs1 &#39;https://raw.githubusercontent.com/sassoftware/doc-supplement-statug/main/Examples/m-n/mcmcgs1.sas&#39;;
+%include gs1;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In this example, we predict weight based on height in the &lt;code&gt;sashelp.class&lt;/code&gt; data set. The posterior samples are available as &lt;code&gt;work.classout&lt;/code&gt;. We&amp;rsquo;ll want to rename the height and weight variables to $x$ and $y$ in order to work with the chosen macro names. This is easily accomplished by using the &lt;code&gt;rename&lt;/code&gt; statement in the macro call itself. We&amp;rsquo;ll call it with $n=15$.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;%sample_regression(ds=sashelp.class(rename=(Height=x Weight=y)),
+                  posterior=work.classout,
+                  n=15);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will produce the following output:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/23-05-sample-regression-lines/class-regression-sample_hu8718c9b6d2106aec942f1d2ab5f5552b_53162_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/23-05-sample-regression-lines/class-regression-sample_hu8718c9b6d2106aec942f1d2ab5f5552b_53162_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;With slight modifications you can also use this macro to help you refine your priors. By using the&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;model general(0);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;statement in PROC MCMC in lieu of a regular model you will get estimates of the prior parameters. See the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/statug/statug_mcmc_examples01.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; for examples.&lt;/p&gt;
+&lt;!-- 
+```sas sample-regression.sas
+/*
+ * This code was generated for the blog post &#34;Sampling Regression Lines&#34;
+ * available at dmsenter89.github.io/post/23-05-sample-regression-lines/
+ *
+ * Author: Michael Senter, PhD
+ */
+
+&lt;&lt;&lt;macro-first-line&gt;&gt;&gt;
+&lt;&lt;&lt;srs&gt;&gt;&gt;
+
+&lt;&lt;&lt;parameter-list&gt;&gt;&gt;
+
+&lt;&lt;&lt;lineparm&gt;&gt;&gt;
+%mend sample_regression;
+
+&lt;&lt;&lt;mcmc-gs1&gt;&gt;&gt;
+
+&lt;&lt;&lt;macro-call&gt;&gt;&gt;
+```
+--&gt;
+</description>
+    </item>
     
     <item>
       <title>Simple Regression With PROC MCMC</title>

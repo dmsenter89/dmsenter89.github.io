@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="The Census Bureau has updated its population estimates for 2020 with county level data. This means any projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates.">
+  <meta name="description" content="Last week we saw how to generate posterior samples using PROC MCMC for simple linear and logistic regression models. This week, I want to show how to sample regression lines from the data set returned by MCMC by plotting several sample regression linse on top of a scatter plot of the source data.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/21-06-covid-county-incidence/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-05-sample-regression-lines/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/21-06-covid-county-incidence/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/23-05-sample-regression-lines/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/21-06-covid-county-incidence/">
-  <meta property="og:title" content="Census 2020 Population Estimates Updated | Michael&#39;s Site">
-  <meta property="og:description" content="The Census Bureau has updated its population estimates for 2020 with county level data. This means any projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/23-05-sample-regression-lines/">
+  <meta property="og:title" content="Sampling Regression Lines | Michael&#39;s Site">
+  <meta property="og:description" content="Last week we saw how to generate posterior samples using PROC MCMC for simple linear and logistic regression models. This week, I want to show how to sample regression lines from the data set returned by MCMC by plotting several sample regression linse on top of a scatter plot of the source data."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-06-09T16:00:34-04:00">
+      <meta property="article:published_time" content="2023-05-08T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-06-09T16:00:34-04:00">
+    <meta property="article:modified_time" content="2023-05-08T00:00:00&#43;00:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/21-06-covid-county-incidence/"
+    "@id": "https://dmsenter89.github.io/post/23-05-sample-regression-lines/"
   },
-  "headline": "Census 2020 Population Estimates Updated",
+  "headline": "Sampling Regression Lines",
   
-  "datePublished": "2021-06-09T16:00:34-04:00",
-  "dateModified": "2021-06-09T16:00:34-04:00",
+  "datePublished": "2023-05-08T00:00:00Z",
+  "dateModified": "2023-05-08T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "The Census Bureau has updated its population estimates for 2020 with county level data. This means any projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates."
+  "description": "Last week we saw how to generate posterior samples using PROC MCMC for simple linear and logistic regression models. This week, I want to show how to sample regression lines from the data set returned by MCMC by plotting several sample regression linse on top of a scatter plot of the source data."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>Census 2020 Population Estimates Updated | Michael&#39;s Site</title>
+  <title>Sampling Regression Lines | Michael&#39;s Site</title>
 
 </head>
 
@@ -597,7 +597,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Census 2020 Population Estimates Updated</h1>
+  <h1>Sampling Regression Lines</h1>
 
   
 
@@ -616,7 +616,7 @@
     
       
     
-    Jun 9, 2021
+    May 8, 2023
   </span>
   
 
@@ -625,7 +625,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -652,6 +652,58 @@
 
 
 
+<div class="btn-links mb-3">
+  
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  
+  
+  
+    
+    
+      
+    
+  
+  <a class="btn btn-outline-primary my-1 mr-1" href="/post/23-05-sample-regression-lines/sample-regression.sas" >
+    <i class="fas fa-file-code "></i>
+    
+  </a>
+
+
+</div>
+
 
   
 </div>
@@ -661,12 +713,70 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>The Census Bureau has updated its population estimates for 2020 with county level data. This means any
-projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates.</p>
-<p>This is particularly useful for those of us who have been trying to track the development of COVID-19. The
-average incidence rates are typically rescaled to new cases per 100,000 people. Previous graphs and maps I
-have created used the 2019 estimates. I have now updated my code for mapping North Carolina developments to
-use the 2020 estimates.</p>
+      <p>
+<a href="/post/23-05-simple-regression-with-proc-mcmc/">Last week</a> we saw how to generate posterior samples using PROC MCMC for simple linear and logistic regression models. This week, I want to show how to sample regression lines from the data set returned by MCMC by plotting several sample regression linse on top of a scatter plot of the source data.</p>
+<h2 id="writing-the-macro">Writing the Macro</h2>
+<p>Since the majority of the steps are identical irrespective of what data set we use, and because we might want to use this iteretively during model building, I decided to write this up as a macro. To some degree this is required since I will be using a macro do-loop, which is only valid when embedded inside of a macro.</p>
+<p>This macro will assume we have fitted a simple linear model of the form</p>
+<p>\begin{aligned}
+y_i &amp;\sim \mathrm{Normal}(\mu_i, \sigma) \\<br>
+\mu_i &amp;= \beta_0 + \beta_1 x_i
+\end{aligned}</p>
+<h3 id="step-1-get-an-srs-sample">Step 1: Get an SRS Sample</h3>
+<p>The first step is the simplest - selecting a subset of the posterior samples. This is easily achieved by calling 
+<a href="https://support.sas.com/rnd/app/stat/procedures/surveyselect.html" target="_blank" rel="noopener">PROC SURVEYSELECT</a>.</p>
+<pre><code class="language-sas">proc surveyselect data=&amp;posterior. method=srs n=&amp;n.
+                  out=SRS;
+run;
+</code></pre>
+<h3 id="step-2-make-a-macro-list-of-parameters">Step 2: Make a Macro List of Parameters</h3>
+<p>Next we need to generate a list of intercepts and slopes. I find it easiest to read those in PROC SQL using the <code>into</code> operation. Additionally, we&rsquo;ll also collect the $x$- and $y$-ranges of our data. This will be used to make sure our plot is centered on the scatter-plot values of our source data set.</p>
+<pre><code class="language-sas">proc sql noprint;
+  select beta0, beta1 
+  into :intercepts separated by ' ',
+       :slopes  separated by ' '
+  from SRS;
+
+  select min(x), max(x),
+         min(y), max(y)
+  into :minx, :maxx,
+       :miny, :maxy
+  from &amp;ds.;
+quit;
+</code></pre>
+<h3 id="step-3-macro-loop-to-add-lines-to-a-scatter-plot">Step 3: Macro-Loop to Add Lines to a Scatter Plot</h3>
+<p>Now all the parts have been assembled and you can call PROC SGPLOT. We use the 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/grstatproc/p1lcbd3lhs3t3bn1jk6d8sjt2yqx.htm" target="_blank" rel="noopener">scatter</a> statement to create a scatter plot of the source data. Then we use a do-loop to iteratively paste different 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/grstatproc/n1h6n82pw2uqo6n10avwmph63r7o.htm" target="_blank" rel="noopener">lineparm</a> statements corresponding to our different samples into the SGPLOT statement. Lastly, use the 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/grstatproc/n0n6uml63c6h8dn16phbd1arm9g9.htm" target="_blank" rel="noopener">xaxis</a> and 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/grstatproc/n0n6uml63c6h8dn16phbd1arm9g9.htm" target="_blank" rel="noopener">yaxis</a> statements to focus the graph on the scatter plot data, and not forcing the x-intercepts of the different fitted lines into</p>
+<pre><code class="language-sas">proc sgplot data=&amp;ds. noautolegend;
+  scatter x=x y=y;
+  %do i = 1 %to &amp;n.;
+    lineparm x=0 y=%scan(&amp;intercepts, &amp;i, ' ') 
+         slope=%scan(&amp;slopes, &amp;i, ' ') / transparency=0.7;
+  %end;
+
+  xaxis min=&amp;minx. max=&amp;maxx.;
+  yaxis min=&amp;miny. max=&amp;maxy.;
+run;
+</code></pre>
+<h2 id="calling-the-macro">Calling the Macro</h2>
+<p>And that&rsquo;s it. Assuming we declared the macro as follows</p>
+<pre><code class="language-sas">%macro sample_regression(ds=, posterior=, n=);
+</code></pre>
+<p>we can now call it.</p>
+<p>As a particular example, let&rsquo;s run PROC MCMC&rsquo;s getting started example 1 straight from 
+<a href="https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/mcmcgs1.sas" target="_blank" rel="noopener">GitHub</a>:</p>
+<pre><code class="language-sas">filename url gs1 'https://raw.githubusercontent.com/sassoftware/doc-supplement-statug/main/Examples/m-n/mcmcgs1.sas';
+%include gs1;
+</code></pre>
+<p>In this example, we predict weight based on height in the <code>sashelp.class</code> data set. The posterior samples are available as <code>work.classout</code>. We&rsquo;ll want to rename the height and weight variables to $x$ and $y$ in order to work with the chosen macro names. This is easily accomplished by using the <code>rename</code> statement in the macro call itself. We&rsquo;ll call it with $n=15$.</p>
+<pre><code class="language-sas">%sample_regression(ds=sashelp.class(rename=(Height=x Weight=y)),
+                  posterior=work.classout,
+                  n=15);
+</code></pre>
+<p>This will produce the following output:</p>
 
 
 
@@ -685,58 +795,46 @@ use the 2020 estimates.</p>
 
 
 
-<figure id="figure-county-level-data-for-north-carolina-using-the-nyt-covid-data-set-date-set-to-june-8-2021">
+<figure >
 
 
-  <a data-fancybox="" href="/post/21-06-covid-county-incidence/nc_avg_incidence_08jun2021_hu8396d2a41a978826522d96cfe881f35d_68326_2000x2000_fit_lanczos_2.png" data-caption="County level data for North Carolina using the NYT COVID data set. Date set to June 8, 2021.">
+  <a data-fancybox="" href="/post/23-05-sample-regression-lines/class-regression-sample_hu8718c9b6d2106aec942f1d2ab5f5552b_53162_2000x2000_fit_lanczos_2.png" >
 
 
-  <img data-src="/post/21-06-covid-county-incidence/nc_avg_incidence_08jun2021_hu8396d2a41a978826522d96cfe881f35d_68326_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="640" height="480">
+  <img data-src="/post/23-05-sample-regression-lines/class-regression-sample_hu8718c9b6d2106aec942f1d2ab5f5552b_53162_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="640" height="480">
 </a>
 
-
-  
-  
-  <figcaption>
-    County level data for North Carolina using the NYT COVID data set. Date set to June 8, 2021.
-  </figcaption>
 
 
 </figure>
 
-<p>Below this post is my code for loading the necessary data using SAS.
-Note that I&rsquo;m using a macro called <code>mystate</code> that can be set to the statecode abbreviation of your choice.
-The conditional <code>County ne 0</code> is in the code because the county level CSV includes both the county data as
-well as the totals for each state.</p>
-<pre><code class="language-sas">
-filename popdat url 'https://www2.census.gov/programs-surveys/popest/datasets/2010-2020/counties/totals/co-est2020-alldata.csv';
-
-data censusdata;
-	infile POPDAT delimiter=',' MISSOVER DSD lrecl=32767 firstobs=2;
-	informat SUMLEV REGION DIVISION State County best32.
-                         STNAME $20. CTYNAME $35. 
-		CENSUS2010POP ESTIMATESBASE2010 POPESTIMATE2010-POPESTIMATE2020 best32.;
-	format SUMLEV REGION DIVISION STATE best32. COUNTY 5. STNAME $20. CTYNAME $35. 
-		CENSUS2010POP ESTIMATESBASE2010 POPESTIMATE2010-POPESTIMATE2020 
-		COMMA12. StateCode $2.;
-	input SUMLEV REGION DIVISION STATE COUNTY STNAME $ CTYNAME $
-                        CENSUS2010POP ESTIMATESBASE2010 
-		POPESTIMATE2010-POPESTIMATE2020;
-
-	if (State ne 0) and (State ne 72) then
-		do;
-			FIPS=put(State, Z2.);
-			Statecode=fipstate(FIPS);
-
-			if Statecode eq &amp;mystate and County ne 0 then
-				output;
-		end;
-	keep STNAME CTYNAME County FIPS Statecode Popestimate2020;
-run;
+<p>With slight modifications you can also use this macro to help you refine your priors. By using the</p>
+<pre><code class="language-sas">model general(0);
 </code></pre>
-<p>The media release can be 
-<a href="https://www.census.gov/newsroom/press-releases/2021/2020-vintage-population-estimates.html" target="_blank" rel="noopener">viewed here</a>. The county-level data set can be downloaded 
-<a href="https://www.census.gov/programs-surveys/popest/technical-documentation/research/evaluation-estimates/2020-evaluation-estimates/2010s-counties-total.html" target="_blank" rel="noopener">at this page</a>.</p>
+<p>statement in PROC MCMC in lieu of a regular model you will get estimates of the prior parameters. See the 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/statug/statug_mcmc_examples01.htm" target="_blank" rel="noopener">documentation</a> for examples.</p>
+<!-- 
+```sas sample-regression.sas
+/*
+ * This code was generated for the blog post "Sampling Regression Lines"
+ * available at dmsenter89.github.io/post/23-05-sample-regression-lines/
+ *
+ * Author: Michael Senter, PhD
+ */
+
+<<<macro-first-line>>>
+<<<srs>>>
+
+<<<parameter-list>>>
+
+<<<lineparm>>>
+%mend sample_regression;
+
+<<<mcmc-gs1>>>
+
+<<<macro-call>>>
+```
+-->
 
     </div>
 
@@ -749,9 +847,11 @@ run;
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/census/">census</a>
+  <a class="badge badge-light" href="/tag/bayesian/">bayesian</a>
   
-  <a class="badge badge-light" href="/tag/covid/">covid</a>
+  <a class="badge badge-light" href="/tag/regression/">regression</a>
+  
+  <a class="badge badge-light" href="/tag/sampling/">sampling</a>
   
   <a class="badge badge-light" href="/tag/sas/">sas</a>
   
@@ -770,7 +870,7 @@ run;
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/21-06-covid-county-incidence/&amp;text=Census%202020%20Population%20Estimates%20Updated" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-05-sample-regression-lines/&amp;text=Sampling%20Regression%20Lines" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -783,7 +883,7 @@ run;
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/21-06-covid-county-incidence/&amp;t=Census%202020%20Population%20Estimates%20Updated" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-05-sample-regression-lines/&amp;t=Sampling%20Regression%20Lines" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -796,7 +896,7 @@ run;
       
       
       <li>
-        <a href="mailto:?subject=Census%202020%20Population%20Estimates%20Updated&amp;body=https://dmsenter89.github.io/post/21-06-covid-county-incidence/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Sampling%20Regression%20Lines&amp;body=https://dmsenter89.github.io/post/23-05-sample-regression-lines/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -809,7 +909,7 @@ run;
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/21-06-covid-county-incidence/&amp;title=Census%202020%20Population%20Estimates%20Updated" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-05-sample-regression-lines/&amp;title=Sampling%20Regression%20Lines" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -822,7 +922,7 @@ run;
       
       
       <li>
-        <a href="whatsapp://send?text=Census%202020%20Population%20Estimates%20Updated%20https://dmsenter89.github.io/post/21-06-covid-county-incidence/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Sampling%20Regression%20Lines%20https://dmsenter89.github.io/post/23-05-sample-regression-lines/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -835,7 +935,7 @@ run;
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/21-06-covid-county-incidence/&amp;title=Census%202020%20Population%20Estimates%20Updated" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-05-sample-regression-lines/&amp;title=Sampling%20Regression%20Lines" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -987,15 +1087,15 @@ run;
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/22-04-census-api-with-sas/">Working with the Census API Directly from SAS</a></li>
-      
-      <li><a href="/post/23-05-sample-regression-lines/">Sampling Regression Lines</a></li>
-      
       <li><a href="/post/23-05-simple-regression-with-proc-mcmc/">Simple Regression With PROC MCMC</a></li>
       
       <li><a href="/post/23-04-loading-several-xpt-files-from-a-url/">Loading Several XPT Files From a URL</a></li>
       
       <li><a href="/post/23-02-proc-mi-added-to-saspy/">PROC MI Added to SASPy</a></li>
+      
+      <li><a href="/post/23-01-missing-data-mechanisms/">Missing Data Mechanisms</a></li>
+      
+      <li><a href="/post/22-11-sas-markdown-for-reproducibility/">SAS Markdown for Reproducibility</a></li>
       
     </ul>
   </div>
