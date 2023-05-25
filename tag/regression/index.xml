@@ -178,7 +178,7 @@ run;
 y_i &amp;amp;\sim \mathrm{Normal}(\mu_i, \sigma) \\&lt;br&gt;
 \mu_i &amp;amp;= \beta_0 + \beta_1 x_i
 \end{aligned}&lt;/p&gt;
-&lt;p&gt;which will need to be combined with priors for $\alpha$, $\beta$, and $\sigma$. Assume we have a data set &lt;code&gt;work.mydata&lt;/code&gt; that contains two variables: our predictor &lt;code&gt;x&lt;/code&gt; and our measured variable &lt;code&gt;y&lt;/code&gt;. Assume we use the above model together with the following priors:&lt;/p&gt;
+&lt;p&gt;which will need to be combined with priors for $\beta_0$, $\beta_1$, and $\sigma$. Assume we have a data set &lt;code&gt;work.mydata&lt;/code&gt; that contains two variables: our predictor &lt;code&gt;x&lt;/code&gt; and our measured variable &lt;code&gt;y&lt;/code&gt;. Assume we use the above model together with the following priors:&lt;/p&gt;
 &lt;p&gt;\begin{aligned}
 \beta_0 &amp;amp;\sim \mathrm{Normal}(0, 10) \\&lt;br&gt;
 \beta_1 &amp;amp;\sim \mathrm{Normal}(0, 10) \\&lt;br&gt;
@@ -277,7 +277,7 @@ run;
 &lt;a href=&#34;https://www.bayesrulesbook.com/chapter-15.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;unit IV&lt;/a&gt; of Bayes Rules!&lt;/p&gt;
 &lt;h2 id=&#34;reference&#34;&gt;Reference&lt;/h2&gt;
 &lt;p&gt;Johnson, A. A., Ott, M. Q., and Dogucu, M. (2022), &lt;em&gt;Bayes Rules!: An Introduction to Applied Bayesian Modeling&lt;/em&gt;, Boca Raton, FL: CRC Press, DOI: 
-&lt;a href=&#34;https://doi.org/10.1201/9780429288340&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1201/9780429288340&lt;/a&gt;. Available at 
+&lt;a href=&#34;https://doi.org/10.1201/9780429288340&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1201/9780429288340&lt;/a&gt;. Available online at 
 &lt;a href=&#34;https://www.bayesrulesbook.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;www.bayesrulesbook.com&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>

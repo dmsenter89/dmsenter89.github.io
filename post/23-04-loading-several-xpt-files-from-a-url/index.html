@@ -718,10 +718,10 @@
 <a href="https://www.cdc.gov/nchs/nhanes/index.htm" target="_blank" rel="noopener">NHANES</a>, as an example.</p>
 <h2 id="loading-a-single-xpt-file">Loading a Single XPT File</h2>
 <p>By far the easiest way to read an XPT file is to use the <code>XPT2LOC</code> autocall macro if it is available on your SAS installation. As an example, this snippet would load the demographics table from the 2017-2018 NHANES data set into the work library:</p>
-<pre><code class="language-sas">filename demo url &quot;https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/DEMO_J.XPT&quot;;
+<pre><code class="language-sas">filename demo &quot;/data/Nhanes/2017-2018/DEMO_J.XPT&quot;;
 %XPT2LOC(filespec=demo, libref=work);
 </code></pre>
-<p>This macro correctly resolves the name of the data set, and it would be available as <code>work.demo_j</code> now. See the 
+<p>This macro correctly resolves the name of the data set, and it would be available as <code>work.demo_j</code> now.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> See the 
 <a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/movefile/p1tp8gighlgeifn173i6kzw2w3bu.htm" target="_blank" rel="noopener">documentation</a> for more details on this macro.</p>
 <p>If we cannot or do not want to use this macro, we&rsquo;ll have to assign a LIBREF to the XPT file. This might seem weird at first, because you typically will only find a single data set in an XPT file. But if you consider that the file standard allows for multiple data sets to reside in the same XPT file, it makes sense. Using the LIBREF, we can achieve the same result as above using this snippet:</p>
 <pre><code class="language-sas">filename xpt url &quot;https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/DEMO_J.XPT&quot;;
@@ -824,6 +824,15 @@ options dlcreatedir;
 ```
 
 -->
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Note that using this macro requires you to first download the file for processing. You can do this easily with a 
+<a href="https://documentation.sas.com/doc/en/pgmsascdc/v_037/lestmtsglobal/p05r9vhhqbhfzun1qo9mw64s4700.htm" target="_blank" rel="noopener">TEMP filename</a> statement. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
     </div>
 

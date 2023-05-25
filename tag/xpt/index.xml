@@ -22,10 +22,10 @@
 &lt;a href=&#34;https://www.cdc.gov/nchs/nhanes/index.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NHANES&lt;/a&gt;, as an example.&lt;/p&gt;
 &lt;h2 id=&#34;loading-a-single-xpt-file&#34;&gt;Loading a Single XPT File&lt;/h2&gt;
 &lt;p&gt;By far the easiest way to read an XPT file is to use the &lt;code&gt;XPT2LOC&lt;/code&gt; autocall macro if it is available on your SAS installation. As an example, this snippet would load the demographics table from the 2017-2018 NHANES data set into the work library:&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename demo url &amp;quot;https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/DEMO_J.XPT&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename demo &amp;quot;/data/Nhanes/2017-2018/DEMO_J.XPT&amp;quot;;
 %XPT2LOC(filespec=demo, libref=work);
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This macro correctly resolves the name of the data set, and it would be available as &lt;code&gt;work.demo_j&lt;/code&gt; now. See the 
+&lt;p&gt;This macro correctly resolves the name of the data set, and it would be available as &lt;code&gt;work.demo_j&lt;/code&gt; now.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt; See the 
 &lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_031/movefile/p1tp8gighlgeifn173i6kzw2w3bu.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt; for more details on this macro.&lt;/p&gt;
 &lt;p&gt;If we cannot or do not want to use this macro, we&amp;rsquo;ll have to assign a LIBREF to the XPT file. This might seem weird at first, because you typically will only find a single data set in an XPT file. But if you consider that the file standard allows for multiple data sets to reside in the same XPT file, it makes sense. Using the LIBREF, we can achieve the same result as above using this snippet:&lt;/p&gt;
 &lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename xpt url &amp;quot;https://wwwn.cdc.gov/Nchs/Nhanes/2017-2018/DEMO_J.XPT&amp;quot;;
@@ -128,6 +128,15 @@ options dlcreatedir;
 ```
 
 --&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;Note that using this macro requires you to first download the file for processing. You can do this easily with a 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/pgmsascdc/v_037/lestmtsglobal/p05r9vhhqbhfzun1qo9mw64s4700.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;TEMP filename&lt;/a&gt; statement. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
 </description>
     </item>
     
