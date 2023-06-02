@@ -1,0 +1,10 @@
+digraph G {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+
+  rankdir=LR;
+  Smoking -> LBW -> Mortality;
+}

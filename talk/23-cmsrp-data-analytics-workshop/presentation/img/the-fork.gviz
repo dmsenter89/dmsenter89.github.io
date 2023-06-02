@@ -1,0 +1,5 @@
+digraph {
+    bgcolor=transparent;
+    Z->X;
+    Z->Y;
+}

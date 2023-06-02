@@ -1,0 +1,24 @@
+:root {
+    --r-background-color: #4B9CD3;
+    --r-main-font-size: 32px;
+    --r-heading-text-transform: capitalize;
+    --r-link-color: #4b59d3;
+}
+
+.ref-list {
+    font-size: 0.65em;
+    text-align: left;
+    padding: 1.3em;
+    text-indent: -1.3em;
+}
+
+.takeaway {
+    border-top: solid  black;
+    border-bottom: solid  black;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+.aleft {
+    text-align: left;
+}

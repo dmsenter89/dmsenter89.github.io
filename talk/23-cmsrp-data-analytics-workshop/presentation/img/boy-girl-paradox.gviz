@@ -1,0 +1,22 @@
+digraph G {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+  
+  MrSmith -> B1;
+  MrSmith -> G1;
+  B1 -> B2;
+  B1 -> G2;
+  G1 -> B3;
+  G1 -> G4;
+
+  MrSmith [label="Mr. Smith"];
+  B1 [label="Boy"];
+  B2 [label="Boy"];
+  G1 [label="Girl"];
+  G2 [label="Girl"];
+  B3 [label="Boy"];
+  G4 [label="Girl"];
+}

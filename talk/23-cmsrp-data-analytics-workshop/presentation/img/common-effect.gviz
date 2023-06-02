@@ -1,0 +1,6 @@
+digraph {
+    bgcolor=transparent;
+    rank="same";
+    X->Z;
+    Y->Z;
+}

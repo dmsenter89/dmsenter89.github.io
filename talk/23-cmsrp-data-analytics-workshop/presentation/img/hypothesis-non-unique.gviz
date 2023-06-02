@@ -1,0 +1,48 @@
+digraph G {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+  rankdir=LR 
+  bgcolor=transparent;
+
+  subgraph cluster_hyp{
+    rank="same"
+    color=lightgrey;
+    node [style=filled];
+    H1;
+    H2;
+    label = "*hypotheses*";
+    fontsize = 20;
+  }
+  
+  subgraph cluster_proc{
+      rank="same"
+      rankdir="TB"
+    P1A;
+    P1B;
+    
+    P2A;
+    P2B;
+   label = "*process models*";
+  }
+
+  subgraph cluster_stat {
+    rank="same"
+    node [style=filled];
+    MI;
+    MII;
+    MIII;
+    fontsize = 20;
+    color=lightgrey;
+    label = "*stat models*";
+  }
+  
+  H1 -> P1A;
+  H1 -> P1B;
+  H2 -> P2A;
+  H2 -> P2B;
+  P1A -> MII;
+  P1B -> MI;
+  P2A -> MIII;
+  P2B -> MII;
+}

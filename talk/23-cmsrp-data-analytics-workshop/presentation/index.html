@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="author" content="Michael Senter, PhD">
+        <title>CMSRP Workshop</title>
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reset.css" integrity="sha512-Q4Cz3JE//UwVLFChrv/lzPe+rK0TVgs3uXcKEWpxZS9gXQ2VicPwx/CNfXG2CyFxwzlYKWKKiNk5aw21abBIzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.css" integrity="sha512-NCDrn/xZ2H6CI9zrZGL65/CWydJcZGtca9k+jR33t8vJ2gvEA+ycduSFPcrs/u8zdazhChBYCuzM8LS+bx7Wpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/theme/black.css" integrity="sha512-UM89RlvOqgNbcGojhsntvOI5NX/Bbv96ba1q9nVzwVEbQJYG5sRYewxQMfE8TR1vzGnqkXfZioj3xbnYGTcn2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous"> -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" integrity="sha512-Z0kTB03S7BU+JFU0nw9mjSBcRnZm2Bvm0tzOX9/OuOuz01XQfOpa0w/N9u6Jf2f1OAdegdIPWZ9nIZZ+keEvBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link rel="stylesheet" href="cmsrp-presentation.css"/>
+        <!-- Theme for Syntax Highlighting -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.0.0/plugin/highlight/highlight.js" integrity="sha512-ECYyK2lScegKM2P3o3SGLXmDXYENC0SEUinGYcxflb+rHZ72S2rwatb7Av2Smmmsq5PGEM9Qmg5eklm8O5X2sw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/monokai.css" integrity="sha512-ITi+aXPAZ6cIHUIulO7jdT3gOiN9w4xIkyqJjFleAkjp2PLj0+oKmjIRlEjudk1bBvjNu4EkyFMstRzwZ+E0GA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/languages/sas.min.js" integrity="sha512-EJQvQ7/pYrdlePbIPKVhjPaYZfliKJxJ9z+VCxRBV9JugXNR3T5SQfb/boe16khn5pXjBrfEX4Q6U76bH8+vGA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    </head>
+
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+                <section id="title-slide" class="r-fit">
+                    <h1>CMSRP</h1>
+                    <h1>Data Analytics Workshop</h1>
+                    <h3 style="text-transform: none;">by Michael Senter, PhD</h3>
+                    <h4>2023-06-02</h4>
+
+                    <aside class="notes">
+                        Use this slide for introducing myself.
+                    </aside>
+                </section>
+
+                <section id="presentation-goals">
+                    <h2>What is our Goal Today?</h2>
+                    <div style="display:flex; align-items: center;">
+                        <div style="flex-grow: 1.5;">
+                            <ul>
+                                <li>Discuss challenges you may face.</li>
+                                <li>Get the right vocabulary to make decisions this summer.</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img style="border-radius: 10px" src="https://media.tenor.com/BdcwU6gstRoAAAAC/pooh-think.gif" alt="">
+                            </figure>
+                        </div>
+
+                    </div>
+
+                    <p class="fragment">Ask questions!</p>
+
+                    <aside class="notes">
+                        Data analysis and (semi-)independent research are hard. You don't (yet) have the right background. We can't cover everything, but we can give you the right tools. Key lessons for today: you need to really think things through and you will need to ask questions.
+                    </aside>
+                </section>
+
+                <!-- <section>
+                    <p>Your project is due on Aug 30, 2023 at 12:00 PM.</p>
+                    <p>That means you have <span id="countdown-timer"></span> left.</p>
+                    <script src="countdown.js"></script>
+                </section> -->
+                
+                <section id="statistics-is-hard">
+                    <h3>Foundations</h3>
+                    <h2>Statistics is Hard</h2>
+
+                    <aside class="notes">
+                        You might be anticipating this, but let's cover some examples that show <em>why</em> and <em>how</em> it's hard so you know where you'll need to slow down.
+                    </aside>
+                </section>
+
+                <section id="the-boy-or-girl-paradox">
+                    <h2>The Boy-or-Girl Paradox</h2>
+                    <blockquote>
+                    Mr. Smith says, “I have two children and at least one of them is a boy.”<br>
+                    What is the probability that the other child is a boy?
+                    </blockquote>
+                    <p style="font-size: smaller; text-align: left;">Gardner, M. (1961). <em>The 2nd Scientific American Book of Mathematical Puzzles and Diversions</em>. New York, NY: Simon and Schuster.</p>
+                </section>
+
+                <section>
+                    <h2>What do you think?</h2>
+                    <p class="aleft">Mr. Smith has two children and at least one of them is a boy. Then the probability that the other child is a boy is...</p>
+                    <ol>
+                        <li>\(1/2\)</li>
+                        <li>\(1/3\)</li>
+                        <li>\(1/4\)</li>
+                        <li>\(2/3\)</li>
+                        <li>Other</li>
+                    </ol>
+
+                    <aside class="notes">
+                        Give time for them to think about their answer.
+                    </aside>
+                </section>
+
+
+                <section id="bg-paradox-count-paths">
+                    <h2>Solution - Count the Paths!</h2>
+                    <p style="font-size: smaller;"><em>"Mr. Smith has two children and at least one of them is a boy"</em></p>
+                    <figure>
+                        <img src="img/boy-girl-paradox.png" alt="Diagram of Boy-Girl Options">
+                    </figure>
+                    <p>The key is to realize we don't know <em>which</em> child is the boy - the first or the second.</p>
+
+                    <aside class="notes">
+                        Walk through the path to the right answer. Bring up the notion of "conditional probability," and how the answer to the puzzle depends on what background information we condition on.
+                    </aside>
+                </section>
+
+                <section id="obesity-paper-regression-coeffs">
+                    <h2>Example - Intepreting Regression Results</h2>
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>Gender</th>
+                            <th>Ethnicity</th>
+                            <th>Year</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="5">BMI ≥ 25</td>
+                            <td>All</td>
+                            <td>All</td>
+                            <td>2048</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">Men</td>
+                            <td>All</td>
+                            <td>2051</td>
+                        </tr>
+                        <tr>
+                            <td>Non-Hisp. White</td>
+                            <td>2049</td>
+                        </tr>
+                        <tr>
+                            <td>Non-Hisp. Black</td>
+                            <td>2095</td>
+                        </tr>
+                        <tr>
+                            <td>Women</td>
+                            <td>All</td>
+                            <td>2044</td>
+                        </tr>
+                    </table>
+                <p style="font-size: smaller; text-align: left; padding-top: 0.5em;">Year when prevalence of overweight and obese individuals in US reaches 100% in linear regression model. Adapted from Wang et al (2008), DOI: <a href="http://doi.wiley.com/10.1038/oby.2008.351">10.1038/oby.2008.351</a>.</p>
+
+                <aside class="notes">
+                    Background of paper - take NHANES data from 1970 to 2004 and fit linear regressions to it in order to predict % of population that is overweight or obese. Includes complete model and many sub-models for different population groups. Are these results intuitively consistent? If not, why not? What could/should the authors do differently for their purposes?
+                </aside>
+                </section>
+
+                <section id="form-of-linear-regression">
+                    <h2>Form of Basic Linear Regression</h2>
+                    \[\begin{aligned}
+                    y_i &\sim  \mathrm{Normal}(\mu_i, \sigma) \\
+                    \mu_i &= \beta_0 + \beta_1 x_i
+                    \end{aligned}\]
+
+                    <p>The distribution of $\beta_0$, $\beta_1$, $\sigma$ to be determined.</p>
+
+                    <aside class="notes">
+                        <p>Note we are assuming normal distribution of values around an average. Recall Gauss and measurement error.</p>
+                        <p>Might look simple, but most of you will do this. Most tests you can think of can be phrased as linear model problems.</p>
+                    </aside>
+                </section>
+
+                <section id="lreg-height~weight">
+                    <h2>Linear Regression - Concrete Example 1</h2>
+                    \[\begin{aligned}
+                    \mathrm{height}_i &\sim  \mathrm{Normal}(\mu_i, \sigma) \\
+                    \mu_i &= \beta_0 + \beta_1 \, \mathrm{weight}_i
+                    \end{aligned}\]
+
+                    <p>For adults, height and weight are approximately linearly related.</p>
+
+                    <aside class="notes">
+                        Read as "<em>the expected height given a weight</em>."
+                        Go over meaning of the terms, make sure this makes sense to people.
+                    </aside>
+                </section>
+
+                <section  id="lreg-bmi~time">
+                    <h2>Linear Regression - Concrete Example 2</h2>
+                    <h3 style="text-transform: none;">Wang et al (2008)</h3>
+                    \[\begin{aligned}
+                        \mathrm{bmi}_i &\sim  \mathrm{Normal}(\mu_i, \sigma) \\
+                        \mu_i &= \beta_0 + \beta_1 \, \mathrm{time}_i
+                    \end{aligned}\]
+                    <p>Use the whole data set, then rinse & repeat with different subsets.</p>
+                </section>
+
+                <section id="be-wary-of-point-estimates">
+                    <h3>Foundations</h3>
+                    <h2>Be Wary of Point Estimates</h2>
+                </section>
+
+                <section id="questions-life-expectancy">
+                    <h2>Life Expectancy</h2>
+                    <p><strong>Question 1:</strong> What is expected age of death for a 40 year old?</p>
+                    <p class="fragment" data-fragment-index="1"><strong>Answer 1:</strong> 76.97 for Males, 81.38 for Females.</p>
+                    <p class="fragment" data-fragment-index="2"><strong>Question 2:</strong> What is the median age of death for a 40 year old?</p>
+                    <p class="fragment" data-fragment-index="3"><strong>Answer 2:</strong> 81 for Males, 85 for Females.</p>
+                    <p style="font-size: small; text-align: right">Source: <a href="https://www.ssa.gov/oact/STATS/table4c6.html">SSA Mortality Table, 2020</a>.</p>
+
+                    <aside class="notes">
+                        Give them a minute to think about each question. Have them note the shift between mean and median. Which is a better description of the data?
+                    </aside>
+                </section>
+
+                <section id="distribution-of-deaths">
+                    <h2>Consider the Actual Distribution of Deaths</h2>
+                    <figure class="r-fit">
+                        <img height="500px" src="https://dmsenter89.github.io/post/22-09-life-expectancy/distributionPlot.png" alt="Distribution of Deaths for Males and Females">
+                        <figcaption style="font-size: small;">See this <a href="https://dmsenter89.github.io/post/22-09-life-expectancy/">post</a> for more information.</figcaption>
+                    </figure>
+
+                    <aside class="notes">
+                        Discuss shape of density curve. Roughly what portion of people will live to 90 or past 90? 30% of females live to 90 or older, a little less than 20% of males do. Note that we get much more information from a distribution than from any particular point estimate.
+                    </aside>
+                </section>
+
+                <section id="ignore-significance-tests">
+                    <h3>Foundations</h3>
+                    <h2>Ignore Significance Tests</h2>
+                </section>
+
+                <section id="nhst-definitions">
+                    <h2>Null hypothesis Significance Testing</h2>
+                    <h3>Meaning of Terms</h3>
+                    <ul class="aleft">
+                        <li>Null-hypothesis $\coloneqq$ "no effect/difference"
+                            <ul class="fragment">
+                                <li>This is essentially <em>never</em> true in real life.</li>
+                            </ul>
+                        </li>
+
+                        <li>Significance Test $\coloneqq$ "if the null hypothesis were true, how probable is a result at least as extreme as my result?"
+                            <ul class="fragment">
+                                <li>Doesn't actually say anything about your research hypothesis, only about the null hypothesis that you don't believe in to begin with.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <aside class="notes">
+                        Highlight students don't believe in null anyway, else why do the research? Highlight NHST does not conform to the Popper-style scientific method most think they are doing.
+                    </aside>
+                </section>
+
+                <section id="ex-nhst-depends-on-sample-size">
+                    <h2>Significance Tests Sensitive to Sample Size</h2>
+                    <div style="display: flex; justify-content: space-evenly;">
+                    <div>
+                        <h4>Population</h4>
+                        \[\begin{aligned}
+                        \mu &= 100 \\
+                        \sigma &= 15
+                        \end{aligned}\]
+                    </div>
+                    <div>
+                        <h4>Sample</h4>
+                        \[\begin{aligned} 
+                        \bar{x} &= 102 \\
+                        n &= \text{ varies}
+                        \end{aligned}\]
+                    </div>
+                    </div>
+                    <h4>Z-Score Test</h4>
+                    \[\begin{aligned}
+                    z = \frac{\bar{x}-\mu}{\sigma / \sqrt{n}} 
+                      \htmlClass{fragment}{=\frac{\bar{x}-\mu}{\sigma} \sqrt{n}}
+                    \end{aligned}\]
+
+                    <aside class="notes">
+                        You'll probably not use a z-score. This was chosen specifically because all of you should have done this before by hand in a previous statistics class. Note that in our example the only thing that varies is the sample size.
+                    </aside>
+                </section>
+                    
+                <section id="ex-nhst-p-n-table">
+                    <h3>Minimal Sample Size for P-Value</h3>
+                    <table>
+                        <thead>
+                            <th>P-Value</th>
+                            <th>Z-Score</th>
+                            <th>N</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0.05</td>
+                                <td>1.645</td>
+                                <td>153</td>
+                            </tr>
+                            <tr>
+                                <td>0.025</td>
+                                <td>1.960</td>
+                                <td>217</td>
+                            </tr>
+                            <tr>
+                                <td>0.01</td>
+                                <td>2.326</td>
+                                <td>305</td>
+                        </tbody>
+                    </table>
+                    <div class="fragment">
+                        
+                        <p>Doesn't answer the question whether the difference $\bar{x}-\mu $ actually matters clinically.</p>
+
+                        <p>Do you think it matters how big \(|\bar{x}-\mu|/\sigma_x\) is?</p>
+                    </div>
+                    
+
+                    <aside class="notes">
+                        We can solve for any p-value of interest. Note that this implies that two studies of with \(n=80\) would individually be insignificant, but pooled together suddenly be significant. Ignore this stuff and instead focus first and foremost on what is <em>meaningful</em>, clinically speaking. Is the effect big enough to matter? Is it reasonable? What is the CI?
+                    </aside>
+                </section>
+
+                <section id="beware-false-conclusions">
+                    <h2>Beware of False Conclusions!</h2>
+                    <figure>
+                        <img src="img/beware-false-conclusions.png" alt="chart of odds-ratio with same point estimate but differing p-vals">
+                        <figcaption style="text-align: left; font-size: smaller;">Odds ratio CI of two studies having the same point estimate but different p-values. From Amrhein, Greenland, and McShane (2019).</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>More on P-Values</h2>
+                    <ol>
+                        <li>The P-value depends on the sample size/space.</li>
+                        <li class="fragment">The P-value is not the probablity that \(H_0\) is (not) true.</li>
+                        <li class="fragment">The P-value depends on fictive data.</li>
+                        <li class="fragment">The P-value is not an absolute measure.</li>
+                        <li class="fragment">The P-value does not take all evidence into account.</li>
+                        <li class="fragment">... and other issues. See chapter 1 in Lesaffre and Lawson (2012) for an accessible discussion.</li>
+                    </ol>
+
+                    <aside class="notes">
+                        <ol>
+                            <li>This is what we just saw, but can also have surprising effects depending on how we define the ficticious study.</li>
+                            <li>Probability of $H_0$ being true is actually given by $P(H_0|D)$.</li>
+                            <li>Not probability of an event occuring, but of an event <em>this extreme or more</em> occuring. This means it depends on not-observed data.</li>
+                            <li>P-Values don't really take the size of the study into account.</li>
+                            <li>The p-value only looks at the current data in complete isolation as if nothing else exists. That's generally not reasonable. For example, how reasonable is the null to begin with?</li>
+                        </ol>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Some Worthwhile Reading</h2>
+                    <div class="aleft">
+                    <ul>
+                        <li>Amrhein, V., Greenland, S., and McShane, B. (2019), &ldquo;Scientists rise up against statistical significance,&rdquo; <span style="font-style: italic">Nature</span>, 567, 305&ndash;307. DOI: <a href="https://doi.org/10.1038/d41586-019-00857-9">10.1038/d41586-019-00857-9</a>.</li>
+                        <li>Gelman, A. (2013), &ldquo;Misunderstanding the p-value,&rdquo; <a href="https://statmodeling.stat.columbia.edu/2013/03/12/misunderstanding-the-p-value/">StatModeling blog</a>.</li>
+                        <li>Gelman, A. (2018), &ldquo;The failure of null hypothesis significance testing when studying incremental changes, and what to do about it,&rdquo; <em>Personality and Social Psychology Bulletin</em>, 44, 16&ndash;23. DOI: <a href="https://doi.org/10.1177/0146167217729162">10.1177/0146167217729162</a>.</li>
+                        <li>Gelman, A. (2019), &ldquo;Thinking about "Abandon statistical significance," p-values, etc.,&rdquo; <a href="https://statmodeling.stat.columbia.edu/2019/04/02/thinking-about-abandon-statistical-significance-p-values-etc/">StatModeling Blog</a>.</li>
+                    </ul>
+                    </div>
+                </section>
+
+                <section id="keep-all-materials-together">
+                    <h3>Reproducibility</h3>
+                    <h2>Keep All Your Materials Together</h2>
+                </section>
+
+                <section id="organization-is-important">
+                    <h2>Organization</h2>
+                    <p>Keep your data, code, and analysis all in one folder. This helps with</p>
+                    <ul>
+                        <li><strong>Organization:</strong> no need to search all over for different components of your research project.</li>
+                        <li class="fragment"><strong>Backups:</strong> archive a single folder to ensure your work is not lost.</li>
+                        <li class="fragment"><strong>Reproducibility:</strong> others can reliably follow your steps, even years later.</li>
+                    </ul>
+
+                    <aside class="notes">
+                        <p>You'd be surprised how disorganized research tends to get. I have often seen students search their downloads folder for materials.</p>.
+                        <p>Nothing is worse than spending time and money, and perhaps patients' time and comfort, and loosing the data. Give the recent example from the laptop loss.</p> 
+                        <p>If you don't have your stuff together, reproducibility won't happen. Reproducibility is incredibly hard to achieve; do <em>not</em> underestimate it.</p>
+                    </aside>
+                </section>
+
+                <section id="proj-folder-structure">
+                    <h2>Suggested Folder Structure</h2>
+                    <pre><code data-trim data-noescape class="language-shell">
+                    $ exa --tree cmsrp-project-23/
+                    cmsrp-project-23
+                    ├── data
+                    │  ├── alternative-subset.csv
+                    │  └── cmsrp-project-data.csv
+                    ├── data-dictionary.csv
+                    ├── docs
+                    │  ├── abstraction-protocol.docx
+                    │  ├── aca-24-abstract.docx
+                    │  ├── bibliography.bib
+                    │  └── irb.pdf
+                    ├── raw_data
+                    │  └── 2023-06-01-redcap.csv
+                    ├── README.md
+                    └── scripts
+                        ├── analysis.sas
+                        ├── data_transform_validation.sas
+                        └── load_raw_data.sas 
+                    </code></pre>
+
+                    <p class="fragment aleft">Use an archiving program like zip or 7z to share/backup all or parts of your project. If your project includes PHI, there is a minimum encryption standard (AES-128).</p>
+                </section>
+
+                <section id="use-version-control">
+                    <h2>Use Version Control</h2>
+                    <ul>
+                        <li>Keeps track of who changed what, when, and why.</li>
+                        <li>Makes changes reversible.</li>
+                        <li>Works best with text-based data.</li>
+                        <li>Available as part of REDCap or manually via Git.</li>
+                    </ul>
+                    <p class="fragment aleft">On that note: Don't send multiple versions of a word doc around as you edit. This leads to many problems. Use OneDrive instead.</p>
+
+                    <aside class="notes">
+                        <p>Version control can be invaluable, for large projects in particular. Don't be afraid of its seeming complexity.</p>
+                        <p>Give description of issues with sending word docs around.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h3>Reproducibility</h3>
+                    <h2>Use Science to Guide Variable Selection</h2>
+                </section>
+
+                <section id="big-picture-scientific-process">
+                    <h2>Big Picture - Scientific Process</h2>
+                    <ol>
+                        <li>Define the estimand(s) of interest.</li>
+                        <li>Create scientific model(s).</li>
+                        <li>Create statistical model(s).</li>
+                        <li>Analyze your models.</li>
+                    </ol>
+                </section>
+
+                <section>
+                    <h2>Define Your Estimand</h2>
+                    <ul>
+                        <li>Be specific. Example attributes:
+                            <ul>
+                                <li>Treatment condition of interest (clinical trial).</li>
+                                <li>Patient Population.</li>
+                                <li>Variable to be obtained.</li>
+                                <li>For details, review <a href="https://www.ema.europa.eu/en/documents/scientific-guideline/ich-e9-r1-addendum-estimands-sensitivity-analysis-clinical-trials-guideline-statistical-principles_en.pdf">ICH E9 (R1)</a> addendum on estimands.</li>
+                            </ul>
+                            <li>Pay attention to the difference between what you <em>want</em> to know and what you <em>can</em> measure.</li>
+                        </li>
+                    </ul>
+
+                    <p class="fragment">Your choice of estimand alters how your study is properly interpreted.</p>
+
+                    <aside class="notes">
+                        <p>Choice of population alters what we consider an appropriate sample. Need to choose the variable to analyze. Will you analyze a raw variable or a derived variable?</p>
+                    </aside>
+                </section>
+
+                <section id="scientific-model-neq-stats-model">
+                    <h2 class="r-fit">Scientific Model &ne; Statistical Model</h2>
+                    <figure class="r-fit">
+                        <img src="img/hypothesis-non-unique.png" alt="graph of non-unique hypotheses">
+                    </figure>
+                    <p>Hypotheses do not imply unique models,<br> and models do not imply unique hypotheses.</p>
+
+                    <aside class="notes">
+                        <p><strong>Example:</strong> of "neutral" evolution. H1 - evolution is neutral, H2 selection matters. P1A - neutral evolution, stable allele frequencies. P1B - neutral evolution, unstable allele frequencies. P2A - constant selection. P2B - fluctuating selection. P1A and P2B processes both suggest a power law distribution of allele frequencies - the same statistical model!</p>
+                    </aside>
+                </section>
+
+                <section  id="no-causes-in-no-causes-out">
+                    <h2>No causes in - no causes out</h2>
+                    <p>Statistical Inference<br>&ne;<br>Prediction<br>&ne;<br>Causal Analysis</p>
+
+                    <p class="fragment">If you want to make any causal statements, you need to carefully consider the assumed causal model.</p>
+
+                    <aside class="notes">
+                        <p>Statistical inference is concerned with <em>correlations</em>, prediction minimizes a difference that may or may not be scientifically meaningful, but definitely reduces variation. Causal analysis instead wants to make claims about what effect one variable has on another.</p>
+                        <p>Methods for each differ. If you google for methods, make sure they are appropriate for the type of analysis you are attempting to make. This is an incredibly common pitfall.</p>
+                    </aside>
+                </section>
+
+                
+
+                <section id="introducing-dags">
+                    <h2>Introduction to DAGs</h2>
+                    <ul>
+                        <li> DAG - "<a href="https://en.wikipedia.org/wiki/Directed_acyclic_graph">Directed Acyclical Graph</a>."</li>
+                        <li>Represents the qualitative aspect of the data generating process: \(X \rightarrow Y\).</li>
+                        <li>Three main building blocks:
+                            <ul>
+                                <li>Mediators</li>
+                                <li>Common Cause (forks)</li>
+                                <li>Common Effects (colliders)</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <aside class="notes">
+                        A DAG consists of nodes and edges. They have a direction indicating an assumed causal pathway, but you don't specify how exactly the causal pathway works. The acyclical means that you can't get back to where you started by following the arrows.
+                    </aside>
+                </section>
+
+                <section id="the-mediator">
+                    <h2>The Mediator</h2>
+                    <figure>
+                        <img src="img/the-mediator.png" alt="mediator example">
+                    </figure>
+                    <p>$X$ causally affects $Y$ through mediator $Z$.</p>
+                    <p class="fragment">Conditioning on $Z$ blocks the association.</p>
+
+                    <aside class="notes">
+                        <p>X and Y are not statistically independent unless we condition on/stratify by Z. This path is meaningful in that X is in fact a cause of Y; conditioning breaks this (you don't want to do that).</p>
+                    </aside>
+                </section>
+
+                <section id="the-fork">
+                    <h2>The Common Cause (Fork)</h2>
+                    <figure>
+                        <img src="img/the-fork.png" alt="fork example">
+                    </figure>
+                    <p>$X$ and $Y$ share a common cause (confounder) $Z$, leading to a non-causal association between both.</p>
+                    <p class="fragment">Conditioning on $Z$ blocks this association.</p>
+
+                    <aside class="notes">
+                        <p>X and Y are not statistically independent, but they don't have a causal relationship. You would want to stratify by Z to break this non-causal connection.</p>
+                    </aside>
+                </section>
+
+                <section id="the-collider">
+                    <h2>Common Effects (Collider)</h2>
+                    <figure>
+                        <img src="img/common-effect.png" alt="common-effect example">
+                    </figure>
+                    <p>There is no association between $X$ and $Y$.</p>
+                    <p class="fragment">If you condition on $Z$, you introduce a non-causal association between $X$ and $Y$.</p>
+
+                    <aside class="notes">
+                        <p>X and Y are statistically independent, and you want that to remain the case.</p>
+                    </aside>
+                </section>
+
+                <section id="what's-the-point">
+                    <h2>What's the point?</h2>
+                    <p>Depending on what variables you use as covariates, you may either <em>induce</em> or <em>obscure</em> a causal relationship. Either way, your interpretation of the coefficients will be incorrect.</p>
+                    <p class="fragment">Don't do a "garbage-can" regression (see Achen 2005).</p>
+                </section>
+
+                <section>
+                    <h2>Example: The Birth-Weight Paradox</h2>
+                    <ul>
+                        <li>Low birth weight is a strong predictor of infant mortality.</li>
+                        <li class="fragment">Infants born to smoking mothers have lower birth weights on average.</li>
+                        <li class="fragment">Low birth weight infants born to smoking mothers have a lower infant mortality rate than those born to non-smoking mothers.</li>
+                    </ul>
+                    <p class="fragment">Is smoking beneficial, protecting low birth weight infants against infant mortality?</p>
+                </section>
+
+                <section>
+                    <h2>Example: The Birth-Weight Paradox</h2>
+                    <ul>
+                        <li>$n=4\,115\,494$ infants born in USA in 1991. For $3\, 001\,621$ infants born, maternal smoking status is known.</li>
+                        <li>Mean birth weight: $3\,145$ g (smokers) vs. $3\,370$ g (non-smokers).</li>
+                        <li>Unadjusted infant mortality rate ratio: 1.55.</li>
+                        <li>Infant mortality rate ratio, adjusted for birth weight: 1.09.</li>
+                        <li>LBW infant mortality rate ratio, adjusted for birth weight: 0.79.</li>
+                    </ul>
+                    <p class="aleft" style="font-size: smaller;">See DOI <a href="https://doi.org/10.1093/aje/kwj275">10.1093/aje/kwj275</a> for details.</p>
+                </section>
+
+                <section>
+                    <h2>Consider the DAG</h2>
+
+                    <div class="r-stack">
+                        <img class="fragment fade-out" data-fragment-index="0" src="img/bwpara1.png">
+                        <img class="fragment current-visible" data-fragment-index="0" src="img/bwpara2.png">
+                        <img class="fragment" src="img/bwpara3.png">
+                      </div>                      
+
+                    <p class="fragment">Stratifying by birth weight introduces a spurious association between smoking and mortality.</p>
+
+                    <p class="aleft" style="font-size: smaller;">See DOI <a href="https://doi.org/10.1093/aje/kwj275">10.1093/aje/kwj275</a> for details.</p>
+                </section>
+
+                <section id="what-to-do-about-it">
+                    <h2>What do I do about it?</h2>
+                    <ul>
+                        <li>Construct a DAG reflecting your model.</li>
+                        <li class="fragment">Use software to help you pick appropriate covariates given your model.
+                            <ul>
+                                <li>SAS: <a href="https://support.sas.com/rnd/app/stat/procedures/causalgraph.html">CAUSALGRAPH</a> procedure.</li>
+                                <li>R: <a href="http://www.dagitty.net/">DAGitty</a>.</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">To understand the way this works, read Cinelli, Forney, and Pearl (2020).</li>
+                    </ul>
+                </section>
+
+              <section>
+                <section>
+                    <h2>Build A DAG</h2>
+                    <figure>
+                        <img src="img/dag-ex.gviz.png" alt="">
+                    </figure>
+                    <p>Start with your research question.</p>
+                    <aside class="notes">
+                        Assume you are interested in the causal pathway of Cardiomyopathy (CM) to Kidney Damage (KD).
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Build A DAG</h2>
+                    <figure>
+                        <img src="img/dag-ex.gviz.2.png" alt="">
+                    </figure>
+                    <p>Add treatment, outcome, and mediators to your DAG.</p>
+                    <aside class="notes">
+                        <p>In this case, we add low perfusion as the mediator to kideny damage.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>Build A DAG</h2>
+                    <figure>
+                        <img src="img/dag-ex.gviz.3.png" alt="">
+                    </figure>
+                    <p>Start adding common causes to outcome...</p>
+                    <aside class="notes">
+                        <p>Diabetes causes microvascular damage/disease, which causes low perfusion and kidney damage.</p>
+                    </aside>
+                </section>
+
+            
+                <section>
+                    <h2>Build A DAG</h2>
+                    <figure>
+                        <img src="img/dag-ex.gviz.4.png" alt="">
+                    </figure>
+                    <p>... and treatment. Ignore most exogenous error terms.</p>
+                    <aside class="notes">
+                        <p>Coronary artery diseases causes myocardial infarction, which causes both cardiomyopathy and kidney damage.</p>
+                    </aside>
+                </section>
+              </section>
+                
+
+                <section>
+                    <section>
+                        <h2>Example DAG - Code</h2>
+                        <img src="img/dag-ex.gviz.4.png" alt="">
+                    <pre><code data-trim data-noescape class="language-sas">
+                    proc causalgraph;
+                        model "CMSRP"
+                            HTN => CM, CM => LPERF, LPERF => KD,
+                            DM => MVD, MVD => LPERF KD,
+                            CAD => MI, MI => CM KD;
+                        IDENTIFY  CM => KD;
+                    run;
+                    </code></pre>
+                    </section>
+
+                    <section>
+                        <h2>Example DAG - SAS Output</h2>
+                        <figure>
+                            <img src="img/causalgraph-output-partial.png" alt="showing minimal adjustment sets">
+                        </figure>
+                        
+                    </section>
+                </section>
+
+
+                <section id="simulation">
+                    <h2>Pro-Tip:<br>Try Simulating Assumptions</h2>
+                    <ul>
+                        <li>Use your statistical model to simulate fake data.</li>
+                        <li>Some benefits:
+                            <ul>
+                                <li>Clarifies what your model implies. How big should an effect be, etc.</li>
+                                <li>Allows for repeat sampling, so you can see how your model behaves.</li>
+                                <li>Provides an opportunity to debug your analysis code.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Reproducibility</h3>
+                    <h2>Have a Codebook</h2>
+                </section>
+
+                <section id="def-codebook">
+                    <h2>What's a Codebook?</h2>
+                    <ul>
+                        <li>Gives a summary of what your project is about.</li>
+                        <li>Defines variable names, their meaning, units, and possible values.</li>
+                        <li>Ideally has a machine-readable component.</li>
+                        <li>If you use REDCap, it can generate this for you.</li>
+                    </ul>
+                </section>
+
+                <section id="cb-variable-naming">
+                    <h2>Variable Naming</h2>
+                    <ul>
+                        <li>Variable Names should be consistent and predictable.</li>
+                        <li>Treatment and control data should be in the same data set.
+                            <ul>
+                                <li class="fragment">Then how do I distinguish between the treatment and control?</li>
+                                <li class="fragment">Use a "dummy variable."</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>What is a dummy Variable?</h2>
+                    <p>A dummy variable takes either the value 0 or 1 and can be used to show group membership. Example:</p>
+                    <table class="r-fit">
+                        <thead>
+                            <th>Treatment</th>
+                            <th>Subject</th>
+                            <th>Month</th>
+                            <th>Serum Cholesterol (mg/dL)</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>0</td>
+                                <td>178</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>24</td>
+                                <td>274</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>63</td>
+                                <td>0</td>
+                                <td>251</td>
+                            </tr>
+                            <tr>
+                                <td>0</td>
+                                <td>63</td>
+                                <td>24</td>
+                                <td>248</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <aside class="notes">
+                        <p>In this example, subject 1 has been assigned to treatment and subject 63 has been assigned to control.</p>
+                    </aside>
+                </section>
+
+                <section id="categorical-variables">
+                    <h2>Categorical Variables</h2>
+                    <p>Collect these as integers, not as strings. Use dummy or index variables.</p>
+                    <p class="aleft">Example:</p>
+                    <table style="padding-bottom: 0.3em;">
+                        <thead>
+                            <td></td>
+                            <td>Bad Scheme</td>
+                            <td>Good Scheme</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="2">Gender</td>
+                                <td>Male</td>
+                                <td>0</td>
+                            </tr>
+                            <tr>
+                                <td>Female</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="3">BMI</td>
+                                <td>Normal</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>Overweight</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>Obese</td>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <aside class="notes">
+                        <p>For dummy/indicator variables, name them so that it is clear what 1 stands for. In this case, instead of "gender" you'd want to call it "female." If using with binary data, pick the category that you expect to have an effect as 1.</p>
+                        <p>For multiple levels, can use category name without reference to category labels. Alternatively, for 3 categories establish three indicator variables. In this example, you'd have "bmi_normal", "bmi_overweight", "bmi_obese."</p>
+                    </aside>
+                </section>
+
+                <section id="categorical-variables-coding">
+                    <h2>Why not just use Text?</h2>
+                    <ul>
+                        <li>Typing in a string is error prone. The computer treats 'y', 'Y', 'Yes', and 'yes' each as a distinct option, even if that's not what you <em>mean</em>.</li>
+                        <li class="fragment">Statistical Software needs to convert strings to numbers to work, anyways. Consider this ahead of time.</li>
+                        <li class="fragment">Dummy/indicator and index encodings work well for most use cases. Other options exist, but prefer to recode in analysis step over using those encodings directly in your data set.</li>
+                    </ul>
+                </section>
+
+                <section id="sec-data-collection">
+                    <h2>Data Collection</h2>
+                </section>
+
+                <section>
+                    <h2>Have an Abstraction Protocol</h2>
+                    <p class="aleft">Define how you will collect your data.</p>
+                    <ul>
+                        <li>Where will you get the information from?</li>
+                        <li>How will the source information be mapped to your codebook?</li>
+                        <li>If you search medical records, what search terms will you use? Record <em>every</em> variant you will be using.</li>
+                        <li>This protocol needs to be in writing.</li>
+                        <li>Follow this <em>religiously</em>. Deviations kill reproducibility and make your study arbitrary. Don't be arbitrary.</li>
+                    </ul>
+                    <aside class="notes">
+                        <p>This is important whether you do this yourself or whether you have undergraduates transcribing for you. Biggest danger consists of medium-experience transcribers making ad-hoc decisions during transcriptions regarding inclusion/exclusion or how to code a variable. This makes your study irreproducible.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>How to store your Data?</h2>
+                    <ul>
+                        <li>Don't use Excel sheets.</li>
+                        <li class="fragment">Consider using REDCap.
+                            <ul>
+                                <li>Widely used database software in medical research.</li>
+                                <li>Helps you build a codebook that is used to validate data as it is entered, preventing mistakes.</li>
+                                <li>Convenient export to statistical software such as SAS or R.</li>
+                                <li>Provides tracking of changes.</li>
+                            </ul>
+                        </li>
+                        <li class="fragment">CSV Files.
+                            <ul>
+                                <li>Software agnostic.</li>
+                                <li>Could be read 30 years ago, can still be read 30 years from now.</li>
+                                <li>Can provide tracking if used with version control.</li>
+                                <li>Requires manual data validation.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Automate What You Can</h2>
+                    <ul>
+                        <li>Will you remember your choices and methods <em>exactly</em>, even 5 years from now?</li>
+                        <li>The more you do by hand, the less reproducible your study becomes.
+                            <ul><li>
+                                Computers do <em>exactly</em> what you tell them to, every time. But you might make typos.
+                            </li></ul>
+                        </li>
+                        <li>Let computers handle as much of tedious tasks as possible. E.g.,
+                            <ul>
+                                <li>REDCap forms for data entry.</li>
+                                <li>Scripts to automate data acquisition and formatting.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                
+                
+                <section>
+                    <h2>Validation and Completion</h2>
+                </section>
+
+                <section>
+                    <h2>Check Your Data</h2>
+                    <ul>
+                        <li>Load everything in your software of choice.</li>
+                        <li class="fragment">Is everything formatted correctly?</li>
+                        <li class="fragment">Make plenty of graphs.</li>
+                        <li class="fragment">If necessary, apply fixes <em>using scripts</em> to any formatting issues. Don't do this by hand!</li>
+                        <li class="fragment">If you have missing observations, check your source docs to see if they were overlooked during abstraction.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>What about Missing Data?</h2>
+                    <ul>
+                        <li>You probably will have missing data. That's ok.</li>
+                        <li>In what way the data is missing will impact results and analysis.
+                            <ul>
+                                <li>Missing Completely at Random (MCAR)</li>
+                                <li>Missing at Random (MAR)</li>
+                                <li>Missing not at Random (MNAR)</li></ul>
+                        </li>
+                        <li>Key difficulty: the data itself cannot show you which mechanism is applicable in your case. But you need to know which mechanism applies to interpret the analysis correctly.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="r-fit-text">Missingness Mechanisms Have Important Effect</h2>
+                    <figure>
+                        <img class="r-stretch" src="https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/mdm_boxplot.png" alt="Boxplot of missing data experiment">
+                    </figure>
+                    <p class="aleft" style="font-size: smaller;">See <a href="https://dmsenter89.github.io/post/23-01-missing-data-mechanisms/">here</a> for example details.</p>
+                </section>
+
+                <section id="adhoc-methods">
+                    <h2>Some Ad-Hoc Methods</h2>
+                    <ul>
+                        <li>Complete Case Analysis (CCA)/Listwise deletion</li>
+                        <li>Pairwise deletion</li>
+                        <li>Mean imputation</li>
+                        <li>Regression imputation</li>
+                    </ul>
+                </section>
+
+                <section id="adhoc-methods-table">
+                    <h2>Assumptions by Ad-Hoc Methods</h2>
+                    <table>
+                        <thead>
+                            <td></td>
+                            <td>Mean</td>
+                            <td>Reg Weight</td>
+                            <td>Standard Error</td>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Listwise</td>
+                                <td>MCAR</td>
+                                <td>MCAR</td>
+                                <td>Too Large</td>
+                            </tr>
+                            <tr>
+                                <td>Pairwise</td>
+                                <td>MCAR</td>
+                                <td>MCAR</td>
+                                <td>Complicated</td>
+                            </tr>
+                            <tr>
+                                <td>Mean</td>
+                                <td>MCAR</td>
+                                <td>-</td>
+                                <td>Too small</td>
+                            </tr>
+                            <tr>
+                                <td>Regression</td>
+                                <td>MAR</td>
+                                <td>MAR (y)</td>
+                                <td>Too small</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p class="fragment">These methods not general enough. Multiple imputation is better.</p>
+                    <p style="font-size: small; text-align: left;">Adapted from van Buuren (2018).</p>
+                </section>
+
+                <section id="mi-basics">
+                    <h2>Multiple Imputation - Basic Idea</h2>
+                    <ol>
+                        <li>Generate multiple copies of the data set with missing values drawn from a specified distribution.</li>
+                        <li>Analyze each of these (now complete) data sets using standard methods.</li>
+                        <li>Combine the results using Rubin's rules.</li>
+                    </ol>
+                    <p class="fragment aleft">Software can do this for you, but this can still be difficult for newcomers. For a gentle introduction, try Schafer (1999) or van Buuren (2018).</p>
+                </section>
+
+                <section id="mi-reporting-guidelines">
+                    <h2>Basic Reporting Guidelines</h2>
+                    <ul>
+                        <li>How much data is missing? How many complete observations do you have?</li>
+                        <li>Reasons for missingness?</li>
+                        <li>What are the consequences?</li>
+                        <li>What are your methods and assumptions?</li>
+                    </ul>
+                    <p style="text-align: left;">See section <a href="https://stefvanbuuren.name/fimd/sec-reporting.html">12.2</a> in van Buuren (2018) for more details.</p>
+                </section>
+            
+                <section id="recommended-reading-applied-modeling">
+                    <h2>Recommended Reading</h2>
+                    <h3>Doing Statistical Modeling</h3>
+                    <div style="display: flex; justify-content: space-evenly;">
+                            <figure>
+                                <img src="https://images.routledge.com/common/jackets/amazon/978036713/9780367139919.jpg"
+                                     alt="Statistical Rethinking Cover"
+                                     height="417px">
+                                <figcaption style="font-size: smaller;">McElreath (2020)<br><a href="https://github.com/rmcelreath/stat_rethinking_2023">YouTube Lecture Playlist</a></figcaption>
+                            </figure>
+                            <figure>
+                                <img src="https://www.bayesrulesbook.com/chapters/figs/index/book_cover.jpeg"
+                                     alt="Bayes Rules! Cover"
+                                     height="417px">
+                                <figcaption style="font-size: smaller;">Johnson, Ott, and Dogucu (2022)</figcaption>
+                            </figure>
+                    </div>
+
+                    <aside class="notes">
+                        McElreath is written at a higher level of maturity, but comes with a YT playlist that quickly covers ground. Students can learn most of what they need in less than 10 hrs of video. Johnson is more beginner friendly, but requires reading.
+                    </aside>
+                </section>
+
+                <section id="recommended-reading-consumption">
+                    <h2>Recommended Reading</h2>
+                    <h3>Consuming Statistical Models</h3>
+                    <div style="display: flex; justify-content: space-evenly;">
+                        <figure>
+                            <img src="https://m.media-amazon.com/images/I/413Wj2BSsaL.jpg"
+                                 alt="Intuitive Biostatics Cover"
+                                 height="400px">
+                            <figcaption style="font-size: smaller;">Motulsky (2017)</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="https://m.media-amazon.com/images/I/41-ubBYOz0L.jpg"
+                                 alt="Bernoulli's Fallacy Cover"
+                                 height="400px">
+                            <figcaption style="font-size: smaller;">Clayton (2022)</figcaption>
+                        </figure>
+                    </div>
+                    <aside class="notes">
+                        Motulsky is great for understanding typical frequentist statistics as found in the clinical literature and should be on your shelf. Clayton on the other hand provides a more story-like description of why frequentism is fundamentally flawed. Easy reading on the side.
+                    </aside>
+                </section>
+
+                <section id="resources">
+                    <h2>Some Resources</h2>
+                    <ul>
+                        <li><a href="https://sils.unc.edu/it-services/software/its-virtual-lab">ITS Virtual Lab</a>: Access to software like SAS, Stata, etc.</li>
+                        <li>REDCap Database
+                            <ul>
+                                <li>Low/no-fee services to help with REDCap available at <a href="https://tracs.unc.edu/index.php/services/informatics-and-data-science/redcap">NC TraCS</a>.</li>
+                                <li>General tutorials available from <a href="https://projectredcap.org/about/consortium/">Project REDCap</a> </li>
+                            </ul>
+                        </li>
+                        <li>NC TraCS <a href="https://tracs.unc.edu/index.php/services/comparative-effectiveness-research/databases">databases</a>: Partnership with RTI and others. Includes insurance data, hospitalization data, cancer databases, maternal and neonatal health, etc.</li>
+                    </ul>
+                </section>
+
+                <section id="references">
+                    <h2>References</h2>
+                    <div class="ref-list">
+                        <div id="ref-achen">
+                            Achen, C. H. (2005), &ldquo;Let's Put Garbage-Can Regressions and Garbage-Can Probits Where They Belong,&rdquo; <em>Conflict Management and Peace Science</em>, 22, 327&ndash;339. DOI: <a href="https://doi.org/10.1080/07388940500339167">10.1080/07388940500339167</a>.
+                        </div>
+                        <div id="ref-amrhein">
+                            Amrhein, V., Greenland, S., and McShane, B. (2019), &ldquo;Scientists rise up against statistical significance,&rdquo; <span style="font-style: italic">Nature</span>, 567, 305&ndash;307. DOI: <a href="https://doi.org/10.1038/d41586-019-00857-9">10.1038/d41586-019-00857-9</a>.
+                        </div>
+                        <div id="ref-cinelli">
+                            Cinelli, C., Forney, A., and Pearl, J. (2020), &ldquo;A Crash Course in Good and Bad Controls,&rdquo; <em>Sociological Methods &amp; Research</em>, 0(0). DOI: <a href="https://doi.org/10.1177/00491241221099552">10.1177/00491241221099552</a>.
+                        </div>
+                        <div id="ref-lesaffre">
+                            Lesaffre, E., and Lawson, A. B. (2007), <em>Bayesian Biostatistics</em>, Statistics in Practice, West Sussex, UK: John Wiley &amp; Sons.
+                        </div>
+                        <div id="ref-motulsky">
+                            Motulsky, H. (2018), <em>Intuitive Biostatistics: A Nonmathematical Guide to Statistical Thinking</em>, New York, NY: Oxford University Press.
+                        </div>
+                        <div id="ref-mcelreath">
+                            McElreath, R. (2020), <em>Statistical Rethinking: A Bayesian Course with Examples in R and Stan</em>, CRC Texts in Statistical Science, Boca Raton, FL: CRC Press.
+                        </div>
+                        <div id="ref-schafer">
+                            Schafer, J. (1999), &ldquo;Multiple imputation: a primer,&rdquo; <em>Statistical methods in medical research</em>, 8, 3&ndash;15.
+                        </div>
+                        <div id="ref-vanbuuren">
+                            Van Buuren, S. (2018), <em>Flexible imputation of missing data</em>, 2nd edition, Interdisciplinary Statistics Series, Boca Raton, FL: Chapman &amp; Hall/CRC Press.
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+
+
+        <!-- The scripts to run everything -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/reveal.js" integrity="sha512-y2j3xEERQApzRH8Rl1bPspQks1/wEsJ8P0pcNQdq7L+G3tT+U5wFjKoxwQNePdnvarg/zamz05jlHDlB5IAeXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/zoom/zoom.min.js" integrity="sha512-Gras1ky8LoFJWwMTxBWyN2wfHfnJXQlyhHFH3M+m/jHe297DZsrQxg9P6Kxka6waxl4NeeQzietoFlCxL7x10g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/notes/notes.js" integrity="sha512-8v1ptRX7ltd33lZYKrzo7yKkvvwAFx8WNMvjAuXOlL7Hl1OfjrcK0b4/JSvdxURC7QvBGPxYqgtJPsOqmfBmcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/highlight/highlight.js" integrity="sha512-ifKoLsVyMpnQUc1hERck8Rq8MwNG9JvVtR3epjOYXc2Z2BJWb4uazGVsgLuoXbIXgxJc+1qu/Twt3SFlxFfmnA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- Load Math Plugin -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/math/math.js" integrity="sha512-bK2xkMamruvGpLeKFpQu0cRZPZ641zah/ZUDhZbu4b1JcqKRJ0uC+xYmwOU7vCVaPT6hGKhX23MpjrjaW5T+jw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/math/katex.js" integrity="sha512-cX2JMZiTqSyLhC+KWyn7jUFf2S+v89Rr4AzXgzO6o+wfRV5iUFZKR9kcCxV1HCBxt6BQlOyeK4xHEGBdQGkStQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <!-- If you want to use Markdown -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.4.0/plugin/markdown/markdown.js" integrity="sha512-/yXnQi7Zw9l6zFtvZslhzTG1iVzWyJIYuQuxxrYvDwMa8cIjzDhkEK5GXMJ6STnIc0u89LbRmyTeJ1gomzwQ9g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script>
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                center: true,
+                hash: true,
+                slideNumber: "c/t",
+
+                katex: {
+                    strict: false,
+                    trust: true,
+                },
+                // highlight: {
+                //     beforeHighlight: hljs => hljs.registerLanguage("sas")
+                // },
+                // some plugins:
+                plugins: [RevealZoom, RevealNotes, RevealHighlight, RevealMath.KaTeX, RevealMarkdown]
+            });
+        </script>
+
+</html>

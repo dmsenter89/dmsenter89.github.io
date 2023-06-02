@@ -1,0 +1,6 @@
+digraph {
+  bgcolor=transparent;
+  rankdir=LR;
+  X -> Z;
+  Z -> Y;
+}

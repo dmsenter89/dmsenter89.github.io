@@ -1,0 +1,82 @@
+digraph G0 {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+  rankdir=LR;
+  
+  subgraph cl1 {
+    CM [style=bold];
+    KD [style=bold];
+    CM -> KD;
+  }
+}
+
+digraph G1 {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+  rankdir=LR;
+  
+  subgraph cl1 {
+    CM [style=bold];
+    KD [style=bold];
+    CM -> LPERF;
+    LPERF -> KD;
+  }
+}
+
+digraph G2 {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+  rankdir=LR;
+  
+  subgraph cl1 {
+    CM [style=bold];
+    KD [style=bold];
+    CM -> LPERF;
+    LPERF -> KD;
+  }
+    
+  subgraph cl2 {
+    DM -> MVD;
+    MVD -> LPERF;
+    MVD -> KD;
+  }
+}
+
+digraph G3 {
+  graph [fontname = "Handlee"];
+  node [fontname = "Handlee"];
+  edge [fontname = "Handlee"];
+
+  bgcolor=transparent;
+  rankdir=LR;
+  
+  subgraph cl1 {
+    CM [style=bold];
+    KD [style=bold];
+    CM -> LPERF;
+    LPERF -> KD;
+  }
+    
+  subgraph cl2 {
+    DM -> MVD;
+    MVD -> LPERF;
+    MVD -> KD;
+  }
+  
+  subgraph cl3 {
+    CAD -> MI;
+    MI -> CM;
+    HTN -> CM;
+    MI -> KD;
+  }
+
+}
