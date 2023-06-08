@@ -46,7 +46,7 @@ devtools::install_github(&amp;quot;Hemken/SASmarkdown&amp;quot;)
 &lt;p&gt;The important thing is to load the SASMarkdown package in your document. I recommend making a setup chunk at the very top of your document and setting include to FALSE.
 That way the setup chunk is executed, but not printed to your final document.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;```{r setup, include=FALSE}
-library(SASMarkdown)
+library(SASmarkdown)
 # if SAS is not in your path, define it manually:
 saspath &amp;lt;- &amp;quot;C:/Program Files/SASHome/SASFoundation/9.4/sas.exe&amp;quot;
 knitr::opts_chunk$set(engine=&amp;quot;sashtml&amp;quot;, engine.path=saspath)
