@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Research Statistician Developer">
+  <meta name="description" content="This post will introduce three GNU tools to help you explore your C code: ctags, cscope, and cflow. The first two can help you navigate your code as you work on it and can be used directly within Vim.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/tag/linux/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/">
 
   
 
@@ -253,14 +253,12 @@
   
 
   
-  <link rel="alternate" href="/tag/linux/index.xml" type="application/rss+xml" title="Michael&#39;s Site">
-  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/tag/linux/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/">
 
   
   
@@ -276,18 +274,63 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/tag/linux/">
-  <meta property="og:title" content="linux | Michael&#39;s Site">
-  <meta property="og:description" content="Research Statistician Developer"><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/">
+  <meta property="og:title" content="Explore C Code With GNU Tools | Michael&#39;s Site">
+  <meta property="og:description" content="This post will introduce three GNU tools to help you explore your C code: ctags, cscope, and cflow. The first two can help you navigate your code as you work on it and can be used directly within Vim."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
-    <meta property="og:updated_time" content="2023-01-06T19:00:00&#43;00:00">
+    
+      <meta property="article:published_time" content="2023-07-24T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2023-07-24T00:00:00&#43;00:00">
   
 
   
 
 
+    
 
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/"
+  },
+  "headline": "Explore C Code With GNU Tools",
+  
+  "datePublished": "2023-07-24T00:00:00Z",
+  "dateModified": "2023-07-24T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "D. Michael Senter"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Michael's Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "This post will introduce three GNU tools to help you explore your C code: ctags, cscope, and cflow. The first two can help you navigate your code as you work on it and can be used directly within Vim."
+}
+</script>
+
+  
 
   
 
@@ -295,10 +338,13 @@
   
 
 
+  
 
 
 
-  <title>linux | Michael&#39;s Site</title>
+
+
+  <title>Explore C Code With GNU Tools | Michael&#39;s Site</title>
 
 </head>
 
@@ -530,81 +576,492 @@
 </nav>
 
 
-  
-
-
-
-
-
-
-
-
-
-
-
+  <article class="article">
 
   
 
+
+
+
+
+
+
+
+
+
+
+
+  
+
   
   
+  
+<div class="article-container pt-3">
+  <h1>Explore C Code With GNU Tools</h1>
+
+  
+
   
     
-  
-<div class="universal-wrapper pt-3">
-  <h1>linux</h1>
+
+
+<div class="article-metadata">
 
   
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Jul 24, 2023
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    4 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   
 </div>
 
 
 
-<div class="universal-wrapper">
-  
+  <div class="article-container">
 
-  
-  
-    
-    
-    
-    <div>
-      <h2><a href="/post/23-01-virtual-lab/" >Setting up a Virtual Lab Computer</a></h2>
-      <div class="article-style">
-        
-          Dealing with computer resources in a modern lab can be tricky. Even if all participating researchers have laptops, a central location for storage or to host licensed software is desirable. While a physical computer can be setup for such a use, that is not always the most desirable solution.
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/post/22-12-some-cli-tools/" >Some CLI Tools</a></h2>
-      <div class="article-style">
-        
-          A few convenience CLI tools I find myself installing on new systems regularly.
-        
-      </div>
-    </div>
-  
-    
-    
-    
-    <div>
-      <h2><a href="/post/22-11-setup-an-arbitrary-wsl2-distro/" >Setup an Arbitrary WSL2 Distro</a></h2>
-      <div class="article-style">
-        
-          Windows Subsystem for Linux (WSL) is an important part of my daily work flow. Unfortunately, the main distro supplied by Windows is Ubuntu, which - for a variety of reasons - is not exactly my favorite distro.
-        
-      </div>
-    </div>
-  
+    <div class="article-style">
+      <p>This post will introduce three GNU tools to help you explore your C code: ctags, cscope, and cflow.
+The first two can help you navigate your code as you work on it and can be used directly within Vim.
+Cflow on the other hand produces control charts that help you get to know the control flow in a project,
+which is particularly helpful if you are new to the codebase.</p>
+<h2 id="ctags">ctags</h2>
+<p>In short, ctags is a program that can generate a file listing C symbols in a way that can be used by
+Vim (ctags) or by Emacs (etags). Various versions exist. See 
+<a href="https://en.wikipedia.org/wiki/Ctags" target="_blank" rel="noopener">this wiki page</a>
+for some links. A current maintained version of universal ctags can be found on 
+<a href="https://github.com/universal-ctags/ctags" target="_blank" rel="noopener">GitHub</a>.
+Universal ctags expands on the original ctags by including support for additional languages.</p>
+<p>The first step to using a ctags file is to generate one for your source code. Just run <code>ctags</code> followed by the
+location of your source files. If you have multipled directories, you can list them sequentially like this:</p>
+<pre><code class="language-sh">$ ctags h/* src/*
+</code></pre>
+<p>This will generate a &ldquo;tags&rdquo; file in the current folder. If you open Vim from the same folder, the tags file
+is automatically loaded. What is particularly useful about the tag file is that saved keywords are addressed by
+patterns, not line numbers. This way, minor edits don&rsquo;t require ctags to be re-run.</p>
+<h3 id="basic-usage">Basic Usage</h3>
+<p>To find the definition of a C symbol in your source code, put your cursors on the symbol and press <code>&lt;Ctrl-]&gt;</code> to
+jump to that symbol&rsquo;s definition. To get back to where you were, press <code>&lt;Ctrl-t&gt;</code>. If the symbol has multiple
+definitions and you jumped to the wrong one, try using the <code>:tselect</code> command to bring up a list of all matches.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;Ctrl-]&gt;</code></td>
+<td>Jump to definition of the keyword under the cursor.</td>
+</tr>
+<tr>
+<td><code>:ta[g] {ident}</code></td>
+<td>Jump to the definition of <code>{ident}</code>.</td>
+</tr>
+<tr>
+<td><code>&lt;Ctrl-t&gt;</code></td>
+<td>Jump back up the tag stack.</td>
+</tr>
+<tr>
+<td><code>:tags</code></td>
+<td>Show content of tag stack.</td>
+</tr>
+<tr>
+<td><code>:po[p]</code></td>
+<td>Jump to older entry in tag stack.</td>
+</tr>
+<tr>
+<td><code>:ta[g]</code></td>
+<td>Jump to newer entry in tag stack.</td>
+</tr>
+<tr>
+<td><code>:ts[elect] [ident]</code></td>
+<td>List tags that match <code>[ident]</code>.</td>
+</tr>
+<tr>
+<td><code>:sts[elect]</code></td>
+<td>Same as above, but splits window for tag.</td>
+</tr>
+</tbody>
+</table>
+<p>For details, see <code>:help tags</code> in Vim.</p>
+<h2 id="cscope">cscope</h2>
+<p>The cscope program has more advanced features compared to ctags. In addition to finding symbol definitions,
+it can gather more advanced information than ctags. Specifically, it can tell you</p>
+<ul>
+<li>where a symbol is used in the code,</li>
+<li>where the symbol was defined,</li>
+<li>where a variable got its value from,</li>
+<li>what other functions call this function,</li>
+<li>what functions are called by a specific function,</li>
+<li>and more.</li>
+</ul>
+<p>Similar to ctags, a database file is created by the csope program. You can run it like this:</p>
+<pre><code class="language-sh">$ cscope -b h/* src/*
+</code></pre>
+<p>This will generate a <code>cscope.out</code> file that can be used with Vim. To make the cscope database
+available, you need to add it during your Vim session by using <code>:cs[cope] add {file|dir}</code>.
+By adding the following to your <code>.vimrc</code> you can automate this:</p>
+<pre><code class="language-vim">if has(&quot;cscope&quot;)
+    &quot; add any database in current directory
+    if filereadable(&quot;cscope.out&quot;)
+        cs add cscope.out
+        &quot; else add database pointed to by environment
+    elseif $CSCOPE_DB != &quot;&quot;
+        cs add $CSCOPE_DB
+    endif
+endif
+</code></pre>
+<h3 id="basic-usage-1">Basic Usage</h3>
+<p>The basic command used is <code>:cs find {querytype} {name}</code>, with the following main query types:</p>
+<table>
+<thead>
+<tr>
+<th>querytype</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>s</code></td>
+<td>find this C symbol.</td>
+</tr>
+<tr>
+<td><code>g</code></td>
+<td>find this definition.</td>
+</tr>
+<tr>
+<td><code>d</code></td>
+<td>find functions called by this function.</td>
+</tr>
+<tr>
+<td><code>c</code></td>
+<td>find functions calling this function.</td>
+</tr>
+<tr>
+<td><code>t</code></td>
+<td>find this text string.</td>
+</tr>
+<tr>
+<td><code>e</code></td>
+<td>find this egrep pattern.</td>
+</tr>
+<tr>
+<td><code>f</code></td>
+<td>find this file.</td>
+</tr>
+<tr>
+<td><code>i</code></td>
+<td>find files #including this file.</td>
+</tr>
+<tr>
+<td><code>a</code></td>
+<td>find places where this symbol is assigned a value.</td>
+</tr>
+</tbody>
+</table>
+<p>For details, see <code>:help cscope</code> in Vim. For some suggested options and keymappings that make
+using cscope more convenient, see <code>:help cscope-suggestions</code>.</p>
+<h2 id="cflow">cflow</h2>
+<p>GNU 
+<a href="https://www.gnu.org/software/cflow/" target="_blank" rel="noopener">cflow</a> is a tool that creates charts showing control
+flow within your program. It has a <em>lot</em> of options and settings, so you&rsquo;ll definitely want to
+check out its 
+<a href="https://www.gnu.org/software/cflow/manual/" target="_blank" rel="noopener">documentation</a>.</p>
+<p>The most basic usage is <code>cflow {file[s]}</code> which creates an indented listing of function calls
+starting from <code>main()</code>. Two important command line options are <code>--main</code> which allows you to
+set a different starting function, and <code>--target</code> which allows you to set a target function
+below which you don&rsquo;t want to investigate. If you want to include functions that aren&rsquo;t directly
+reachable from <code>main()</code> or <code>--main</code> in your chart, use the <code>--all</code> flag.</p>
+<p>A particularly nifty feature is that cflow can generate valid dot files using
+<code>cflow -f dot {file[s]}</code>. These can be piped to graphviz to produce visual charts of your
+function calls, e.g.:</p>
+<pre><code class="language-sh">$ cflow -f dot example.c | dot -Tpng -o flow-example.png
+</code></pre>
 
-  
+    </div>
 
+    
+
+
+
+
+
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/&amp;text=Explore%20C%20Code%20With%20GNU%20Tools" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/&amp;t=Explore%20C%20Code%20With%20GNU%20Tools" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Explore%20C%20Code%20With%20GNU%20Tools&amp;body=https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/&amp;title=Explore%20C%20Code%20With%20GNU%20Tools" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="whatsapp://send?text=Explore%20C%20Code%20With%20GNU%20Tools%20https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/&amp;title=Explore%20C%20Code%20With%20GNU%20Tools" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/d.-michael-senter/avatar_hu33fd434d16d3acf6468b21803c007f79_224164_270x270_fill_q90_lanczos_center.jpg" alt="D. Michael Senter">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://dmsenter89.github.io/">D. Michael Senter</a></h5>
+        <h6 class="card-subtitle">Research Statistician Developer</h6>
+        <p class="card-text">My research interests include data analytics and missing data.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://scholar.google.com/citations?user=DPyUrhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+        <i class="ai ai-google-scholar"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/dmsenter89" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://www.linkedin.com/in/michaelsenter9a13a642/" target="_blank" rel="noopener">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/files/MichaelSenterCV.pdf" >
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  </div>
+</article>
 
       
 

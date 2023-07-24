@@ -5,12 +5,178 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 08 May 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 24 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Explore C Code With GNU Tools</title>
+      <link>https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/</link>
+      <pubDate>Mon, 24 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-07-explore-c-code-with-gnu-tools/</guid>
+      <description>&lt;p&gt;This post will introduce three GNU tools to help you explore your C code: ctags, cscope, and cflow.
+The first two can help you navigate your code as you work on it and can be used directly within Vim.
+Cflow on the other hand produces control charts that help you get to know the control flow in a project,
+which is particularly helpful if you are new to the codebase.&lt;/p&gt;
+&lt;h2 id=&#34;ctags&#34;&gt;ctags&lt;/h2&gt;
+&lt;p&gt;In short, ctags is a program that can generate a file listing C symbols in a way that can be used by
+Vim (ctags) or by Emacs (etags). Various versions exist. See 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Ctags&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this wiki page&lt;/a&gt;
+for some links. A current maintained version of universal ctags can be found on 
+&lt;a href=&#34;https://github.com/universal-ctags/ctags&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.
+Universal ctags expands on the original ctags by including support for additional languages.&lt;/p&gt;
+&lt;p&gt;The first step to using a ctags file is to generate one for your source code. Just run &lt;code&gt;ctags&lt;/code&gt; followed by the
+location of your source files. If you have multipled directories, you can list them sequentially like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ ctags h/* src/*
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will generate a &amp;ldquo;tags&amp;rdquo; file in the current folder. If you open Vim from the same folder, the tags file
+is automatically loaded. What is particularly useful about the tag file is that saved keywords are addressed by
+patterns, not line numbers. This way, minor edits don&amp;rsquo;t require ctags to be re-run.&lt;/p&gt;
+&lt;h3 id=&#34;basic-usage&#34;&gt;Basic Usage&lt;/h3&gt;
+&lt;p&gt;To find the definition of a C symbol in your source code, put your cursors on the symbol and press &lt;code&gt;&amp;lt;Ctrl-]&amp;gt;&lt;/code&gt; to
+jump to that symbol&amp;rsquo;s definition. To get back to where you were, press &lt;code&gt;&amp;lt;Ctrl-t&amp;gt;&lt;/code&gt;. If the symbol has multiple
+definitions and you jumped to the wrong one, try using the &lt;code&gt;:tselect&lt;/code&gt; command to bring up a list of all matches.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Command&lt;/th&gt;
+&lt;th&gt;Effect&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;Ctrl-]&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Jump to definition of the keyword under the cursor.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:ta[g] {ident}&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Jump to the definition of &lt;code&gt;{ident}&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;Ctrl-t&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Jump back up the tag stack.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:tags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Show content of tag stack.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:po[p]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Jump to older entry in tag stack.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:ta[g]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Jump to newer entry in tag stack.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:ts[elect] [ident]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;List tags that match &lt;code&gt;[ident]&lt;/code&gt;.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;:sts[elect]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;Same as above, but splits window for tag.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For details, see &lt;code&gt;:help tags&lt;/code&gt; in Vim.&lt;/p&gt;
+&lt;h2 id=&#34;cscope&#34;&gt;cscope&lt;/h2&gt;
+&lt;p&gt;The cscope program has more advanced features compared to ctags. In addition to finding symbol definitions,
+it can gather more advanced information than ctags. Specifically, it can tell you&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;where a symbol is used in the code,&lt;/li&gt;
+&lt;li&gt;where the symbol was defined,&lt;/li&gt;
+&lt;li&gt;where a variable got its value from,&lt;/li&gt;
+&lt;li&gt;what other functions call this function,&lt;/li&gt;
+&lt;li&gt;what functions are called by a specific function,&lt;/li&gt;
+&lt;li&gt;and more.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Similar to ctags, a database file is created by the csope program. You can run it like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ cscope -b h/* src/*
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will generate a &lt;code&gt;cscope.out&lt;/code&gt; file that can be used with Vim. To make the cscope database
+available, you need to add it during your Vim session by using &lt;code&gt;:cs[cope] add {file|dir}&lt;/code&gt;.
+By adding the following to your &lt;code&gt;.vimrc&lt;/code&gt; you can automate this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-vim&#34;&gt;if has(&amp;quot;cscope&amp;quot;)
+    &amp;quot; add any database in current directory
+    if filereadable(&amp;quot;cscope.out&amp;quot;)
+        cs add cscope.out
+        &amp;quot; else add database pointed to by environment
+    elseif $CSCOPE_DB != &amp;quot;&amp;quot;
+        cs add $CSCOPE_DB
+    endif
+endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;basic-usage-1&#34;&gt;Basic Usage&lt;/h3&gt;
+&lt;p&gt;The basic command used is &lt;code&gt;:cs find {querytype} {name}&lt;/code&gt;, with the following main query types:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;querytype&lt;/th&gt;
+&lt;th&gt;Effect&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find this C symbol.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;g&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find this definition.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;d&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find functions called by this function.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;c&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find functions calling this function.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;t&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find this text string.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;e&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find this egrep pattern.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;f&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find this file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;i&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find files #including this file.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;a&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;find places where this symbol is assigned a value.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;For details, see &lt;code&gt;:help cscope&lt;/code&gt; in Vim. For some suggested options and keymappings that make
+using cscope more convenient, see &lt;code&gt;:help cscope-suggestions&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;cflow&#34;&gt;cflow&lt;/h2&gt;
+&lt;p&gt;GNU 
+&lt;a href=&#34;https://www.gnu.org/software/cflow/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cflow&lt;/a&gt; is a tool that creates charts showing control
+flow within your program. It has a &lt;em&gt;lot&lt;/em&gt; of options and settings, so you&amp;rsquo;ll definitely want to
+check out its 
+&lt;a href=&#34;https://www.gnu.org/software/cflow/manual/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The most basic usage is &lt;code&gt;cflow {file[s]}&lt;/code&gt; which creates an indented listing of function calls
+starting from &lt;code&gt;main()&lt;/code&gt;. Two important command line options are &lt;code&gt;--main&lt;/code&gt; which allows you to
+set a different starting function, and &lt;code&gt;--target&lt;/code&gt; which allows you to set a target function
+below which you don&amp;rsquo;t want to investigate. If you want to include functions that aren&amp;rsquo;t directly
+reachable from &lt;code&gt;main()&lt;/code&gt; or &lt;code&gt;--main&lt;/code&gt; in your chart, use the &lt;code&gt;--all&lt;/code&gt; flag.&lt;/p&gt;
+&lt;p&gt;A particularly nifty feature is that cflow can generate valid dot files using
+&lt;code&gt;cflow -f dot {file[s]}&lt;/code&gt;. These can be piped to graphviz to produce visual charts of your
+function calls, e.g.:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;$ cflow -f dot example.c | dot -Tpng -o flow-example.png
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Sampling Regression Lines</title>
