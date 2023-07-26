@@ -5,12 +5,28 @@
     <link>https://dmsenter89.github.io/tag/bash/</link>
       <atom:link href="https://dmsenter89.github.io/tag/bash/index.xml" rel="self" type="application/rss+xml" />
     <description>bash</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 16 Mar 2022 09:23:12 -0400</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 26 Jul 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>bash</title>
       <link>https://dmsenter89.github.io/tag/bash/</link>
     </image>
+    
+    <item>
+      <title>SUC - a Slack Clone for Modern Unix</title>
+      <link>https://dmsenter89.github.io/post/23-07-suc-a-unix-slack-clone/</link>
+      <pubDate>Wed, 26 Jul 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-07-suc-a-unix-slack-clone/</guid>
+      <description>&lt;p&gt;I love simple CLI tools and am a big fan of the 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Unix_philosophy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Unix philosophy&lt;/a&gt;.
+Recently I came across 
+&lt;a href=&#34;https://the-dam.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Dam&lt;/a&gt;, a public Unix server that implements a clever tool
+they termed suc - the Simple Unix Chat. Essentially, it applies the Unix philophy to create a simple chat tool
+that can be used on any modern Unix server. The key code consists of just a few lines of Bash code.
+Check out the documentation for it 
+&lt;a href=&#34;https://the-dam.org/docs/explanations/suc.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Multline Bash Variable Replacement</title>
