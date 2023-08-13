@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="CSV2DS is a new program I wrote in Go to help me create minimum working examples for SAS that can be shared as a single SAS script.">
+  <meta name="description" content="In Chapter 3 of van Buuren&rsquo;s Flexible Imputation of Missing Data a variety of methods for imputing univariate missing data are presented. This post will summarize these techniques and show how to implement them in SAS.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/22-11-csv2ds/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-08-univariate-mi/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/22-11-csv2ds/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/23-08-univariate-mi/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/22-11-csv2ds/">
-  <meta property="og:title" content="CSV2DS | Michael&#39;s Site">
-  <meta property="og:description" content="CSV2DS is a new program I wrote in Go to help me create minimum working examples for SAS that can be shared as a single SAS script."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/23-08-univariate-mi/">
+  <meta property="og:title" content="Univariate Missing Data with PROC MI | Michael&#39;s Site">
+  <meta property="og:description" content="In Chapter 3 of van Buuren&rsquo;s Flexible Imputation of Missing Data a variety of methods for imputing univariate missing data are presented. This post will summarize these techniques and show how to implement them in SAS."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2022-11-23T16:43:28&#43;00:00">
+      <meta property="article:published_time" content="2023-08-13T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2022-11-23T16:43:28&#43;00:00">
+    <meta property="article:modified_time" content="2023-08-13T00:00:00&#43;00:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/22-11-csv2ds/"
+    "@id": "https://dmsenter89.github.io/post/23-08-univariate-mi/"
   },
-  "headline": "CSV2DS",
+  "headline": "Univariate Missing Data with PROC MI",
   
-  "datePublished": "2022-11-23T16:43:28Z",
-  "dateModified": "2022-11-23T16:43:28Z",
+  "datePublished": "2023-08-13T00:00:00Z",
+  "dateModified": "2023-08-13T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "CSV2DS is a new program I wrote in Go to help me create minimum working examples for SAS that can be shared as a single SAS script."
+  "description": "In Chapter 3 of van Buuren\u0026rsquo;s Flexible Imputation of Missing Data a variety of methods for imputing univariate missing data are presented. This post will summarize these techniques and show how to implement them in SAS."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>CSV2DS | Michael&#39;s Site</title>
+  <title>Univariate Missing Data with PROC MI | Michael&#39;s Site</title>
 
 </head>
 
@@ -597,10 +597,8 @@
   
   
 <div class="article-container pt-3">
-  <h1>CSV2DS</h1>
+  <h1>Univariate Missing Data with PROC MI</h1>
 
-  
-  <p class="page-subtitle">Converting a CSV File to a SAS Data Step</p>
   
 
   
@@ -618,7 +616,7 @@
     
       
     
-    Nov 23, 2022
+    Aug 13, 2023
   </span>
   
 
@@ -627,7 +625,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min read
+    7 min read
   </span>
   
 
@@ -653,55 +651,6 @@
 
 
 
-
-<div class="btn-links mb-3">
-  
-  
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
-    
-  
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary my-1 mr-1" href="https://github.com/dmsenter89/csv2ds" target="_blank" rel="noopener">
-    <i class="fab fa-github "></i>
-    
-  </a>
-
-
-</div>
 
 
   
@@ -712,21 +661,137 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Creating a minimum working example (MWE) is a relatively frequent task. It is no problem to share an MWE for a feature in SAS because a large number of example data sets are shipped and installed by default. But sometimes you need an MWE because you are having trouble accomplishing a particular task with particular input data. At that point, you will need to share the data or a subset thereof together with your code. In SAS Forums, the preferred way to do this is with a datastep using a datalines/cards statement. Writing these by hand can be tedious since the data source is not typically a datalines statement to begin with. I have previously seen a SAS macro that can be used to generate a datalines statement from a SAS data set, but can&rsquo;t seem to locate it at the moment. The data source I personally encounter the most often in my work is either in CSV or Excel formats. Since the latter can easily be exported to CSV, I decided to write a program that generates a SAS data step given a CSV file.</p>
-<p>For the implementation language I chose to use 
-<a href="https://go.dev/" target="_blank" rel="noopener">Go</a>. I started learning about Go back in May when I implemented a 
-<a href="/post/22-05-go-wordle/">simple CLI version of Wordle</a>. Since then I have increasingly used Go to write various small tools at work. It has been a very enjoyable language to write in and distribution via GitHub is easy. If you have the Go toolchain installed, you can get the latest copy of csv2ds using</p>
-<pre><code class="language-sh">go install github.com/dmsenter89/csv2ds@latest
+      <p>In Chapter 3 of van Buuren&rsquo;s <em>Flexible Imputation of Missing Data</em> a variety of methods for imputing univariate missing data are presented. This post will summarize these techniques and show how to implement them in SAS.</p>
+<h2>Table of Contents</h2>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#preliminaries">Preliminaries</a></li>
+    <li><a href="#imputing-under-a-normal-linear-model">Imputing under a Normal Linear Model</a>
+      <ul>
+        <li><a href="#regression-imputation">Regression Imputation</a></li>
+        <li><a href="#stochastic-regression-imputation">Stochastic Regression Imputation</a></li>
+        <li><a href="#bayesianbootstrap-multiple-imputation">Bayesian/Bootstrap Multiple Imputation</a></li>
+        <li><a href="#what-if-my-data-are-non-normal">What if my data are non-normal?</a></li>
+      </ul>
+    </li>
+    <li><a href="#predictive-mean-matching">Predictive Mean Matching</a></li>
+    <li><a href="#classification-and-regression-trees">Classification and Regression Trees</a></li>
+    <li><a href="#the-propensity-score-method">The Propensity Score Method</a></li>
+    <li><a href="#categorical-and-count-data">Categorical and Count Data</a>
+      <ul>
+        <li><a href="#the-logistic-and-logit-models">The Logistic and Logit Models</a></li>
+        <li><a href="#the-discriminant-function-method">The Discriminant Function Method</a></li>
+      </ul>
+    </li>
+    <li><a href="#references">References</a></li>
+  </ul>
+</nav>
+
+<h2 id="preliminaries">Preliminaries</h2>
+<p>Van Buuren demonstrates various techniques using data set 88 from Hand et al (1994). This data set is availabe from R&rsquo;s MASS library as <code>data(&quot;whiteside&quot;)</code>. The original data set can be downloaded from the 
+<a href="https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667" target="_blank" rel="noopener">publisher&rsquo;s website</a>. The name of the relevant data file is INSULATE.DAT. If you want to follow along using SAS, you can use 
+<a href="./code/whiteside.sas">this data step</a>. It matches the way the data appears in R except that I have added a variable <code>R</code> indicating the observation that van Buuren deletes for demonstration purposes.</p>
+<p>For purposes of this post, we assume one or more predictors $x$ are completely observed, while some variable of interest $y$ is only partially observed. Methods for dealing with this type of problem are available using the 
+<a href="http://documentation.sas.com/doc/en/statug/15.2/statug_mi_syntax09.htm" target="_blank" rel="noopener">monotone</a> keyword in PROC MI. A data set has a monotone missing pattern if it consists of variables $Y_1$, $Y_2$, $\ldots$, $Y_p$ such that if $Y_j$ is missing for one individual, all subsequent variables $Y_k$ for $j &lt; k \leq p$ are also missing. Schematically, the data set will look like this:</p>
+<p>$$R = \begin{bmatrix} 1 &amp; 1 &amp; 1 \\ 1 &amp; 1 &amp; 0 \\ 1 &amp; 0 &amp; 0 \end{bmatrix}$$</p>
+<p>where 1 indicates an observed value and 0 a missing value. The monotone statement in SAS can impute missing values by completing the columns in turn using univariate methods. See the 
+<a href="http://documentation.sas.com/doc/en/statug/15.2/statug_mi_details06.htm" target="_blank" rel="noopener">SAS documentation</a> for specifics.</p>
+<h2 id="imputing-under-a-normal-linear-model">Imputing under a Normal Linear Model</h2>
+<p>For completion, I will mention all of the main linear model methods van Buuren mentions in his text, even though the first two are not implemented in PROC MI.</p>
+<h3 id="regression-imputation">Regression Imputation</h3>
+<p>Van Buuren also refers to this as the &ldquo;prediction&rdquo; method. In essence, the complete cases are used to create a linear model. This linear model is then used to fill in the missing values:</p>
+<p>$$ \dot{y} = \hat\beta_0 + X_\text{mis}\,\hat\beta_1$$</p>
+<p>where $\hat\beta_i$ are least squares estimates.</p>
+<p>This method has a variety of drawbacks. For one, it artificially strengthens the relationships between variables as they appear in the linear model by increasing correlations. Variability in the data is reduced. See section 
+<a href="https://stefvanbuuren.name/fimd/sec-simplesolutions.html#sec:regimp" target="_blank" rel="noopener">1.3.4</a> in van Buuren for details.</p>
+<p>The mice package implements this method as <code>norm.predict</code>. PROC MI does not implement this method; to use this technique in SAS, you could use the regression PROCs or IML.</p>
+<h3 id="stochastic-regression-imputation">Stochastic Regression Imputation</h3>
+<p>This method proceeds as above, except that Gaussian noise is added to the imputed value:
+$$ \dot{y} = \hat\beta_0 + X_\text{mis}\,\hat\beta_1 + \dot\epsilon$$
+where $\dot\epsilon \sim N(0, \hat\sigma^2)$. An advantage of this method over plain regression is that it can preserve correlation between variables.</p>
+<p>The mice package implements this method as <code>norm.nob</code>. It is not available in PROC MI but can be implemented with IML.</p>
+<h3 id="bayesianbootstrap-multiple-imputation">Bayesian/Bootstrap Multiple Imputation</h3>
+<p>Van Buuren also refrers to this as &ldquo;predict + noise + parameters uncertainty.&rdquo; This technique is based on a Bayesian linear regression using draws from the posterior as parameters:
+$$\dot y = \dot\beta_0 + X_\text{mis}\, \dot\beta_1 + \dot\epsilon$$
+where $\dot\epsilon\sim N(0,\dot\sigma^2)$ and $\dot\beta_i$, $\dot\sigma$ are random draws from the posterior distribution.</p>
+<p>This the default method in PROC MI for continuous data. Both SAS and mice use an algorithm based on Rubin (1987, pp. 166-167). See the 
+<a href="http://documentation.sas.com/doc/en/statug/15.2/statug_mi_details07.htm" target="_blank" rel="noopener">SAS documentation</a> and 
+<a href="https://stefvanbuuren.name/fimd/sec-linearnormal.html#def:norm" target="_blank" rel="noopener">Algorithm 3.1</a> in van Buuren for details. The mice package implements this method as <code>norm</code>. Here is an example of how the Bayesian regression can be used in PROC MI:</p>
+<pre><code class="language-sas">proc mi data=whiteside_miss out=regimp nimpute=5;
+	var temp gas;
+	monotone regression(gas);
+run;
 </code></pre>
-<p>The tool is very simple to use. Give it a CSV file or list of CSV files and it will generate a data step for each file using the CSV&rsquo;s base name as the data set name. To ensure compatibility, variable names and the data set name are processed to be compatible with SAS' naming scheme. The tool will attempt to guess if a particular column is numeric or not. If a column is determined to not be numeric, the longest cell will be used to set that variable&rsquo;s length via a length statement to prevent truncation.</p>
-<p>I often work with the 
-<a href="https://csvkit.readthedocs.io/en/latest/" target="_blank" rel="noopener">csvkit</a> suite of command-line tools. It&rsquo;s a wonderful collection of Python programs that can import data into CSV, generate basic column statistics, and use grep and SQL to extract data from a CSV file, amongst other things. This collection is designed to allow you to pipe the output from one as input to the next. Consider 
-<a href="https://csvkit.readthedocs.io/en/latest/tutorial/2_examining_the_data.html#csvsort-order-matters" target="_blank" rel="noopener">this example</a>. Csvcut is used to extract only certain columns from the file data.csv. Then csvgrep is used to subset to use only the data pertaining to one particular county. Then the data is sorted by the total_cost variable and displayed. I wanted my tool to be compatible with this suite, so if <code>-</code> is passed as the filename, csv2ds will read the contents of STDIN instead. Changing the above csvkit example by replacing csvlook with my tool will generate the corresponding SAS data set:</p>
-<pre><code class="language-sh">csvcut -c county,item_name,total_cost data.csv | csvgrep -c county -m LANCASTER | csvsort -c total_cost -r | csv2ds -
+<p>The regression keyword may be abbreviated as <code>reg</code>. A fully worked example is available in the 
+<a href="https://documentation.sas.com/doc/en/statug/15.2/statug_mi_examples03.htm" target="_blank" rel="noopener">SAS documentation</a>, with the associated code available on 
+<a href="https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/miex3.sas" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>The mice package also implements a variant of this method using bootstrapping instead of a Bayesian model. This method is available as <code>norm.boot</code>.</p>
+<h3 id="what-if-my-data-are-non-normal">What if my data are non-normal?</h3>
+<p>In case the data are non-normal, one could proceed to a non-regression technique like 
+<a href="#predictive-mean-matching">predictive mean matching</a>. Alternatively, one could adjust the regression methods to utizilise a generalized linear model instead. That technique is implemented in the 
+<a href="https://github.com/dsalfran/ImputeRobust" target="_blank" rel="noopener">ImputeRobust</a> package for R. See section 
+<a href="https://stefvanbuuren.name/fimd/sec-nonnormal.html" target="_blank" rel="noopener">3.3</a> in van Buuren for details.</p>
+<h2 id="predictive-mean-matching">Predictive Mean Matching</h2>
+<p>Similar to 
+<a href="#bayesianbootstrap-multiple-imputation">Bayesian regression</a> above, a predicted value is calculated for each missing observation. Instead of adding noise to this prediction, however, a set of $k$ observations whose predicted values are close to the predicted missing value are sought. The missing value is then replaced by a random draw from this set of candidate donors. In mice, this method is available as <code>pmm</code>. In PROC MI, you can use the <code>regpredmeanmatch</code> keyword:</p>
+<pre><code class="language-sas">proc mi data=whiteside_miss out=regimp nimpute=5;
+	var temp gas;
+	monotone regpredmeanmatch(gas);
+run;
 </code></pre>
-<p>At this point csv2ds is quite simple, but sufficient for my needs. Some minor intervention may be needed to make the data step template work for your data. Informats like DOLLAR are not recognized as numeric and minor edits would need to be made to the produced template.</p>
-<p>Checkout my new tool over on 
-<a href="https://github.com/dmsenter89/csv2ds" target="_blank" rel="noopener">GitHub</a>.</p>
+<p>The keyword <code>regpredmeanmatch</code> may be abbreviated as <code>regpmm</code>.</p>
+<p>The predictive mean matching method is robust to transformations of the target variable. It may be used with both continuous and discrete data and will always generate realistic data in the sense that all generated data has been observed. Since this does not require an explicit model to describe the distribution of missing values, it is more resilient to model misspecification.</p>
+<p>See the 
+<a href="https://documentation.sas.com/doc/en/statug/15.2/statug_mi_details08.htm" target="_blank" rel="noopener">SAS documentation</a> and 
+<a href="https://stefvanbuuren.name/fimd/sec-pmm.html" target="_blank" rel="noopener">section 3.4</a> in van Buuren for details.</p>
+<h2 id="classification-and-regression-trees">Classification and Regression Trees</h2>
+<p>An idea borrowed from the machine learning community and implemented in some R packages. In essence, the idea is similar to utiziling linear regression models except that a regression tree is utilized instead. See 
+<a href="https://stefvanbuuren.name/fimd/sec-cart.html" target="_blank" rel="noopener">section 3.5</a> in van Buuren.</p>
+<h2 id="the-propensity-score-method">The Propensity Score Method</h2>
+<p>With this method, propensity scores are generated for each observation estimating the probability of it being missing. The observations are then grouped by their propensity scores and an approximate Bayesian bootstrap imputation is carried out for each group. See 
+<a href="https://documentation.sas.com/doc/en/statug/15.2/statug_mi_details18.htm" target="_blank" rel="noopener">SAS documentation</a> for details.</p>
+<p>A fully worked example is available in the 
+<a href="https://documentation.sas.com/doc/en/statug/15.2/statug_mi_examples02.htm" target="_blank" rel="noopener">SAS documentation</a>, with the associated code available on 
+<a href="https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/miex2.sas" target="_blank" rel="noopener">GitHub</a>:</p>
+<pre><code class="language-sas">proc mi data=Fish1 out=outex2;
+   monotone propensity;
+   var Length1 Length2 Length3;
+run;
+</code></pre>
+<p>This method is not implemented in the mice package.</p>
+<h2 id="categorical-and-count-data">Categorical and Count Data</h2>
+<h3 id="the-logistic-and-logit-models">The Logistic and Logit Models</h3>
+<p>Logit based regression models can be used both for nominal and ordinal data. The imputed value is generated from a Bayesian logistic regression model. The mice package implements this method as <code>logreg</code>. PROC MI uses the <code>logistic</code> keyword. An example of its usage is given in the 
+<a href="https://documentation.sas.com/doc/en/statug/15.2/statug_mi_examples04.htm" target="_blank" rel="noopener">SAS documentation</a>, with the associated code available on 
+<a href="https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/miex4.sas" target="_blank" rel="noopener">GitHub</a>. Here&rsquo;s the example code:</p>
+<pre><code class="language-sas">proc mi data=Fish2 out=outex4;
+   class Species;
+   monotone reg(Width/ details)
+            logistic(Species = Length Width Length*Width/ details);
+   var Length Width Species;
+run;
+</code></pre>
+<p>This imputes the width variable using the 
+<a href="#bayesianbootstrap-multiple-imputation">Bayesian linear regression</a> while imputing the categorical species variable using the logistig regression method.</p>
+<p>See the 
+<a href="https://documentation.sas.com/doc/en/statug/15.2/statug_mi_details13.htm" target="_blank" rel="noopener">SAS documentation</a> for details.</p>
+<h3 id="the-discriminant-function-method">The Discriminant Function Method</h3>
+<p>This method is the default for categorical data in PROC MI. See the 
+<a href="https://documentation.sas.com/doc/en/statug/15.2/statug_mi_details09.htm" target="_blank" rel="noopener">SAS documentation</a> for details.</p>
+<p>A fully worked example is available in the 
+<a href="https://documentation.sas.com/doc/en/statug/15.2/statug_mi_examples05.htm" target="_blank" rel="noopener">SAS documentation</a>, with the associated code available on 
+<a href="https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/miex5.sas" target="_blank" rel="noopener">GitHub</a>. Here is the MI call:</p>
+<pre><code class="language-sas">proc mi data=Fish2 out=outex5;
+   class Species;
+   monotone discrim(Species = Length Width/ details);
+   var Length Width Species;
+run;
+</code></pre>
+<p>The mice package does not implement this method.</p>
+<h2 id="references">References</h2>
+<p>Hand, D. J., F. Daly, A. D. Lunn, K. J. McConway, and Ostrowski,  E. (1994), <em>A Handbook of Small Data Sets</em>, London: Chapman &amp; Hall.</p>
+<p>Rubin, D. B. (1987), <em>Multiple Imputation for Nonresponse in Surveys</em>, New York: John Wiley &amp; Sons.</p>
+<p>van Buuren, S. (2018), <em>Flexible Imputation of Missing Data</em>, Chapman and Hall/CRC interdisciplinary statistics series, Boca Raton: CRC Press, Taylor and Francis Group. Available at <a href="https://stefvanbuuren.name/fimd/">https://stefvanbuuren.name/fimd/</a>.</p>
 
     </div>
 
@@ -739,11 +804,11 @@
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/csv/">csv</a>
+  <a class="badge badge-light" href="/tag/bayesian/">bayesian</a>
   
-  <a class="badge badge-light" href="/tag/data-step/">data-step</a>
+  <a class="badge badge-light" href="/tag/missing-data/">missing-data</a>
   
-  <a class="badge badge-light" href="/tag/go/">go</a>
+  <a class="badge badge-light" href="/tag/r/">r</a>
   
   <a class="badge badge-light" href="/tag/sas/">sas</a>
   
@@ -762,7 +827,7 @@
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/22-11-csv2ds/&amp;text=CSV2DS" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-08-univariate-mi/&amp;text=Univariate%20Missing%20Data%20with%20PROC%20MI" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -775,7 +840,7 @@
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/22-11-csv2ds/&amp;t=CSV2DS" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-08-univariate-mi/&amp;t=Univariate%20Missing%20Data%20with%20PROC%20MI" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -788,7 +853,7 @@
       
       
       <li>
-        <a href="mailto:?subject=CSV2DS&amp;body=https://dmsenter89.github.io/post/22-11-csv2ds/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Univariate%20Missing%20Data%20with%20PROC%20MI&amp;body=https://dmsenter89.github.io/post/23-08-univariate-mi/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -801,7 +866,7 @@
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/22-11-csv2ds/&amp;title=CSV2DS" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-08-univariate-mi/&amp;title=Univariate%20Missing%20Data%20with%20PROC%20MI" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -814,7 +879,7 @@
       
       
       <li>
-        <a href="whatsapp://send?text=CSV2DS%20https://dmsenter89.github.io/post/22-11-csv2ds/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Univariate%20Missing%20Data%20with%20PROC%20MI%20https://dmsenter89.github.io/post/23-08-univariate-mi/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -827,7 +892,7 @@
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/22-11-csv2ds/&amp;title=CSV2DS" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-08-univariate-mi/&amp;title=Univariate%20Missing%20Data%20with%20PROC%20MI" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -979,15 +1044,15 @@
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/22-08-zillow-data/">Loading Zillow Housing Data in SAS</a></li>
+      <li><a href="/post/23-05-sample-regression-lines/">Sampling Regression Lines</a></li>
       
-      <li><a href="/post/22-04-sas-indsname-option/">The INDSNAME Option in SAS</a></li>
+      <li><a href="/post/23-05-simple-regression-with-proc-mcmc/">Simple Regression With PROC MCMC</a></li>
       
-      <li><a href="/post/21-09-sas-regex-date-cleanup/">Cleaning up a Date String with RegEx in SAS</a></li>
+      <li><a href="/post/23-02-proc-mi-added-to-saspy/">PROC MI Added to SASPy</a></li>
       
-      <li><a href="/post/21-07-proc-import-to-data-step-with-regex/">From Proc Import to a Data Step with Regex</a></li>
+      <li><a href="/post/23-01-missing-data-mechanisms/">Missing Data Mechanisms</a></li>
       
-      <li><a href="/post/23-08-univariate-mi/">Univariate Missing Data with PROC MI</a></li>
+      <li><a href="/post/23-04-loading-several-xpt-files-from-a-url/">Loading Several XPT Files From a URL</a></li>
       
     </ul>
   </div>

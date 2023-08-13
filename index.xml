@@ -5,12 +5,151 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 26 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Sun, 13 Aug 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Univariate Missing Data with PROC MI</title>
+      <link>https://dmsenter89.github.io/post/23-08-univariate-mi/</link>
+      <pubDate>Sun, 13 Aug 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-08-univariate-mi/</guid>
+      <description>&lt;p&gt;In Chapter 3 of van Buuren&amp;rsquo;s &lt;em&gt;Flexible Imputation of Missing Data&lt;/em&gt; a variety of methods for imputing univariate missing data are presented. This post will summarize these techniques and show how to implement them in SAS.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#preliminaries&#34;&gt;Preliminaries&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#imputing-under-a-normal-linear-model&#34;&gt;Imputing under a Normal Linear Model&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#regression-imputation&#34;&gt;Regression Imputation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#stochastic-regression-imputation&#34;&gt;Stochastic Regression Imputation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#bayesianbootstrap-multiple-imputation&#34;&gt;Bayesian/Bootstrap Multiple Imputation&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#what-if-my-data-are-non-normal&#34;&gt;What if my data are non-normal?&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#predictive-mean-matching&#34;&gt;Predictive Mean Matching&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#classification-and-regression-trees&#34;&gt;Classification and Regression Trees&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#the-propensity-score-method&#34;&gt;The Propensity Score Method&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#categorical-and-count-data&#34;&gt;Categorical and Count Data&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-logistic-and-logit-models&#34;&gt;The Logistic and Logit Models&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#the-discriminant-function-method&#34;&gt;The Discriminant Function Method&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;preliminaries&#34;&gt;Preliminaries&lt;/h2&gt;
+&lt;p&gt;Van Buuren demonstrates various techniques using data set 88 from Hand et al (1994). This data set is availabe from R&amp;rsquo;s MASS library as &lt;code&gt;data(&amp;quot;whiteside&amp;quot;)&lt;/code&gt;. The original data set can be downloaded from the 
+&lt;a href=&#34;https://www.routledge.com/A-Handbook-of-Small-Data-Sets/Hand-Daly-McConway-Lunn-Ostrowski/p/book/9780367449667&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;publisher&amp;rsquo;s website&lt;/a&gt;. The name of the relevant data file is INSULATE.DAT. If you want to follow along using SAS, you can use 
+&lt;a href=&#34;./code/whiteside.sas&#34;&gt;this data step&lt;/a&gt;. It matches the way the data appears in R except that I have added a variable &lt;code&gt;R&lt;/code&gt; indicating the observation that van Buuren deletes for demonstration purposes.&lt;/p&gt;
+&lt;p&gt;For purposes of this post, we assume one or more predictors $x$ are completely observed, while some variable of interest $y$ is only partially observed. Methods for dealing with this type of problem are available using the 
+&lt;a href=&#34;http://documentation.sas.com/doc/en/statug/15.2/statug_mi_syntax09.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;monotone&lt;/a&gt; keyword in PROC MI. A data set has a monotone missing pattern if it consists of variables $Y_1$, $Y_2$, $\ldots$, $Y_p$ such that if $Y_j$ is missing for one individual, all subsequent variables $Y_k$ for $j &amp;lt; k \leq p$ are also missing. Schematically, the data set will look like this:&lt;/p&gt;
+&lt;p&gt;$$R = \begin{bmatrix} 1 &amp;amp; 1 &amp;amp; 1 \\ 1 &amp;amp; 1 &amp;amp; 0 \\ 1 &amp;amp; 0 &amp;amp; 0 \end{bmatrix}$$&lt;/p&gt;
+&lt;p&gt;where 1 indicates an observed value and 0 a missing value. The monotone statement in SAS can impute missing values by completing the columns in turn using univariate methods. See the 
+&lt;a href=&#34;http://documentation.sas.com/doc/en/statug/15.2/statug_mi_details06.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt; for specifics.&lt;/p&gt;
+&lt;h2 id=&#34;imputing-under-a-normal-linear-model&#34;&gt;Imputing under a Normal Linear Model&lt;/h2&gt;
+&lt;p&gt;For completion, I will mention all of the main linear model methods van Buuren mentions in his text, even though the first two are not implemented in PROC MI.&lt;/p&gt;
+&lt;h3 id=&#34;regression-imputation&#34;&gt;Regression Imputation&lt;/h3&gt;
+&lt;p&gt;Van Buuren also refers to this as the &amp;ldquo;prediction&amp;rdquo; method. In essence, the complete cases are used to create a linear model. This linear model is then used to fill in the missing values:&lt;/p&gt;
+&lt;p&gt;$$ \dot{y} = \hat\beta_0 + X_\text{mis}\,\hat\beta_1$$&lt;/p&gt;
+&lt;p&gt;where $\hat\beta_i$ are least squares estimates.&lt;/p&gt;
+&lt;p&gt;This method has a variety of drawbacks. For one, it artificially strengthens the relationships between variables as they appear in the linear model by increasing correlations. Variability in the data is reduced. See section 
+&lt;a href=&#34;https://stefvanbuuren.name/fimd/sec-simplesolutions.html#sec:regimp&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;1.3.4&lt;/a&gt; in van Buuren for details.&lt;/p&gt;
+&lt;p&gt;The mice package implements this method as &lt;code&gt;norm.predict&lt;/code&gt;. PROC MI does not implement this method; to use this technique in SAS, you could use the regression PROCs or IML.&lt;/p&gt;
+&lt;h3 id=&#34;stochastic-regression-imputation&#34;&gt;Stochastic Regression Imputation&lt;/h3&gt;
+&lt;p&gt;This method proceeds as above, except that Gaussian noise is added to the imputed value:
+$$ \dot{y} = \hat\beta_0 + X_\text{mis}\,\hat\beta_1 + \dot\epsilon$$
+where $\dot\epsilon \sim N(0, \hat\sigma^2)$. An advantage of this method over plain regression is that it can preserve correlation between variables.&lt;/p&gt;
+&lt;p&gt;The mice package implements this method as &lt;code&gt;norm.nob&lt;/code&gt;. It is not available in PROC MI but can be implemented with IML.&lt;/p&gt;
+&lt;h3 id=&#34;bayesianbootstrap-multiple-imputation&#34;&gt;Bayesian/Bootstrap Multiple Imputation&lt;/h3&gt;
+&lt;p&gt;Van Buuren also refrers to this as &amp;ldquo;predict + noise + parameters uncertainty.&amp;rdquo; This technique is based on a Bayesian linear regression using draws from the posterior as parameters:
+$$\dot y = \dot\beta_0 + X_\text{mis}\, \dot\beta_1 + \dot\epsilon$$
+where $\dot\epsilon\sim N(0,\dot\sigma^2)$ and $\dot\beta_i$, $\dot\sigma$ are random draws from the posterior distribution.&lt;/p&gt;
+&lt;p&gt;This the default method in PROC MI for continuous data. Both SAS and mice use an algorithm based on Rubin (1987, pp. 166-167). See the 
+&lt;a href=&#34;http://documentation.sas.com/doc/en/statug/15.2/statug_mi_details07.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt; and 
+&lt;a href=&#34;https://stefvanbuuren.name/fimd/sec-linearnormal.html#def:norm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Algorithm 3.1&lt;/a&gt; in van Buuren for details. The mice package implements this method as &lt;code&gt;norm&lt;/code&gt;. Here is an example of how the Bayesian regression can be used in PROC MI:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mi data=whiteside_miss out=regimp nimpute=5;
+	var temp gas;
+	monotone regression(gas);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The regression keyword may be abbreviated as &lt;code&gt;reg&lt;/code&gt;. A fully worked example is available in the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/statug/15.2/statug_mi_examples03.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt;, with the associated code available on 
+&lt;a href=&#34;https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/miex3.sas&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The mice package also implements a variant of this method using bootstrapping instead of a Bayesian model. This method is available as &lt;code&gt;norm.boot&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;what-if-my-data-are-non-normal&#34;&gt;What if my data are non-normal?&lt;/h3&gt;
+&lt;p&gt;In case the data are non-normal, one could proceed to a non-regression technique like 
+&lt;a href=&#34;#predictive-mean-matching&#34;&gt;predictive mean matching&lt;/a&gt;. Alternatively, one could adjust the regression methods to utizilise a generalized linear model instead. That technique is implemented in the 
+&lt;a href=&#34;https://github.com/dsalfran/ImputeRobust&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ImputeRobust&lt;/a&gt; package for R. See section 
+&lt;a href=&#34;https://stefvanbuuren.name/fimd/sec-nonnormal.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;3.3&lt;/a&gt; in van Buuren for details.&lt;/p&gt;
+&lt;h2 id=&#34;predictive-mean-matching&#34;&gt;Predictive Mean Matching&lt;/h2&gt;
+&lt;p&gt;Similar to 
+&lt;a href=&#34;#bayesianbootstrap-multiple-imputation&#34;&gt;Bayesian regression&lt;/a&gt; above, a predicted value is calculated for each missing observation. Instead of adding noise to this prediction, however, a set of $k$ observations whose predicted values are close to the predicted missing value are sought. The missing value is then replaced by a random draw from this set of candidate donors. In mice, this method is available as &lt;code&gt;pmm&lt;/code&gt;. In PROC MI, you can use the &lt;code&gt;regpredmeanmatch&lt;/code&gt; keyword:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mi data=whiteside_miss out=regimp nimpute=5;
+	var temp gas;
+	monotone regpredmeanmatch(gas);
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The keyword &lt;code&gt;regpredmeanmatch&lt;/code&gt; may be abbreviated as &lt;code&gt;regpmm&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The predictive mean matching method is robust to transformations of the target variable. It may be used with both continuous and discrete data and will always generate realistic data in the sense that all generated data has been observed. Since this does not require an explicit model to describe the distribution of missing values, it is more resilient to model misspecification.&lt;/p&gt;
+&lt;p&gt;See the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/statug/15.2/statug_mi_details08.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt; and 
+&lt;a href=&#34;https://stefvanbuuren.name/fimd/sec-pmm.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;section 3.4&lt;/a&gt; in van Buuren for details.&lt;/p&gt;
+&lt;h2 id=&#34;classification-and-regression-trees&#34;&gt;Classification and Regression Trees&lt;/h2&gt;
+&lt;p&gt;An idea borrowed from the machine learning community and implemented in some R packages. In essence, the idea is similar to utiziling linear regression models except that a regression tree is utilized instead. See 
+&lt;a href=&#34;https://stefvanbuuren.name/fimd/sec-cart.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;section 3.5&lt;/a&gt; in van Buuren.&lt;/p&gt;
+&lt;h2 id=&#34;the-propensity-score-method&#34;&gt;The Propensity Score Method&lt;/h2&gt;
+&lt;p&gt;With this method, propensity scores are generated for each observation estimating the probability of it being missing. The observations are then grouped by their propensity scores and an approximate Bayesian bootstrap imputation is carried out for each group. See 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/statug/15.2/statug_mi_details18.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;A fully worked example is available in the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/statug/15.2/statug_mi_examples02.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt;, with the associated code available on 
+&lt;a href=&#34;https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/miex2.sas&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mi data=Fish1 out=outex2;
+   monotone propensity;
+   var Length1 Length2 Length3;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This method is not implemented in the mice package.&lt;/p&gt;
+&lt;h2 id=&#34;categorical-and-count-data&#34;&gt;Categorical and Count Data&lt;/h2&gt;
+&lt;h3 id=&#34;the-logistic-and-logit-models&#34;&gt;The Logistic and Logit Models&lt;/h3&gt;
+&lt;p&gt;Logit based regression models can be used both for nominal and ordinal data. The imputed value is generated from a Bayesian logistic regression model. The mice package implements this method as &lt;code&gt;logreg&lt;/code&gt;. PROC MI uses the &lt;code&gt;logistic&lt;/code&gt; keyword. An example of its usage is given in the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/statug/15.2/statug_mi_examples04.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt;, with the associated code available on 
+&lt;a href=&#34;https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/miex4.sas&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. Here&amp;rsquo;s the example code:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mi data=Fish2 out=outex4;
+   class Species;
+   monotone reg(Width/ details)
+            logistic(Species = Length Width Length*Width/ details);
+   var Length Width Species;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This imputes the width variable using the 
+&lt;a href=&#34;#bayesianbootstrap-multiple-imputation&#34;&gt;Bayesian linear regression&lt;/a&gt; while imputing the categorical species variable using the logistig regression method.&lt;/p&gt;
+&lt;p&gt;See the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/statug/15.2/statug_mi_details13.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt; for details.&lt;/p&gt;
+&lt;h3 id=&#34;the-discriminant-function-method&#34;&gt;The Discriminant Function Method&lt;/h3&gt;
+&lt;p&gt;This method is the default for categorical data in PROC MI. See the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/statug/15.2/statug_mi_details09.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt; for details.&lt;/p&gt;
+&lt;p&gt;A fully worked example is available in the 
+&lt;a href=&#34;https://documentation.sas.com/doc/en/statug/15.2/statug_mi_examples05.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS documentation&lt;/a&gt;, with the associated code available on 
+&lt;a href=&#34;https://github.com/sassoftware/doc-supplement-statug/blob/main/Examples/m-n/miex5.sas&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;GitHub&lt;/a&gt;. Here is the MI call:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc mi data=Fish2 out=outex5;
+   class Species;
+   monotone discrim(Species = Length Width/ details);
+   var Length Width Species;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The mice package does not implement this method.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;Hand, D. J., F. Daly, A. D. Lunn, K. J. McConway, and Ostrowski,  E. (1994), &lt;em&gt;A Handbook of Small Data Sets&lt;/em&gt;, London: Chapman &amp;amp; Hall.&lt;/p&gt;
+&lt;p&gt;Rubin, D. B. (1987), &lt;em&gt;Multiple Imputation for Nonresponse in Surveys&lt;/em&gt;, New York: John Wiley &amp;amp; Sons.&lt;/p&gt;
+&lt;p&gt;van Buuren, S. (2018), &lt;em&gt;Flexible Imputation of Missing Data&lt;/em&gt;, Chapman and Hall/CRC interdisciplinary statistics series, Boca Raton: CRC Press, Taylor and Francis Group. Available at &lt;a href=&#34;https://stefvanbuuren.name/fimd/&#34;&gt;https://stefvanbuuren.name/fimd/&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SUC - a Slack Clone for Modern Unix</title>
