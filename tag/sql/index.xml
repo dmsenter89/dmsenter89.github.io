@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sql | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/sql/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/sql/index.xml" rel="self" type="application/rss+xml" />
+    <description>sql</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 05 Sep 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>sql</title>
+      <link>https://dmsenter89.github.io/tag/sql/</link>
+    </image>
+    
+    <item>
+      <title>Some Basic SQL Joins</title>
+      <link>https://dmsenter89.github.io/post/23-09-basic-sql-joins/</link>
+      <pubDate>Tue, 05 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-09-basic-sql-joins/</guid>
+      <description>&lt;p&gt;A non-technical friend recently asked me for help with a merge problem. They had two separate data pulls of electronic medical records based on specific study parameters. The set of people in the database who fit the study parameters changed in between the data pulls, for example by having people age into our out of a study, or by having new diagnoses added to their records that cause them to either be newly included or excluded. Let&amp;rsquo;s call the older data set A and the newer data set B. The goal was to get all those entries from B that don&amp;rsquo;t also show up in A. The data sets were pulled by a staff data scientist at that company who, despite their title, said they couldn&amp;rsquo;t figure out how to remove those entries from B that were already in A. Barring any special circumstances, this is a fairly standard problem so let&amp;rsquo;s look at a couple of tools we could use to solve it.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s start with some made-up sample data:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-minimal-sample-data-for-demonstration-purposes&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/23-09-basic-sql-joins/sample-data_huec327b38ea9381c4b4e186ea675e12fc_20885_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Minimal sample data for demonstration purposes.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/23-09-basic-sql-joins/sample-data_huec327b38ea9381c4b4e186ea675e12fc_20885_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;474&#34; height=&#34;322&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Minimal sample data for demonstration purposes.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;!-- ```shell
+$ bat *.csv
+───────┬────────────────────────────────────────────────────────────────────
+       │ File: A.csv
+───────┼────────────────────────────────────────────────────────────────────
+   1   │ MRN,Weight,Chol_Status
+   2   │ 23356,140,
+   3   │ 74592,,Desirable
+   4   │ 79602,139,High
+───────┴────────────────────────────────────────────────────────────────────
+───────┬────────────────────────────────────────────────────────────────────
+       │ File: B.csv
+───────┼────────────────────────────────────────────────────────────────────
+   1   │ MRN,Weight,Chol_Status
+   2   │ 64836,129,High
+   3   │ 79602,139,High
+   4   │ 2466,127,Borderline
+───────┴────────────────────────────────────────────────────────────────────
+``` --&gt;
+&lt;p&gt;The MRN here stands for &amp;ldquo;medical record number,&amp;rdquo; a common unique identifier present in clinical data sets. Each of our data sets has three rows, but only one row is shared between both - that associated with MRN 79602. We could theoretically merge on multiple columns or coalesce data if we think some missing fields might have been updated in the meantime, but for purposes of this example we&amp;rsquo;ll keep it simple and just merge on the MRN.&lt;/p&gt;
+&lt;h2 id=&#34;sql-merge-types&#34;&gt;SQL Merge Types&lt;/h2&gt;
+&lt;p&gt;There are four basic types of merge: left join, right join, outer join, and inner join. There&amp;rsquo;s also the cross join but that one shows up less frequently in my experience. A picture speaks a thousand words, so here&amp;rsquo;s a Venn diagram illustrating the idea behind these joins.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-standard-sql-joins&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/23-09-basic-sql-joins/sql-joins_hu519d137be5f72d83cc0fb24e7060e243_236726_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Standard SQL Joins.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/23-09-basic-sql-joins/sql-joins_hu519d137be5f72d83cc0fb24e7060e243_236726_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;2593&#34; height=&#34;1814&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Standard SQL Joins.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;In our case, we actually want left/right &amp;ldquo;inner&amp;rdquo; or &amp;ldquo;exclusive&amp;rdquo; joins, like this:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/23-09-basic-sql-joins/exclusive-joins60_hu03ae2ec37b24cdee5a828b5b640777a8_45542_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/23-09-basic-sql-joins/exclusive-joins60_hu03ae2ec37b24cdee5a828b5b640777a8_45542_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;377&#34; height=&#34;514&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;implementations&#34;&gt;Implementations&lt;/h2&gt;
+&lt;p&gt;I figured I would go over three basic tools: SAS, SQL, and Pandas.&lt;/p&gt;
+&lt;h3 id=&#34;only-in-a&#34;&gt;Only in A&lt;/h3&gt;
+&lt;p&gt;For starters, we want all entries in $A$ that are not also in $B$. In set notation that is the set denoted $A-B$ (sometimes $A\backslash B$).
+Merges like this is what SQL excels at, so let&amp;rsquo;s see the SQL statment first:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;create table res1 as
+  select A.* from
+    A left join B 
+    on A.MRN=B.MRN
+    where B.MRN is NULL;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This should run in any typical SQL implementation, including PROC SQL in SAS and SQLite3. We expect the following table as output:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;MRN&lt;/th&gt;
+&lt;th&gt;Weight&lt;/th&gt;
+&lt;th&gt;Chol_Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;23356&lt;/td&gt;
+&lt;td&gt;140&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;74592&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;Desirable&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;To do a left outer join instead, we would just omit the &lt;code&gt;where&lt;/code&gt; clause. We could do the same with a data step merge statement, but unlike SQL this would assume our input data sets are sorted by the merge key:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data res1;
+  merge A (IN = X) B (IN=Y);
+  by MRN;
+  If X and not Y;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pandas&#39; merge statement allows for the creation of an indicator variable, similar to the &lt;code&gt;in&lt;/code&gt; keyword used in the SAS data step merge. That indicator will tell us if the particular row is present in both the left and the right tables (value &lt;code&gt;both&lt;/code&gt;), or just in one of them (values &lt;code&gt;left_only&lt;/code&gt; and &lt;code&gt;right_only&lt;/code&gt;). We can then query on that indicator variable to subset:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;res1 = (pd.merge(A, B, how=&#39;outer&#39;, indicator=True)
+            .query(&#39;_merge==&amp;quot;left_only&amp;quot;&#39;)
+            .drop(&#39;_merge&#39;, axis=1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;only-in-b&#34;&gt;Only in B&lt;/h3&gt;
+&lt;p&gt;Same idea, but reversed: $B-A$. The implementation is identical except that we are using a right join instead:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;create table res2 as
+  select B.* from
+  A right join B
+  on A.MRN=B.MRN
+  where A.MRN is NULL;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Expected output:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;MRN&lt;/th&gt;
+&lt;th&gt;Weight&lt;/th&gt;
+&lt;th&gt;Chol_Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;64836&lt;/td&gt;
+&lt;td&gt;129&lt;/td&gt;
+&lt;td&gt;High&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2466&lt;/td&gt;
+&lt;td&gt;127&lt;/td&gt;
+&lt;td&gt;Borderline&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;It is interesting to note that SQLite, at least as of 3.37.2, still doesn&amp;rsquo;t support right joins, so if you&amp;rsquo;re using that you&amp;rsquo;ll just want to use the left join method above but switch the &lt;code&gt;A&lt;/code&gt; and &lt;code&gt;B&lt;/code&gt; around. The data step implementation is also straight forward:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data res2;
+  merge A (IN = X) B (IN=Y);
+  by MRN;
+  If Y and not X;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;as is the Pandas version:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;res2 = (pd.merge(A, B, how=&#39;outer&#39;, indicator=True)
+            .query(&#39;_merge==&amp;quot;right_only&amp;quot;&#39;)
+            .drop(&#39;_merge&#39;, axis=1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;whats-in-common&#34;&gt;What&amp;rsquo;s in common?&lt;/h3&gt;
+&lt;p&gt;Finally, you  might be curious to see which rows both data sets have in common, that is $A \cap B$. That&amp;rsquo;s a simple inner join:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sql&#34;&gt;create table res3 as
+  select A.* from 
+  A inner join B
+  on A.MRN=B.MRN;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Expected output:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;MRN&lt;/th&gt;
+&lt;th&gt;Weight&lt;/th&gt;
+&lt;th&gt;Chol_Status&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;79602&lt;/td&gt;
+&lt;td&gt;139&lt;/td&gt;
+&lt;td&gt;High&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;In SAS:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data res3;
+  merge A (IN = X) B (IN=Y);
+  by MRN;
+  If X and Y;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;and in Pandas:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;res3 = (pd.merge(A, B, how=&#39;outer&#39;, indicator=True)
+            .query(&#39;_merge==&amp;quot;both&amp;quot;&#39;)
+            .drop(&#39;_merge&#39;, axis=1))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And that&amp;rsquo;s it. All that&amp;rsquo;s left to do is to save the data in a format your customer or colleagues can work with and we&amp;rsquo;re done.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

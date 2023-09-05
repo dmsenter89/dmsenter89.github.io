@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="The Census Bureau has updated its population estimates for 2020 with county level data. This means any projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates.">
+  <meta name="description" content="A non-technical friend recently asked me for help with a merge problem. They had two separate data pulls of electronic medical records based on specific study parameters. The set of people in the database who fit the study parameters changed in between the data pulls, for example by having people age into our out of a study, or by having new diagnoses added to their records that cause them to either be newly included or excluded.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/21-06-covid-county-incidence/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-09-basic-sql-joins/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/21-06-covid-county-incidence/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/23-09-basic-sql-joins/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/21-06-covid-county-incidence/">
-  <meta property="og:title" content="Census 2020 Population Estimates Updated | Michael&#39;s Site">
-  <meta property="og:description" content="The Census Bureau has updated its population estimates for 2020 with county level data. This means any projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/23-09-basic-sql-joins/">
+  <meta property="og:title" content="Some Basic SQL Joins | Michael&#39;s Site">
+  <meta property="og:description" content="A non-technical friend recently asked me for help with a merge problem. They had two separate data pulls of electronic medical records based on specific study parameters. The set of people in the database who fit the study parameters changed in between the data pulls, for example by having people age into our out of a study, or by having new diagnoses added to their records that cause them to either be newly included or excluded."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-06-09T16:00:34-04:00">
+      <meta property="article:published_time" content="2023-09-05T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-06-09T16:00:34-04:00">
+    <meta property="article:modified_time" content="2023-09-05T00:00:00&#43;00:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/21-06-covid-county-incidence/"
+    "@id": "https://dmsenter89.github.io/post/23-09-basic-sql-joins/"
   },
-  "headline": "Census 2020 Population Estimates Updated",
+  "headline": "Some Basic SQL Joins",
   
-  "datePublished": "2021-06-09T16:00:34-04:00",
-  "dateModified": "2021-06-09T16:00:34-04:00",
+  "datePublished": "2023-09-05T00:00:00Z",
+  "dateModified": "2023-09-05T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "The Census Bureau has updated its population estimates for 2020 with county level data. This means any projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates."
+  "description": "A non-technical friend recently asked me for help with a merge problem. They had two separate data pulls of electronic medical records based on specific study parameters. The set of people in the database who fit the study parameters changed in between the data pulls, for example by having people age into our out of a study, or by having new diagnoses added to their records that cause them to either be newly included or excluded."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>Census 2020 Population Estimates Updated | Michael&#39;s Site</title>
+  <title>Some Basic SQL Joins | Michael&#39;s Site</title>
 
 </head>
 
@@ -597,7 +597,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Census 2020 Population Estimates Updated</h1>
+  <h1>Some Basic SQL Joins</h1>
 
   
 
@@ -616,7 +616,7 @@
     
       
     
-    Jun 9, 2021
+    Sep 5, 2023
   </span>
   
 
@@ -625,7 +625,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    4 min read
   </span>
   
 
@@ -661,12 +661,8 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>The Census Bureau has updated its population estimates for 2020 with county level data. This means any
-projects that have had to rely on the 2019 estimates can now switch to the 2020 estimates.</p>
-<p>This is particularly useful for those of us who have been trying to track the development of COVID-19. The
-average incidence rates are typically rescaled to new cases per 100,000 people. Previous graphs and maps I
-have created used the 2019 estimates. I have now updated my code for mapping North Carolina developments to
-use the 2020 estimates.</p>
+      <p>A non-technical friend recently asked me for help with a merge problem. They had two separate data pulls of electronic medical records based on specific study parameters. The set of people in the database who fit the study parameters changed in between the data pulls, for example by having people age into our out of a study, or by having new diagnoses added to their records that cause them to either be newly included or excluded. Let&rsquo;s call the older data set A and the newer data set B. The goal was to get all those entries from B that don&rsquo;t also show up in A. The data sets were pulled by a staff data scientist at that company who, despite their title, said they couldn&rsquo;t figure out how to remove those entries from B that were already in A. Barring any special circumstances, this is a fairly standard problem so let&rsquo;s look at a couple of tools we could use to solve it.</p>
+<p>Let&rsquo;s start with some made-up sample data:</p>
 
 
 
@@ -685,58 +681,240 @@ use the 2020 estimates.</p>
 
 
 
-<figure id="figure-county-level-data-for-north-carolina-using-the-nyt-covid-data-set-date-set-to-june-8-2021">
+<figure id="figure-minimal-sample-data-for-demonstration-purposes">
 
 
-  <a data-fancybox="" href="/post/21-06-covid-county-incidence/nc_avg_incidence_08jun2021_hu8396d2a41a978826522d96cfe881f35d_68326_2000x2000_fit_lanczos_2.png" data-caption="County level data for North Carolina using the NYT COVID data set. Date set to June 8, 2021.">
+  <a data-fancybox="" href="/post/23-09-basic-sql-joins/sample-data_huec327b38ea9381c4b4e186ea675e12fc_20885_2000x2000_fit_lanczos_2.png" data-caption="Minimal sample data for demonstration purposes.">
 
 
-  <img data-src="/post/21-06-covid-county-incidence/nc_avg_incidence_08jun2021_hu8396d2a41a978826522d96cfe881f35d_68326_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="640" height="480">
+  <img data-src="/post/23-09-basic-sql-joins/sample-data_huec327b38ea9381c4b4e186ea675e12fc_20885_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="474" height="322">
 </a>
 
 
   
   
   <figcaption>
-    County level data for North Carolina using the NYT COVID data set. Date set to June 8, 2021.
+    Minimal sample data for demonstration purposes.
   </figcaption>
 
 
 </figure>
 
-<p>Below this post is my code for loading the necessary data using SAS.
-Note that I&rsquo;m using a macro called <code>mystate</code> that can be set to the statecode abbreviation of your choice.
-The conditional <code>County ne 0</code> is in the code because the county level CSV includes both the county data as
-well as the totals for each state.</p>
-<pre><code class="language-sas">
-filename popdat url 'https://www2.census.gov/programs-surveys/popest/datasets/2010-2020/counties/totals/co-est2020-alldata.csv';
+<!-- ```shell
+$ bat *.csv
+───────┬────────────────────────────────────────────────────────────────────
+       │ File: A.csv
+───────┼────────────────────────────────────────────────────────────────────
+   1   │ MRN,Weight,Chol_Status
+   2   │ 23356,140,
+   3   │ 74592,,Desirable
+   4   │ 79602,139,High
+───────┴────────────────────────────────────────────────────────────────────
+───────┬────────────────────────────────────────────────────────────────────
+       │ File: B.csv
+───────┼────────────────────────────────────────────────────────────────────
+   1   │ MRN,Weight,Chol_Status
+   2   │ 64836,129,High
+   3   │ 79602,139,High
+   4   │ 2466,127,Borderline
+───────┴────────────────────────────────────────────────────────────────────
+``` -->
+<p>The MRN here stands for &ldquo;medical record number,&rdquo; a common unique identifier present in clinical data sets. Each of our data sets has three rows, but only one row is shared between both - that associated with MRN 79602. We could theoretically merge on multiple columns or coalesce data if we think some missing fields might have been updated in the meantime, but for purposes of this example we&rsquo;ll keep it simple and just merge on the MRN.</p>
+<h2 id="sql-merge-types">SQL Merge Types</h2>
+<p>There are four basic types of merge: left join, right join, outer join, and inner join. There&rsquo;s also the cross join but that one shows up less frequently in my experience. A picture speaks a thousand words, so here&rsquo;s a Venn diagram illustrating the idea behind these joins.</p>
 
-data censusdata;
-	infile POPDAT delimiter=',' MISSOVER DSD lrecl=32767 firstobs=2;
-	informat SUMLEV REGION DIVISION State County best32.
-                         STNAME $20. CTYNAME $35. 
-		CENSUS2010POP ESTIMATESBASE2010 POPESTIMATE2010-POPESTIMATE2020 best32.;
-	format SUMLEV REGION DIVISION STATE best32. COUNTY 5. STNAME $20. CTYNAME $35. 
-		CENSUS2010POP ESTIMATESBASE2010 POPESTIMATE2010-POPESTIMATE2020 
-		COMMA12. StateCode $2.;
-	input SUMLEV REGION DIVISION STATE COUNTY STNAME $ CTYNAME $
-                        CENSUS2010POP ESTIMATESBASE2010 
-		POPESTIMATE2010-POPESTIMATE2020;
 
-	if (State ne 0) and (State ne 72) then
-		do;
-			FIPS=put(State, Z2.);
-			Statecode=fipstate(FIPS);
 
-			if Statecode eq &amp;mystate and County ne 0 then
-				output;
-		end;
-	keep STNAME CTYNAME County FIPS Statecode Popestimate2020;
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure id="figure-standard-sql-joins">
+
+
+  <a data-fancybox="" href="/post/23-09-basic-sql-joins/sql-joins_hu519d137be5f72d83cc0fb24e7060e243_236726_2000x2000_fit_lanczos_2.png" data-caption="Standard SQL Joins.">
+
+
+  <img data-src="/post/23-09-basic-sql-joins/sql-joins_hu519d137be5f72d83cc0fb24e7060e243_236726_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="2593" height="1814">
+</a>
+
+
+  
+  
+  <figcaption>
+    Standard SQL Joins.
+  </figcaption>
+
+
+</figure>
+
+<p>In our case, we actually want left/right &ldquo;inner&rdquo; or &ldquo;exclusive&rdquo; joins, like this:</p>
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+<figure >
+
+
+  <a data-fancybox="" href="/post/23-09-basic-sql-joins/exclusive-joins60_hu03ae2ec37b24cdee5a828b5b640777a8_45542_2000x2000_fit_lanczos_2.png" >
+
+
+  <img data-src="/post/23-09-basic-sql-joins/exclusive-joins60_hu03ae2ec37b24cdee5a828b5b640777a8_45542_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="377" height="514">
+</a>
+
+
+
+</figure>
+
+<h2 id="implementations">Implementations</h2>
+<p>I figured I would go over three basic tools: SAS, SQL, and Pandas.</p>
+<h3 id="only-in-a">Only in A</h3>
+<p>For starters, we want all entries in $A$ that are not also in $B$. In set notation that is the set denoted $A-B$ (sometimes $A\backslash B$).
+Merges like this is what SQL excels at, so let&rsquo;s see the SQL statment first:</p>
+<pre><code class="language-sql">create table res1 as
+  select A.* from
+    A left join B 
+    on A.MRN=B.MRN
+    where B.MRN is NULL;
+</code></pre>
+<p>This should run in any typical SQL implementation, including PROC SQL in SAS and SQLite3. We expect the following table as output:</p>
+<table>
+<thead>
+<tr>
+<th>MRN</th>
+<th>Weight</th>
+<th>Chol_Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>23356</td>
+<td>140</td>
+<td></td>
+</tr>
+<tr>
+<td>74592</td>
+<td></td>
+<td>Desirable</td>
+</tr>
+</tbody>
+</table>
+<p>To do a left outer join instead, we would just omit the <code>where</code> clause. We could do the same with a data step merge statement, but unlike SQL this would assume our input data sets are sorted by the merge key:</p>
+<pre><code class="language-sas">data res1;
+  merge A (IN = X) B (IN=Y);
+  by MRN;
+  If X and not Y;
 run;
 </code></pre>
-<p>The media release can be 
-<a href="https://www.census.gov/newsroom/press-releases/2021/2020-vintage-population-estimates.html" target="_blank" rel="noopener">viewed here</a>. The county-level data set can be downloaded 
-<a href="https://www.census.gov/programs-surveys/popest/technical-documentation/research/evaluation-estimates/2020-evaluation-estimates/2010s-counties-total.html" target="_blank" rel="noopener">at this page</a>.</p>
+<p>Pandas' merge statement allows for the creation of an indicator variable, similar to the <code>in</code> keyword used in the SAS data step merge. That indicator will tell us if the particular row is present in both the left and the right tables (value <code>both</code>), or just in one of them (values <code>left_only</code> and <code>right_only</code>). We can then query on that indicator variable to subset:</p>
+<pre><code class="language-python">res1 = (pd.merge(A, B, how='outer', indicator=True)
+            .query('_merge==&quot;left_only&quot;')
+            .drop('_merge', axis=1))
+</code></pre>
+<h3 id="only-in-b">Only in B</h3>
+<p>Same idea, but reversed: $B-A$. The implementation is identical except that we are using a right join instead:</p>
+<pre><code class="language-sql">create table res2 as
+  select B.* from
+  A right join B
+  on A.MRN=B.MRN
+  where A.MRN is NULL;
+</code></pre>
+<p>Expected output:</p>
+<table>
+<thead>
+<tr>
+<th>MRN</th>
+<th>Weight</th>
+<th>Chol_Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>64836</td>
+<td>129</td>
+<td>High</td>
+</tr>
+<tr>
+<td>2466</td>
+<td>127</td>
+<td>Borderline</td>
+</tr>
+</tbody>
+</table>
+<p>It is interesting to note that SQLite, at least as of 3.37.2, still doesn&rsquo;t support right joins, so if you&rsquo;re using that you&rsquo;ll just want to use the left join method above but switch the <code>A</code> and <code>B</code> around. The data step implementation is also straight forward:</p>
+<pre><code class="language-sas">data res2;
+  merge A (IN = X) B (IN=Y);
+  by MRN;
+  If Y and not X;
+run;
+</code></pre>
+<p>as is the Pandas version:</p>
+<pre><code class="language-python">res2 = (pd.merge(A, B, how='outer', indicator=True)
+            .query('_merge==&quot;right_only&quot;')
+            .drop('_merge', axis=1))
+</code></pre>
+<h3 id="whats-in-common">What&rsquo;s in common?</h3>
+<p>Finally, you  might be curious to see which rows both data sets have in common, that is $A \cap B$. That&rsquo;s a simple inner join:</p>
+<pre><code class="language-sql">create table res3 as
+  select A.* from 
+  A inner join B
+  on A.MRN=B.MRN;
+</code></pre>
+<p>Expected output:</p>
+<table>
+<thead>
+<tr>
+<th>MRN</th>
+<th>Weight</th>
+<th>Chol_Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>79602</td>
+<td>139</td>
+<td>High</td>
+</tr>
+</tbody>
+</table>
+<p>In SAS:</p>
+<pre><code class="language-sas">data res3;
+  merge A (IN = X) B (IN=Y);
+  by MRN;
+  If X and Y;
+run;
+</code></pre>
+<p>and in Pandas:</p>
+<pre><code class="language-python">res3 = (pd.merge(A, B, how='outer', indicator=True)
+            .query('_merge==&quot;both&quot;')
+            .drop('_merge', axis=1))
+</code></pre>
+<p>And that&rsquo;s it. All that&rsquo;s left to do is to save the data in a format your customer or colleagues can work with and we&rsquo;re done.</p>
 
     </div>
 
@@ -749,11 +927,13 @@ run;
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/census/">census</a>
+  <a class="badge badge-light" href="/tag/merging/">merging</a>
   
-  <a class="badge badge-light" href="/tag/covid/">covid</a>
+  <a class="badge badge-light" href="/tag/pandas/">pandas</a>
   
   <a class="badge badge-light" href="/tag/sas/">sas</a>
+  
+  <a class="badge badge-light" href="/tag/sql/">sql</a>
   
 </div>
 
@@ -770,7 +950,7 @@ run;
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/21-06-covid-county-incidence/&amp;text=Census%202020%20Population%20Estimates%20Updated" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-09-basic-sql-joins/&amp;text=Some%20Basic%20SQL%20Joins" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -783,7 +963,7 @@ run;
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/21-06-covid-county-incidence/&amp;t=Census%202020%20Population%20Estimates%20Updated" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-09-basic-sql-joins/&amp;t=Some%20Basic%20SQL%20Joins" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -796,7 +976,7 @@ run;
       
       
       <li>
-        <a href="mailto:?subject=Census%202020%20Population%20Estimates%20Updated&amp;body=https://dmsenter89.github.io/post/21-06-covid-county-incidence/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Some%20Basic%20SQL%20Joins&amp;body=https://dmsenter89.github.io/post/23-09-basic-sql-joins/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -809,7 +989,7 @@ run;
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/21-06-covid-county-incidence/&amp;title=Census%202020%20Population%20Estimates%20Updated" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-09-basic-sql-joins/&amp;title=Some%20Basic%20SQL%20Joins" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -822,7 +1002,7 @@ run;
       
       
       <li>
-        <a href="whatsapp://send?text=Census%202020%20Population%20Estimates%20Updated%20https://dmsenter89.github.io/post/21-06-covid-county-incidence/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Some%20Basic%20SQL%20Joins%20https://dmsenter89.github.io/post/23-09-basic-sql-joins/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -835,7 +1015,7 @@ run;
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/21-06-covid-county-incidence/&amp;title=Census%202020%20Population%20Estimates%20Updated" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-09-basic-sql-joins/&amp;title=Some%20Basic%20SQL%20Joins" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -987,9 +1167,9 @@ run;
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/22-04-census-api-with-sas/">Working with the Census API Directly from SAS</a></li>
+      <li><a href="/post/22-04-sas-indsname-option/">The INDSNAME Option in SAS</a></li>
       
-      <li><a href="/post/23-09-basic-sql-joins/">Some Basic SQL Joins</a></li>
+      <li><a href="/post/20-11-north-carolina-housing/">North Carolina Housing Data</a></li>
       
       <li><a href="/post/23-08-univariate-mi/">Univariate Missing Data with PROC MI</a></li>
       
