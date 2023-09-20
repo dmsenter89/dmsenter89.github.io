@@ -754,55 +754,67 @@ By adding the following to your <code>.vimrc</code> you can automate this:</p>
 endif
 </code></pre>
 <h3 id="basic-usage-1">Basic Usage</h3>
-<p>The basic command used is <code>:cs find {querytype} {name}</code>, with the following main query types:</p>
+<p>The basic command used is <code>:cs find {querynum|querytype} {name}</code>, with the following main query types:</p>
 <table>
 <thead>
 <tr>
-<th>querytype</th>
+<th style="text-align:center">querynum</th>
+<th style="text-align:center">querytype</th>
 <th>Effect</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>s</code></td>
-<td>find this C symbol.</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><code>s</code></td>
+<td>Find this C symbol</td>
 </tr>
 <tr>
-<td><code>g</code></td>
-<td>find this definition.</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><code>g</code></td>
+<td>Find this definition</td>
 </tr>
 <tr>
-<td><code>d</code></td>
-<td>find functions called by this function.</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center"><code>d</code></td>
+<td>Find functions called by this function</td>
 </tr>
 <tr>
-<td><code>c</code></td>
-<td>find functions calling this function.</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center"><code>c</code></td>
+<td>Find functions calling this function</td>
 </tr>
 <tr>
-<td><code>t</code></td>
-<td>find this text string.</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center"><code>t</code></td>
+<td>Find this text string</td>
 </tr>
 <tr>
-<td><code>e</code></td>
-<td>find this egrep pattern.</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center"><code>e</code></td>
+<td>Find this egrep pattern</td>
 </tr>
 <tr>
-<td><code>f</code></td>
-<td>find this file.</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center"><code>f</code></td>
+<td>Find this file</td>
 </tr>
 <tr>
-<td><code>i</code></td>
-<td>find files #including this file.</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center"><code>i</code></td>
+<td>Find files #including this file</td>
 </tr>
 <tr>
-<td><code>a</code></td>
-<td>find places where this symbol is assigned a value.</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center"><code>a</code></td>
+<td>Find places where this symbol is assigned a value</td>
 </tr>
 </tbody>
 </table>
 <p>For details, see <code>:help cscope</code> in Vim. For some suggested options and keymappings that make
-using cscope more convenient, see <code>:help cscope-suggestions</code>.</p>
+using cscope more convenient, see <code>:help cscope-suggestions</code>. You can also use the <code>querynum</code>
+to perform a single search using the cscope cli interface, e.g.: <code>cscope -L{querynum} {name} [-d]</code>
+where <code>[-d]</code> suppresses updating the cscope database.</p>
 <h2 id="cflow">cflow</h2>
 <p>GNU 
 <a href="https://www.gnu.org/software/cflow/" target="_blank" rel="noopener">cflow</a> is a tool that creates charts showing control
@@ -1182,7 +1194,7 @@ function calls, e.g.:</p>
     
     
     
-    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+    <script src="/js/academic.min.4aaf2d64e50f8e54cf66dcc54147a22e.js"></script>
 
     
 
