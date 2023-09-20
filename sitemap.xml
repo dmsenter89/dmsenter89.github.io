@@ -2,16 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dmsenter89.github.io/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/post/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/tag/reproducibility/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/post/23-09-reproducibility-by-sharing-code/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://dmsenter89.github.io/tags/</loc>
+    <lastmod>2023-09-12T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://dmsenter89.github.io/tag/merging/</loc>
     <lastmod>2023-09-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://dmsenter89.github.io/</loc>
-    <lastmod>2023-09-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://dmsenter89.github.io/tag/pandas/</loc>
-    <lastmod>2023-09-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dmsenter89.github.io/post/</loc>
     <lastmod>2023-09-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dmsenter89.github.io/tag/sas/</loc>
@@ -21,9 +30,6 @@
     <lastmod>2023-09-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dmsenter89.github.io/tag/sql/</loc>
-    <lastmod>2023-09-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dmsenter89.github.io/tags/</loc>
     <lastmod>2023-09-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dmsenter89.github.io/tag/bayesian/</loc>
@@ -213,9 +219,6 @@
     <lastmod>2022-11-14T22:34:25-05:00</lastmod>
   </url><url>
     <loc>https://dmsenter89.github.io/tag/knitr/</loc>
-    <lastmod>2022-11-11T15:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dmsenter89.github.io/tag/reproducibility/</loc>
     <lastmod>2022-11-11T15:00:00+00:00</lastmod>
   </url><url>
     <loc>https://dmsenter89.github.io/tag/rstudio/</loc>

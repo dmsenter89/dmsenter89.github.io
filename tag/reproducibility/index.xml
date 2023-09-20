@@ -5,12 +5,88 @@
     <link>https://dmsenter89.github.io/tag/reproducibility/</link>
       <atom:link href="https://dmsenter89.github.io/tag/reproducibility/index.xml" rel="self" type="application/rss+xml" />
     <description>reproducibility</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 11 Nov 2022 15:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 12 Sep 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>reproducibility</title>
       <link>https://dmsenter89.github.io/tag/reproducibility/</link>
     </image>
+    
+    <item>
+      <title>Reproducibility by Sharing Code</title>
+      <link>https://dmsenter89.github.io/post/23-09-reproducibility-by-sharing-code/</link>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-09-reproducibility-by-sharing-code/</guid>
+      <description>&lt;p&gt;Whenever I speak with students, I emphasize the need to share as much code and
+data as is feasible to enable reproduciblity. The fact that a large amount of
+research is not reproducible is a big issue that has gotten a lot of traction in
+the past two decades since Ioannidis published his influental paper. Given these
+issues, it is important to try to minimize other sources of variation in the
+process that could lead to reproducibility problems, such as choices in how to
+conduct statistical tests or how data is prepared. The many variations of the
+basic research problem is something Gelman has termed the
+
+&lt;a href=&#34;http://www.stat.columbia.edu/~gelman/research/unpublished/forking.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;garden of forking paths&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This week I came across a paper by Ostropolets et al (2023) that really
+exemplifies this. The short version is this: ask 54 researchers across 9 teams
+to reproduce the cohort used in awell-documented paper in their field from the
+same source data set and compare the outcomes to both the original paper and a
+“master implementation” that was recreated with one of the original authors of
+the reference paper. All researchers had access to the same tools and data set.&lt;/p&gt;
+&lt;p&gt;The result? Substantial variations in the final data set that was selected. Only
+four out of ten inclusion criteria fully aligned with the reference
+implementation. Note that this is just a cohort selection problem; they did not
+attempt to reproduce other steps from the paper.&lt;/p&gt;
+&lt;p&gt;This goes to show how important it is to share source code in order to achieve
+reproduciblity. If cohort selection had been done programmatically and the
+source code shared, we would have greater assurances that future teams trying to
+work with this data would be able to reproduce these findings and build on them.
+As the paper puts it:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In this regard, if we truly aspire to reproducible science, we should not hope
+that good documentation is sufficient and tolerate optional sharing of code,
+but rather make code sharing a hard requirement that can be complemented by
+free text descriptions.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;See citation below for the paper&amp;rsquo;s DOI. Gelman shared a PDF of this paper
+on
+
+&lt;a href=&#34;https://statmodeling.stat.columbia.edu/2023/09/06/forking-paths-in-medical-research-a-study-with-9-research-teams/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;his blog&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;In a similar vein, he 
+&lt;a href=&#34;https://statmodeling.stat.columbia.edu/2023/09/10/the-authors-of-research-papers-have-no-obligation-to-share-their-data-and-code-and-i-have-no-obligation-to-believe-anything-they-write/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;shared&lt;/a&gt;
+a paper by Menkveld et al. (2022) in which several teams attempt to reproduce
+hypothesis tests based on the same data set, again leading to substantial
+variations.&lt;/p&gt;
+&lt;p&gt;A solution to this issue is regular sharing of both data and code, as much as is
+feasible. In medical research in particular there are questions of
+confidentiality that we need to be concerned with, but this shouldn’t stop us
+from making de-identified data available either via a supplement or having them
+saved and ready should a third-party request them. This of course requires some
+coordination amongst the study authors. Too often I have seen researchers not be
+organized enough to be able to recover the original data set or steps in
+creating an analysis they themselves did when this was needed some years after
+the original study. My advice for this is to keep all information to a
+particular paper in one folder as you work on it, preferably together with the
+paper draft themselves so it will be obvious to future-you what paper those source
+files go with. When the study is done, just archive that folder and keep a cold
+copy on an external drive as well as on a storage server. This is often provided
+by the university free of charge. If multiple studies use the same data set,
+you&amp;rsquo;ll end up with multiple copies of that data using this method, but in my
+opinion that&amp;rsquo;s not a problem - storage is cheap these days, particularly cold
+storage. And if there are concerns about data privacy with your university&amp;rsquo;s
+storage, you can always encrpyt the archive prior to uploaded. GPG is your
+friend here.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;Ioannidis, J. P. A. (2005), &amp;ldquo;Why Most Published Research Findings Are False,&amp;rdquo;
+&lt;em&gt;PLOS Medicine&lt;/em&gt;, 2(8):e123, DOI: 
+&lt;a href=&#34;https://doi.org/10.1371/journal.pmed.0020124&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1371/journal.pmed.0020124&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Menkveld, A. J. et al (2022), &amp;ldquo;Non-standard errors&amp;rdquo;, available online at 
+&lt;a href=&#34;https://wrap.warwick.ac.uk/176566/1/WRAP-non-standard-errors-Kozhan-2023.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://wrap.warwick.ac.uk/176566/1/WRAP-non-standard-errors-Kozhan-2023.pd&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Ostropolets, A. et al. (2023), &amp;ldquo;Reproducible variability: assessing investigator discordance across 9 research teams attempting to reproduce the same observational study,&amp;rdquo; &lt;em&gt;Journal of the American Medical Informatics Association&lt;/em&gt;, Oxford University Press (OUP), 30, 859–868. DOI:
+
+&lt;a href=&#34;https://doi.org/10.1093/jamia/ocad009&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;10.1093/jamia/ocad009&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>SAS Markdown for Reproducibility</title>
