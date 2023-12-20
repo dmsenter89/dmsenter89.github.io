@@ -5,12 +5,27 @@
     <link>https://dmsenter89.github.io/tag/linux/</link>
       <atom:link href="https://dmsenter89.github.io/tag/linux/index.xml" rel="self" type="application/rss+xml" />
     <description>linux</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 06 Jan 2023 19:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 18 Dec 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>linux</title>
       <link>https://dmsenter89.github.io/tag/linux/</link>
     </image>
+    
+    <item>
+      <title>Automatic Suspend in Fedora 38</title>
+      <link>https://dmsenter89.github.io/post/23-12-automatic-suspend-in-fedora-38/</link>
+      <pubDate>Mon, 18 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-12-automatic-suspend-in-fedora-38/</guid>
+      <description>&lt;p&gt;For a while now I&amp;rsquo;ve recycled an old iMac running Fedora Workstation as a simple homeserver. It&amp;rsquo;s been working well in the past, but just now with the EOL of Fedora 37 did I get around to updating from Fedora 36 to Fedora 38.&lt;/p&gt;
+&lt;p&gt;Unfortuantely for my use case, there is an unannounced change in Gnome&amp;rsquo;s powersettings when moving to Fedora 38 from 37. See the 
+&lt;a href=&#34;https://discussion.fedoraproject.org/t/gnome-suspends-after-15-minutes-of-user-inactivity-even-on-ac-power/79801&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;fedora forum&lt;/a&gt; for a description of the issue and a suggested fix. Unforunately, for me at least, the suggested fix doesn&amp;rsquo;t work and my system would still suspend, even with it disabled via the suggested commands. I had to use gsettings directly from my user account in addition to the the linked fix to get it to work and persist.&lt;/p&gt;
+&lt;p&gt;Only a couple of weeks after getting this fixed, that workstation suffered a hard drive failure that caused it to become unbootable. I have sinced scrapped that workstation and bought a 
+&lt;a href=&#34;https://www.bee-link.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Beelink&lt;/a&gt; mini-pc for about $200. I&amp;rsquo;m running Arch Linux on it.&lt;/p&gt;
+&lt;p&gt;I had previously used Arch extensively as my daily driver and for various other machines, and never had problems with. My recent Fedora experience really drove me back to committing to Arch. Does Arch take longer to install and set up than Fedora? Sure. But it&amp;rsquo;s well documented and you actually understand the system you have and what packages are on it. It&amp;rsquo;s actually a transparent system, unlike the convenience-packaged distros with all their preinstalled stuff. You see so many people online worried about Arch not being &amp;ldquo;stable,&amp;rdquo; but in over ten years with different desktops and laptops running on Arch I haven&amp;rsquo;t had any major issues. Truth be told, I&amp;rsquo;ve had fewer issues with Arch than in the past five years with Ubuntu and Fedora systems.&lt;/p&gt;
+&lt;p&gt;A particular example of something nice about Arch Linux: I have a ten year old workstation running on Arch that hadn&amp;rsquo;t booted in 4 years. The only difficulty in getting it up and running again was updating the archlinux-keyring for pacman. That didn&amp;rsquo;t take long and was well-documented. Since then, it&amp;rsquo;s humming along great with more up-to-date software than recent Ubuntu releases. Updating Fedora from 36 to 38 on the other hand was much more of a hassle. I had multiple reboots, hunting for what default packages changed, what changed without being documented, etc. My older Arch system got up and running in no time after scanning through the Arch Linux news for any required manual interventions that popped up in the past few years. Arch for the win.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Setting up a Virtual Lab Computer</title>
