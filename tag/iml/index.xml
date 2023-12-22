@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iml | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/iml/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/iml/index.xml" rel="self" type="application/rss+xml" />
+    <description>iml</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 22 Dec 2023 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>iml</title>
+      <link>https://dmsenter89.github.io/tag/iml/</link>
+    </image>
+    
+    <item>
+      <title>Calling R From SAS</title>
+      <link>https://dmsenter89.github.io/post/23-12-calling-r-from-sas/</link>
+      <pubDate>Fri, 22 Dec 2023 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/23-12-calling-r-from-sas/</guid>
+      <description>&lt;p&gt;The statistics literature is filled with example code and sample data in R. Sometimes I
+find myself wanting to work through some provided sample data and compare the output from
+R with SAS code. In this post, I&amp;rsquo;ll show how to connect R and SAS so that you can load and
+execute R code straight from within SAS.&lt;/p&gt;
+&lt;h2 id=&#34;setup&#34;&gt;Setup&lt;/h2&gt;
+&lt;p&gt;In order to use this feature, you will want to have both R and SAS/IML installed on the
+same computer. Make sure both SAS and R are in your path. In order to call R code from
+SAS, you will need to start SAS with the &lt;code&gt;rlang&lt;/code&gt; option. You can call SAS from the command
+line with the &lt;code&gt;-rlang&lt;/code&gt; option or you can add the option in your &amp;ldquo;sasv9.cfg&amp;rdquo; file.&lt;/p&gt;
+&lt;p&gt;Once SAS is started, you can verify that the setup worked by running&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc options option=rlang;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The log will list &lt;code&gt;RLANG&lt;/code&gt; if the option was specified. If you forgot to add the option
+prior to startup, you&amp;rsquo;ll see &lt;code&gt;NORLANG&lt;/code&gt; in the log instead.&lt;/p&gt;
+&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;
+&lt;p&gt;R code can be called from within IML via a submit statement. The basic structure
+is this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;proc iml;
+  submit / R;
+    /* R code her */
+  endsubmit;
+quit;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With this we can run R code from within SAS. But the real power comes from our
+ability to move data between R and SAS. The following functions are available:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ExportDatasetToR(&amp;quot;libname.dsname&amp;quot;, RDataFrame);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ExportMatrixToR(IMLMatrix, RMatrix);&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ImportDataSetFromR(r-expr, &amp;quot;libname.dsname&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ImportMatrixFromR(r-expr, IMLMatrix)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Parameters can be passed to R as well, similar to how parameters can be passed
+from IML to SAS PROCs.&lt;/p&gt;
+&lt;p&gt;For more details, see the SAS/IML manual.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="One of the coolest packages for R is knitr. Essentially, it allows you to combine explanatory writing, such as a paper or blog post, directly with your analysis code in a Markdown document.">
+  <meta name="description" content="The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/">
-  <meta property="og:title" content="SAS Markdown for Reproducibility | Michael&#39;s Site">
-  <meta property="og:description" content="One of the coolest packages for R is knitr. Essentially, it allows you to combine explanatory writing, such as a paper or blog post, directly with your analysis code in a Markdown document."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
+  <meta property="og:title" content="Calling R From SAS | Michael&#39;s Site">
+  <meta property="og:description" content="The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2022-11-11T15:00:00&#43;00:00">
+      <meta property="article:published_time" content="2023-12-22T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2022-11-11T15:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2023-12-22T00:00:00&#43;00:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/"
+    "@id": "https://dmsenter89.github.io/post/23-12-calling-r-from-sas/"
   },
-  "headline": "SAS Markdown for Reproducibility",
+  "headline": "Calling R From SAS",
   
-  "datePublished": "2022-11-11T15:00:00Z",
-  "dateModified": "2022-11-11T15:00:00Z",
+  "datePublished": "2023-12-22T00:00:00Z",
+  "dateModified": "2023-12-22T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "One of the coolest packages for R is knitr. Essentially, it allows you to combine explanatory writing, such as a paper or blog post, directly with your analysis code in a Markdown document."
+  "description": "The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>SAS Markdown for Reproducibility | Michael&#39;s Site</title>
+  <title>Calling R From SAS | Michael&#39;s Site</title>
 
 </head>
 
@@ -597,7 +597,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>SAS Markdown for Reproducibility</h1>
+  <h1>Calling R From SAS</h1>
 
   
 
@@ -616,7 +616,7 @@
     
       
     
-    Nov 11, 2022
+    Dec 22, 2023
   </span>
   
 
@@ -625,7 +625,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    5 min read
+    2 min read
   </span>
   
 
@@ -661,98 +661,41 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>One of the coolest packages for R is 
-<a href="https://yihui.org/knitr/" target="_blank" rel="noopener">knitr</a>. Essentially, it allows you to combine explanatory writing, such as a paper or blog post, directly with your analysis code in a Markdown document. When the target document
-is compiled (&lsquo;knitted&rsquo;), the R code in the document is run and the results inserted into the final document. The target document could
-be an HTML or a PDF file, for example. This is great for many reasons. You have a regular report you want to run, but the data updates?
-Just re-knit and your entire report is updated. No more separate running of the code followed by copying the results into whatever
-software you use to build the report itself. This makes it not just less cumbersome, but less error prone. It also improves reproducibility.
-Somebody wants to see your work, perhaps because they are unsure of your results or they want to extend your work? You can share the
-markdown file and the other party can see exactly what code was used to generate what part of your report or paper.</p>
-<p>While knitr is certainly not the first package that allows for this workflow, and also not the only one, I have found it to be the most consistent and easy to use.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> Luckily, knitr supports 
-<a href="https://yihui.org/knitr/demo/engines/" target="_blank" rel="noopener">a variety</a> of 
-<a href="https://bookdown.org/yihui/rmarkdown/language-engines.html" target="_blank" rel="noopener">languages</a>, including 
-<a href="https://bookdown.org/yihui/rmarkdown-cookbook/eng-sas.html" target="_blank" rel="noopener">SAS</a>. And you can even mix and match multiple languages in 
-<a href="https://github.com/yihui/knitr-examples/blob/master/106-polyglot.Rmd" target="_blank" rel="noopener">one document</a>.<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
-<p>You might think that this sounds similar to Jupyter notebooks. While that is true, and there is a 
-<a href="https://github.com/sassoftware/sas_kernel" target="_blank" rel="noopener">Jupyter kernel for SAS</a> as well, knitr has some advantages over Jupyter for report-generation. Without additional tools, you have the option to execute but not display the code that generates your results, making a cleaner report. You can also elect to only show part of the code, with manual setup code running behind the scenes without being printed to the report itself. Additionally, the entire document is executed linearly. That means that if you update a code chunk towards the beginning of your document, it affects the code chunks following it, while in Jupyter you easily get in the habit of executing the chunks independently which can lead to inconsistencies if you don&rsquo;t pay attention to the cell numbers.<sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
-<p>In this post, I&rsquo;ll demonstrate the basics of setting up a reproducible report using the SAS engine in knitr.</p>
-<h2 id="install">Install</h2>
-<p>Perhaps the easiest way to get started for beginners is to use RStudio and Anaconda. With that you can create a sample R Markdown document (<code>File -&gt; New File -&gt; R Markdown</code>). Press the <code>knit</code> button. If any packages required by knitr are missing, RStudio will install them for you. This way you can be sure that all the R parts are set up correctly. Additionally, I recommend installing the 
-<a href="https://github.com/Hemken/SASmarkdown" target="_blank" rel="noopener">SASmarkdown</a> package with</p>
-<pre><code class="language-r"># from CRAN:
-install.packages(&quot;SASmarkdown&quot;)
-# from GitHub: 
-devtools::install_github(&quot;Hemken/SASmarkdown&quot;)
-</code></pre>
-<p>Once install is complete, load the package (<code>library(SASmarkdown)</code>) and check the output. If you see a message that SAS was found, you are good to go. If not, you will either need to add SAS to your PATH or simply provide the path to SAS as an option in your document (see below).</p>
-<h2 id="a-basic-markdown-file">A Basic Markdown File</h2>
-<p>The important thing is to load the SASMarkdown package in your document. I recommend making a setup chunk at the very top of your document and setting include to FALSE.
-That way the setup chunk is executed, but not printed to your final document.</p>
-<pre><code>```{r setup, include=FALSE}
-library(SASmarkdown)
-# if SAS is not in your path, define it manually:
-saspath &lt;- &quot;C:/Program Files/SASHome/SASFoundation/9.4/sas.exe&quot;
-knitr::opts_chunk$set(engine=&quot;sashtml&quot;, engine.path=saspath)
-```
-</code></pre>
-<p>With that, we&rsquo;re ready to run a basic SAS chunk using just the SAS option. This produces the typewriter-style output that is familiar from Enterprise Guide for example:</p>
-<pre><code class="language-sas">```{sas example1}
-proc print data=sashelp.class; run;
-```
-</code></pre>
-<p>If we want to take advantage of the modern HTML output that is standard in SAS Studio, we use the <code>sashtml</code> engine instead:</p>
-<pre><code class="language-sas">```{sashtml example2}
-/* if you want, you can set an ODS style for HTML output: */
-ods html style=journal;
-proc print data=sashelp.class; run;
-```
-</code></pre>
-<p>If you want graphical output, for example from SGPLOT, you&rsquo;ll need to use the <code>sashtml</code> engine. To get the default blue look from SAS Studio, use the HTMLBLUE style:</p>
-<pre><code class="language-sas">```{sashtml example3}
-ods html style=HTMLBLUE;
-proc sgplot data=sashelp.cars;
-  scatter x=EngineSize y=MPG_CITY;
+      <p>The statistics literature is filled with example code and sample data in R. Sometimes I
+find myself wanting to work through some provided sample data and compare the output from
+R with SAS code. In this post, I&rsquo;ll show how to connect R and SAS so that you can load and
+execute R code straight from within SAS.</p>
+<h2 id="setup">Setup</h2>
+<p>In order to use this feature, you will want to have both R and SAS/IML installed on the
+same computer. Make sure both SAS and R are in your path. In order to call R code from
+SAS, you will need to start SAS with the <code>rlang</code> option. You can call SAS from the command
+line with the <code>-rlang</code> option or you can add the option in your &ldquo;sasv9.cfg&rdquo; file.</p>
+<p>Once SAS is started, you can verify that the setup worked by running</p>
+<pre><code class="language-sas">proc options option=rlang;
 run;
-```
 </code></pre>
-<h2 id="some-additional-comments">Some Additional Comments</h2>
-<p>The first thing that is important to note is that each chunk is processed <em>separately</em>. That means each chunk should be written so as to be capable of being executed independent of the others. It is possible to get around this using the <code>collectcode=TRUE</code> chunk option. This chunk will then subsequently be executed prior to the code from a following chunk. So for example:</p>
-<pre><code class="language-sas">```{sashtml save1, collectcode=TRUE}
-data sample;
-  set sashelp.class;
-run;
-```
-  And now use it again:
-```{sashtml save2}
-proc means data=sample; run;
-```
+<p>The log will list <code>RLANG</code> if the option was specified. If you forgot to add the option
+prior to startup, you&rsquo;ll see <code>NORLANG</code> in the log instead.</p>
+<h2 id="usage">Usage</h2>
+<p>R code can be called from within IML via a submit statement. The basic structure
+is this:</p>
+<pre><code class="language-sas">proc iml;
+  submit / R;
+    /* R code her */
+  endsubmit;
+quit;
 </code></pre>
-<p>This is particularly useful for libnames and setting the preferred ODS style, so you don&rsquo;t have to keep doing it again in each cell.</p>
-<p>The other thing to note is that knitr for SAS works best with HTML output. It can use SAS styles and produce output looking like what
-you would expect running in SAS Studio. If you want PDF output, you can get nicer output using 
-<a href="https://support.sas.com/rnd/base/ods/odsmarkup/latex.html" target="_blank" rel="noopener">LaTeX Tagsets for ODS</a> and the 
-<a href="https://support.sas.com/rnd/app/papers/statrep.html" target="_blank" rel="noopener">StatRep System</a>.</p>
-<section class="footnotes" role="doc-endnotes">
-<hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p>knitr itself was based on Sweave, but uses Markdown instead of LaTeX code. Other languages have similar packages, for
-example 
-<a href="https://mpastell.com/pweave/" target="_blank" rel="noopener">pweave</a> for Python or 
-<a href="https://docs.juliahub.com/Weave/9EzOc/0.9.4/" target="_blank" rel="noopener">Weave</a> for Julia. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:2" role="doc-endnote">
-<p>The chunks from different languages do not have access to each other&rsquo;s data. To move data between the different engines,
-more setup work is needed. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-<li id="fn:3" role="doc-endnote">
-<p>If you code in Julia, there is an interesting new reactive notebook called 
-<a href="https://github.com/fonsp/Pluto.jl" target="_blank" rel="noopener">Pluto</a> that
-promises to always keep your cells in sync, while being geared towards a Jupyter-style workflow. <a href="#fnref:3" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+<p>With this we can run R code from within SAS. But the real power comes from our
+ability to move data between R and SAS. The following functions are available:</p>
+<ul>
+<li><code>ExportDatasetToR(&quot;libname.dsname&quot;, RDataFrame);</code></li>
+<li><code>ExportMatrixToR(IMLMatrix, RMatrix);</code></li>
+<li><code>ImportDataSetFromR(r-expr, &quot;libname.dsname&quot;)</code></li>
+<li><code>ImportMatrixFromR(r-expr, IMLMatrix)</code></li>
+</ul>
+<p>Parameters can be passed to R as well, similar to how parameters can be passed
+from IML to SAS PROCs.</p>
+<p>For more details, see the SAS/IML manual.</p>
 
     </div>
 
@@ -765,13 +708,9 @@ promises to always keep your cells in sync, while being geared towards a Jupyter
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/knitr/">knitr</a>
+  <a class="badge badge-light" href="/tag/iml/">iml</a>
   
-  <a class="badge badge-light" href="/tag/reproducibility/">reproducibility</a>
-  
-  <a class="badge badge-light" href="/tag/rstudio/">rstudio</a>
-  
-  <a class="badge badge-light" href="/tag/sasmarkdown/">sasmarkdown</a>
+  <a class="badge badge-light" href="/tag/r/">r</a>
   
   <a class="badge badge-light" href="/tag/sas/">sas</a>
   
@@ -790,7 +729,7 @@ promises to always keep your cells in sync, while being geared towards a Jupyter
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/&amp;text=SAS%20Markdown%20for%20Reproducibility" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;text=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -803,7 +742,7 @@ promises to always keep your cells in sync, while being geared towards a Jupyter
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/&amp;t=SAS%20Markdown%20for%20Reproducibility" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;t=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -816,7 +755,7 @@ promises to always keep your cells in sync, while being geared towards a Jupyter
       
       
       <li>
-        <a href="mailto:?subject=SAS%20Markdown%20for%20Reproducibility&amp;body=https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=Calling%20R%20From%20SAS&amp;body=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -829,7 +768,7 @@ promises to always keep your cells in sync, while being geared towards a Jupyter
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/&amp;title=SAS%20Markdown%20for%20Reproducibility" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;title=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -842,7 +781,7 @@ promises to always keep your cells in sync, while being geared towards a Jupyter
       
       
       <li>
-        <a href="whatsapp://send?text=SAS%20Markdown%20for%20Reproducibility%20https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=Calling%20R%20From%20SAS%20https://dmsenter89.github.io/post/23-12-calling-r-from-sas/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -855,7 +794,7 @@ promises to always keep your cells in sync, while being geared towards a Jupyter
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/22-11-sas-markdown-for-reproducibility/&amp;title=SAS%20Markdown%20for%20Reproducibility" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;title=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1007,15 +946,15 @@ promises to always keep your cells in sync, while being geared towards a Jupyter
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/23-12-calling-r-from-sas/">Calling R From SAS</a></li>
+      <li><a href="/post/23-08-univariate-mi/">Univariate Missing Data with PROC MI</a></li>
       
       <li><a href="/post/23-09-basic-sql-joins/">Some Basic SQL Joins</a></li>
-      
-      <li><a href="/post/23-08-univariate-mi/">Univariate Missing Data with PROC MI</a></li>
       
       <li><a href="/post/23-05-sample-regression-lines/">Sampling Regression Lines</a></li>
       
       <li><a href="/post/23-05-simple-regression-with-proc-mcmc/">Simple Regression With PROC MCMC</a></li>
+      
+      <li><a href="/post/23-04-loading-several-xpt-files-from-a-url/">Loading Several XPT Files From a URL</a></li>
       
     </ul>
   </div>
