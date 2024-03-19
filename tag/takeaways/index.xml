@@ -5,12 +5,79 @@
     <link>https://dmsenter89.github.io/tag/takeaways/</link>
       <atom:link href="https://dmsenter89.github.io/tag/takeaways/index.xml" rel="self" type="application/rss+xml" />
     <description>takeaways</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 13 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 19 Mar 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>takeaways</title>
       <link>https://dmsenter89.github.io/tag/takeaways/</link>
     </image>
+    
+    <item>
+      <title>Takeaways from &#39;On the uses and abuses of regression models&#39;</title>
+      <link>https://dmsenter89.github.io/post/24/03-takeaways-uses-and-abuses-of-regression/</link>
+      <pubDate>Tue, 19 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/03-takeaways-uses-and-abuses-of-regression/</guid>
+      <description>&lt;p&gt;This weekend I found an interesting new preprint by Carlin and Moreno-Betancur
+on arxiv titled 
+&lt;a href=&#34;https://arxiv.org/abs/2309.06668&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;On the Uses and Abuses of Regression
+Models&amp;rdquo;&lt;/a&gt; so I had to check it out.&lt;/p&gt;
+&lt;p&gt;The article focuses on medical literature, where regressions &amp;ndash; even in my
+experience &amp;ndash; often seem done almost automatically and then interpreted
+depending on the the &lt;em&gt;desired&lt;/em&gt; question as opposed to with respect to model
+construction. 
+&lt;a href=&#34;https://doi.org/10.1080/07388940500339167&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Garbage can&amp;rdquo;
+regressions&lt;/a&gt; to find &amp;ldquo;important risk
+factors&amp;rdquo; abound, as do repeat fittings  of simple models in an attempt to
+describe a joint distribution. One of my favorite examples to show in class of
+the issues with the latter is a 2008 paper by 
+&lt;a href=&#34;https://doi.org/10.1038/oby.2008.351&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Wang et al.&lt;/a&gt; that to date has been cited more than
+1,000 times. The topic of the paper is an analysis of NHANES data with the aim
+of predicting the prevalence of obesity in the US. They desire to describe how
+different subgroups of Americans, that is the different genders and ethnicities,
+fare. Instead of fitting a joint model, they fit multiple linear models. This
+leads to fun results in their Table 2, where &lt;em&gt;all&lt;/em&gt; Americans of &lt;em&gt;all&lt;/em&gt; races and
+ethnicities will be obese by 2048, yet &lt;em&gt;all men&lt;/em&gt; won&amp;rsquo;t be obese until 2051.
+Mexican-American men fare the best, as they escape being part of &lt;em&gt;all Americans&lt;/em&gt;
+somehow and won&amp;rsquo;t reach 100% prevalence until 2126.&lt;/p&gt;
+&lt;p&gt;Carlin and Moreno-Betancur describe these and other issues they encountered in
+the literature. One I find notable is what they call the &amp;ldquo;true model myth.&amp;rdquo;
+Essentially, the idea that that the &amp;ldquo;best&amp;rdquo; fitted model represents the data
+generating process, ergo the coefficients are easily interpreted in a causal
+manner so we can derive practice recommendations from these models without much
+discussion. That is of course not accurate.&lt;/p&gt;
+&lt;p&gt;Overall, Carlin proposes a simple classification scheme for the different
+purposes of a regression analysis:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&amp;ldquo;descriptive:&amp;rdquo; characterise the distribution of a feature or health outcome
+in a population,&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;predictive:&amp;rdquo; produce a model or algorithm for predicting future values given
+certain predictors,&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;causal:&amp;rdquo; investigate the extent to which a health outcome in some population
+would be different if a particular intervention were made.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Since they understand the problem with the misuse and misinterpration of
+regression to (at least partially) be due to a certain vagueness with respect to
+the purpose for which the regression is fit, they propose a teaching framework
+centered around these types of research questions. This is in opposition of the
+more &amp;ldquo;traditional&amp;rdquo; focues on the &amp;ldquo;maths&amp;rdquo; of the problem. In other words, focus
+more on using standard tools to answer specific questions, than learning how to
+do simple problems &amp;ldquo;by hand&amp;rdquo; and then hoping that eventually people will figure
+out the hard parts of applying the theory to real life on their own.&lt;/p&gt;
+&lt;p&gt;Overall, I think the paper is a worthwhile read. It reminds me of two other
+books I like that take a model-centric approach to teaching regression methos &amp;ndash;
+McElreath&amp;rsquo;s 
+&lt;a href=&#34;https://www.routledge.com/Statistical-Rethinking-A-Bayesian-Course-with-Examples-in-R-and-STAN/McElreath/p/book/9780367139919&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Statistical
+Rethinking&amp;rdquo;&lt;/a&gt;
+and 
+&lt;a href=&#34;https://avehtari.github.io/ROS-Examples/index.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;ldquo;Regression and Other
+Stories&amp;rdquo;&lt;/a&gt; by Gelman, Hill,
+and Vehtari. Gelman also posted about this preprint on 
+&lt;a href=&#34;https://statmodeling.stat.columbia.edu/2024/03/17/on-the-uses-and-abuses-of-regression-models-a-call-for-reform-of-statistical-practice-and-teaching-wed-appreciate-your-comments/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;his
+blog&lt;/a&gt;.
+Check out the discussion section there for other good insights and some
+additional reading material on this topic.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Takeaways from &#39;Deep Work&#39;</title>
