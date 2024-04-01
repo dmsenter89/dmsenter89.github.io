@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ebm | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/ebm/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/ebm/index.xml" rel="self" type="application/rss+xml" />
+    <description>ebm</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>ebm</title>
+      <link>https://dmsenter89.github.io/tag/ebm/</link>
+    </image>
+    
+    <item>
+      <title>Observations on Obstetrics and EBM</title>
+      <link>https://dmsenter89.github.io/post/24/04-obs-on-obstetrics-and-ebm/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/04-obs-on-obstetrics-and-ebm/</guid>
+      <description>&lt;p&gt;We live in the age of evidence-based medicine and an increasing willingness on the part of patients to review medical guidance and actively participate in their care. This includes such personal and emotional areas like pregnancy and birth. Some popular tools to help would-be parents  include Emily Oster&amp;rsquo;s famous &amp;ldquo;Expecting Better&amp;rdquo; and 
+&lt;a href=&#34;https://evidencebasedbirth.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;evidencebasedbirth.com&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve had our fourth child this year and each time we go through prenatal appointments, birth, and post-partum care I encounter some differences between recommendations I&amp;rsquo;ve found in the literature and what providers say or do. It sticks out to me more than other branches of medicine I&amp;rsquo;ve encountered, but that might just be a difference in amount of experience I&amp;rsquo;ve had versus willingness to go on Google Scholar for lit review due to personal nature of the topic. Either way, in this post I wanted to share some notes on two particular issues that I&amp;rsquo;ve encountered and what I&amp;rsquo;ve seen in the literature on those topics. Obviously I&amp;rsquo;m not a medical provider and this is not medical advice, just a literature review by a curious statistician.&lt;/p&gt;
+&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#low-amniotic-fluid-volume-afv&#34;&gt;Low Amniotic Fluid Volume (AFV)&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#measurement-techniques&#34;&gt;Measurement Techniques&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#management&#34;&gt;Management&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#continuous-efm&#34;&gt;Continuous EFM&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#concluding-thoughts&#34;&gt;Concluding Thoughts&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#references&#34;&gt;References&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+
+&lt;h2 id=&#34;low-amniotic-fluid-volume-afv&#34;&gt;Low Amniotic Fluid Volume (AFV)&lt;/h2&gt;
+&lt;p&gt;When your little baby is &lt;em&gt;in utero&lt;/em&gt; it is surrounded by 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Amniotic_fluid&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;amniotic fluid&lt;/a&gt;. A sufficient amount of amniotic fluid is important for the baby, as it provides a cushion and allows for nutrient and oxygen flow through the umbilical cord. When amniotic fluid levels are low, baby&amp;rsquo;s ability to receive nutrients and oxygen can be hindered. This is called oligohydramnios in the literature.&lt;/p&gt;
+&lt;p&gt;It is important to know that we can divide cases of low amniotic fluid volume (AFV) into two broad categories:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the idiopathic, that is cases where no explanation for the low fluid level is known. it happens &amp;ldquo;on its own;&amp;rdquo; this is also called isolated oligohydramnios. This is the most common.&lt;/li&gt;
+&lt;li&gt;low AFV as a side effect of another pregnancy complication. This can be further divided into maternal causes, i.e. a complication arising in the mother, the fetus, or having a placental cause.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;See the 
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/books/NBK562326/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;StatPearls&lt;/a&gt; article for relevant citations on these categories. This post focuses on idiopathic oligohydramnios, or isolated oligohydramnios (IO).&lt;/p&gt;
+&lt;h3 id=&#34;measurement-techniques&#34;&gt;Measurement Techniques&lt;/h3&gt;
+&lt;p&gt;How is IO diagnosed? Accurately measuring AFV is difficult. The most accurate technique is invasive and involves injecting a dye into the amniotic cavity and sampling of the amniotic fluid to determine a dilution curve. This technique is accurate but impractical, so most AFV assessments during pregnancy are done via ultrasound measurements. Two major techniques have been developed: the amniotic fluid index (AFI) and the maximum vertical pocket (MVP) technique, sometimes called single deepest pocket (SDP).&lt;/p&gt;
+&lt;p&gt;For MVP, a sonogropher identifies the deepest pocket of amniotic fluid not including the umbilical cord or body parts and measures the length from the 12 o&amp;rsquo;clock to the 6 o&amp;rsquo;clock position. The normal range is 2-8 cm, with $&amp;lt;2$ cm diagnosed as oligohydramnios and $&amp;gt;8$ cm as polyhydramnios. For the AFI method, the uterus is divided into 4 quadrants and the MVP is obtained in each quadrant. A sum of less than 5 cm is diagnosed as oligohydramnios 
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/books/NBK562326/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(Keilman and Shanks 2022)&lt;/a&gt;. There is a long debate on which method is better, but a Cochrane review of five trials suggested providers use MVP as opposed to AFI due to an increased number labor inductions and Ceasarean deliveries among women screened using AFI, with no concomitant improvement in perinatal outcomes 
+&lt;a href=&#34;https://doi.org/10.1002/14651858.CD006593.pub2&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(Nabhan and Abdelmoula 2008)&lt;/a&gt;. As of 2014, ACOG followed suit and recommends the MVP method (Landon et al. 2018). But a decade later many providers continue to rely on the AFI. That was my experience with our providers at Wake Forest in Winston-Salem, for example.&lt;/p&gt;
+&lt;p&gt;Unfortunately, both MVP and AFI are known to be poor predictors of actual AFV. One paper by 
+&lt;a href=&#34;https://doi.org/10.1002/jum.15116&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Hughes et al. (2020)&lt;/a&gt; for example pits the two methods against each other on women with known reference AFV. Performance of the ultrasound measurements are stratified by the true AFV classified as low, normal or high. The AUC result for both methods are disappointingly low. The AUC for low and normal volumes is estimated as being between 0.53 and 0.59. For high AFV, minor improvement is seen with the AUC around 0.62 and 0.63. As a rule of thumb, an AUC of 0.5 is roughly equivalent to randomly selecting a test result, with a minimum acceptable AUC of 0.7 being suggested for a test to have utility (Hosmer et al. 2013).&lt;/p&gt;
+&lt;p&gt;A further complication is that an abnormal AFV is relatively rare. I&amp;rsquo;ve found estimates anywhere from $0.5-8%$ of pregnancies being affected. So what is the diagnostic value of an ultrasound reading indicating low AFV? The sensitivity for low AFV is quite poor, with Hughes giving point estimates of 15% and 7.69% for AFI and MVP, respectively. For specificity, Hughes gives point estimates of 97.54% and 99.08% for AFI and MVP. Plug the paper&amp;rsquo;s values into Bayes&#39; theorem and prepare to be underwhelmed.&lt;/p&gt;
+&lt;h3 id=&#34;management&#34;&gt;Management&lt;/h3&gt;
+&lt;p&gt;In short, we have a relatively infrequent medical condition that is looked for using a crude test with a very high false positive rate. Even if we allow for retesting after a few days, results are not necessarily &amp;ldquo;reassuring&amp;rdquo; towards the end of pregnancy due to the natural decline of AFV this far along. A study by 
+&lt;a href=&#34;https://doi.org/10.1016/0002-9378%2889%2990527-9&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Brace and Wolf (1989)&lt;/a&gt; estimates changes in amniotic fluid volume throughout pregnancy. What is interesting is that according to their measurements, AFV peaks between 32 and 34 weeks and then starts to decline. This paper is cited and reproduced in a few standard textbooks on obstetrics, so you would imagine providers are familiar with it.&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-estimated-amniotic-fluid-at-various-stages-of-pregnancies-based-on-brace-and-wolf-1989-as-reproduced-in-landon-et-al-2020-note-that-average-afv-declines-near-term-at-all-percentiles&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/24/04-obs-on-obstetrics-and-ebm/AFV-per-week_hub3b60ce5d922ffa37186bd7ecfe3650e_429559_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Estimated amniotic fluid at various stages of pregnancies. Based on Brace and Wolf (1989) as reproduced in Landon et al. (2020). Note that average AFV declines near term at all percentiles.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/24/04-obs-on-obstetrics-and-ebm/AFV-per-week_hub3b60ce5d922ffa37186bd7ecfe3650e_429559_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1734&#34; height=&#34;1267&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Estimated amniotic fluid at various stages of pregnancies. Based on Brace and Wolf (1989) as reproduced in Landon et al. (2020). Note that average AFV declines near term at all percentiles.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;This creates a risk if an AFV assessment is made after 34 weeks and the result is towards the low end. If a provider waits a few days, chances are that the reading will be similar or lower than the previous one for entirely natural causes. Note also the very high variation between readings as mentioned in Landon et al. (2020). Couple that with the recent trend of interpreting the 
+&lt;a href=&#34;https://doi.org/10.1056/NEJMoa1800566&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ARRIVE study&lt;/a&gt; as demonstrating that there is no to minimal risk when inducing an early-term pregnancy (cf. 
+&lt;a href=&#34;https://doi.org/10.1111/jmwh.12996&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Carmichael and Snowden (2019)&lt;/a&gt; for some good thoughts, and see the abstract of ARRIVE itself for selection criteria) and we have a recipe for otherwise unnecessary medical interventions. Even before ARRIVE, medical providers routinely felt that low AFV alone is a reason for offering inductions; see for example 
+&lt;a href=&#34;https://doi.org/10.1080/14767050802559103&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Schwartz et al. (2009)&lt;/a&gt; and 
+&lt;a href=&#34;https://www.ncbi.nlm.nih.gov/books/NBK562326&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Keilman and Shanks (2022)&lt;/a&gt; and many secondary citations in other papers on this topic. But induction is not as easy of a solution as it is made out to be. It can be more uncomfortable for the mother and rates of Ceasareans may be higher (though this is a bit disputed in the literature). Despite this, I&amp;rsquo;ve repeatedly encountered a borderline reading as being interpreted as indication for an expedited induction (within a day or two), even absent other issues or stress-tests.&lt;/p&gt;
+&lt;p&gt;Just to reiterate, these comments are regaring &lt;em&gt;isolated oligohydromnios&lt;/em&gt;, that is, low AFV that is not a side-effect of some condition. Interventions for IO may be thought to prevent stillbirth in part due to an otherwise missed fetal growth restriction, but the literature simply does not bear out the thought of this being accurate. Even for low AFV associated with a comorbidity, a relatively recent meta-analysis suggests basing practice decisions on the relevant comorbidity, and not the AFV results 
+&lt;a href=&#34;https://doi.org/10.1002/uog.15929&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(Rabie et al. 20217)&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;continuous-efm&#34;&gt;Continuous EFM&lt;/h2&gt;
+&lt;p&gt;A quick summary of the issue is available from the abstract to 
+&lt;a href=&#34;https://doi.org/10.1016/j.bpobgyn.2020.02.004&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Knupp et al. (2020)&lt;/a&gt;:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Continuous electronic fetal monitoring (EFM) was first introduced commercially over 50 years ago with the hope of improving perinatal outcomes during labor. However, despite the increased use of EFM, definitive improvements in perinatal outcomes have not been demonstrated. Variance in tracing interpretation and intervention has led to increased rates of cesarean and operative vaginal deliveries and perhaps increased maternal and neonatal morbidity. Since its inception, several strategies have been developed in hopes of optimizing EFM and improving these outcomes.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Providers remain stubbornly committed to EFM despite the limitations and potential risks, while the promised improvements always remain somewhere beyond the horizon. Ironically, Knupp et al. continue their paper by recommending bluetooth enabled remote EFM solutions and the ever-popular &amp;ldquo;machine learning&amp;rdquo; to finally realize those longed-for improvements.&lt;/p&gt;
+&lt;p&gt;It seems hard to pick any particular study showing issues with EFM, because they are so common. This makes it somewhat difficult to understand why the use of continuous EFM remains so popular. For some references, see the aforementioned paper by 
+&lt;a href=&#34;https://doi.org/10.1016/j.bpobgyn.2020.02.004&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Knupp&lt;/a&gt;.
+For a more colorful summary of the many issues with EFM, see 
+&lt;a href=&#34;https://doi.org/10.1055/s-0038-1632404&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Sartwelle and Johnston (2018)&lt;/a&gt;. They seem to hit the nail on the head when showing that routine continuous EFM may be junk-science unwilling to die.&lt;/p&gt;
+&lt;p&gt;ACOG guidelines on EFM are 
+&lt;a href=&#34;https://www.acog.org/clinical/clinical-guidance/practice-bulletin/articles/2009/07/intrapartum-fetal-heart-rate-monitoring-nomenclature-interpretation-and-general-management-principles&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;hidden behind a paywall&lt;/a&gt;, but judging by the 
+&lt;a href=&#34;https://www.acog.org/womens-health/faqs/fetal-heart-rate-monitoring-during-labor&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;public FAQ&amp;rsquo;s&lt;/a&gt; statement on fetal heart rate monitoring, it appears as though they do not recommend routine continuous EFM. The American Academy for Nursing does not recommend routine EFM, and does not recommend using a routine EFM as part of admission since it is linked to higher rates of continued EFM utilization.&lt;/p&gt;
+&lt;p&gt;It seems to me that EFM is popular because it gives providers a sense of control. Continuous feedback gives the illusion of having immediate and continued access to a fetus&#39; wellbeing. But that is precisely why this technology is problematic. Using crude tools during foetal monitoring has been shown to lead to unnecessary interventions, all of which have associated risks. During birth, patients are in a particularly vulnerable state &amp;mdash; especially after prolonger labor &amp;mdash; and any indication of risk to a fetus is likely to invoke an emotional response, as opposed to a rational or scientific one. This in turn can lead to poor outcomes that could have otherwise been avoided.&lt;/p&gt;
+&lt;h2 id=&#34;concluding-thoughts&#34;&gt;Concluding Thoughts&lt;/h2&gt;
+&lt;p&gt;In my personal experience, obstestrics providers seem to be focus on narrow, short-goals using outdated or unscientific methodology. Long-term outcomes seem less of a concern, as mother and baby are soon moved to another department after birth, so any subsequent negative outcomes aren&amp;rsquo;t &amp;ldquo;their problem&amp;rdquo; anymore. I don&amp;rsquo;t mean that this is done purposefully, but rather that the compartmentalization of hospital care and evaluation metrics for providers may inadvertently encourage this type of behavior. Additionally, I&amp;rsquo;ve been surprised several times at the datedness of a provider&amp;rsquo;s knowledge of the literature on a topic or what the result of a study was. In one case that readily comes to mind, a provider heavily pushed for a scheduled Ceasarean based on the results of a study she had collaborated on. Yet, when we asked for a reference and then looked up the study, the results actually suggested the opposite &amp;mdash; expectant management &amp;mdash; for our particular case. So it&amp;rsquo;s definitely worth to review treatment suggestions with your provider as we continue moving away from paternalistic models of care to one where patient and provider collaborate on finding the best treatment.&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;Brace, R. A., and Wolf, E. J. (1989), “Normal amniotic fluid volume changes throughout pregnancy,” &lt;em&gt;American Journal of Obstetrics and Gynecology&lt;/em&gt;, Elsevier BV, 161, 382–388. &lt;a href=&#34;https://doi.org/10.1016/0002-9378(89)90527-9&#34;&gt;https://doi.org/10.1016/0002-9378(89)90527-9&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Carmichael, S. L., and Snowden, J. M. (2019), “The ARRIVE Trial: Interpretation from an Epidemiologic Perspective,” &lt;em&gt;Journal of Midwifery &amp;amp; Women’s Health&lt;/em&gt;, Wiley, 64, 657–663. &lt;a href=&#34;https://doi.org/10.1111/jmwh.12996&#34;&gt;https://doi.org/10.1111/jmwh.12996&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Grobman, W. A., Rice, M. M., Reddy, U. M., Tita, A. T. N., Silver, R. M., Mallett, G., Hill, K., Thom, E. A., El-Sayed, Y. Y., Perez-Delboy, A., Rouse, D. J., Saade, G. R., Boggess, K. A., Chauhan, S. P., Iams, J. D., Chien, E. K., Casey, B. M., Gibbs, R. S., Srinivas, S. K., Swamy, G. K., Simhan, H. N., and Macones, G. A. (2018), “Labor Induction versus Expectant Management in Low-Risk Nulliparous Women,” &lt;em&gt;New England Journal of Medicine&lt;/em&gt;, 379, 513–523. &lt;a href=&#34;https://doi.org/10.1056/NEJMoa1800566&#34;&gt;https://doi.org/10.1056/NEJMoa1800566&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Hughes, D. S., Magann, E. F., Whittington, J. R., Wendel, M. P., Sandlin, A. T., and Ounpraseuth, S. T. (2019), “Accuracy of the Ultrasound Estimate of the Amniotic Fluid Volume (Amniotic Fluid Index and Single Deepest Pocket) to Identify Actual Low, Normal, and High Amniotic Fluid Volumes as Determined by Quantile Regression,” &lt;em&gt;Journal of Ultrasound in Medicine&lt;/em&gt;, Wiley, 39, 373–378. &lt;a href=&#34;https://doi.org/10.1002/jum.15116&#34;&gt;https://doi.org/10.1002/jum.15116&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Keilman, C., and Shanks, A. L. (2022), “Oligohydramnios,” in StatPearls [Internet], Treasure Island, FL: StatPearls Publishing. Available at &lt;a href=&#34;https://www.ncbi.nlm.nih.gov/books/NBK562326/&#34;&gt;https://www.ncbi.nlm.nih.gov/books/NBK562326/&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Knupp, R. J., Andrews, W. W., and Tita, A. T. N. (2020), “The future of electronic fetal monitoring,” &lt;em&gt;Best Practice &amp;amp; Research Clinical Obstetrics &amp;amp; Gynaecology&lt;/em&gt;, Elsevier BV, 67, 44–52. &lt;a href=&#34;https://doi.org/10.1016/j.bpobgyn.2020.02.004&#34;&gt;https://doi.org/10.1016/j.bpobgyn.2020.02.004&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Landon, M. B., Driscoll, D. A., Jauniaux, E. R. M., Galan, H. L., Grobman, W. A., and Berghella, V. (2018), &lt;em&gt;Gabbe’s Obstetrics Essentials: Normal and Problem Pregnancies&lt;/em&gt;, Philadelphia, PA: Elsevier, p. 496.&lt;/p&gt;
+&lt;p&gt;Landon, M. B., Galan, H. L., Jauniaux, E. R. M., Driscoll, D. A., Berghella, V., Grobman, W. A., Kilpatrick, S. J., and Cahill, A. G. (2020), &lt;em&gt;Gabbe’s Obstetrics: Normal and Problem Pregnancies&lt;/em&gt;, Philadelphia, PA: Saunders, p. 1280.&lt;/p&gt;
+&lt;p&gt;Levin, G., Rottenstreich, A., Tsur, A., Cahan, T., Shai, D., and Meyer, R. (2020), “Isolated oligohydramnios – should induction be offered after 36 weeks?,” &lt;em&gt;The Journal of Maternal-Fetal &amp;amp; Neonatal Medicine&lt;/em&gt;, Informa UK Limited, 35, 4507–4512. &lt;a href=&#34;https://doi.org/10.1080/14767058.2020.1852546&#34;&gt;https://doi.org/10.1080/14767058.2020.1852546&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Nabhan, A. F., and Abdelmoula, Y. A. (2008), “Amniotic fluid index versus single deepest vertical pocket as a screening test for preventing adverse pregnancy outcome,” &lt;em&gt;Cochrane Database of Systematic Reviews&lt;/em&gt;, Wiley, 2010. &lt;a href=&#34;https://doi.org/10.1002/14651858.cd006593.pub2&#34;&gt;https://doi.org/10.1002/14651858.cd006593.pub2&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Patrelli, T. S., Gizzo, S., Cosmi, E., Carpano, M. G., Di Gangi, S., Pedrazzi, G., Piantelli, G., and Modena, A. B. (2012), “Maternal Hydration Therapy Improves the Quantity of Amniotic Fluid and the Pregnancy Outcome in Third‐Trimester Isolated Oligohydramnios: A Controlled Randomized Institutional Trial,” &lt;em&gt;Journal of Ultrasound in Medicine&lt;/em&gt;, Wiley, 31, 239–244. &lt;a href=&#34;https://doi.org/10.7863/jum.2012.31.2.239&#34;&gt;https://doi.org/10.7863/jum.2012.31.2.239&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Rabie, N., Magann, E., Steelman, S., and Ounpraseuth, S. (2017), “Oligohydramnios in complicated and uncomplicated pregnancy: a systematic review and meta-analysis,” &lt;em&gt;Ultrasound in Obstetrics &amp;amp; Gynecology&lt;/em&gt;, Wiley, 49, 442–449. &lt;a href=&#34;https://doi.org/10.1002/uog.15929&#34;&gt;https://doi.org/10.1002/uog.15929&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sartwelle, T., and Johnston, J. (2018), “Continuous Electronic Fetal Monitoring during Labor: A Critique and a Reply to Contemporary Proponents,” &lt;em&gt;The Surgery Journal&lt;/em&gt;, Georg Thieme Verlag KG, 04, e23–e28. &lt;a href=&#34;https://doi.org/10.1055/s-0038-1632404&#34;&gt;https://doi.org/10.1055/s-0038-1632404&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Schwartz, N., Sweeting, R., Young, B. K., Schwartz, N., Sweeting, R., and Young, B. K. (2009), “Practice patterns in the management of isolated oligohydramnios: a survey of perinatologists,” &lt;em&gt;The Journal of Maternal-Fetal &amp;amp; Neonatal Medicine&lt;/em&gt;, Informa UK Limited, 22, 357–361. &lt;a href=&#34;https://doi.org/10.1080/14767050802559103&#34;&gt;https://doi.org/10.1080/14767050802559103&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
