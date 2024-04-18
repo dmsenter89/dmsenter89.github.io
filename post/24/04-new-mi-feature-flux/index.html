@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code.">
+  <meta name="description" content="The Viya 2024.04 release includes a brand new MI feature: new missing data statistics. An important choice when building an imputation model is the selection of variables to be included. One method to help in the variable selection process is the usage of summary statistics such as influx and outflux, as proposed by van Buuren.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
-  <meta property="og:title" content="Calling R From SAS | Michael&#39;s Site">
-  <meta property="og:description" content="The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/">
+  <meta property="og:title" content="New MI Feature: Flux Statistics | Michael&#39;s Site">
+  <meta property="og:description" content="The Viya 2024.04 release includes a brand new MI feature: new missing data statistics. An important choice when building an imputation model is the selection of variables to be included. One method to help in the variable selection process is the usage of summary statistics such as influx and outflux, as proposed by van Buuren."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2023-12-22T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2024-04-18T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2023-12-22T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2024-04-18T00:00:00&#43;00:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/23-12-calling-r-from-sas/"
+    "@id": "https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/"
   },
-  "headline": "Calling R From SAS",
+  "headline": "New MI Feature: Flux Statistics",
   
-  "datePublished": "2023-12-22T00:00:00Z",
-  "dateModified": "2023-12-22T00:00:00Z",
+  "datePublished": "2024-04-18T00:00:00Z",
+  "dateModified": "2024-04-18T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code."
+  "description": "The Viya 2024.04 release includes a brand new MI feature: new missing data statistics. An important choice when building an imputation model is the selection of variables to be included. One method to help in the variable selection process is the usage of summary statistics such as influx and outflux, as proposed by van Buuren."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>Calling R From SAS | Michael&#39;s Site</title>
+  <title>New MI Feature: Flux Statistics | Michael&#39;s Site</title>
 
 </head>
 
@@ -597,7 +597,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Calling R From SAS</h1>
+  <h1>New MI Feature: Flux Statistics</h1>
 
   
 
@@ -616,7 +616,7 @@
     
       
     
-    Dec 22, 2023
+    Apr 18, 2024
   </span>
   
 
@@ -625,7 +625,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    2 min read
+    3 min read
   </span>
   
 
@@ -661,41 +661,60 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>The statistics literature is filled with example code and sample data in R. Sometimes I
-find myself wanting to work through some provided sample data and compare the output from
-R with SAS code. In this post, I&rsquo;ll show how to connect R and SAS so that you can load and
-execute R code straight from within SAS.</p>
-<h2 id="setup">Setup</h2>
-<p>In order to use this feature, you will want to have both R and SAS/IML installed on the
-same computer. Make sure both SAS and R are in your path. In order to call R code from
-SAS, you will need to start SAS with the <code>rlang</code> option. You can call SAS from the command
-line with the <code>-rlang</code> option or you can add the option in your &ldquo;sasv9.cfg&rdquo; file.</p>
-<p>Once SAS is started, you can verify that the setup worked by running</p>
-<pre><code class="language-sas">proc options option=rlang;
+      <p>The 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_050/pgmsaswn/n1l6ng10yj6s1an1v0rt9nj79ktc.htm" target="_blank" rel="noopener">Viya 2024.04 release</a>
+includes a brand new MI feature: new missing data statistics. An important
+choice when building an imputation model is the selection of variables to be
+included. One method to help in the variable selection process is the usage of
+summary statistics such as influx and outflux, as proposed by 
+<a href="https://stefvanbuuren.name/fimd/missing-data-pattern.html" target="_blank" rel="noopener">van
+Buuren</a>. In his
+words: &ldquo;Influx and outflux are summaries of the missing data pattern intended to
+aid in the construction of imputation models. Keeping everything else constant,
+variables with high influx and outflux are preferred. Realize that outflux
+indicates the potential (and not actual) contribution to impute other variables&rdquo;</p>
+<p>The MI statement now supports the new FLUX option. When specified, MI produces a table
+including the influx, outflux, average inbound and outbound, and FICO statistics
+along with a column indicating the percent of cases for which the particular
+variable has been observed. When ODS graphics are turned on, MI additionally
+produces a scatter plot of the variables' influx and outflux. For details,
+see the new section on 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_050/statug/statug_mi_details57.htm" target="_blank" rel="noopener">Missing Data Statistics</a> in the MI chapter of the SAS/STAT User&rsquo;s Guide.</p>
+<p>One thing that&rsquo;s cool about this new feature for all users, not just those interested
+in multiple imputation, is the fact that this new feature allows you to get a
+complete overview of the percent of observed/missing cases for <em>all</em> variables &mdash;
+both character and numeric! Previously, you either needed to use
+
+<a href="https://blogs.sas.com/content/iml/2011/09/19/count-the-number-of-missing-values-for-each-variable.html" target="_blank" rel="noopener">separately procedures</a> for character and numeric variables, or 
+<a href="https://www.sas.com/content/dam/SAS/en_ca/User%20Group%20Presentations/TASS/Zdeb-MissingData.pdf" target="_blank" rel="noopener">expend some work</a> to get a macro written that creates a table
+of both types of variables for you.</p>
+<p>With this new feature, you can simply use</p>
+<pre><code class="language-sas">/* optional: creates output ds with PctObs and PctMiss vars */
+ods output Flux=Flux;
+
+/* sample code using the sashelp.heart data set */
+proc mi data=sashelp.heart flux
+      nimpute=0
+      displaypattern=nomeans;
+   class _character_;
+   var _all_;
+   fcs;
 run;
 </code></pre>
-<p>The log will list <code>RLANG</code> if the option was specified. If you forgot to add the option
-prior to startup, you&rsquo;ll see <code>NORLANG</code> in the log instead.</p>
-<h2 id="usage">Usage</h2>
-<p>R code can be called from within IML via a submit statement. The basic structure
-is this:</p>
-<pre><code class="language-sas">proc iml;
-  submit / R;
-    /* R code her */
-  endsubmit;
-quit;
-</code></pre>
-<p>With this we can run R code from within SAS. But the real power comes from our
-ability to move data between R and SAS. The following functions are available:</p>
-<ul>
-<li><code>ExportDatasetToR(&quot;libname.dsname&quot;, RDataFrame);</code></li>
-<li><code>ExportMatrixToR(IMLMatrix, RMatrix);</code></li>
-<li><code>ImportDataSetFromR(r-expr, &quot;libname.dsname&quot;)</code></li>
-<li><code>ImportMatrixFromR(r-expr, IMLMatrix)</code></li>
-</ul>
-<p>Parameters can be passed to R as well, similar to how parameters can be passed
-from IML to SAS PROCs.</p>
-<p>For more details, see the SAS/IML manual.</p>
+<p>Note that we can include all variables in our data set with <code>var _all_</code>. If our
+data set includes character variables, we need <code>class _character_</code> to label all
+character variables as classification variables. If you are only interested in
+a subset of the variables, you can of course specify them here. We use the FCS
+statement to accomodate classification variables and we set <code>nimpute=0</code> since we
+don&rsquo;t actually want to create imputations, just view the missing data statistics.
+The <code>ods output</code> statement is completely optional. It creates a data set with
+variables PctObs and PctMiss for every variable in the analysis that you could
+then further process with PROC SQL or some other method.</p>
+<p>In this example, the table will look as follows:</p>
+<p><img src="flux-table.png" alt=""></p>
+<p>For a full walkthrough of this code, see the 
+<a href="https://go.documentation.sas.com/doc/en/pgmsascdc/v_050/statug/statug_mi_examples19.htm" target="_blank" rel="noopener">new example</a>
+in the MI chapter of the SAS/STATS User&rsquo;s Guide.</p>
 
     </div>
 
@@ -708,9 +727,9 @@ from IML to SAS PROCs.</p>
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/iml/">iml</a>
+  <a class="badge badge-light" href="/tag/mi/">mi</a>
   
-  <a class="badge badge-light" href="/tag/r/">r</a>
+  <a class="badge badge-light" href="/tag/new-feature/">new feature</a>
   
   <a class="badge badge-light" href="/tag/sas/">sas</a>
   
@@ -729,7 +748,7 @@ from IML to SAS PROCs.</p>
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;text=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/&amp;text=New%20MI%20Feature:%20Flux%20Statistics" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -742,7 +761,7 @@ from IML to SAS PROCs.</p>
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;t=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/&amp;t=New%20MI%20Feature:%20Flux%20Statistics" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -755,7 +774,7 @@ from IML to SAS PROCs.</p>
       
       
       <li>
-        <a href="mailto:?subject=Calling%20R%20From%20SAS&amp;body=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=New%20MI%20Feature:%20Flux%20Statistics&amp;body=https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -768,7 +787,7 @@ from IML to SAS PROCs.</p>
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;title=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/&amp;title=New%20MI%20Feature:%20Flux%20Statistics" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -781,7 +800,7 @@ from IML to SAS PROCs.</p>
       
       
       <li>
-        <a href="whatsapp://send?text=Calling%20R%20From%20SAS%20https://dmsenter89.github.io/post/23-12-calling-r-from-sas/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=New%20MI%20Feature:%20Flux%20Statistics%20https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -794,7 +813,7 @@ from IML to SAS PROCs.</p>
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;title=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/&amp;title=New%20MI%20Feature:%20Flux%20Statistics" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -946,11 +965,11 @@ from IML to SAS PROCs.</p>
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/23-08-univariate-mi/">Univariate Missing Data with PROC MI</a></li>
-      
-      <li><a href="/post/24/04-new-mi-feature-flux/">New MI Feature: Flux Statistics</a></li>
+      <li><a href="/post/23-12-calling-r-from-sas/">Calling R From SAS</a></li>
       
       <li><a href="/post/23-09-basic-sql-joins/">Some Basic SQL Joins</a></li>
+      
+      <li><a href="/post/23-08-univariate-mi/">Univariate Missing Data with PROC MI</a></li>
       
       <li><a href="/post/23-05-sample-regression-lines/">Sampling Regression Lines</a></li>
       

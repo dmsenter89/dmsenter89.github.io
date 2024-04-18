@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code.">
+  <meta name="description" content="Research Statistician Developer">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/tags/">
 
   
 
@@ -253,12 +253,14 @@
   
 
   
+  <link rel="alternate" href="/tags/index.xml" type="application/rss+xml" title="Michael&#39;s Site">
+  
 
   <link rel="manifest" href="/index.webmanifest">
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
+  <link rel="canonical" href="https://dmsenter89.github.io/tags/">
 
   
   
@@ -274,65 +276,17 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/23-12-calling-r-from-sas/">
-  <meta property="og:title" content="Calling R From SAS | Michael&#39;s Site">
-  <meta property="og:description" content="The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/tags/">
+  <meta property="og:title" content="Tags | Michael&#39;s Site">
+  <meta property="og:description" content="Research Statistician Developer"><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
-    
-      <meta property="article:published_time" content="2023-12-22T00:00:00&#43;00:00">
-    
-    <meta property="article:modified_time" content="2023-12-22T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2024-04-18T00:00:00&#43;00:00">
   
 
   
 
 
-    
-
-
-
-
-
-
-  
-
-
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/23-12-calling-r-from-sas/"
-  },
-  "headline": "Calling R From SAS",
-  
-  "datePublished": "2023-12-22T00:00:00Z",
-  "dateModified": "2023-12-22T00:00:00Z",
-  
-  "author": {
-    "@type": "Person",
-    "name": "D. Michael Senter"
-  },
-  
-  "publisher": {
-    "@type": "Organization",
-    "name": "Michael's Site",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
-    }
-  },
-  "description": "The statistics literature is filled with example code and sample data in R. Sometimes I find myself wanting to work through some provided sample data and compare the output from R with SAS code."
-}
-</script>
-
-  
-
-  
 
 
   
@@ -344,7 +298,7 @@
 
 
 
-  <title>Calling R From SAS | Michael&#39;s Site</title>
+  <title>Tags | Michael&#39;s Site</title>
 
 </head>
 
@@ -576,8 +530,6 @@
 </nav>
 
 
-  <article class="article">
-
   
 
 
@@ -595,377 +547,57 @@
 
   
   
-  
-<div class="article-container pt-3">
-  <h1>Calling R From SAS</h1>
-
-  
-
   
     
-
-
-<div class="article-metadata">
+  
+<div class="universal-wrapper pt-3">
+  <h1>Tags</h1>
 
   
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Dec 22, 2023
-  </span>
-  
-
-  
-
-  
-  <span class="middot-divider"></span>
-  <span class="article-reading-time">
-    2 min read
-  </span>
-  
-
-  
-  
-  
-
-  
-  
-
-</div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   
 </div>
 
 
 
-  <div class="article-container">
+<div class="universal-wrapper">
+  
 
-    <div class="article-style">
-      <p>The statistics literature is filled with example code and sample data in R. Sometimes I
-find myself wanting to work through some provided sample data and compare the output from
-R with SAS code. In this post, I&rsquo;ll show how to connect R and SAS so that you can load and
-execute R code straight from within SAS.</p>
-<h2 id="setup">Setup</h2>
-<p>In order to use this feature, you will want to have both R and SAS/IML installed on the
-same computer. Make sure both SAS and R are in your path. In order to call R code from
-SAS, you will need to start SAS with the <code>rlang</code> option. You can call SAS from the command
-line with the <code>-rlang</code> option or you can add the option in your &ldquo;sasv9.cfg&rdquo; file.</p>
-<p>Once SAS is started, you can verify that the setup worked by running</p>
-<pre><code class="language-sas">proc options option=rlang;
-run;
-</code></pre>
-<p>The log will list <code>RLANG</code> if the option was specified. If you forgot to add the option
-prior to startup, you&rsquo;ll see <code>NORLANG</code> in the log instead.</p>
-<h2 id="usage">Usage</h2>
-<p>R code can be called from within IML via a submit statement. The basic structure
-is this:</p>
-<pre><code class="language-sas">proc iml;
-  submit / R;
-    /* R code her */
-  endsubmit;
-quit;
-</code></pre>
-<p>With this we can run R code from within SAS. But the real power comes from our
-ability to move data between R and SAS. The following functions are available:</p>
-<ul>
-<li><code>ExportDatasetToR(&quot;libname.dsname&quot;, RDataFrame);</code></li>
-<li><code>ExportMatrixToR(IMLMatrix, RMatrix);</code></li>
-<li><code>ImportDataSetFromR(r-expr, &quot;libname.dsname&quot;)</code></li>
-<li><code>ImportMatrixFromR(r-expr, IMLMatrix)</code></li>
-</ul>
-<p>Parameters can be passed to R as well, similar to how parameters can be passed
-from IML to SAS PROCs.</p>
-<p>For more details, see the SAS/IML manual.</p>
-
+  
+  
+    
+    
+    
+    <div>
+      <h2><a href="/tag/teachers/" >teachers</a></h2>
+      <div class="article-style">
+        
+      </div>
     </div>
-
+  
     
-
-
-
-
-
-
-<div class="article-tags">
-  
-  <a class="badge badge-light" href="/tag/iml/">iml</a>
-  
-  <a class="badge badge-light" href="/tag/r/">r</a>
-  
-  <a class="badge badge-light" href="/tag/sas/">sas</a>
-  
-</div>
-
-
-
-<div class="share-box" aria-hidden="true">
-  <ul class="share">
     
-      
-      
-      
+    
+    <div>
+      <h2><a href="/tag/requests/" >requests</a></h2>
+      <div class="article-style">
         
-      
-      
-      
-      <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;text=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-twitter">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;t=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-facebook">
-          <i class="fab fa-facebook"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="mailto:?subject=Calling%20R%20From%20SAS&amp;body=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/" target="_blank" rel="noopener" class="share-btn-email">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;title=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-linkedin">
-          <i class="fab fa-linkedin-in"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="whatsapp://send?text=Calling%20R%20From%20SAS%20https://dmsenter89.github.io/post/23-12-calling-r-from-sas/" target="_blank" rel="noopener" class="share-btn-whatsapp">
-          <i class="fab fa-whatsapp"></i>
-        </a>
-      </li>
-    
-      
-      
-      
-        
-      
-      
-      
-      <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/23-12-calling-r-from-sas/&amp;title=Calling%20R%20From%20SAS" target="_blank" rel="noopener" class="share-btn-weibo">
-          <i class="fab fa-weibo"></i>
-        </a>
-      </li>
-    
-  </ul>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-
-
-
-
-
-  
-    
-    
-    
-      
-    
-    
-    
-    <div class="media author-card content-widget-hr">
-      
-        
-        <img class="avatar mr-3 avatar-circle" src="/author/d.-michael-senter/avatar_hu33fd434d16d3acf6468b21803c007f79_224164_270x270_fill_q90_lanczos_center.jpg" alt="D. Michael Senter">
-      
-
-      <div class="media-body">
-        <h5 class="card-title"><a href="https://dmsenter89.github.io/">D. Michael Senter</a></h5>
-        <h6 class="card-subtitle">Research Statistician Developer</h6>
-        <p class="card-text">My research interests include data analytics and missing data.</p>
-        <ul class="network-icon" aria-hidden="true">
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-    <li>
-      <a href="mailto:michael.senter@sas.com" >
-        <i class="fas fa-envelope"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://orcid.org/0000-0002-2752-1688" target="_blank" rel="noopener">
-        <i class="fab fa-orcid"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://scholar.google.com/citations?user=DPyUrhYAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-        <i class="ai ai-google-scholar"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://github.com/dmsenter89" target="_blank" rel="noopener">
-        <i class="fab fa-github"></i>
-      </a>
-    </li>
-  
-    
-    
-    
-      
-    
-    
-    
-    
-    
-      
-    
-    <li>
-      <a href="https://www.linkedin.com/in/michaelsenter9a13a642/" target="_blank" rel="noopener">
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </li>
-  
-</ul>
-
       </div>
     </div>
   
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   
-  
-  <div class="article-widget content-widget-hr">
-    <h3>Related</h3>
-    <ul>
-      
-      <li><a href="/post/23-08-univariate-mi/">Univariate Missing Data with PROC MI</a></li>
-      
-      <li><a href="/post/24/04-new-mi-feature-flux/">New MI Feature: Flux Statistics</a></li>
-      
-      <li><a href="/post/23-09-basic-sql-joins/">Some Basic SQL Joins</a></li>
-      
-      <li><a href="/post/23-05-sample-regression-lines/">Sampling Regression Lines</a></li>
-      
-      <li><a href="/post/23-05-simple-regression-with-proc-mcmc/">Simple Regression With PROC MCMC</a></li>
-      
-    </ul>
-  </div>
-  
+<nav>
+  <ul class="pagination justify-content-center">
+    
+    <li class="page-item"><a class="page-link" href="/tags/page/9/">&laquo;</a></li>
+    
+    
+  </ul>
+</nav>
 
 
-
-
-
-  </div>
-</article>
+</div>
 
       
 

@@ -5,12 +5,74 @@
     <link>https://dmsenter89.github.io/post/</link>
       <atom:link href="https://dmsenter89.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 01 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 18 Apr 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Posts</title>
       <link>https://dmsenter89.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>New MI Feature: Flux Statistics</title>
+      <link>https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/</link>
+      <pubDate>Thu, 18 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/04-new-mi-feature-flux/</guid>
+      <description>&lt;p&gt;The 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_050/pgmsaswn/n1l6ng10yj6s1an1v0rt9nj79ktc.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Viya 2024.04 release&lt;/a&gt;
+includes a brand new MI feature: new missing data statistics. An important
+choice when building an imputation model is the selection of variables to be
+included. One method to help in the variable selection process is the usage of
+summary statistics such as influx and outflux, as proposed by 
+&lt;a href=&#34;https://stefvanbuuren.name/fimd/missing-data-pattern.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;van
+Buuren&lt;/a&gt;. In his
+words: &amp;ldquo;Influx and outflux are summaries of the missing data pattern intended to
+aid in the construction of imputation models. Keeping everything else constant,
+variables with high influx and outflux are preferred. Realize that outflux
+indicates the potential (and not actual) contribution to impute other variables&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;The MI statement now supports the new FLUX option. When specified, MI produces a table
+including the influx, outflux, average inbound and outbound, and FICO statistics
+along with a column indicating the percent of cases for which the particular
+variable has been observed. When ODS graphics are turned on, MI additionally
+produces a scatter plot of the variables&#39; influx and outflux. For details,
+see the new section on 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_050/statug/statug_mi_details57.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Missing Data Statistics&lt;/a&gt; in the MI chapter of the SAS/STAT User&amp;rsquo;s Guide.&lt;/p&gt;
+&lt;p&gt;One thing that&amp;rsquo;s cool about this new feature for all users, not just those interested
+in multiple imputation, is the fact that this new feature allows you to get a
+complete overview of the percent of observed/missing cases for &lt;em&gt;all&lt;/em&gt; variables &amp;mdash;
+both character and numeric! Previously, you either needed to use
+
+&lt;a href=&#34;https://blogs.sas.com/content/iml/2011/09/19/count-the-number-of-missing-values-for-each-variable.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;separately procedures&lt;/a&gt; for character and numeric variables, or 
+&lt;a href=&#34;https://www.sas.com/content/dam/SAS/en_ca/User%20Group%20Presentations/TASS/Zdeb-MissingData.pdf&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;expend some work&lt;/a&gt; to get a macro written that creates a table
+of both types of variables for you.&lt;/p&gt;
+&lt;p&gt;With this new feature, you can simply use&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;/* optional: creates output ds with PctObs and PctMiss vars */
+ods output Flux=Flux;
+
+/* sample code using the sashelp.heart data set */
+proc mi data=sashelp.heart flux
+      nimpute=0
+      displaypattern=nomeans;
+   class _character_;
+   var _all_;
+   fcs;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that we can include all variables in our data set with &lt;code&gt;var _all_&lt;/code&gt;. If our
+data set includes character variables, we need &lt;code&gt;class _character_&lt;/code&gt; to label all
+character variables as classification variables. If you are only interested in
+a subset of the variables, you can of course specify them here. We use the FCS
+statement to accomodate classification variables and we set &lt;code&gt;nimpute=0&lt;/code&gt; since we
+don&amp;rsquo;t actually want to create imputations, just view the missing data statistics.
+The &lt;code&gt;ods output&lt;/code&gt; statement is completely optional. It creates a data set with
+variables PctObs and PctMiss for every variable in the analysis that you could
+then further process with PROC SQL or some other method.&lt;/p&gt;
+&lt;p&gt;In this example, the table will look as follows:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;flux-table.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;For a full walkthrough of this code, see the 
+&lt;a href=&#34;https://go.documentation.sas.com/doc/en/pgmsascdc/v_050/statug/statug_mi_examples19.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;new example&lt;/a&gt;
+in the MI chapter of the SAS/STATS User&amp;rsquo;s Guide.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Observations on Obstetrics and EBM</title>
