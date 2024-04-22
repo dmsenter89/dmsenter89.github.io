@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ssh | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/ssh/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <description>ssh</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 22 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>ssh</title>
+      <link>https://dmsenter89.github.io/tag/ssh/</link>
+    </image>
+    
+    <item>
+      <title>Get SSH Keys From Github</title>
+      <link>https://dmsenter89.github.io/post/24/04-get-ssh-keys-from-github/</link>
+      <pubDate>Mon, 22 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/04-get-ssh-keys-from-github/</guid>
+      <description>&lt;p&gt;Did you know you can get your public SSH keys via GitHub? I recently installed
+Ubuntu Server to VM. During the installation process, it asked for my GitHub
+username and then populated the authorized_keys file with my public keys. That
+was super nifty! My new install never needed to accept password-based logins
+and I didn&amp;rsquo;t have to worry about onboarding different machines&#39; keys.
+I was curious how it worked and it turns out you can do this directly yourself
+via cURL:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;curl https://github.com/${GITUSERNAME}.keys &amp;gt;&amp;gt; ~/.ssh/authorized_keys
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The same thing works if you have uploaded GPG keys for signing:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;curl https://github.com/${GITUSERNAME}.gpg
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The GitHub API also exposes this info, but then you&amp;rsquo;ll have to process the
+returning JSON if you want to use it for your keys file:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sh&#34;&gt;curl https://api.github.com/users/${GITUSERNAME}/keys
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Neat!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
