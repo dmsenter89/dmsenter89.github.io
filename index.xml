@@ -5,12 +5,37 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 22 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 10 Jul 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Programming Links - July</title>
+      <link>https://dmsenter89.github.io/post/24/07-programming-links/</link>
+      <pubDate>Wed, 10 Jul 2024 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/07-programming-links/</guid>
+      <description>&lt;ol&gt;
+&lt;li&gt;From the 
+&lt;a href=&#34;https://nullprogram.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;null program&lt;/a&gt;:
+&lt;ol&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://nullprogram.com/blog/2014/10/21/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Object Oriented C&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Skeeto&amp;rsquo;s 
+&lt;a href=&#34;https://nullprogram.com/blog/2023/10/08/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;C coding style&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://nullprogram.com/blog/2017/08/20/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Portable Makefiles&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;https://salykova.github.io/matmul-cpu&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Beating NumPy&amp;rsquo;s Matrix Multiplication&lt;/a&gt; in C.&lt;/li&gt;
+&lt;li&gt;A list of 
+&lt;a href=&#34;https://www.pythonmorsels.com/cli-tools/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;cli-tools&lt;/a&gt; provided by Python.&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+    </item>
     
     <item>
       <title>Get SSH Keys From Github</title>
