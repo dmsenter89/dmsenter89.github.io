@@ -27,10 +27,10 @@
   
     
   
-  <meta name="description" content="Sometimes we have to deal with manually entered data, which means there is a good chance that the data needs to be cleaned for consistency due to the inevitable errors that creep in when typing in data, not to speak of any inconsistencies between individuals entering data.">
+  <meta name="description" content="Improve the interpretation of your frequentist analysis output&#39;s strength of evidence by incorporating Bayes factor bounds using SAS.">
 
   
-  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/">
+  <link rel="alternate" hreflang="en-us" href="https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/">
 
   
 
@@ -258,7 +258,7 @@
   <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
   <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
-  <link rel="canonical" href="https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/">
+  <link rel="canonical" href="https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/">
 
   
   
@@ -274,15 +274,15 @@
   <meta property="twitter:card" content="summary">
   
   <meta property="og:site_name" content="Michael&#39;s Site">
-  <meta property="og:url" content="https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/">
-  <meta property="og:title" content="Cleaning up a Date String with RegEx in SAS | Michael&#39;s Site">
-  <meta property="og:description" content="Sometimes we have to deal with manually entered data, which means there is a good chance that the data needs to be cleaned for consistency due to the inevitable errors that creep in when typing in data, not to speak of any inconsistencies between individuals entering data."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
+  <meta property="og:url" content="https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/">
+  <meta property="og:title" content="From p-Values to Bayes Factors | Michael&#39;s Site">
+  <meta property="og:description" content="Improve the interpretation of your frequentist analysis output&#39;s strength of evidence by incorporating Bayes factor bounds using SAS."><meta property="og:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png">
   <meta property="twitter:image" content="https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2021-09-29T13:41:36-04:00">
+      <meta property="article:published_time" content="2024-11-13T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2021-09-29T13:41:36-04:00">
+    <meta property="article:modified_time" content="2024-11-13T00:00:00&#43;00:00">
   
 
   
@@ -306,12 +306,12 @@
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/"
+    "@id": "https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/"
   },
-  "headline": "Cleaning up a Date String with RegEx in SAS",
+  "headline": "From p-Values to Bayes Factors",
   
-  "datePublished": "2021-09-29T13:41:36-04:00",
-  "dateModified": "2021-09-29T13:41:36-04:00",
+  "datePublished": "2024-11-13T00:00:00Z",
+  "dateModified": "2024-11-13T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -326,7 +326,7 @@
       "url": "https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Sometimes we have to deal with manually entered data, which means there is a good chance that the data needs to be cleaned for consistency due to the inevitable errors that creep in when typing in data, not to speak of any inconsistencies between individuals entering data."
+  "description": "Improve the interpretation of your frequentist analysis output's strength of evidence by incorporating Bayes factor bounds using SAS."
 }
 </script>
 
@@ -344,7 +344,7 @@
 
 
 
-  <title>Cleaning up a Date String with RegEx in SAS | Michael&#39;s Site</title>
+  <title>From p-Values to Bayes Factors | Michael&#39;s Site</title>
 
 </head>
 
@@ -597,7 +597,7 @@
   
   
 <div class="article-container pt-3">
-  <h1>Cleaning up a Date String with RegEx in SAS</h1>
+  <h1>From p-Values to Bayes Factors</h1>
 
   
 
@@ -616,7 +616,7 @@
     
       
     
-    Sep 29, 2021
+    Nov 13, 2024
   </span>
   
 
@@ -625,7 +625,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min read
+    6 min read
   </span>
   
 
@@ -634,10 +634,6 @@
   
 
   
-  
-  <span class="middot-divider"></span>
-  <span class="article-categories">
-    <i class="fas fa-folder mr-1"></i><a href="/category/data-cleaning/">data-cleaning</a></span>
   
 
 </div>
@@ -665,16 +661,83 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p>Sometimes we have to deal with manually entered data, which means there is a good chance that the data needs to be cleaned for consistency due to the
-inevitable errors that creep in when typing in data, not to speak of any inconsistencies between individuals entering data.</p>
-<p>In my particular case, I was recently dealing with a data set that included
-manually calculated ages that had been entered as a complete string
-of the number of years, months, and days of an individual. Such a string
-is not particularly useful for analysis and I wanted to have the age as
-a numeric variable instead. Regular expressions can help out a lot in this
-type of situation. In this post, we will look at a few representative examples
-of the type of entries I&rsquo;ve encountered and how to read them using RegEx in SAS.</p>
-<h2 id="lets-look-at-the-data">Let&rsquo;s Look at the Data</h2>
+      <p>Most medical papers featuring statistical analysis still utilize a hypothesis
+testing framework. Data is collected, an analysis is run, a <em>p</em>-value reported,
+and &ndash; if it is found to be below the magic threshold of 0.05 &ndash; the finding is
+declared &ldquo;(statistically) significant.&rdquo; The authors then suggest, with varying
+degrees of explicitness, that their results support their preferred hypothesis,
+or &ndash; in some less modest cases &ndash; may go as far as claiming to have found
+&ldquo;proof&rdquo; their preferred hypothesis. Criticism of this methodology is old, and
+will not be rehashed here. Suffice it to say that the <em>p</em>-value is typically
+constructed conditional on a strawman &ldquo;null hypothesis&rdquo; being true, and as such
+doesn&rsquo;t provide direct evidence concerning any specific alternative hypothesis
+the researchers are actually interested in. What we&rsquo;re left with is a general
+desire to say something along the lines of &ldquo;Based on the data I have collected,
+I now have more/less reason to believe that my preferred hypothesis is correct.&rdquo;
+<em>P</em>-values aside, there exists a measure to express this idea: it is often
+called the Bayes factor.<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="the-bayes-factor-and-its-bound">The Bayes Factor and Its Bound</h2>
+<p>Let&rsquo;s start with the basic idea. We can frame the problem of how likely a
+particular model $M$ is given data $D$ that we have collected by using Bayes
+theorem:</p>
+<p>$$\Pr(M|D) = \frac{\Pr(D|M)\Pr(M)}{\Pr(D)}$$</p>
+<p>Suppose you have two competing models as explanations for your data,
+$M_{1}$ and $M_{2}$. If you want to know if the data favors one model
+over another, you could simply take that ratio:</p>
+<p>$$\frac{\Pr(M_{2}|D)}{\Pr(M_{1}|D)} = \underset{\text{ Bayes Factor}}{\underbrace{\frac{\Pr(D|M_{2})}{\Pr(D|M_{1})}}} \times \underset{\text{Prior Odds}}{\underbrace{\frac{\Pr(M_{2})}{\Pr(M_{1})}}}$$</p>
+<p>Which model is in the numerator or denominator can be chosen by convenience. As
+written above, a larger value of this ratio favors $M_2$ over $M_1$, while small
+values of the ratio favor $M_1$ over $M_2$.</p>
+<p>Substitute in your traditional notation for a null-hypothesis $H_{0}$
+and alternative hypothesis $H_{1}$ and we can compare two different
+Bayes factors, $\text{BF}_{10}$ which compares the alternative
+hypothesis to the null, or $\text{BF}_{01}$ which compares the null to
+the the alternative. For illustrative purposes, consider the case of</p>
+<p>$$\mathrm{BF}_{10} = \frac{1}{\mathrm{BF}_{01}} = 10$$</p>
+<p>We can interpret this to say that the data favor the alternative
+hypothesis 10 to 1 compared to the null. In other words, bigger values
+of $ \text{ BF }_{10} $ correspond to greater evidence in favor of $H_{1}$
+over $H_{0}$, whereas smaller values of $\text{BF}_{01}$ favor $H_{1}$
+over $H_{0}$.</p>
+<p>In general, constructing a Bayes factor requires modeling. What we <em>can</em>
+do without modeling, however, is provide reasonable bounds for the Bayes
+factor - a minimum bound for $\text{BF}_{01}$ or &ndash; equivalently &ndash; a
+maximum bound for $\text{BF}_{10}$. Benjamin and Berger (2019) recommend
+a particularly simple upper bound for the Bayes factor that can be shown
+to hold in a wide variety of situations:</p>
+<p>$$\text{ BF}_{10} \leq \text{ BFB } = \frac{1}{- ep\log(p)}$$</p>
+<p>This approximation is valid for $p &lt; \frac{1}{e} \approx 0.367$.</p>
+<h2 id="adding-bayes-factors-to-sas-output">Adding Bayes Factors to SAS Output</h2>
+<p>There is an easy way to start adding such Bayes Factor bounds to your
+existing SAS workflow. Did you know that you can convert any ODS output
+table to a SAS data set? That way you can access any reported value for
+later analysis. For our purposes, this means we can access any test statistic
+or <em>p</em>-value reported by SAS and use them to calculate the appropriate Bayes
+factor bounds. I&rsquo;ll show two simple examples.</p>
+<p>Let&rsquo;s say I want to employ a bound for the output of PROC TTEST. I can look up
+the relevant table name in the SAS/STAT User&rsquo;s Guide in the &ldquo;ODS Table Names&rdquo;
+section under the PROCs &ldquo;Details&rdquo; &ndash; in this case, I want to use the table named
+<code>TTests</code>. I can then save this table to a SAS data set using <code>ods output</code>. To
+save typing, we&rsquo;ll use the <code>filename</code> and <code>include</code> statements to utilize the
+available code for the Getting Started example in TTest:</p>
+<pre><code class="language-sas">filename tgs url
+  'https://raw.githubusercontent.com/sassoftware/doc-supplement-statug/refs/heads/main/Examples/r-z/ttegs1.sas';
+ods output TTests=res; /* this line exports the TTests table to &quot;res&quot; */
+%include tgs;
+</code></pre>
+<p>Looking at my new data set, I can see that the <em>p</em>-value is saved to a variable
+named <code>Probt</code>. I can now use a DATA step to calculate both the BFB and the
+reciprocal of it, the minimum Bayes factor:</p>
+<pre><code class="language-sas">data bayes;
+  set res;
+  BFB = 1/(-CONSTANT('E')*Probt*Log(Probt));
+  BFmin = 1/BFB;
+run;
+proc print; run;
+</code></pre>
+<p>I&rsquo;m omitting the <code>data</code> keyword from the PROC PRINT call to keep things concise.
+This way, it automatically uses the last data set in use. If you run these two
+code snippets, you&rsquo;ll get the following table:</p>
 
 
 
@@ -693,79 +756,58 @@ of the type of entries I&rsquo;ve encountered and how to read them using RegEx i
 
 
 
-<figure id="figure-what-were-starting-from">
+<figure id="figure-the-bayes-factor-bounds-from-our-proc-ttest-example">
 
 
-  <a data-fancybox="" href="/post/21-09-sas-regex-date-cleanup/RAW_DS_hu83735545411e40d8d73c711ad73aa038_21697_2000x2000_fit_lanczos_2.PNG" data-caption="What we&amp;rsquo;re starting from.">
+  <a data-fancybox="" href="/post/24/11-from-p-values-to-bayes-factor/ttest_hu495a71d51f4100df1b1cbf22bbde0982_13685_2000x2000_fit_lanczos_2.png" data-caption="The Bayes factor bounds from our PROC TTest example.">
 
 
-  <img data-src="/post/21-09-sas-regex-date-cleanup/RAW_DS_hu83735545411e40d8d73c711ad73aa038_21697_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="508" height="250">
+  <img data-src="/post/24/11-from-p-values-to-bayes-factor/ttest_hu495a71d51f4100df1b1cbf22bbde0982_13685_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="737" height="103">
 </a>
 
 
   
   
   <figcaption>
-    What we&rsquo;re starting from.
+    The Bayes factor bounds from our PROC TTest example.
   </figcaption>
 
 
 </figure>
 
-<p>If we look at our sample data, we notice a few things. The data is consistently
-ordered from largest to smallest, in the order of year, month, and day.
-For some lines, only the year variable is available. In all cases, the string
-starts with two digits.</p>
-<p>Separation of the time units is inconsistent; occasionally they are separated
-by commas, sometimes by hyphens, and in some cases by spaces alone. The terms
-indicating the units are spelled and capitalized inconsistently as well. There
-are some abbreviations and occasionally the plural &rsquo;s' in days is wrapped in
-parentheses.</p>
-<p>If you want to follow along, you can create the sample data with the
-following code:</p>
-<pre><code class="language-sas">data raw;
-    infile datalines delimiter = ',' MISSOVER DSD;
-    attrib
-        ID     informat=best32. format=1.
-        STR_AGE informat=$500.   format=$500. label='Age String'
-        VAR1   informat=best32. format=1.;
-    input ID STR_AGE $ VAR1;
-
-    datalines;
-    1,&quot;62 Years, 5 Months, 8 Days&quot;,1
-    2,43 Yrs. -2 Months -4 Day(s), 2
-    3,33 years * months 24 days, 1
-    4,58,1
-    5,&quot;47 Yrs. -11 Months -27 Day(s)&quot;,2
-    ;
+<p>This suggests that for our particular example, the most favorable
+interpretation would favor the alternative hypothesis over the null by a
+rate of about 5.4-to-1.</p>
+<p>Another common source for <em>p</em>-values is regression output. Each parameter estimate
+is accompanied by a <em>p</em>-value. We can use the same procedure as above to look
+up the relevant ODS table name and use <code>ODS OUTPUT</code> to save that table for later
+use:</p>
+<pre><code class="language-sas">ods output ParameterEstimates=ParmEst;
+proc reg data=sashelp.baseball;
+   id name team league;
+   model logSalary = nhits nbb yrmajor crhits;
 run;
 </code></pre>
-<h2 id="the-regex-patterns">The RegEx Patterns</h2>
-<p>We will use a total of three regex patterns, one for each of the time units:
-year, month, day.  SAS uses Pearl regex and the function <code>prxparse</code> to define
-the regex patterns that are supposed to be searched for.</p>
-<p>For the year variable, we need to match the first two digits in our string.
-Therefore, the correct call is <code>prxparse('/^(\d{2}).*/')</code>. Note that the
-<code>(</code> and <code>)</code> delimit the capture group.</p>
-<p>The month and day regex patterns are very similar. For the months, we want to
-lazy-match the until we hit between one or two digits followed by
-an &rsquo;m' and some number of other characters. We use the <code>i</code> flag since
-we cannot guarantee capitalization: <code>prxparse('/.*?(\d{1,2}).M.*/i')</code>.
-The day pattern is nearly identical: <code>prxparse('/.*?(\d{1,2}).D\D*$/i')</code>.</p>
-<p>We can extract our matches using the <code>prxposn</code> function. We use the
-<code>prxmatch</code> function to check if we actually have a match:</p>
-<pre><code class="language-sas">/* match into strings */
-if prxmatch(year_rxid, STR_AGE)  then year_dig_str = prxposn(year_rxid,1,STR_AGE);
-if prxmatch(month_rxid, STR_AGE) then month_dig_str = prxposn(month_rxid,1,STR_AGE);
-if prxmatch(day_rxid, STR_AGE)   then day_dig_str = prxposn(day_rxid,1, STR_AGE);
+<p>This table contains a little more detail and a pretty large BFB, so I decided to
+specify which variables I want to print and added a <code>FORMAT</code> to the <code>PRINT</code>
+call.</p>
+<pre><code class="language-sas">data bayes;
+  set ParmEst;
+  BFB = 1/(-CONSTANT('E')*Probt*Log(Probt));
+  BFmin = 1/BFB;
+run;
+
+proc print noobs;
+  var Variable Label Estimate Probt BF:;
+  format BF: COMMA14.2;
+run;
 </code></pre>
-<p>The extracted strings can then be converted to numeric variables using
-the <code>input</code> function.</p>
-<p>The last step is the calculation of the age from the three components.
-Since not all three time units are specified for every row, we cannot use
-the standard arithmetic of <code>years + months + days</code>, because the missing
-values would propagate. We need to use the <code>sum</code> function instead.</p>
-<p>Putting it all together, we get the correct output:</p>
+<p>One thing that&rsquo;s neat to notice here is that the <em>p</em>-value is printed by SAS
+using a special format. Since user&rsquo;s are normally not interested in the <em>exact</em>
+value when it is less than $10^{-4}$ ODS just prints &ldquo;&lt;.0001.&rdquo; This doesn&rsquo;t mean
+SAS doesn&rsquo;t calculate the exact <em>p</em>-value as we can see from the data set
+produced with <code>ODS OUTPUT</code>. It stores the actual numeric value, so the BFB
+computation can proceed without issues. This is what it looks like:</p>
 
 
 
@@ -784,58 +826,53 @@ values would propagate. We need to use the <code>sum</code> function instead.</p
 
 
 
-<figure id="figure-the-result">
+<figure id="figure-the-bayes-factor-bounds-from-our-proc-reg-example">
 
 
-  <a data-fancybox="" href="/post/21-09-sas-regex-date-cleanup/FIXED_DS_hu37f587f0a5cd00ab598beb8689b70b5f_34165_2000x2000_fit_lanczos_2.PNG" data-caption="The Result">
+  <a data-fancybox="" href="/post/24/11-from-p-values-to-bayes-factor/reg_hu8bfa6fceface903fe712ffe709e7ead3_58561_2000x2000_fit_lanczos_2.png" data-caption="The Bayes factor bounds from our PROC REG example.">
 
 
-  <img data-src="/post/21-09-sas-regex-date-cleanup/FIXED_DS_hu37f587f0a5cd00ab598beb8689b70b5f_34165_2000x2000_fit_lanczos_2.PNG" class="lazyload" alt="" width="867" height="251">
+  <img data-src="/post/24/11-from-p-values-to-bayes-factor/reg_hu8bfa6fceface903fe712ffe709e7ead3_58561_2000x2000_fit_lanczos_2.png" class="lazyload" alt="" width="1291" height="354">
 </a>
 
 
   
   
   <figcaption>
-    The Result
+    The Bayes factor bounds from our PROC REG example.
   </figcaption>
 
 
 </figure>
 
-<h2 id="complete-code">Complete Code</h2>
-<pre><code class="language-sas">data fixed;
-    set raw;
-    
-   /* define the regex patterns */
-   year_rxid  = prxparse('/^(\d{2}).*/');
-   month_rxid = prxparse('/.*?(\d{1,2}).M.*/i');
-   day_rxid   = prxparse('/.*?(\d{1,2}).D\D*$/i');   /* match 2 digits followed by D and non-digit chars  */
-  
-   /* make sure we have enough space to store the extraction */
-   length year_dig_str month_dig_str day_dig_str $4;
-   
-   /* match into strings */
-   /* match into strings */
-   if prxmatch(year_rxid, STR_AGE)  then year_dig_str = prxposn(year_rxid,1,STR_AGE);
-   if prxmatch(month_rxid, STR_AGE) then month_dig_str = prxposn(month_rxid,1,STR_AGE);
-   if prxmatch(day_rxid, STR_AGE)   then day_dig_str = prxposn(day_rxid,1, STR_AGE);
-   
-   /* use input to convert str -&gt; numeric */
-   years  = input(year_dig_str, ? 12.);
-   months = input(month_dig_str, ? 12.);
-   days   = input(day_dig_str, ? 12.);
-   
-   /* Use SUM function when calculating age
-    to avoid missing values propagating  */
-   age = sum(years,months/12,days/365.25);
-   
-   /* get rid of temporary variables */ 
-   drop month_rxid month_dig_str year_rxid year_dig_str day_rxid day_dig_str;
-   run;
-   
-proc print data=fixed; run;
-</code></pre>
+<p>You can try these code snippets out yourself using 
+<a href="https://welcome.oda.sas.com/" target="_blank" rel="noopener">SAS OnDemand for Academics</a>
+or 
+<a href="https://www.sas.com/en_us/software/viya-for-learners.html" target="_blank" rel="noopener">Viya for Learners</a>.</p>
+<p>The bound used in this post is one recommendation by Benjamin and Berger (2019)
+to improve scientific result reporting during this time in which we&rsquo;re slowly
+trying to move away from <em>p</em>-values. To learn more about alternative bounds and
+the conditions in which they hold, I would recommend the very readable overview
+of the subject of by Held and Ott (2018).</p>
+<h2 id="references">References</h2>
+<p>Benjamin, D. J., and Berger, J. O. (2019), &ldquo;Three Recommendations for Improving
+the Use of p-Values,&rdquo; <em>The American Statistician</em>, ASA Website, 73, 186–191.
+<a href="https://doi.org/10.1080/00031305.2018.1543135">https://doi.org/10.1080/00031305.2018.1543135</a>.</p>
+<p>Held, L., and Ott, M. (2018), &ldquo;On p-Values and Bayes Factors,&rdquo; <em>Annual Review of
+Statistics and Its Application</em>, Annual Reviews, 5, 393–419.
+<a href="https://doi.org/https://doi.org/10.1146/annurev-statistics-031017-100307">https://doi.org/https://doi.org/10.1146/annurev-statistics-031017-100307</a>.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>This doesn&rsquo;t solve all problems with hypothesis testing. In
+particular, see section 7.4 in BDA3 for limitations. You may also
+enjoy the critique offered at
+
+<a href="https://datacolada.org/78" target="_blank" rel="noopener">DataColada</a>. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
 
     </div>
 
@@ -848,11 +885,11 @@ proc print data=fixed; run;
 
 <div class="article-tags">
   
-  <a class="badge badge-light" href="/tag/data-cleaning/">data-cleaning</a>
+  <a class="badge badge-light" href="/tag/bayesian/">bayesian</a>
   
   <a class="badge badge-light" href="/tag/data-step/">data-step</a>
   
-  <a class="badge badge-light" href="/tag/regex/">regex</a>
+  <a class="badge badge-light" href="/tag/ods/">ods</a>
   
   <a class="badge badge-light" href="/tag/sas/">sas</a>
   
@@ -871,7 +908,7 @@ proc print data=fixed; run;
       
       
       <li>
-        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/&amp;text=Cleaning%20up%20a%20Date%20String%20with%20RegEx%20in%20SAS" target="_blank" rel="noopener" class="share-btn-twitter">
+        <a href="https://twitter.com/intent/tweet?url=https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/&amp;text=From%20p-Values%20to%20Bayes%20Factors" target="_blank" rel="noopener" class="share-btn-twitter">
           <i class="fab fa-twitter"></i>
         </a>
       </li>
@@ -884,7 +921,7 @@ proc print data=fixed; run;
       
       
       <li>
-        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/&amp;t=Cleaning%20up%20a%20Date%20String%20with%20RegEx%20in%20SAS" target="_blank" rel="noopener" class="share-btn-facebook">
+        <a href="https://www.facebook.com/sharer.php?u=https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/&amp;t=From%20p-Values%20to%20Bayes%20Factors" target="_blank" rel="noopener" class="share-btn-facebook">
           <i class="fab fa-facebook"></i>
         </a>
       </li>
@@ -897,7 +934,7 @@ proc print data=fixed; run;
       
       
       <li>
-        <a href="mailto:?subject=Cleaning%20up%20a%20Date%20String%20with%20RegEx%20in%20SAS&amp;body=https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/" target="_blank" rel="noopener" class="share-btn-email">
+        <a href="mailto:?subject=From%20p-Values%20to%20Bayes%20Factors&amp;body=https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/" target="_blank" rel="noopener" class="share-btn-email">
           <i class="fas fa-envelope"></i>
         </a>
       </li>
@@ -910,7 +947,7 @@ proc print data=fixed; run;
       
       
       <li>
-        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/&amp;title=Cleaning%20up%20a%20Date%20String%20with%20RegEx%20in%20SAS" target="_blank" rel="noopener" class="share-btn-linkedin">
+        <a href="https://www.linkedin.com/shareArticle?url=https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/&amp;title=From%20p-Values%20to%20Bayes%20Factors" target="_blank" rel="noopener" class="share-btn-linkedin">
           <i class="fab fa-linkedin-in"></i>
         </a>
       </li>
@@ -923,7 +960,7 @@ proc print data=fixed; run;
       
       
       <li>
-        <a href="whatsapp://send?text=Cleaning%20up%20a%20Date%20String%20with%20RegEx%20in%20SAS%20https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+        <a href="whatsapp://send?text=From%20p-Values%20to%20Bayes%20Factors%20https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/" target="_blank" rel="noopener" class="share-btn-whatsapp">
           <i class="fab fa-whatsapp"></i>
         </a>
       </li>
@@ -936,7 +973,7 @@ proc print data=fixed; run;
       
       
       <li>
-        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/21-09-sas-regex-date-cleanup/&amp;title=Cleaning%20up%20a%20Date%20String%20with%20RegEx%20in%20SAS" target="_blank" rel="noopener" class="share-btn-weibo">
+        <a href="https://service.weibo.com/share/share.php?url=https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/&amp;title=From%20p-Values%20to%20Bayes%20Factors" target="_blank" rel="noopener" class="share-btn-weibo">
           <i class="fab fa-weibo"></i>
         </a>
       </li>
@@ -1088,15 +1125,15 @@ proc print data=fixed; run;
     <h3>Related</h3>
     <ul>
       
-      <li><a href="/post/21-07-proc-import-to-data-step-with-regex/">From Proc Import to a Data Step with Regex</a></li>
+      <li><a href="/post/23-08-univariate-mi/">Univariate Missing Data with PROC MI</a></li>
       
-      <li><a href="/post/22-08-zillow-data/">Loading Zillow Housing Data in SAS</a></li>
+      <li><a href="/post/23-05-sample-regression-lines/">Sampling Regression Lines</a></li>
       
-      <li><a href="/post/22-04-sas-indsname-option/">The INDSNAME Option in SAS</a></li>
-      
-      <li><a href="/post/24/11-from-p-values-to-bayes-factor/">From p-Values to Bayes Factors</a></li>
+      <li><a href="/post/23-05-simple-regression-with-proc-mcmc/">Simple Regression With PROC MCMC</a></li>
       
       <li><a href="/post/22-11-csv2ds/">CSV2DS</a></li>
+      
+      <li><a href="/post/22-08-zillow-data/">Loading Zillow Housing Data in SAS</a></li>
       
     </ul>
   </div>

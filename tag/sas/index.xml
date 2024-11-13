@@ -5,12 +5,232 @@
     <link>https://dmsenter89.github.io/tag/sas/</link>
       <atom:link href="https://dmsenter89.github.io/tag/sas/index.xml" rel="self" type="application/rss+xml" />
     <description>sas</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Thu, 18 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 13 Nov 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>sas</title>
       <link>https://dmsenter89.github.io/tag/sas/</link>
     </image>
+    
+    <item>
+      <title>From p-Values to Bayes Factors</title>
+      <link>https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/</link>
+      <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/</guid>
+      <description>&lt;p&gt;Most medical papers featuring statistical analysis still utilize a hypothesis
+testing framework. Data is collected, an analysis is run, a &lt;em&gt;p&lt;/em&gt;-value reported,
+and &amp;ndash; if it is found to be below the magic threshold of 0.05 &amp;ndash; the finding is
+declared &amp;ldquo;(statistically) significant.&amp;rdquo; The authors then suggest, with varying
+degrees of explicitness, that their results support their preferred hypothesis,
+or &amp;ndash; in some less modest cases &amp;ndash; may go as far as claiming to have found
+&amp;ldquo;proof&amp;rdquo; their preferred hypothesis. Criticism of this methodology is old, and
+will not be rehashed here. Suffice it to say that the &lt;em&gt;p&lt;/em&gt;-value is typically
+constructed conditional on a strawman &amp;ldquo;null hypothesis&amp;rdquo; being true, and as such
+doesn&amp;rsquo;t provide direct evidence concerning any specific alternative hypothesis
+the researchers are actually interested in. What we&amp;rsquo;re left with is a general
+desire to say something along the lines of &amp;ldquo;Based on the data I have collected,
+I now have more/less reason to believe that my preferred hypothesis is correct.&amp;rdquo;
+&lt;em&gt;P&lt;/em&gt;-values aside, there exists a measure to express this idea: it is often
+called the Bayes factor.&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;h2 id=&#34;the-bayes-factor-and-its-bound&#34;&gt;The Bayes Factor and Its Bound&lt;/h2&gt;
+&lt;p&gt;Let&amp;rsquo;s start with the basic idea. We can frame the problem of how likely a
+particular model $M$ is given data $D$ that we have collected by using Bayes
+theorem:&lt;/p&gt;
+&lt;p&gt;$$\Pr(M|D) = \frac{\Pr(D|M)\Pr(M)}{\Pr(D)}$$&lt;/p&gt;
+&lt;p&gt;Suppose you have two competing models as explanations for your data,
+$M_{1}$ and $M_{2}$. If you want to know if the data favors one model
+over another, you could simply take that ratio:&lt;/p&gt;
+&lt;p&gt;$$\frac{\Pr(M_{2}|D)}{\Pr(M_{1}|D)} = \underset{\text{ Bayes Factor}}{\underbrace{\frac{\Pr(D|M_{2})}{\Pr(D|M_{1})}}} \times \underset{\text{Prior Odds}}{\underbrace{\frac{\Pr(M_{2})}{\Pr(M_{1})}}}$$&lt;/p&gt;
+&lt;p&gt;Which model is in the numerator or denominator can be chosen by convenience. As
+written above, a larger value of this ratio favors $M_2$ over $M_1$, while small
+values of the ratio favor $M_1$ over $M_2$.&lt;/p&gt;
+&lt;p&gt;Substitute in your traditional notation for a null-hypothesis $H_{0}$
+and alternative hypothesis $H_{1}$ and we can compare two different
+Bayes factors, $\text{BF}_{10}$ which compares the alternative
+hypothesis to the null, or $\text{BF}_{01}$ which compares the null to
+the the alternative. For illustrative purposes, consider the case of&lt;/p&gt;
+&lt;p&gt;$$\mathrm{BF}_{10} = \frac{1}{\mathrm{BF}_{01}} = 10$$&lt;/p&gt;
+&lt;p&gt;We can interpret this to say that the data favor the alternative
+hypothesis 10 to 1 compared to the null. In other words, bigger values
+of $ \text{ BF }_{10} $ correspond to greater evidence in favor of $H_{1}$
+over $H_{0}$, whereas smaller values of $\text{BF}_{01}$ favor $H_{1}$
+over $H_{0}$.&lt;/p&gt;
+&lt;p&gt;In general, constructing a Bayes factor requires modeling. What we &lt;em&gt;can&lt;/em&gt;
+do without modeling, however, is provide reasonable bounds for the Bayes
+factor - a minimum bound for $\text{BF}_{01}$ or &amp;ndash; equivalently &amp;ndash; a
+maximum bound for $\text{BF}_{10}$. Benjamin and Berger (2019) recommend
+a particularly simple upper bound for the Bayes factor that can be shown
+to hold in a wide variety of situations:&lt;/p&gt;
+&lt;p&gt;$$\text{ BF}_{10} \leq \text{ BFB } = \frac{1}{- ep\log(p)}$$&lt;/p&gt;
+&lt;p&gt;This approximation is valid for $p &amp;lt; \frac{1}{e} \approx 0.367$.&lt;/p&gt;
+&lt;h2 id=&#34;adding-bayes-factors-to-sas-output&#34;&gt;Adding Bayes Factors to SAS Output&lt;/h2&gt;
+&lt;p&gt;There is an easy way to start adding such Bayes Factor bounds to your
+existing SAS workflow. Did you know that you can convert any ODS output
+table to a SAS data set? That way you can access any reported value for
+later analysis. For our purposes, this means we can access any test statistic
+or &lt;em&gt;p&lt;/em&gt;-value reported by SAS and use them to calculate the appropriate Bayes
+factor bounds. I&amp;rsquo;ll show two simple examples.&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s say I want to employ a bound for the output of PROC TTEST. I can look up
+the relevant table name in the SAS/STAT User&amp;rsquo;s Guide in the &amp;ldquo;ODS Table Names&amp;rdquo;
+section under the PROCs &amp;ldquo;Details&amp;rdquo; &amp;ndash; in this case, I want to use the table named
+&lt;code&gt;TTests&lt;/code&gt;. I can then save this table to a SAS data set using &lt;code&gt;ods output&lt;/code&gt;. To
+save typing, we&amp;rsquo;ll use the &lt;code&gt;filename&lt;/code&gt; and &lt;code&gt;include&lt;/code&gt; statements to utilize the
+available code for the Getting Started example in TTest:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;filename tgs url
+  &#39;https://raw.githubusercontent.com/sassoftware/doc-supplement-statug/refs/heads/main/Examples/r-z/ttegs1.sas&#39;;
+ods output TTests=res; /* this line exports the TTests table to &amp;quot;res&amp;quot; */
+%include tgs;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Looking at my new data set, I can see that the &lt;em&gt;p&lt;/em&gt;-value is saved to a variable
+named &lt;code&gt;Probt&lt;/code&gt;. I can now use a DATA step to calculate both the BFB and the
+reciprocal of it, the minimum Bayes factor:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data bayes;
+  set res;
+  BFB = 1/(-CONSTANT(&#39;E&#39;)*Probt*Log(Probt));
+  BFmin = 1/BFB;
+run;
+proc print; run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;I&amp;rsquo;m omitting the &lt;code&gt;data&lt;/code&gt; keyword from the PROC PRINT call to keep things concise.
+This way, it automatically uses the last data set in use. If you run these two
+code snippets, you&amp;rsquo;ll get the following table:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-bayes-factor-bounds-from-our-proc-ttest-example&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/ttest_hu495a71d51f4100df1b1cbf22bbde0982_13685_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The Bayes factor bounds from our PROC TTest example.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/ttest_hu495a71d51f4100df1b1cbf22bbde0982_13685_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;737&#34; height=&#34;103&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The Bayes factor bounds from our PROC TTest example.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;This suggests that for our particular example, the most favorable
+interpretation would favor the alternative hypothesis over the null by a
+rate of about 5.4-to-1.&lt;/p&gt;
+&lt;p&gt;Another common source for &lt;em&gt;p&lt;/em&gt;-values is regression output. Each parameter estimate
+is accompanied by a &lt;em&gt;p&lt;/em&gt;-value. We can use the same procedure as above to look
+up the relevant ODS table name and use &lt;code&gt;ODS OUTPUT&lt;/code&gt; to save that table for later
+use:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;ods output ParameterEstimates=ParmEst;
+proc reg data=sashelp.baseball;
+   id name team league;
+   model logSalary = nhits nbb yrmajor crhits;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This table contains a little more detail and a pretty large BFB, so I decided to
+specify which variables I want to print and added a &lt;code&gt;FORMAT&lt;/code&gt; to the &lt;code&gt;PRINT&lt;/code&gt;
+call.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data bayes;
+  set ParmEst;
+  BFB = 1/(-CONSTANT(&#39;E&#39;)*Probt*Log(Probt));
+  BFmin = 1/BFB;
+run;
+
+proc print noobs;
+  var Variable Label Estimate Probt BF:;
+  format BF: COMMA14.2;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One thing that&amp;rsquo;s neat to notice here is that the &lt;em&gt;p&lt;/em&gt;-value is printed by SAS
+using a special format. Since user&amp;rsquo;s are normally not interested in the &lt;em&gt;exact&lt;/em&gt;
+value when it is less than $10^{-4}$ ODS just prints &amp;ldquo;&amp;lt;.0001.&amp;rdquo; This doesn&amp;rsquo;t mean
+SAS doesn&amp;rsquo;t calculate the exact &lt;em&gt;p&lt;/em&gt;-value as we can see from the data set
+produced with &lt;code&gt;ODS OUTPUT&lt;/code&gt;. It stores the actual numeric value, so the BFB
+computation can proceed without issues. This is what it looks like:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-the-bayes-factor-bounds-from-our-proc-reg-example&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/reg_hu8bfa6fceface903fe712ffe709e7ead3_58561_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;The Bayes factor bounds from our PROC REG example.&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/24/11-from-p-values-to-bayes-factor/reg_hu8bfa6fceface903fe712ffe709e7ead3_58561_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;1291&#34; height=&#34;354&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    The Bayes factor bounds from our PROC REG example.
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;You can try these code snippets out yourself using 
+&lt;a href=&#34;https://welcome.oda.sas.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SAS OnDemand for Academics&lt;/a&gt;
+or 
+&lt;a href=&#34;https://www.sas.com/en_us/software/viya-for-learners.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Viya for Learners&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The bound used in this post is one recommendation by Benjamin and Berger (2019)
+to improve scientific result reporting during this time in which we&amp;rsquo;re slowly
+trying to move away from &lt;em&gt;p&lt;/em&gt;-values. To learn more about alternative bounds and
+the conditions in which they hold, I would recommend the very readable overview
+of the subject of by Held and Ott (2018).&lt;/p&gt;
+&lt;h2 id=&#34;references&#34;&gt;References&lt;/h2&gt;
+&lt;p&gt;Benjamin, D. J., and Berger, J. O. (2019), &amp;ldquo;Three Recommendations for Improving
+the Use of p-Values,&amp;rdquo; &lt;em&gt;The American Statistician&lt;/em&gt;, ASA Website, 73, 186–191.
+&lt;a href=&#34;https://doi.org/10.1080/00031305.2018.1543135&#34;&gt;https://doi.org/10.1080/00031305.2018.1543135&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Held, L., and Ott, M. (2018), &amp;ldquo;On p-Values and Bayes Factors,&amp;rdquo; &lt;em&gt;Annual Review of
+Statistics and Its Application&lt;/em&gt;, Annual Reviews, 5, 393–419.
+&lt;a href=&#34;https://doi.org/https://doi.org/10.1146/annurev-statistics-031017-100307&#34;&gt;https://doi.org/https://doi.org/10.1146/annurev-statistics-031017-100307&lt;/a&gt;.&lt;/p&gt;
+&lt;section class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34; role=&#34;doc-endnote&#34;&gt;
+&lt;p&gt;This doesn&amp;rsquo;t solve all problems with hypothesis testing. In
+particular, see section 7.4 in BDA3 for limitations. You may also
+enjoy the critique offered at
+
+&lt;a href=&#34;https://datacolada.org/78&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;DataColada&lt;/a&gt;. &lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;
+</description>
+    </item>
     
     <item>
       <title>New MI Feature: Flux Statistics</title>
