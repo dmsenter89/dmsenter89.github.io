@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>steelman | Michael&#39;s Site</title>
+    <link>https://dmsenter89.github.io/tag/steelman/</link>
+      <atom:link href="https://dmsenter89.github.io/tag/steelman/index.xml" rel="self" type="application/rss+xml" />
+    <description>steelman</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>steelman</title>
+      <link>https://dmsenter89.github.io/tag/steelman/</link>
+    </image>
+    
+    <item>
+      <title>Lotteries and Pascal&#39;s Mugging</title>
+      <link>https://dmsenter89.github.io/post/24/12-lotteries-and-pascals-mugging/</link>
+      <pubDate>Wed, 18 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/12-lotteries-and-pascals-mugging/</guid>
+      <description>&lt;p&gt;Most have heard of 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Pascal%27s_wager&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pascal&amp;rsquo;s wager&lt;/a&gt;, but have you heard of the thought experiment known as 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Pascal%27s_mugging&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pascal&amp;rsquo;s mugging&lt;/a&gt;? The mugging attempts to reframe the essence of the wager argument using only finite values, thereby getting around some standard objections to the wager argument.&lt;/p&gt;
+&lt;h2 id=&#34;pascals-mugging&#34;&gt;Pascal&amp;rsquo;s Mugging&lt;/h2&gt;
+&lt;p&gt;It appears the term was coined in a 
+&lt;a href=&#34;https://web.archive.org/web/20241213091126/https://www.lesswrong.com/posts/a5JAiTdytou3Jg749/pascal-s-mugging-tiny-probabilities-of-vast-utilities&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blog post&lt;/a&gt; by Eliezer Yudkowsky and framed in terms of potential risks posed by AI tasked with solving a problem. Nick Bostrom retells the mugging as 
+&lt;a href=&#34;https://doi.org/10.1093/analys/anp062&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;a conversation&lt;/a&gt; between Pascal and a hypothetical extra-dimensional mugger. The second part of &amp;ldquo;deal&amp;rdquo; in the paper is a bit extreme, but the initial part &amp;ndash; offering a fixed cost of money &lt;em&gt;now&lt;/em&gt; for a low probability payoff &lt;em&gt;tomorrow&lt;/em&gt; &amp;ndash; reminded me a bit of one of my most frequently discussed posts from 2022 on 
+&lt;a href=&#34;../../22-09-lottery/&#34;&gt;whether it makes sense to play lottery&lt;/a&gt;. To be fair, that was two posts rolled into one &amp;ndash; the first part is about how point estimates can be misleading, particularly for skewed distributions, and the second consisted of a mini-benchmark using a simple example calculation to make that point.&lt;/p&gt;
+&lt;p&gt;The beginning of Bostrom&amp;rsquo;s version goes something like this: a mugger approaches Pascal and asks for his wallet. Unfortunately, the mugger forgot his weapon so Pascal is disinclined to acquiesce to his request. To still get the wallet, the mugger offers Pascal a deal: give the mugger the wallet anyways, valued at $x$ USD, and the next day the mugger will return and pay Pascal $N x$ USD in return. As the story progresses, $N$ gets larger. We obviously don&amp;rsquo;t just believe the mugger, so there is some (small) probability $p$ that the mugger will return with the promised reward. The idea behind the experiment is that if $N$ grows sufficiently large then for any non-zero $p$ the expected value of paying the mugger becomes positive. It then veers off talking about other utility issues to make the payout better, but this early part of the conversation is essentially equivalent to a lottery game. Pay for the ticket now in the hopes that come game night the right numbers show up and you&amp;rsquo;re rich.&lt;/p&gt;
+&lt;p&gt;As stated, it would appear that it is reasonable for Pascal to pay the mugger and &amp;ndash; for a sufficiently large jackpot &amp;ndash; to play the lottery, even though intuitively it strikes us as the &amp;ldquo;wrong answer&amp;rdquo; given the low probability of winning. This got me thinking: can we steelman the case for playing the lottery by ignoring the magnitude of the win?&lt;/p&gt;
+&lt;h2 id=&#34;lets-crunch-some-numbers&#34;&gt;Let&amp;rsquo;s Crunch Some Numbers&lt;/h2&gt;
+&lt;p&gt;If we ignore the question of the exact magnitude of the lottery win, we can divide the event space into three possibilities &amp;ndash; we are either worse off (cost of buying ticket), win back the ticket cost only, or win more money than the ticket cost so that we have a net gain from playing. Working off of the published odds again as a shortcut, we wind up with the following probabilities:&lt;/p&gt;
+&lt;p&gt;$$
+\begin{cases} Pr(\text{loss}) = 24/25 \\&lt;br&gt;
+Pr(\text{even}) = 1/38 \\&lt;br&gt;
+Pr(\text{gain}) = 13/950
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll postulate that people don&amp;rsquo;t really care about just breaking even on the ticket, so from a decision point of view it probably makes sense to reduce this to a binomial problem: I either win or loose on each ticket, where loosing includes the case of breaking even. People usually buy a handful of tickets, call it $n$. So now I can write a random variable representing my number of winning tickets as&lt;/p&gt;
+&lt;p&gt;$$
+X \sim \mathrm{Bin}\left(n, \frac{13}{950} \right).
+$$&lt;/p&gt;
+&lt;p&gt;We already showed that within any reasonable lifetime, there is a vanishingly small chance you&amp;rsquo;ll become rich from playing the lottery. To steelman, we&amp;rsquo;ll say that the utility of playing the lottery comes not from the money won but from the fun of playing.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll start by asserting that winning is more fun than loosing. So how often can we loose and still have fun? We definitely don&amp;rsquo;t want to &lt;em&gt;always&lt;/em&gt; loose, so $x&amp;gt;0$ is required. Winning more often than we loose is unlikely by design of the lottery so that can be our upper bound. Our realistic expectation should then be something like $0 &amp;lt; x \leq \left \lfloor{n/2}\right \rfloor$. If $x$ is in this window, I&amp;rsquo;ll call it a &amp;ldquo;Good Game&amp;rdquo; of lottery.&lt;/p&gt;
+&lt;p&gt;Realistically, you&amp;rsquo;re not going to buy 100+ lottery tickets. Let&amp;rsquo;s say an average person likely wouldn&amp;rsquo;t buy more than 20 tickets, which still feels like plenty. So how likely is it you&amp;rsquo;ll have a good game, given as a function of the number of lottery tickets purchased? Let&amp;rsquo;s do a quick DATA step and find out.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-sas&#34;&gt;data lottery;
+  p=13/950;
+
+  do N=2 to 20;
+    gg=cdf(&#39;Binomial&#39;, floor(N/2), p, N) - cdf(&#39;Binomial&#39;, 0, p, N);
+    output;
+  end;
+; run;
+
+proc sgplot data=lottery;
+  scatter x=N y=gg;
+  xaxis label=&#39;Number of Tickets&#39;;
+  yaxis label=&#39;Probability of a Good Game&#39;;
+run;
+&lt;/code&gt;&lt;/pre&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure &gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://dmsenter89.github.io/post/24/12-lotteries-and-pascals-mugging/gg_hu8a67ac3c7eccf0e3fa506f4b6959062b_12022_2000x2000_fit_lanczos_2.png&#34; &gt;
+
+
+  &lt;img data-src=&#34;https://dmsenter89.github.io/post/24/12-lotteries-and-pascals-mugging/gg_hu8a67ac3c7eccf0e3fa506f4b6959062b_12022_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;640&#34; height=&#34;480&#34;&gt;
+&lt;/a&gt;
+
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;So in the best case scenario, where we buy 20 tickets, we only have a chance of approximately 0.24 of having a good time. In other words, even with the generous assumption you&amp;rsquo;d be happy to loose 19 games if you win 1 you&amp;rsquo;d still be disappointed most of the time. Given my experience, I&amp;rsquo;d say many people will probably purchase fewer than 20 tickets. Perhaps 2 to 6. In such cases, you&amp;rsquo;re still bound to be disappointed. I&amp;rsquo;d say even with this steelmanning, it doesn&amp;rsquo;t make sense. Instead of buying a lottery ticket, perhaps buy a coffee and a donut for similar cost but with a guaranteed happiness payoff.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
