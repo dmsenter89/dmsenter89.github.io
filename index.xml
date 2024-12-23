@@ -5,12 +5,65 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 23 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Remote Hosted, Local Jupyter?!</title>
+      <link>https://dmsenter89.github.io/post/24/12-remote-hosted-local-jupyter/</link>
+      <pubDate>Mon, 23 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/12-remote-hosted-local-jupyter/</guid>
+      <description>&lt;p&gt;If you visit the 
+&lt;a href=&#34;https://jupyter.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Project Jupyter website&lt;/a&gt; you&amp;rsquo;ll
+encounter a bunch of &amp;ldquo;try it in your browser&amp;rdquo; buttons. If you&amp;rsquo;ve used Jupyter
+for a decade or so like me, you probably have also been ignoring these buttons.
+And if you have clicked on them, you might have been lead to a
+
+&lt;a href=&#34;https://mybinder.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;mybinder.org&lt;/a&gt;. Don&amp;rsquo;t get me wrong, mybinder is cool. It
+creates a docker image that remote-hosts a live environment so that you can
+share your interactive notebooks on the web. Cool stuff. But I just found
+something better.&lt;/p&gt;
+&lt;p&gt;Have you ever heard of 
+&lt;a href=&#34;https://webassembly.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;WebAssembly&lt;/a&gt;, or wasm as it&amp;rsquo;s
+abbreviated? The elevator pitch for WebAssenmbly can be summarized as binary
+format for a locally runnin, sandboxed JavaScript VM. The idea being that
+computation can essentially be off-loaded from a remote server to the machine
+running the browser that&amp;rsquo;s viewing the website. And you can now probably guess
+where this is going&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Thanks to wasm, there&amp;rsquo;s now an online 
+&lt;a href=&#34;https://jupyter.org/try-jupyter/lab/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JupyterLab
+instance&lt;/a&gt; featuring a Python kernel and a
+SQLite kernel. The Python kernel is powered by
+
+&lt;a href=&#34;https://pyodide.org/en/stable/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Pyodide&lt;/a&gt;, a WASM port of CPython. While it&amp;rsquo;s
+not 1-1 feature complete, it&amp;rsquo;s quite impressive already. Solve an ODE with
+SciPy? Data analytics with Pandas? Visualization with Matplotlib? Fancy plots
+with Bokeh? This instance has got you covered. The governing 
+&lt;a href=&#34;https://github.com/jupyterlite&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;JupyterLite
+project&lt;/a&gt; is open-source and even includes
+instructions on 
+&lt;a href=&#34;https://jupyterlite.readthedocs.io/en/latest/quickstart/deploy.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;how to deploy JupyterLite on GitHub
+Pages&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;What&amp;rsquo;s wild to me is that yes, you can run this on a GitHub pages instance.
+Because you don&amp;rsquo;t actually need a backend, only a static site server, since all
+computations happen locally. You access your local files when you upload from a
+local VM, so even though you&amp;rsquo;re &amp;ldquo;uploading&amp;rdquo; you don&amp;rsquo;t actually need to share
+your data with the remote server. It&amp;rsquo;s quite impressive. Again, not everything
+works 100% yet, but you can get surprisingly far with this setup. You can even
+get a taste of it without leaving &lt;em&gt;this blog&lt;/em&gt; because you can embed a REPL
+provided by JupyterLite&amp;rsquo;s demo instance as an iframe. Feel free to play with the
+REPL below and checkout the JupyterLite project. It&amp;rsquo;s really cool.&lt;/p&gt;
+&lt;iframe
+  src=&#34;https://jupyterlite.github.io/demo/repl/index.html?kernel=python&amp;toolbar=1&#34;
+  width=&#34;100%&#34;
+  height=&#34;100%&#34;
+&gt;&lt;/iframe&gt;
+</description>
+    </item>
     
     <item>
       <title>Lotteries and Pascal&#39;s Mugging</title>
