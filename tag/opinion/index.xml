@@ -5,12 +5,64 @@
     <link>https://dmsenter89.github.io/tag/opinion/</link>
       <atom:link href="https://dmsenter89.github.io/tag/opinion/index.xml" rel="self" type="application/rss+xml" />
     <description>opinion</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Mon, 25 Nov 2024 14:02:54 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 24 Dec 2024 10:33:04 -0500</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>opinion</title>
       <link>https://dmsenter89.github.io/tag/opinion/</link>
     </image>
+    
+    <item>
+      <title>Convenience Sampling and Mensa</title>
+      <link>https://dmsenter89.github.io/post/24/12-convenience-sampling-and-mensa/</link>
+      <pubDate>Tue, 24 Dec 2024 10:33:04 -0500</pubDate>
+      <guid>https://dmsenter89.github.io/post/24/12-convenience-sampling-and-mensa/</guid>
+      <description>&lt;p&gt;Substack&amp;rsquo;s algorithm for figuring out what I like to read is still serving up
+some odd stuff, but this time it found a good article. In 
+&lt;a href=&#34;https://www.emilkirkegaard.com/p/the-mensa-fallacy&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;The Mensa
+Fallacy&lt;/a&gt; Emil Kirkegaard
+takes on 
+&lt;a href=&#34;https://doi.org/10.1016/j.intell.2017.09.001&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Karpinski et al (2018)&lt;/a&gt;
+which claimed that high intelligence is a risk factor for both psychological
+andd physiological disease. The claim in the paper is to a novel finding, but
+Kirkegaard cites a number of studies that would indicate problems with Karpinski&amp;rsquo;s
+arguments.&lt;/p&gt;
+&lt;p&gt;While the language in the post is a bit on the irreverent side, this seems to be
+a good example of the general difficulty with convenience studies. The latter
+are all over science, and many times used without much thought. You have a
+theory about a population $P$ but it&amp;rsquo;s hard to actually sample $p\in P$? Luckily
+for you there is a population $Q$ that is easy to sample such that $q\in Q
+\Rightarrow q\in P$. That&amp;rsquo;s where I&amp;rsquo;ve often seen it end. Maybe there&amp;rsquo;s an acknowledgment
+that $p\in P \nRightarrow p\in Q$, but that&amp;rsquo;s obviously not surprising or else
+$P=Q$ and there wasn&amp;rsquo;t a problem to begin with.&lt;/p&gt;
+&lt;p&gt;So what&amp;rsquo;s the problem? We&amp;rsquo;ve done random sampling on $Q$ and we have a nice
+unbiased estimater $\hat\theta_Q$ for our population. Is my estimator &lt;em&gt;also&lt;/em&gt;
+unbiased for $P$? A priori we have no grounds to think so. A popular
+illustration: assume I want to know the average height at my school or
+university (population $P$). I have no idea how tall random students are and
+it&amp;rsquo;s awkward to ask, but luckily the basketball team (population $Q$) publishes
+player stats that include the height of the players. So I go online, put all the
+stats in an Excel sheet, calculate the mean, and call it a day. That result
+would clearly not be particularly valuable for estimating the average height of
+all students at the school/uni. The problem is that a random sample of $Q$ does
+not necessarily translate into a random sample of $P$.&lt;/p&gt;
+&lt;p&gt;Subtle versions of this problem show up in real life research all the time. If
+we know something about (relevant) ways in which $Q$ differs from $P$, then we
+can make some adjustments to correct for the bias introduced by our sampling
+technique. Aside from us sampling from a specific group, the issue can also crop
+up when we try to &amp;ldquo;hijack&amp;rdquo; an existing RCT for secondary analysis, as for
+example discussed in 
+&lt;a href=&#34;https://www.betonit.ai/p/teachers_and_inhtml&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;this post on the Kindergarten
+study&lt;/a&gt; that I&amp;rsquo;ve been meaning to
+comment on for a bit. A related issue that requires care is the use of surrogate
+endpoints in clinical trials, where for example an easy and cheap to acquire lab
+value functions as a stand-in for the actual issue of interest that may be
+difficult, expensive or unpleasant to collect. Without a good understanding of
+relationship between a population defined by certain lab value cutoffs compared
+to the endpoint of interest, this may be not interpretable or provide much
+weaker evidence than we&amp;rsquo;d like.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>The Data Don&#39;t Speak for Themselves</title>
