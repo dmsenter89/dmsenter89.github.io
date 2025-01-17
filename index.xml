@@ -5,12 +5,130 @@
     <link>https://dmsenter89.github.io/</link>
       <atom:link href="https://dmsenter89.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Michael&#39;s Site</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 24 Dec 2024 10:33:04 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Fri, 17 Jan 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Michael&#39;s Site</title>
       <link>https://dmsenter89.github.io/</link>
     </image>
+    
+    <item>
+      <title>Cooling Utensils</title>
+      <link>https://dmsenter89.github.io/post/25/01-cooling-utensils/</link>
+      <pubDate>Fri, 17 Jan 2025 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/25/01-cooling-utensils/</guid>
+      <description>&lt;h2 id=&#34;background&#34;&gt;Background&lt;/h2&gt;
+&lt;p&gt;I have come across an interesting question in a kashrut course that I&amp;rsquo;m taking.
+What I find particularly interesting is the fact that since then, I have shared
+the question with many people and barring a solitary exception, the result has
+always been the same. The intuitively answer is given, which is incorrect,
+&lt;em&gt;despite&lt;/em&gt; the person knowing all the relevant physics facts that would lead to
+the correct answer. But for some reason, it&amp;rsquo;s not put together. I myself first
+answered the question incorrectly, and when it was pointed out to me had to
+think about the relevant facts before I was able to really get it. Since I have
+already shared this with several people and found it interesting, I thought I&amp;rsquo;d
+write it up here.&lt;/p&gt;
+&lt;p&gt;The question we had talked about was this: hot food is taken off the stove and
+moved into utensils. I put some on a plate and some in a bowl. Which one cools
+off to an edible temperature faster, the food on the plate or in the bowl?&lt;/p&gt;
+&lt;h2 id=&#34;building-intuition&#34;&gt;Building Intuition&lt;/h2&gt;
+&lt;p&gt;To make this problem tractable, let&amp;rsquo;s add a few details and make some
+assumptions. Let&amp;rsquo;s start with the food. Imagine something that&amp;rsquo;s liquid-y enough
+to be able to assume the shape of the container, but thick enough it can hold
+its shape on the plate for long enough to solve our problem. Think something
+like thick mashed potatos, but with the &amp;ldquo;spherical cow&amp;rdquo;-style assumption of it
+being homogenous so we don&amp;rsquo;t have to deal with pockets of different densities in
+the food. Let&amp;rsquo;s label our scenarios:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Scenario I:&lt;/strong&gt; I put the food inside a hemispherical bowl whose internal
+diameter is $r$, so my food takes on a half-sphere shape.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Scenario II:&lt;/strong&gt; I turn it upside down onto a plate so that I still have a
+half-sphere of hot food cooling down, just on a flat surface now.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For temperature purposes, imagine the cooked food being very hot &amp;ndash; 70C (158 F)
+&amp;ndash; and edible temperature being about 50C (122 F). Air is at a &amp;ldquo;room
+temperature&amp;rdquo; of 20C (68 F). Image both utensils &amp;ndash; the plate and bowl &amp;ndash; are
+made from the same homogenous material with thickness $d$.&lt;/p&gt;
+&lt;p&gt;The main thing we worry about with cooling is surface area. We know the rate
+that heat leaves our system is the surface intergral of the heat flux over the
+objects area, i.e.&lt;/p&gt;
+&lt;p&gt;$$ \dot{Q} = \oint_A q \,dA.$$&lt;/p&gt;
+&lt;p&gt;So to make cooling quicker, we either need to manipulate the surface area or
+change the heat flux, which depends on the temperature gradient and the
+materials involved.&lt;/p&gt;
+&lt;p&gt;For our purposes, we have two interfaces to deal with: the circular interface
+that touches the air in scenario I or the plate in scenario II, and the round
+surface that either touches the inside of the bowl in scenario I and the air in
+scenario II. By construction of the example those are nice values:
+$A_\text{circ} = \pi r^2$ and $A_\text{hemi}= 2 \pi r^2$. With that in hand:&lt;/p&gt;
+&lt;p&gt;$$\begin{aligned} \dot{Q}_{I} &amp;amp;= q_b\, 2 \pi r^2 + q_a \,\pi r^2 \\&lt;br&gt;
+\dot{Q}_{II} &amp;amp;= q_{b}\, \pi r^2 + q_a \, 2 \pi r^2 \end{aligned}$$&lt;/p&gt;
+&lt;p&gt;where $q_b$ is the heat flux at the utensil interface and $q_a$ the heat flux at
+the air interface. Since I&amp;rsquo;m mainly interested in which is faster, I can write
+this as a fraction:&lt;/p&gt;
+&lt;p&gt;$$\frac{\dot{Q}_{I}}{\dot{Q}_{II}} = \frac{2 q_b + q_a}{q_b + 2 q_a} $$&lt;/p&gt;
+&lt;p&gt;Virtually every one I have talked to about this assumes that the plate cools
+faster, which for our purposes means the above fraction is less than 1, which is
+fulfilled when $q_a &amp;lt; q_b &amp;lt; 0$ (remember that heat is leaving the system, so the
+fluxes are negative).&lt;/p&gt;
+&lt;p&gt;And there is our first snag: most everyone knows that air, like gases in
+general, are terrible conductors compared to solid materials, particularly
+ceramics and the like that are often used for utensils. As it turns out $|q_b|
+\gg |q_a|$ so we could frankly neglect the air interface when thinking about the
+cooling time and simply declare the bowl in scenario I the winner without
+further work.&lt;/p&gt;
+&lt;h3 id=&#34;go-newton&#34;&gt;Go Newton&lt;/h3&gt;
+&lt;p&gt;If we really wanted to, we could try to go further and solve something more
+precise. 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Newton%27s_law_of_cooling&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Newton&amp;rsquo;s law of
+cooling&lt;/a&gt;, familiar to
+all calculus students, let&amp;rsquo;s me calculate the rate of heat loss using only
+temperature as&lt;/p&gt;
+&lt;p&gt;$$ \dot{Q} = - h A \left(T(t) - T_\text{env}\right).$$&lt;/p&gt;
+&lt;p&gt;With $\dot{Q} = m c \frac{dT}{dt}$ where $m$ is the mass and $c$ is the specific
+heat capacity, this gives me an ODE in temperature only as&lt;/p&gt;
+&lt;p&gt;$$\frac{dT}{dt} = - {\frac{h A}{m c}} \left(T(t) - T_\text{env}\right)$$&lt;/p&gt;
+&lt;p&gt;which has the solution&lt;/p&gt;
+&lt;p&gt;$$T(t) = T_\text{env} + \left(T_0 - T_\text{env}\right)\,\mathrm{exp}(-K t)$$&lt;/p&gt;
+&lt;p&gt;where $K=hA/mc$. We&amp;rsquo;re only interested in the comparison of  $K_I$ and $K_{II}$,
+so it mostly focuses on finding $h$. The heat transfer coefficient of air for
+relevant scenarios can be looked up. The question is how to treat the utensil.
+It&amp;rsquo;s interesting to know that we can deal with heat transfer through walls by by
+an inverse additive relation like this:&lt;/p&gt;
+&lt;p&gt;$$ \frac{1}{h_\text{b}} = \frac{1}{h_{a}} + \frac{d}{k_b} + \frac{1}{h_f}$$&lt;/p&gt;
+&lt;p&gt;In this case, $h_a$ is the coefficient for air, $k_b$ is a coefficient for the
+utensil material, and $h_f$ the relevant coefficient for the food. Recall that
+$d$ is the thickness of the utensil.&lt;/p&gt;
+&lt;p&gt;While this is fine for a back-of-the-envelope calculation, technically it
+doesn&amp;rsquo;t apply. If the 
+&lt;a href=&#34;https://en.wikipedia.org/wiki/Biot_number&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Biot number&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;$$\mathrm{Bi} = h L / k, $$&lt;/p&gt;
+&lt;p&gt;is less than about 0.1 it is fine to ignore thermal processes inside of bodies
+and make the isothermal assumption inherent in the formulation of Newton&amp;rsquo;s law
+of cooling.&lt;/p&gt;
+&lt;p&gt;As per 
+&lt;a href=&#34;https://elibrary.asabe.org/abstract.asp?aid=44130&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the literature&lt;/a&gt; the
+thermal conductivity of mashed potatoes near our target temperatures is
+approximately $k =0.58 \mathrm{W} \mathrm{m}^{-1} \mathrm{K}^{-1}$. For our
+purposes, the characteristic length can be taken to be the hemisphere volume
+over area:&lt;/p&gt;
+&lt;p&gt;$$L = V/A = \left(\frac 23 \pi r^3 \right) \left( 3 \pi r^2 \right)^{-1} = \frac
+2 9 r. $$&lt;/p&gt;
+&lt;p&gt;The value $h$ should be averaged over the surfaces and I don&amp;rsquo;t feel like doing
+that. Let&amp;rsquo;s see how far we got with this:&lt;/p&gt;
+&lt;p&gt;$$\begin{aligned} \mathrm{Bi} &amp;amp;&amp;lt; 0.1 \\ \frac{100}{261} h\,r &amp;amp;&amp;lt; \frac {1}{10}
+\\ \Rightarrow h &amp;amp;&amp;lt; 261 / (1000 r) \end{aligned}$$&lt;/p&gt;
+&lt;p&gt;An Ikea bowl is about 5-6 in in length, so let&amp;rsquo;s use $r=0.07 \mathrm{m}$. With
+that we get the Biot number we want when $h&amp;lt;3.7$. Since 
+&lt;a href=&#34;https://help.solidworks.com/2015/english/SolidWorks/cworks/c_convection_heat_coefficient.htm&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;even for
+air&lt;/a&gt;
+we have $\mathcal{O}\left(h_\text{air}\right)= 10$ this looks like it won&amp;rsquo;t
+really hold. Oh well. Being more precise than this is getting to be overkill and
+I already spent too much time on this problem.&lt;/p&gt;
+&lt;p&gt;Long story short: if you want your food to cool faster, maximize surface area
+but also maximize surface area in contact with the utensil, not with air.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Convenience Sampling and Mensa</title>
