@@ -5,12 +5,30 @@
     <link>https://dmsenter89.github.io/tag/sas/</link>
       <atom:link href="https://dmsenter89.github.io/tag/sas/index.xml" rel="self" type="application/rss+xml" />
     <description>sas</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 18 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 18 Feb 2025 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://dmsenter89.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>sas</title>
       <link>https://dmsenter89.github.io/tag/sas/</link>
     </image>
+    
+    <item>
+      <title>New MI Post at SAS</title>
+      <link>https://dmsenter89.github.io/post/25/02-new-mi-post-at-sas/</link>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://dmsenter89.github.io/post/25/02-new-mi-post-at-sas/</guid>
+      <description>&lt;p&gt;I wrote a blog post for 
+&lt;a href=&#34;https://blogs.sas.com/content/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;blogs.sas.com&lt;/a&gt; that went
+live yesterday. This post walks you through how to run a Bayesian regression model
+with a multiply imputed data set such as those produced by PROC MI. What I like about
+this process is that you can get started working with a Bayesian model that includes
+missing data even if you&amp;rsquo;re not familiar with joint modeling techniques. It&amp;rsquo;s pretty neat
+and allows for knowledge transfer between your frequentist and Bayesian methods.&lt;/p&gt;
+&lt;p&gt;Go over to SAS to read my article entitled &amp;ldquo;
+&lt;a href=&#34;https://blogs.sas.com/content/subconsciousmusings/2025/02/17/getting-started-performing-a-bayesian-analysis-with-missing-data-in-sas/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Getting started performing a Bayesian analysis with missing data in SAS
+&lt;/a&gt;.&amp;rdquo;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Lotteries and Pascal&#39;s Mugging</title>
