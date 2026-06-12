@@ -1,6 +1,6 @@
 baseURL = "https://dmsenter89.github.io/"
 title = "Michael's Site"
-languageCode = "en-us"
+locale = "en-us"
 defaultContentLanguage = "en"
 enableEmoji = true
 enableRobotsTXT = true
