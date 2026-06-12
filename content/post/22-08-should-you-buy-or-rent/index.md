@@ -11,6 +11,7 @@ date: 2022-08-20T16:21:38-04:00
 lastmod: 2022-08-20T16:21:38-04:00
 featured: false
 draft: false
+math: false  # literal "$" appear as dollar amounts; do not load KaTeX
 private: false
 
 # Featured image

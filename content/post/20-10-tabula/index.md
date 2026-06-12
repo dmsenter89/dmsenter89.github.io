@@ -11,6 +11,7 @@ date: 2020-10-29T22:39:00-04:00
 lastmod: 2020-11-03T12:00:00-04:00
 featured: false
 draft: false
+math: false  # literal "$" appear as dollar amounts; do not load KaTeX
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

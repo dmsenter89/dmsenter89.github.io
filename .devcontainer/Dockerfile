@@ -3,7 +3,9 @@
 # [Choice] Go version (use -bullseye variants on local arm64/Apple Silicon): 1, 1.19, 1.18, 1-bullseye, 1.19-bullseye, 1.18-bullseye, 1-buster, 1.19-buster, 1.18-buster
 FROM mcr.microsoft.com/devcontainers/go:0-1-bullseye
 
-RUN wget -qcO /opt/hugo_release.deb https://github.com/gohugoio/hugo/releases/download/v0.81.0/hugo_extended_0.81.0_Linux-64bit.deb
+# Keep this in sync with HUGO_VERSION in .github/workflows/hugo.yml
+ARG HUGO_VERSION=0.148.2
+RUN wget -qcO /opt/hugo_release.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
 
 # [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \

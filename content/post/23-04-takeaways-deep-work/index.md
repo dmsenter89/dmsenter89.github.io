@@ -11,6 +11,12 @@ date: 2023-04-13
 featured: false
 draft: false
 
+cover:
+  image: "featured.jpg"
+  alt: "Book Cover"
+  caption: "Book Cover"
+  hiddenInSingle: true  # mirror Academic's preview_only: show in lists, not on the page
+
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.

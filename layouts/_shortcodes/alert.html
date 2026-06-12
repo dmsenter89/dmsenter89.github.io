@@ -1,0 +1,4 @@
+{{- /* Academic-compatible {{% alert note %}}...{{% /alert %}} callout. */ -}}
+<div class="callout callout-{{ .Get 0 }}">
+  {{ .Inner | .Page.RenderString }}
+</div>

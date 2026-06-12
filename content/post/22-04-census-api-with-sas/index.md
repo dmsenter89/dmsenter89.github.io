@@ -28,7 +28,7 @@ image:
 projects: []
 ---
 
-In a previous [post]({{< relref "../20-08-census-api" >}}), I have shown how to connect to the Census API and load data 
+In a previous [post]({{< relref "/post/20-08-census-api" >}}), I have shown how to connect to the Census API and load data 
 with Python. In this post, I will do the same using SAS instead. Before we get started, two important links
 from last time: a guide to the API can be found [here](https://www.census.gov/data/developers/guidance/api-user-guide.html) and a list of the
 available data sets can be accessed [here](https://api.census.gov/data.html). 
