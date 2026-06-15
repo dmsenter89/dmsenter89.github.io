@@ -1,0 +1,45 @@
+{{- /* Render Academic-style metadata for publication / talk / project pages,
+       since these sections carry their details in front matter rather than the body.
+       Posts and other pages are unaffected. */ -}}
+
+{{- if eq .Section "publication" }}
+<div class="academic-meta">
+  {{- with .Params.authors }}<p><strong>Authors:</strong> {{ delimit . ", " }}</p>{{ end }}
+  {{- with .Params.publication }}<p><strong>Published in:</strong> {{ . | markdownify }}{{ with $.Date }} ({{ $.Date.Format "January 2006" }}){{ end }}</p>{{ end }}
+  {{- with .Params.doi }}<p><strong>DOI:</strong> <a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">{{ . }}</a></p>{{ end }}
+  {{- $links := slice }}
+  {{- with .Params.url_pdf }}{{ $links = $links | append (dict "name" "PDF" "url" .) }}{{ end }}
+  {{- with .Params.url_code }}{{ $links = $links | append (dict "name" "Code" "url" .) }}{{ end }}
+  {{- with .Params.url_dataset }}{{ $links = $links | append (dict "name" "Dataset" "url" .) }}{{ end }}
+  {{- with .Params.url_slides }}{{ $links = $links | append (dict "name" "Slides" "url" .) }}{{ end }}
+  {{- with .Params.url_poster }}{{ $links = $links | append (dict "name" "Poster" "url" .) }}{{ end }}
+  {{- with .Params.url_video }}{{ $links = $links | append (dict "name" "Video" "url" .) }}{{ end }}
+  {{- with .Params.url_source }}{{ $links = $links | append (dict "name" "Source" "url" .) }}{{ end }}
+  {{- with $links }}<p>{{ range . }}<a class="academic-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a> {{ end }}</p>{{ end }}
+  {{- if and (not .Content) .Params.abstract }}<h2>Abstract</h2><p>{{ .Params.abstract }}</p>{{ end }}
+</div>
+{{- end }}
+
+{{- if eq .Section "talk" }}
+<div class="academic-meta">
+  {{- with .Params.event }}<p><strong>Event:</strong> {{ with $.Params.event_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $.Params.event }}</a>{{ else }}{{ . }}{{ end }}</p>{{ end }}
+  {{- with .Params.location }}<p><strong>Location:</strong> {{ . }}</p>{{ end }}
+  {{- $links := slice }}
+  {{- with .Params.url_slides }}{{ $links = $links | append (dict "name" "Slides" "url" .) }}{{ end }}
+  {{- with .Params.url_video }}{{ $links = $links | append (dict "name" "Video" "url" .) }}{{ end }}
+  {{- with .Params.url_code }}{{ $links = $links | append (dict "name" "Code" "url" .) }}{{ end }}
+  {{- with $links }}<p>{{ range . }}<a class="academic-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a> {{ end }}</p>{{ end }}
+  {{- if and (not .Content) .Params.abstract }}<p>{{ .Params.abstract }}</p>{{ end }}
+</div>
+{{- end }}
+
+{{- if eq .Section "project" }}
+<div class="academic-meta">
+  {{- $links := slice }}
+  {{- with .Params.url_code }}{{ $links = $links | append (dict "name" "Code" "url" .) }}{{ end }}
+  {{- with .Params.url_pdf }}{{ $links = $links | append (dict "name" "PDF" "url" .) }}{{ end }}
+  {{- with .Params.url_slides }}{{ $links = $links | append (dict "name" "Slides" "url" .) }}{{ end }}
+  {{- with .Params.url_video }}{{ $links = $links | append (dict "name" "Video" "url" .) }}{{ end }}
+  {{- with $links }}<p>{{ range . }}<a class="academic-link" href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a> {{ end }}</p>{{ end }}
+</div>
+{{- end }}

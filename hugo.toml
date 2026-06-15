@@ -1,0 +1,163 @@
+baseURL = "https://dmsenter89.github.io/"
+title = "Michael's Site"
+locale = "en-us"
+defaultContentLanguage = "en"
+enableEmoji = true
+enableRobotsTXT = true
+enableInlineShortcodes = true
+hasCJKLanguage = false
+summaryLength = 30
+
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# Workaround for accents in taxonomy/term URLs.
+removePathAccents = true
+
+# Ignore notebook/Rmd source files that live alongside posts.
+ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+
+[pagination]
+  pagerSize = 10
+
+[minify]
+  disableXML = true
+  minifyOutput = true
+
+# Theme is pulled in as a Hugo Module (see go.mod). Update with `hugo mod get -u`.
+[module]
+  [[module.imports]]
+    path = "github.com/adityatelange/hugo-PaperMod"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+
+# Keep the singular taxonomy URLs the old Academic site used, so links don't break.
+[permalinks]
+  tags = "/tag/:slug/"
+  categories = "/category/:slug/"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = false
+    tabWidth = 4
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[params]
+  env = "production"
+  title = "Michael's Site"
+  description = "Personal site of D. Michael Senter — Research Statistician Developer. Notes on statistics, data analysis, missing data, and scientific computing with SAS, Python, and R."
+  author = "D. Michael Senter"
+  keywords = ["statistics", "data analysis", "missing data", "SAS", "Python", "R", "data science"]
+  DateFormat = "Jan 2, 2006"
+  defaultTheme = "auto"
+  disableThemeToggle = false
+  ShowReadingTime = true
+  ShowWordCount = true
+  ShowShareButtons = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  ShowToc = true
+  TocOpen = false
+  comments = false
+  # KaTeX math is auto-detected per page (see layouts/_partials/extend_head.html);
+  # override on any page with `math: true` / `math: false` in front matter.
+
+  [params.assets]
+    favicon = "/img/icon.png"
+    favicon16x16 = "/img/icon.png"
+    favicon32x32 = "/img/icon.png"
+    apple_touch_icon = "/img/icon.png"
+
+  [params.homeInfoParams]
+    Title = "Hi, I'm Michael 👋"
+    Content = """
+Research Statistician Developer at SAS. I write about statistics, data analysis, missing-data methods, and scientific computing — usually with SAS, Python, and R.
+
+Browse the posts below, or read more [about me](/about/).
+"""
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/dmsenter89"
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/michaelsenter9a13a642/"
+  [[params.socialIcons]]
+    name = "orcid"
+    url = "https://orcid.org/0000-0002-2752-1688"
+  [[params.socialIcons]]
+    name = "googlescholar"
+    url = "https://scholar.google.com/citations?user=DPyUrhYAAAAJ&hl=en"
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:michael.senter@sas.com"
+  [[params.socialIcons]]
+    name = "rss"
+    url = "/index.xml"
+
+  # Client-side fuzzy search (Fuse.js) — uses the JSON output above.
+  [params.fuseOpts]
+    isCaseSensitive = false
+    shouldSort = true
+    location = 0
+    distance = 1000
+    threshold = 0.4
+    minMatchCharLength = 0
+    keys = ["title", "permalink", "summary", "content"]
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/post/"
+    weight = 10
+  [[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publication/"
+    weight = 20
+  [[menu.main]]
+    identifier = "talks"
+    name = "Talks"
+    url = "/talk/"
+    weight = 30
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/project/"
+    weight = 40
+  [[menu.main]]
+    identifier = "tags"
+    name = "Tags"
+    url = "/tags/"
+    weight = 50
+  [[menu.main]]
+    identifier = "archive"
+    name = "Archive"
+    url = "/archives/"
+    weight = 60
+  [[menu.main]]
+    identifier = "search"
+    name = "Search"
+    url = "/search/"
+    weight = 70
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 80

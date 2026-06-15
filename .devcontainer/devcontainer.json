@@ -1,0 +1,21 @@
+{
+	"name": "Hugo blog",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"forwardPorts": [1313],
+	// lmt (literate markdown) tangles code blocks in a few posts; install it for authoring.
+	"postCreateCommand": "go install github.com/driusan/lmt@latest",
+	"customizations": {
+		"vscode": {
+			"extensions": ["SAS.sas-lsp"]
+		},
+		"codespaces": {
+			"repositories": {
+				"dmsenter89/dmsenter89.github.io": {
+					"permissions": "write-all"
+				}
+			}
+		}
+	}
+}

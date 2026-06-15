@@ -1,3 +1,13 @@
-_site/
-.sass-cache/
-.jekyll-metadata
+# Hugo build output and caches
+/public/
+/resources/_gen/
+/.hugo_build.lock
+hugo_stats.json
+
+# Jupyter / data artifacts that may live alongside posts
+.ipynb_checkpoints
+
+# Hugo binaries that may be dropped in the repo
+hugo.exe
+hugo.darwin
+hugo.linux
