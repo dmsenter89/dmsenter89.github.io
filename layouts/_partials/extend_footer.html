@@ -1,0 +1,4 @@
+{{- /* Language-switcher code tabs (see layouts/_shortcodes/tabs.html and tab.html). */ -}}
+<script>
+{{ (resources.Get "tabs.js" | minify).Content | safeJS }}
+</script>

@@ -40,12 +40,31 @@ All posts/talks/publications/projects use **page bundles** (a folder named for t
 
 ### Custom layouts (`layouts/`)
 
-- `_partials/extend_head.html` — Loads KaTeX on single pages that contain math. Detection is automatic (regex over raw content for `$$`, `\(`, `\[`, or `$…$`); override per page with `math: true` / `math: false` in front matter.
+- `_partials/extend_head.html` — Loads KaTeX on single pages that contain math (detection is automatic; override per page with `math: true` / `math: false` in front matter), and inlines `assets/tabs.css` for the language-switcher code tabs (see below).
+- `_partials/extend_footer.html` — Inlines `assets/tabs.js`, which wires up the language-switcher code tabs' click behavior.
 - `_partials/extend_post_content.html` — Renders Academic-style metadata blocks (authors, DOI, abstract, link buttons) for `publication`, `talk`, and `project` pages by reading front matter fields like `authors`, `doi`, `url_pdf`, `url_slides`, `url_video`, `url_code`, etc.
 - `_shortcodes/alert.html` — `{{% alert note %}}…{{% /alert %}}` callout (Academic-compatible).
 - `_shortcodes/staticref.html` — `{{% staticref "files/x" "newtab" %}}label{{% /staticref %}}` link helper.
 - `_shortcodes/toc.html` — `{{< toc >}}` inline table of contents.
 - `_shortcodes/fragment.html` — No-op stub for old reveal.js `{{% fragment %}}` shortcodes.
+- `_shortcodes/tabs.html` + `_shortcodes/tab.html` — Language-switcher code tabs (e.g. R / Python / SAS blocks for the same example). Usage:
+
+  ```markdown
+  {{< tabs >}}
+  {{% tab name="R" %}}
+  ```r
+  retrodesign <- function(A, s, alpha=.05, df=Inf) { ... }
+  ```
+  {{% /tab %}}
+  {{% tab name="Python" %}}
+  ```python
+  def retrodesign(A, s, alpha=0.05, df=np.inf): ...
+  ```
+  {{% /tab %}}
+  {{< /tabs >}}
+  ```
+
+  The outer `tabs` shortcode only wraps other shortcodes (no Markdown of its own), so it uses `{{< >}}`. Each inner `tab` shortcode wraps a fenced code block and needs Markdown processing, so it uses `{{% %}}`. Getting the delimiters backwards is the most common cause of tabs rendering as raw text. Styling/behavior lives in `assets/tabs.css` and `assets/tabs.js`, picked up via Hugo Pipes (`resources.Get`) in `extend_head.html` / `extend_footer.html`.
 
 ### Front matter conventions
 
