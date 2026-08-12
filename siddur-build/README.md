@@ -60,6 +60,15 @@ over the content tree.
           "type": "include",
           "ref": "shared/shema",
           "sectionId": "shema-paragraph-1"
+        },
+        {
+          "type": "expandable",
+          "id": "purim-al-hanissim",
+          "label": "Purim — Al HaNissim",
+          "items": [
+            { "type": "text", "id": "purim-cue", "hebrew": "...", "translation": "..." },
+            { "type": "text", "id": "purim-full", "hebrew": "...", "translation": "..." }
+          ]
         }
       ]
     }
@@ -78,6 +87,15 @@ over the content tree.
   `ref` split on `/` and indexed into Hugo's site data (so `"shared/shema"`
   → `data/siddur/shared/shema.json`), then finds the section whose `id`
   matches `sectionId` and renders its `items` in place.
+- `type: "expandable"` — a collapsed-by-default `<details>` box (no JS) for
+  occasion-specific insertions that most readers skip most days (Al HaNissim
+  on Purim/Chanukah, Ya'aleh V'Yavo on Rosh Chodesh/Chol HaMoed). `label` is
+  the always-visible English summary text; `items` is a nested array
+  rendered exactly like a section's items (typically a short "cue" `text`
+  item followed by the `full` inserted text — see Blessings After Eating for
+  a worked example). **`generate.mjs` recurses into `expandable` items'
+  nested `items` array** — anything with an `items` array gets walked, so
+  this composes with more nesting if it's ever needed.
 
 ## Divine Name
 

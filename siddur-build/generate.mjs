@@ -51,22 +51,30 @@ let translitCount = 0;
 let normalizedCount = 0;
 let missingTranslation = [];
 
-for (const section of chapter.sections ?? []) {
-  for (const item of section.items ?? []) {
-    if (!item.hebrew) continue;
+// Recurses into "expandable" items' nested `items` array (occasion-specific
+// insertions like Al HaNissim), which are otherwise siblings of ordinary
+// section items in every other respect.
+function processItems(items, sectionId) {
+  for (const item of items ?? []) {
+    if (item.hebrew) {
+      const normalized = normalizeDivineName(item.hebrew);
+      if (normalized !== item.hebrew) normalizedCount++;
+      item.hebrew = normalized;
 
-    const normalized = normalizeDivineName(item.hebrew);
-    if (normalized !== item.hebrew) normalizedCount++;
-    item.hebrew = normalized;
-
-    if (item.type === "text") {
-      item.translit = transliterateWithDivineName(item.hebrew);
-      translitCount++;
-      if (!item.translation || !item.translation.trim()) {
-        missingTranslation.push(`${section.id}/${item.id}`);
+      if (item.type === "text") {
+        item.translit = transliterateWithDivineName(item.hebrew);
+        translitCount++;
+        if (!item.translation || !item.translation.trim()) {
+          missingTranslation.push(`${sectionId}/${item.id}`);
+        }
       }
     }
+    if (item.items) processItems(item.items, sectionId);
   }
+}
+
+for (const section of chapter.sections ?? []) {
+  processItems(section.items, section.id);
 }
 
 writeFileSync(path, JSON.stringify(chapter, null, 2) + "\n");

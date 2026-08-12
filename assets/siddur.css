@@ -273,6 +273,29 @@ html.show-translation .siddur-rubric .siddur-translation {
   display: block;
 }
 
+/* --- Expandable (occasion-specific insertions) --- */
+
+.siddur-expandable {
+  border: 1px solid var(--siddur-border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+}
+
+.siddur-expandable-label {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--siddur-accent);
+  list-style: none;
+}
+
+.siddur-expandable-label::-webkit-details-marker { display: none; }
+.siddur-expandable-label::marker { content: ""; }
+.siddur-expandable-label::before { content: "+ "; }
+.siddur-expandable[open] .siddur-expandable-label::before { content: "\2212 "; }
+
+.siddur-expandable-content { margin-top: 0.6rem; }
+.siddur-expandable-content .siddur-item:first-child { margin-top: 0; }
+
 /* --- Mobile: off-canvas sidebar --- */
 
 @media (max-width: 768px) {
