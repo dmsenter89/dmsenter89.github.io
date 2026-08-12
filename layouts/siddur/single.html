@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+{{- /* Resolve this chapter's JSON data file by mirroring its content path
+       under data/siddur/... e.g. content/siddur/daily/before-sleep.md ->
+       .Site.Data.siddur.daily.before-sleep */ -}}
+{{- $relDir := strings.TrimPrefix "siddur/" (strings.TrimSuffix "/" .File.Dir) }}
+{{- $relPath := .File.BaseFileName }}
+{{- if $relDir }}{{ $relPath = printf "%s/%s" $relDir .File.BaseFileName }}{{ end }}
+{{- $segments := split $relPath "/" }}
+{{- $chapter := hugo.Data.siddur }}
+{{- range $segments }}{{ $chapter = index $chapter . }}{{ end }}
+
+<h1 class="siddur-page-title">{{ .Title }}</h1>
+
+<div class="siddur-display-toggle" role="group" aria-label="Display options">
+  <button type="button" class="siddur-toggle-btn" data-toggle-class="show-hebrew">עברית</button>
+  <button type="button" class="siddur-toggle-btn" data-toggle-class="show-translit">Translit</button>
+  <button type="button" class="siddur-toggle-btn" data-toggle-class="show-translation">English</button>
+</div>
+
+{{ range $chapter.sections }}
+<section class="siddur-section">
+  <h2 id="{{ .id }}">{{ .title }}</h2>
+  {{ range .items }}{{ partial "siddur-item.html" . }}{{ end }}
+</section>
+{{ end }}
+
+{{ end }}

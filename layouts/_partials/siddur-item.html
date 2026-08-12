@@ -1,0 +1,25 @@
+{{- /* Renders one liturgy item. Params: the item map itself.
+       type: "rubric" | "text" | "include" (splices in a shared section's
+       items by id, e.g. the Shema first paragraph reused across chapters). */ -}}
+{{- if eq .type "include" }}
+  {{- $refSegments := split .ref "/" }}
+  {{- $refData := hugo.Data.siddur }}
+  {{- range $refSegments }}{{ $refData = index $refData . }}{{ end }}
+  {{- $sectionId := .sectionId }}
+  {{- range $refData.sections }}
+    {{- if eq .id $sectionId }}
+      {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
+    {{- end }}
+  {{- end }}
+{{- else if eq .type "rubric" }}
+<p class="siddur-item siddur-rubric" id="{{ .id }}">
+  <span class="siddur-hebrew" lang="he" dir="rtl">{{ .hebrew }}</span>
+  <span class="siddur-translation">{{ .translation }}</span>
+</p>
+{{- else }}
+<div class="siddur-item siddur-text" id="{{ .id }}">
+  <p class="siddur-hebrew" lang="he" dir="rtl">{{ .hebrew }}</p>
+  <p class="siddur-translit">{{ .translit }}</p>
+  <p class="siddur-translation">{{ .translation }}</p>
+</div>
+{{- end }}

@@ -87,6 +87,28 @@ Publication/talk/project pages additionally support: `authors`, `publication`, `
 - Taxonomy URLs use singular forms (`/tag/`, `/category/`) to match old Academic site links.
 - Search is client-side via Fuse.js, powered by the JSON output format enabled in `[outputs]`.
 
+### Siddur (`/siddur/`)
+
+A personal, unlinked (`noindex, nofollow`, not in `[[menu.main]]`) daily
+siddur at `/siddur/`, mobile-first — the point is jumping straight to one
+short prayer, not browsing. Fully separate chrome from the rest of the
+site: `layouts/siddur/{baseof,list,single}.html` don't extend PaperMod at
+all (no header/footer/breadcrumbs), styled by `assets/siddur.{css,js}`.
+Content is JSON-driven (Hebrew/transliteration/translation per item) in
+`data/siddur/`, rendered by `content/siddur/**/*.md` files that carry only
+front matter (`title`, `weight`) — Parts are Hugo sections
+(`content/siddur/daily/`), Chapters are flat `.md` files inside them, named
+only (no numbering) and ordered by `weight`.
+
+Adding or editing chapter content is a two-repo-area workflow: edit the
+JSON in `data/siddur/`, then run it through the transliteration/Divine Name
+toolkit in `siddur-build/`. **Read `siddur-build/README.md` before touching
+any siddur content** — it covers the JSON schema, the `generate.mjs`
+workflow, the Divine Name normalization convention (and why it's vocalized
+`יְיָ` rather than the more common `י״י`), gender-variant inline labels, and
+how shared content (e.g. the Shema, reused across chapters) works via
+`type: "include"` items.
+
 ### Deployment
 
 Pushing to `master` (or `main`) triggers `.github/workflows/hugo.yml`, which builds with Hugo and publishes to GitHub Pages via `actions/deploy-pages`. No manual deployment step is needed. The repository's Pages source must be set to **GitHub Actions** in Settings → Pages.

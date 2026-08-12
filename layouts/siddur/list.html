@@ -1,0 +1,9 @@
+{{ define "main" }}
+<h1 class="siddur-page-title">{{ .Title }}</h1>
+{{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
+<ul class="siddur-chapter-list">
+  {{ range .Pages.ByWeight }}
+  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+  {{ end }}
+</ul>
+{{ end }}

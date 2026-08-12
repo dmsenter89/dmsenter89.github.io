@@ -1,0 +1,14 @@
+{{- /* Recursive sidebar nav for the siddur section.
+       Params: dict "Pages" <Pages> "Current" <current Page> */ -}}
+<ul class="siddur-nav">
+  {{- range .Pages.ByWeight }}
+  <li>
+    {{- if .IsSection }}
+    <span class="siddur-nav-part">{{ .Title }}</span>
+    {{ partial "siddur-nav.html" (dict "Pages" .Pages "Current" $.Current) }}
+    {{- else }}
+    <a href="{{ .RelPermalink }}"{{ if eq . $.Current }} class="current" aria-current="page"{{ end }}>{{ .Title }}</a>
+    {{- end }}
+  </li>
+  {{- end }}
+</ul>
