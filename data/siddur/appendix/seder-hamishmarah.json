@@ -1,0 +1,341 @@
+{
+  "title": "Seder ha-Mishmarah",
+  "tables": [
+    {
+      "id": "seder-hamishmarah",
+      "title": "Weekly Cycle",
+      "headers": [
+        "Weekly Torah Portion",
+        "Nevi'im",
+        "Ketuvim",
+        "Mishnah"
+      ],
+      "rows": [
+        [
+          "<strong>Bĕreʾshith</strong><br><span class=\"siddur-table-subtext\">Gen. 1:1–6:8</span>",
+          "Joshua 1-11",
+          "Psalms 1-11",
+          "Ḥăghigha"
+        ],
+        [
+          "<strong>Noaḥ</strong><br><span class=\"siddur-table-subtext\">Gen. 6:9-11:32</span>",
+          "Joshua 12-19",
+          "Psalms 12-20",
+          "Qinnim"
+        ],
+        [
+          "<strong>Lekh Lĕkha</strong><br><span class=\"siddur-table-subtext\">Gen. 12:1-17:27</span>",
+          "Joshua 20-end",
+          "Psalms 21-34",
+          "Ma'asroth and Ma'ăser Sheni"
+        ],
+        [
+          "<strong>Wayyeraʾ</strong><br><span class=\"siddur-table-subtext\">Gen. 18:1-22:24</span>",
+          "Judges 1-11",
+          "Psalms 35-42",
+          "Peʾa"
+        ],
+        [
+          "<strong>Ḥayye Sara</strong><br><span class=\"siddur-table-subtext\">Gen. 23:1-25:18</span>",
+          "Judges 12-end",
+          "Psalms 43-51",
+          "Qiddushin"
+        ],
+        [
+          "<strong>Tolĕdhoth</strong><br><span class=\"siddur-table-subtext\">Gen. 25:19-28:9</span>",
+          "I Samuel 1-8",
+          "Psalms 52-65",
+          "Bĕrakhoth"
+        ],
+        [
+          "<strong>Wayyeṣeʾ</strong><br><span class=\"siddur-table-subtext\">Gen. 28:10-32:3</span>",
+          "I Samuel 9-13",
+          "Psalms 66-73",
+          "Kĕthubboth"
+        ],
+        [
+          "<strong>Wayyishlaḥ</strong><br><span class=\"siddur-table-subtext\">Gen. 32:4-36:43</span>",
+          "I Samuel 14-25",
+          "Psalms 74-79",
+          "Mo'edh Qaṭan and Horayoth"
+        ],
+        [
+          "<strong>Wayyeshev</strong><br><span class=\"siddur-table-subtext\">Gen. 37:1-40:23</span>",
+          "I Samuel 26-end, II Samuel 1-7",
+          "Psalms 80-90",
+          "Yĕvamoth"
+        ],
+        [
+          "<strong>Miqqeṣ</strong><br><span class=\"siddur-table-subtext\">Gen. 41:1-44:17</span>",
+          "II Samuel 8-18",
+          "Psalms 91-106",
+          "Miqwaʾoth"
+        ],
+        [
+          "<strong>Wayyiggash</strong><br><span class=\"siddur-table-subtext\">Gen. 44:18-47:27</span>",
+          "II Samuel 19-end",
+          "Psalms 107-119",
+          "Kelim"
+        ],
+        [
+          "<strong>Wayĕḥi</strong><br><span class=\"siddur-table-subtext\">Gen. 47:28-50:26</span>",
+          "I Kings 1-6",
+          "Psalms 120-136",
+          "Bĕkhoroth"
+        ],
+        [
+          "<strong>Shĕmoth</strong><br><span class=\"siddur-table-subtext\">Ex. 1:1-6:1</span>",
+          "I Kings 7-10",
+          "Psalms 137-150",
+          "Ta'ănith and Mĕghilla"
+        ],
+        [
+          "<strong>Waʾeraʾ</strong><br><span class=\"siddur-table-subtext\">Ex. 6:2-9:35</span>",
+          "I Kings 11-19",
+          "Job 1-6",
+          "Makkoth"
+        ],
+        [
+          "<strong>Boʾ</strong><br><span class=\"siddur-table-subtext\">Ex. 10:1-13:16</span>",
+          "I Kings 20 to II Kings 5",
+          "Job 7-12",
+          "Nĕgha'im"
+        ],
+        [
+          "<strong>Bĕshallaḥ</strong><br><span class=\"siddur-table-subtext\">Ex. 13:17-17:16</span>",
+          "II Kings 6-12",
+          "Job 13-20",
+          "'Eruvin"
+        ],
+        [
+          "<strong>Yithro</strong><br><span class=\"siddur-table-subtext\">Ex. 18:1-20:23</span>",
+          "II Kings 13-18",
+          "Job 21-25",
+          "Pirqe ʾavoth and 'Ăvodha Zara"
+        ],
+        [
+          "<strong>Mishpaṭim</strong><br><span class=\"siddur-table-subtext\">Ex. 21:1-24:18</span>",
+          "II Kings 19-end",
+          "Job 26-28",
+          "Bavaʾ Qammaʾ"
+        ],
+        [
+          "<strong>Tĕruma</strong><br><span class=\"siddur-table-subtext\">Ex. 25:1-27:19</span>",
+          "Jeremiah 1-8",
+          "Job 29-38",
+          "Middoth"
+        ],
+        [
+          "<strong>Tĕṣawweh</strong><br><span class=\"siddur-table-subtext\">Ex. 27:20-30:10</span>",
+          "Jeremiah 9-17",
+          "Job 39-end",
+          "Ṭĕvul Yom"
+        ],
+        [
+          "<strong>Ki Thissaʾ</strong><br><span class=\"siddur-table-subtext\">Ex. 30:11-34:35</span>",
+          "Jeremiah 18-31",
+          "Esther",
+          "Shĕqalim"
+        ],
+        [
+          "<strong>Wayyaqhel</strong><br><span class=\"siddur-table-subtext\">Ex. 35:1-38:20</span>",
+          "Jeremiah 32-37",
+          "Song of Songs",
+          "Shabbath"
+        ],
+        [
+          "<strong>Fĕqudhe</strong><br><span class=\"siddur-table-subtext\">Ex. 38:21-40:38</span>",
+          "Jeremiah 38-48",
+          "Proverbs 1-6",
+          "Ṭohŏroth and Yadhayīm"
+        ],
+        [
+          "<strong>Wayyiqraʾ</strong><br><span class=\"siddur-table-subtext\">Lev. 1:1-5:26</span>",
+          "Jeremiah 49-end",
+          "Proverbs 7-12",
+          "Zĕvaḥim"
+        ],
+        [
+          "<strong>Ṣaw</strong><br><span class=\"siddur-table-subtext\">Lev. 6:1-8:36</span>",
+          "Ezekiel 1-9",
+          "Proverbs 13-17",
+          "Mĕnaḥoth"
+        ],
+        [
+          "<strong>Shĕmini</strong><br><span class=\"siddur-table-subtext\">Lev. 9:1-11:47</span>",
+          "Ezekiel 10-17",
+          "Proverbs 18-22",
+          "Ḥullin"
+        ],
+        [
+          "<strong>Thazria'</strong><br><span class=\"siddur-table-subtext\">Lev. 12:1-13:59</span>",
+          "Ezekiel 18-22",
+          "Proverbs 23-27",
+          "Nidda"
+        ],
+        [
+          "<strong>Mĕṣora'</strong><br><span class=\"siddur-table-subtext\">Lev. 14:1-15:33</span>",
+          "Ezekiel 23-27",
+          "Proverbs 28-30",
+          "Zavim"
+        ],
+        [
+          "<strong>ʾaḥăre Moth</strong><br><span class=\"siddur-table-subtext\">Lev. 16:1-18:30</span>",
+          "Ezekiel 28-30",
+          "Proverbs 31-end",
+          "Kĕrithoth"
+        ],
+        [
+          "<strong>Qĕdhoshim</strong><br><span class=\"siddur-table-subtext\">Lev. 19:1-20:27</span>",
+          "Ezekiel 31-40",
+          "Daniel 1-3",
+          "'Orla"
+        ],
+        [
+          "<strong>ʾĕmor</strong><br><span class=\"siddur-table-subtext\">Lev. 21:1-24:23</span>",
+          "Ezekiel 41-43",
+          "Daniel 4-6",
+          "Beṣa and Yomaʾ"
+        ],
+        [
+          "<strong>Bĕhar</strong><br><span class=\"siddur-table-subtext\">Lev. 25:1-26:2</span>",
+          "Ezekiel 44-46",
+          "Daniel 7-8",
+          "Shĕvi'ith"
+        ],
+        [
+          "<strong>Bĕḥuqqothay</strong><br><span class=\"siddur-table-subtext\">Lev. 26:3-27:34</span>",
+          "Ezekiel 47-end",
+          "Daniel 9-end",
+          "'Ărakhin"
+        ],
+        [
+          "<strong>Bĕmidhbar</strong><br><span class=\"siddur-table-subtext\">Num. 1:1-4:20</span>",
+          "Isaiah 1-5",
+          "Ezra 1-5",
+          "Makhshirin"
+        ],
+        [
+          "<strong>Nasoʾ</strong><br><span class=\"siddur-table-subtext\">Num. 4:21-7:89</span>",
+          "Isaiah 6-9",
+          "Ruth",
+          "Nazir and Soṭa"
+        ],
+        [
+          "<strong>Bĕha'ălothĕkha</strong><br><span class=\"siddur-table-subtext\">Num. 8:1-12:16</span>",
+          "Isaiah 10-13",
+          "Ezra 6-end",
+          "Tamidh"
+        ],
+        [
+          "<strong>Shĕlaḥ</strong><br><span class=\"siddur-table-subtext\">Num. 13:1-15:41</span>",
+          "Isaiah 14-20",
+          "Nehemiah 1-5",
+          "Ḥalla"
+        ],
+        [
+          "<strong>Qoraḥ</strong><br><span class=\"siddur-table-subtext\">Num. 16:1-18:32</span>",
+          "Isaiah 21-24",
+          "Nehemiah 6-end",
+          "Tĕrumoth"
+        ],
+        [
+          "<strong>Ḥuqqath</strong><br><span class=\"siddur-table-subtext\">Num. 19:1-22:1</span>",
+          "Isaiah 25-29",
+          "I Chronicles 1-5",
+          "Para"
+        ],
+        [
+          "<strong>Balaq</strong><br><span class=\"siddur-table-subtext\">Num. 22:2-25:9</span>",
+          "Isaiah 30-33",
+          "I Chronicles 6-11",
+          "ʾohaloth"
+        ],
+        [
+          "<strong>Pinĕḥas</strong><br><span class=\"siddur-table-subtext\">Num. 25:10-30:1</span>",
+          "Isaiah 34-40",
+          "I Chronicles 12-17",
+          "Bavaʾ Bathraʾ"
+        ],
+        [
+          "<strong>Maṭṭoth</strong><br><span class=\"siddur-table-subtext\">Num. 30:2-32:42</span>",
+          "Isaiah 41-44",
+          "I Chronicles 18-23",
+          "Nĕdharim"
+        ],
+        [
+          "<strong>Mas'e</strong><br><span class=\"siddur-table-subtext\">Num. 33:1-36:13</span>",
+          "Isaiah 45-49",
+          "I Chronicles 24-end",
+          "'Edhuyyoth"
+        ],
+        [
+          "<strong>Dĕvarim</strong><br><span class=\"siddur-table-subtext\">Deut. 1:1-3:22</span>",
+          "Isaiah 50-58",
+          "Lamentations",
+          "Bavaʾ Mĕṣi'aʾ"
+        ],
+        [
+          "<strong>Waʾethḥannan</strong><br><span class=\"siddur-table-subtext\">Deut. 3:23-7:11</span>",
+          "Isaiah 59-end",
+          "II Chronicles 1-4",
+          "Shĕvu'oth"
+        ],
+        [
+          "<strong>'Eqev</strong><br><span class=\"siddur-table-subtext\">Deut. 7:12-11:25</span>",
+          "Hosea 1-6",
+          "II Chronicles 5-8",
+          "Kilʾayīm"
+        ],
+        [
+          "<strong>Rĕʾeh</strong><br><span class=\"siddur-table-subtext\">Deut. 11:26-16:17</span>",
+          "Hosea 7-12",
+          "II Chronicles 9-14",
+          "Pĕsaḥim, Roʾsh Hashshana and Sukka"
+        ],
+        [
+          "<strong>Shofĕṭim</strong><br><span class=\"siddur-table-subtext\">Deut. 16:18-21:9</span>",
+          "Hosea 13-end",
+          "II Chronicles 15-24",
+          "Sanhedhrin"
+        ],
+        [
+          "<strong>Ki Theṣeʾ</strong><br><span class=\"siddur-table-subtext\">Deut. 21:10-25:19</span>",
+          "Joel and Amos",
+          "II Chronicles 25-27",
+          "Giṭṭin"
+        ],
+        [
+          "<strong>Ki Thavoʾ</strong><br><span class=\"siddur-table-subtext\">Deut. 26:1-29:8</span>",
+          "Obadiah, Jonah and Micah",
+          "II Chronicles 28-34",
+          "Bikkurim"
+        ],
+        [
+          "<strong>Niṣṣavim</strong><br><span class=\"siddur-table-subtext\">Deut. 29:9-30:20</span>",
+          "Nahum, Habakkuk, Zephaniah and Haggai",
+          "II Chronicles 35-end",
+          "Mĕ'ila"
+        ],
+        [
+          "<strong>Wayyelekh</strong><br><span class=\"siddur-table-subtext\">Deut. 31:1-31:30</span>",
+          "Zechariah 1-11",
+          "Ecclesiastes 1-5",
+          "Dĕmaʾy"
+        ],
+        [
+          "<strong>Haʾăzinu</strong><br><span class=\"siddur-table-subtext\">Deut. 32:1-32:52</span>",
+          "Zechariah 12-end",
+          "Ecclesiastes 6-9",
+          "'Uqṣin"
+        ],
+        [
+          "<strong>Wĕzoʾth Habbĕrakha</strong><br><span class=\"siddur-table-subtext\">Deut. 33:1-34:12</span>",
+          "Malachi",
+          "Ecclesiastes 10-end",
+          "Tĕmura"
+        ]
+      ]
+    }
+  ]
+}

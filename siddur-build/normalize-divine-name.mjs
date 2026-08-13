@@ -34,11 +34,11 @@ const SHEVA = "ְ";
 const QAMATS = "ָ";
 
 const DIVINE_NAME_RE = new RegExp(
-  `(?<![${HEBREW_LETTER}])(?:` +
+  `(?<![${HEBREW_LETTER}][${MARK}]*)(?:` +
     `י[${MARK}]*ה[${MARK}]*ו[${MARK}]*ה[${MARK}]*` + // spelled Tetragrammaton, any niqqud
     `|` +
     `י[${MARK}]*י[${MARK}]*` + // two-yod shorthand
-  `)(?![${HEBREW_LETTER}])`,
+  `)(?![${MARK}]*[${HEBREW_LETTER}])`,
   "gu"
 );
 

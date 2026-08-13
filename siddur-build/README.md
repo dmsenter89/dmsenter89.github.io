@@ -69,6 +69,14 @@ over the content tree.
             { "type": "text", "id": "purim-cue", "hebrew": "...", "translation": "..." },
             { "type": "text", "id": "purim-full", "hebrew": "...", "translation": "..." }
           ]
+        },
+        {
+          "type": "group",
+          "id": "food-type-choice",
+          "items": [
+            { "type": "rubric", "id": "grain-label", "hebrew": "...", "translation": "For the five grains:" },
+            { "type": "text", "id": "grain-row", "hebrew": "...", "translation": "..." }
+          ]
         }
       ]
     }
@@ -96,6 +104,13 @@ over the content tree.
   a worked example). **`generate.mjs` recurses into `expandable` items'
   nested `items` array** — anything with an `items` array gets walked, so
   this composes with more nesting if it's ever needed.
+- `type: "group"` — the same nested-`items` shape as `expandable`, but
+  rendered as an always-open bordered box instead of a collapsed `<details>`.
+  Used for a set of mutually exclusive alternatives that should all stay
+  visible at once, e.g. the grain/wine/fruit choice in Me'en Shalosh
+  (Blessings After Eating → Other Foods): a `rubric` label + `text` row per
+  option, boxed together so the reader can see all the choices without
+  expanding anything.
 
 ## Divine Name
 
@@ -163,6 +178,44 @@ both the bedtime and morning/evening services) lives once in
 `sections`), and gets pulled into a chapter via a `type: "include"` item
 (see schema above). Run `generate.mjs` on the shared file directly, the same
 as any other content file.
+
+## Appendix / reference tables
+
+Some pages aren't liturgy at all — they're plain reference tables (Appendix
+> Transliteration, Appendix > Seder ha-Mishmarah). These use a different
+content shape and a different layout, not the `sections`/`items` schema
+above:
+
+```json
+{
+  "title": "Page Title",
+  "tables": [
+    {
+      "id": "table-slug",
+      "title": "Table Heading (renders as <h2 id=\"table-slug\">)",
+      "headers": ["Column 1", "Column 2"],
+      "hebrewColumn": true,
+      "rows": [["א", "..."], ["ב", "..."]]
+    }
+  ],
+  "note": "optional italic footnote shown below all tables"
+}
+```
+
+The content `.md` file needs `layout: "tables"` in its front matter (routes
+to `layouts/siddur/tables.html`, which resolves the data file the same
+path-mirroring way `single.html` does, then hands each table off to
+`layouts/_partials/siddur-table.html`). `hebrewColumn: true` styles and
+marks up (`lang="he" dir="rtl"`) each row's first cell as Hebrew; omit it
+for tables with no Hebrew column (e.g. Seder ha-Mishmarah).
+
+**Appendix > Transliteration is auto-generated, not hand-authored.** Run
+`node generate-transliteration-table.mjs` (no arguments) to regenerate
+`data/siddur/appendix/transliteration.json` straight from `schema.mjs`,
+resolved through the same `new SBL(sephardicSchema)` default-merging that
+`transliterate()` itself does internally — so the reference page can never
+drift from the actual transliteration behavior. Re-run it any time
+`schema.mjs` changes; there is nothing else to update by hand.
 
 ## Content source
 

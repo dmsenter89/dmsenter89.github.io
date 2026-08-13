@@ -1,0 +1,140 @@
+{
+  "title": "Other Foods",
+  "sections": [
+    {
+      "id": "mein-shalosh",
+      "title": "Me'en Shalosh",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "mein-shalosh-intro",
+          "hebrew": "ברכה זו נאמרת על מאכלים משבעת המינים שנשתבחה בהם ארץ ישראל: חטה ושערה (הדגן), וגפן, תאנה, רמון, זית ותמר (הפרות).",
+          "translation": "This blessing is recited over foods from the seven species for which the Land of Israel is praised: wheat and barley (the grains), and grapes, figs, pomegranates, olives, and dates (the fruits)."
+        },
+        {
+          "type": "text",
+          "id": "opening",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם,",
+          "translation": "Blessed are You, Adonay our God, King of the universe, for —",
+          "translit": "barukh ʾatta Adonay ʾĕlohenu melekh ha'olam,"
+        },
+        {
+          "type": "group",
+          "id": "food-type-choice-opening",
+          "items": [
+            {
+              "type": "rubric",
+              "id": "grain-label",
+              "hebrew": "על חמשת מיני דגן",
+              "translation": "For the five grains:"
+            },
+            {
+              "type": "text",
+              "id": "grain-row",
+              "hebrew": "עַל הַמִּחְיָה וְעַל הַכַּלְכָּלָה",
+              "translation": "the sustenance and the nourishment",
+              "translit": "'al hammiḥya wĕ'al hakkalkala"
+            },
+            {
+              "type": "rubric",
+              "id": "wine-label",
+              "hebrew": "על היין",
+              "translation": "For wine:"
+            },
+            {
+              "type": "text",
+              "id": "wine-row",
+              "hebrew": "עַל הַגֶּפֶן וְעַל פְרִי הַגֶּפֶן",
+              "translation": "the vine and the fruit of the vine",
+              "translit": "'al haggefen wĕ'al fĕri haggefen"
+            },
+            {
+              "type": "rubric",
+              "id": "fruit-label",
+              "hebrew": "על פרות משבעת המינים",
+              "translation": "For fruits of the seven species:"
+            },
+            {
+              "type": "text",
+              "id": "fruit-row",
+              "hebrew": "עַל הָעֵץ וְעַל פְרִי הָעֵץ, וְעַל תְּנוּבַת הַשָּׂדֶה",
+              "translation": "the tree, the fruit of the tree, and the produce of the field",
+              "translit": "'al ha'eṣ wĕ'al fĕri ha'eṣ, wĕ'al tĕnuvath hassadheh"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "middle-common",
+          "hebrew": "וְעַל אֶֽרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, שֶׁרָצִֽיתָ וְהִנְחַֽלְתָּ לַאֲבוֹתֵֽינוּ, [לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּֽעַ מִטּוּבָהּ]. רַחֵם נָא, יְיָ אֱלֹהֵֽינוּ, עַל יִשְׂרָאֵל עַמָּךְ, וְעַל יְרוּשָׁלַֽיִם עִירָךְ, וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ, [וְעַל מִזְבָּחָךְ, וְעַל הֵיכָלָךְ. וּבְנֵה יְרוּשָׁלַֽיִם עִיר הַקֹּֽדֶשׁ בִּמְהֵרָה בְיָמֵֽינוּ], וְהַעֲלֵֽנוּ לְתוֹכָהּ, וְשַׂמְּחֵֽנוּ בְּבִנְיָנָהּ, וְנֹאכַל מִפִּרְיָהּ וְנִשְׂבַּע מִטּוּבָהּ, וּנְבָֽרְכָֽךְ עָלֶֽיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה. בָּרוּךְ אַתָּה יְיָ, עַל הָאָֽרֶץ וְעַל",
+          "translation": "and for a desirable, good, and spacious land that You were pleased to give as a heritage to our ancestors, [to eat of its fruit and be satisfied with its goodness]. Have mercy, please, Adonay our God, on Israel Your people, on Jerusalem Your city, on Zion the dwelling-place of Your glory, [on Your altar, and on Your Temple. Rebuild Jerusalem the holy city speedily in our days]; bring us up into it, gladden us in its rebuilding, let us eat of its fruit and be satisfied with its goodness, and let us bless You for it in holiness and purity. Blessed are You, Adonay, for the land and for —",
+          "translit": "wĕ'al ʾereṣ ḥemda ṭova urĕḥava, sheraṣitha wĕhinḥalĕta laʾăvothenu, [leʾĕkhol mippiryah wĕlisboa' miṭṭuvah]. raḥem naʾ, Adonay ʾĕlohenu, 'al yisraʾel 'ammakh, wĕ'al yĕrushalayim 'irakh, wĕ'al ṣiyyon mishkan kĕvodhakh, [wĕ'al mizbaḥakh, wĕ'al hekhalakh. uvĕneh yĕrushalayim 'ir haqqodhesh bimhera vĕyamenu], wĕha'ălenu lĕthokhah, wĕsammĕḥenu bĕvinyanah, wĕnoʾkhal mippiryah wĕnisba' miṭṭuvah, unĕvarĕkhakh 'aleha biqdhushsha uvĕṭohŏra. barukh ʾatta Adonay, 'al haʾareṣ wĕ'al"
+        },
+        {
+          "type": "group",
+          "id": "food-type-choice-closing",
+          "items": [
+            {
+              "type": "rubric",
+              "id": "grain-closing-label",
+              "hebrew": "על חמשת מיני דגן",
+              "translation": "For the five grains:"
+            },
+            {
+              "type": "text",
+              "id": "grain-closing-row",
+              "hebrew": "הַמִּחְיָה. (בא\"י: וְעַל מְחִיתָה.)",
+              "translation": "the sustenance. (In the Land of Israel: the nourishment.)",
+              "translit": "hammiḥya. (vʾy\": wĕ'al mĕḥitha.)"
+            },
+            {
+              "type": "rubric",
+              "id": "wine-closing-label",
+              "hebrew": "על היין",
+              "translation": "For wine:"
+            },
+            {
+              "type": "text",
+              "id": "wine-closing-row",
+              "hebrew": "פְרִי הַגֶּפֶן. (בא\"י: וְעַל פְרִי גַפְנָהּ.)",
+              "translation": "the fruit of the vine. (In the Land of Israel: the fruit of its vine.)",
+              "translit": "fĕri haggefen. (vʾy\": wĕ'al fĕri ghafnah.)"
+            },
+            {
+              "type": "rubric",
+              "id": "fruit-closing-label",
+              "hebrew": "על פרות משבעת המינים",
+              "translation": "For fruits of the seven species:"
+            },
+            {
+              "type": "text",
+              "id": "fruit-closing-row",
+              "hebrew": "הַפֵּרוֹת. (בא\"י: וְעַל פֵּרוֹתֶֽיהָ.)",
+              "translation": "the fruits. (In the Land of Israel: its fruits.)",
+              "translit": "happeroth. (vʾy\": wĕ'al perotheha.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "borei-nefashot",
+      "title": "Bore Nefashoth",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "borei-nefashot-intro",
+          "hebrew": "על כל שאר המאכלים",
+          "translation": "For all other foods:"
+        },
+        {
+          "type": "text",
+          "id": "borei-nefashot",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא נְפָשׁוֹת רַבּוֹת עַל כָּל מַה שֶּׁבָּרָא חֵי הָעוֹלָמִים.",
+          "translation": "Blessed are You, Adonay our God, King of the universe, who creates many living beings, for all that He has created — He is the Life of the worlds.",
+          "translit": "barukh ʾatta Adonay, ʾĕlohenu melekh ha'olam, boreʾ nĕfashoth rabboth 'al kol mah shebbaraʾ ḥe ha'olamim."
+        }
+      ]
+    }
+  ]
+}

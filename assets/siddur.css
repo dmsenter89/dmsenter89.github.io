@@ -296,6 +296,70 @@ html.show-translation .siddur-rubric .siddur-translation {
 .siddur-expandable-content { margin-top: 0.6rem; }
 .siddur-expandable-content .siddur-item:first-child { margin-top: 0; }
 
+.siddur-group {
+  border: 1px solid var(--siddur-border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  background: var(--siddur-sidebar-bg);
+}
+.siddur-group .siddur-item { margin: 0.5rem 0; }
+.siddur-group .siddur-item:first-child { margin-top: 0; }
+.siddur-group .siddur-item:last-child { margin-bottom: 0; }
+.siddur-group .siddur-rubric {
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+/* --- Reference tables (Appendix) --- */
+
+.siddur-table-section { margin-bottom: 2rem; }
+
+.siddur-table-section h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--siddur-border);
+  padding-bottom: 0.3rem;
+}
+
+.siddur-table-wrap { overflow-x: auto; }
+
+.siddur-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.siddur-table th,
+.siddur-table td {
+  border: 1px solid var(--siddur-border);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.siddur-table th {
+  background: var(--siddur-sidebar-bg);
+  font-weight: 600;
+}
+
+.siddur-table-hebrew {
+  font-family: "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.siddur-table-subtext {
+  display: block;
+  color: var(--siddur-muted);
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+.siddur-table-note {
+  color: var(--siddur-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
 /* --- Mobile: off-canvas sidebar --- */
 
 @media (max-width: 768px) {

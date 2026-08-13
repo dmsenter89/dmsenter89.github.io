@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+{{- /* Renders one or more reference tables (Appendix pages), driven by a
+       data file shaped { title, tables: [{id,title,headers,rows,hebrewColumn}], note }.
+       Resolves the data file by mirroring the content path under
+       data/siddur/..., same convention as chapter pages -- see
+       layouts/siddur/single.html. */ -}}
+{{- $relDir := strings.TrimPrefix "siddur/" (strings.TrimSuffix "/" .File.Dir) }}
+{{- $relPath := .File.BaseFileName }}
+{{- if $relDir }}{{ $relPath = printf "%s/%s" $relDir .File.BaseFileName }}{{ end }}
+{{- $segments := split $relPath "/" }}
+{{- $page := hugo.Data.siddur }}
+{{- range $segments }}{{ $page = index $page . }}{{ end }}
+
+<h1 class="siddur-page-title">{{ .Title }}</h1>
+{{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
+
+{{ range $page.tables }}
+{{ partial "siddur-table.html" . }}
+{{ end }}
+
+{{ with $page.note }}
+<p class="siddur-table-note">{{ . }}</p>
+{{ end }}
+
+{{ end }}
