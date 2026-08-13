@@ -1,0 +1,29 @@
+{{- /* Renders one reference table. Params: dict with id, title, headers
+       ([]string), rows ([][]string), and optional hebrewColumn (bool) --
+       when true, each row's first cell is styled/marked as Hebrew. */ -}}
+<section class="siddur-table-section" id="{{ .id }}">
+  <h2>{{ .title }}</h2>
+  <div class="siddur-table-wrap">
+    <table class="siddur-table">
+      <thead>
+        <tr>
+          {{- range .headers }}<th>{{ . }}</th>{{ end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{- $hebrewColumn := .hebrewColumn }}
+        {{- range .rows }}
+        <tr>
+          {{- range $i, $cell := . }}
+          {{- if and (eq $i 0) $hebrewColumn }}
+          <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ $cell | safeHTML }}</td>
+          {{- else }}
+          <td>{{ $cell | safeHTML }}</td>
+          {{- end }}
+          {{- end }}
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -27,3 +27,9 @@
   });"></script>
 {{- end }}
 {{- end }}
+
+{{- /* Language-switcher code tabs (see layouts/_shortcodes/tabs.html and tab.html). */ -}}
+<style>
+{{ (resources.Get "tabs.css" | minify).Content | safeCSS }}
+</style>
+

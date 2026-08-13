@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{ if .IsHome }}Siddur{{ else }}{{ .Title }} · Siddur{{ end }}</title>
+<script>
+(function() {
+  try {
+    var theme = localStorage.getItem('siddur-theme');
+    if (theme === 'dark' || theme === 'light') {
+      document.documentElement.setAttribute('data-theme', theme);
+    }
+    var display = localStorage.getItem('siddur-display');
+    var classes = display ? display.split(',') : ['show-hebrew', 'show-translation'];
+    classes.forEach(function(c) { if (c) document.documentElement.classList.add(c); });
+  } catch (e) {}
+})();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Hebrew:wght@400;700&display=swap">
+<style>{{ (resources.Get "siddur.css" | minify).Content | safeCSS }}</style>
+</head>
+<body>
+<div class="siddur-shell">
+  <button id="siddur-menu-toggle" class="siddur-menu-toggle" type="button" aria-expanded="false" aria-controls="siddur-sidebar">
+    <span aria-hidden="true">&#9776;</span>
+    <span class="sr-only">Contents</span>
+  </button>
+  <div id="siddur-sidebar-backdrop" class="siddur-sidebar-backdrop" hidden></div>
+  <nav id="siddur-sidebar" class="siddur-sidebar" aria-label="Siddur contents">
+    <div class="siddur-sidebar-header">
+      <a href="{{ (.Site.GetPage "/siddur").RelPermalink }}" class="siddur-home-link">Siddur</a>
+      <button id="siddur-theme-toggle" class="siddur-theme-toggle" type="button" aria-label="Toggle light or dark theme">
+        <span class="icon-sun" aria-hidden="true">&#9728;</span><span class="icon-moon" aria-hidden="true">&#9789;</span>
+      </button>
+    </div>
+    {{ partial "siddur-nav.html" (dict "Pages" (.Site.GetPage "/siddur").Pages "Current" .) }}
+  </nav>
+  <main class="siddur-main">
+    {{ block "main" . }}{{ end }}
+  </main>
+</div>
+<script>{{ (resources.Get "siddur.js" | minify).Content | safeJS }}</script>
+</body>
+</html>

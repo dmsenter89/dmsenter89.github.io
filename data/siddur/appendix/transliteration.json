@@ -1,0 +1,296 @@
+{
+  "title": "Transliteration",
+  "tables": [
+    {
+      "id": "begedkefet",
+      "title": "Begedkefet Letters (dagesh vs. rafe)",
+      "headers": [
+        "Letter",
+        "Name",
+        "With Dagesh",
+        "Without Dagesh (Rafe)"
+      ],
+      "hebrewColumn": true,
+      "rows": [
+        [
+          "ב",
+          "Bet",
+          "b",
+          "v"
+        ],
+        [
+          "ג",
+          "Gimel",
+          "g",
+          "gh"
+        ],
+        [
+          "ד",
+          "Dalet",
+          "d",
+          "dh"
+        ],
+        [
+          "כ",
+          "Kaf",
+          "k",
+          "kh"
+        ],
+        [
+          "פ",
+          "Pe",
+          "p",
+          "f"
+        ],
+        [
+          "ת",
+          "Tav",
+          "t",
+          "th"
+        ]
+      ]
+    },
+    {
+      "id": "other-consonants",
+      "title": "Other Consonants",
+      "headers": [
+        "Letter",
+        "Name",
+        "Transliteration"
+      ],
+      "hebrewColumn": true,
+      "rows": [
+        [
+          "א",
+          "Alef",
+          "ʾ"
+        ],
+        [
+          "ה",
+          "He",
+          "h"
+        ],
+        [
+          "ו",
+          "Vav",
+          "w"
+        ],
+        [
+          "ז",
+          "Zayin",
+          "z"
+        ],
+        [
+          "ח",
+          "Het",
+          "ḥ"
+        ],
+        [
+          "ט",
+          "Tet",
+          "ṭ"
+        ],
+        [
+          "י",
+          "Yod",
+          "y"
+        ],
+        [
+          "ל",
+          "Lamed",
+          "l"
+        ],
+        [
+          "מ",
+          "Mem",
+          "m"
+        ],
+        [
+          "נ",
+          "Nun",
+          "n"
+        ],
+        [
+          "ס",
+          "Samekh",
+          "s"
+        ],
+        [
+          "ע",
+          "Ayin",
+          "'"
+        ],
+        [
+          "צ",
+          "Tsadi",
+          "ṣ"
+        ],
+        [
+          "ק",
+          "Qof",
+          "q"
+        ],
+        [
+          "ר",
+          "Resh",
+          "r"
+        ],
+        [
+          "שׁ",
+          "Shin",
+          "sh"
+        ],
+        [
+          "שׂ",
+          "Sin",
+          "s"
+        ]
+      ]
+    },
+    {
+      "id": "finals",
+      "title": "Final Letter Forms",
+      "headers": [
+        "Letter",
+        "Name",
+        "Transliteration"
+      ],
+      "hebrewColumn": true,
+      "rows": [
+        [
+          "ך",
+          "Final Kaf",
+          "kh"
+        ],
+        [
+          "ם",
+          "Final Mem",
+          "m"
+        ],
+        [
+          "ן",
+          "Final Nun",
+          "n"
+        ],
+        [
+          "ף",
+          "Final Pe",
+          "f"
+        ],
+        [
+          "ץ",
+          "Final Tsadi",
+          "ṣ"
+        ]
+      ]
+    },
+    {
+      "id": "vowels",
+      "title": "Vowels",
+      "headers": [
+        "Niqqud",
+        "Name",
+        "Transliteration"
+      ],
+      "hebrewColumn": true,
+      "rows": [
+        [
+          "ְ",
+          "Sheva (vocal)",
+          "ĕ"
+        ],
+        [
+          "ֱ",
+          "Hataf Segol",
+          "ĕ"
+        ],
+        [
+          "ֲ",
+          "Hataf Patah",
+          "ă"
+        ],
+        [
+          "ֳ",
+          "Hataf Qamats",
+          "ŏ"
+        ],
+        [
+          "ִ",
+          "Hiriq",
+          "i"
+        ],
+        [
+          "ִי",
+          "Hiriq + Yod",
+          "i"
+        ],
+        [
+          "ֵ",
+          "Tsere",
+          "e"
+        ],
+        [
+          "ֵי",
+          "Tsere + Yod",
+          "e"
+        ],
+        [
+          "ֶ",
+          "Segol",
+          "e"
+        ],
+        [
+          "ֶי",
+          "Segol + Yod",
+          "e"
+        ],
+        [
+          "ַ",
+          "Patah",
+          "a"
+        ],
+        [
+          "ָ",
+          "Qamats",
+          "a"
+        ],
+        [
+          "ָה",
+          "Qamats + He (word-final)",
+          "a"
+        ],
+        [
+          "ֹ",
+          "Holam",
+          "o"
+        ],
+        [
+          "ֹ",
+          "Holam Haser (no vav)",
+          "o"
+        ],
+        [
+          "וֹ",
+          "Holam + Vav",
+          "o"
+        ],
+        [
+          "ֻ",
+          "Qubuts",
+          "u"
+        ],
+        [
+          "וּ",
+          "Shureq",
+          "u"
+        ],
+        [
+          "ָיו",
+          "Qamats + Yod + Vav (3ms suffix)",
+          "ayw"
+        ]
+      ]
+    }
+  ],
+  "note": "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs."
+}

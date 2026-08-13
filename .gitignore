@@ -7,7 +7,13 @@ hugo_stats.json
 # Jupyter / data artifacts that may live alongside posts
 .ipynb_checkpoints
 
+# Siddur transliteration toolkit's installed dependencies (npm install to restore)
+/siddur-build/node_modules/
+
 # Hugo binaries that may be dropped in the repo
 hugo.exe
 hugo.darwin
 hugo.linux
+
+# macOS
+.DS_Store

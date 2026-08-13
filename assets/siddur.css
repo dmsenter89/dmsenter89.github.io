@@ -1,0 +1,401 @@
+/* Siddur section — fully bespoke, distraction-free chrome. Scoped to
+   /siddur/ only; does not touch or inherit PaperMod's CSS. */
+
+:root {
+  --siddur-bg: #ffffff;
+  --siddur-fg: #1a1a1a;
+  --siddur-muted: #666666;
+  --siddur-border: #e0e0e0;
+  --siddur-accent: #7a4a2a;
+  --siddur-sidebar-bg: #f7f5f2;
+  --siddur-shadow: rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme="dark"] {
+  --siddur-bg: #121212;
+  --siddur-fg: #e8e6e3;
+  --siddur-muted: #a0a0a0;
+  --siddur-border: #333333;
+  --siddur-accent: #d3a06c;
+  --siddur-sidebar-bg: #1a1a1a;
+  --siddur-shadow: rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --siddur-bg: #121212;
+    --siddur-fg: #e8e6e3;
+    --siddur-muted: #a0a0a0;
+    --siddur-border: #333333;
+    --siddur-accent: #d3a06c;
+    --siddur-sidebar-bg: #1a1a1a;
+    --siddur-shadow: rgba(0, 0, 0, 0.5);
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--siddur-bg);
+  color: var(--siddur-fg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.siddur-shell {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* --- Sidebar --- */
+
+.siddur-sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  background: var(--siddur-sidebar-bg);
+  border-right: 1px solid var(--siddur-border);
+  padding: 0.75rem;
+  overflow-y: auto;
+}
+
+.siddur-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--siddur-border);
+  margin-bottom: 0.5rem;
+}
+
+.siddur-home-link {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--siddur-fg);
+  text-decoration: none;
+}
+
+.siddur-theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--siddur-fg);
+  padding: 0.25rem 0.4rem;
+  line-height: 1;
+}
+
+.icon-moon { display: none; }
+html[data-theme="dark"] .icon-sun { display: none; }
+html[data-theme="dark"] .icon-moon { display: inline; }
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .icon-sun { display: none; }
+  html:not([data-theme="light"]) .icon-moon { display: inline; }
+}
+
+.siddur-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.5rem;
+}
+.siddur-sidebar > .siddur-nav { padding-left: 0; }
+
+.siddur-nav li { margin: 0.15rem 0; }
+
+.siddur-nav-part {
+  display: block;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--siddur-muted);
+  padding: 0.4rem 0.5rem 0.1rem;
+}
+
+.siddur-nav a {
+  display: block;
+  padding: 0.4rem 0.5rem;
+  border-radius: 6px;
+  color: var(--siddur-fg);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.siddur-nav a:hover { background: var(--siddur-border); }
+
+.siddur-nav a.current {
+  background: var(--siddur-accent);
+  color: #fff;
+}
+
+.siddur-menu-toggle {
+  display: none;
+  position: fixed;
+  top: 0.6rem;
+  left: 0.6rem;
+  z-index: 30;
+  background: var(--siddur-bg);
+  border: 1px solid var(--siddur-border);
+  border-radius: 8px;
+  width: 2.4rem;
+  height: 2.4rem;
+  font-size: 1.2rem;
+  color: var(--siddur-fg);
+  box-shadow: 0 1px 4px var(--siddur-shadow);
+}
+
+.siddur-sidebar-backdrop {
+  display: none;
+}
+
+/* --- Main content --- */
+
+.siddur-main {
+  flex: 1;
+  min-width: 0;
+  padding: 1.5rem 2rem 4rem;
+  max-width: 720px;
+}
+
+.siddur-page-title {
+  margin-top: 0;
+}
+
+.siddur-chapter-list {
+  list-style: none;
+  padding: 0;
+}
+.siddur-chapter-list li { margin: 0.5rem 0; }
+.siddur-chapter-list a {
+  color: var(--siddur-accent);
+  text-decoration: none;
+  font-size: 1.05rem;
+}
+.siddur-chapter-list a:hover { text-decoration: underline; }
+
+/* --- Display toggle --- */
+
+.siddur-display-toggle {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.siddur-toggle-btn {
+  border: 1px solid var(--siddur-border);
+  background: var(--siddur-bg);
+  color: var(--siddur-muted);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.siddur-toggle-btn[aria-pressed="true"] {
+  background: var(--siddur-accent);
+  color: #fff;
+  border-color: var(--siddur-accent);
+}
+
+/* --- Liturgy content --- */
+
+.siddur-section {
+  margin-bottom: 2rem;
+}
+
+.siddur-section h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--siddur-border);
+  padding-bottom: 0.3rem;
+}
+
+.siddur-item { margin: 1.1rem 0; }
+
+.siddur-hebrew {
+  display: none;
+  font-size: 1.3rem;
+  line-height: 1.9;
+  text-align: right;
+}
+
+/* Prayer text gets a serif Hebrew face to set it apart from instructional
+   (rubric) Hebrew, which stays sans-serif. */
+.siddur-text .siddur-hebrew {
+  font-family: "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
+}
+
+.siddur-translit {
+  display: none;
+  color: var(--siddur-muted);
+  font-style: italic;
+  margin: 0.3rem 0;
+}
+
+.siddur-translation {
+  display: none;
+  margin: 0.3rem 0;
+}
+
+html.show-hebrew .siddur-hebrew { display: block; }
+html.show-translit .siddur-translit { display: block; }
+html.show-translation .siddur-translation { display: block; }
+
+.siddur-rubric {
+  color: var(--siddur-muted);
+  font-size: 0.9rem;
+}
+.siddur-rubric .siddur-hebrew {
+  font-size: 1rem;
+  display: block;
+}
+.siddur-rubric .siddur-translation { font-style: italic; }
+
+/* Rubrics (instructions) only ever show in Hebrew or in English, never
+   transliterated -- they have no niqqud to transliterate meaningfully.
+   Show English if either English or transliteration is toggled on
+   (transliteration implies "I want reading help", which for a rubric
+   means the English gloss); show Hebrew otherwise, independent of the
+   main Hebrew toggle. */
+html.show-translit .siddur-rubric .siddur-hebrew,
+html.show-translation .siddur-rubric .siddur-hebrew {
+  display: none;
+}
+html.show-translit .siddur-rubric .siddur-translation,
+html.show-translation .siddur-rubric .siddur-translation {
+  display: block;
+}
+
+/* --- Expandable (occasion-specific insertions) --- */
+
+.siddur-expandable {
+  border: 1px solid var(--siddur-border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+}
+
+.siddur-expandable-label {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--siddur-accent);
+  list-style: none;
+}
+
+.siddur-expandable-label::-webkit-details-marker { display: none; }
+.siddur-expandable-label::marker { content: ""; }
+.siddur-expandable-label::before { content: "+ "; }
+.siddur-expandable[open] .siddur-expandable-label::before { content: "\2212 "; }
+
+.siddur-expandable-content { margin-top: 0.6rem; }
+.siddur-expandable-content .siddur-item:first-child { margin-top: 0; }
+
+.siddur-group {
+  border: 1px solid var(--siddur-border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  background: var(--siddur-sidebar-bg);
+}
+.siddur-group .siddur-item { margin: 0.5rem 0; }
+.siddur-group .siddur-item:first-child { margin-top: 0; }
+.siddur-group .siddur-item:last-child { margin-bottom: 0; }
+.siddur-group .siddur-rubric {
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+/* --- Reference tables (Appendix) --- */
+
+.siddur-table-section { margin-bottom: 2rem; }
+
+.siddur-table-section h2 {
+  font-size: 1.15rem;
+  border-bottom: 1px solid var(--siddur-border);
+  padding-bottom: 0.3rem;
+}
+
+.siddur-table-wrap { overflow-x: auto; }
+
+.siddur-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+.siddur-table th,
+.siddur-table td {
+  border: 1px solid var(--siddur-border);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.siddur-table th {
+  background: var(--siddur-sidebar-bg);
+  font-weight: 600;
+}
+
+.siddur-table-hebrew {
+  font-family: "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.siddur-table-subtext {
+  display: block;
+  color: var(--siddur-muted);
+  font-size: 0.85em;
+  font-weight: 400;
+}
+
+.siddur-table-note {
+  color: var(--siddur-muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* --- Mobile: off-canvas sidebar --- */
+
+@media (max-width: 768px) {
+  .siddur-menu-toggle { display: block; }
+
+  .siddur-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 40;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    box-shadow: 2px 0 8px var(--siddur-shadow);
+    width: 80vw;
+    max-width: 300px;
+  }
+
+  .siddur-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .siddur-sidebar-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 35;
+  }
+  .siddur-sidebar-backdrop.open {
+    display: block;
+  }
+
+  .siddur-main {
+    padding: 4rem 1.1rem 3rem;
+    max-width: 100%;
+  }
+
+  .siddur-hebrew { font-size: 1.25rem; }
+}
