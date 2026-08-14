@@ -292,5 +292,79 @@
       ]
     }
   ],
-  "note": "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs."
+  "note": "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs.",
+  "pronunciation": [
+    {
+      "hebrew": "א",
+      "name": "Alef",
+      "symbol": "ʾ",
+      "description": "A glottal stop — the light catch in the throat before “uh-oh,” often barely audible mid-word."
+    },
+    {
+      "hebrew": "ג",
+      "name": "Gimel (rafe)",
+      "symbol": "gh",
+      "description": "Arabic غ (ghayn) — no English equivalent, a voiced gargle from the back of the throat."
+    },
+    {
+      "hebrew": "ד",
+      "name": "Dalet (rafe)",
+      "symbol": "dh",
+      "description": "The “th” in this (voiced)."
+    },
+    {
+      "hebrew": "ו",
+      "name": "Vav",
+      "symbol": "w",
+      "description": "The “w” in water."
+    },
+    {
+      "hebrew": "ח",
+      "name": "Het",
+      "symbol": "ḥ",
+      "description": "Arabic ح (ḥa) — the sound of fogging up your glasses."
+    },
+    {
+      "hebrew": "ט",
+      "name": "Tet",
+      "symbol": "ṭ",
+      "description": "Arabic ط (ṭa) — a “t” with the tongue tensed and pulled back."
+    },
+    {
+      "hebrew": "כ",
+      "name": "Kaf (rafe)",
+      "symbol": "kh",
+      "description": "Arabic خ (kha) — like the German “Bach.”"
+    },
+    {
+      "hebrew": "ע",
+      "name": "Ayin",
+      "symbol": "ʿ",
+      "description": "Arabic ع (ʿayn) — the voiced counterpart to ḥ, a tightening in the throat."
+    },
+    {
+      "hebrew": "צ",
+      "name": "Tsadi",
+      "symbol": "ṣ",
+      "description": "Arabic ص (ṣad) — a tensed “s,” tongue pulled back."
+    },
+    {
+      "hebrew": "ק",
+      "name": "Qof",
+      "symbol": "q",
+      "description": "Arabic ق (qaf) — a voiceless uvular stop, like a deep [k] made further back in the throat."
+    },
+    {
+      "hebrew": "ר",
+      "name": "Resh",
+      "symbol": "r",
+      "description": "trilled r; similar to Spanish."
+    },
+    {
+      "hebrew": "ת",
+      "name": "Tav (rafe)",
+      "symbol": "th",
+      "description": "The “th” in think (voiceless)."
+    }
+  ]
 }

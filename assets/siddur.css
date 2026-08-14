@@ -212,9 +212,27 @@ html[data-theme="dark"] .icon-moon { display: inline; }
 }
 
 .siddur-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 1.15rem;
   border-bottom: 1px solid var(--siddur-border);
   padding-bottom: 0.3rem;
+}
+
+.siddur-youtube-link {
+  display: inline-flex;
+  color: var(--siddur-muted);
+  flex-shrink: 0;
+}
+.siddur-youtube-link:hover { color: var(--siddur-accent); }
+
+.siddur-audio-player {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  height: 32px;
+  margin: 0.5rem 0 0.75rem;
 }
 
 .siddur-item { margin: 1.1rem 0; }
@@ -358,6 +376,25 @@ html.show-translation .siddur-rubric .siddur-translation {
   color: var(--siddur-muted);
   font-size: 0.9rem;
   font-style: italic;
+}
+
+.siddur-pronunciation-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.siddur-pronunciation-list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--siddur-border);
+  line-height: 1.5;
+}
+.siddur-pronunciation-list li:last-child { border-bottom: none; }
+
+.siddur-pronunciation-hebrew {
+  font-family: "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
+  font-size: 1.15rem;
+  margin-right: 0.4rem;
 }
 
 /* --- Mobile: off-canvas sidebar --- */

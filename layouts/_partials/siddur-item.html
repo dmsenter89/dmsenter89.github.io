@@ -1,21 +1,33 @@
 {{- /* Renders one liturgy item. Params: the item map itself.
-       type: "rubric" | "text" | "include" (splices in a shared section's
-       items by id, e.g. the Shema first paragraph reused across chapters) |
+       type: "rubric" | "text" | "include" (splices in another section's
+       items by id, e.g. the Shema first paragraph reused across chapters --
+       ref is resolved against the full data/siddur tree, so it isn't
+       limited to shared/*, any chapter's section can be reused this way.
+       Optional "itemIds" restricts the splice to just those item ids,
+       e.g. pulling only the Shema's first line without Ve'ahavta) |
        "expandable" (collapsed-by-default <details> for occasion-specific
        insertions, e.g. Al HaNissim on Purim/Chanukah -- wraps a nested
        "items" array, rendered the same way a section's items are) |
        "group" (always-open bordered box for a set of mutually exclusive
        alternatives shown side by side, e.g. the grain/wine/fruit choice in
        Me'en Shalosh -- same nested "items" array as expandable, just never
-       collapsed). */ -}}
+       collapsed).
+       Any item (of any type) may also carry an optional "audio" URL,
+       rendered as a native player -- used for chapters with a per-line
+       recording, e.g. the "For Toddlers" page. */ -}}
 {{- if eq .type "include" }}
   {{- $refSegments := split .ref "/" }}
   {{- $refData := hugo.Data.siddur }}
   {{- range $refSegments }}{{ $refData = index $refData . }}{{ end }}
   {{- $sectionId := .sectionId }}
+  {{- $itemIds := .itemIds }}
   {{- range $refData.sections }}
     {{- if eq .id $sectionId }}
-      {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
+      {{- range .items }}
+        {{- if or (not $itemIds) (in $itemIds .id) }}
+          {{- partial "siddur-item.html" . }}
+        {{- end }}
+      {{- end }}
     {{- end }}
   {{- end }}
 {{- else if eq .type "expandable" }}
@@ -40,4 +52,7 @@
   <p class="siddur-translit">{{ .translit }}</p>
   <p class="siddur-translation">{{ .translation }}</p>
 </div>
+{{- end }}
+{{- with .audio }}
+<audio class="siddur-audio-player" controls preload="none" src="{{ . }}"></audio>
 {{- end }}
