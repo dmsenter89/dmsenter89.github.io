@@ -1,0 +1,430 @@
+{
+  "title": "Selihoth",
+  "sections": [
+    {
+      "id": "selihoth-intro",
+      "title": "סליחות",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "selihoth-timing",
+          "hebrew": "נהגו ישראל מקדמת דנא לקום קודם עלות השחר ולומר סליחות מראש השנה עד יום הכיפורים. אולם זה דורות רבים נהגו הספרדים להתחיל לומר סליחות כבר מב' באלול. וכמו שאר התפילות שבסידור זה, ניתן לאומרן בכל שעה ביום, ולא רק קודם עלות השחר.",
+          "translation": "It is an ancient custom of Israel to rise before dawn and recite Selihoth from Rosh HaShanah until Yom HaKippurim. For many generations, however, the Sephardic custom has been to begin reciting Selihoth already from the 2nd of Elul. As with the other prayers in this siddur, they may be recited at any hour of the day, not only before dawn."
+        },
+        {
+          "type": "rubric",
+          "id": "selihoth-thirteen-middot-note",
+          "hebrew": "הערה על שלוש עשרה מידות: מרן סובר שהיחיד הרוצה לאומרן זקוק למניין, ובאין מניין - יאמרם דרך קריאה בטעמי המקרא, ולכן הובאו להלן עם הטעמים. אך לדעת הרב יוסף קאפח זצ\"ל, רשאי היחיד לאומרן דרך תפילה אף בלא מניין.",
+          "translation": "A note on the Thirteen Attributes: Maran holds that an individual wishing to recite them needs a minyan; lacking one, he should read them with the ta'amim of the Torah reading, and so they are given below with cantillation. Per Rav Yosef Qafih z\"l, however, an individual may recite them as tefillah even without a minyan."
+        }
+      ]
+    },
+    {
+      "id": "ben-adam",
+      "title": "בֶּן אָדָם מַה לְּךָ נִרְדָּם",
+      "youtube": "https://www.youtube.com/watch?v=CQ4uZFJY7pY",
+      "items": [
+        {
+          "type": "text",
+          "id": "ben-adam-text",
+          "hebrew": "בֶּן אָדָם, מַה לְּךָ נִרְדָּם, קוּם קְרָא בְּתַחֲנוּנִים. שְׁפֹךְ שִׂיחָה, דְּרֹשׁ סְלִיחָה, מֵאֲדוֹן הָאֲדוֹנִים. רְחַץ וּטְהַר, וְאַל תְּאַחַר, בְּטֶרֶם יָמִים פּוֹנִים. וּמְהֵרָה, רוּץ לְעֶזְרָה, לִפְנֵי שׁוֹכֵן מְעוֹנִים. וּמִפֶּשַׁע, וְגַם רֶשַׁע, בְּרַח וּפְחַד מֵאֲסוֹנִים. אָנָּא שְׁעֵה, שִׁמְךָ יוֹדְעֵי, יִשְׂרָאֵל נֶאֱמָנִים. לְךָ אֲדֹנָי הַצְּדָקָה. וְלָנוּ בֹּשֶׁת הַפָּנִים׃ עֲמֹד כְּגֶבֶר, וְהִתְגַּבֵּר, לְהִתְוַדּוֹת עַל חֲטָאִים. יָהּ אֵל דְּרֹשׁ, בְּכֹבֶד רֹאשׁ, לְכַפֵּר עַל פְּשָׁעִים. כִּי לְעוֹלָם, לֹא נֶעְלָם, מִמֶּנּוּ נִפְלָאִים. וְכָל מַאֲמָר, אֲשֶׁר יֵאָמַר, לְפָנָיו הֵם נִקְרָאִים. הַמְּרַחֵם, הוּא יְרַחֵם, עָלֵינוּ כְּרַחֵם אָב עַל בָּנִים׃",
+          "translation": "O man, why do you sleep? Rise and cry out in supplication. Pour out your speech, seek forgiveness, from the Master of masters. Wash and purify yourself, and do not delay, before the days turn away. And hurry, run for help, before the One who dwells in lofty abodes. And from transgression and also wickedness, flee and fear calamities. Please, attend — Your name is known by the faithful of Israel. Righteousness is Yours, Adonay, and shame of face is ours: Stand firm as a man, and strengthen yourself, to confess your sins. God, seek with a grave demeanor to atone for transgressions. For nothing is ever hidden from Him, wonders included. And every word that is spoken is read out before Him. May the Merciful One have mercy upon us, as a father has mercy upon his children.",
+          "translit": "ben ʾadham, mah lĕkha nirdam, qum qĕraʾ bĕthaḥănunim. shĕfokh siḥa, dĕrosh sĕliḥa, meʾădhon haʾădhonim. rĕḥaṣ uṭĕhar, wĕʾal tĕʾaḥar, bĕṭerem yamim ponim. umĕhera, ruṣ lĕ'ezra, lifne shokhen mĕ'onim. umippesha', wĕgham resha', bĕraḥ ufĕḥadh meʾăsonim. ʾannaʾ shĕ'eh, shimkha yodhĕ'e, yisraʾel neʾĕmanim. lĕkha ʾădhonay haṣṣĕdhaqa. wĕlanu bosheth happanim 'ămodh kĕghever, wĕhithgabber, lĕhithwaddoth 'al ḥăṭaʾim. yah ʾel dĕrosh, bĕkhovedh roʾsh, lĕkhapper 'al pĕsha'im. ki lĕ'olam, loʾ ne'lam, mimmennu niflaʾim. wĕkhol maʾămar, ʾăsher yeʾamar, lĕfanayw hem niqraʾim. hammĕraḥem, huʾ yĕraḥem, 'alenu kĕraḥem ʾav 'al banim"
+        }
+      ]
+    },
+    {
+      "id": "lemaancha",
+      "title": "לְמַעַנְךָ אֱלֹהַי",
+      "youtube": "https://www.youtube.com/watch?v=_UWTp5HMua8",
+      "items": [
+        {
+          "type": "text",
+          "id": "lemaancha-1",
+          "hebrew": "לְמַעַנְךָ אֱלֹהַי. רְצֵה עַם לְךָ שִׁחַר. לְחַלּוֹת פָּנֶיךָ. בְּמַעֲמַד הַשַּׁחַר. אֲדֹנָי הַקְשִׁיבָה וַעֲשֵׂה אַל תְּאַחַר׃",
+          "translation": "For Your sake, my God, favor the people that seeks You out, to entreat Your presence at the watch of morning. Adonay, listen and act; do not delay.",
+          "translit": "lĕma'ankha ʾĕlohay. rĕṣeh 'am lĕkha shiḥar. lĕḥalloth panekha. bĕma'ămadh hashshaḥar. ʾădhonay haqshiva wa'ăseh ʾal tĕʾaḥar"
+        },
+        {
+          "type": "text",
+          "id": "lemaancha-2",
+          "hebrew": "לְמַעַנְךָ אֱלֹהַי. דְּלֵה מִמְּצֻלוֹת יָם. שְׂבֵעֵי רוֹשׁ וְלַעַן. בְּבֵית נוֹדָם וְשִׁבְיָם. וְשׁוּר לַחְצָם וְעָנְיָם. וְאַל תֵּפֶן לְמֶרְיָם. וְהַט אֹזֶן לְשַׁוְעָם. בִּתְפִלַּת הַשַּׁחַר׃ אֲדֹנָי הַקְשִׁיבָה וַעֲשֵׂה אַל תְּאַחַר׃",
+          "translation": "For Your sake, my God, draw up from the depths of the sea those sated with wormwood and gall, in the house of their wandering and captivity. Look upon their oppression and affliction, and do not turn to their rebelliousness; incline Your ear to their cry, in the morning prayer. Adonay, listen and act; do not delay.",
+          "translit": "lĕma'ankha ʾĕlohay. dĕleh mimmĕṣuloth yam. sĕve'e rosh wĕla'an. bĕveth nodham wĕshivyam. wĕshur laḥṣam wĕ'onyam. wĕʾal tefen lĕmeryam. wĕhaṭ ʾozen lĕshaw'am. bithfillath hashshaḥar ʾădhonay haqshiva wa'ăseh ʾal tĕʾaḥar"
+        },
+        {
+          "type": "text",
+          "id": "lemaancha-3",
+          "hebrew": "לְמַעַנְךָ אֱלֹהַי. וַעֲשֵׂה לְטוֹבָה אוֹת. וְחוֹן נְפָשׁוֹת עֲצוּבוֹת. לְמֵי יֶשַׁע צְמֵאוֹת. וְקַבֵּץ נִדָּחִים. פְּזוּרִים בְּכָל פֵּאוֹת. אֲשֶׁר מֵרֹב תְּלָאוֹת. עוֹרָם מְאֹד שָׁחַר׃ אֲדֹנָי הַקְשִׁיבָה וַעֲשֵׂה אַל תְּאַחַר׃",
+          "translation": "For Your sake, my God, work a sign for good, and be gracious to sorrowful souls thirsting for the waters of salvation. Gather the scattered, dispersed to every corner, whose skin, from so many hardships, has grown very dark. Adonay, listen and act; do not delay.",
+          "translit": "lĕma'ankha ʾĕlohay. wa'ăseh lĕṭova ʾoth. wĕḥon nĕfashoth 'ăṣuvoth. lĕme yesha' ṣĕmeʾoth. wĕqabbeṣ niddaḥim. pĕzurim bĕkhol peʾoth. ʾăsher merov tĕlaʾoth. 'oram mĕʾodh shaḥar ʾădhonay haqshiva wa'ăseh ʾal tĕʾaḥar"
+        },
+        {
+          "type": "text",
+          "id": "lemaancha-4",
+          "hebrew": "לְמַעַנְךָ אֱלֹהַי. יֶהֱמוּ רַחֲמֶיךָ. וּמִמְּעוֹן שָׁמֶיךָ. שְׁמַע קוֹל עַמֶּךָ. סוֹבְלֵי אַפְּךָ. קִצְפְּךָ וְזַעֲמֶךָ. וּמִנְּשׂוֹא אֵימֶיךָ. לִבָּם מְאֹד סְחַרְחַר׃ אֲדֹנָי הַקְשִׁיבָה וַעֲשֵׂה אַל תְּאַחַר׃",
+          "translation": "For Your sake, my God, let Your mercies stir, and from Your heavenly dwelling hear the voice of Your people, who bear Your anger, Your wrath, and Your fury; from bearing Your terrors their hearts are utterly disturbed. Adonay, listen and act; do not delay.",
+          "translit": "lĕma'ankha ʾĕlohay. yehĕmu raḥămekha. umimmĕ'on shamekha. shĕma' qol 'ammekha. sovĕle ʾappĕkha. qiṣpĕkha wĕza'ămekha. uminnĕsoʾ ʾemekha. libbam mĕʾodh sĕḥarḥar ʾădhonay haqshiva wa'ăseh ʾal tĕʾaḥar"
+        },
+        {
+          "type": "text",
+          "id": "lemaancha-5",
+          "hebrew": "לְמַעַנְךָ אֱלֹהַי. דַּלֶּיךָ תְּרַחֵם. וְשַׂמְּחֵם מִיגוֹנָם. וּבַעֲצָתְךָ תַנְחֵם. וְהַפְלֵא חֲסָדֶיךָ. וְחוּסָה נָּא וְרַחֵם. עֲמוּסִים מִבֶּטֶן וּמֵרֶחֶם מִשְׁחָר׃ אֲדֹנָי הַקְשִׁיבָה וַעֲשֵׂה אַל תְּאַחַר׃",
+          "translation": "For Your sake, my God, have mercy on Your poor, gladden them from their sorrow, and guide them with Your counsel; work Your wonders of kindness, and please have compassion on those borne from the womb, carried from birth. Adonay, listen and act; do not delay.",
+          "translit": "lĕma'ankha ʾĕlohay. dallekha tĕraḥem. wĕsammĕḥem mighonam. uva'ăṣathĕkha thanḥem. wĕhafleʾ ḥăsadhekha. wĕḥusa naʾ wĕraḥem. 'ămusim mibbeṭen umereḥem mishḥar ʾădhonay haqshiva wa'ăseh ʾal tĕʾaḥar"
+        }
+      ]
+    },
+    {
+      "id": "thirteen-attributes-1",
+      "title": "שְׁלֹשׁ עֶשְׂרֵה מִדּוֹת",
+      "youtube": "https://www.youtube.com/watch?v=kA2SZONk_GA",
+      "items": [
+        {
+          "type": "include",
+          "ref": "shared/thirteen-attributes",
+          "sectionId": "thirteen-attributes"
+        }
+      ]
+    },
+    {
+      "id": "erelie-malah",
+      "title": "אַרְאֵלֵי מַעְלָה",
+      "youtube": "https://www.youtube.com/watch?v=Q2BgEKQrGQg",
+      "items": [
+        {
+          "type": "text",
+          "id": "erelie-malah-1",
+          "hebrew": "אֶרְאֵלֵי מַעְלָה. אוֹמְרִים יְיָ אֲדוֹנֵנוּ. בְּחִירֵי סְגֻלָּה. עוֹנִים וְאוֹמְרִים. יְיָ הוּא הָאֱלֹהִים. יְיָ הוּא הָאֱלֹהִים׃",
+          "translation": "The angels above say: Adonay is our Lord. The chosen treasured ones answer and say: Adonay, He is God; Adonay, He is God.",
+          "translit": "ʾerʾele ma'la. ʾomĕrim Adonay ʾădhonenu. bĕḥire sĕghulla. 'onim wĕʾomĕrim. Adonay huʾ haʾĕlohim. Adonay huʾ haʾĕlohim"
+        },
+        {
+          "type": "text",
+          "id": "erelie-malah-2",
+          "hebrew": "גַּלְגַּלֵּי מַעְלָה. אוֹמְרִים יְיָ אֲדוֹנֵנוּ. דְּגוּלֵי סְגֻלָּה. עוֹנִים וְאוֹמְרִים. יְיָ הוּא הָאֱלֹהִים. יְיָ הוּא הָאֱלֹהִים׃",
+          "translation": "The heavenly spheres say: Adonay is our Lord. The bannered treasured ones answer and say: Adonay, He is God; Adonay, He is God.",
+          "translit": "galgalle ma'la. ʾomĕrim Adonay ʾădhonenu. dĕghule sĕghulla. 'onim wĕʾomĕrim. Adonay huʾ haʾĕlohim. Adonay huʾ haʾĕlohim"
+        },
+        {
+          "type": "text",
+          "id": "erelie-malah-3",
+          "hebrew": "הֲמוֹנֵי מַעְלָה. אוֹמְרִים יְיָ אֲדוֹנֵנוּ. יִשְׂרָאֵל בְּצָרָתָם וּבְגָלוּתָם עוֹנִים וְאוֹמְרִים. יְיָ הוּא הָאֱלֹהִים. יְיָ הוּא הָאֱלֹהִים׃",
+          "translation": "The multitudes above say: Adonay is our Lord. Israel, in their distress and their exile, answer and say: Adonay, He is God; Adonay, He is God.",
+          "translit": "hămone ma'la. ʾomĕrim Adonay ʾădhonenu. yisraʾel bĕṣaratham uvĕghalutham 'onim wĕʾomĕrim. Adonay huʾ haʾĕlohim. Adonay huʾ haʾĕlohim"
+        },
+        {
+          "type": "text",
+          "id": "erelie-malah-4",
+          "hebrew": "יְיָ מֶלֶךְ, יְיָ מָלָךְ יְיָ יִמְלֹךְ לְעֹלָם וָעֶד׃ (פעמיים)",
+          "translation": "Adonay reigns; Adonay has reigned; Adonay will reign forever and ever. (twice)",
+          "translit": "Adonay melekh, Adonay malakh Adonay yimlokh lĕ'olam wa'edh (f'myym)"
+        }
+      ]
+    },
+    {
+      "id": "beterem-shechakim",
+      "title": "בְּטֶרֶם שְׁחָקִים",
+      "youtube": "https://www.youtube.com/watch?v=oYN0tMx0eDs",
+      "items": [
+        {
+          "type": "text",
+          "id": "beterem-shechakim-1",
+          "hebrew": "בְּטֶרֶם שְׁחָקִים וַאֲרָקִים נִמְתָּחוּ, יְיָ מֶלֶךְ. וְעַד לֹא מְאוֹרוֹת זָרָחוּ, יְיָ מָלָךְ. וְהָאָרֶץ כַּבֶּגֶד תִּבְלֶה, וְשָׁמַיִם כְּעָשָׁן נִמְלָחוּ, יְיָ יִמְלֹךְ לְעוֹלָם וָעֶד׃ יְיָ מֶלֶךְ, יְיָ מָלָךְ, יְיָ יִמְלֹךְ לְעוֹלָם וָעֶד׃",
+          "translation": "Before the heavens and skies were stretched out — Adonay reigns. And before the lights had shone — Adonay has reigned. The earth shall wear out like a garment, and the heavens shall be rolled away like smoke — Adonay will reign forever and ever. Adonay reigns; Adonay has reigned; Adonay will reign forever and ever.",
+          "translit": "bĕṭerem shĕḥaqim waʾăraqim nimtaḥu, Adonay melekh. wĕ'adh loʾ mĕʾoroth zaraḥu, Adonay malakh. wĕhaʾareṣ kabbeghedh tivleh, wĕshamayīm kĕ'ashan nimlaḥu, Adonay yimlokh lĕ'olam wa'edh Adonay melekh, Adonay malakh, Adonay yimlokh lĕ'olam wa'edh"
+        },
+        {
+          "type": "text",
+          "id": "beterem-shechakim-2",
+          "hebrew": "וְעַד לֹא עָשָׂה אֶרֶץ וְחוּצוֹת, יְיָ מֶלֶךְ. וּבַהֲכִינוֹ יְצוּרִים עֲלֵי אֲרָצוֹת, יְיָ מָלָךְ. וְעֵת יְקַבֵּץ נְפוּצִים מֵאַרְבַּע תְּפוּצוֹת, יְיָ יִמְלֹךְ לְעוֹלָם וָעֶד׃ יְיָ מֶלֶךְ, יְיָ מָלָךְ, יְיָ יִמְלֹךְ לְעוֹלָם וָעֶד׃",
+          "translation": "And before He made land and open places — Adonay reigns. And when He established creatures upon the lands — Adonay has reigned. And when He gathers the scattered from the four corners of dispersion — Adonay will reign forever and ever. Adonay reigns; Adonay has reigned; Adonay will reign forever and ever.",
+          "translit": "wĕ'adh loʾ 'asa ʾereṣ wĕḥuṣoth, Adonay melekh. uvahăkhino yĕṣurim 'ăle ʾăraṣoth, Adonay malakh. wĕ'eth yĕqabbeṣ nĕfuṣim meʾarba' tĕfuṣoth, Adonay yimlokh lĕ'olam wa'edh Adonay melekh, Adonay malakh, Adonay yimlokh lĕ'olam wa'edh"
+        }
+      ]
+    },
+    {
+      "id": "eloheynu-shebashamayim",
+      "title": "אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם",
+      "items": [
+        {
+          "type": "text",
+          "id": "eloheynu-shebashamayim-1",
+          "hebrew": "אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם שְׁמַע קוֹלֵנוּ וְקַבֵּל תְּפִלָּתֵנוּ בְּרָצוֹן׃ (אמן) אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם אַל תְּאַבְּדֵנוּ בְּאֹרֶךְ גָּלוּתֵנוּ׃ (אמן)",
+          "translation": "Our God who is in heaven, hear our voice and accept our prayer willingly. (Amen) Our God who is in heaven, do not let us perish through the length of our exile. (Amen)",
+          "translit": "ʾĕlohenu shebbashshamayīm shĕma' qolenu wĕqabbel tĕfillathenu bĕraṣon (ʾmn) ʾĕlohenu shebbashshamayīm ʾal tĕʾabbĕdhenu bĕʾorekh galuthenu (ʾmn)"
+        },
+        {
+          "type": "rubric",
+          "id": "eloheynu-shebashamayim-abridged",
+          "hebrew": "הפיוט ממשיך על סדר האלפבית בעוד בקשות רבות; לשם קיצור לא הובא כאן במלואו",
+          "translation": "The piyut continues in alphabetical order through many more petitions; abridged here for brevity."
+        },
+        {
+          "type": "text",
+          "id": "eloheynu-shebashamayim-2",
+          "hebrew": "אֱלֹהֵינוּ שֶׁבַּשָּׁמַיִם עֲשֵׂה עִמָּנוּ אוֹת לְטוֹבָה. עֲשֵׂה עִמָּנוּ אוֹת לִישׁוּעָה. עֲשֵׂה עִמָּנוּ אוֹת לְרַחֲמִים. יִרְאוּ שׂוֹנְאֵינוּ וְיֵבֹשׁוּ. יֶחֱזוּ אוֹיְבֵינוּ וְיִכָּלְמוּ. כִּי אַתָּה יְיָ עֲזַרְתָּנוּ וְנִחַמְתָּנוּ׃",
+          "translation": "Our God who is in heaven, work with us a sign for good. Work with us a sign for salvation. Work with us a sign for mercy. Let those who hate us see and be ashamed; let our enemies behold and be humiliated — for You, Adonay, have helped us and comforted us.",
+          "translit": "ʾĕlohenu shebbashshamayīm 'ăseh 'immanu ʾoth lĕṭova. 'ăseh 'immanu ʾoth lishu'a. 'ăseh 'immanu ʾoth lĕraḥămim. yirʾu sonĕʾenu wĕyevoshu. yeḥĕzu ʾoyĕvenu wĕyikkalĕmu. ki ʾatta Adonay 'ăzartanu wĕniḥamtanu"
+        }
+      ]
+    },
+    {
+      "id": "anenu",
+      "title": "עֲנֵנוּ",
+      "youtube": "https://www.youtube.com/watch?v=2kHQ-CFc27c",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "anenu-pronunciation",
+          "hebrew": "יש להיזהר שלא להטעים את הנו\"ן ב'עננו', שאם יוטעה יתחלף המשמעות ל'ענה אותנו' חלילה",
+          "translation": "Take care not to stress the nun in \"Anenu\" — a mistaken stress would shift the meaning toward \"afflict us,\" God forbid."
+        },
+        {
+          "type": "text",
+          "id": "anenu-text",
+          "hebrew": "עֲנֵנוּ אֱלֹהֵי אַבְרָהָם עֲנֵנוּ׃ עֲנֵנוּ וּפַחַד יִצְחָק עֲנֵנוּ׃ עֲנֵנוּ אֲבִיר יַעֲקֹב עֲנֵנוּ׃ עֲנֵנוּ מָגֵן דָּוִד עֲנֵנוּ׃ עֲנֵנוּ הָעוֹנֶה בְּעֵת רָצוֹן עֲנֵנוּ׃ עֲנֵנוּ הָעוֹנֶה בְּעֵת צָרָה עֲנֵנוּ׃ עֲנֵנוּ הָעוֹנֶה בְּעֵת רַחֲמִים עֲנֵנוּ׃ עֲנֵנוּ אֱלֹהֵי הַמֶּרְכָּבָה עֲנֵנוּ׃ עֲנֵנוּ אֱלָהָא דְמֵאִיר עֲנֵנוּ׃ עֲנֵנוּ בִּזְכוּתֵהּ דְבַר־יוֹחַאי עֲנֵנוּ׃ עֲנֵנוּ מִשְׂגַּב הָאִמָּהוֹת עֲנֵנוּ׃ עֲנֵנוּ עֶזְרַת הַשְּׁבָטִים עֲנֵנוּ׃ עֲנֵנוּ רַחוּם וְחַנּוּן עֲנֵנוּ׃",
+          "translation": "Answer us, God of Abraham, answer us. Answer us, Dread of Isaac, answer us. Answer us, Mighty One of Jacob, answer us. Answer us, Shield of David, answer us. Answer us, You who answer in a time of favor, answer us. Answer us, You who answer in a time of distress, answer us. Answer us, You who answer in a time of mercy, answer us. Answer us, God of the Chariot, answer us. Answer us, God of Meir, answer us. Answer us, for the sake of bar Yochai, answer us. Answer us, Stronghold of the Matriarchs, answer us. Answer us, Help of the Tribes, answer us. Answer us, Merciful and Gracious One, answer us.",
+          "translit": "'ănenu ʾĕlohe ʾavraham 'ănenu 'ănenu ufaḥadh yiṣḥaq 'ănenu 'ănenu ʾăvir ya'ăqov 'ănenu 'ănenu maghen dawīdh 'ănenu 'ănenu ha'oneh bĕ'eth raṣon 'ănenu 'ănenu ha'oneh bĕ'eth ṣara 'ănenu 'ănenu ha'oneh bĕ'eth raḥămim 'ănenu 'ănenu ʾĕlohe hammerkava 'ănenu 'ănenu ʾĕlahaʾ dhĕmeʾir 'ănenu 'ănenu bizkhutheh dhĕvar-yoḥaʾy 'ănenu 'ănenu misgav haʾimmahoth 'ănenu 'ănenu 'ezrath hashshĕvaṭim 'ănenu 'ănenu raḥum wĕḥannun 'ănenu"
+        }
+      ]
+    },
+    {
+      "id": "adon-haselichot",
+      "title": "אֲדוֹן הַסְּלִיחוֹת",
+      "youtube": "https://www.youtube.com/watch?v=mDsl1fiCzaA",
+      "items": [
+        {
+          "type": "text",
+          "id": "adon-haselichot-text",
+          "hebrew": "אֲדוֹן הַסְּלִיחוֹת. בּוֹחֵן לְבָבוֹת. גּוֹלֶה עֲמֻקּוֹת. דּוֹבֵר צְדָקוֹת. חָטָאנוּ לְפָנֶיךָ רַחֵם עָלֵינוּ׃ הָדוּר בְּנִפְלָאוֹת. וָתִיק בְּנֶחָמוֹת. זוֹכֵר בְּרִית אָבוֹת. חוֹקֵר כְּלָיוֹת׃ חָטָאנוּ לְפָנֶיךָ רַחֵם עָלֵינוּ׃ טוֹב וּמֵטִיב לַבְּרִיּוֹת. יוֹדֵעַ כָּל נִסְתָּרוֹת. כּוֹבֵשׁ עֲוֹנוֹת. לוֹבֵשׁ צְדָקוֹת׃ חָטָאנוּ לְפָנֶיךָ רַחֵם עָלֵינוּ׃ מָלֵא זַכִּיּוּת. נוֹרָא תְהִלּוֹת. סוֹלֵחַ עֲוֹנוֹת. עוֹנֶה בְּעֵת צָרוֹת׃ חָטָאנוּ לְפָנֶיךָ רַחֵם עָלֵינוּ׃ פּוֹעֵל יְשׁוּעוֹת. צוֹפֶה עֲתִידוֹת. קוֹרֵא הַדּוֹרוֹת. רוֹכֵב עֲרָבוֹת. שׁוֹמֵעַ תְּפִלּוֹת. תְּמִים דֵּעוֹת׃ חָטָאנוּ לְפָנֶיךָ רַחֵם עָלֵינוּ׃",
+          "translation": "Master of forgiveness, Examiner of hearts, Revealer of depths, Speaker of righteousness — we have sinned before You, have mercy upon us. Glorious in wonders, Faithful in consolations, Rememberer of the covenant of the fathers, Searcher of the innermost being — we have sinned before You, have mercy upon us. Good and doing good to creatures, Knower of all hidden things, Subduer of iniquities, Clothed in righteousness — we have sinned before You, have mercy upon us. Full of merit, Awesome in praises, Forgiver of iniquities, Answerer in times of distress — we have sinned before You, have mercy upon us. Worker of salvations, Foreseer of the future, Caller of the generations, Rider of the heavens, Hearer of prayers, Perfect in knowledge — we have sinned before You, have mercy upon us.",
+          "translit": "ʾădhon hassĕliḥoth. boḥen lĕvavoth. goleh 'ămuqqoth. dover ṣĕdhaqoth. ḥaṭaʾnu lĕfanekha raḥem 'alenu hadhur bĕniflaʾoth. wathiq bĕneḥamoth. zokher bĕrith ʾavoth. ḥoqer kĕlayoth ḥaṭaʾnu lĕfanekha raḥem 'alenu ṭov umeṭiv labbĕriyyoth. yodhea' kol nistaroth. kovesh 'ăwonoth. lovesh ṣĕdhaqoth ḥaṭaʾnu lĕfanekha raḥem 'alenu maleʾ zakkiyyuth. noraʾ thĕhilloth. soleaḥ 'ăwonoth. 'oneh bĕ'eth ṣaroth ḥaṭaʾnu lĕfanekha raḥem 'alenu po'el yĕshu'oth. ṣofeh 'ăthidhoth. qoreʾ haddoroth. rokhev 'ăravoth. shomea' tĕfilloth. tĕmim de'oth ḥaṭaʾnu lĕfanekha raḥem 'alenu"
+        }
+      ]
+    },
+    {
+      "id": "el-rachum-shimcha",
+      "title": "אֵל רַחוּם שִׁמְךָ",
+      "youtube": "https://www.youtube.com/watch?v=U-A68fKMaEs",
+      "items": [
+        {
+          "type": "text",
+          "id": "el-rachum-shimcha-text",
+          "hebrew": "אֵל רַחוּם שִׁמְךָ. אֵל חַנּוּן שִׁמְךָ. אֵל אֶרֶךְ אַפַּיִם שִׁמְךָ. מָלֵא רַחֲמִים שִׁמְךָ. בָּנוּ נִקְרָא שִׁמְךָ. יְיָ עֲשֵׂה לְמַעַן שְׁמֶךָ׃",
+          "translation": "Merciful is Your name. Gracious is Your name. Slow to anger is Your name. Full of mercy is Your name. By You we are called. Adonay, act for Your name's sake.",
+          "translit": "ʾel raḥum shimkha. ʾel ḥannun shimkha. ʾel ʾerekh ʾappayīm shimkha. maleʾ raḥămim shimkha. banu niqraʾ shimkha. Adonay 'ăseh lĕma'an shĕmekha"
+        },
+        {
+          "type": "expandable",
+          "id": "el-rachum-shimcha-aseret-yemei-teshuva",
+          "label": "Aseret Yemei Teshuvah insertion",
+          "items": [
+            {
+              "type": "text",
+              "id": "el-rachum-shimcha-aseret-yemei-teshuva-text",
+              "hebrew": "אֵל רַחוּם שְׁמָךְ. אֵל חַנּוּן שְׁמָךְ. רְאֵה בָּעֳנִי עַמָּךְ. רַחֵם עַל עוֹלָמָךְ׃",
+              "translation": "Merciful is Your name. Gracious is Your name. Look upon the affliction of Your people; have mercy upon Your world.",
+              "translit": "ʾel raḥum shĕmakh. ʾel ḥannun shĕmakh. rĕʾeh bo'ŏni 'ammakh. raḥem 'al 'olamakh"
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "id": "el-rachum-shimcha-abridged",
+          "hebrew": "הפיוט ממשיך כאקרוסטיכון אלפביתי מלא, המסתיים תמיד בפזמון 'ראה בעני עמך רחם על עולמך'; לשם קיצור לא הובא כאן במלואו",
+          "translation": "The piyut continues as a full alphabetical acrostic, always closing with the refrain \"Look upon the affliction of Your people; have mercy upon Your world\"; abridged here for brevity."
+        }
+      ]
+    },
+    {
+      "id": "ya-shema-evyonecha",
+      "title": "יָהּ שְׁמַע אֶבְיוֹנֶיךָ",
+      "youtube": "https://www.youtube.com/watch?v=m6GO4PX3-XY",
+      "items": [
+        {
+          "type": "text",
+          "id": "ya-shema-evyonecha-1",
+          "hebrew": "יָהּ שְׁמַע אֶבְיוֹנֶיךָ. הַמְחַלִּים פָּנֶיךָ. אָבִינוּ לְבָנֶיךָ. אַל תַּעְלֵם אָזְנֶיךָ׃",
+          "translation": "Yah, hear Your needy ones, who entreat Your presence. Our Father, to Your children — do not hide Your ears.",
+          "translit": "yah shĕma' ʾevyonekha. hamĕḥallim panekha. ʾavinu lĕvanekha. ʾal ta'lem ʾoznekha"
+        },
+        {
+          "type": "text",
+          "id": "ya-shema-evyonecha-2",
+          "hebrew": "יָהּ עַם מִמַּעֲמַקִּים. יִקְרְאוּ מֵרֹב מְצוּקִים. אַל נָא תְשִׁיבֵם רֵקִים. הַיּוֹם מִלְּפָנֶיךָ׃",
+          "translation": "Yah, a people from the depths cries out from great distress; please do not turn them away empty today from before You.",
+          "translit": "yah 'am mimma'ămaqqim. yiqrĕʾu merov mĕṣuqim. ʾal naʾ thĕshivem reqim. hayyom millĕfanekha"
+        },
+        {
+          "type": "text",
+          "id": "ya-shema-evyonecha-3",
+          "hebrew": "הַוּוֹתָם וַעֲוֹנָם. מְחֵה וְרֻבֵּי זְדוֹנָם. וְאִם לֹא תַעֲשֶׂה לְמַעֲנָם. עֲשֵׂה צוּרִי לְמַעֲנֶךָ׃",
+          "translation": "Their misdeeds and their iniquity, wipe away, and the multitude of their willful sins; and if You will not act for their sake, act, my Rock, for Your own sake.",
+          "translit": "hawwotham wa'ăwonam. mĕḥeh wĕrubbe zĕdhonam. wĕʾīm loʾ tha'ăseh lĕma'ănam. 'ăseh ṣuri lĕma'ănekha"
+        },
+        {
+          "type": "text",
+          "id": "ya-shema-evyonecha-4",
+          "hebrew": "וּמְחֵה הַיּוֹם חוֹבָם. וּרְצֵה כְּמוֹ שַׁי נִיבָם. וּלְךָ תָּכִין לִבָּם. וְגַם תַּקְשִׁיב אָזְנֶךָ׃",
+          "translation": "And wipe away today their debt, and accept, as it were, the offering of their lips; and to You prepare their heart, and also incline Your ear.",
+          "translit": "umĕḥeh hayyom ḥovam. urĕṣeh kĕmo shay nivam. ulĕkha takhin libbam. wĕgham taqshiv ʾoznekha"
+        },
+        {
+          "type": "text",
+          "id": "ya-shema-evyonecha-5",
+          "hebrew": "דִּמְעַת פְּנֵיהֶם תִּשְׁעֶה. וְתֶאֱסֹף עֵדֶר תּוֹעֶה. וְתָקִים לְךָ רוֹעֶה. וּפְקֹד בְּטוֹב צֹאנֶךָ׃",
+          "translation": "Attend to the tears on their faces, and gather the straying flock, and raise up for Yourself a shepherd, and tend Your flock with goodness.",
+          "translit": "dim'ath pĕnehem tish'eh. wĕtheʾĕsof 'edher to'eh. wĕthaqim lĕkha ro'eh. ufĕqodh bĕṭov ṣoʾnekha"
+        },
+        {
+          "type": "text",
+          "id": "ya-shema-evyonecha-6",
+          "hebrew": "הוֹלְכֵי בְּדֶרֶךְ נְכוֹחָה. תְּבַשְּׂרֵם הַיּוֹם סְלִיחָה. וּבִתְפִלַּת הַשַּׁחַר. הַמְצִיאֵם חִנֶּךָ׃",
+          "translation": "Those who walk on the straight path — announce to them forgiveness today, and in the morning prayer, grant them Your favor.",
+          "translit": "holĕkhe bĕdherekh nĕkhoḥa. tĕvassĕrem hayyom sĕliḥa. uvithfillath hashshaḥar. hamĕṣiʾem ḥinnekha"
+        }
+      ]
+    },
+    {
+      "id": "thirteen-attributes-2",
+      "title": "שְׁלֹשׁ עֶשְׂרֵה מִדּוֹת",
+      "youtube": "https://www.youtube.com/watch?v=kA2SZONk_GA",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "thirteen-attributes-2-note",
+          "hebrew": "נאמרות כאן פעם שנייה",
+          "translation": "Recited here a second time."
+        },
+        {
+          "type": "include",
+          "ref": "shared/thirteen-attributes",
+          "sectionId": "thirteen-attributes"
+        }
+      ]
+    },
+    {
+      "id": "nipela-na",
+      "title": "בְּזָכְרִי עַל מִשְׁכָּבִי / נִפְלָה נָא",
+      "items": [
+        {
+          "type": "text",
+          "id": "nipela-na-1",
+          "hebrew": "בְּזָכְרִי עַל מִשְׁכָּבִי, זְדוֹן לִבִּי וַאֲשָׁמָיו. אָקוּמָה וְאָבוֹאָה, אֶל בֵּית אֱלֹהַי וַהֲדוֹמָיו. וָאֹמַר בְּנָשְׂאִי עַיִן, בְּתַחֲנוּנַי אֱלֵי שָׁמָיו. נִפְּלָה נָּא בְּיַד יְיָ כִּי רַבִּים רַחֲמָיו׃",
+          "translation": "When I remember, upon my bed, the willfulness of my heart and its guilt, I rise and come to the house of my God and His footstool. And I say, lifting my eyes, in my supplications toward the heavens: Let us fall, please, into the hand of Adonay, for His mercies are abundant.",
+          "translit": "bĕzakhĕri 'al mishkavi, zĕdhon libbi waʾăshamayw. ʾaquma wĕʾavoʾa, ʾel beth ʾĕlohay wahădhomayw. waʾomar bĕnasĕʾi 'ayīn, bĕthaḥănunay ʾĕle shamayw. nippĕla naʾ bĕyadh Adonay ki rabbim raḥămayw"
+        },
+        {
+          "type": "text",
+          "id": "nipela-na-2",
+          "hebrew": "לְךָ אֵלִי צוּר חֵילִי, מְנוּסָתִי בְּצָרָתִי. בְּךָ שִׂבְרִי וְתִקְוָתִי, אֱיָלוּתִי בְּגָלוּתִי. לְךָ כָּל מִשְׁאֲלוֹת לִבִּי, וְנֶגְדְּךָ כָּל תַּאֲוָתִי. פְּדֵה עֶבֶד לְךָ צוֹעֵק, מִיַּד רוֹדָיו וְקָמָיו׃ נִפְּלָה נָּא בְּיַד יְיָ כִּי רַבִּים רַחֲמָיו׃",
+          "translation": "To You, my God, Rock of my strength, my refuge in my distress; in You is my hope and my expectation, my strength in my exile. To You belong all the wishes of my heart, and before You all my desire. Redeem the servant who cries out to You, from the hand of those who pursue and rise against him. Let us fall, please, into the hand of Adonay, for His mercies are abundant.",
+          "translit": "lĕkha ʾeli ṣur ḥeli, mĕnusathi bĕṣarathi. bĕkha sivri wĕthiqwathi, ʾĕyaluthi bĕghaluthi. lĕkha kol mishʾăloth libbi, wĕneghdĕkha kol taʾăwathi. pĕdheh 'evedh lĕkha ṣo'eq, miyyadh rodhayw wĕqamayw nippĕla naʾ bĕyadh Adonay ki rabbim raḥămayw"
+        },
+        {
+          "type": "text",
+          "id": "nipela-na-3",
+          "hebrew": "עֲנֵנִי יְיָ עֲנֵנִי, בְּקָרְאִי מִן הַמֵּצַר. וְיִוָּדַע בָּעַמִּים, כִּי יָדְךָ לֹא תִקְצַר. וְאַל תִּבְזֶה עֱנוּת עָנִי, צוֹעֵק מִתִּגְרַת צַר. אֲשֶׁר פְּשָׁעָיו לְךָ מוֹדֶה, וּמִתְוַדֶּה עַל עֲלוּמָיו׃ נִפְּלָה נָּא בְּיַד יְיָ כִּי רַבִּים רַחֲמָיו׃",
+          "translation": "Answer me, Adonay, answer me, when I call from the narrow place; and let it be known among the nations that Your hand is not too short. Do not despise the affliction of the poor, crying out from the oppression of the foe — who confesses his transgressions to You and admits his hidden faults. Let us fall, please, into the hand of Adonay, for His mercies are abundant.",
+          "translit": "'ăneni Adonay 'ăneni, bĕqarĕʾi mīn hammeṣar. wĕyiwwadha' ba'ammim, ki yadhĕkha loʾ thiqṣar. wĕʾal tivzeh 'ĕnuth 'ani, ṣo'eq mittighrath ṣar. ʾăsher pĕsha'ayw lĕkha modheh, umithwaddeh 'al 'ălumayw nippĕla naʾ bĕyadh Adonay ki rabbim raḥămayw"
+        },
+        {
+          "type": "text",
+          "id": "nipela-na-4",
+          "hebrew": "מַה יִּתְאוֹנֵן וְיֹאמַר, מַה יְּדַבֵּר וְיִצְטַדָּק. יְצִיר חֹמֶר אֲשֶׁר תָּשׁוּב, גְּוִיָּתוֹ כְּאָבָק דַּק. מַה יִּתֵּן לְךָ הָאָדָם, כִּי יִרְשַׁע וְכִי יִצְדַּק. הֲלֹא מִלָּיו וּמִפְעָלָיו, כְּתוּבִים בְּסֵפֶר יָמָיו׃ נִפְּלָה נָּא בְּיַד יְיָ כִּי רַבִּים רַחֲמָיו׃",
+          "translation": "What shall he complain and say, what shall he speak and justify himself — a creature of clay who shall return, his body like fine dust? What can man give You, whether he does wrong or does right? Are not his words and his deeds all written in the book of his days? Let us fall, please, into the hand of Adonay, for His mercies are abundant.",
+          "translit": "mah yithʾonen wĕyoʾmar, mah yĕdhabber wĕyiṣṭaddaq. yĕṣir ḥomer ʾăsher tashuv, gĕwiyyatho kĕʾavaq daq. mah yitten lĕkha haʾadham, ki yirsha' wĕkhi yiṣdaq. hăloʾ millayw umif'alayw, kĕthuvim bĕsefer yamayw nippĕla naʾ bĕyadh Adonay ki rabbim raḥămayw"
+        },
+        {
+          "type": "text",
+          "id": "nipela-na-5",
+          "hebrew": "חֲצוֹת לַיְלָה לְךָ קָמוּ, עֲבָדֶיךָ בְּמַהֲלָלָם. זְכוּת אָבוֹת לָהֶם תִּזְכֹּר, וְאַל תֵּפֶן לְמַעֲלָלָם. קְנֵה עֲדָתְךָ כִּימֵי קֶדֶם, קְדוֹשׁ יַעֲקֹב גֹּאֲלָם. וְהִנָּשֵׂא הָאֵל, עוֹשֶׂה הַשָּׁלוֹם בִּמְרוֹמָיו׃ נִפְּלָה נָּא בְּיַד יְיָ כִּי רַבִּים רַחֲמָיו׃",
+          "translation": "At midnight Your servants rise for You in Your praise; remember for them the merit of the fathers, and do not look upon their misdeeds. Acquire Your congregation as in days of old, Holy One of Jacob, their Redeemer; and exalted is the God who makes peace in His heights. Let us fall, please, into the hand of Adonay, for His mercies are abundant.",
+          "translit": "ḥăṣoth layla lĕkha qamu, 'ăvadhekha bĕmahălalam. zĕkhuth ʾavoth lahem tizkor, wĕʾal tefen lĕma'ălalam. qĕneh 'ădhathĕkha kime qedhem, qĕdhosh ya'ăqov goʾălam. wĕhinnaseʾ haʾel, 'oseh hashshalom bimromayw nippĕla naʾ bĕyadh Adonay ki rabbim raḥămayw"
+        }
+      ]
+    },
+    {
+      "id": "shomer-yisrael",
+      "title": "שׁוֹמֵר יִשְׂרָאֵל",
+      "items": [
+        {
+          "type": "text",
+          "id": "shomer-yisrael-1",
+          "hebrew": "שׁוֹמֵר יִשְׂרָאֵל. שְׁמֹר שְׁאֵרִית יִשְׂרָאֵל. וְאַל יֹאבַד יִשְׂרָאֵל. הָאוֹמְרִים בְּכָל יוֹם. שְׁמַע יִשְׂרָאֵל׃",
+          "translation": "Guardian of Israel, guard the remnant of Israel, and let Israel not perish — those who say every day: \"Hear, O Israel.\"",
+          "translit": "shomer yisraʾel. shĕmor shĕʾerith yisraʾel. wĕʾal yoʾvadh yisraʾel. haʾomĕrim bĕkhol yom. shĕma' yisraʾel"
+        },
+        {
+          "type": "text",
+          "id": "shomer-yisrael-2",
+          "hebrew": "שׁוֹמֵר גּוֹי אֶחָד. שְׁמֹר שְׁאֵרִית גּוֹי אֶחָד. וְאַל יֹאבַד גּוֹי אֶחָד. הָאוֹמְרִים בְּכָל יוֹם. שְׁמַע יִשְׂרָאֵל. יְיָ אֱלֹהֵינוּ. יְיָ אֶחָד׃",
+          "translation": "Guardian of a single nation, guard the remnant of a single nation, and let a single nation not perish — those who say every day: \"Hear, O Israel, Adonay is our God, Adonay is One.\"",
+          "translit": "shomer goy ʾeḥadh. shĕmor shĕʾerith goy ʾeḥadh. wĕʾal yoʾvadh goy ʾeḥadh. haʾomĕrim bĕkhol yom. shĕma' yisraʾel. Adonay ʾĕlohenu. Adonay ʾeḥadh"
+        },
+        {
+          "type": "text",
+          "id": "shomer-yisrael-3",
+          "hebrew": "שׁוֹמֵר גּוֹי קָדוֹשׁ. שְׁמֹר שְׁאֵרִית גּוֹי קָדוֹשׁ. וְאַל יֹאבַד גּוֹי קָדוֹשׁ. הָאוֹמְרִים בְּכָל יוֹם. קָדוֹשׁ. קָדוֹשׁ. קָדוֹשׁ׃",
+          "translation": "Guardian of a holy nation, guard the remnant of a holy nation, and let a holy nation not perish — those who say every day: \"Holy, holy, holy.\"",
+          "translit": "shomer goy qadhosh. shĕmor shĕʾerith goy qadhosh. wĕʾal yoʾvadh goy qadhosh. haʾomĕrim bĕkhol yom. qadhosh. qadhosh. qadhosh"
+        },
+        {
+          "type": "text",
+          "id": "shomer-yisrael-4",
+          "hebrew": "שׁוֹמֵר גּוֹי רַבָּא. שְׁמֹר שְׁאֵרִית גּוֹי רַבָּא. וְאַל יֹאבַד גּוֹי רַבָּא. הָאוֹמְרִים בְּכָל יוֹם. אָמֵן יְהֵא שְׁמֵיהּ רַבָּא׃",
+          "translation": "Guardian of a great nation, guard the remnant of a great nation, and let a great nation not perish — those who say every day: \"Amen, may His great name be blessed.\"",
+          "translit": "shomer goy rabbaʾ. shĕmor shĕʾerith goy rabbaʾ. wĕʾal yoʾvadh goy rabbaʾ. haʾomĕrim bĕkhol yom. ʾamen yĕheʾ shĕmeh rabbaʾ"
+        }
+      ]
+    },
+    {
+      "id": "teanu-veteateru",
+      "title": "תֵּעָנוּ וְתֵעָתְרוּ",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "kaddish-shofar-cue",
+          "hebrew": "תוקעים בשופר בכל יום מימי הסליחות מלבד ערב ראש השנה, ועומדים לאמירת 'תעדנו ותעתרו'",
+          "translation": "The shofar is sounded here every day of Selihoth except erev Rosh HaShanah; stand for the \"Te'anu ve-te'ateru\" insertion."
+        },
+        {
+          "type": "text",
+          "id": "kaddish-teanu-veteateru",
+          "hebrew": "תֵּעָנוּ וְתֵעָתְרוּ בְּרַחֲמִים מִן הַשָּׁמַיִם. תְּקֻבַּל צַעֲקַתְכֶם. תִּשָּׁמַע תְּפִלַּתְכֶם בְּרָצוֹן. וְיֵעָנֶה קוֹל עֲתִירַתְכֶם. וִיקַיֵּם בָּכֶם מִקְרָא שֶׁכָּתוּב: יְיָ אֱלֹהֵי אֲבוֹתֵכֶם יֹסֵף עֲלֵיכֶם כָּכֶם אֶלֶף פְּעָמִים. וִיבָרֵךְ אֶתְכֶם כַּאֲשֶׁר דִּבֶּר לָכֶם.",
+          "translation": "May you be answered and entreated with mercy from heaven; may your cry be accepted, may your prayer be heard with favor, and may the voice of your supplication be answered; and may there be fulfilled in you the verse that is written: \"Adonay, the God of your fathers, add to you a thousand times as many as you are, and bless you as He has spoken to you.\"",
+          "translit": "te'anu wĕthe'athĕru bĕraḥămim mīn hashshamayīm. tĕqubbal ṣa'ăqathkhem. tishshama' tĕfillathkhem bĕraṣon. wĕye'aneh qol 'ăthirathkhem. wiqayyem bakhem miqraʾ shekkathuv: Adonay ʾĕlohe ʾăvothekhem yosef 'ălekhem kakhem ʾelef pĕ'amim. wivarekh ʾethkhem kaʾăsher dibber lakhem."
+        },
+        {
+          "type": "expandable",
+          "id": "kaddish-aseret-yemei-teshuva",
+          "label": "Aseret Yemei Teshuvah insertion",
+          "items": [
+            {
+              "type": "text",
+              "id": "kaddish-aseret-yemei-teshuva-text",
+              "hebrew": "וְיִכְתָּבְכֶם הָאֵל בְּסֵפֶר חַיִּים טוֹבִים׃",
+              "translation": "May God inscribe you in the book of good life.",
+              "translit": "wĕyikhtavĕkhem haʾel bĕsefer ḥayyim ṭovim"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "kaddish-vechen-yehi-ratzon",
+          "hebrew": "וְכֵן יְהִי רָצוֹן וְנֹאמַר אָמֵן׃",
+          "translation": "So may it be His will, and let us say Amen.",
+          "translit": "wĕkhen yĕhi raṣon wĕnoʾmar ʾamen"
+        },
+        {
+          "type": "text",
+          "id": "kaddish-oseh-shalom",
+          "hebrew": "עֹשֶׂה שָׁלוֹם בִּמְרוֹמָיו. הוּא בְּרַחֲמָיו יַעֲשֶׂה שָׁלוֹם עָלֵינוּ וְעַל כָּל עַמּוֹ יִשְׂרָאֵל וְאִמְרוּ אָמֵן׃",
+          "translation": "He who makes peace in His heights, may He in His mercy make peace upon us and upon all His people Israel; and let us say Amen.",
+          "translit": "'oseh shalom bimromayw. huʾ bĕraḥămayw ya'ăseh shalom 'alenu wĕ'al kol 'ammo yisraʾel wĕʾimru ʾamen"
+        }
+      ]
+    }
+  ]
+}

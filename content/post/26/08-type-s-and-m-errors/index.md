@@ -9,7 +9,7 @@ tags: ["statistics", "bayesian", "r", "sas", "python", "power-analysis"]
 categories: []
 date: 2026-08-07
 featured: false
-draft: false
+draft: true
 math: true
 
 # Featured image

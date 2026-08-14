@@ -1,0 +1,38 @@
+{
+  "title": "שלוש עשרה מידות",
+  "sections": [
+    {
+      "id": "thirteen-attributes",
+      "title": "שְׁלֹשׁ עֶשְׂרֵה מִדּוֹת",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "thirteen-attributes-directions",
+          "hebrew": "עומדים. כורעים באמירת 'וירד יְיָ'. עומדים ותוקעים בשופר באמירת 'ויעבור'. לדעת מרן, אין היחיד רשאי לומר מידות אלו דרך תפילה אלא דרך קריאה בטעמי המקרא, ולפיכך הובאו להלן עם הטעמים; ולדעת הרב יוסף קאפח זצ\"ל, רשאי היחיד לאומרם דרך תפילה אף בלא מניין.",
+          "translation": "Stand. Bow at \"Vayered Adonai.\" Stand and sound the shofar at \"Vaya'avor.\" Maran holds that an individual may not recite these Attributes as tefillah, only as a scriptural reading with Torah cantillation — so they are given below with the ta'amim; per Rav Yosef Qafih z\"l, an individual may recite them as tefillah even without a minyan."
+        },
+        {
+          "type": "text",
+          "id": "thirteen-attributes-intro",
+          "hebrew": "אֵל מֶלֶךְ יוֹשֵׁב עַל כִּסֵּא רַחֲמִים וּמִתְנַהֵג בַּחֲסִידוּת. מוֹחֵל עֲוֹנוֹת עַמּוֹ מַעֲבִיר רִאשׁוֹן רִאשׁוֹן. מַרְבֶּה מְחִילָה לַחַטָּאִים. וּסְלִיחָה לַפּוֹשְׁעִים. עוֹשֶׂה צְדָקוֹת עִם כָּל בָּשָׂר וְרוּחַ. לֹא כְרָעָתָם לָהֶם גּוֹמֵל. אֵל הוֹרֵתָנוּ לוֹמַר מִדּוֹת שְׁלֹשׁ עֶשְׂרֵה. זְכֹר לָנוּ הַיּוֹם בְּרִית שְׁלֹשׁ עֶשְׂרֵה. כְּמוֹ שֶׁהוֹדַעְתָּ לֶעָנָו מִקֶּדֶם. וְכֵן כָּתוּב בְּתוֹרָתָךְ׃",
+          "translation": "God, King, who sits upon a throne of mercy and acts with loving-kindness; who pardons the sins of His people, removing them one by one; who grants abundant pardon to sinners and forgiveness to transgressors; who deals righteously with all flesh and spirit, not repaying them according to their evil. God! You taught us to recite the Thirteen Attributes; remember for us today the covenant of the Thirteen Attributes, as You made known to the humble one of old, as it is written in Your Torah:",
+          "translit": "ʾel melekh yoshev 'al kisseʾ raḥămim umithnahegh baḥăsidhuth. moḥel 'ăwonoth 'ammo ma'ăvir riʾshon riʾshon. marbeh mĕḥila laḥaṭṭaʾim. usĕliḥa lapposhĕ'im. 'oseh ṣĕdhaqoth 'īm kol basar wĕruaḥ. loʾ khĕra'atham lahem gomel. ʾel horethanu lomar middoth shĕlosh 'esreh. zĕkhor lanu hayyom bĕrith shĕlosh 'esreh. kĕmo shehodha'ta le'anaw miqqedhem. wĕkhen kathuv bĕthorathakh"
+        },
+        {
+          "type": "text",
+          "id": "thirteen-attributes-verse",
+          "hebrew": "וַיֵּ֤רֶד יְיָ֙ בֶּֽעָנָ֔ן וַיִּתְיַצֵּ֥ב עִמּ֖וֹ שָׁ֑ם וַיִּקְרָ֥א בְשֵׁ֖ם יְיָ וַיַּעֲבֹ֨ר יְיָ֥ ׀ עַל־פָּנָיו֮ וַיִּקְרָא֒ יְיָ֣ ׀ יְיָ֔ אֵ֥ל רַח֖וּם וְחַנּ֑וּן אֶ֥רֶךְ אַפַּ֖יִם וְרַב־חֶ֥סֶד וֶאֱמֶֽת׃ נֹצֵ֥ר חֶ֙סֶד֙ לָאֲלָפִ֔ים נֹשֵׂ֥א עָוֺ֛ן וָפֶ֖שַׁע וְחַטָּאָ֑ה וְנַקֵּה֙׃",
+          "translation": "And Adonay descended in the cloud, and stood with him there, and proclaimed the name of Adonay. And Adonay passed before him and proclaimed: Adonay, Adonay, God, merciful and gracious, slow to anger, and abundant in kindness and truth; keeping kindness for thousands, forgiving iniquity, transgression, and sin, and pardoning.",
+          "translit": "wayyeredh Adonay be'anan wayyithyaṣṣev 'immo sham wayyiqraʾ vĕshem Adonay wayya'ăvor Adonay  'al-fanayw wayyiqraʾ Adonay  Adonay ʾel raḥum wĕḥannun ʾerekh ʾappayim wĕrav-ḥesedh weʾĕmeth noṣer ḥesedh laʾălafim noseʾ 'awon wafesha' wĕḥaṭṭaʾa wĕnaqqeh"
+        },
+        {
+          "type": "text",
+          "id": "thirteen-attributes-closing",
+          "hebrew": "וְסָלַחְתָּ לַעֲוֹנֵנוּ וּלְחַטָּאתֵנוּ וּנְחַלְתָּנוּ׃",
+          "translation": "And You shall forgive our iniquity and our sin, and take us for Your own.",
+          "translit": "wĕsalaḥta la'ăwonenu ulĕḥaṭṭaʾthenu unĕḥaltanu"
+        }
+      ]
+    }
+  ]
+}

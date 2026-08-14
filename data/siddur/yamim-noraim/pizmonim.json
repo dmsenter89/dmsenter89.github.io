@@ -1,0 +1,52 @@
+{
+  "title": "Pizmonim",
+  "sections": [
+    {
+      "id": "ozreni-el-chai",
+      "title": "ʿOzreni ʾEl Ḥay",
+      "audio": "https://www.learntefillah.com/wp-content/uploads/2020/09/Pizmonin-Ozreni-el-Chai-Rosh-Hashana-Yom-Kippur.mp3",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "ozreni-el-chai-info",
+          "hebrew": "פזמון לרבי רפאל ענתבי (המאה הי\"ט), עדות ארם צובא (סוריה), במקאם חג'אז",
+          "translation": "A pizmon by Rabbi Raphael Antebi (19th century), Aleppo tradition, in Maqam Hijaz."
+        },
+        {
+          "type": "text",
+          "id": "ozreni-el-chai-1",
+          "hebrew": "עׇזְרֵנִי אֵל חַי לְהַכְנִיעַ אֶת יֵצֶר הַמְפַתֶּה הַמֵּרִיעַ. מִבִּלְתְּךָ אֵין מוֹשִיעַ לְהוֹשִׁיעֵנִי׃",
+          "translation": "Help me, Living God, to subdue the tempting inclination that stirs up evil; besides You there is no savior to save me.",
+          "translit": "'ozreni ʾel ḥay lĕhakhnia' ʾeth yeṣer hamĕfatteh hammeria'. mibbiltĕkha ʾen moshia' lĕhoshi'eni"
+        },
+        {
+          "type": "text",
+          "id": "ozreni-el-chai-2",
+          "hebrew": "דַּלְתֵי תְשׁוּבָה חַי פְּתַח לִי. כִּי שַׁבְתִּי מֵחֶטְאִי וּמַעֲלִי. אָנָּא צוּרִי שְׁמַע קוֹלִי מַהֵר עֲנֵנִי׃",
+          "translation": "Living One, open for me the gates of repentance, for I have turned back from my sin and my trespass. Please, my Rock, hear my voice — answer me swiftly.",
+          "translit": "dalthe thĕshuva ḥay pĕthaḥ li. ki shavti meḥeṭʾi uma'ăli. ʾannaʾ ṣuri shĕma' qoli maher 'ăneni"
+        },
+        {
+          "type": "text",
+          "id": "ozreni-el-chai-3",
+          "hebrew": "אוֹדֶה עֲלֵי פְשָׁעַי אַתָּה תִשָּׂא עֲוֹנִי׃",
+          "translation": "I will confess my transgressions; You will bear my iniquity.",
+          "translit": "ʾodheh 'ăle fĕsha'ay ʾatta thissaʾ 'ăwoni"
+        },
+        {
+          "type": "text",
+          "id": "ozreni-el-chai-4",
+          "hebrew": "סוֹד יְמִינְךָ הַפְּשׁוּטָה לְקַבֵּל אֶת נֶפֶשׁ הַמִּתְחָרְטָה. וְלֹא תוֹסִיף תֶּחֱטָא אֵלֶיךָ קוֹנִי. הַרְחֶק נָא מֵעָלֶיהָ חֶבְרַת כַּת הַצְּפוֹנִי׃",
+          "translation": "The secret of Your outstretched right hand is to receive the soul that repents, so that it sin against You, its Maker, no more. Please keep far from it the company of the northern band.",
+          "translit": "sodh yĕminĕkha happĕshuṭa lĕqabbel ʾeth nefesh hammithḥarĕṭa. wĕloʾ thosif teḥĕṭaʾ ʾelekha qoni. harḥeq naʾ me'aleha ḥevrath kath haṣṣĕfoni"
+        },
+        {
+          "type": "rubric",
+          "id": "ozreni-el-chai-commentary",
+          "hebrew": "'אודה עלי פשעי' מהדהד את לשון תהלים ל\"ב:ה; ו'חברת כת הצפוני' מרמז ליואל ב:כ, שם ובמקורות מכונה כך היצר הרע",
+          "translation": "\"I will confess my transgressions\" echoes the language of Psalm 32:5; and \"the company of the northern band\" alludes to Joel 2:20, where that verse and later sources apply the epithet \"the Northern One\" to the evil impulse."
+        }
+      ]
+    }
+  ]
+}

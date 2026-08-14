@@ -78,6 +78,27 @@ const VOWELS = [
   ["ָיו", "Qamats + Yod + Vav (3ms suffix)", "MS_SUFX"],
 ];
 
+// Hand-curated notes on the "unusual" consonant sounds -- the ones that
+// aren't obvious to an English speaker from the transliteration symbol
+// alone. Not derived from schema.mjs (these are phonetic descriptions, not
+// character mappings), but kept here rather than hand-edited into the JSON
+// so they survive regeneration. Ordered alef-bet.
+// [hebrew, name, symbol, description]
+const PRONUNCIATION = [
+  ["א", "Alef", "ʾ", "A glottal stop — the light catch in the throat before “uh-oh,” often barely audible mid-word."],
+  ["ג", "Gimel (rafe)", "gh", "Arabic غ (ghayn) — no English equivalent, a voiced gargle from the back of the throat."],
+  ["ד", "Dalet (rafe)", "dh", "The “th” in this (voiced)."],
+  ["ו", "Vav", "w", "The “w” in water."],
+  ["ח", "Het", "ḥ", "Arabic ح (ḥa) — the sound of fogging up your glasses."],
+  ["ט", "Tet", "ṭ", "Arabic ط (ṭa) — a “t” with the tongue tensed and pulled back."],
+  ["כ", "Kaf (rafe)", "kh", "Arabic خ (kha) — like the German “Bach.”"],
+  ["ע", "Ayin", "ʿ", "Arabic ع (ʿayn) — the voiced counterpart to ḥ, a tightening in the throat."],
+  ["צ", "Tsadi", "ṣ", "Arabic ص (ṣad) — a tensed “s,” tongue pulled back."],
+  ["ק", "Qof", "q", "Arabic ق (qaf) — a voiceless uvular stop, like a deep [k] made further back in the throat."],
+  ["ר", "Resh", "r", "trilled r; similar to Spanish."],
+  ["ת", "Tav (rafe)", "th", "The “th” in think (voiceless)."],
+];
+
 const data = {
   title: "Transliteration",
   tables: [
@@ -117,6 +138,12 @@ const data = {
   ],
   note:
     "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs.",
+  pronunciation: PRONUNCIATION.map(([hebrew, name, symbol, description]) => ({
+    hebrew,
+    name,
+    symbol,
+    description,
+  })),
 };
 
 const path = "../data/siddur/appendix/transliteration.json";
