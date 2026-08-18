@@ -1,0 +1,139 @@
+{
+  "title": "Torah Study",
+  "sections": [
+    {
+      "id": "before-learning",
+      "title": "Before Learning",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "before-learning-cue",
+          "hebrew": "קודם הלימוד יאמר",
+          "translation": "Before learning, one says:"
+        },
+        {
+          "type": "text",
+          "id": "yehi-ratzon-torah",
+          "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי, שֶׁלֹּא אֶכָּשֵׁל בִּדְבַר הֲלָכָה, שֶׁלֹּא אֹמַר עַל טָמֵא טָהוֹר, וְלֹא עַל טָהוֹר טָמֵא, וְלֹא עַל מֻתָּר אָסוּר, וְלֹא עַל אָסוּר מֻתָּר. וְאַל אֶכָּשֵׁל בִּדְבַר הֲלָכָה, וְיִשְׂמְחוּ בִי חֲבֵרַי, וְאַל יִכָּשְׁלוּ חֲבֵרַי בִּדְבַר הֲלָכָה וְאֶשְׂמַח בָּהֶם. בְּשֵׁם יְיָ אֵל עוֹלָם נַעֲשֶׂה וְנַצְלִיחַ. כָּל יִשְׂרָאֵל יֵשׁ לָהֶם חֵלֶק לָעוֹלָם הַבָּא, וְעַמֵּךְ כֻּלָּם צַדִּיקִים לְעוֹלָם יִירְשׁוּ אָרֶץ, נֵצֶר מַטָּעַי מַעֲשֵׂה יָדַי לְהִתְפָּאֵר.",
+          "translation": "May it be Your will, Adhonay my God, that I do not stumble in a matter of law — that I do not call the impure pure, or the pure impure; that I do not call the forbidden permitted, or the permitted forbidden. May I not stumble in a matter of law, so that my companions rejoice in me; and may my companions not stumble in a matter of law, so that I rejoice in them. In the name of Adhonay, God of the universe, we shall act and prosper. All Israel has a share in the world to come — and your people, all of them righteous, shall inherit the land forever, a shoot of My planting, the work of My hands, in which to glory.",
+          "translit": "yĕhi raṣon millĕfanekha Adhonay ʾĕlohay, shelloʾ ʾekkashel bidhvar hălakha, shelloʾ ʾomar 'al ṭameʾ ṭahor, wĕloʾ 'al ṭahor ṭameʾ, wĕloʾ 'al muttar ʾasur, wĕloʾ 'al ʾasur muttar. wĕʾal ʾekkashel bidhvar hălakha, wĕyismĕḥu vi ḥăveray, wĕʾal yikkashĕlu ḥăveray bidhvar hălakha wĕʾesmaḥ bahem. bĕshem Adhonay ʾel 'olam na'ăseh wĕnaṣliaḥ. kol yisraʾel yesh lahem ḥeleq la'olam habbaʾ, wĕ'ammekh kullam ṣaddiqim lĕ'olam yirĕshu ʾareṣ, neṣer maṭṭa'ay ma'ăseh yadhay lĕhithpaʾer."
+        }
+      ]
+    },
+    {
+      "id": "mishnah",
+      "title": "Reading the Mishnah",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "mishnah-cue",
+          "hebrew": "לקריאת המשנה פותחים",
+          "translation": "For reading the Mishnah, one opens with:"
+        },
+        {
+          "type": "text",
+          "id": "kol-yisrael-mishnah",
+          "hebrew": "כָּל יִשְׂרָאֵל יֵשׁ לָהֶם חֵלֶק לָעוֹלָם הַבָּא, שֶׁנֶּאֱמַר: וְעַמֵּךְ כֻּלָּם צַדִּיקִים לְעוֹלָם יִירְשׁוּ אָרֶץ, נֵצֶר מַטָּעַי מַעֲשֵׂה יָדַי לְהִתְפָּאֵר.",
+          "translation": "All Israel has a share in the world to come, as it is said: \"And your people, all of them righteous, shall inherit the land forever — a shoot of My planting, the work of My hands, in which to glory.\" (Isaiah 60:21; Mishnah Sanhedrin 10:1)",
+          "translit": "kol yisraʾel yesh lahem ḥeleq la'olam habbaʾ, shenneʾĕmar: wĕ'ammekh kullam ṣaddiqim lĕ'olam yirĕshu ʾareṣ, neṣer maṭṭa'ay ma'ăseh yadhay lĕhithpaʾer."
+        }
+      ]
+    },
+    {
+      "id": "prophets",
+      "title": "Reading the Prophets",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "prophets-cue",
+          "hebrew": "לקריאת הנביאים פותחים",
+          "translation": "For reading the Prophets, one opens with:"
+        },
+        {
+          "type": "text",
+          "id": "prophets-verses",
+          "hebrew": "וְדִבַּ֙רְתִּי֙ עַל־הַנְּבִיאִ֔ים וְאָנֹכִ֖י חָז֣וֹן הִרְבֵּ֑יתִי וּבְיַ֥ד הַנְּבִיאִ֖ים אֲדַמֶּֽה׃ וָאָקִ֤ים מִבְּנֵיכֶם֙ לִנְבִיאִ֔ים וּמִבַּחוּרֵיכֶ֖ם לִנְזִרִ֑ים הַאַ֥ף אֵֽין־זֹ֛את בְּנֵ֥י יִשְׂרָאֵ֖ל נְאֻם־יְהֹוָֽה׃",
+          "translation": "I spoke through the prophets, and I gave many visions, and through the prophets I gave parables. (Hoshea 12:11) And I raised up from among your sons prophets, and from your young men nazirites; is this not so, children of Israel? — declares Adhonay. (Amos 2:11)",
+          "translit": "wĕdhibbarti 'al-hannĕviʾim wĕʾanokhi ḥazon hirbethi uvĕyadh hannĕviʾim ʾădhammeh. waʾaqim mibbĕnekhem linviʾim umibbaḥurekhem linzirim haʾaf ʾen-zoʾth bĕne yisraʾel nĕʾum-Adhonay."
+        },
+        {
+          "type": "rubric",
+          "id": "prophets-conclusion-cue",
+          "hebrew": "וכשמסיימים",
+          "translation": "And upon concluding:"
+        },
+        {
+          "type": "text",
+          "id": "goalenu-prophets",
+          "hebrew": "גֹּאֲלֵ֕נוּ יְיָ֥ צְבָא֖וֹת שְׁמ֑וֹ קְד֖וֹשׁ יִשְׂרָאֵֽל׃",
+          "translation": "Our Redeemer, Adhonay of hosts is His name, the Holy One of Israel. (Isaiah 47:4)",
+          "translit": "goʾălenu Adhonay ṣĕvaʾoth shĕmo qĕdhosh yisraʾel."
+        }
+      ]
+    },
+    {
+      "id": "torah",
+      "title": "Reading the Torah",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "torah-cue",
+          "hebrew": "לקריאת התורה פותחים",
+          "translation": "For reading the Torah, one opens with:"
+        },
+        {
+          "type": "text",
+          "id": "torah-tzivah",
+          "hebrew": "תּוֹרָה צִוָּה לָנוּ מֹשֶׁה, מוֹרָשָׁה קְהִלַּת יַעֲקֹב, וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל. כִּ֤י לֶ֣קַח ט֭וֹב נָתַ֣תִּי לָכֶ֑ם תּ֝וֹרָתִ֗י אַֽל־תַּעֲזֹֽבוּ. בָּר֖וּךְ אַתָּ֥ה יְיָ֗ לַמְּדֵ֥נִי חֻקֶּֽיךָ.",
+          "translation": "The Torah that Moses commanded us is the heritage of the congregation of Jacob. (Deuteronomy 33:4) And this is the Torah that Moses set before the children of Israel. (Deuteronomy 4:44) For I have given you good instruction; do not forsake My Torah. (Proverbs 4:2) Blessed are You, Adhonay; teach me Your statutes. (Psalm 119:12)",
+          "translit": "tora ṣiwwa lanu mosheh, morasha qĕhillath ya'ăqov, wĕzoʾth hattora ʾăsher sam mosheh lifne bĕne yisraʾel. ki leqaḥ ṭov nathatti lakhem torathi ʾal-tha'ăzovw. barukh ʾatta Adhonay lammĕdheni ḥuqqekha."
+        },
+        {
+          "type": "rubric",
+          "id": "torah-conclusion-cue",
+          "hebrew": "וכשמסיימים אומרים",
+          "translation": "And upon concluding, one says:"
+        },
+        {
+          "type": "text",
+          "id": "baruch-hashem-noten-hatorah",
+          "hebrew": "בָּרוּךְ יְיָ נוֹתֵן הַתּוֹרָה. בָּרוּךְ יְיָ לְעוֹלָם, אָמֵן וְאָמֵן. יִמְלֹךְ יְיָ לְעוֹלָם, אָמֵן וְאָמֵן.",
+          "translation": "Blessed is Adhonay, who gives the Torah. Blessed is Adhonay forever, Amen and Amen. Adhonay shall reign forever, Amen and Amen.",
+          "translit": "barukh Adhonay nothen hattora. barukh Adhonay lĕ'olam, ʾamen wĕʾamen. yimlokh Adhonay lĕ'olam, ʾamen wĕʾamen."
+        }
+      ]
+    },
+    {
+      "id": "after-learning",
+      "title": "After Learning",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "after-learning-cue",
+          "hebrew": "אחר סיום הלימוד יאמר",
+          "translation": "After concluding one's study, one says:"
+        },
+        {
+          "type": "text",
+          "id": "modeh-ani-torah",
+          "hebrew": "מוֹדֶה אֲנִי לְפָנֶיךָ יְיָ אֱלֹהַי, שֶׁשַּׂמְתָּ חֶלְקִי מִיּוֹשְׁבֵי בֵּית הַמִּדְרָשׁ, וְלֹא שַׂמְתָּ חֶלְקִי מִיּוֹשְׁבֵי קְרָנוֹת. שֶׁאֲנִי מַשְׁכִּים וְהֵם מַשְׁכִּימִים — אֲנִי מַשְׁכִּים לְדִבְרֵי תוֹרָה וְהֵם מַשְׁכִּימִים לִדְבָרִים בְּטֵלִים. אֲנִי עָמֵל וְהֵם עֲמֵלִים — אֲנִי עָמֵל וּמְקַבֵּל שָׂכָר וְהֵם עֲמֵלִים וְאֵינָם מְקַבְּלִים שָׂכָר. אֲנִי רָץ וְהֵם רָצִים — אֲנִי רָץ לְחַיֵּי הָעוֹלָם הַבָּא וְהֵם רָצִים לִבְאֵר שַׁחַת. אַנְשֵׁי דָמִים וּמִרְמָה לֹא יֶחֱצוּ יְמֵיהֶם, וַאֲנִי אֶבְטַח בָּךְ. וַאֲנִי אֶבְטַח בָּךְ כִּי לֹא עָזַבְתָּ דֹרְשֶׁיךָ יְיָ. כִּי כָל הָעַמִּים יֵלְכוּ אִישׁ בְּשֵׁם אֱלֹהָיו, וַאֲנַחְנוּ נֵלֵךְ בְּשֵׁם יְיָ אֱלֹהֵינוּ לְעוֹלָם וָעֶד.",
+          "translation": "I give thanks before You, Adhonay my God, that You have placed my portion among those who sit in the study hall, and not placed my portion among those who sit on street corners. For I rise early and they rise early — I rise early for words of Torah, and they rise early for idle things. I labor and they labor — I labor and receive a reward, and they labor and receive no reward. I run and they run — I run toward the life of the world to come, and they run toward the pit of destruction. Men of bloodshed and deceit shall not live out half their days, but I will trust in You. And I will trust in You, for You have not forsaken those who seek You, Adhonay. For all the peoples walk each in the name of his god, but we will walk in the name of Adhonay our God forever and ever. (Baraita, Berakhot 28b)",
+          "translit": "modheh ʾăni lĕfanekha Adhonay ʾĕlohay, shessamta ḥelqi miyyoshĕve beth hammidhrash, wĕloʾ samta ḥelqi miyyoshĕve qĕranoth. sheʾăni mashkim wĕhem mashkimim — ʾăni mashkim lĕdhivre thora wĕhem mashkimim lidhvarim bĕṭelim. ʾăni 'amel wĕhem 'ămelim — ʾăni 'amel umĕqabbel sakhar wĕhem 'ămelim wĕʾenam mĕqabbĕlim sakhar. ʾăni raṣ wĕhem raṣim — ʾăni raṣ lĕḥayye ha'olam habbaʾ wĕhem raṣim livʾer shaḥath. ʾanshe dhamim umirma loʾ yeḥĕṣu yĕmehem, waʾăni ʾevṭaḥ bakh. waʾăni ʾevṭaḥ bakh ki loʾ 'azavta dhorĕshekha Adhonay. ki khol ha'ammim yelĕkhu ʾish bĕshem ʾĕlohaw, waʾănaḥnu nelekh bĕshem Adhonay ʾĕlohenu lĕ'olam wa'edh."
+        },
+        {
+          "type": "rubric",
+          "id": "chananya-cue",
+          "hebrew": "לאחר כל לימוד תורה נהגו לומר",
+          "translation": "After any session of Torah study, it is customary to say:"
+        },
+        {
+          "type": "text",
+          "id": "rabbi-chananya",
+          "hebrew": "רַבִּי חֲנַנְיָה בֶּן עֲקַשְׁיָה אוֹמֵר: רָצָה הַקָּדוֹשׁ בָּרוּךְ הוּא לְזַכּוֹת אֶת יִשְׂרָאֵל, לְפִיכָךְ הִרְבָּה לָהֶם תּוֹרָה וּמִצְוֹת, שֶׁנֶּאֱמַר: יְיָ חָפֵץ לְמַעַן צִדְקוֹ, יַגְדִּיל תּוֹרָה וְיַאְדִּיר.",
+          "translation": "Rabbi Chananya ben Akashya says: The Holy One, blessed be He, wished to make Israel worthy; therefore He gave them Torah and mitzvot in abundance, as it is said: \"Adhonay desired, for the sake of His righteousness, to make the Torah great and glorious.\" (Isaiah 42:21; Mishnah Makkot 3:16)",
+          "translit": "rabbi ḥănanya ben 'ăqashya ʾomer: raṣa haqqadhosh barukh huʾ lĕzakkoth ʾeth yisraʾel, lĕfikhakh hirba lahem tora umiṣwoth, shenneʾĕmar: Adhonay ḥafeṣ lĕma'an ṣidhqo, yaghdil tora wĕyaʾdir."
+        }
+      ]
+    }
+  ]
+}
