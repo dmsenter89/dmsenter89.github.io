@@ -6,7 +6,7 @@
 // (see normalize-divine-name.mjs) so every occurrence -- the "יי" shorthand
 // and every differently-vowelized spelling of the four-letter Name alike --
 // is written consistently as unvocalized י״י, with cantillation preserved
-// where present. The English side renders that as "Adonay". Because the
+// where present. The English side renders that as "Adhonay". Because the
 // library can't cleanly treat "י״י" as one word (gershayim is punctuation,
 // so it tokenizes as two separate single-yod words), that substitution is
 // NOT done via DIVINE_NAME/ADDITIONAL_FEATURES below -- it's a plain string
@@ -56,7 +56,7 @@ export const sephardicSchema = {
   HIRIQ_YOD: "i",
   SHUREQ: "u",
   QUBUTS: "u",
-  MS_SUFX: "ayw",
+  MS_SUFX: "aw",
 
   // Reduced/vocal vowels -- kept breve-marked ("half circle pointing down",
   // e.g. ĕ) to stay visually distinct from the plain full vowels above.
@@ -68,5 +68,5 @@ export const sephardicSchema = {
   // Defensive fallback only -- see note above. The real Divine Name
   // rendering happens as a string swap in generate.mjs, driven by
   // normalize-divine-name.mjs.
-  DIVINE_NAME: "Adonay",
+  DIVINE_NAME: "Adhonay",
 };

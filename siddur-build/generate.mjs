@@ -7,7 +7,7 @@
 //      itself -- the varied/kabbalistic vowel-pointing from the source doc
 //      is NOT preserved anywhere, by design.
 //   2. Regenerates `translit` for type: "text" items only, rendering the
-//      normalized Divine Name as "Adonay".
+//      normalized Divine Name as "Adhonay".
 // Overwrites the file in place.
 //
 // - `type: "rubric"` items have their Divine Name normalized (for
@@ -42,7 +42,7 @@ function transliterateWithDivineName(hebrew) {
   const rendered = transliterate(shielded, sephardicSchema);
   // Placeholder may pick up surrounding whitespace changes from the
   // library; replace on the raw token regardless of adjacent spacing.
-  const withDivineName = rendered.split(DIVINE_NAME_PLACEHOLDER).join("Adonay").trim();
+  const withDivineName = rendered.split(DIVINE_NAME_PLACEHOLDER).join("Adhonay").trim();
   return unshieldLabels(withDivineName);
 }
 

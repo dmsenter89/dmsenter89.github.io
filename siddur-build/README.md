@@ -117,7 +117,7 @@ over the content tree.
 Every occurrence of the Tetragrammaton — the "יי" shorthand and any
 differently-vowelized spelling alike — gets normalized to a single
 consistent form: **יְיָ** (yud-sheva, yud-qamats). English always reads
-"Adonay".
+"Adhonay".
 
 This used to be the unvocalized י״י (gershayim) form, but real niqqud on the
 letters is what a browser/font needs to correctly position a following
@@ -131,7 +131,7 @@ Implementation lives in `normalize-divine-name.mjs`: `normalizeDivineName()`
 rewrites the saved `hebrew` field (dropping the source's original varied
 niqqud on that word, preserving cantillation if present); `generate.mjs`
 then shields `יְיָ` behind a placeholder before calling `transliterate()` and
-swaps in "Adonay" afterward, since the library has no clean way to force a
+swaps in "Adhonay" afterward, since the library has no clean way to force a
 fixed reading for a specific word/phrase — it would otherwise transliterate
 the letters literally (e.g. "yĕya").
 

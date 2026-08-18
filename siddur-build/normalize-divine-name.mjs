@@ -56,7 +56,7 @@ export function normalizeDivineName(hebrew) {
 
 // Placeholder used to shield the normalized Divine Name from the
 // transliteration library's own per-letter handling, so it renders as the
-// fixed reading "Adonay" instead of a literal letter-by-letter
+// fixed reading "Adhonay" instead of a literal letter-by-letter
 // transliteration of יְיָ. See generate.mjs. Uses an @@-delimited ASCII
 // token (not e.g. a null byte) so this file stays plain text -- a null
 // byte makes git treat the whole file as binary, which breaks GitHub's
