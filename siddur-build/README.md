@@ -157,6 +157,18 @@ content (extra consonants inserted, not just revocalized — e.g.
 "יוּהוּווּהוּ") aren't matched by the current regex. Review `generate.mjs`
 output before normalizing any chapter that might contain those.
 
+## Cantillation punctuation in translit
+
+The transliteration library silently drops sof pasuq (׃) and paseq (׀)
+instead of rendering them, which turns a transliterated biblical passage
+(Tehilla, the Amida's scriptural quotes, Ashrei, etc.) into one run-on line
+with no indication of where each verse ends. `punctuation.mjs` shields both
+marks before calling `transliterate()` and swaps them back into `translit`
+afterward — sof pasuq becomes `.`, paseq is dropped with its surrounding
+whitespace collapsed to one space. The saved `hebrew` field is untouched.
+Add another cantillation mark here if a future chapter needs one; nothing
+else needs to change.
+
 ## Gender-variant inline labels
 
 Some liturgy has a short instructional label marking where the text differs

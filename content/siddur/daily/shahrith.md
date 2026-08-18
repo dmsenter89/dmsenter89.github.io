@@ -1,5 +1,5 @@
 ---
-title: "Shaharith"
+title: "Shahrith"
 weight: 21
 robots: "noindex, nofollow"
 ---

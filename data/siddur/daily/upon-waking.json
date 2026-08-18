@@ -16,7 +16,7 @@
           "id": "modeh-ani",
           "hebrew": "אֱלֹהַי, הַנְּשָׁמָה שֶׁנָּתַתָּ בִּי טְהוֹרָה, אַתָּה בְרָאתָהּ, אַתָּה יְצַרְתָּהּ, אַתָּה נְפַחְתָּהּ בִּי, וְאַתָּה מְשַׁמְּרָהּ בְּקִרְבִּי, וְאַתָּה עָתִיד לִטְּלָהּ מִמֶּנִּי, וּלְהַחֲזִירָהּ לִי לֶעָתִיד לָבוֹא, כָּל־זְמַן שֶׁהַנְּשָׁמָה בְקִרְבִּי, מוֹדֶה (אִשָּׁה: מוֹדָה) אֲנִי לְפָנֶיךָ יְיָ אֱלֹהַי [וֵאלֹהֵי אֲבוֹתַי], רִבּוֹן כָּל־הַמַּעֲשִׂים [אֲדוֹן כָּל־הַנְּשָׁמוֹת]. בָּרוּךְ אַתָּה יְיָ, הַמַּחֲזִיר נְשָׁמוֹת לִפְגָרִים מֵתִים׃",
           "translation": "My God, the soul You have given me is pure. You created it, You formed it, You breathed it into me, and You preserve it within me. You will one day take it from me and restore it to me in the time to come. As long as the soul is within me, I gratefully acknowledge before You, Adhonay my God [and God of my fathers], Sovereign of all works, [Master of all souls]. Blessed are You, Adhonay, who restores souls to lifeless bodies.",
-          "translit": "ʾĕlohay, hannĕshama shennathatta bi ṭĕhora, ʾatta vĕraʾthah, ʾatta yĕṣartah, ʾatta nĕfaḥtah bi, wĕʾatta mĕshammĕrah bĕqirbi, wĕʾatta 'athidh liṭṭĕlah mimmenni, ulĕhaḥăzirah li le'athidh lavoʾ, kol-zĕman shehannĕshama vĕqirbi, modheh (a woman says: modha) ʾăni lĕfanekha Adhonay ʾĕlohay [weʾlohe ʾăvothay], ribbon kol-hamma'ăsim [ʾădhon kol-hannĕshamoth]. barukh ʾatta Adhonay, hammaḥăzir nĕshamoth lifgharim methim"
+          "translit": "ʾĕlohay, hannĕshama shennathatta bi ṭĕhora, ʾatta vĕraʾthah, ʾatta yĕṣartah, ʾatta nĕfaḥtah bi, wĕʾatta mĕshammĕrah bĕqirbi, wĕʾatta 'athidh liṭṭĕlah mimmenni, ulĕhaḥăzirah li le'athidh lavoʾ, kol-zĕman shehannĕshama vĕqirbi, modheh (a woman says: modha) ʾăni lĕfanekha Adhonay ʾĕlohay [weʾlohe ʾăvothay], ribbon kol-hamma'ăsim [ʾădhon kol-hannĕshamoth]. barukh ʾatta Adhonay, hammaḥăzir nĕshamoth lifgharim methim."
         }
       ]
     },
@@ -41,7 +41,7 @@
           "id": "hanoten-lasekhvi",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַנּוֹתֵן לַשֶּׂכְוִי בִינָה לְהָבִין בֵּין יוֹם וּבֵין לָיְלָה׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who gives the rooster understanding to distinguish between day and night.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hannothen lassekhwi vina lĕhavin ben yom uven layĕla"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hannothen lassekhwi vina lĕhavin ben yom uven layĕla."
         },
         {
           "type": "rubric",
@@ -54,7 +54,7 @@
           "id": "malbish-arumim",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מַלְבִּישׁ עֲרֻמִּים׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who clothes the naked.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, malbish 'ărummim"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, malbish 'ărummim."
         },
         {
           "type": "rubric",
@@ -67,7 +67,7 @@
           "id": "oter-yisrael",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עוֹטֵר יִשְׂרָאֵל בְּתִפְאָרָה׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who crowns Israel with glory.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, 'oṭer yisraʾel bĕthifʾara"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, 'oṭer yisraʾel bĕthifʾara."
         },
         {
           "type": "rubric",
@@ -80,7 +80,7 @@
           "id": "poqeach-ivrim",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, פּוֹקֵחַ עִוְרִים׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who gives sight to the blind.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, poqeaḥ 'iwrim"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, poqeaḥ 'iwrim."
         },
         {
           "type": "rubric",
@@ -93,7 +93,7 @@
           "id": "matir-asurim",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מַתִּיר אֲסוּרִים׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who releases the bound.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, mattir ʾăsurim"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, mattir ʾăsurim."
         },
         {
           "type": "rubric",
@@ -106,7 +106,7 @@
           "id": "roka-haaretz",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, רוֹקַע הָאָרֶץ עַל הַמָּיִם׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who spreads the earth upon the waters.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, roqa' haʾareṣ 'al hammayīm"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, roqa' haʾareṣ 'al hammayīm."
         },
         {
           "type": "rubric",
@@ -119,7 +119,7 @@
           "id": "zokef-kefufim",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, זוֹקֵף כְּפוּפִים׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who straightens the bent.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, zoqef kĕfufim"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, zoqef kĕfufim."
         },
         {
           "type": "rubric",
@@ -132,7 +132,7 @@
           "id": "al-netilat-yadayim",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְווֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us concerning the washing of hands.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al nĕṭilath yadhayīm"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al nĕṭilath yadhayīm."
         },
         {
           "type": "rubric",
@@ -145,7 +145,7 @@
           "id": "hamaavir-shena",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמַּעֲבִיר שֵׁנָה מֵעֵינַי וּתְנוּמָה מֵעַפְעַפָּי. יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתַּרְגִּילֵנִי לִדְבַר מִצְוָה וְאַל תַּרְגִּילֵנִי לִדְבַר עֲבֵרָה, וְתַשְׁלֵט בִּי יֵצֶר טוֹב וְאַל תַּשְׁלֵט בִּי יֵצֶר רָע, וּתְחַזְּקֵנִי בְּמִצְווֹתֶיךָ וְתִתֵּן חֶלְקִי בְּתוֹרָתֶךָ, וְתִתְּנֵנִי לְחֵן וּלְחֶסֶד וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל רוֹאָי, וְתִגְמְלֵנִי חֲסָדִים טוֹבִים. בָּרוּךְ אַתָּה יְיָ, גּוֹמֵל חֲסָדִים טוֹבִים׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who removes sleep from my eyes and slumber from my eyelids. May it be Your will, Adhonay my God and God of my fathers, that You accustom me to Your commandments and not to transgression; that the good impulse rule over me, and not the evil impulse; that You strengthen me in Your commandments and grant me a share in Your Torah; that You grant me favor, kindness, and mercy in Your eyes and in the eyes of all who see me; and that You bestow good kindnesses upon me. Blessed are You, Adhonay, who bestows good kindnesses.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hamma'ăvir shena me'enay uthĕnuma me'af'appay. yĕhi raṣon millĕfanekha Adhonay ʾĕlohay weʾlohe ʾăvothay, shettargileni lidhvar miṣwa wĕʾal targileni lidhvar 'ăvera, wĕthashleṭ bi yeṣer ṭov wĕʾal tashleṭ bi yeṣer ra', uthĕḥazzĕqeni bĕmiṣwothekha wĕthitten ḥelqi bĕthorathekha, wĕthittĕneni lĕḥen ulĕḥesedh ulĕraḥămim bĕ'enekha uvĕ'ene khol roʾay, wĕthighmĕleni ḥăsadhim ṭovim. barukh ʾatta Adhonay, gomel ḥăsadhim ṭovim"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hamma'ăvir shena me'enay uthĕnuma me'af'appay. yĕhi raṣon millĕfanekha Adhonay ʾĕlohay weʾlohe ʾăvothay, shettargileni lidhvar miṣwa wĕʾal targileni lidhvar 'ăvera, wĕthashleṭ bi yeṣer ṭov wĕʾal tashleṭ bi yeṣer ra', uthĕḥazzĕqeni bĕmiṣwothekha wĕthitten ḥelqi bĕthorathekha, wĕthittĕneni lĕḥen ulĕḥesedh ulĕraḥămim bĕ'enekha uvĕ'ene khol roʾay, wĕthighmĕleni ḥăsadhim ṭovim. barukh ʾatta Adhonay, gomel ḥăsadhim ṭovim."
         },
         {
           "type": "rubric",
@@ -158,7 +158,7 @@
           "id": "hitkabdu",
           "hebrew": "הִתְכַּבְּדוּ מְכֻבָּדִים, קְדוֹשִׁים מְשָׁרְתֵי עֶלְיוֹן, שִׁמְרוּנִי שִׁמְרוּנִי עַד שֶׁאֶכָּנֵס וְאֵצֵא, כִּי זֶה דַּרְכָּן שֶׁל בְּנֵי אָדָם׃",
           "translation": "Depart in honor, honored and holy servants of the Most High; guard me, guard me, until I enter and leave, for this is the way of human beings.",
-          "translit": "hithkabbĕdhu mĕkhubbadhim, qĕdhoshim mĕsharĕthe 'elyon, shimruni shimruni 'adh sheʾekkanes wĕʾeṣeʾ, ki zeh darkan shel bĕne ʾadham"
+          "translit": "hithkabbĕdhu mĕkhubbadhim, qĕdhoshim mĕsharĕthe 'elyon, shimruni shimruni 'adh sheʾekkanes wĕʾeṣeʾ, ki zeh darkan shel bĕne ʾadham."
         },
         {
           "type": "rubric",
@@ -171,7 +171,7 @@
           "id": "asher-yatzar",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר יָצַר אֶת הָאָדָם בְּחָכְמָה, וּבָרָא בוֹ נְקָבִים נְקָבִים וַחֲלָלִים חֲלָלִים, מֵהֶן פְּתוּחִים וּמֵהֶן סְתוּמִים, שֶׁאִם יִסָּתֵם אֶחָד מֵהֶן אוֹ יִפָּתֵחַ, אֵינוֹ יָכוֹל לְהִתְקַיֵּם אֲפִלּוּ שָׁעָה אֶחָת. בָּרוּךְ אַתָּה יְיָ, רוֹפֵא כָל בָּשָׂר וּמַפְלִיא לַעֲשׂוֹת׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who formed man in wisdom, and created in him many openings and many hollows — some open and some closed. It is known that if even one of them were to be blocked, or one of them opened, it would be impossible to survive even one hour. Blessed are You, Adhonay, who heals all flesh and does wonders.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher yaṣar ʾeth haʾadham bĕḥokhma, uvaraʾ vo nĕqavim nĕqavim waḥălalim ḥălalim, mehen pĕthuḥim umehen sĕthumim, sheʾīm yissathem ʾeḥadh mehen ʾo yippatheaḥ, ʾeno yakhol lĕhithqayyem ʾăfillu sha'a ʾeḥath. barukh ʾatta Adhonay, rofeʾ khol basar umafliʾ la'ăsoth"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher yaṣar ʾeth haʾadham bĕḥokhma, uvaraʾ vo nĕqavim nĕqavim waḥălalim ḥălalim, mehen pĕthuḥim umehen sĕthumim, sheʾīm yissathem ʾeḥadh mehen ʾo yippatheaḥ, ʾeno yakhol lĕhithqayyem ʾăfillu sha'a ʾeḥath. barukh ʾatta Adhonay, rofeʾ khol basar umafliʾ la'ăsoth."
         },
         {
           "type": "rubric",
@@ -184,7 +184,7 @@
           "id": "ozer-yisrael",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אוֹזֵר יִשְׂרָאֵל בִּגְבוּרָה׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who girds Israel with strength.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾozer yisraʾel bighvura"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾozer yisraʾel bighvura."
         },
         {
           "type": "rubric",
@@ -197,7 +197,7 @@
           "id": "sheasa-li",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה לִי כָּל צְרָכָי׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who has provided for all my needs.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, she'asa li kol ṣĕrakhay"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, she'asa li kol ṣĕrakhay."
         },
         {
           "type": "rubric",
@@ -210,7 +210,7 @@
           "id": "hamekhin-mitsadei",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמֵּכִין מִצְעֲדֵי גָבֶר׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who directs the steps of man.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hammekhin miṣ'ădhe ghaver"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hammekhin miṣ'ădhe ghaver."
         },
         {
           "type": "rubric",
@@ -223,14 +223,14 @@
           "id": "shelo-asani-goy",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי גּוֹי׃ (אִשָּׁה: גּוֹיָה)",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who has not made me a gentile.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani goy (a woman says: goya)"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani goy. (a woman says: goya)"
         },
         {
           "type": "text",
           "id": "shelo-asani-eved",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי עָבֶד׃ (אִשָּׁה: שִׁפְחָה)",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who has not made me a slave.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani 'avedh (a woman says: shifḥa)"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani 'avedh. (a woman says: shifḥa)"
         },
         {
           "type": "rubric",
@@ -243,7 +243,7 @@
           "id": "shelo-asani-isha",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי אִשָּׁה׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who has not made me a woman.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani ʾishsha"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani ʾishsha."
         },
         {
           "type": "rubric",
@@ -256,7 +256,7 @@
           "id": "sheasani-kirtzono",
           "hebrew": "בָּרוּךְ שֶׁעָשַׂנִי כִּרְצוֹנוֹ׃",
           "translation": "Blessed is He who made me according to His will.",
-          "translit": "barukh she'asani kirṣono"
+          "translit": "barukh she'asani kirṣono."
         }
       ]
     },
@@ -275,21 +275,21 @@
           "id": "torah-blessing-1",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְווֹתָיו וְצִוָּנוּ עַל דִּבְרֵי תוֹרָה׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us concerning the words of Torah.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al divre thora"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al divre thora."
         },
         {
           "type": "text",
           "id": "torah-blessing-2",
           "hebrew": "הַעֲרֶב נָא יְיָ אֱלֹהֵינוּ אֶת דִּבְרֵי תוֹרָתְךָ בְּפִינוּ וּבְפִיפִיּוֹת עַמְּךָ כָּל בֵּית יִשְׂרָאֵל, וְנִהְיֶה אֲנַחְנוּ וְצֶאֱצָאֵינוּ וְצֶאֱצָאֵי עַמְּךָ כָּל בֵּית יִשְׂרָאֵל, יוֹדְעֵי שְׁמֶךָ וְלוֹמְדֵי תוֹרָתְךָ לִשְׁמָהּ. בָּרוּךְ אַתָּה יְיָ, נוֹתֵן הַתּוֹרָה׃",
           "translation": "Please, Adhonay our God, make the words of Your Torah sweet in our mouths and in the mouths of Your people, the whole house of Israel, so that we, our descendants, and the descendants of Your people the house of Israel, may all know Your name and study Your Torah for its own sake. Blessed are You, Adhonay, who gives the Torah.",
-          "translit": "ha'ărev naʾ Adhonay ʾĕlohenu ʾeth divre thorathĕkha bĕfinu uvĕfifiyyoth 'ammĕkha kol beth yisraʾel, wĕnihyeh ʾănaḥnu wĕṣeʾĕṣaʾenu wĕṣeʾĕṣaʾe 'ammĕkha kol beth yisraʾel, yodhĕ'e shĕmekha wĕlomĕdhe thorathĕkha lishmah. barukh ʾatta Adhonay, nothen hattora"
+          "translit": "ha'ărev naʾ Adhonay ʾĕlohenu ʾeth divre thorathĕkha bĕfinu uvĕfifiyyoth 'ammĕkha kol beth yisraʾel, wĕnihyeh ʾănaḥnu wĕṣeʾĕṣaʾenu wĕṣeʾĕṣaʾe 'ammĕkha kol beth yisraʾel, yodhĕ'e shĕmekha wĕlomĕdhe thorathĕkha lishmah. barukh ʾatta Adhonay, nothen hattora."
         },
         {
           "type": "text",
           "id": "torah-blessing-3",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר בָּחַר בָּנוּ מִכָּל הָעַמִּים וְנָתַן לָנוּ אֶת תּוֹרָתוֹ. בָּרוּךְ אַתָּה יְיָ, נוֹתֵן הַתּוֹרָה׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who chose us from among all the peoples and gave us His Torah. Blessed are You, Adhonay, who gives the Torah.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher baḥar banu mikkol ha'ammim wĕnathan lanu ʾeth toratho. barukh ʾatta Adhonay, nothen hattora"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher baḥar banu mikkol ha'ammim wĕnathan lanu ʾeth toratho. barukh ʾatta Adhonay, nothen hattora."
         },
         {
           "type": "rubric",
@@ -302,35 +302,35 @@
           "id": "tov-ata",
           "hebrew": "טוֹב־אַתָּ֥ה וּמֵטִ֗יב לַמְּדֵ֥נִי חֻקֶּֽיךָ׃",
           "translation": "You are good and do good; teach me Your statutes.",
-          "translit": "ṭov-ʾatta umeṭiv lammĕdheni ḥuqqekha"
+          "translit": "ṭov-ʾatta umeṭiv lammĕdheni ḥuqqekha."
         },
         {
           "type": "text",
           "id": "birkat-kohanim",
           "hebrew": "וַיְדַבֵּ֥ר יְיָ֖ אֶל־מֹשֶׁ֥ה לֵּאמֹֽר׃ דַּבֵּ֤ר אֶֽל־אַהֲרֹן֙ וְאֶל־בָּנָ֣יו לֵאמֹ֔ר כֹּ֥ה תְבָרְכ֖וּ אֶת־בְּנֵ֣י יִשְׂרָאֵ֑ל אָמ֖וֹר לָהֶֽם׃ יְבָרֶכְךָ֥ יְיָ֖ וְיִשְׁמְרֶֽךָ׃ יָאֵ֨ר יְיָ֧ ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ יִשָּׂ֨א יְיָ֤ ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ וְשָׂמ֥וּ אֶת־שְׁמִ֖י עַל־בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרְכֵֽם׃",
           "translation": "Adhonay spoke to Moses, saying: Speak to Aaron and his sons, saying, thus shall you bless the children of Israel; say to them: May Adhonay bless you and keep you. May Adhonay make His face shine upon you and be gracious to you. May Adhonay lift up His face toward you and grant you peace. So shall they place My name upon the children of Israel, and I will bless them.",
-          "translit": "wayĕdhabber Adhonay ʾel-mosheh leʾmor dabber ʾel-ʾahăron wĕʾel-vanaw leʾmor koh thĕvarĕkhu ʾeth-vĕne yisraʾel ʾamor lahem yĕvarekhkha Adhonay wĕyishmĕrekha yaʾer Adhonay  panaw ʾelekha wiḥunnekka yissaʾ Adhonay  panaw ʾelekha wĕyasem lĕkha shalom wĕsamu ʾeth-shĕmi 'al-vĕne yisraʾel waʾăni ʾăvarĕkhem"
+          "translit": "wayĕdhabber Adhonay ʾel-mosheh leʾmor. dabber ʾel-ʾahăron wĕʾel-vanaw leʾmor koh thĕvarĕkhu ʾeth-vĕne yisraʾel ʾamor lahem. yĕvarekhkha Adhonay wĕyishmĕrekha. yaʾer Adhonay panaw ʾelekha wiḥunnekka. yissaʾ Adhonay panaw ʾelekha wĕyasem lĕkha shalom. wĕsamu ʾeth-shĕmi 'al-vĕne yisraʾel waʾăni ʾăvarĕkhem."
         },
         {
           "type": "text",
           "id": "eilu-devarim-1",
           "hebrew": "אֵלּוּ דְבָרִים שֶׁאֵין לָהֶם שִׁעוּר. הַפֵּאָה, וְהַבִּכּוּרִים, וְהָרֵאָיוֹן, וּגְמִילוּת חֲסָדִים, וְתַלְמוּד תּוֹרָה׃",
           "translation": "These are the things that have no fixed measure: the corner of the field left for the poor, the first fruits, the pilgrimage offering, acts of loving-kindness, and the study of Torah.",
-          "translit": "ʾellu dhĕvarim sheʾen lahem shi'ur. happeʾa, wĕhabbikkurim, wĕhareʾayon, ughĕmiluth ḥăsadhim, wĕthalmudh tora"
+          "translit": "ʾellu dhĕvarim sheʾen lahem shi'ur. happeʾa, wĕhabbikkurim, wĕhareʾayon, ughĕmiluth ḥăsadhim, wĕthalmudh tora."
         },
         {
           "type": "text",
           "id": "eilu-devarim-2",
           "hebrew": "אֵלּוּ דְבָרִים שֶׁאָדָם אוֹכֵל פֵּרוֹתֵיהֶן בָּעוֹלָם הַזֶּה וְהַקֶּרֶן קַיֶּמֶת לוֹ לָעוֹלָם הַבָּא. כִּבּוּד אָב וָאֵם, וּגְמִילוּת חֲסָדִים, וַהֲבָאַת שָׁלוֹם בֵּין אָדָם לַחֲבֵרוֹ, וְתַלְמוּד תּוֹרָה כְּנֶגֶד כֻּלָּם׃",
           "translation": "These are the things whose fruit a person enjoys in this world, while the principal remains for him in the world to come: honoring father and mother, acts of loving-kindness, and bringing peace between one person and another — and the study of Torah is equal to them all.",
-          "translit": "ʾellu dhĕvarim sheʾadham ʾokhel perothehen ba'olam hazzeh wĕhaqqeren qayyemeth lo la'olam habbaʾ. kibbudh ʾav waʾem, ughĕmiluth ḥăsadhim, wahăvaʾath shalom ben ʾadham laḥăvero, wĕthalmudh tora kĕneghedh kullam"
+          "translit": "ʾellu dhĕvarim sheʾadham ʾokhel perothehen ba'olam hazzeh wĕhaqqeren qayyemeth lo la'olam habbaʾ. kibbudh ʾav waʾem, ughĕmiluth ḥăsadhim, wahăvaʾath shalom ben ʾadham laḥăvero, wĕthalmudh tora kĕneghedh kullam."
         },
         {
           "type": "text",
           "id": "tana-devei-eliyahu",
           "hebrew": "תָּנָא דְּבֵי אֵלִיָּהוּ: כָּל הַשּׁוֹנֶה הֲלָכוֹת, מֻבְטָח לוֹ שֶׁהוּא בֶּן הָעוֹלָם הַבָּא, שֶׁנֶּאֱמַר: הֲלִיכוֹת עוֹלָם לוֹ - אַל תִּקְרָא הֲלִיכוֹת אֶלָּא הֲלָכוֹת׃",
           "translation": "It was taught in the school of Eliyahu: whoever studies halakhot [laws] daily is assured a place in the world to come, as it is said, \"his ways (halikhot) are eternal\" (Habakkuk 3:6) — read not halikhot [\"ways\"] but halakhot [\"laws\"].",
-          "translit": "tanaʾ dĕve ʾeliyyahu: kol hashshoneh hălakhoth, muvṭaḥ lo shehuʾ ben ha'olam habbaʾ, shenneʾĕmar: hălikhoth 'olam lo - ʾal tiqraʾ hălikhoth ʾellaʾ hălakhoth"
+          "translit": "tanaʾ dĕve ʾeliyyahu: kol hashshoneh hălakhoth, muvṭaḥ lo shehuʾ ben ha'olam habbaʾ, shenneʾĕmar: hălikhoth 'olam lo - ʾal tiqraʾ hălikhoth ʾellaʾ hălakhoth."
         }
       ]
     },
@@ -343,35 +343,35 @@
           "id": "leolam-yehe-adam",
           "hebrew": "לְעוֹלָם יְהֵא אָדָם יְרֵא שָׁמַיִם בַּסֵּתֶר וּמוֹדֶה עַל הָאֱמֶת וְדוֹבֵר אֱמֶת בִּלְבָבוֹ; יַשְׁכִּים וְיֹאמַר: רִבּוֹן כָּל הָעוֹלָמִים, לֹא עַל צִדְקוֹתֵינוּ אֲנַחְנוּ מַפִּילִים תַּחֲנוּנֵינוּ לְפָנֶיךָ, כִּי עַל רַחֲמֶיךָ הָרַבִּים. מָה אָנוּ, מַה חַיֵּינוּ, מַה חַסְדֵּנוּ, מַה צִּדְקֵנוּ, מַה מַּעֲשֵׂינוּ. מַה נֹּאמַר לְפָנֶיךָ יְיָ אֱלֹהֵינוּ, הֲלֹא הַגִּבּוֹרִים כְּאַיִן לְפָנֶיךָ וְאַנְשֵׁי הַשֵּׁם כְּלֹא הָיוּ, וַחֲכָמִים כִּבְלִי מַדָּע וּנְבוֹנִים כִּבְלִי הַשְׂכֵּל, כִּי כָל מַעֲשֵׂינוּ תֹהוּ וִימֵי חַיֵּינוּ הֶבֶל לְפָנֶיךָ, כְּמוֹ שֶׁכָּתוּב בְּדִבְרֵי קָדְשֶׁךָ: וּמוֹתַר הָאָדָם מִן הַבְּהֵמָה אָיִן, כִּי הַכֹּל הָבֶל׃",
           "translation": "One should always be God-fearing in private, acknowledge the truth, and speak truth in one's heart. Let him rise early and say: Sovereign of all worlds, it is not in reliance on our own righteousness that we lay our supplications before You, but because of Your abundant mercies. What are we? What is our life? What is our kindness? What is our righteousness? What are our achievements? What can we say before You, Adhonay our God? Are not all the mighty as nothing before You, the men of renown as though they had never been, the wise as if without knowledge, and the intelligent as if without insight? For most of what we do is empty, and the days of our life are vanity before You, as it is written in Your holy words: \"The advantage of man over beast is nothing, for all is vanity.\"",
-          "translit": "lĕ'olam yĕheʾ ʾadham yĕreʾ shamayīm bassether umodheh 'al haʾĕmeth wĕdhover ʾĕmeth bilvavo; yashkim wĕyoʾmar: ribbon kol ha'olamim, loʾ 'al ṣidhqothenu ʾănaḥnu mappilim taḥănunenu lĕfanekha, ki 'al raḥămekha harabbim. ma ʾanu, mah ḥayyenu, mah ḥasdenu, mah ṣidhqenu, mah ma'ăsenu. mah noʾmar lĕfanekha Adhonay ʾĕlohenu, hăloʾ haggibborim kĕʾayīn lĕfanekha wĕʾanshe hashshem kĕloʾ hayu, waḥăkhamim kivli madda' unĕvonim kivli haskel, ki khol ma'ăsenu thohu wime ḥayyenu hevel lĕfanekha, kĕmo shekkathuv bĕdhivre qodhshekha: umothar haʾadham mīn habbĕhema ʾayīn, ki hakkol havel"
+          "translit": "lĕ'olam yĕheʾ ʾadham yĕreʾ shamayīm bassether umodheh 'al haʾĕmeth wĕdhover ʾĕmeth bilvavo; yashkim wĕyoʾmar: ribbon kol ha'olamim, loʾ 'al ṣidhqothenu ʾănaḥnu mappilim taḥănunenu lĕfanekha, ki 'al raḥămekha harabbim. ma ʾanu, mah ḥayyenu, mah ḥasdenu, mah ṣidhqenu, mah ma'ăsenu. mah noʾmar lĕfanekha Adhonay ʾĕlohenu, hăloʾ haggibborim kĕʾayīn lĕfanekha wĕʾanshe hashshem kĕloʾ hayu, waḥăkhamim kivli madda' unĕvonim kivli haskel, ki khol ma'ăsenu thohu wime ḥayyenu hevel lĕfanekha, kĕmo shekkathuv bĕdhivre qodhshekha: umothar haʾadham mīn habbĕhema ʾayīn, ki hakkol havel."
         },
         {
           "type": "text",
           "id": "aval-anachnu",
           "hebrew": "אֲבָל אֲנַחְנוּ עַמְּךָ בְּנֵי בְּרִיתְךָ, בְּנֵי אַבְרָהָם אוֹהֲבֶךָ, שֶׁנִּשְׁבַּעְתָּ לּוֹ בְּהַר הַמּוֹרִיָּה, זֶרַע יִצְחָק עֲקִידְךָ, שֶׁנֶּעֱקַד עַל גַּבֵּי מִזְבַּחֲךָ, עֲדַת יַעֲקֹב בִּנְךָ בְּכוֹרֶךָ, שֶׁמֵּאַהֲבָתְךָ שֶׁאָהַבְתָּ אוֹתוֹ וְשִׂמְחָתְךָ שֶׁשָּׂמַחְתָּ בּוֹ קָרָאתָ אוֹתוֹ יִשְׂרָאֵל וִישֻׁרוּן׃",
           "translation": "But we are Your people, the people of Your covenant, the children of Abraham who loved You, to whom You swore on Mount Moriah; the offspring of Isaac, his only son, who was bound upon the altar; the community of Jacob, Your firstborn son, whom, out of the love with which You loved him and the joy with which You rejoiced in him, You named Israel and Yeshurun.",
-          "translit": "ʾăval ʾănaḥnu 'ammĕkha bĕne bĕrithĕkha, bĕne ʾavraham ʾohăvekha, shennishba'ta lo bĕhar hammoriyya, zera' yiṣḥaq 'ăqidhĕkha, shenne'ĕqadh 'al gabbe mizbaḥăkha, 'ădhath ya'ăqov binkha bĕkhorekha, shemmeʾahăvathĕkha sheʾahavta ʾotho wĕsimḥathĕkha shessamaḥta bo qaraʾtha ʾotho yisraʾel wishurun"
+          "translit": "ʾăval ʾănaḥnu 'ammĕkha bĕne bĕrithĕkha, bĕne ʾavraham ʾohăvekha, shennishba'ta lo bĕhar hammoriyya, zera' yiṣḥaq 'ăqidhĕkha, shenne'ĕqadh 'al gabbe mizbaḥăkha, 'ădhath ya'ăqov binkha bĕkhorekha, shemmeʾahăvathĕkha sheʾahavta ʾotho wĕsimḥathĕkha shessamaḥta bo qaraʾtha ʾotho yisraʾel wishurun."
         },
         {
           "type": "text",
           "id": "lefikhakh-anu",
           "hebrew": "לְפִיכָךְ אָנוּ חַיָּבִין לְהוֹדוֹת לָךְ וּלְשַׁבְּחָךְ וּלְפָאֲרָךְ, וְלִתֵּן הוֹדָיָה וּשְׁבָח לִשְׁמֶךָ. חַיָּבִין אָנוּ לוֹמַר לְפָנֶיךָ בְּכָל יוֹם, עֶרֶב וָבֹקֶר \"שְׁמַע יִשְׂרָאֵל, יְיָ אֱלֹהֵינוּ יְיָ אֶחָד\". אַשְׁרֵינוּ, מַה טּוֹב חֶלְקֵנוּ, מַה נָּעִים גּוֹרָלֵנוּ, מַה יָּפָה מְאֹד יְרֻשָּׁתֵנוּ. אַשְׁרֵינוּ שֶׁאָנוּ מַשְׁכִּימִין וּמַעֲרִיבִין וְאוֹמְרִין \"שְׁמַע יִשְׂרָאֵל, יְיָ אֱלֹהֵינוּ יְיָ אֶחָד\"׃",
           "translation": "Therefore we are obligated to thank, praise, and glorify You, and to give praise and thanks to Your name. We are obligated to say before You every day, evening and morning, \"Hear, O Israel: Adhonay is our God, Adhonay is One.\" Happy are we — how good is our portion, how pleasant our lot, how beautiful our heritage! Happy are we, who rise early and stay up late, evening and morning, and say, \"Hear, O Israel: Adhonay is our God, Adhonay is One.\"",
-          "translit": "lĕfikhakh ʾanu ḥayyavin lĕhodhoth lakh ulĕshabbĕḥakh ulĕfaʾărakh, wĕlitten hodhaya ushĕvaḥ lishmekha. ḥayyavin ʾanu lomar lĕfanekha bĕkhol yom, 'erev wavoqer \"shĕma' yisraʾel, Adhonay ʾĕlohenu Adhonay ʾeḥadh\". ʾashrenu, mah ṭov ḥelqenu, mah na'im goralenu, mah yafa mĕʾodh yĕrushshathenu. ʾashrenu sheʾanu mashkimin uma'ărivin wĕʾomĕrin \"shĕma' yisraʾel, Adhonay ʾĕlohenu Adhonay ʾeḥadh\""
+          "translit": "lĕfikhakh ʾanu ḥayyavin lĕhodhoth lakh ulĕshabbĕḥakh ulĕfaʾărakh, wĕlitten hodhaya ushĕvaḥ lishmekha. ḥayyavin ʾanu lomar lĕfanekha bĕkhol yom, 'erev wavoqer \"shĕma' yisraʾel, Adhonay ʾĕlohenu Adhonay ʾeḥadh\". ʾashrenu, mah ṭov ḥelqenu, mah na'im goralenu, mah yafa mĕʾodh yĕrushshathenu. ʾashrenu sheʾanu mashkimin uma'ărivin wĕʾomĕrin \"shĕma' yisraʾel, Adhonay ʾĕlohenu Adhonay ʾeḥadh\"."
         },
         {
           "type": "text",
           "id": "ata-hu-kodem",
           "hebrew": "אַתָּה הוּא קֹדֶם שֶׁנִּבְרָא הָעוֹלָם וְאַתָּה הוּא אַחַר שֶׁנִּבְרָא הָעוֹלָם, אַתָּה הוּא בָּעוֹלָם הַזֶּה וְאַתָּה הוּא לָעוֹלָם הַבָּא, אַתָּה הוּא רִאשׁוֹן וְאַתָּה הוּא אַחֲרוֹן. קַדֵּשׁ אֶת שְׁמָךְ הַגָּדוֹל וְהַקָּדוֹשׁ בְּעוֹלָמָךְ, וּבִישׁוּעָתְךָ תָּרִים וְתַגְבִּיהַּ קַרְנֵנוּ. בָּרוּךְ מְקַדֵּשׁ אֶת שְׁמוֹ בָּרַבִּים׃",
           "translation": "You existed before the world was created, and You exist after the world was created. You exist in this world, and You exist in the world to come. You are the first, and You are the last. Sanctify Your great and holy name in Your world, and through Your salvation raise and exalt our might. Blessed is He who sanctifies His name among the multitudes.",
-          "translit": "ʾatta huʾ qodhem shennivraʾ ha'olam wĕʾatta huʾ ʾaḥar shennivraʾ ha'olam, ʾatta huʾ ba'olam hazzeh wĕʾatta huʾ la'olam habbaʾ, ʾatta huʾ riʾshon wĕʾatta huʾ ʾaḥăron. qaddesh ʾeth shĕmakh haggadhol wĕhaqqadhosh bĕ'olamakh, uvishu'athĕkha tarim wĕthaghbiah qarnenu. barukh mĕqaddesh ʾeth shĕmo barabbim"
+          "translit": "ʾatta huʾ qodhem shennivraʾ ha'olam wĕʾatta huʾ ʾaḥar shennivraʾ ha'olam, ʾatta huʾ ba'olam hazzeh wĕʾatta huʾ la'olam habbaʾ, ʾatta huʾ riʾshon wĕʾatta huʾ ʾaḥăron. qaddesh ʾeth shĕmakh haggadhol wĕhaqqadhosh bĕ'olamakh, uvishu'athĕkha tarim wĕthaghbiah qarnenu. barukh mĕqaddesh ʾeth shĕmo barabbim."
         },
         {
           "type": "text",
           "id": "ata-hu-adonay",
           "hebrew": "אַתָּה הוּא יְיָ לְבַדֶּךָ. אַתָּה עָשִׂיתָ אֶת הַשָּׁמַיִם שְׁמֵי הַשָּׁמַיִם וְכָל צְבָאָם, הָאָרֶץ וְכָל אֲשֶׁר עָלֶיהָ, הַיַּמִּים וְכָל אֲשֶׁר בָּהֶם, וְאַתָּה מְחַיֶּה אֶת כֻּלָּם, וּצְבָא הַשָּׁמַיִם לְךָ מִשְׁתַּחֲוִים. אַתָּה הוּא יְיָ הָאֱלֹהִים אֲשֶׁר בָּחַרְתָּ בְּאַבְרָם וְהוֹצֵאתוֹ מֵאוּר כַּשְׂדִּים, וְשַׂמְתָּ שְּׁמוֹ אַבְרָהָם. אַתָּה הוּא, וּשְׁנוֹתֶיךָ לֹא יִתָּמּוּ. יְיָ מֶלֶךְ, יְיָ מָלַךְ, יְיָ יִמְלֹךְ לְעוֹלָם וָעֶד. בָּרוּךְ יְיָ לְעוֹלָם, אָמֵן וְאָמֵן׃",
           "translation": "You alone are Adhonay. You made the heavens, the heaven of heavens, and all their host, the earth and all that is upon it, the seas and all that is in them; You give life to them all, and the heavenly hosts bow down to You. You are Adhonay the God, who chose Abram, brought him out of Ur of the Chaldeans, and named him Abraham. You are He, and Your years never end. Adhonay reigns; Adhonay has reigned; Adhonay will reign forever and ever. Blessed is Adhonay forever, Amen and Amen.",
-          "translit": "ʾatta huʾ Adhonay lĕvaddekha. ʾatta 'asitha ʾeth hashshamayīm shĕme hashshamayīm wĕkhol ṣĕvaʾam, haʾareṣ wĕkhol ʾăsher 'aleha, hayyammim wĕkhol ʾăsher bahem, wĕʾatta mĕḥayyeh ʾeth kullam, uṣĕvaʾ hashshamayīm lĕkha mishtaḥăwim. ʾatta huʾ Adhonay haʾĕlohim ʾăsher baḥarta bĕʾavram wĕhoṣeʾtho meʾur kasdim, wĕsamta shĕmo ʾavraham. ʾatta huʾ, ushĕnothekha loʾ yittammu. Adhonay melekh, Adhonay malakh, Adhonay yimlokh lĕ'olam wa'edh. barukh Adhonay lĕ'olam, ʾamen wĕʾamen"
+          "translit": "ʾatta huʾ Adhonay lĕvaddekha. ʾatta 'asitha ʾeth hashshamayīm shĕme hashshamayīm wĕkhol ṣĕvaʾam, haʾareṣ wĕkhol ʾăsher 'aleha, hayyammim wĕkhol ʾăsher bahem, wĕʾatta mĕḥayyeh ʾeth kullam, uṣĕvaʾ hashshamayīm lĕkha mishtaḥăwim. ʾatta huʾ Adhonay haʾĕlohim ʾăsher baḥarta bĕʾavram wĕhoṣeʾtho meʾur kasdim, wĕsamta shĕmo ʾavraham. ʾatta huʾ, ushĕnothekha loʾ yittammu. Adhonay melekh, Adhonay malakh, Adhonay yimlokh lĕ'olam wa'edh. barukh Adhonay lĕ'olam, ʾamen wĕʾamen."
         }
       ]
     }

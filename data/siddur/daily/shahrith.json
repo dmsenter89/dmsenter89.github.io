@@ -1,0 +1,104 @@
+{
+  "title": "Shahrith",
+  "sections": [
+    {
+      "id": "shema",
+      "title": "Shema",
+      "items": [
+        {
+          "type": "text",
+          "id": "yotzer-or",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, יוֹצֵר אוֹר וּבוֹרֵא חֹשֶׁךְ עֹשֵׂה שָׁלוֹם וּבוֹרֵא אֶת הַכֹּל. הַמֵּאִיר לָאָרֶץ וְלַדָּרִים עָלֶיהָ בְּרַחֲמִים, וּבְטוּבוֹ מְחַדֵּשׁ בְּכָל יוֹם תָּמִיד מַעֲשֵׂה בְּרֵאשִׁית. בָּרוּךְ אַתָּה יְיָ יוֹצֵר הַמְּאוֹרוֹת.",
+          "translation": "Blessed are You, Adhonay, our God, King of the universe, who forms light and creates darkness, makes peace and creates all things — who illumines the earth and those who dwell upon it in mercy, and in His goodness continually renews, every day, the work of creation. Blessed are You, Adhonay, who forms the lights.",
+          "translit": "barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, yoṣer ʾor uvoreʾ ḥoshekh 'oseh shalom uvoreʾ ʾeth hakkol. hammeʾir laʾareṣ wĕladdarim 'aleha bĕraḥămim, uvĕṭuvo mĕḥaddesh bĕkhol yom tamidh ma'ăseh bĕreʾshith. barukh ʾatta Adhonay yoṣer hammĕʾoroth."
+        },
+        {
+          "type": "text",
+          "id": "ahava-rabba",
+          "hebrew": "אַהֲבַת עוֹלָם אֲהַבְתָּנוּ יְיָ אֱלֹהֵינוּ, חֶמְלָה גְּדוֹלָה וִיתֵרָה חָמַלְתָּ עָלֵינוּ. אָבִינוּ מַלְכֵּנוּ, בַּעֲבוּר שִׁמְךָ הַגָּדוֹל וּבַעֲבוּר אֲבוֹתֵינוּ שֶׁבָּטְחוּ בָּךְ וַתְּלַמְּדֵמוֹ חֻקֵּי חַיִּים לַעֲשׂוֹת רְצוֹנְךָ בְּלֵבָב שָׁלֵם, כֵּן תְּחָנֵּנוּ אָבִינוּ, אָב הָרַחֲמָן הַמְרַחֵם, רַחֵם נָא עָלֵינוּ, וְתֵן בְּלִבֵּנוּ בִינָה לְהָבִין, לְהַשְׂכִּיל, לִשְׁמֹעַ, לִלְמֹד וּלְלַמֵּד, לִשְׁמֹר וְלַעֲשׂוֹת וּלְקַיֵּם אֶת־כָּל־דִּבְרֵי תַּלְמוּד תוֹרָתְךָ בְּאַהֲבָה. וְהָאֵר עֵינֵינוּ בְּתוֹרָתֶךָ וְדַבֵּק לִבֵּנוּ בְמִצְוֹתֶיךָ, וְיַחֵד לְבָבֵנוּ לְאַהֲבָה וּלְיִרְאָה אֶת־שְׁמֶךָ. לֹא נֵבוֹשׁ וְלֹא נִכָּלֵם וְלֹא נִכָּשֵׁל לְעוֹלָם וָעֶד. כִּי בְשֵׁם קָדְשְׁךָ הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא בָּטָחְנוּ, נָגִילָה וְנִשְׂמְחָה בִּישׁוּעָתֶךָ, וְרַחֲמֶיךָ יְיָ אֱלֹהֵינוּ וַחֲסָדֶיךָ הָרַבִּים, אַל יַעַזְבוּנוּ נֶצַח סֶלָה וָעֶד. מַהֵר וְהָבֵא עָלֵינוּ בְּרָכָה וְשָׁלוֹם מְהֵרָה מֵאַרְבַּע כַּנְפוֹת כָּל־הָאָרֶץ, וּשְׁבֹר עֹל הַגּוֹיִם מֵעַל צַוָּארֵנוּ, וְהוֹלִיכֵנוּ מְהֵרָה קוֹמְמִיּוּת לְאַרְצֵנוּ, כִּי אֵל פּוֹעֵל יְשׁוּעוֹת אַתָּה, וּבָנוּ בָחַרְתָּ מִכָּל עַם וְלָשׁוֹן, וְקֵרַבְתָּנוּ מַלְכֵּנוּ לְשִׁמְךָ הַגָּדוֹל בְּאַהֲבָה, לְהוֹדוֹת לָךְ וּלְיַחֶדְךָ לְיִרְאָה וּלְאַהֲבָה אֶת־שִׁמְךָ, בָּרוּךְ אַתָּה יְיָ, הַבּוֹחֵר בְּעַמּוֹ יִשְׂרָאֵל בְּאַהֲבָה.",
+          "translation": "With everlasting love You have loved us, Adhonay our God; with great and abundant compassion You have shown us mercy. Our Father, our King — for the sake of Your great name, and for the sake of our ancestors who trusted in You and whom You taught the statutes of life to do Your will wholeheartedly, so be gracious to us as well, our Father, merciful Father who shows mercy; have mercy upon us, and put into our hearts the understanding to comprehend, to reflect, to hear, to learn and to teach, to observe, to do, and to fulfill all the words of the teaching of Your Torah in love. Enlighten our eyes in Your Torah, and let our hearts cling to Your commandments; unify our hearts to love and revere Your name, so that we shall never be ashamed, humiliated, or caused to stumble. For we have trusted in Your holy, great, mighty, and awesome name; may we exult and rejoice in Your salvation. And may Your compassion and Your abundant kindness, Adhonay our God, never forsake us — forever. Hasten and bring upon us blessing and peace speedily from the four corners of the earth, and break the yoke of the nations from off our neck, and lead us swiftly, upright, to our land; for You are a God who performs acts of salvation, and You have chosen us from every people and tongue, and drawn us near, our King, to Your great name in love, to thank You and proclaim Your oneness, to love and revere Your name. Blessed are You, Adhonay, who chooses His people Israel in love.",
+          "translit": "ʾahăvath 'olam ʾăhavtanu Adhonay ʾĕlohenu, ḥemla gĕdhola withera ḥamalta 'alenu. ʾavinu malkenu, ba'ăvur shimkha haggadhol uva'ăvur ʾăvothenu shebbaṭĕḥu bakh wattĕlammĕdhemo ḥuqqe ḥayyim la'ăsoth rĕṣonĕkha bĕlevav shalem, ken tĕḥannenu ʾavinu, ʾav haraḥăman hamĕraḥem, raḥem naʾ 'alenu, wĕthen bĕlibbenu vina lĕhavin, lĕhaskil, lishmoa', lilmodh ulĕlammedh, lishmor wĕla'ăsoth ulĕqayyem ʾeth-khol-dhivre talmudh thorathĕkha bĕʾahăva. wĕhaʾer 'enenu bĕthorathekha wĕdhabbeq libbenu vĕmiṣwothekha, wĕyaḥedh lĕvavenu lĕʾahăva ulĕyirʾa ʾeth-shĕmekha. loʾ nevosh wĕloʾ nikkalem wĕloʾ nikkashel lĕ'olam wa'edh. ki vĕshem qodhshĕkha haggadhol haggibbor wĕhannoraʾ baṭaḥĕnu, naghila wĕnismĕḥa bishu'athekha, wĕraḥămekha Adhonay ʾĕlohenu waḥăsadhekha harabbim, ʾal ya'azvunu neṣaḥ sela wa'edh. maher wĕhaveʾ 'alenu bĕrakha wĕshalom mĕhera meʾarba' kanfoth kol-haʾareṣ, ushĕvor 'ol haggoyīm me'al ṣawwaʾrenu, wĕholikhenu mĕhera qomĕmiyyuth lĕʾarṣenu, ki ʾel po'el yĕshu'oth ʾatta, uvanu vaḥarta mikkol 'am wĕlashon, wĕqeravtanu malkenu lĕshimkha haggadhol bĕʾahăva, lĕhodhoth lakh ulĕyaḥedhkha lĕyirʾa ulĕʾahăva ʾeth-shimkha, barukh ʾatta Adhonay, habboḥer bĕ'ammo yisraʾel bĕʾahăva."
+        },
+        {
+          "type": "include",
+          "ref": "daily/arvith",
+          "sectionId": "shema",
+          "itemIds": [
+            "shema-line",
+            "baruch-shem",
+            "veahavta",
+            "vehaya"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "vayomer",
+          "hebrew": "וַיֹּ֥אמֶר יְיָ֖ אֶל־מֹשֶׁ֥ה לֵּאמֹֽר׃ דַּבֵּ֞ר אֶל־בְּנֵ֤י יִשְׂרָאֵל֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם וְעָשׂ֨וּ לָהֶ֥ם צִיצִ֛ת עַל־כַּנְפֵ֥י בִגְדֵיהֶ֖ם לְדֹרֹתָ֑ם וְנָ֥תְנ֛וּ עַל־צִיצִ֥ת הַכָּנָ֖ף פְּתִ֥יל תְּכֵֽלֶת׃ וְהָיָ֣ה לָכֶם֮ לְצִיצִת֒ וּרְאִיתֶ֣ם אֹת֗וֹ וּזְכַרְתֶּם֙ אֶת־כׇּל־מִצְוֺ֣ת יְיָ֔ וַעֲשִׂיתֶ֖ם אֹתָ֑ם וְלֹֽא־תָת֜וּרוּ אַחֲרֵ֤י לְבַבְכֶם֙ וְאַחֲרֵ֣י עֵֽינֵיכֶ֔ם אֲשֶׁר־אַתֶּ֥ם זֹנִ֖ים אַחֲרֵיהֶֽם׃ לְמַ֣עַן תִּזְכְּר֔וּ וַעֲשִׂיתֶ֖ם אֶת־כׇּל־מִצְוֺתָ֑י וִהְיִיתֶ֥ם קְדֹשִׁ֖ים לֵאלֹֽהֵיכֶֽם׃ אֲנִ֞י יְיָ֣ אֱלֹֽהֵיכֶ֗ם אֲשֶׁ֨ר הוֹצֵ֤אתִי אֶתְכֶם֙ מֵאֶ֣רֶץ מִצְרַ֔יִם לִהְי֥וֹת לָכֶ֖ם לֵאלֹהִ֑ים אֲנִ֖י יְיָ֥ אֱלֹהֵיכֶֽם׃",
+          "translation": "Adhonay said to Moses: Speak to the children of Israel and tell them to make for themselves fringes on the corners of their garments, throughout their generations, and to put on the fringe of each corner a thread of blue. It shall be a fringe for you to look at and remember all the commandments of Adhonay and do them, and not follow after your own heart and your own eyes, after which you go astray — so that you may remember and do all My commandments, and be holy to your God. I am Adhonay your God, who brought you out of the land of Egypt to be your God; I am Adhonay your God.",
+          "translit": "wayyoʾmer Adhonay ʾel-mosheh leʾmor. dabber ʾel-vĕne yisraʾel wĕʾamarta ʾălehem wĕ'asu lahem ṣiṣīth 'al-khanfe vighdhehem lĕdhorotham wĕnathĕnu 'al-ṣiṣīth hakkanaf pĕthil tĕkheleth. wĕhaya lakhem lĕṣiṣīth urĕʾithem ʾotho uzĕkhartem ʾeth-khol-miṣwoth Adhonay wa'ăsithem ʾotham wĕloʾ-thathuru ʾaḥăre lĕvavkhem wĕʾaḥăre 'enekhem ʾăsher-ʾattem zonim ʾaḥărehem. lĕma'an tizkĕru wa'ăsithem ʾeth-khol-miṣwothay wihyithem qĕdhoshim leʾlohekhem. ʾăni Adhonay ʾĕlohekhem ʾăsher hoṣeʾthi ʾethkhem meʾereṣ miṣrayim lihyoth lakhem leʾlohim ʾăni Adhonay ʾĕlohekhem."
+        },
+        {
+          "type": "include",
+          "ref": "daily/arvith",
+          "sectionId": "shema",
+          "itemIds": [
+            "vayomer-leader-repeats"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "emet-veyatziv",
+          "hebrew": "אֱמֶת וְיַצִּיב, נָכוֹן וְקַיָּם, יָשָׁר וְנֶאֱמָן, אָהוּב וְחָבִיב, נֶחְמָד וְנָעִים, נוֹרָא וְאַדִּיר, מְתוּקָן וּמְקֻבָּל, טוֹב וְיָפֶה, הַדָּבָר הַזֶּה עָלֵינוּ לְעוֹלָם וָעֶד. אֱמֶת, אֱלֹהֵי עוֹלָם מַלְכֵּנוּ צוּר יַעֲקֹב מָגֵן יִשְׁעֵנוּ, לְדוֹר וָדוֹר הוּא קַיָּם, וּשְׁמוֹ קַיָּם, וְכִסְאוֹ נָכוֹן, וּמַלְכוּתוֹ וֶאֱמוּנָתוֹ לָעַד קַיֶּמֶת, וּדְבָרָיו חַיִּים וְקַיָּמִים, וְנֶאֱמָנִים וְנֶחֱמָדִים לָעַד וּלְעוֹלְמֵי עוֹלָמִים. עַל אֲבוֹתֵינוּ, עָלֵינוּ וְעַל בָּנֵינוּ וְעַל דּוֹרוֹתֵינוּ וְעַל כָּל דּוֹרוֹת זֶרַע יִשְׂרָאֵל עֲבָדֶיךָ. עַל הָרִאשׁוֹנִים וְעַל הָאַחֲרוֹנִים דָּבָר טוֹב וְקַיָּם בֶּאֱמֶת וֶאֱמוּנָה חוֹק וְלֹא יַעֲבוֹר. אֱמֶת שֶׁאַתָּה הוּא יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ. מַלְכֵּנוּ מֶלֶךְ אֲבוֹתֵינוּ. גּוֹאֲלֵנוּ גּוֹאֵל אֲבוֹתֵינוּ. יוֹצְרֵנוּ צוּר יְשׁוּעָתֵנוּ. פּוֹדֵנוּ וּמַצִּילֵנוּ מֵעוֹלָם הוּא שְׁמֶךָ, וְאֵין לָנוּ עוֹד אֱלֹהִים זוּלָתְךָ סֶלָה. עֶזְרַת אֲבוֹתֵינוּ אַתָּה הוּא מֵעוֹלָם, מָגֵן וּמוֹשִׁיעַ לָהֶם וְלִבְנֵיהֶם אַחֲרֵיהֶם בְּכָל דּוֹר וָדוֹר, בְּרוּם עוֹלָם מוֹשָׁבֶךָ, וּמִשְׁפָּטֶיךָ, וְצִדְקָתְךָ עַד אַפְסֵי אָרֶץ, אֱמֶת אַשְׁרֵי אִישׁ שֶׁיִּשְׁמַע לְמִצְוֹתֶיךָ וְתוֹרָתְךָ וּדְבָרְךָ יָשִׂים עַל לִבּוֹ. אֱמֶת שֶׁאַתָּה הוּא אֲדוֹן לְעַמֶּךָ וּמֶלֶךְ גִּבּוֹר לָרִיב רִיבָם לְאָבוֹת וּבָנִים, אֱמֶת אַתָּה הוּא רִאשׁוֹן וְאַתָּה הוּא אַחֲרוֹן וּמִבַּלְעָדֶיךָ אֵין לָנוּ מֶלֶךְ גּוֹאֵל וּמוֹשִׁיעַ. אֱמֶת מִמִּצְרַיִם גְּאַלְתָּנוּ יְיָ אֱלֹהֵינוּ, מִבֵּית עֲבָדִים פְּדִיתָנוּ, כָּל בְּכוֹרֵיהֶם הָרַגְתָּ, וּבְכוֹרְךָ יִשְׂרָאֵל גָּאַלְתָּ, וְיַם־סוּף לָהֶם בָּקַעְתָּ, וְזֵדִים טִבַּעְתָּ, וִידִידִים עָבְרוּ יָם. וַיְכַסּוּ מַיִם צָרֵיהֶם אֶחָד מֵהֶם לֹא נוֹתַר. עַל זֹאת שִׁבְּחוּ אֲהוּבִים, וְרוֹמְמוּ לָאֵל, וְנָתְנוּ יְדִידִים זְמִירוֹת שִׁירוֹת וְתִשְׁבָּחוֹת בְּרָכוֹת וְהוֹדָאוֹת לַמֶּלֶךְ אֶל חַי וְקַיָּם, רָם וְנִשָּׂא, גָּדוֹל וְנוֹרָא, מַשְׁפִּיל גֵּאִים עֲדֵי אָרֶץ, מַגְבִּיהַּ שְׁפָלִים עַד מָרוֹם, מוֹצִיא אֲסִירִים, פּוֹדֶה עֲנָוִים, עוֹזֵר דַּלִּים, הָעוֹנֶה לְעַמּוֹ יִשְׂרָאֵל בְּעֵת שַׁוְּעָם אֵלָיו. תְהִילוֹת לָאֵל עֶלְיוֹן גּוֹאֲלָם, בָּרוּךְ הוּא וּמְבוֹרָךְ, מֹשֶׁה וּבְנֵי יִשְׂרָאֵל לְךָ עָנוּ שִׁירָה בְשִׂמְחָה רַבָּה, וְאָמְרוּ כֻלָּם: מִֽי־כָמֹ֤כָה בָּֽאֵלִם֙ יְיָ֔ מִ֥י כָּמֹ֖כָה נֶאְדָּ֣ר בַּקֹּ֑דֶשׁ נוֹרָ֥א תְהִלֹּ֖ת עֹ֥שֵׂה פֶֽלֶא׃ שִׁירָה חֲדָשָׁה שִׁבְּחוּ גְאוּלִים לְשִׁמְךָ הַגָּדוֹל עַל שְׂפַת הַיָּם, יַחַד כֻלָּם הוֹדוּ וְהִמְלִיכוּ וְאָמְרוּ: יְיָ֥ ׀ יִמְלֹ֖ךְ לְעֹלָ֥ם וָעֶֽד׃ וְנֶאֱמַר: גֹּאֲלֵ֕נוּ יְיָ֥ צְבָא֖וֹת שְׁמ֑וֹ קְד֖וֹשׁ יִשְׂרָאֵֽל׃ בָּרוּךְ אַתָּה יְיָ גָּאַל יִשְׂרָאֵל.",
+          "translation": "True and firm, right and enduring, upright and faithful, beloved and cherished, delightful and pleasant, awesome and mighty, well-ordered and accepted, good and beautiful — this word is upon us forever. True — the God of the universe is our King, the Rock of Jacob, the Shield of our salvation; He endures through every generation, and His name endures; His throne is established, and His kingship and faithfulness stand forever; His words are living and enduring, faithful and cherished forever and ever — for our ancestors, for us, for our children, and for our generations, and for all the generations of the seed of Israel Your servants. For the earlier and the later generations this word is good and enduring, in truth and in faithfulness, a statute that will not pass away. True it is that You are Adhonay our God and God of our ancestors, our King and the King of our ancestors, our Redeemer and the Redeemer of our ancestors, our Maker and the Rock of our salvation; from everlasting You are our Deliverer and Rescuer — that is Your name, and there is no God besides You, Selah. You have been the help of our ancestors from of old, a shield and savior to them and to their children after them in every generation; Your dwelling is in the heights of the universe, and Your judgments and Your righteousness reach to the ends of the earth. Truly, happy is the one who heeds Your commandments and takes Your Torah and Your word to heart. Truly, You are Lord to Your people and a mighty King to plead their cause, for parents and children; truly, You are the first and You are the last, and besides You we have no king, redeemer, or savior. Truly, You redeemed us from Egypt, Adhonay our God, and freed us from the house of bondage; You slew all their firstborn, but redeemed Your firstborn Israel; You split the Sea of Reeds for them, drowned the arrogant, and brought the beloved ones across, while the waters covered their foes so that not one of them remained. For this the beloved ones praised and exalted God, and the cherished ones offered hymns, songs, praises, blessings, and thanksgivings to the King, the living and enduring God, high and exalted, great and awesome, who casts down the arrogant to the earth and lifts up the lowly to the heights, who brings out captives, redeems the humble, helps the poor, and answers His people Israel when they cry out to Him. Praises to God Most High, their Redeemer, blessed and praised is He; Moses and the children of Israel sang to You a song with great joy, and they all said: \"Who is like You among the mighty, Adhonay? Who is like You, majestic in holiness, awesome in praises, doing wonders?\" With a new song the redeemed praised Your great name at the seashore; together they all gave thanks and proclaimed Your kingship, and said: \"Adhonay shall reign forever and ever.\" And it is said: \"Our Redeemer, Adhonay of hosts is His name, the Holy One of Israel.\" Blessed are You, Adhonay, who redeemed Israel.",
+          "translit": "ʾĕmeth wĕyaṣṣiv, nakhon wĕqayyam, yashar wĕneʾĕman, ʾahuv wĕḥaviv, neḥmadh wĕna'im, noraʾ wĕʾaddir, mĕthuqan umĕqubbal, ṭov wĕyafeh, haddavar hazzeh 'alenu lĕ'olam wa'edh. ʾĕmeth, ʾĕlohe 'olam malkenu ṣur ya'ăqov maghen yish'enu, lĕdhor wadhor huʾ qayyam, ushĕmo qayyam, wĕkhisʾo nakhon, umalkhutho weʾĕmunatho la'adh qayyemeth, udhĕvaraw ḥayyim wĕqayyamim, wĕneʾĕmanim wĕneḥĕmadhim la'adh ulĕ'olĕme 'olamim. 'al ʾăvothenu, 'alenu wĕ'al banenu wĕ'al dorothenu wĕ'al kol doroth zera' yisraʾel 'ăvadhekha. 'al hariʾshonim wĕ'al haʾaḥăronim davar ṭov wĕqayyam beʾĕmeth weʾĕmuna ḥoq wĕloʾ ya'ăvor. ʾĕmeth sheʾatta huʾ Adhonay ʾĕlohenu weʾlohe ʾăvothenu. malkenu melekh ʾăvothenu. goʾălenu goʾel ʾăvothenu. yoṣĕrenu ṣur yĕshu'athenu. podhenu umaṣṣilenu me'olam huʾ shĕmekha, wĕʾen lanu 'odh ʾĕlohim zulathĕkha sela. 'ezrath ʾăvothenu ʾatta huʾ me'olam, maghen umoshia' lahem wĕlivnehem ʾaḥărehem bĕkhol dor wadhor, bĕrum 'olam moshavekha, umishpaṭekha, wĕṣidhqathĕkha 'adh ʾafse ʾareṣ, ʾĕmeth ʾashre ʾish sheyyishma' lĕmiṣwothekha wĕthorathĕkha udhĕvarĕkha yasim 'al libbo. ʾĕmeth sheʾatta huʾ ʾădhon lĕ'ammekha umelekh gibbor lariv rivam lĕʾavoth uvanim, ʾĕmeth ʾatta huʾ riʾshon wĕʾatta huʾ ʾaḥăron umibbal'adhekha ʾen lanu melekh goʾel umoshia'. ʾĕmeth mimmiṣrayīm gĕʾaltanu Adhonay ʾĕlohenu, mibbeth 'ăvadhim pĕdhithanu, kol bĕkhorehem haraghta, uvĕkhorĕkha yisraʾel gaʾalta, wĕyam-swf lahem baqa'ta, wĕzedhim ṭibba'ta, widhidhim 'avĕru yam. wayĕkhassu mayīm ṣarehem ʾeḥadh mehem loʾ nothar. 'al zoʾth shibbĕḥu ʾăhuvim, wĕromĕmu laʾel, wĕnathĕnu yĕdhidhim zĕmiroth shiroth wĕthishbaḥoth bĕrakhoth wĕhodhaʾoth lammelekh ʾel ḥay wĕqayyam, ram wĕnissaʾ, gadhol wĕnoraʾ, mashpil geʾim 'ădhe ʾareṣ, maghbiah shĕfalim 'adh marom, moṣiʾ ʾăsirim, podheh 'ănawim, 'ozer dallim, ha'oneh lĕ'ammo yisraʾel bĕ'eth shawwĕ'am ʾelaw. thĕhiloth laʾel 'elyon goʾălam, barukh huʾ umĕvorakh, mosheh uvĕne yisraʾel lĕkha 'anu shira vĕsimḥa rabba, wĕʾamĕru khullam: mi-khamokha baʾelīm Adhonay mi kamokha neʾdar baqqodhesh noraʾ thĕhilloth 'oseh feleʾ. shira ḥădhasha shibbĕḥu ghĕʾulim lĕshimkha haggadhol 'al sĕfath hayyam, yaḥadh khullam hodhu wĕhimlikhu wĕʾamĕru: Adhonay yimlokh lĕ'olam wa'edh. wĕneʾĕmar: goʾălenu Adhonay ṣĕvaʾoth shĕmo qĕdhosh yisraʾel. barukh ʾatta Adhonay gaʾal yisraʾel."
+        }
+      ]
+    },
+    {
+      "id": "amidah",
+      "title": "Amidah",
+      "items": [
+        {
+          "type": "include",
+          "ref": "daily/minha",
+          "sectionId": "amidah"
+        }
+      ]
+    },
+    {
+      "id": "tachanun",
+      "title": "Tachanun",
+      "items": [
+        {
+          "type": "include",
+          "ref": "daily/minha",
+          "sectionId": "tachanun"
+        }
+      ]
+    },
+    {
+      "id": "ashrei",
+      "title": "Ashrei",
+      "items": [
+        {
+          "type": "include",
+          "ref": "daily/minha",
+          "sectionId": "ashrei"
+        }
+      ]
+    },
+    {
+      "id": "seder-hayom",
+      "title": "Seder HaYom",
+      "items": [
+        {
+          "type": "text",
+          "id": "baruch-eloheinu",
+          "hebrew": "בָּרוּךְ אֱלֹהֵֽינוּ שֶׁבְּרָאָֽנוּ לִכְבוֹדוֹ, וְהִבְדִּילָֽנוּ מִן הַתּוֹעִים, וְנָֽתַן לָֽנוּ תּוֹרַת אֱמֶת, וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵֽנוּ. הוּא יִפְתַּח לִבֵּֽנוּ בְּתֽוֹרָתוֹ, וְיָשִׂים בְּלִבֵּֽנוּ אַֽהֲבָתוֹ וְיִרְאָתוֹ לַֽעֲשׂוֹת רְצוֹנוֹ, וּלְעָבְדוֹ בְּלֵבָב שָׁלֵם. לֹא נִיגַע לָרִיק, וְלֹא נֵלֵד לַבֶּֽהָלָה. יְהִי רָצוֹן מִלְּפָנֶֽיךָ, יְיָ אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ, שֶׁנִּשְׁמוֹר חֻקֶּֽיךָ וּמִצְוֹתֶֽיךָ בָּעוֹלָם הַזֶּה, וְנִזְכֶּה, וְנִחְיֶה, וְנִירַשׁ טוֹבָה וּבְרָכָה לְחַיֵּי הָעוֹלָם הַבָּא. לְמַ֤עַן ׀ יְזַמֶּרְךָ֣ כָ֭בוֹד וְלֹ֣א יִדֹּ֑ם יְיָ֥ אֱ֝לֹהַ֗י לְעוֹלָ֥ם אוֹדֶֽךָּ׃ יְיָ֥ חָפֵ֖ץ לְמַ֣עַן צִדְק֑וֹ יַגְדִּ֥יל תּוֹרָ֖ה וְיַאְדִּֽיר׃ וְיִבְטְח֣וּ בְ֭ךָ יוֹדְעֵ֣י שְׁמֶ֑ךָ כִּ֤י לֹֽא־עָזַ֖בְתָּ דֹרְשֶׁ֣יךָ יְיָ יְיָ֥ אֲדֹנֵ֑ינוּ מָה־אַדִּ֥יר שִׁ֝מְךָ֗ בְּכׇל־הָאָֽרֶץ׃ חִ֭זְקוּ וְיַאֲמֵ֣ץ לְבַבְכֶ֑ם כׇּל־הַ֝מְיַחֲלִ֗ים לַֽיהֹוָֽה׃",
+          "translation": "Blessed is our God, who created us for His glory, and set us apart from those who go astray, and gave us a Torah of truth, and planted within us eternal life. May He open our heart to His Torah, and put into our heart love and reverence of Him, to do His will and serve Him with a whole heart, so that we may not labor in vain, nor bring forth for futility. May it be Your will, Adhonay our God and God of our ancestors, that we keep Your statutes and Your commandments in this world, and merit to live and inherit goodness and blessing in the life of the world to come. So that my soul may sing praise to You and not be silent; Adhonay my God, I will thank You forever. Adhonay desired, for the sake of His righteousness, to make the Torah great and glorious. Those who know Your name put their trust in You, for You, Adhonay, have not forsaken those who seek You. Adhonay, our Lord, how majestic is Your name throughout all the earth! Be strong, and let your heart take courage, all who wait for Adhonay.",
+          "translit": "barukh ʾĕlohenu shebbĕraʾanu likhvodho, wĕhivdilanu mīn hatto'im, wĕnathan lanu torath ʾĕmeth, wĕḥayye 'olam naṭa' bĕthokhenu. huʾ yiftaḥ libbenu bĕthoratho, wĕyasim bĕlibbenu ʾahăvatho wĕyirʾatho la'ăsoth rĕṣono, ulĕ'avĕdho bĕlevav shalem. loʾ nigha' lariq, wĕloʾ neledh labbehala. yĕhi raṣon millĕfanekha, Adhonay ʾĕlohenu weʾlohe ʾăvothenu, shennishmor ḥuqqekha umiṣwothekha ba'olam hazzeh, wĕnizkeh, wĕniḥyeh, wĕnirash ṭova uvĕrakha lĕḥayye ha'olam habbaʾ. lĕma'an yĕzammerkha khavodh wĕloʾ yiddom Adhonay ʾĕlohay lĕ'olam ʾodhekka. Adhonay ḥafeṣ lĕma'an ṣidhqo yaghdil tora wĕyaʾdir. wĕyivṭĕḥu vĕkha yodhĕ'e shĕmekha ki loʾ-'azavta dhorĕshekha Adhonay Adhonay ʾădhonenu ma-ʾaddir shimkha bĕkhol-haʾareṣ. ḥizqu wĕyaʾămeṣ lĕvavkhem kol-hamĕyaḥălim la-Adhonay."
+        }
+      ]
+    }
+  ]
+}

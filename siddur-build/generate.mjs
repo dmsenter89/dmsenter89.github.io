@@ -7,7 +7,9 @@
 //      itself -- the varied/kabbalistic vowel-pointing from the source doc
 //      is NOT preserved anywhere, by design.
 //   2. Regenerates `translit` for type: "text" items only, rendering the
-//      normalized Divine Name as "Adhonay".
+//      normalized Divine Name as "Adhonay" and cantillation punctuation
+//      (sof pasuq, paseq) per punctuation.mjs -- the library otherwise
+//      drops both silently.
 // Overwrites the file in place.
 //
 // - `type: "rubric"` items have their Divine Name normalized (for
@@ -29,6 +31,7 @@ import {
   DIVINE_NAME_PLACEHOLDER,
 } from "./normalize-divine-name.mjs";
 import { shieldLabels, unshieldLabels } from "./inline-labels.mjs";
+import { shieldPunctuation, unshieldPunctuation } from "./punctuation.mjs";
 
 const path = process.argv[2];
 if (!path) {
@@ -38,12 +41,13 @@ if (!path) {
 
 function transliterateWithDivineName(hebrew) {
   const labelShielded = shieldLabels(hebrew);
-  const shielded = shieldDivineName(labelShielded);
+  const punctuationShielded = shieldPunctuation(labelShielded);
+  const shielded = shieldDivineName(punctuationShielded);
   const rendered = transliterate(shielded, sephardicSchema);
   // Placeholder may pick up surrounding whitespace changes from the
   // library; replace on the raw token regardless of adjacent spacing.
-  const withDivineName = rendered.split(DIVINE_NAME_PLACEHOLDER).join("Adhonay").trim();
-  return unshieldLabels(withDivineName);
+  const withDivineName = rendered.split(DIVINE_NAME_PLACEHOLDER).join("Adhonay");
+  return unshieldLabels(unshieldPunctuation(withDivineName)).trim();
 }
 
 const chapter = JSON.parse(readFileSync(path, "utf8"));

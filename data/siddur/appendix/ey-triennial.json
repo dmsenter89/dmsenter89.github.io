@@ -1,6 +1,6 @@
 {
   "title": "EY Triennial Cycle",
-  "note": "Torah readings following the Eretz Yisrael triennial (three-year) reading cycle, per the source spreadsheet לוח סדרי קריאת התורה. Sidra numbers restart at א within each book; across the three-year cycle, which sidra is read on a given Shabbat depends on the year. Use the \"Aliyot\" toggle above to also show the suggested 7-aliyah breakdown for each sidra.",
+  "note": "Torah readings following the Eretz Yisrael triennial (three-year) reading cycle, per Machon Shiloh. Use the \"Aliyot\" toggle above to also show the suggested 7-aliyah breakdown for each sidra.",
   "books": [
     {
       "id": "bereshith",
