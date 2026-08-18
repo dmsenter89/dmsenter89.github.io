@@ -1,0 +1,36 @@
+{{ define "main" }}
+
+{{- /* EY Triennial Cycle appendix page. Data file shaped
+       { title, note, books: [{id,title,rows:[{num,parshiyot,haftarah,aliyot[7]}]}],
+         specialHaftarot: {id,title,headers,rows,note},
+         specialReadings: {id,title,occasions:[{name,textWeekday,textShabbat,haftarah,notes,aliyotWeekday[7],aliyotShabbat[7]}]} }.
+       Resolves the data file the same path-mirroring way tables.html does. */ -}}
+{{- $relDir := strings.TrimPrefix "siddur/" (strings.TrimSuffix "/" .File.Dir) }}
+{{- $relPath := .File.BaseFileName }}
+{{- if $relDir }}{{ $relPath = printf "%s/%s" $relDir .File.BaseFileName }}{{ end }}
+{{- $segments := split $relPath "/" }}
+{{- $page := hugo.Data.siddur }}
+{{- range $segments }}{{ $page = index $page . }}{{ end }}
+
+<h1 class="siddur-page-title">{{ .Title }}</h1>
+{{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
+{{ with $page.note }}<p class="siddur-table-note">{{ . }}</p>{{ end }}
+
+<div class="siddur-display-toggle" role="group" aria-label="Display options">
+  <button type="button" class="siddur-toggle-btn" data-toggle-class="show-aliyot">Aliyot</button>
+</div>
+
+{{ range $page.books }}
+{{ partial "siddur-ey-book-table.html" . }}
+{{ end }}
+
+{{ with $page.specialHaftarot }}
+{{ partial "siddur-table.html" (dict "id" .id "title" .title "headers" .headers "rows" .rows "hebrewColumn" "all") }}
+{{ with .note }}<p class="siddur-table-note">{{ . }}</p>{{ end }}
+{{ end }}
+
+{{ with $page.specialReadings }}
+{{ partial "siddur-ey-special-readings.html" . }}
+{{ end }}
+
+{{ end }}

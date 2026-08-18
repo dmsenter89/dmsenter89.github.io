@@ -378,6 +378,26 @@ html.show-translation .siddur-rubric .siddur-translation {
   font-style: italic;
 }
 
+/* --- EY Triennial Cycle (Appendix) --- */
+
+/* Every column here is Hebrew reference text (verse ranges, not single
+   symbols), so right-align instead of the transliteration table's
+   center-aligned single-letter convention. */
+.siddur-ey-table .siddur-table-hebrew,
+#special-haftarot .siddur-table-hebrew {
+  text-align: right;
+}
+
+.siddur-ey-table th.siddur-aliyah-col,
+.siddur-ey-table td.siddur-aliyah-col {
+  display: none;
+}
+
+html.show-aliyot .siddur-ey-table th.siddur-aliyah-col,
+html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
+  display: table-cell;
+}
+
 .siddur-pronunciation-list {
   list-style: none;
   padding: 0;

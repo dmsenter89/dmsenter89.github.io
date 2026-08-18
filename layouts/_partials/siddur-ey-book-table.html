@@ -1,0 +1,34 @@
+{{- /* One book's sidra table for the EY Triennial Cycle page. Params: dict
+       with id, title, rows ([]{num,parshiyot,haftarah,aliyot[7]}). The
+       seven aliyah columns are marked .siddur-aliyah-col and hidden unless
+       <html> carries the show-aliyot class (see siddur.js's generic
+       data-toggle-class handler and siddur.css). */ -}}
+<section class="siddur-table-section" id="{{ .id }}">
+  <h2>{{ .title }}</h2>
+  <div class="siddur-table-wrap">
+    <table class="siddur-table siddur-ey-table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Parashiyoth</th>
+          <th>Haftarah</th>
+          {{- range $i, $e := (seq 7) }}
+          <th class="siddur-aliyah-col">Aliyah {{ $i | add 1 }}</th>
+          {{- end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{- range .rows }}
+        <tr>
+          <td>{{ .num }}</td>
+          <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ .parshiyot }}</td>
+          <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ .haftarah }}</td>
+          {{- range .aliyot }}
+          <td class="siddur-aliyah-col siddur-table-hebrew" lang="he" dir="rtl">{{ . }}</td>
+          {{- end }}
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </div>
+</section>
