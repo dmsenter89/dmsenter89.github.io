@@ -11,7 +11,13 @@
        "group" (always-open bordered box for a set of mutually exclusive
        alternatives shown side by side, e.g. the grain/wine/fruit choice in
        Me'en Shalosh -- same nested "items" array as expandable, just never
-       collapsed).
+       collapsed) |
+       "toggle" (radio-button pair selecting between two alternative
+       renditions of the same passage, e.g. the full Amidah vs. Havinenu --
+       "options" is an array of exactly two {id, label, items}; the first
+       is selected by default. CSS keys the visible panel to radio/panel
+       position via :nth-of-type, so this only supports exactly two
+       options.)
        Any item (of any type) may also carry an optional "audio" URL,
        rendered as a native player -- used for chapters with a per-line
        recording, e.g. the "For Toddlers" page. */ -}}
@@ -40,6 +46,19 @@
 {{- else if eq .type "group" }}
 <div class="siddur-item siddur-group" id="{{ .id }}">
   {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
+</div>
+{{- else if eq .type "toggle" }}
+{{- $tid := .id }}
+<div class="siddur-item siddur-toggle-group" id="{{ .id }}" role="group">
+  {{- range $i, $opt := .options }}
+  <input type="radio" name="siddur-toggle-{{ $tid }}" id="siddur-toggle-{{ $tid }}-{{ $opt.id }}" class="siddur-toggle-group-radio" {{ if eq $i 0 }}checked{{ end }}>
+  <label for="siddur-toggle-{{ $tid }}-{{ $opt.id }}" class="siddur-toggle-group-btn">{{ $opt.label }}</label>
+  {{- end }}
+  {{- range .options }}
+  <div class="siddur-toggle-group-panel siddur-toggle-group-panel-{{ .id }}">
+    {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
+  </div>
+  {{- end }}
 </div>
 {{- else if eq .type "rubric" }}
 <p class="siddur-item siddur-rubric" id="{{ .id }}">

@@ -70,6 +70,9 @@ function processItems(items, sectionId) {
       }
     }
     if (item.items) processItems(item.items, sectionId);
+    if (item.options) {
+      for (const opt of item.options) processItems(opt.items, sectionId);
+    }
   }
 }
 

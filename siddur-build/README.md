@@ -77,6 +77,14 @@ over the content tree.
             { "type": "rubric", "id": "grain-label", "hebrew": "...", "translation": "For the five grains:" },
             { "type": "text", "id": "grain-row", "hebrew": "...", "translation": "..." }
           ]
+        },
+        {
+          "type": "toggle",
+          "id": "amidah-middle",
+          "options": [
+            { "id": "full", "label": "Full Amidah", "items": [ { "type": "text", "id": "...", "hebrew": "...", "translation": "..." } ] },
+            { "id": "havinenu", "label": "Havinenu", "items": [ { "type": "text", "id": "...", "hebrew": "...", "translation": "..." } ] }
+          ]
         }
       ]
     }
@@ -111,6 +119,15 @@ over the content tree.
   (Blessings After Eating → Other Foods): a `rubric` label + `text` row per
   option, boxed together so the reader can see all the choices without
   expanding anything.
+- `type: "toggle"` — a radio-button pair for choosing between two
+  alternative renditions of the same passage, e.g. the full Amidah vs.
+  Havinenu in the middle of the weekday Arvith Amidah. `options` is an
+  array of exactly two `{id, label, items}` objects; `items` is a nested
+  array rendered like a section's items. The first option is selected by
+  default. Only one panel is ever shown — unlike `group`, these aren't
+  meant to be compared side by side. The CSS keys the visible panel to
+  radio/panel position via `:nth-of-type`, so exactly two options is a
+  hard limit, not just a convention.
 
 ## Divine Name
 

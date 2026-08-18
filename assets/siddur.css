@@ -328,6 +328,56 @@ html.show-translation .siddur-rubric .siddur-translation {
   margin-bottom: 0.1rem;
 }
 
+/* --- Toggle group (mutually exclusive alternatives, e.g. Havinenu vs
+   full Amidah) --- */
+
+.siddur-toggle-group {
+  border: 1px solid var(--siddur-border);
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+}
+
+.siddur-toggle-group-radio {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  pointer-events: none;
+}
+
+.siddur-toggle-group-btn {
+  display: inline-block;
+  border: 1px solid var(--siddur-border);
+  background: var(--siddur-bg);
+  color: var(--siddur-muted);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin: 0 0.4rem 0.6rem 0;
+}
+
+.siddur-toggle-group-radio:focus-visible + .siddur-toggle-group-btn {
+  outline: 2px solid var(--siddur-accent);
+  outline-offset: 2px;
+}
+
+.siddur-toggle-group-radio:nth-of-type(1):checked + .siddur-toggle-group-btn,
+.siddur-toggle-group-radio:nth-of-type(2):checked + .siddur-toggle-group-btn {
+  background: var(--siddur-accent);
+  color: #fff;
+  border-color: var(--siddur-accent);
+}
+
+.siddur-toggle-group-panel { display: none; }
+.siddur-toggle-group-panel .siddur-item:first-child { margin-top: 0; }
+.siddur-toggle-group-panel .siddur-item:last-child { margin-bottom: 0; }
+
+.siddur-toggle-group-radio:nth-of-type(1):checked ~ .siddur-toggle-group-panel:nth-of-type(1),
+.siddur-toggle-group-radio:nth-of-type(2):checked ~ .siddur-toggle-group-panel:nth-of-type(2) {
+  display: block;
+}
+
 /* --- Reference tables (Appendix) --- */
 
 .siddur-table-section { margin-bottom: 2rem; }
