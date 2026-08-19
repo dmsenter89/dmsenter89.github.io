@@ -6,6 +6,24 @@
       "title": "סליחות",
       "items": [
         {
+          "type": "expandable",
+          "id": "selihoth-for-toddlers",
+          "label": "Selihot for Toddlers",
+          "audio": "https://www.learntefillah.com/wp-content/uploads/2020/09/k5-Anenu-Adon-Haselichot.mp3",
+          "items": [
+            {
+              "type": "include",
+              "ref": "yamim-noraim/selihoth",
+              "sectionId": "anenu"
+            },
+            {
+              "type": "include",
+              "ref": "yamim-noraim/selihoth",
+              "sectionId": "adon-haselichot"
+            }
+          ]
+        },
+        {
           "type": "rubric",
           "id": "selihoth-timing",
           "hebrew": "נהגו ישראל מקדמת דנא לקום קודם עלות השחר ולומר סליחות מראש השנה עד יום הכיפורים. אולם זה דורות רבים נהגו הספרדים להתחיל לומר סליחות כבר מב' באלול. וכמו שאר התפילות שבסידור זה, ניתן לאומרן בכל שעה ביום, ולא רק קודם עלות השחר.",
@@ -194,6 +212,13 @@
       "title": "אֲדוֹן הַסְּלִיחוֹת",
       "youtube": "https://www.youtube.com/watch?v=mDsl1fiCzaA",
       "items": [
+        {
+          "type": "text",
+          "id": "adon-haselichot-opening",
+          "hebrew": "רַחוּם וְחַנּוּן חָטָאנוּ לְפָנֶיךָ רַחֵם עָלֵינוּ׃",
+          "translation": "Merciful and Gracious One, we have sinned before You; have mercy upon us.",
+          "translit": "raḥum wĕḥannun ḥaṭaʾnu lĕfanekha raḥem 'alenu."
+        },
         {
           "type": "text",
           "id": "adon-haselichot-text",

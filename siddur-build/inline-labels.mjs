@@ -10,6 +10,9 @@
 // To add a new label, add an entry here; nothing else needs to change.
 export const LABEL_MAP = {
   "אִשָּׁה:": "a woman says:",
+  "אשה:": "a woman says:",
+  "יִפְנֶה לְצַד יָמִין": "turn to the right",
+  "יִפְנֶה לְצַד שְׂמֹאל": "turn to the left",
 };
 
 // @@-delimited ASCII placeholders (not e.g. null bytes) so this file stays

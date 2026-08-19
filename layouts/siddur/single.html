@@ -19,6 +19,16 @@
   <button type="button" class="siddur-toggle-btn" data-toggle-class="show-translation">English</button>
 </div>
 
+{{- if .Params.toc }}
+<nav class="siddur-toc" aria-label="Table of contents">
+  <ol>
+    {{- range $chapter.sections }}
+    <li><a href="#{{ .id }}" dir="auto">{{ .title }}</a></li>
+    {{- end }}
+  </ol>
+</nav>
+{{- end }}
+
 {{ range $chapter.sections }}
 <section class="siddur-section">
   <h2 id="{{ .id }}">
