@@ -137,7 +137,7 @@ const data = {
     },
   ],
   note:
-    "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs.",
+    "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adhonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs.",
   pronunciation: PRONUNCIATION.map(([hebrew, name, symbol, description]) => ({
     hebrew,
     name,

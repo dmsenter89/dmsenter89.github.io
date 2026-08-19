@@ -11,10 +11,24 @@
        "group" (always-open bordered box for a set of mutually exclusive
        alternatives shown side by side, e.g. the grain/wine/fruit choice in
        Me'en Shalosh -- same nested "items" array as expandable, just never
-       collapsed).
+       collapsed) |
+       "toggle" (radio-button pair selecting between two alternative
+       renditions of the same passage, e.g. the full Amidah vs. Havinenu --
+       "options" is an array of exactly two {id, label, items}; the first
+       is selected by default. CSS keys the visible panel to radio/panel
+       position via :nth-of-type, so this only supports exactly two
+       options.) |
+       "subsection" (an h3-level sub-heading within a section, for a
+       section whose printed source itself subdivides under further
+       headings, e.g. Havu LaAdonai / Lecha Dodi within Kabbalat Shabbat --
+       same nested "items" array as expandable/group, plus optional
+       "youtube"/"audio" exactly like a top-level section carries.)
        Any item (of any type) may also carry an optional "audio" URL,
        rendered as a native player -- used for chapters with a per-line
-       recording, e.g. the "For Toddlers" page. */ -}}
+       recording, e.g. the "For Toddlers" page. On "expandable" and
+       "subsection" items the player renders inside the wrapped content
+       (hidden until expanded, for "expandable") instead of after the
+       heading/<details>, unlike every other type. */ -}}
 {{- if eq .type "include" }}
   {{- $refSegments := split .ref "/" }}
   {{- $refData := hugo.Data.siddur }}
@@ -34,11 +48,42 @@
 <details class="siddur-item siddur-expandable" id="{{ .id }}">
   <summary class="siddur-expandable-label">{{ .label }}</summary>
   <div class="siddur-expandable-content">
+    {{- with .audio }}
+    <audio class="siddur-audio-player" controls preload="none" src="{{ . }}"></audio>
+    {{- end }}
     {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
   </div>
 </details>
 {{- else if eq .type "group" }}
 <div class="siddur-item siddur-group" id="{{ .id }}">
+  {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
+</div>
+{{- else if eq .type "toggle" }}
+{{- $tid := .id }}
+<div class="siddur-item siddur-toggle-group" id="{{ .id }}" role="group">
+  {{- range $i, $opt := .options }}
+  <input type="radio" name="siddur-toggle-{{ $tid }}" id="siddur-toggle-{{ $tid }}-{{ $opt.id }}" class="siddur-toggle-group-radio" {{ if eq $i 0 }}checked{{ end }}>
+  <label for="siddur-toggle-{{ $tid }}-{{ $opt.id }}" class="siddur-toggle-group-btn">{{ $opt.label }}</label>
+  {{- end }}
+  {{- range .options }}
+  <div class="siddur-toggle-group-panel siddur-toggle-group-panel-{{ .id }}">
+    {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
+  </div>
+  {{- end }}
+</div>
+{{- else if eq .type "subsection" }}
+<div class="siddur-item siddur-subsection" id="{{ .id }}">
+  <h3>
+    <span class="siddur-subsection-title">{{ .title }}</span>
+    {{- with .youtube }}
+    <a class="siddur-youtube-link" href="{{ . }}" target="_blank" rel="noopener" aria-label="Learn the melody on YouTube">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M21.6 7.2s-.21-1.5-.87-2.16c-.83-.87-1.76-.87-2.19-.92C15.44 4 12 4 12 4h-.01s-3.44 0-6.55.12c-.43.05-1.36.05-2.19.92C2.6 5.7 2.4 7.2 2.4 7.2S2.19 8.95 2.19 10.71v1.65c0 1.75.21 3.51.21 3.51s.21 1.5.86 2.16c.83.87 1.92.84 2.4.93 1.75.17 7.44.21 7.44.21s3.44 0 6.55-.12c.43-.06 1.36-.06 2.19-.93.65-.66.87-2.16.87-2.16s.21-1.75.21-3.51v-1.65c0-1.76-.21-3.51-.21-3.51zM9.75 14.5v-6l5.5 3.02-5.5 2.98z"/></svg>
+    </a>
+    {{- end }}
+  </h3>
+  {{- with .audio }}
+  <audio class="siddur-audio-player" controls preload="none" src="{{ . }}"></audio>
+  {{- end }}
   {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
 </div>
 {{- else if eq .type "rubric" }}
@@ -53,6 +98,6 @@
   <p class="siddur-translation">{{ .translation }}</p>
 </div>
 {{- end }}
-{{- with .audio }}
-<audio class="siddur-audio-player" controls preload="none" src="{{ . }}"></audio>
+{{- if and .audio (ne .type "expandable") (ne .type "subsection") }}
+<audio class="siddur-audio-player" controls preload="none" src="{{ .audio }}"></audio>
 {{- end }}

@@ -1,0 +1,44 @@
+{{- /* Special-occasion readings table for the EY Triennial Cycle page.
+       Params: dict with id, title, occasions ([]{name,textWeekday,
+       textShabbat,haftarah,notes,aliyotWeekday[7],aliyotShabbat[7]}). The
+       14 aliyah columns are marked .siddur-aliyah-col, toggled the same
+       way as the per-book tables (see siddur-ey-book-table.html). */ -}}
+<section class="siddur-table-section" id="{{ .id }}">
+  <h2>{{ .title }}</h2>
+  <div class="siddur-table-wrap">
+    <table class="siddur-table siddur-ey-table">
+      <thead>
+        <tr>
+          <th>Reading</th>
+          <th>Text (weekday)</th>
+          <th>Text (Shabbat)</th>
+          <th>Haftarah</th>
+          <th>Notes</th>
+          {{- range $i, $e := (seq 7) }}
+          <th class="siddur-aliyah-col">Aliyah {{ $i | add 1 }} (weekday)</th>
+          {{- end }}
+          {{- range $i, $e := (seq 7) }}
+          <th class="siddur-aliyah-col">Aliyah {{ $i | add 1 }} (Shabbat)</th>
+          {{- end }}
+        </tr>
+      </thead>
+      <tbody>
+        {{- range .occasions }}
+        <tr>
+          <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ .name }}</td>
+          <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ .textWeekday }}</td>
+          <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ .textShabbat }}</td>
+          <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ .haftarah }}</td>
+          <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ .notes }}</td>
+          {{- range .aliyotWeekday }}
+          <td class="siddur-aliyah-col siddur-table-hebrew" lang="he" dir="rtl">{{ . }}</td>
+          {{- end }}
+          {{- range .aliyotShabbat }}
+          <td class="siddur-aliyah-col siddur-table-hebrew" lang="he" dir="rtl">{{ . }}</td>
+          {{- end }}
+        </tr>
+        {{- end }}
+      </tbody>
+    </table>
+  </div>
+</section>

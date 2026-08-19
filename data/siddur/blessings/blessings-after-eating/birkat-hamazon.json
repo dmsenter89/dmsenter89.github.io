@@ -9,15 +9,15 @@
           "type": "text",
           "id": "hazan",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים, וּמְפַרְנֵס לַכֹּל וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא. בָּרוּךְ אַתָּה יְיָ, הַזָּן אֶת הַכֹּל.",
-          "translation": "Blessed are You, Adonay our God, King of the universe, who feeds the entire world in His goodness, with grace, with kindness, and with mercy; who gives food to all flesh, and prepares sustenance for all the creatures He has created. Blessed are You, Adonay, who feeds all.",
-          "translit": "barukh ʾatta Adonay, ʾĕlohenu melekh ha'olam, hazzan ʾeth ha'olam kullo bĕṭuvo bĕḥen bĕḥesedh uvĕraḥămim, umĕfarnes lakkol umekhin mazon lĕkhol bĕriyyothayw ʾăsher baraʾ. barukh ʾatta Adonay, hazzan ʾeth hakkol."
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who feeds the entire world in His goodness, with grace, with kindness, and with mercy; who gives food to all flesh, and prepares sustenance for all the creatures He has created. Blessed are You, Adhonay, who feeds all.",
+          "translit": "barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, hazzan ʾeth ha'olam kullo bĕṭuvo bĕḥen bĕḥesedh uvĕraḥămim, umĕfarnes lakkol umekhin mazon lĕkhol bĕriyyothaw ʾăsher baraʾ. barukh ʾatta Adhonay, hazzan ʾeth hakkol."
         },
         {
           "type": "text",
           "id": "noda",
           "hebrew": "נֽוֹדֶה לְּךָ, יְיָ אֱלֹהֵינוּ, שֶׁהִנְחַלְתָּ לַאֲבוֹתֵינוּ אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, בְּרִית וְתוֹרָה.",
-          "translation": "We thank You, Adonay our God, for having given our ancestors as a heritage a desirable, good, and spacious land, and covenant and Torah.",
-          "translit": "nodheh lĕkha, Adonay ʾĕlohenu, shehinḥalta laʾăvothenu ʾereṣ ḥemda ṭova urĕḥava, bĕrith wĕthora."
+          "translation": "We thank You, Adhonay our God, for having given our ancestors as a heritage a desirable, good, and spacious land, and covenant and Torah.",
+          "translit": "nodheh lĕkha, Adhonay ʾĕlohenu, shehinḥalta laʾăvothenu ʾereṣ ḥemda ṭova urĕḥava, bĕrith wĕthora."
         },
         {
           "type": "expandable",
@@ -41,7 +41,7 @@
                   "id": "purim-full",
                   "hebrew": "וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה. בִּימֵי מָרְדֳּכַי וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלוֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים הֵפַרְתָּ אֶת עֲצָתוֹ וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ וַהֲשֵׁבוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ.",
                   "translation": "For the miracles, the redemption, the mighty deeds, the victories, and the battles which You performed for our ancestors in those days, at this season: in the days of Mordechai and Esther, in Shushan the capital, when the wicked Haman rose up against them and sought to destroy, kill, and annihilate all the Jews, young and old, infants and women, in one day — the thirteenth of the twelfth month, the month of Adar — and to plunder their possessions. But You, in Your abundant mercy, foiled his plan and frustrated his design, and turned his own scheme back upon his own head, and they hanged him and his sons on the gallows.",
-                  "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mordŏkhay wĕʾester bĕshushan habbira kĕshe'amadh 'ălehem haman harasha' biqqesh lĕhashmidh lahărogh ulĕʾabbedh ʾeth kol hayyĕhudhim minna'ar wĕ'adh zaqen ṭaf wĕnashim bĕyom ʾeḥadh bishlosha 'asar lĕḥodhesh shĕnem 'asar huʾ ḥodhesh ʾădhar ushĕlalam lavoz. wĕʾatta bĕraḥămekha harabbim hefarta ʾeth 'ăṣatho wĕqilqalta ʾeth maḥăshavto wahăshevotha lo gĕmulo vĕroʾsho wĕthalu ʾotho wĕʾeth banayw 'al ha'eṣ."
+                  "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mordŏkhay wĕʾester bĕshushan habbira kĕshe'amadh 'ălehem haman harasha' biqqesh lĕhashmidh lahărogh ulĕʾabbedh ʾeth kol hayyĕhudhim minna'ar wĕ'adh zaqen ṭaf wĕnashim bĕyom ʾeḥadh bishlosha 'asar lĕḥodhesh shĕnem 'asar huʾ ḥodhesh ʾădhar ushĕlalam lavoz. wĕʾatta bĕraḥămekha harabbim hefarta ʾeth 'ăṣatho wĕqilqalta ʾeth maḥăshavto wahăshevotha lo gĕmulo vĕroʾsho wĕthalu ʾotho wĕʾeth banaw 'al ha'eṣ."
                 }
               ]
             }
@@ -69,7 +69,7 @@
                   "id": "chanukah-full",
                   "hebrew": "וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה. בִּימֵי מַתִּתְיָהוּ בֶּן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנַאי וּבָנָיו כְּשֶׁעָמְדָה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶךָ. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים עָמַדְתָּ לָהֶם בְּעֵת צָרָתָם רַבְתָּ אֶת רִיבָם דַּנְתָּ אֶת דִּינָם נָקַמְתָּ אֶת נִקְמָתָם מָסַרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְקֵי תוֹרָתֶךָ. וּלְךָ עָשִׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶךָ וּלְעַמְּךָ יִשְׂרָאֵל עָשִׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּאוּ בָנֶיךָ לִדְבִיר בֵּיתֶךָ וּפִנּוּ אֶת הֵיכָלֶךָ וְטִהֲרוּ אֶת מִקְדָּשֶׁךָ וְהִדְלִיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶׁךָ וְקָבְעוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל.",
                   "translation": "For the miracles, the redemption, the mighty deeds, the victories, and the battles which You performed for our ancestors in those days, at this season: in the days of Mattityahu, son of Yochanan the High Priest, the Hasmonean, and his sons, when the wicked Greek kingdom rose up against Your people Israel to make them forget Your Torah and turn them away from the statutes of Your will. But You, in Your abundant mercy, stood by them in their time of distress; You championed their cause, judged their claim, and avenged their wrong; You delivered the mighty into the hands of the weak, the many into the hands of the few, the impure into the hands of the pure, the wicked into the hands of the righteous, and the arrogant into the hands of those who occupied themselves with Your Torah. You made for Yourself a great and holy name in Your world, and for Your people Israel You performed a great victory and redemption as on this very day. Afterward Your children came to the inner sanctuary of Your house, cleared Your Temple, purified Your sanctuary, kindled lights in Your holy courts, and established these eight days of Chanukah to give thanks and praise to Your great name.",
-                  "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mattithyahu ben yoḥanan kohen gadhol ḥashmonaʾy uvanayw kĕshe'amĕdha malkhuth yawan harĕsha'a 'al 'ammĕkha yisraʾel lĕhashkiḥam torathekha ulĕha'ăviram meḥuqqe rĕṣonekha. wĕʾatta bĕraḥămekha harabbim 'amadhta lahem bĕ'eth ṣaratham ravta ʾeth rivam danta ʾeth dinam naqamta ʾeth niqmatham masarta ghibborim bĕyadh ḥallashim wĕrabbim bĕyadh mĕ'aṭṭim uṭĕmeʾim bĕyadh ṭĕhorim urĕsha'im bĕyadh ṣaddiqim wĕzedhim bĕyadh 'osĕqe thorathekha. ulĕkha 'asitha shem gadhol wĕqadhosh bĕ'olamekha ulĕ'ammĕkha yisraʾel 'asitha tĕshu'a ghĕdhola ufurqan kĕhayyom hazzeh. wĕʾaḥar kakh baʾu vanekha lidhvir bethekha ufinnu ʾeth hekhalekha wĕṭihăru ʾeth miqdashekha wĕhidhliqu neroth bĕḥaṣroth qodhshekha wĕqavĕ'u shĕmonath yĕme ḥănukka ʾellu lĕhodhoth ulĕhallel lĕshimkha haggadhol."
+                  "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mattithyahu ben yoḥanan kohen gadhol ḥashmonaʾy uvanaw kĕshe'amĕdha malkhuth yawan harĕsha'a 'al 'ammĕkha yisraʾel lĕhashkiḥam torathekha ulĕha'ăviram meḥuqqe rĕṣonekha. wĕʾatta bĕraḥămekha harabbim 'amadhta lahem bĕ'eth ṣaratham ravta ʾeth rivam danta ʾeth dinam naqamta ʾeth niqmatham masarta ghibborim bĕyadh ḥallashim wĕrabbim bĕyadh mĕ'aṭṭim uṭĕmeʾim bĕyadh ṭĕhorim urĕsha'im bĕyadh ṣaddiqim wĕzedhim bĕyadh 'osĕqe thorathekha. ulĕkha 'asitha shem gadhol wĕqadhosh bĕ'olamekha ulĕ'ammĕkha yisraʾel 'asitha tĕshu'a ghĕdhola ufurqan kĕhayyom hazzeh. wĕʾaḥar kakh baʾu vanekha lidhvir bethekha ufinnu ʾeth hekhalekha wĕṭihăru ʾeth miqdashekha wĕhidhliqu neroth bĕḥaṣroth qodhshekha wĕqavĕ'u shĕmonath yĕme ḥănukka ʾellu lĕhodhoth ulĕhallel lĕshimkha haggadhol."
                 }
               ]
             }
@@ -79,15 +79,15 @@
           "type": "text",
           "id": "al-hakol",
           "hebrew": "עַל הַכֹּל אֲנַֽחְנוּ מוֹדִים לָךְ וּמְבָרְכִים שְׁמָךְ, בָּרוּךְ אַתָּה יְיָ, עַל הָאָֽרֶץ וְעַל הַמָּזוֹן.",
-          "translation": "For all this we thank You and bless Your name; blessed are You, Adonay, for the land and for the sustenance.",
-          "translit": "'al hakkol ʾănaḥĕnu modhim lakh umĕvarĕkhim shĕmakh, barukh ʾatta Adonay, 'al haʾareṣ wĕ'al hammazon."
+          "translation": "For all this we thank You and bless Your name; blessed are You, Adhonay, for the land and for the sustenance.",
+          "translit": "'al hakkol ʾănaḥĕnu modhim lakh umĕvarĕkhim shĕmakh, barukh ʾatta Adhonay, 'al haʾareṣ wĕ'al hammazon."
         },
         {
           "type": "text",
           "id": "rachem",
           "hebrew": "רַחֵם יְיָ אֱלֹהֵֽינוּ עַל יִשְׂרָאֵל עֲמָּךָ וְעַל יְרוּשָׁלַֽיִם עִירָךָ וְעַל מִקְדָשָׁךְ, וְעַל מַלְכוּת בֵּית דָּוִד מְשִׁיחָךָ.",
-          "translation": "Have mercy, Adonay our God, on Israel Your people, on Jerusalem Your city, on Your sanctuary, and on the kingdom of the house of David, Your anointed.",
-          "translit": "raḥem Adonay ʾĕlohenu 'al yisraʾel 'ămmakha wĕ'al yĕrushalayim 'irakha wĕ'al miqdhashakh, wĕ'al malkhuth beth dawīdh mĕshiḥakha."
+          "translation": "Have mercy, Adhonay our God, on Israel Your people, on Jerusalem Your city, on Your sanctuary, and on the kingdom of the house of David, Your anointed.",
+          "translit": "raḥem Adhonay ʾĕlohenu 'al yisraʾel 'ămmakha wĕ'al yĕrushalayim 'irakha wĕ'al miqdhashakh, wĕ'al malkhuth beth dawīdh mĕshiḥakha."
         },
         {
           "type": "expandable",
@@ -142,8 +142,8 @@
                   "type": "text",
                   "id": "yaaleh-veyavo-full",
                   "hebrew": "אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם [רֹאשׁ הַחֹֽדֶשׁ הַזֶּה / חַג הַמַּצּוֹת הַזֶּה / חַג הַסֻּכּוֹת הַזֶּה], לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְיָ אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים, חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה.",
-                  "translation": "Our God and God of our ancestors, may there arise, come, reach, be seen, be accepted, be heard, be recalled, and be remembered — our remembrance and the remembrance of our ancestors, the remembrance of Jerusalem Your city, the remembrance of the Messiah son of David Your servant, and the remembrance of all Your people the house of Israel — before You, for deliverance, for good, for grace, for kindness, and for mercy, for good life and for peace, on this day of [Rosh Chodesh / the Feast of Matzot / the Feast of Sukkot], to have mercy on us and to save us. Remember us, Adonay our God, on this day for good; be mindful of us for blessing; and save us for a good life. In the matter of salvation and mercy, spare us and be gracious to us, have pity and mercy on us, and save us — for our eyes are turned to You, for You are a gracious and merciful God and King.",
-                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, ya'ăleh wĕyavoʾ, wĕyaggia' wĕyeraʾeh, wĕyeraṣeh wĕyishshama', wĕyippaqedh wĕyizzakher, zikhronenu wĕzikhron ʾăvothenu, zikhron yĕrushalayim 'irakh, wĕzikhron mashiaḥ ben-dhawīdh 'avdakh, wĕzikhron kol-'ammĕkha beth yisraʾel lĕfanekha, lifleṭa, lĕṭova, lĕḥen, lĕḥesedh ulĕraḥămim, lĕḥayyim ṭovim ulĕshalom, bĕyom [roʾsh haḥodhesh hazzeh / ḥagh hammaṣṣoth hazzeh / ḥagh hassukkoth hazzeh], lĕraḥem bo 'alenu ulĕhoshi'enu. zakhĕrenu Adonay ʾĕlohenu bo lĕṭova, ufaqĕdhenu vo livrakha, wĕhoshi'enu vo lĕḥayyim ṭovim, bidhvar yĕshu'a wĕraḥămim, ḥus wĕḥannenu, waḥămol wĕraḥem 'alenu, wĕhoshi'enu ki ʾelekha 'enenu, ki ʾel melekh ḥannun wĕraḥum ʾatta."
+                  "translation": "Our God and God of our ancestors, may there arise, come, reach, be seen, be accepted, be heard, be recalled, and be remembered — our remembrance and the remembrance of our ancestors, the remembrance of Jerusalem Your city, the remembrance of the Messiah son of David Your servant, and the remembrance of all Your people the house of Israel — before You, for deliverance, for good, for grace, for kindness, and for mercy, for good life and for peace, on this day of [Rosh Chodesh / the Feast of Matzot / the Feast of Sukkot], to have mercy on us and to save us. Remember us, Adhonay our God, on this day for good; be mindful of us for blessing; and save us for a good life. In the matter of salvation and mercy, spare us and be gracious to us, have pity and mercy on us, and save us — for our eyes are turned to You, for You are a gracious and merciful God and King.",
+                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, ya'ăleh wĕyavoʾ, wĕyaggia' wĕyeraʾeh, wĕyeraṣeh wĕyishshama', wĕyippaqedh wĕyizzakher, zikhronenu wĕzikhron ʾăvothenu, zikhron yĕrushalayim 'irakh, wĕzikhron mashiaḥ ben-dhawīdh 'avdakh, wĕzikhron kol-'ammĕkha beth yisraʾel lĕfanekha, lifleṭa, lĕṭova, lĕḥen, lĕḥesedh ulĕraḥămim, lĕḥayyim ṭovim ulĕshalom, bĕyom [roʾsh haḥodhesh hazzeh / ḥagh hammaṣṣoth hazzeh / ḥagh hassukkoth hazzeh], lĕraḥem bo 'alenu ulĕhoshi'enu. zakhĕrenu Adhonay ʾĕlohenu bo lĕṭova, ufaqĕdhenu vo livrakha, wĕhoshi'enu vo lĕḥayyim ṭovim, bidhvar yĕshu'a wĕraḥămim, ḥus wĕḥannenu, waḥămol wĕraḥem 'alenu, wĕhoshi'enu ki ʾelekha 'enenu, ki ʾel melekh ḥannun wĕraḥum ʾatta."
                 }
               ]
             }
@@ -153,15 +153,15 @@
           "type": "text",
           "id": "uvneh",
           "hebrew": "וּבְנֵה יְרוּשָׁלַיִם בִּמְהֵרָה בְיָמֵינוּ. בָּרוּךְ אַתָּה יְיָ, בּוֹנֵה יְרוּשָׁלָיִם. אָמֵן.",
-          "translation": "And rebuild Jerusalem speedily in our days. Blessed are You, Adonay, who builds Jerusalem. Amen.",
-          "translit": "uvĕneh yĕrushalayim bimhera vĕyamenu. barukh ʾatta Adonay, boneh yĕrushalayim. ʾamen."
+          "translation": "And rebuild Jerusalem speedily in our days. Blessed are You, Adhonay, who builds Jerusalem. Amen.",
+          "translit": "uvĕneh yĕrushalayim bimhera vĕyamenu. barukh ʾatta Adhonay, boneh yĕrushalayim. ʾamen."
         },
         {
           "type": "text",
           "id": "hatov-vehametiv",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אָבִינוּ מַלְכֵּנוּ הַמֶּלֶךְ הַטּוֹב וְהַמֵּטִיב לַכֹּל, הוּא הֵטִיב הוּא מֵטִיב הוּא יֵיטִיב לָנוּ. הוּא גְמָלָנוּ, הוּא גוֹמְלֵנוּ, הוּא יִגְמְלֵנוּ חֵן וָחֶסֶד וְרַחֲמִים וְכָל טוּב.",
-          "translation": "Blessed are You, Adonay our God, King of the universe, our Father, our King, the King who is good and does good to all — who has done good, does good, and will do good for us; who has bestowed, bestows, and will forever bestow upon us grace, kindness, mercy, and all good.",
-          "translit": "barukh ʾatta Adonay ʾĕlohenu melekh ha'olam, ʾavinu malkenu hammelekh haṭṭov wĕhammeṭiv lakkol, huʾ heṭiv huʾ meṭiv huʾ yeṭiv lanu. huʾ ghĕmalanu, huʾ ghomĕlenu, huʾ yighmĕlenu ḥen waḥesedh wĕraḥămim wĕkhol ṭuv."
+          "translation": "Blessed are You, Adhonay our God, King of the universe, our Father, our King, the King who is good and does good to all — who has done good, does good, and will do good for us; who has bestowed, bestows, and will forever bestow upon us grace, kindness, mercy, and all good.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾavinu malkenu hammelekh haṭṭov wĕhammeṭiv lakkol, huʾ heṭiv huʾ meṭiv huʾ yeṭiv lanu. huʾ ghĕmalanu, huʾ ghomĕlenu, huʾ yighmĕlenu ḥen waḥesedh wĕraḥămim wĕkhol ṭuv."
         },
         {
           "type": "rubric",

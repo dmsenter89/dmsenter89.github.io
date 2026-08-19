@@ -77,6 +77,14 @@ over the content tree.
             { "type": "rubric", "id": "grain-label", "hebrew": "...", "translation": "For the five grains:" },
             { "type": "text", "id": "grain-row", "hebrew": "...", "translation": "..." }
           ]
+        },
+        {
+          "type": "toggle",
+          "id": "amidah-middle",
+          "options": [
+            { "id": "full", "label": "Full Amidah", "items": [ { "type": "text", "id": "...", "hebrew": "...", "translation": "..." } ] },
+            { "id": "havinenu", "label": "Havinenu", "items": [ { "type": "text", "id": "...", "hebrew": "...", "translation": "..." } ] }
+          ]
         }
       ]
     }
@@ -111,13 +119,22 @@ over the content tree.
   (Blessings After Eating → Other Foods): a `rubric` label + `text` row per
   option, boxed together so the reader can see all the choices without
   expanding anything.
+- `type: "toggle"` — a radio-button pair for choosing between two
+  alternative renditions of the same passage, e.g. the full Amidah vs.
+  Havinenu in the middle of the weekday Arvith Amidah. `options` is an
+  array of exactly two `{id, label, items}` objects; `items` is a nested
+  array rendered like a section's items. The first option is selected by
+  default. Only one panel is ever shown — unlike `group`, these aren't
+  meant to be compared side by side. The CSS keys the visible panel to
+  radio/panel position via `:nth-of-type`, so exactly two options is a
+  hard limit, not just a convention.
 
 ## Divine Name
 
 Every occurrence of the Tetragrammaton — the "יי" shorthand and any
 differently-vowelized spelling alike — gets normalized to a single
 consistent form: **יְיָ** (yud-sheva, yud-qamats). English always reads
-"Adonay".
+"Adhonay".
 
 This used to be the unvocalized י״י (gershayim) form, but real niqqud on the
 letters is what a browser/font needs to correctly position a following
@@ -131,7 +148,7 @@ Implementation lives in `normalize-divine-name.mjs`: `normalizeDivineName()`
 rewrites the saved `hebrew` field (dropping the source's original varied
 niqqud on that word, preserving cantillation if present); `generate.mjs`
 then shields `יְיָ` behind a placeholder before calling `transliterate()` and
-swaps in "Adonay" afterward, since the library has no clean way to force a
+swaps in "Adhonay" afterward, since the library has no clean way to force a
 fixed reading for a specific word/phrase — it would otherwise transliterate
 the letters literally (e.g. "yĕya").
 
@@ -139,6 +156,18 @@ the letters literally (e.g. "yĕya").
 content (extra consonants inserted, not just revocalized — e.g.
 "יוּהוּווּהוּ") aren't matched by the current regex. Review `generate.mjs`
 output before normalizing any chapter that might contain those.
+
+## Cantillation punctuation in translit
+
+The transliteration library silently drops sof pasuq (׃) and paseq (׀)
+instead of rendering them, which turns a transliterated biblical passage
+(Tehilla, the Amida's scriptural quotes, Ashrei, etc.) into one run-on line
+with no indication of where each verse ends. `punctuation.mjs` shields both
+marks before calling `transliterate()` and swaps them back into `translit`
+afterward — sof pasuq becomes `.`, paseq is dropped with its surrounding
+whitespace collapsed to one space. The saved `hebrew` field is untouched.
+Add another cantillation mark here if a future chapter needs one; nothing
+else needs to change.
 
 ## Gender-variant inline labels
 

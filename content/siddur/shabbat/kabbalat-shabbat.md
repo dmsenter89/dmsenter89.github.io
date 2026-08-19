@@ -1,6 +1,6 @@
 ---
-title: "Selihoth"
-weight: 10
+title: "Kabbalat Shabbat"
+weight: 5
 robots: "noindex, nofollow"
 toc: true
 ---

@@ -1,0 +1,62 @@
+{
+  "title": "Zeved HaBat",
+  "sections": [
+    {
+      "id": "zeved-habat-commentary",
+      "title": "Customs",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "zeved-habat-commentary-1",
+          "hebrew": "יש נוהגים לעשות סעודה בלילה הששי ללדת הבת, והזמינו בה תלמידי חכמים שיאמרו דברי תורה, וסעודה זו נקראת מפי הבבלים \"לילת סתי\" [ליל ששי], ומנהג יפה ונכון הוא, ובהזדמנות זו יכולה היולדת להודות לקדוש ברוך הוא, שבזה משבחים ברוך הוא גם על טובה על שזכתה לבת. היולדת היא בכלל חולה שנתרפאה, וצריכה לברך ברכת הגומל בשם ומלכות במנין. ומנהגנו לקרוא לבת אז שם הילדה מן המקבל הגר\"ש סלמן מוצפי זצוק\"ל.",
+          "translation": "Some have the custom of holding a meal on the sixth night after a daughter's birth, inviting Torah scholars to speak words of Torah; the Babylonians call this meal \"Leilat Sitti\" [the sixth night], and it is a fine and proper custom. On this occasion the new mother can give thanks to the Holy One, blessed be He — for in this she is also praising Him for the good fortune of having merited a daughter. A woman who has given birth is included among the sick who have recovered, and must bless Birkat HaGomel with Name and Sovereignty before a minyan. Our custom is to name the girl at that time, following the practice of the Kabbalist, Rabbi Salman Mutzafi, of blessed memory."
+        },
+        {
+          "type": "rubric",
+          "id": "zeved-habat-commentary-2",
+          "hebrew": "ומנהג ארץ ישראל וסוריה ותוגרמה שהאב עולה לתורה בשבת בינתים אחרי הלידה וקורא לה שם, וקדם שקורין לה שם נוהגים לומר הפסוק: \"יונתי בחגוי הסלע\" וכו', ואם היא בת ראשונה אומר גם פסוק \"אחת היא יונתי\", ואז קורין לה שם ועושין לה מי שברך וכו' (כתר שם טוב ח\"ב אות תרעא).",
+          "translation": "It is the custom in the Land of Israel, Syria, and Turkey for the father to be called to the Torah on an intervening Shabbat after the birth and to name her there. Before her name is called, it is customary to recite the verse \"My dove, in the clefts of the rock...\" etc.; and if she is a firstborn daughter, one also recites the verse \"My dove, my perfect one, is one alone.\" Her name is then called, and the Mi Sheberach blessing is recited for her, etc. (Keter Shem Tov, part 2, section 671)."
+        }
+      ]
+    },
+    {
+      "id": "zeved-habat-text",
+      "title": "Text of the Naming",
+      "items": [
+        {
+          "type": "text",
+          "id": "zeved-habat-verse-yonati",
+          "hebrew": "יוֹנָתִ֞י בְּחַגְוֵ֣י הַסֶּ֗לַע בְּסֵ֙תֶר֙ הַמַּדְרֵגָ֔ה הַרְאִ֙ינִי֙ אֶת־מַרְאַ֔יִךְ הַשְׁמִיעִ֖נִי אֶת־קוֹלֵ֑ךְ כִּֽי־קוֹלֵ֥ךְ עָרֵ֖ב וּמַרְאֵ֥יךְ נָאוֶֽה׃",
+          "translation": "My dove, in the clefts of the rock, in the covert of the cliff, let me see your face, let me hear your voice; for your voice is sweet, and your face is comely. (Song of Songs 2:14)",
+          "translit": "yonathi bĕḥaghwe hassela' bĕsether hammadhregha harʾini ʾeth-marʾayikh hashmi'īni ʾeth-qolekh ki-qolekh 'arev umarʾekh naʾweh."
+        },
+        {
+          "type": "rubric",
+          "id": "zeved-habat-instr-second-verse",
+          "hebrew": "ואם היא בת ראשונה, מוסיפים לה פסוק זה:",
+          "translation": "And if she is a firstborn daughter, this verse is added for her:"
+        },
+        {
+          "type": "text",
+          "id": "zeved-habat-verse-achat-hi",
+          "hebrew": "אַחַ֥ת הִיא֙ יוֹנָתִ֣י תַמָּתִ֔י אַחַ֥ת הִיא֙ לְאִמָּ֔הּ בָּרָ֥ה הִ֖יא לְיֽוֹלַדְתָּ֑הּ רָא֤וּהָ בָנוֹת֙ וַֽיְאַשְּׁר֔וּהָ מְלָכ֥וֹת וּפִֽילַגְשִׁ֖ים וַֽיְהַלְלֽוּהָ׃",
+          "translation": "My dove, my perfect one, is one alone; she is the only one of her mother, the choice one of her that bore her. The daughters saw her and called her happy; the queens and concubines, and they praised her. (Song of Songs 6:9)",
+          "translit": "ʾaḥath hiʾ yonathi thammathi ʾaḥath hiʾ lĕʾimmah bara hiʾ lĕyoladhtah raʾuha vanoth wayĕʾashshĕruha mĕlakhoth ufilaghshim wayĕhalĕluha."
+        },
+        {
+          "type": "text",
+          "id": "zeved-habat-mi-sheberach",
+          "hebrew": "מִי שֶׁבֵּרַךְ אֲבוֹתֵינוּ הַקְּדוֹשׁוֹת וְהַטְּהוֹרוֹת — שָׂרָה רִבְקָה רָחֵל וְלֵאָה, מִרְיָם הַנְּבִיאָה וַאֲבִיגַיִל וְאֶסְתֵּר הַמַּלְכָּה בַּת אֲבִיחַיִל, הוּא יְבָרֵךְ אֶת־הַיַּלְדָּה הַנְּעִימָה הַזֹּאת, וְיִקָּרֵא שְׁמָהּ (פְּלוֹנִית) בְּמַזָּל טוֹב וּבְשָׁעַת בְּרָכָה. וְיִגְדְּלָהּ בִּבְרִיאוּת בְּשָׁלוֹם וּבִמְנוּחָה. וְיִזְכֶּה לְאָבִיהָ וּלְאִמָּהּ לִרְאוֹת בְּשִׂמְחָתָהּ וּבְחֻפָּתָהּ, בְּבָנִים זְכָרִים, עֹשֶׁר וְכָבוֹד, וּדְשֵׁנִים וְרַעֲנַנִּים יְנוּבוּן בְּשֵׂיבָה, וְכֵן יְהִי רָצוֹן וְנֹאמַר אָמֵן.",
+          "translation": "May the One who blessed our holy and pure foremothers — Sarah, Rebecca, Rachel, and Leah, Miriam the prophetess, Abigail, and Esther the queen, daughter of Avichail — bless this pleasant child, and let her name be called (so-and-so) in good fortune and at an auspicious hour. May He raise her in health, peace, and tranquility, and may her father and mother merit to see her joy and her wedding canopy, with sons, wealth and honor, and may they flourish in fullness and vigor into old age; and so may it be Your will, and let us say, Amen.",
+          "translit": "mi shebberakh ʾăvothenu haqqĕdhoshoth wĕhaṭṭĕhoroth — sara rivqa raḥel wĕleʾa, miryam hannĕviʾa waʾăvighayīl wĕʾester hammalka bath ʾăviḥayīl, huʾ yĕvarekh ʾeth-hayyalda hannĕ'ima hazzoʾth, wĕyiqqareʾ shĕmah (pĕlonith) bĕmazzal ṭov uvĕsha'ath bĕrakha. wĕyighdĕlah bivriʾuth bĕshalom uvimnuḥa. wĕyizkeh lĕʾaviha ulĕʾimmah lirʾoth bĕsimḥathah uvĕḥuppathah, bĕvanim zĕkharim, 'osher wĕkhavodh, udhĕshenim wĕra'ănannim yĕnuvun bĕseva, wĕkhen yĕhi raṣon wĕnoʾmar ʾamen."
+        },
+        {
+          "type": "rubric",
+          "id": "zeved-habat-footnote",
+          "hebrew": "* דוקא כשהילדה לפניו בשעת הברכה, יאמר תיבת \"הזאת\". אבל אם אינה לפניו ידלג תיבת \"הזאת\" (כתר שם טוב ח\"ב אות תרעא).",
+          "translation": "* Specifically when the girl is present at the time of the blessing, one says the word \"this\" (הַזֹּאת); but if she is not present, one omits the word \"this\" (Keter Shem Tov, part 2, section 671)."
+        }
+      ]
+    }
+  ]
+}

@@ -15,8 +15,8 @@
           "type": "text",
           "id": "opening",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם,",
-          "translation": "Blessed are You, Adonay our God, King of the universe, for —",
-          "translit": "barukh ʾatta Adonay ʾĕlohenu melekh ha'olam,"
+          "translation": "Blessed are You, Adhonay our God, King of the universe, for —",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam,"
         },
         {
           "type": "group",
@@ -67,8 +67,8 @@
           "type": "text",
           "id": "middle-common",
           "hebrew": "וְעַל אֶֽרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, שֶׁרָצִֽיתָ וְהִנְחַֽלְתָּ לַאֲבוֹתֵֽינוּ, [לֶאֱכֹל מִפִּרְיָהּ וְלִשְׂבֹּֽעַ מִטּוּבָהּ]. רַחֵם נָא, יְיָ אֱלֹהֵֽינוּ, עַל יִשְׂרָאֵל עַמָּךְ, וְעַל יְרוּשָׁלַֽיִם עִירָךְ, וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ, [וְעַל מִזְבָּחָךְ, וְעַל הֵיכָלָךְ. וּבְנֵה יְרוּשָׁלַֽיִם עִיר הַקֹּֽדֶשׁ בִּמְהֵרָה בְיָמֵֽינוּ], וְהַעֲלֵֽנוּ לְתוֹכָהּ, וְשַׂמְּחֵֽנוּ בְּבִנְיָנָהּ, וְנֹאכַל מִפִּרְיָהּ וְנִשְׂבַּע מִטּוּבָהּ, וּנְבָֽרְכָֽךְ עָלֶֽיהָ בִּקְדֻשָּׁה וּבְטָהֳרָה. בָּרוּךְ אַתָּה יְיָ, עַל הָאָֽרֶץ וְעַל",
-          "translation": "and for a desirable, good, and spacious land that You were pleased to give as a heritage to our ancestors, [to eat of its fruit and be satisfied with its goodness]. Have mercy, please, Adonay our God, on Israel Your people, on Jerusalem Your city, on Zion the dwelling-place of Your glory, [on Your altar, and on Your Temple. Rebuild Jerusalem the holy city speedily in our days]; bring us up into it, gladden us in its rebuilding, let us eat of its fruit and be satisfied with its goodness, and let us bless You for it in holiness and purity. Blessed are You, Adonay, for the land and for —",
-          "translit": "wĕ'al ʾereṣ ḥemda ṭova urĕḥava, sheraṣitha wĕhinḥalĕta laʾăvothenu, [leʾĕkhol mippiryah wĕlisboa' miṭṭuvah]. raḥem naʾ, Adonay ʾĕlohenu, 'al yisraʾel 'ammakh, wĕ'al yĕrushalayim 'irakh, wĕ'al ṣiyyon mishkan kĕvodhakh, [wĕ'al mizbaḥakh, wĕ'al hekhalakh. uvĕneh yĕrushalayim 'ir haqqodhesh bimhera vĕyamenu], wĕha'ălenu lĕthokhah, wĕsammĕḥenu bĕvinyanah, wĕnoʾkhal mippiryah wĕnisba' miṭṭuvah, unĕvarĕkhakh 'aleha biqdhushsha uvĕṭohŏra. barukh ʾatta Adonay, 'al haʾareṣ wĕ'al"
+          "translation": "and for a desirable, good, and spacious land that You were pleased to give as a heritage to our ancestors, [to eat of its fruit and be satisfied with its goodness]. Have mercy, please, Adhonay our God, on Israel Your people, on Jerusalem Your city, on Zion the dwelling-place of Your glory, [on Your altar, and on Your Temple. Rebuild Jerusalem the holy city speedily in our days]; bring us up into it, gladden us in its rebuilding, let us eat of its fruit and be satisfied with its goodness, and let us bless You for it in holiness and purity. Blessed are You, Adhonay, for the land and for —",
+          "translit": "wĕ'al ʾereṣ ḥemda ṭova urĕḥava, sheraṣitha wĕhinḥalĕta laʾăvothenu, [leʾĕkhol mippiryah wĕlisboa' miṭṭuvah]. raḥem naʾ, Adhonay ʾĕlohenu, 'al yisraʾel 'ammakh, wĕ'al yĕrushalayim 'irakh, wĕ'al ṣiyyon mishkan kĕvodhakh, [wĕ'al mizbaḥakh, wĕ'al hekhalakh. uvĕneh yĕrushalayim 'ir haqqodhesh bimhera vĕyamenu], wĕha'ălenu lĕthokhah, wĕsammĕḥenu bĕvinyanah, wĕnoʾkhal mippiryah wĕnisba' miṭṭuvah, unĕvarĕkhakh 'aleha biqdhushsha uvĕṭohŏra. barukh ʾatta Adhonay, 'al haʾareṣ wĕ'al"
         },
         {
           "type": "group",
@@ -131,8 +131,8 @@
           "type": "text",
           "id": "borei-nefashot",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא נְפָשׁוֹת רַבּוֹת עַל כָּל מַה שֶּׁבָּרָא חֵי הָעוֹלָמִים.",
-          "translation": "Blessed are You, Adonay our God, King of the universe, who creates many living beings, for all that He has created — He is the Life of the worlds.",
-          "translit": "barukh ʾatta Adonay, ʾĕlohenu melekh ha'olam, boreʾ nĕfashoth rabboth 'al kol mah shebbaraʾ ḥe ha'olamim."
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates many living beings, for all that He has created — He is the Life of the worlds.",
+          "translit": "barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, boreʾ nĕfashoth rabboth 'al kol mah shebbaraʾ ḥe ha'olamim."
         }
       ]
     }

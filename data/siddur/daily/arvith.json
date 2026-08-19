@@ -1,0 +1,223 @@
+{
+  "title": "Arvith",
+  "sections": [
+    {
+      "id": "beginning",
+      "title": "Beginning of Prayer",
+      "items": [
+        {
+          "type": "text",
+          "id": "arvith-intro-verses",
+          "hebrew": "יְיָ צְבָאוֹת עִמָּנוּ, מִשְׂגָּב לָנוּ אֱלֹהֵי יַעֲקֹב סֶלָה. יְיָ צְבָאוֹת, אַשְׁרֵי אָדָם בֹּטֵחַ בָּךְ. יְיָ הוֹשִׁיעָה, הַמֶּלֶךְ יַעֲנֵנוּ בְיוֹם קָרְאֵנוּ.",
+          "translation": "Adhonay of hosts is with us; the God of Jacob is our stronghold, Selah. Adhonay of hosts, happy is the one who trusts in You. Adhonay, save us; may the King answer us on the day we call.",
+          "translit": "Adhonay ṣĕvaʾoth 'immanu, misgav lanu ʾĕlohe ya'ăqov sela. Adhonay ṣĕvaʾoth, ʾashre ʾadham boṭeaḥ bakh. Adhonay hoshi'a, hammelekh ya'ănenu vĕyom qarĕʾenu."
+        },
+        {
+          "type": "text",
+          "id": "vehu-rachum",
+          "hebrew": "וְהוּא רַחוּם יְכַפֵּר עָוֹן וְלֹא יַשְׁחִית, וְהִרְבָּה לְהָשִׁיב אַפּוֹ וְלֹא יָעִיר כָּל חֲמָתוֹ. יְיָ הוֹשִׁיעָה, הַמֶּלֶךְ יַעֲנֵנוּ בְיוֹם קָרְאֵנוּ.",
+          "translation": "But He, being merciful, forgives iniquity and does not destroy; often He turns His anger away, and does not stir up all His wrath. Adhonay, save us; may the King answer us on the day we call.",
+          "translit": "wĕhuʾ raḥum yĕkhapper 'awon wĕloʾ yashḥith, wĕhirba lĕhashiv ʾappo wĕloʾ ya'ir kol ḥămatho. Adhonay hoshi'a, hammelekh ya'ănenu vĕyom qarĕʾenu."
+        }
+      ]
+    },
+    {
+      "id": "shema",
+      "title": "Shema",
+      "items": [
+        {
+          "type": "text",
+          "id": "maariv-aravim",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר בִּדְבָרוֹ מַעֲרִיב עֲרָבִים בְּחָכְמָה, פּוֹתֵחַ שְׁעָרִים בִּתְבוּנָה, מְשַׁנֶּה עִתִּים וּמַחֲלִיף אֶת הַזְּמַנִּים, וּמְסַדֵּר אֶת הַכּוֹכָבִים בְּמִשְׁמְרוֹתֵיהֶם בָּרָקִיעַ כִּרְצוֹנוֹ. בּוֹרֵא יוֹמָם וָלַיְלָה, גּוֹלֵל אוֹר מִפְּנֵי חֹשֶׁךְ וְחֹשֶׁךְ מִפְּנֵי אוֹר, וּמַעֲבִיר יוֹם וּמֵבִיא לַיְלָה, וּמַבְדִּיל בֵּין יוֹם וּבֵין לָיְלָה, יְיָ צְבָאוֹת שְׁמוֹ. בָּרוּךְ אַתָּה יְיָ, הַמַּעֲרִיב עֲרָבִים.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who by His word brings on evenings with wisdom, opens the gates of heaven with understanding, changes the periods of time and varies the seasons, and arranges the stars in their watches in the sky according to His will. He creates day and night, rolling away light before darkness and darkness before light; He causes the day to pass and brings on the night, and separates day from night — Adhonay of hosts is His name. Blessed are You, Adhonay, who brings on evenings.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher bidhvaro ma'ăriv 'ăravim bĕḥokhma, potheaḥ shĕ'arim bithvuna, mĕshanneh 'ittim umaḥălif ʾeth hazzĕmannim, umĕsadder ʾeth hakkokhavim bĕmishmĕrothehem baraqia' kirṣono. boreʾ yomam walayla, golel ʾor mippĕne ḥoshekh wĕḥoshekh mippĕne ʾor, uma'ăvir yom umeviʾ layla, umavdil ben yom uven layĕla, Adhonay ṣĕvaʾoth shĕmo. barukh ʾatta Adhonay, hamma'ăriv 'ăravim."
+        },
+        {
+          "type": "text",
+          "id": "ahavat-olam",
+          "hebrew": "אַהֲבַת עוֹלָם בֵּית יִשְׂרָאֵל עַמְּךָ אָהָבְתָּ, תּוֹרָה וּמִצְוֹת חֻקִּים וּמִשְׁפָּטִים אוֹתָנוּ לִמַּדְתָּ. עַל כֵּן יְיָ אֱלֹהֵינוּ, בְּשָׁכְבֵנוּ וּבְקוּמֵנוּ נָשִׂיחַ בְּחֻקֶּיךָ, וְנִשְׂמַח וְנַעֲלוֹז בְּדִבְרֵי תַלְמוּד תּוֹרָתֶךָ וּמִצְוֹתֶיךָ וְחֻקּוֹתֶיךָ לְעוֹלָם וָעֶד, כִּי הֵם חַיֵּינוּ וְאֹרֶךְ יָמֵינוּ, וּבָהֶם נֶהְגֶּה יוֹמָם וָלַיְלָה. וְאַהֲבָתְךָ לֹא תָסוּר מִמֶּנּוּ לְעוֹלָמִים. בָּרוּךְ אַתָּה יְיָ, אוֹהֵב אֶת עַמּוֹ יִשְׂרָאֵל.",
+          "translation": "With everlasting love You have loved the house of Israel, Your people; You have taught us Torah and mitzvot, statutes and laws. Therefore, Adhonay our God, when we lie down and when we rise we will speak of Your statutes, and rejoice and delight in the words of the study of Your Torah, Your mitzvot and Your statutes, forever; for they are our life and the length of our days, and on them we will meditate day and night. May Your love never depart from us. Blessed are You, Adhonay, who loves His people Israel.",
+          "translit": "ʾahăvath 'olam beth yisraʾel 'ammĕkha ʾahavĕta, tora umiṣwoth ḥuqqim umishpaṭim ʾothanu limmadhta. 'al ken Adhonay ʾĕlohenu, bĕshakhĕvenu uvĕqumenu nasiaḥ bĕḥuqqekha, wĕnismaḥ wĕna'ăloz bĕdhivre thalmudh torathekha umiṣwothekha wĕḥuqqothekha lĕ'olam wa'edh, ki hem ḥayyenu wĕʾorekh yamenu, uvahem nehgeh yomam walayla. wĕʾahăvathĕkha loʾ thasur mimmennu lĕ'olamim. barukh ʾatta Adhonay, ʾohev ʾeth 'ammo yisraʾel."
+        },
+        {
+          "type": "text",
+          "id": "shema-line",
+          "hebrew": "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְיָ֥ אֱלֹהֵ֖ינוּ יְיָ֥ ׀ אֶחָֽד׃",
+          "translation": "Hear, O Israel: Adhonay is our God, Adhonay is One.",
+          "translit": "shĕma' yisraʾel Adhonay ʾĕlohenu Adhonay ʾeḥadh."
+        },
+        {
+          "type": "text",
+          "id": "baruch-shem",
+          "hebrew": "[בלחש] בָּרוּךְ שֵׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד.",
+          "translation": "[In a whisper:] Blessed is the name of His glorious kingdom forever and ever.",
+          "translit": "[vlḥsh] barukh shem kĕvodh malkhutho lĕ'olam wa'edh."
+        },
+        {
+          "type": "text",
+          "id": "veahavta",
+          "hebrew": "וְאָ֣הַבְתָּ֔ אֵ֖ת יְיָ֣ אֱלֹהֶ֑יךָ בְּכׇל־לְבָבְךָ֥ וּבְכׇל־נַפְשְׁךָ֖ וּבְכׇל־מְאֹדֶֽךָ׃ וְהָי֞וּ הַדְּבָרִ֣ים הָאֵ֗לֶּה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּךָ֛ הַיּ֖וֹם עַל־לְבָבֶֽךָ׃ וְשִׁנַּנְתָּ֣ם לְבָנֶ֔יךָ וְדִבַּרְתָּ֖ בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשׇׁכְבְּךָ֖ וּבְקוּמֶֽךָ׃ וּקְשַׁרְתָּ֥ם לְא֖וֹת עַל־יָדֶ֑ךָ וְהָי֥וּ לְטֹטָפֹ֖ת בֵּ֥ין עֵינֶֽיךָ׃ וּכְתַבְתָּ֛ם עַל־מְזֻז֥וֹת בֵּיתֶ֖ךָ וּבִשְׁעָרֶֽיךָ׃",
+          "translation": "You shall love Adhonay your God with all your heart, with all your soul, and with all your might. These words that I command you today shall be upon your heart. Teach them diligently to your children, and speak of them when you sit in your house, when you walk on the road, when you lie down, and when you rise. Bind them as a sign on your hand, and let them be as frontlets between your eyes. Write them on the doorposts of your house and on your gates.",
+          "translit": "wĕʾahavta ʾeth Adhonay ʾĕlohekha bĕkhol-lĕvavĕkha uvĕkhol-nafshĕkha uvĕkhol-mĕʾodhekha. wĕhayu haddĕvarim haʾelleh ʾăsher ʾanokhi mĕṣawwĕkha hayyom 'al-lĕvavekha. wĕshinnantam lĕvanekha wĕdhibbarta bam bĕshivtĕkha bĕvethekha uvĕlekhtĕkha vadderekh uvĕshokhbĕkha uvĕqumekha. uqĕshartam lĕʾoth 'al-yadhekha wĕhayu lĕṭoṭafoth ben 'enekha. ukhĕthavtam 'al-mĕzuzoth bethekha uvish'arekha."
+        },
+        {
+          "type": "text",
+          "id": "vehaya",
+          "hebrew": "וְהָיָ֗ה אִם־שָׁמֹ֤עַ תִּשְׁמְעוּ֙ אֶל־מִצְוֺתַ֔י אֲשֶׁ֧ר אָנֹכִ֛י מְצַוֶּ֥ה אֶתְכֶ֖ם הַיּ֑וֹם לְאַהֲבָ֞ה אֶת־יְיָ֤ אֱלֹֽהֵיכֶם֙ וּלְעׇבְד֔וֹ בְּכׇל־לְבַבְכֶ֖ם וּבְכׇל־נַפְשְׁכֶֽם׃ וְנָתַתִּ֧י מְטַֽר־אַרְצְכֶ֛ם בְּעִתּ֖וֹ יוֹרֶ֣ה וּמַלְק֑וֹשׁ וְאָסַפְתָּ֣ דְגָנֶ֔ךָ וְתִירֹֽשְׁךָ֖ וְיִצְהָרֶֽךָ׃ וְנָתַתִּ֛י עֵ֥שֶׂב בְּשָׂדְךָ֖ לִבְהֶמְתֶּ֑ךָ וְאָכַלְתָּ֖ וְשָׂבָֽעְתָּ׃ הִשָּֽׁמְר֣וּ לָכֶ֔ם פֶּ֥ן יִפְתֶּ֖ה לְבַבְכֶ֑ם וְסַרְתֶּ֗ם וַעֲבַדְתֶּם֙ אֱלֹהִ֣ים אֲחֵרִ֔ים וְהִשְׁתַּחֲוִיתֶ֖ם לָהֶֽם׃ וְחָרָ֨ה אַף־יְיָ֜ בָּכֶ֗ם וְעָצַ֤ר אֶת־הַשָּׁמַ֙יִם֙ וְלֹֽא־יִהְיֶ֣ה מָטָ֔ר וְהָ֣אֲדָמָ֔ה לֹ֥א תִתֵּ֖ן אֶת־יְבוּלָ֑הּ וַאֲבַדְתֶּ֣ם מְהֵרָ֗ה מֵעַל֙ הָאָ֣רֶץ הַטֹּבָ֔ה אֲשֶׁ֥ר יְיָ֖ נֹתֵ֥ן לָכֶֽם׃ וְשַׂמְתֶּם֙ אֶת־דְּבָרַ֣י אֵ֔לֶּה עַל־לְבַבְכֶ֖ם וְעַֽל־נַפְשְׁכֶ֑ם וּקְשַׁרְתֶּ֨ם אֹתָ֤ם לְאוֹת֙ עַל־יֶדְכֶ֔ם וְהָי֥וּ לְטוֹטָפֹ֖ת בֵּ֥ין עֵינֵיכֶֽם׃ וְלִמַּדְתֶּ֥ם אֹתָ֛ם אֶת־בְּנֵיכֶ֖ם לְדַבֵּ֣ר בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשׇׁכְבְּךָ֖ וּבְקוּמֶֽךָ׃ וּכְתַבְתָּ֛ם עַל־מְזוּז֥וֹת בֵּיתֶ֖ךָ וּבִשְׁעָרֶֽיךָ׃ לְמַ֨עַן יִרְבּ֤וּ יְמֵיכֶם֙ וִימֵ֣י בְנֵיכֶ֔ם עַ֚ל הָֽאֲדָמָ֔ה אֲשֶׁ֨ר נִשְׁבַּ֧ע יְיָ֛ לַאֲבֹתֵיכֶ֖ם לָתֵ֣ת לָהֶ֑ם כִּימֵ֥י הַשָּׁמַ֖יִם עַל־הָאָֽרֶץ׃",
+          "translation": "And if you diligently obey My commandments that I command you today, to love Adhonay your God and serve Him with all your heart and all your soul, I will give the rain for your land in its season, the early and the late rain, and you will gather your grain, your wine, and your oil. And I will give grass in your field for your cattle, and you will eat and be satisfied. Take care that your heart is not lured away to serve other gods and bow to them, for then Adhonay's anger will burn against you, and He will shut up the heavens so there is no rain and the ground will not yield its produce, and you will quickly perish from the good land that Adhonay is giving you. Set these words of Mine upon your heart and soul, bind them as a sign on your hand, and let them be frontlets between your eyes. Teach them to your children, speaking of them when you sit in your house, when you walk on the road, when you lie down, and when you rise. Write them on the doorposts of your house and on your gates — so that your days and your children's days may be many on the land that Adhonay swore to your ancestors to give them, as long as the heavens are above the earth.",
+          "translit": "wĕhaya ʾim-shamoa' tishmĕ'u ʾel-miṣwothay ʾăsher ʾanokhi mĕṣawweh ʾethkhem hayyom lĕʾahăva ʾeth-Adhonay ʾĕlohekhem ulĕ'ovdho bĕkhol-lĕvavkhem uvĕkhol-nafshĕkhem. wĕnathatti mĕṭar-ʾarṣĕkhem bĕ'itto yoreh umalqosh wĕʾasafta dhĕghanekha wĕthiroshĕkha wĕyiṣharekha. wĕnathatti 'esev bĕsadhĕkha livhemtekha wĕʾakhalta wĕsava'ĕta. hishshamĕru lakhem pen yifteh lĕvavkhem wĕsartem wa'ăvadhtem ʾĕlohim ʾăḥerim wĕhishtaḥăwithem lahem. wĕḥara ʾaf-Adhonay bakhem wĕ'aṣar ʾeth-hashshamayim wĕloʾ-yihyeh maṭar wĕhaʾădhama loʾ thitten ʾeth-yĕvulah waʾăvadhtem mĕhera me'al haʾareṣ haṭṭova ʾăsher Adhonay nothen lakhem. wĕsamtem ʾeth-dhĕvaray ʾelleh 'al-lĕvavkhem wĕ'al-nafshĕkhem uqĕshartem ʾotham lĕʾoth 'al-yedhkhem wĕhayu lĕṭoṭafoth ben 'enekhem. wĕlimmadhtem ʾotham ʾeth-vĕnekhem lĕdhabber bam bĕshivtĕkha bĕvethekha uvĕlekhtĕkha vadderekh uvĕshokhbĕkha uvĕqumekha. ukhĕthavtam 'al-mĕzuzoth bethekha uvish'arekha. lĕma'an yirbu yĕmekhem wime vĕnekhem 'al haʾădhama ʾăsher nishba' Adhonay laʾăvothekhem latheth lahem kime hashshamayim 'al-haʾareṣ."
+        },
+        {
+          "type": "text",
+          "id": "vayomer",
+          "hebrew": "וַיֹּ֥אמֶר יְיָ֖ אֶל־מֹשֶׁ֥ה לֵּאמֹֽר׃ דַּבֵּ֞ר אֶל־בְּנֵ֤י יִשְׂרָאֵל֙ וְאָמַרְתָּ֣ אֲלֵהֶ֔ם וְעָשׂ֨וּ לָהֶ֥ם צִיצִ֛ת עַל־כַּנְפֵ֥י בִגְדֵיהֶ֖ם לְדֹרֹתָ֑ם וְנָ֥תְנ֛וּ עַל־צִיצִ֥ת הַכָּנָ֖ף פְּתִ֥יל תְּכֵֽלֶת׃ וְהָיָ֣ה לָכֶם֮ לְצִיצִת֒ וּרְאִיתֶ֣ם אֹת֗וֹ וּזְכַרְתֶּם֙ אֶת־כׇּל־מִצְוֺ֣ת יְיָ֔ וַעֲשִׂיתֶ֖ם אֹתָ֑ם וְלֹֽא־תָת֜וּרוּ אַחֲרֵ֤י לְבַבְכֶם֙ וְאַחֲרֵ֣י עֵֽינֵיכֶ֔ם אֲשֶׁר־אַתֶּ֥ם זֹנִ֖ים אַחֲרֵיהֶֽם׃ לְמַ֣עַן תִּזְכְּר֔וּ וַעֲשִׂיתֶ֖ם אֶת־כׇּל־מִצְוֺתָ֑י וִהְיִיתֶ֥ם קְדֹשִׁ֖ים לֵאלֹֽהֵיכֶֽם׃ אֲנִ֞י יְיָ֣ אֱלֹֽהֵיכֶ֗ם אֲשֶׁ֨ר הוֹצֵ֤אתִי אֶתְכֶם֙ מֵאֶ֣רֶץ מִצְרַ֔יִם לִהְי֥וֹת לָכֶ֖ם לֵאלֹהִ֑ים אֲנִ֖י יְיָ֥ אֱלֹהֵיכֶֽם׃",
+          "translation": "Adhonay said to Moses: Speak to the children of Israel and tell them to make for themselves fringes on the corners of their garments, throughout their generations, and to put on the fringe of each corner a thread of blue. It shall be a fringe for you to look at and remember all the commandments of Adhonay and do them, and not follow after your own heart and your own eyes, after which you go astray — so that you may remember and do all My commandments, and be holy to your God. I am Adhonay your God, who brought you out of the land of Egypt to be your God; I am Adhonay your God.",
+          "translit": "wayyoʾmer Adhonay ʾel-mosheh leʾmor. dabber ʾel-vĕne yisraʾel wĕʾamarta ʾălehem wĕ'asu lahem ṣiṣīth 'al-khanfe vighdhehem lĕdhorotham wĕnathĕnu 'al-ṣiṣīth hakkanaf pĕthil tĕkheleth. wĕhaya lakhem lĕṣiṣīth urĕʾithem ʾotho uzĕkhartem ʾeth-khol-miṣwoth Adhonay wa'ăsithem ʾotham wĕloʾ-thathuru ʾaḥăre lĕvavkhem wĕʾaḥăre 'enekhem ʾăsher-ʾattem zonim ʾaḥărehem. lĕma'an tizkĕru wa'ăsithem ʾeth-khol-miṣwothay wihyithem qĕdhoshim leʾlohekhem. ʾăni Adhonay ʾĕlohekhem ʾăsher hoṣeʾthi ʾethkhem meʾereṣ miṣrayim lihyoth lakhem leʾlohim ʾăni Adhonay ʾĕlohekhem."
+        },
+        {
+          "type": "text",
+          "id": "emet-veemunah",
+          "hebrew": "אֱמֶת וֶאֱמוּנָה כָּל זֹאת וְקַיָּם עָלֵינוּ, כִּי הוּא יְיָ אֱלֹהֵינוּ וְאֵין זוּלָתוֹ, וַאֲנַחְנוּ יִשְׂרָאֵל עַמּוֹ. הַפּוֹדֵנוּ מִיַּד מְלָכִים, הַגֹּאֲלֵנוּ מַלְכֵּנוּ מִכַּף כָּל עָרִיצִים, הָאֵל הַנִּפְרָע לָנוּ מִצָּרֵינוּ, הַמְשַׁלֵּם גְּמוּל לְכָל אוֹיְבֵי נַפְשֵׁנוּ. הַשָּׂם נַפְשֵׁנוּ בַּחַיִּים, וְלֹא נָתַן לַמּוֹט רַגְלֵנוּ, הַמַּדְרִיכֵנוּ עַל בָּמוֹת אוֹיְבֵינוּ, וַיָּרֶם קַרְנֵנוּ עַל כָּל שׂוֹנְאֵינוּ. הָאֵל הָעֹשֶׂה לָנוּ נְקָמָה בְּפַרְעֹה, בְּאוֹתוֹת וּבְמוֹפְתִים בְּאַדְמַת בְּנֵי חָם. הַמַּכֶּה בְעֶבְרָתוֹ כָּל בְּכוֹרֵי מִצְרָיִם, וַיּוֹצִיא אֶת עַמּוֹ יִשְׂרָאֵל מִתּוֹכָם לְחֵרוּת עוֹלָם. הַמַּעֲבִיר בָּנָיו בֵּין גִּזְרֵי יַם סוּף, וְאֶת רוֹדְפֵיהֶם וְאֶת שׂוֹנְאֵיהֶם בִּתְהוֹמוֹת טִבַּע. רָאוּ בָנִים אֶת גְּבוּרָתוֹ, שִׁבְּחוּ וְהוֹדוּ לִשְׁמוֹ, וּמַלְכוּתוֹ בְרָצוֹן קִבְּלוּ עֲלֵיהֶם. מֹשֶׁה וּבְנֵי יִשְׂרָאֵל לְךָ עָנוּ שִׁירָה בְּשִׂמְחָה רַבָּה, וְאָמְרוּ כֻלָּם: מִי כָמֹכָה בָּאֵלִם יְיָ, מִי כָּמֹכָה נֶאְדָּר בַּקֹּדֶשׁ, נוֹרָא תְהִלֹּת עֹשֵׂה פֶלֶא. מַלְכוּתְךָ יְיָ אֱלֹהֵינוּ רָאוּ בָנֶיךָ עַל הַיָּם, יַחַד כֻּלָּם הוֹדוּ וְהִמְלִיכוּ וְאָמְרוּ: יְיָ יִמְלֹךְ לְעֹלָם וָעֶד. וְנֶאֱמַר: כִּי פָדָה יְיָ אֶת יַעֲקֹב, וּגְאָלוֹ מִיַּד חָזָק מִמֶּנּוּ. בָּרוּךְ אַתָּה יְיָ, גָּאַל יִשְׂרָאֵל.",
+          "translation": "True and certain is all this, and it stands firm for us, that He is Adhonay our God and there is none besides Him, and we are Israel His people — who redeems us from the hand of kings, our King who delivers us from the grasp of all tyrants, the God who exacts payment for us from our foes and repays all who hate our very lives. He who set our soul among the living and did not let our foot slip, who led us upon the high places of our enemies and raised our standing over all who hate us. The God who wrought vengeance for us against Pharaoh, with signs and wonders in the land of the descendants of Ham; who struck all the firstborn of Egypt in His fury and brought His people Israel out from among them to everlasting freedom; who brought His children through the divided Sea of Reeds, while their pursuers and their enemies He sank in the depths. His children saw His might; they praised and thanked His name, and willingly accepted His sovereignty upon themselves. Moses and the children of Israel answered You with song in great joy, and all of them said: \"Who is like You among the mighty, Adhonay? Who is like You, majestic in holiness, awesome in praises, doing wonders?\" Your children saw Your sovereignty at the sea, Your kingship, Adhonay our God; together they all gave thanks and proclaimed You King, and said: \"Adhonay shall reign forever and ever.\" And it is said: \"For Adhonay has ransomed Jacob, and redeemed him from a hand stronger than his own.\" Blessed are You, Adhonay, who redeemed Israel.",
+          "translit": "ʾĕmeth weʾĕmuna kol zoʾth wĕqayyam 'alenu, ki huʾ Adhonay ʾĕlohenu wĕʾen zulatho, waʾănaḥnu yisraʾel 'ammo. happodhenu miyyadh mĕlakhim, haggoʾălenu malkenu mikkaf kol 'ariṣim, haʾel hannifra' lanu miṣṣarenu, hamĕshallem gĕmul lĕkhol ʾoyĕve nafshenu. hassam nafshenu baḥayyim, wĕloʾ nathan lammoṭ raghlenu, hammadhrikhenu 'al bamoth ʾoyĕvenu, wayyarem qarnenu 'al kol sonĕʾenu. haʾel ha'oseh lanu nĕqama bĕfar'oh, bĕʾothoth uvĕmofĕthim bĕʾadhmath bĕne ḥam. hammakkeh vĕ'evratho kol bĕkhore miṣrayīm, wayyoṣiʾ ʾeth 'ammo yisraʾel mittokham lĕḥeruth 'olam. hamma'ăvir banaw ben gizre yam suf, wĕʾeth rodhĕfehem wĕʾeth sonĕʾehem bithhomoth ṭibba'. raʾu vanim ʾeth gĕvuratho, shibbĕḥu wĕhodhu lishmo, umalkhutho vĕraṣon qibbĕlu 'ălehem. mosheh uvĕne yisraʾel lĕkha 'anu shira bĕsimḥa rabba, wĕʾamĕru khullam: mi khamokha baʾelīm Adhonay, mi kamokha neʾdar baqqodhesh, noraʾ thĕhilloth 'oseh feleʾ. malkhuthĕkha Adhonay ʾĕlohenu raʾu vanekha 'al hayyam, yaḥadh kullam hodhu wĕhimlikhu wĕʾamĕru: Adhonay yimlokh lĕ'olam wa'edh. wĕneʾĕmar: ki fadha Adhonay ʾeth ya'ăqov, ughĕʾalo miyyadh ḥazaq mimmennu. barukh ʾatta Adhonay, gaʾal yisraʾel."
+        },
+        {
+          "type": "text",
+          "id": "hashkivenu",
+          "hebrew": "הַשְׁכִּיבֵנוּ אָבִינוּ לְשָׁלוֹם, וְהַעֲמִידֵנוּ מַלְכֵּנוּ לְחַיִּים טוֹבִים וּלְשָׁלוֹם. וּפְרוֹשׂ עָלֵינוּ סֻכַּת שְׁלוֹמֶךָ, וְתַקְּנֵנוּ מַלְכֵּנוּ בְּעֵצָה טוֹבָה מִלְּפָנֶיךָ, וְהוֹשִׁיעֵנוּ מְהֵרָה לְמַעַן שְׁמֶךָ. וְהָגֵן בַּעֲדֵנוּ, וְהָסֵר מֵעָלֵינוּ מַכַּת אוֹיֵב, דֶּבֶר, חֶרֶב, חוֹלִי, צָרָה, רָעָה, רָעָב, וְיָגוֹן, וּמַשְׁחִית, וּמַגֵּפָה. שְׁבוֹר וְהָסֵר הַשָּׂטָן מִלְּפָנֵינוּ וּמֵאַחֲרֵינוּ, וּבְצֵל כְּנָפֶיךָ תַּסְתִּירֵנוּ, וּשְׁמוֹר צֵאתֵנוּ וּבוֹאֵנוּ לְחַיִּים טוֹבִים וּלְשָׁלוֹם מֵעַתָּה וְעַד עוֹלָם. כִּי אֵל שׁוֹמְרֵנוּ וּמַצִּילֵנוּ אָתָּה מִכָּל דָּבָר רָע וּמִפַּחַד לָיְלָה. בָּרוּךְ אַתָּה יְיָ, שׁוֹמֵר אֶת עַמּוֹ יִשְׂרָאֵל לָעַד. אָמֵן.",
+          "translation": "Cause us, our Father, to lie down in peace, and raise us up, our King, to a good life and to peace. Spread over us the shelter of Your peace; guide us with good counsel from before You, and save us swiftly for Your name's sake. Shield us, and remove from us enemy, plague, sword, illness, distress, evil, famine, sorrow, destruction, and calamity. Break and remove the accuser from before us and behind us, and hide us in the shadow of Your wings; guard our going out and our coming in, for a good life and for peace, from now and forever. For You, God, are our guardian and our deliverer from every evil thing and from the terror of the night. Blessed are You, Adhonay, who guards His people Israel forever. Amen.",
+          "translit": "hashkivenu ʾavinu lĕshalom, wĕha'ămidhenu malkenu lĕḥayyim ṭovim ulĕshalom. ufĕros 'alenu sukkath shĕlomekha, wĕthaqqĕnenu malkenu bĕ'eṣa ṭova millĕfanekha, wĕhoshi'enu mĕhera lĕma'an shĕmekha. wĕhaghen ba'ădhenu, wĕhaser me'alenu makkath ʾoyev, dever, ḥerev, ḥoli, ṣara, ra'a, ra'av, wĕyaghon, umashḥith, umaggefa. shĕvor wĕhaser hassaṭan millĕfanenu umeʾaḥărenu, uvĕṣel kĕnafekha tastirenu, ushĕmor ṣeʾthenu uvoʾenu lĕḥayyim ṭovim ulĕshalom me'atta wĕ'adh 'olam. ki ʾel shomĕrenu umaṣṣilenu ʾatta mikkol davar ra' umippaḥadh layĕla. barukh ʾatta Adhonay, shomer ʾeth 'ammo yisraʾel la'adh. ʾamen."
+        }
+      ]
+    },
+    {
+      "id": "amidah",
+      "title": "Amidah",
+      "items": [
+        {
+          "type": "include",
+          "ref": "shared/amidah-weekday",
+          "sectionId": "weekday-amidah",
+          "itemIds": [
+            "amidah-open",
+            "avot",
+            "gevurot-open",
+            "gevurot-season",
+            "gevurot-close",
+            "kedushat-hashem"
+          ]
+        },
+        {
+          "type": "toggle",
+          "id": "amidah-middle",
+          "options": [
+            {
+              "id": "full",
+              "label": "Full Amidah",
+              "items": [
+                {
+                  "type": "include",
+                  "ref": "shared/amidah-weekday",
+                  "sectionId": "weekday-amidah",
+                  "itemIds": [
+                    "daat-open"
+                  ]
+                },
+                {
+                  "type": "expandable",
+                  "id": "daat-havdalah",
+                  "label": "Motzaei Shabbat / Yom Tov — Ata Chonantanu",
+                  "items": [
+                    {
+                      "type": "text",
+                      "id": "daat-havdalah-text",
+                      "hebrew": "אַתָּה חוֹנַנְתָּנוּ יְיָ אֱלֹהֵינוּ מַדָּע וְהַשְׂכֵּל, אַתָּה אָמַרְתָּ לְהַבְדִּיל בֵּין קֹדֶשׁ לְחֹל וּבֵין אוֹר לְחֹשֶׁךְ וּבֵין יִשְׂרָאֵל לָעַמִּים וּבֵין יוֹם הַשְּׁבִיעִי לְשֵׁשֶׁת יְמֵי הַמַּעֲשֶׂה. כְּשֵׁם שֶׁהִבְדַּלְתָּנוּ יְיָ אֱלֹהֵינוּ מֵעַמֵּי הָאֲרָצוֹת וּמִמִּשְׁפְּחוֹת הָאֲדָמָה, כָּךְ פְּדֵנוּ וְהַצִּילֵנוּ מִשָּׂטָן רָע וּמִפֶּגַע רָע וּמִכָּל גְּזֵרוֹת קָשׁוֹת וְרָעוֹת הַמִּתְרַגְּשׁוֹת לָבוֹא בָעוֹלָם.",
+                      "translation": "You have favored us, Adhonay our God, with insight and reason. You said we should distinguish between the holy and the ordinary, between light and darkness, between Israel and the nations, and between the seventh day and the six days of labor. Just as You have set us apart, Adhonay our God, from the nations of the lands and the families of the earth, so redeem us and save us from the evil adversary and from harm, and from all harsh and evil decrees stirring to come into the world.",
+                      "translit": "ʾatta ḥonantanu Adhonay ʾĕlohenu madda' wĕhaskel, ʾatta ʾamarta lĕhavdil ben qodhesh lĕḥol uven ʾor lĕḥoshekh uven yisraʾel la'ammim uven yom hashshĕvi'i lĕshesheth yĕme hamma'ăseh. kĕshem shehivdaltanu Adhonay ʾĕlohenu me'amme haʾăraṣoth umimmishpĕḥoth haʾădhama, kakh pĕdhenu wĕhaṣṣilenu missaṭan ra' umippegha' ra' umikkal gĕzeroth qashoth wĕra'oth hammithraggĕshoth lavoʾ va'olam."
+                    }
+                  ]
+                },
+                {
+                  "type": "include",
+                  "ref": "shared/amidah-weekday",
+                  "sectionId": "weekday-amidah",
+                  "itemIds": [
+                    "daat-close",
+                    "teshuva",
+                    "selicha",
+                    "geula-amidah",
+                    "refuah",
+                    "birkat-hashanim-season",
+                    "birkat-hashanim-close",
+                    "kibbutz-galuyot",
+                    "din",
+                    "birkat-haminim",
+                    "al-hatzaddikim",
+                    "boneh-yerushalayim",
+                    "tzemach-david",
+                    "shomea-tefilah"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "havinenu",
+              "label": "Havinenu",
+              "items": [
+                {
+                  "type": "rubric",
+                  "id": "havinenu-note",
+                  "hebrew": "אומרים הביננו במקום שלש עשרה הברכות האמצעיות",
+                  "translation": "Havinenu is said in place of the middle thirteen blessings."
+                },
+                {
+                  "type": "text",
+                  "id": "havinenu",
+                  "hebrew": "הֲבִינֵנוּ יְיָ אֱלֹהֵינוּ לָדַעַת דְּרָכֶיךָ, וּמוֹל אֶת לְבָבֵנוּ לְיִרְאָתֶךָ. [במוצאי שבת ויום טוב: לְהַבְדִּיל בֵּין קֹדֶשׁ לְחֹל.] תִּסְלַח לָנוּ לִהְיוֹת גְּאוּלִים. וְרַחֲקֵנוּ מִמַּכְאוֹב, וְדַשְּׁנֵנוּ בִּנְאוֹת אַרְצֶךָ, [בימות הגשמים: וְתֵן טַל וּמָטָר,] וּנְפוּצִים מֵאַרְבַּע תְּקַבֵּץ, וְהַתּוֹעִים בְּדַעְתְּךָ יִשָּׁפֵטוּ, וְעַל הָרְשָׁעִים תָּנִיף יָדֶךָ, וְיִשְׂמְחוּ צַדִּיקִים בְּבִנְיַן עִירָךְ וּבְתִקּוּן הֵיכָלָךְ, וּבִצְמִיחַת קֶרֶן לְדָוִד עַבְדָּךְ, וּבַעֲרִיכַת נֵר לְבֶן יִשַׁי מְשִׁיחָךְ. טֶרֶם נִקְרָא וְאַתָּה תַעֲנֶה. בָּרוּךְ אַתָּה יְיָ, שׁוֹמֵעַ תְּפִלָּה.",
+                  "translation": "Grant us understanding, Adhonay our God, to know Your ways, and circumcise our hearts to revere You. [At the close of Shabbat and festivals: to distinguish between the holy and the ordinary.] Forgive us so that we may be redeemed; keep us far from pain, and let us feast on the pastures of Your land, [In the rainy season: and grant dew and rain,] gather our scattered from the four corners of the earth, and let those who stray from Your knowledge be judged; raise Your hand against the wicked, and let the righteous rejoice in the building of Your city, the restoration of Your Sanctuary, the flourishing of an heir for David Your servant, and the setting of a light for the son of Yishai, Your anointed. Before we call, may You answer. Blessed are You, Adhonay, who hears prayer.",
+                  "translit": "hăvinenu Adhonay ʾĕlohenu ladha'ath dĕrakhekha, umol ʾeth lĕvavenu lĕyirʾathekha. [vmwṣʾy shvth wywm ṭwv: lĕhavdil ben qodhesh lĕḥol.] tislaḥ lanu lihyoth gĕʾulim. wĕraḥăqenu mimmakhʾov, wĕdhashshĕnenu binʾoth ʾarṣekha, [vymwth hghshmym: wĕthen ṭal umaṭar,] unĕfuṣim meʾarba' tĕqabbeṣ, wĕhatto'im bĕdha'tĕkha yishshafeṭu, wĕ'al harĕsha'im tanif yadhekha, wĕyismĕḥu ṣaddiqim bĕvinyan 'irakh uvĕthiqqun hekhalakh, uviṣmiḥath qeren lĕdhawīdh 'avdakh, uva'ărikhath ner lĕven yishay mĕshiḥakh. ṭerem niqraʾ wĕʾatta tha'ăneh. barukh ʾatta Adhonay, shomea' tĕfilla."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "include",
+          "ref": "shared/amidah-weekday",
+          "sectionId": "weekday-amidah",
+          "itemIds": [
+            "avodah",
+            "modim",
+            "sim-shalom",
+            "elohai-netzor",
+            "tefilat-rav-note",
+            "tefilat-rav",
+            "oseh-shalom",
+            "yehi-ratzon-mikdash",
+            "yehi-shem"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "Conclusion",
+      "items": [
+        {
+          "type": "text",
+          "id": "psalm-121",
+          "hebrew": "שִׁיר לַמַּעֲלוֹת. אֶשָּׂא עֵינַי אֶל הֶהָרִים, מֵאַיִן יָבֹא עֶזְרִי. עֶזְרִי מֵעִם יְיָ, עֹשֵׂה שָׁמַיִם וָאָרֶץ. אַל יִתֵּן לַמּוֹט רַגְלֶךָ, אַל יָנוּם שֹׁמְרֶךָ. הִנֵּה לֹא יָנוּם וְלֹא יִישָׁן, שׁוֹמֵר יִשְׂרָאֵל. יְיָ שֹׁמְרֶךָ, יְיָ צִלְּךָ עַל יַד יְמִינֶךָ. יוֹמָם הַשֶּׁמֶשׁ לֹא יַכֶּכָּה, וְיָרֵחַ בַּלָּיְלָה. יְיָ יִשְׁמָרְךָ מִכָּל רָע, יִשְׁמֹר אֶת נַפְשֶׁךָ. יְיָ יִשְׁמָר צֵאתְךָ וּבוֹאֶךָ, מֵעַתָּה וְעַד עוֹלָם.",
+          "translation": "A song of ascents. I lift my eyes to the mountains — from where will my help come? My help comes from Adhonay, Maker of heaven and earth. He will not let your foot slip; your guardian does not slumber. Behold, the guardian of Israel neither slumbers nor sleeps. Adhonay is your guardian; Adhonay is your shade at your right hand. The sun will not strike you by day, nor the moon by night. Adhonay will guard you from all evil; He will guard your soul. Adhonay will guard your going out and your coming in, from now and forever.",
+          "translit": "shir lamma'ăloth. ʾessaʾ 'enay ʾel heharim, meʾayīn yavoʾ 'ezri. 'ezri me'īm Adhonay, 'oseh shamayīm waʾareṣ. ʾal yitten lammoṭ raghlekha, ʾal yanum shomĕrekha. hinneh loʾ yanum wĕloʾ yishan, shomer yisraʾel. Adhonay shomĕrekha, Adhonay ṣillĕkha 'al yadh yĕminekha. yomam hashshemesh loʾ yakkekka, wĕyareaḥ ballayĕla. Adhonay yishmarĕkha mikkol ra', yishmor ʾeth nafshekha. Adhonay yishmar ṣeʾthĕkha uvoʾekha, me'atta wĕ'adh 'olam."
+        },
+        {
+          "type": "text",
+          "id": "aleinu",
+          "hebrew": "עָלֵינוּ לְשַׁבֵּחַ לַאֲדוֹן הַכֹּל, לָתֵת גְּדֻלָּה לְיוֹצֵר בְּרֵאשִׁית, שֶׁלֹּא עָשָׂנוּ כְּגוֹיֵי הָאֲרָצוֹת, וְלֹא שָׂמָנוּ כְּמִשְׁפְּחוֹת הָאֲדָמָה, שֶׁלֹּא שָׂם חֶלְקֵנוּ כָּהֶם וְגוֹרָלֵנוּ כְּכָל הֲמוֹנָם, שֶׁהֵם מִשְׁתַּחֲוִים לְהֶבֶל וָרִיק, וּמִתְפַּלְלִים אֶל אֵל לֹא יוֹשִׁיעַ. וַאֲנַחְנוּ מִשְׁתַּחֲוִים לִפְנֵי מֶלֶךְ מַלְכֵי הַמְּלָכִים הַקָּדוֹשׁ בָּרוּךְ הוּא, שֶׁהוּא נוֹטֶה שָׁמַיִם וְיֹסֵד אָרֶץ, וּמוֹשַׁב יְקָרוֹ בַּשָּׁמַיִם מִמַּעַל, וּשְׁכִינַת עֻזּוֹ בְּגָבְהֵי מְרוֹמִים. הוּא אֱלֹהֵינוּ, וְאֵין עוֹד אַחֵר, אֱמֶת מַלְכֵּנוּ וְאֶפֶס זוּלָתוֹ, כַּכָּתוּב בַּתּוֹרָה: וְיָדַעְתָּ הַיּוֹם וַהֲשֵׁבֹתָ אֶל לְבָבֶךָ, כִּי יְיָ הוּא הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל הָאָרֶץ מִתָּחַת, אֵין עוֹד.",
+          "translation": "It is our duty to praise the Master of all, to ascribe greatness to the Author of creation, who has not made us like the nations of the lands nor placed us like the families of the earth; who has not made our portion like theirs, nor our destiny like all their multitude — for they bow to vapor and emptiness, and pray to a god who cannot save. But we bow before the King of kings, the Holy One, blessed be He, who stretches out the heavens and lays the earth's foundations, whose seat of glory is in the heavens above and whose mighty presence is in the loftiest heights. He is our God; there is none else. He is our King in truth, and there is nothing beside Him — as it is written in His Torah: \"You shall know this day and take it to heart, that Adhonay is God in the heavens above and on the earth below; there is none else.\"",
+          "translit": "'alenu lĕshabbeaḥ laʾădhon hakkol, latheth gĕdhulla lĕyoṣer bĕreʾshith, shelloʾ 'asanu kĕghoye haʾăraṣoth, wĕloʾ samanu kĕmishpĕḥoth haʾădhama, shelloʾ sam ḥelqenu kahem wĕghoralenu kĕkhal hămonam, shehem mishtaḥăwim lĕhevel wariq, umithpallim ʾel ʾel loʾ yoshia'. waʾănaḥnu mishtaḥăwim lifne melekh malkhe hammĕlakhim haqqadhosh barukh huʾ, shehuʾ noṭeh shamayīm wĕyosedh ʾareṣ, umoshav yĕqaro bashshamayīm mimma'al, ushĕkhinath 'uzzo bĕghovhe mĕromim. huʾ ʾĕlohenu, wĕʾen 'odh ʾaḥer, ʾĕmeth malkenu wĕʾefes zulatho, kakkathuv battora: wĕyadha'ta hayyom wahăshevotha ʾel lĕvavekha, ki Adhonay huʾ haʾĕlohim bashshamayīm mimma'al wĕ'al haʾareṣ mittaḥath, ʾen 'odh."
+        }
+      ]
+    }
+  ]
+}

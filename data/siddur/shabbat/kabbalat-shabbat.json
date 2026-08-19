@@ -1,0 +1,222 @@
+{
+  "title": "Kabbalat Shabbat",
+  "sections": [
+    {
+      "id": "candle-lighting",
+      "title": "Candle Lighting",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "candle-lighting-a",
+          "hebrew": "א. אחד אנשים ואחד נשים חיבין להיות בבתיהן נר דלוק בשבת (רמב\"ם ה' שבת ה, א).",
+          "translation": "1. Both men and women are obligated to have a lit candle in their homes on Shabbat (Rambam, Laws of Shabbat 5:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "candle-lighting-b",
+          "hebrew": "ב. אף על פי שכיום יש חשמל, אפלו הכי ידליקו נר שבת בברכה (עין בא\"ח ש\"ש נח, ד).",
+          "translation": "2. Even though there is electricity nowadays, one should still light a Shabbat candle with a blessing (see Ben Ish Chai, Year 2, Parashat Noach 4)."
+        },
+        {
+          "type": "rubric",
+          "id": "candle-lighting-c",
+          "hebrew": "ג. אחד האיש ואחד האשה חיבים במצוה זו, אבל נשים מצוות על הדלקת נרות שבת יותר מן האנשים, לפי שהן מצויות בבתים והן העסוקות במלאכת הבית.",
+          "translation": "3. Both the man and the woman are obligated in this mitzvah, but women are enjoined regarding the lighting of Shabbat candles more than men, since they are usually found in the home and are occupied with the housework."
+        },
+        {
+          "type": "rubric",
+          "id": "candle-lighting-d",
+          "hebrew": "ד. טוב שהבעל יעסק בערב שבת בתקון הנרות — בהנחת השמן והפתילות. וכן אנו נוהגים בביתנו לערך ולתקן הנרות בידינו (שם ד).",
+          "translation": "4. It is good for the husband to occupy himself on Friday with preparing the candles — setting the oil and the wicks. And so we are accustomed in our home to arrange and prepare the candles with our own hands (ibid. 4)."
+        },
+        {
+          "type": "rubric",
+          "id": "candle-lighting-e",
+          "hebrew": "ה. צריך להדליק מבעוד יום קדם שקיעת החמה. תחלת זמן ההדלקה הוא מפלג המנחה, אבל קדם זמן זה אינה יכולה להדליק, ומצוה מן המבחר להדליק חצי שעה קדם השקיעה.",
+          "translation": "5. One must light while it is still day, before sunset. The earliest time for lighting is from Plag HaMincha, but before that time one may not light; it is the choicest way to perform the mitzvah to light half an hour before sunset."
+        },
+        {
+          "type": "rubric",
+          "id": "candle-lighting-f",
+          "hebrew": "ו. קדם ההדלקה יש לברך:",
+          "translation": "6. Before lighting, one blesses:"
+        },
+        {
+          "type": "text",
+          "id": "candle-lighting-bracha",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר שֶׁל שַׁבָּת.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has sanctified us with His commandments and commanded us to light the light of Shabbat.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu lĕhadhliq ner shel shabbath."
+        },
+        {
+          "type": "rubric",
+          "id": "candle-lighting-instr",
+          "hebrew": "ואין הדלקה זו משום קבלת שבת.",
+          "translation": "This lighting does not yet constitute the acceptance of Shabbat."
+        },
+        {
+          "type": "rubric",
+          "id": "candle-lighting-commentary",
+          "hebrew": "ראוי לאשה שתתפלל בשעת הדלקת נר של שבת, שיתן לה ה' בנים מאירים בתורה, כי בשעת עשית המצוה התפלה יותר נשמעת, ובזכות נר שבת שהוא אור תזכה לבנים בעלי תורה שנקראת \"אור\", שנאמר: \"כי נר מצוה ותורה אור\". וכן דרשו רז\"ל: הרגיל בנר — הויין ליה בנים תלמידי חכמים (שבת כג:), וכן נוהגות הנשים להתפלל לה' בעת ההדלקה (כף החיים או\"ח רסג, לד).",
+          "translation": "It is fitting for a woman to pray at the time of lighting the Shabbat candle, that Adhonay grant her children who illuminate the world with Torah — for at the time of performing a mitzvah, prayer is heard more readily. And by the merit of the Shabbat candle, which is light, she will merit children who are masters of Torah, which is called \"light,\" as it is said: \"For the mitzvah is a candle, and the Torah is light.\" And so our Sages of blessed memory taught: one who is scrupulous with the candle will have children who are Torah scholars (Shabbat 23b); and so the women are accustomed to pray to Adhonay at the time of lighting (Kaf HaChaim, Orach Chaim 263:34)."
+        },
+        {
+          "type": "text",
+          "id": "candle-lighting-yehi-ratzon",
+          "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתָּחוּס וּתְרַחֵם עָלַי, וְתַגְדִּיל חַסְדְּךָ עִמָּדִי לָתֶת לִי זֶרַע אֲנָשִׁים עוֹשֵׂי רְצוֹנֶךָ וְעוֹסְקִים בְּתוֹרָתְךָ לִשְׁמָהּ, וְיִהְיוּ מְאִירִים בַּתּוֹרָה בִּזְכוּת נֵרוֹת הַשַּׁבָּת הַלָּלוּ, כְּמוֹ שֶׁכָּתוּב: כִּי נֵר מִצְוָה וְתוֹרָה אוֹר. וְגַם תָּחוּס וּתְרַחֵם עַל בַּעְלִי (פְּלוֹנִי בֶּן פְּלוֹנִי), וְתִתֶּן לוֹ אֹרֶךְ יָמִים וּשְׁנוֹת חַיִּים עִם בְּרָכָה וְהַצְלָחָה, וּתְסַיְּעֵהוּ לַעֲשׂוֹת רְצוֹנְךָ בִּשְׁלֵמוּת, כֵּן יְהִי רָצוֹן אָמֵן.",
+          "translation": "May it be Your will, Adhonay my God and God of my ancestors, that You have compassion and mercy upon me, and increase Your kindness toward me, granting me children who do Your will and occupy themselves with Your Torah for its own sake, and that they be illuminated by the Torah through the merit of these Shabbat candles, as it is written: \"For the mitzvah is a candle, and the Torah is light.\" And also have compassion and mercy upon my husband (so-and-so, son of so-and-so), and grant him length of days and years of life with blessing and success, and help him to fulfill Your will in completeness; so may it be Your will, Amen.",
+          "translit": "yĕhi raṣon millĕfanekha Adhonay ʾĕlohay weʾlohe ʾăvothay, shettaḥus uthĕraḥem 'alay, wĕthaghdil ḥasdĕkha 'immadhi latheth li zera' ʾănashim 'ose rĕṣonekha wĕ'osĕqim bĕthorathĕkha lishmah, wĕyihyu mĕʾirim battora bizkhuth neroth hashshabbath hallalu, kĕmo shekkathuv: ki ner miṣwa wĕthora ʾor. wĕgham taḥus uthĕraḥem 'al ba'li (pĕloni ben pĕloni), wĕthitten lo ʾorekh yamim ushĕnoth ḥayyim 'īm bĕrakha wĕhaṣlaḥa, uthĕsayyĕ'ehu la'ăsoth rĕṣonĕkha bishlemuth, ken yĕhi raṣon ʾamen."
+        },
+        {
+          "type": "text",
+          "id": "candle-lighting-yihyu-leratzon",
+          "hebrew": "יִהְיוּ־לְרָצוֹן ׀ אִמְרֵי־פִי וְהֶגְיוֹן לִבִּי לְפָנֶיךָ, יְיָ צוּרִי וְגֹאֲלִי׃",
+          "translation": "May the words of my mouth and the meditation of my heart be acceptable before You, Adhonay, my Rock and my Redeemer. (Psalm 19:15)",
+          "translit": "yihyu-lĕraṣon ʾimre-fi wĕheghyon libbi lĕfanekha, Adhonay ṣuri wĕghoʾăli."
+        }
+      ]
+    },
+    {
+      "id": "kabbalat-shabbat",
+      "title": "Kabbalat Shabbat",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "kabbalat-shabbat-laws-1",
+          "hebrew": "מצוה על אדם לרחץ פניו ידיו ורגליו בחמין בערב שבת מפני כבוד השבת, ומתעטף בציצית ויושב בכבד ראש מיחל להקבלת פני השבת, כמו שהוא יוצא לקראת המלך. וחכמים הראשונים היו מקבצין תלמידיהן בערב שבת, ומתעטפים ואומרים: בואו ונצא לקראת שבת המלך (רמב\"ם הל' שבת ל, ב).",
+          "translation": "It is a mitzvah for a person to wash his face, hands, and feet in hot water on Friday afternoon, out of honor for Shabbat; and he wraps himself in tzitzit and sits with a grave demeanor, awaiting the reception of Shabbat, as one who goes out to meet the king. And the early Sages would gather their disciples on Friday afternoon, and wrap themselves and say: Come, let us go out to meet Shabbat the King (Rambam, Laws of Shabbat 30:2)."
+        },
+        {
+          "type": "rubric",
+          "id": "kabbalat-shabbat-laws-2",
+          "hebrew": "ומכבוד השבת שילבש כסות נקיה, ולא יהיה מלבוש החל כמלבוש השבת. ואם אין לו להחליף, משלשל טליתו כדי שלא יהא מלבושו כמלבוש החל. ועזרא תקן שיהו העם מכבסים בחמישי מפני כבוד השבת (רמב\"ם הל' שבת ל, ג).",
+          "translation": "And out of honor for Shabbat, one should wear clean clothing, and weekday clothing should not be the same as Shabbat clothing. And if one has nothing to change into, he lets down his tallit so that his garment not be like his weekday garment. And Ezra ordained that the people do their laundry on Thursday, out of honor for Shabbat (Rambam, Laws of Shabbat 30:3)."
+        },
+        {
+          "type": "rubric",
+          "id": "havu-ladonai-arizal",
+          "hebrew": "סדר קבלת שבת כפי דברי רבנו האר\"י ז\"ל הוא כך; הנה בתחלה כך הוא אם אפשר לעשות קבלת שבת בשדה — מה טוב, ואם אי־אפשר לעשות קבלת שבת בשדה, טוב יעמוד בקבלת שבת לחצר במקום פנוי ומגלה. ואיך שיהיה הסדר כך; יעמוד האדם לצאת בקבלת שבת כך, ויהפוך צד פניו כנגד מערב ויסגור עיניו, כי יש צרך גדול בסגירת העינים בעת קבלת שבת [ורק אותם בני אדם שמכרחים לומר קבלת שבת מתוך הסדור והם מכרחים לפתוח עיניהם לראות בסדור, אין למחות בידם], וישים יד ימינו על החזה על הצד השמאלית, ויכון ויירא באימה כעומד לפני המלך לקבל תוספת קדשת שבת, ויתחיל לומר מזמור \"הבו לה'\" בני אלים כלו בנעימה (בא\"ח ש\"ש וירא ב).",
+          "translation": "The order of Kabbalat Shabbat, according to the words of our teacher the Ari, of blessed memory, is as follows: at the outset, if it is possible to perform Kabbalat Shabbat out in a field — how good that is; and if it is not possible to perform it in a field, it is good to stand for Kabbalat Shabbat in a courtyard, in an open and uncovered place. In whatever case, the order is as follows: the person stands to go out for Kabbalat Shabbat, turns to face west, and closes his eyes — for there is great need to close the eyes at the time of Kabbalat Shabbat [only those who must recite Kabbalat Shabbat from the siddur, and so must open their eyes to see the text, are not to be stopped from doing so] — and places his right hand on his chest, on the left side, and directs his heart and stands in awe as one standing before the King, to receive the additional holiness of Shabbat, and begins to say the psalm \"Havu LaAdonai,\" O divine beings, all of it in a pleasant melody (Ben Ish Chai, Year 2, Parashat Vayera 2)."
+        },
+        {
+          "type": "subsection",
+          "id": "havu-ladonai",
+          "title": "Havu LaAdonai",
+          "audio": "https://www.learntefillah.com/wp-content/uploads/2020/09/01-Arvit-for-shabbat-Mizmor-LeDavid.mp3",
+          "items": [
+            {
+              "type": "rubric",
+              "id": "havu-ladonai-instr",
+              "hebrew": "עומדים ואומרים:",
+              "translation": "They stand and say:"
+            },
+            {
+              "type": "text",
+              "id": "havu-ladonai-psalm",
+              "hebrew": "מִזְמ֗וֹר לְדָ֫וִ֥ד הָב֣וּ לַ֭יְיָ בְּנֵ֣י אֵלִ֑ים הָב֥וּ לַ֝יְיָ֗ כָּב֥וֹד וָעֹֽז׃ הָב֣וּ לַ֭יְיָ כְּב֣וֹד שְׁמ֑וֹ הִשְׁתַּחֲו֥וּ לַ֝יְיָ֗ בְּהַדְרַת־קֹֽדֶשׁ׃ ק֥וֹל יְיָ֗ עַל־הַ֫מָּ֥יִם אֵֽל־הַכָּב֥וֹד הִרְעִ֑ים יְיָ֝֗ עַל־מַ֥יִם רַבִּֽים׃ קוֹל־יְיָ֥ בַּכֹּ֑חַ ק֥וֹל יְיָ֝֗ בֶּהָדָֽר׃ ק֣וֹל יְיָ֭ שֹׁבֵ֣ר אֲרָזִ֑ים וַיְשַׁבֵּ֥ר יְיָ֝֗ אֶת־אַרְזֵ֥י הַלְּבָנֽוֹן׃ וַיַּרְקִידֵ֥ם כְּמוֹ־עֵ֑גֶל לְבָנ֥וֹן וְ֝שִׂרְיֹ֗ן כְּמ֣וֹ בֶן־רְאֵמִֽים׃ קוֹל־יְיָ֥ חֹצֵ֗ב לַהֲב֥וֹת אֵֽשׁ׃ ק֣וֹל יְיָ֭ יָחִ֣יל מִדְבָּ֑ר יָחִ֥יל יְיָ֝֗ מִדְבַּ֥ר קָדֵֽשׁ׃ ק֤וֹל יְיָ֨ ׀ יְחוֹלֵ֣ל אַיָּלוֹת֮ וַֽיֶּחֱשֹׂ֢ף יְעָ֫ר֥וֹת וּבְהֵיכָל֑וֹ כֻּ֝לּ֗וֹ אֹמֵ֥ר כָּבֽוֹד׃ יְיָ֭ לַמַּבּ֣וּל יָשָׁ֑ב וַיֵּ֥שֶׁב יְיָ֝֗ מֶ֣לֶךְ לְעוֹלָֽם׃ יְיָ֗ עֹ֭ז לְעַמּ֣וֹ יִתֵּ֑ן יְיָ֓ ׀ יְבָרֵ֖ךְ אֶת־עַמּ֣וֹ בַשָּׁלֽוֹם׃",
+              "translation": "A psalm of David. Ascribe to Adhonay, O divine beings, ascribe to Adhonay glory and strength. Ascribe to Adhonay the glory of His name; bow down to Adhonay in the beauty of holiness. The voice of Adhonay is upon the waters; the God of glory thunders — Adhonay is upon many waters. The voice of Adhonay is with power; the voice of Adhonay is with majesty. The voice of Adhonay breaks the cedars; Adhonay shatters the cedars of Lebanon. He makes them skip like a calf, Lebanon and Sirion like a young wild ox. The voice of Adhonay hews out flames of fire. The voice of Adhonay makes the wilderness writhe; Adhonay makes the wilderness of Kadesh writhe. The voice of Adhonay causes the deer to calve, and strips the forests bare; and in His temple all say, \"Glory!\" Adhonay sat enthroned at the Flood; Adhonay sits enthroned as King forever. Adhonay will give strength to His people; Adhonay will bless His people with peace. (Psalm 29)",
+              "translit": "mizmor lĕdhawīdh havu laAdhonay bĕne ʾelim havu laAdhonay kavodh wa'oz. havu laAdhonay kĕvodh shĕmo hishtaḥăwu laAdhonay bĕhadhrath-qodhesh. qol Adhonay 'al-hammayim ʾel-hakkavodh hir'im Adhonay 'al-mayim rabbim. qol-Adhonay bakkoaḥ qol Adhonay behadhar. qol Adhonay shover ʾărazim wayĕshabber Adhonay ʾeth-ʾarze hallĕvanon. wayyarqidhem kĕmo-'eghel lĕvanon wĕsiryon kĕmo ven-rĕʾemim. qol-Adhonay ḥoṣev lahăvoth ʾesh. qol Adhonay yaḥil midhbar yaḥil Adhonay midhbar qadhesh. qol Adhonay yĕḥolel ʾayyaloth wayyeḥĕsof yĕ'aroth uvĕhekhalo kullo ʾomer kavodh. Adhonay lammabbul yashav wayyeshev Adhonay melekh lĕ'olam. Adhonay 'oz lĕ'ammo yitten Adhonay yĕvarekh ʾeth-'ammo vashshalom."
+            }
+          ]
+        },
+        {
+          "type": "subsection",
+          "id": "lecha-dodi",
+          "title": "Lecha Dodi",
+          "audio": "https://www.learntefillah.com/wp-content/uploads/2020/09/02-Arvit-for-shabbat-Lecha-Dodi.mp3",
+          "items": [
+            {
+              "type": "text",
+              "id": "lecha-dodi-refrain",
+              "hebrew": "לְכָה דוֹדִי לִקְרַאת כַּלָּה, פְּנֵי שַׁבָּת נְקַבְּלָה:",
+              "translation": "Come, my beloved, to meet the bride; let us welcome the presence of Shabbat.",
+              "translit": "lĕkha dhodhi liqraʾth kalla, pĕne shabbath nĕqabbĕla:"
+            },
+            {
+              "type": "text",
+              "id": "lecha-dodi-1",
+              "hebrew": "שָׁמוֹר וְזָכוֹר בְּדִבּוּר אֶחָד, הִשְׁמִיעָנוּ אֵל הַמְּיֻחָד, יְיָ אֶחָד וּשְׁמוֹ אֶחָד, לְשֵׁם וּלְתִפְאֶרֶת וְלִתְהִלָּה:",
+              "translation": "\"Observe\" and \"Remember\" in a single utterance — the unique God caused us to hear; Adhonay is One and His name is One, for renown, for glory, and for praise.",
+              "translit": "shamor wĕzakhor bĕdhibbur ʾeḥadh, hishmi'anu ʾel hammĕyuḥadh, Adhonay ʾeḥadh ushĕmo ʾeḥadh, lĕshem ulĕthifʾereth wĕlithhilla:"
+            },
+            {
+              "type": "text",
+              "id": "lecha-dodi-2",
+              "hebrew": "לִקְרַאת שַׁבָּת לְכוּ וְנֵלְכָה, כִּי הִיא מְקוֹר הַבְּרָכָה, מֵרֹאשׁ מִקֶּדֶם נְסוּכָה, סוֹף מַעֲשֶׂה בְּמַחֲשָׁבָה תְּחִלָּה:",
+              "translation": "To welcome Shabbat, come, let us go, for she is the source of blessing; from the very beginning she was ordained — last in creation, first in thought.",
+              "translit": "liqraʾth shabbath lĕkhu wĕnelĕkha, ki hiʾ mĕqor habbĕrakha, meroʾsh miqqedhem nĕsukha, sof ma'ăseh bĕmaḥăshava tĕḥilla:"
+            },
+            {
+              "type": "text",
+              "id": "lecha-dodi-3",
+              "hebrew": "מִקְדַּשׁ מֶלֶךְ עִיר מְלוּכָה, קוּמִי צְאִי מִתּוֹךְ הַהֲפֵכָה, רַב לָךְ שֶׁבֶת בְּעֵמֶק הַבָּכָא, וְהוּא יַחְמוֹל עָלַיִךְ חֶמְלָה:",
+              "translation": "Sanctuary of the King, royal city, arise, go forth from the midst of the upheaval; long enough have you dwelt in the valley of weeping — He will show you abounding compassion.",
+              "translit": "miqdash melekh 'ir mĕlukha, qumi ṣĕʾi mittokh hahăfekha, rav lakh sheveth bĕ'emeq habbakhaʾ, wĕhuʾ yaḥmol 'alayīkh ḥemla:"
+            },
+            {
+              "type": "text",
+              "id": "lecha-dodi-4",
+              "hebrew": "הִתְעוֹרְרִי הִתְעוֹרְרִי, כִּי בָא אוֹרֵךְ קוּמִי אוֹרִי, עוּרִי עוּרִי שִׁיר דַּבֵּרִי, כְּבוֹד יְיָ עָלַיִךְ נִגְלָה:",
+              "translation": "Awake, awake, for your light has come; arise, shine! Awake, awake, utter a song; the glory of Adhonay is revealed upon you.",
+              "translit": "hith'orĕri hith'orĕri, ki vaʾ ʾorekh qumi ʾori, 'uri 'uri shir dabberi, kĕvodh Adhonay 'alayīkh nighla:"
+            },
+            {
+              "type": "text",
+              "id": "lecha-dodi-5",
+              "hebrew": "בֹּאִי בְשָׁלוֹם עֲטֶרֶת בַּעְלָהּ, גַּם בְּשִׂמְחָה בְּרִנָּה וּבְצָהֳלָה, תּוֹךְ אֱמוּנֵי עַם סְגֻלָּה:",
+              "translation": "Come in peace, crown of her husband, in joy and in jubilation and gladness, among the faithful of the treasured people.",
+              "translit": "boʾi vĕshalom 'ăṭereth ba'lah, gam bĕsimḥa bĕrinna uvĕṣohŏla, tokh ʾĕmune 'am sĕghulla:"
+            },
+            {
+              "type": "rubric",
+              "id": "lecha-dodi-instr-loud",
+              "hebrew": "ויאמר בקול:",
+              "translation": "And one says aloud:"
+            },
+            {
+              "type": "text",
+              "id": "lecha-dodi-boi-kallah-right",
+              "hebrew": "בֹּאִי כַלָּה (יִפְנֶה לְצַד יָמִין)",
+              "translation": "Come, O bride (turn to the right).",
+              "translit": "boʾi khalla (turn to the right)"
+            },
+            {
+              "type": "text",
+              "id": "lecha-dodi-boi-kallah-left",
+              "hebrew": "בֹּאִי כַלָּה (יִפְנֶה לְצַד שְׂמֹאל)",
+              "translation": "Come, O bride (turn to the left).",
+              "translit": "boʾi khalla (turn to the left)"
+            },
+            {
+              "type": "rubric",
+              "id": "lecha-dodi-instr-third",
+              "hebrew": "כשיאמר \"באי כלה\" פעם שלישית, יכון לקבל תוספת הנפש, ויאמר בלחש:",
+              "translation": "When saying \"Come, O bride\" the third time, one should have intention to receive the additional soul [of Shabbat], and say quietly:"
+            },
+            {
+              "type": "text",
+              "id": "lecha-dodi-boi-kallah-third",
+              "hebrew": "בֹּאִי כַלָּה, שַׁבָּת מַלְכְּתָא:",
+              "translation": "Come, O bride, Shabbat the queen.",
+              "translit": "boʾi khalla, shabbath malkĕthaʾ:"
+            }
+          ]
+        },
+        {
+          "type": "subsection",
+          "id": "mizmor-shabbat",
+          "title": "Mizmor Shir LeYom HaShabbat",
+          "items": [
+            {
+              "type": "text",
+              "id": "mizmor-shabbat-psalm",
+              "hebrew": "מִזְמ֥וֹר שִׁ֗יר לְי֣וֹם הַשַּׁבָּֽת׃ ט֗וֹב לְהֹד֥וֹת לַיְיָ֑ וּלְזַמֵּ֖ר לְשִׁמְךָ֣ עֶלְיֽוֹן׃ לְהַגִּ֣יד בַּבֹּ֣קֶר חַסְדֶּ֑ךָ וֶ֝אֱמ֥וּנָתְךָ֗ בַּלֵּילֽוֹת׃ עֲֽלֵי־עָ֭שׂוֹר וַעֲלֵי־נָ֑בֶל עֲלֵ֖י הִגָּי֣וֹן בְּכִנּֽוֹר׃ כִּ֤י שִׂמַּחְתַּ֣נִי יְיָ֣ בְּפׇעֳלֶ֑ךָ בְּֽמַעֲשֵׂ֖י יָדֶ֣יךָ אֲרַנֵּֽן׃ מַה־גָּדְל֣וּ מַעֲשֶׂ֣יךָ יְיָ֑ מְ֝אֹ֗ד עָמְק֥וּ מַחְשְׁבֹתֶֽיךָ׃ אִֽישׁ־בַּ֭עַר לֹ֣א יֵדָ֑ע וּ֝כְסִ֗יל לֹא־יָבִ֥ין אֶת־זֹֽאת׃ בִּפְרֹ֤חַ רְשָׁעִ֨ים ׀ כְּמ֥וֹ־עֵ֗שֶׂב וַ֭יָּצִיצוּ כׇּל־פֹּ֣עֲלֵי אָ֑וֶן לְהִשָּׁמְדָ֥ם עֲדֵי־עַֽד׃ וְאַתָּ֥ה מָר֗וֹם לְעֹלָ֥ם יְיָ׃ כִּ֤י הִנֵּ֪ה אֹיְבֶ֡יךָ יְיָ֗ כִּֽי־הִנֵּ֣ה אֹיְבֶ֣יךָ יֹאבֵ֑דוּ יִ֝תְפָּרְד֗וּ כׇּל־פֹּ֥עֲלֵי אָֽוֶן׃ וַתָּ֣רֶם כִּרְאֵ֣ים קַרְנִ֑י בַּ֝לֹּתִ֗י בְּשֶׁ֣מֶן רַעֲנָֽן׃ וַתַּבֵּ֥ט עֵינִ֗י בְּשׁ֫וּרָ֥י בַּקָּמִ֖ים עָלַ֥י מְרֵעִ֗ים תִּשְׁמַ֥עְנָה אׇזְנָֽי׃ צַ֭דִּיק כַּתָּמָ֣ר יִפְרָ֑ח כְּאֶ֖רֶז בַּלְּבָנ֣וֹן יִשְׂגֶּֽה׃ שְׁ֭תוּלִים בְּבֵ֣ית יְיָ֑ בְּחַצְר֖וֹת אֱלֹהֵ֣ינוּ יַפְרִֽיחוּ׃ ע֭וֹד יְנוּב֣וּן בְּשֵׂיבָ֑ה דְּשֵׁנִ֖ים וְֽרַעֲנַנִּ֣ים יִהְיֽוּ׃ לְ֭הַגִּיד כִּֽי־יָשָׁ֣ר יְיָ֑ צ֝וּרִ֗י וְֽלֹא־עַוְלָ֥תָה בּֽוֹ׃",
+              "translation": "A psalm, a song for the Sabbath day. It is good to give thanks to Adhonay, and to sing praises to Your name, Most High — to declare Your kindness in the morning, and Your faithfulness in the nights, upon the ten-stringed instrument and upon the lute, upon the murmuring sound of the harp. For You, Adhonay, have made me glad through Your work; I sing for joy at the works of Your hands. How great are Your works, Adhonay; how very deep are Your thoughts. A boorish man cannot know, nor can a fool understand this: though the wicked spring up like grass, and all who do iniquity flourish, it is that they may be destroyed forever. But You, Adhonay, are exalted forevermore. For behold, Your enemies, Adhonay — for behold, Your enemies shall perish; all who do iniquity shall be scattered. But my horn You have exalted like that of a wild ox; I am anointed with fresh oil. My eye has gazed upon my watchful foes; my ears have heard of the evildoers who rise against me. The righteous shall flourish like a palm tree; he shall grow tall like a cedar in Lebanon. Planted in the house of Adhonay, they shall flourish in the courts of our God. They shall still bear fruit in old age; they shall be full of sap and freshness, to declare that Adhonay is upright; He is my Rock, and there is no injustice in Him. (Psalm 92)",
+              "translit": "mizmor shir lĕyom hashshabbath. ṭov lĕhodhoth laAdhonay ulĕzammer lĕshimkha 'elyon. lĕhaggidh babboqer ḥasdekha weʾĕmunathĕkha balleloth. 'ăle-'asor wa'ăle-navel 'ăle higgayon bĕkhinnor. ki simmaḥtani Adhonay bĕfo'ŏlekha bĕma'ăse yadhekha ʾărannen. mah-ghodhlu ma'ăsekha Adhonay mĕʾodh 'amĕqu maḥshĕvothekha. ʾish-va'ar loʾ yedha' ukhĕsil loʾ-yavin ʾeth-zoʾth. bifroaḥ rĕsha'im kĕmo-'esev wayyaṣiṣu kol-fo'ăle ʾawen lĕhishshamĕdham 'ădhe-'adh. wĕʾatta marom lĕ'olam Adhonay. ki hinneh ʾoyĕvekha Adhonay ki-hinneh ʾoyĕvekha yoʾvedhu yithparĕdhu kol-fo'ăle ʾawen. wattarem kirʾem qarni ballothi bĕshemen ra'ănan. wattabbeṭ 'eni bĕshuray baqqamim 'alay mĕre'im tishma'na ʾoznay. ṣaddiq kattamar yifraḥ kĕʾerez ballĕvanon yisgeh. shĕthulim bĕveth Adhonay bĕḥaṣroth ʾĕlohenu yafriḥu. 'odh yĕnuvun bĕseva dĕshenim wĕra'ănannim yihyu. lĕhaggidh ki-yashar Adhonay ṣuri wĕloʾ-'awlatha bo."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

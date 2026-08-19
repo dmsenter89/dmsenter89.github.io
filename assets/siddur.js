@@ -56,7 +56,7 @@
     });
   }
   function saveDisplayState() {
-    var active = ['show-hebrew', 'show-translit', 'show-translation'].filter(function (c) {
+    var active = ['show-hebrew', 'show-translit', 'show-translation', 'show-aliyot'].filter(function (c) {
       return html.classList.contains(c);
     });
     try { localStorage.setItem('siddur-display', active.join(',')); } catch (e) {}

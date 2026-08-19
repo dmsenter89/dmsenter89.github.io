@@ -287,12 +287,12 @@
         [
           "ָיו",
           "Qamats + Yod + Vav (3ms suffix)",
-          "ayw"
+          "aw"
         ]
       ]
     }
   ],
-  "note": "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs.",
+  "note": "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adhonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs.",
   "pronunciation": [
     {
       "hebrew": "א",

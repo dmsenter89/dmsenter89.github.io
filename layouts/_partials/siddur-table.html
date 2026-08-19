@@ -1,6 +1,7 @@
 {{- /* Renders one reference table. Params: dict with id, title, headers
-       ([]string), rows ([][]string), and optional hebrewColumn (bool) --
-       when true, each row's first cell is styled/marked as Hebrew. */ -}}
+       ([]string), rows ([][]string), and optional hebrewColumn -- `true`
+       styles/marks just each row's first cell as Hebrew, `"all"` does the
+       same for every cell (for tables where every column is Hebrew text). */ -}}
 <section class="siddur-table-section" id="{{ .id }}">
   <h2>{{ .title }}</h2>
   <div class="siddur-table-wrap">
@@ -15,7 +16,7 @@
         {{- range .rows }}
         <tr>
           {{- range $i, $cell := . }}
-          {{- if and (eq $i 0) $hebrewColumn }}
+          {{- if or (eq $hebrewColumn "all") (and (eq $i 0) $hebrewColumn) }}
           <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ $cell | safeHTML }}</td>
           {{- else }}
           <td>{{ $cell | safeHTML }}</td>

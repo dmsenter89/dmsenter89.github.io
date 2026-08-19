@@ -1,0 +1,199 @@
+{
+  "title": "Minha",
+  "sections": [
+    {
+      "id": "ashrei",
+      "title": "Ashrei",
+      "items": [
+        {
+          "type": "text",
+          "id": "ashrei-intro",
+          "hebrew": "וְה֤וּא רַח֨וּם ׀ יְכַפֵּ֥ר עָוֺן֮ וְֽלֹא־יַֽ֫שְׁחִ֥ית וְ֭הִרְבָּה לְהָשִׁ֣יב אַפּ֑וֹ וְלֹא־יָ֝עִ֗יר כׇּל־חֲמָתֽוֹ׃ יְיָ֥ הוֹשִׁ֑יעָה הַ֝מֶּ֗לֶךְ יַעֲנֵ֥נוּ בְיוֹם־קׇרְאֵֽנוּ׃ יְיָ֣ צְבָא֣וֹת עִמָּ֑נוּ מִשְׂגָּֽב־לָ֨נוּ אֱלֹהֵ֖י יַעֲקֹ֣ב סֶֽלָה׃ יְיָ֥ צְבָא֑וֹת אַֽשְׁרֵ֥י אָ֝דָ֗ם בֹּטֵ֥חַ בָּֽךְ׃ אַ֭שְׁרֵי יוֹשְׁבֵ֣י בֵיתֶ֑ךָ ע֝֗וֹד יְֽהַלְל֥וּךָ סֶּֽלָה׃ אַשְׁרֵ֣י הָ֭עָם שֶׁכָּ֣כָה לּ֑וֹ אַֽשְׁרֵ֥י הָ֝עָ֗ם שֱׁיְיָ֥ אֱלֹהָֽיו׃",
+          "translation": "But He, being merciful, forgives iniquity and does not destroy; often He turns His anger away, and does not stir up all His wrath. Adhonay, save us; may the King answer us on the day we call. Adhonay of hosts is with us; the God of Jacob is our stronghold, Selah. Adhonay of hosts, happy is the one who trusts in You. Happy are those who dwell in Your house; they will always be praising You, Selah. Happy is the people for whom this is so; happy is the people whose God is Adhonay.",
+          "translit": "wĕhuʾ raḥum yĕkhapper 'awon wĕloʾ-yashĕḥith wĕhirba lĕhashiv ʾappo wĕloʾ-ya'ir kol-ḥămatho. Adhonay hoshi'a hammelekh ya'ănenu vĕyom-qorʾenu. Adhonay ṣĕvaʾoth 'immanu misgav-lanu ʾĕlohe ya'ăqov sela. Adhonay ṣĕvaʾoth ʾashĕre ʾadham boṭeaḥ bakh. ʾashre yoshĕve vethekha 'odh yĕhalĕlukha sela. ʾashre ha'am shekkakha lo ʾashĕre ha'am shĕAdhonay ʾĕlohaw."
+        },
+        {
+          "type": "text",
+          "id": "tehillah-ledavid",
+          "hebrew": "תְּהִלָּ֗ה לְדָ֫וִ֥ד אֲרוֹמִמְךָ֣ אֱלוֹהַ֣י הַמֶּ֑לֶךְ וַאֲבָרְכָ֥ה שִׁ֝מְךָ֗ לְעוֹלָ֥ם וָעֶֽד׃ בְּכׇל־י֥וֹם אֲבָרְכֶ֑ךָּ וַאֲהַלְלָ֥ה שִׁ֝מְךָ֗ לְעוֹלָ֥ם וָעֶֽד׃ גָּ֘ד֤וֹל יְיָ֣ וּמְהֻלָּ֣ל מְאֹ֑ד וְ֝לִגְדֻלָּת֗וֹ אֵ֣ין חֵֽקֶר׃ דּ֣וֹר לְ֭דוֹר יְשַׁבַּ֣ח מַעֲשֶׂ֑יךָ וּגְב֖וּרֹתֶ֣יךָ יַגִּֽידוּ׃ הֲ֭דַר כְּב֣וֹד הוֹדֶ֑ךָ וְדִבְרֵ֖י נִפְלְאֹתֶ֣יךָ אָשִֽׂיחָה׃ וֶעֱז֣וּז נֽוֹרְאֹתֶ֣יךָ יֹאמֵ֑רוּ וּגְדֻלָּתְךָ֥ אֲסַפְּרֶֽנָּה׃ זֵ֣כֶר רַב־טוּבְךָ֣ יַבִּ֑יעוּ וְצִדְקָתְךָ֥ יְרַנֵּֽנוּ׃ חַנּ֣וּן וְרַח֣וּם יְיָ֑ אֶ֥רֶךְ אַ֝פַּ֗יִם וּגְדׇל־חָֽסֶד׃ טוֹב־יְיָ֥ לַכֹּ֑ל וְ֝רַחֲמָ֗יו עַל־כׇּל־מַעֲשָֽׂיו׃ יוֹד֣וּךָ יְיָ֭ כׇּל־מַעֲשֶׂ֑יךָ וַ֝חֲסִידֶ֗יךָ יְבָרְכֽוּכָה׃ כְּב֣וֹד מַלְכוּתְךָ֣ יֹאמֵ֑רוּ וּגְבוּרָתְךָ֥ יְדַבֵּֽרוּ׃ לְהוֹדִ֤יעַ ׀ לִבְנֵ֣י הָ֭אָדָם גְּבוּרֹתָ֑יו וּ֝כְב֗וֹד הֲדַ֣ר מַלְכוּתֽוֹ׃ מַֽלְכוּתְךָ֗ מַלְכ֥וּת כׇּל־עֹלָמִ֑ים וּ֝מֶֽמְשַׁלְתְּךָ֗ בְּכׇל־דּ֥וֹר וָדֹֽר׃ סוֹמֵ֣ךְ יְיָ֭ לְכׇל־הַנֹּפְלִ֑ים וְ֝זוֹקֵ֗ף לְכׇל־הַכְּפוּפִֽים׃ עֵֽינֵי־כֹ֭ל אֵלֶ֣יךָ יְשַׂבֵּ֑רוּ וְאַתָּ֤ה נֽוֹתֵן־לָהֶ֖ם אֶת־אׇכְלָ֣ם בְּעִתּֽוֹ׃ פּוֹתֵ֥חַ אֶת־יָדֶ֑ךָ וּמַשְׂבִּ֖יעַ לְכׇל־חַ֣י רָצֽוֹן׃ צַדִּ֣יק יְיָ֭ בְּכׇל־דְּרָכָ֑יו וְ֝חָסִ֗יד בְּכׇל־מַעֲשָֽׂיו׃ קָר֣וֹב יְיָ֭ לְכׇל־קֹרְאָ֑יו לְכֹ֤ל אֲשֶׁ֖ר יִקְרָאֻ֣הוּ בֶאֱמֶֽת׃ רְצוֹן־יְרֵאָ֥יו יַעֲשֶׂ֑ה וְֽאֶת־שַׁוְעָתָ֥ם יִ֝שְׁמַ֗ע וְיוֹשִׁיעֵֽם׃ שׁוֹמֵ֣ר יְיָ֭ אֶת־כׇּל־אֹהֲבָ֑יו וְאֵ֖ת כׇּל־הָרְשָׁעִ֣ים יַשְׁמִֽיד׃ תְּהִלַּ֥ת יְיָ֗ יְֽדַבֶּ֫ר־פִּ֥י וִיבָרֵ֣ךְ כׇּל־בָּ֭שָׂר שֵׁ֥ם קׇדְשׁ֗וֹ לְעוֹלָ֥ם וָעֶֽד׃",
+          "translation": "A psalm of praise; of David. I will exalt You, my God the King, and bless Your name forever and ever. Every day I will bless You, and praise Your name forever and ever. Great is Adhonay and greatly to be praised; His greatness is unsearchable. One generation shall praise Your works to another, and shall declare Your mighty acts. I will speak of the glorious splendor of Your majesty, and of Your wondrous works. They shall speak of the might of Your awesome deeds, and I will recount Your greatness. They shall utter the fame of Your great goodness, and shall sing joyfully of Your righteousness. Adhonay is gracious and compassionate, slow to anger and great in kindness. Adhonay is good to all, and His mercies are over all His works. All Your works shall thank You, Adhonay, and Your faithful ones shall bless You. They shall speak of the glory of Your kingdom, and talk of Your might, to make known to mortals His mighty acts, and the glorious splendor of His kingdom. Your kingdom is an everlasting kingdom, and Your dominion endures throughout all generations. Adhonay upholds all who fall, and raises up all who are bowed down. The eyes of all look to You, and You give them their food in due season. You open Your hand, and satisfy the desire of every living thing. Adhonay is righteous in all His ways, and gracious in all His works. Adhonay is near to all who call upon Him, to all who call upon Him in truth. He fulfills the desire of those who revere Him; He also hears their cry and saves them. Adhonay preserves all who love Him, but all the wicked He will destroy. My mouth shall speak the praise of Adhonay, and let all flesh bless His holy name forever and ever.",
+          "translit": "tĕhilla lĕdhawīdh ʾăromimkha ʾĕlohay hammelekh waʾăvarĕkha shimkha lĕ'olam wa'edh. bĕkhol-yom ʾăvarĕkhekka waʾăhalĕla shimkha lĕ'olam wa'edh. gadhol Adhonay umĕhullal mĕʾodh wĕlighdhullatho ʾen ḥeqer. dor lĕdhor yĕshabbaḥ ma'ăsekha ughĕvurothekha yaggidhu. hădhar kĕvodh hodhekha wĕdhivre niflĕʾothekha ʾasiḥa. we'ĕzuz norĕʾothekha yoʾmeru ughĕdhullathĕkha ʾăsappĕrenna. zekher rav-ṭwvĕkha yabbi'u wĕṣidhqathĕkha yĕrannenu. ḥannun wĕraḥum Adhonay ʾerekh ʾappayim ughĕdhol-ḥasedh. ṭov-Adhonay lakkol wĕraḥămaw 'al-khol-ma'ăsaw. yodhukha Adhonay kol-ma'ăsekha waḥăsidhekha yĕvarĕkhukha. kĕvodh malkhuthĕkha yoʾmeru ughĕvurathĕkha yĕdhabberu. lĕhodhia' livne haʾadham gĕvurothaw ukhĕvodh hădhar malkhutho. malĕkhuthĕkha malkhuth kol-'olamim umemĕshaltĕkha bĕkhol-dhor wadhor. somekh Adhonay lĕkhol-hannofĕlim wĕzoqef lĕkhol-hakkĕfufim. 'ene-khol ʾelekha yĕsabberu wĕʾatta nothen-lahem ʾeth-ʾokhlam bĕ'itto. potheaḥ ʾeth-yadhekha umasbia' lĕkhol-ḥay raṣon. ṣaddiq Adhonay bĕkhol-dhĕrakhaw wĕḥasidh bĕkhol-ma'ăsaw. qarov Adhonay lĕkhol-qorĕʾaw lĕkhol ʾăsher yiqraʾūhu veʾĕmeth. rĕṣon-yĕreʾaw ya'ăseh wĕʾeth-shaw'atham yishma' wĕyoshi'em. shomer Adhonay ʾeth-khol-ʾohăvaw wĕʾeth kol-harĕsha'im yashmidh. tĕhillath Adhonay yĕdhabber-fi wivarekh kol-vasar shem qodhsho lĕ'olam wa'edh."
+        }
+      ]
+    },
+    {
+      "id": "amidah",
+      "title": "Amidah",
+      "items": [
+        {
+          "type": "include",
+          "ref": "shared/amidah-weekday",
+          "sectionId": "weekday-amidah",
+          "itemIds": [
+            "amidah-open",
+            "avot",
+            "gevurot-open",
+            "gevurot-season",
+            "gevurot-close",
+            "kedushat-hashem"
+          ]
+        },
+        {
+          "type": "toggle",
+          "id": "amidah-middle",
+          "options": [
+            {
+              "id": "full",
+              "label": "Full Amidah",
+              "items": [
+                {
+                  "type": "include",
+                  "ref": "shared/amidah-weekday",
+                  "sectionId": "weekday-amidah",
+                  "itemIds": [
+                    "daat-open",
+                    "daat-close",
+                    "teshuva",
+                    "selicha",
+                    "geula-amidah",
+                    "refuah",
+                    "birkat-hashanim-season",
+                    "birkat-hashanim-close",
+                    "kibbutz-galuyot",
+                    "din",
+                    "birkat-haminim",
+                    "al-hatzaddikim",
+                    "boneh-yerushalayim",
+                    "tzemach-david",
+                    "shomea-tefilah"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "havinenu",
+              "label": "Havinenu",
+              "items": [
+                {
+                  "type": "rubric",
+                  "id": "havinenu-note",
+                  "hebrew": "אומרים הביננו במקום שלש עשרה הברכות האמצעיות",
+                  "translation": "Havinenu is said in place of the middle thirteen blessings."
+                },
+                {
+                  "type": "text",
+                  "id": "havinenu",
+                  "hebrew": "הֲבִינֵנוּ יְיָ אֱלֹהֵינוּ לָדַעַת דְּרָכֶיךָ, וּמוֹל אֶת לְבָבֵנוּ לְיִרְאָתֶךָ. תִּסְלַח לָנוּ לִהְיוֹת גְּאוּלִים. וְרַחֲקֵנוּ מִמַּכְאוֹב, וְדַשְּׁנֵנוּ בִּנְאוֹת אַרְצֶךָ, [בימות הגשמים: וְתֵן טַל וּמָטָר,] וּנְפוּצִים מֵאַרְבַּע תְּקַבֵּץ, וְהַתּוֹעִים בְּדַעְתְּךָ יִשָּׁפֵטוּ, וְעַל הָרְשָׁעִים תָּנִיף יָדֶךָ, וְיִשְׂמְחוּ צַדִּיקִים בְּבִנְיַן עִירָךְ וּבְתִקּוּן הֵיכָלָךְ, וּבִצְמִיחַת קֶרֶן לְדָוִד עַבְדָּךְ, וּבַעֲרִיכַת נֵר לְבֶן יִשַׁי מְשִׁיחָךְ. טֶרֶם נִקְרָא וְאַתָּה תַעֲנֶה. בָּרוּךְ אַתָּה יְיָ, שׁוֹמֵעַ תְּפִלָּה.",
+                  "translation": "Grant us understanding, Adhonay our God, to know Your ways, and circumcise our hearts to revere You. Forgive us so that we may be redeemed; keep us far from pain, and let us feast on the pastures of Your land, [In the rainy season: and grant dew and rain,] gather our scattered from the four corners of the earth, and let those who stray from Your knowledge be judged; raise Your hand against the wicked, and let the righteous rejoice in the building of Your city, the restoration of Your Sanctuary, the flourishing of an heir for David Your servant, and the setting of a light for the son of Yishai, Your anointed. Before we call, may You answer. Blessed are You, Adhonay, who hears prayer.",
+                  "translit": "hăvinenu Adhonay ʾĕlohenu ladha'ath dĕrakhekha, umol ʾeth lĕvavenu lĕyirʾathekha. tislaḥ lanu lihyoth gĕʾulim. wĕraḥăqenu mimmakhʾov, wĕdhashshĕnenu binʾoth ʾarṣekha, [vymwth hghshmym: wĕthen ṭal umaṭar,] unĕfuṣim meʾarba' tĕqabbeṣ, wĕhatto'im bĕdha'tĕkha yishshafeṭu, wĕ'al harĕsha'im tanif yadhekha, wĕyismĕḥu ṣaddiqim bĕvinyan 'irakh uvĕthiqqun hekhalakh, uviṣmiḥath qeren lĕdhawīdh 'avdakh, uva'ărikhath ner lĕven yishay mĕshiḥakh. ṭerem niqraʾ wĕʾatta tha'ăneh. barukh ʾatta Adhonay, shomea' tĕfilla."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "include",
+          "ref": "shared/amidah-weekday",
+          "sectionId": "weekday-amidah",
+          "itemIds": [
+            "avodah",
+            "modim",
+            "sim-shalom",
+            "elohai-netzor",
+            "tefilat-rav-note",
+            "tefilat-rav",
+            "oseh-shalom",
+            "yehi-ratzon-mikdash",
+            "yehi-shem"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tachanun",
+      "title": "Tachanun",
+      "items": [
+        {
+          "type": "toggle",
+          "id": "tachanun-opening",
+          "options": [
+            {
+              "id": "classic",
+              "label": "Classic",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "tachanun-lefanecha",
+                  "hebrew": "לְפָנֶיךָ אֲנִי כּוֹרֵעַ וּמִשְׁתַּחֲוֶה וּמִתְפַּלֵּל וּמִתְחַנֵּן, אֲדוֹן הָעוֹלָם, אֱלֹהֵי הָאֱלֹהִים וַאֲדוֹנֵי הָאֲדוֹנִים, שְׁמַע קוֹלֵנוּ וְקַבֵּל תְּפִלָּתֵנוּ וְרָצָה אֶת תַּחֲנָתֵנוּ וּפְנֵה בְּרַחֲמֶיךָ הָרַבִּים אֵלֵינוּ, וְאַל תְּשִׁיבֵנוּ מַלְכֵּנוּ רֵיקָם מִלְּפָנֶיךָ. כִּי לֹא עַל צִדְקֹתֵינוּ אֲנַחְנוּ מַפִּילִים תַּחֲנוּנֵינוּ לְפָנֶיךָ, כִּי עַל רַחֲמֶיךָ הָרַבִּים. אֲדֹנָי שְׁמָעָה, אֲדֹנָי סְלָחָה, אֲדֹנָי הַקְשִׁיבָה וַעֲשֵׂה אַל תְּאַחַר, לְמַעַנְךָ אֱלֹהַי, כִּי שִׁמְךָ נִקְרָא עַל עִירְךָ וְעַל עַמֶּךָ. שׁוּב מֵחֲרוֹן אַפֶּךָ, וְהִנָּחֵם עַל הָרָעָה לְעַמֶּךָ. שׁוּב לְמַעַן עֲבָדֶיךָ שִׁבְטֵי נַחֲלָתֶךָ. זְכֹר לַעֲבָדֶיךָ לְאַבְרָהָם לְיִצְחָק וּלְיַעֲקֹב, אַל תֵּפֶן אֶל קְשִׁי הָעָם הַזֶּה וְאֶל רִשְׁעוֹ וְאֶל חַטָּאתוֹ.",
+                  "translation": "Before You I bow, prostrate myself, pray, and plead — Master of the world, God of gods and Lord of lords: hear our voice, accept our prayer, be pleased with our supplication, and turn to us in Your abundant mercy; do not send us away empty-handed from before You, our King. For it is not because of our righteousness that we lay our supplications before You, but because of Your abundant mercy. My Lord, hear; my Lord, forgive; my Lord, listen and act — do not delay, for Your own sake, my God, for Your name is called upon Your city and upon Your people. Turn from Your burning anger, and relent from bringing harm upon Your people. Turn back for the sake of Your servants, the tribes of Your heritage. Remember Your servants Abraham, Isaac, and Jacob; do not look upon the stubbornness of this people, or their wickedness, or their sin.",
+                  "translit": "lĕfanekha ʾăni korea' umishtaḥăweh umithpallel umithḥannen, ʾădhon ha'olam, ʾĕlohe haʾĕlohim waʾădhone haʾădhonim, shĕma' qolenu wĕqabbel tĕfillathenu wĕraṣa ʾeth taḥănathenu ufĕneh bĕraḥămekha harabbim ʾelenu, wĕʾal tĕshivenu malkenu reqam millĕfanekha. ki loʾ 'al ṣidhqothenu ʾănaḥnu mappilim taḥănunenu lĕfanekha, ki 'al raḥămekha harabbim. ʾădhonay shĕma'a, ʾădhonay sĕlaḥa, ʾădhonay haqshiva wa'ăseh ʾal tĕʾaḥar, lĕma'ankha ʾĕlohay, ki shimkha niqraʾ 'al 'irĕkha wĕ'al 'ammekha. shuv meḥăron ʾappekha, wĕhinnaḥem 'al hara'a lĕ'ammekha. shuv lĕma'an 'ăvadhekha shivṭe naḥălathekha. zĕkhor la'ăvadhekha lĕʾavraham lĕyiṣḥaq ulĕya'ăqov, ʾal tefen ʾel qĕshi ha'am hazzeh wĕʾel rish'o wĕʾel ḥaṭṭaʾtho."
+                }
+              ]
+            },
+            {
+              "id": "modern",
+              "label": "Modern",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "tachanun-rachum-vechanun",
+                  "hebrew": "רַחוּם וְחַנּוּן חָטָאנוּ לְפָנֶיךָ, רַחֵם עָלֵינוּ וְהוֹשִׁיעֵנוּ.",
+                  "translation": "Merciful and gracious One, we have sinned before You; have mercy on us and save us.",
+                  "translit": "raḥum wĕḥannun ḥaṭaʾnu lĕfanekha, raḥem 'alenu wĕhoshi'enu."
+                },
+                {
+                  "type": "text",
+                  "id": "tachanun-psalm-25",
+                  "hebrew": "לְדָוִד אֵלֶיךָ יְיָ נַפְשִׁי אֶשָּׂא. אֱלֹהַי בְּךָ בָטַחְתִּי אַל אֵבוֹשָׁה, אַל יַעַלְצוּ אוֹיְבַי לִי. גַּם כָּל קֹוֶיךָ לֹא יֵבֹשׁוּ, יֵבֹשׁוּ הַבּוֹגְדִים רֵיקָם. דְּרָכֶיךָ יְיָ הוֹדִיעֵנִי, אֹרְחוֹתֶיךָ לַמְּדֵנִי. הַדְרִיכֵנִי בַאֲמִתֶּךָ וְלַמְּדֵנִי כִּי אַתָּה אֱלֹהֵי יִשְׁעִי, אוֹתְךָ קִוִּיתִי כָּל הַיּוֹם. זְכֹר רַחֲמֶיךָ יְיָ וַחֲסָדֶיךָ, כִּי מֵעוֹלָם הֵמָּה. חַטֹּאות נְעוּרַי וּפְשָׁעַי אַל תִּזְכֹּר, כְּחַסְדְּךָ זְכָר לִי אַתָּה, לְמַעַן טוּבְךָ יְיָ. טוֹב וְיָשָׁר יְיָ, עַל כֵּן יוֹרֶה חַטָּאִים בַּדָּרֶךְ. יַדְרֵךְ עֲנָוִים בַּמִּשְׁפָּט, וִילַמֵּד עֲנָוִים דַּרְכּוֹ. כָּל אָרְחוֹת יְיָ חֶסֶד וֶאֱמֶת, לְנֹצְרֵי בְרִיתוֹ וְעֵדֹתָיו. לְמַעַן שִׁמְךָ יְיָ, וְסָלַחְתָּ לַעֲוֹנִי כִּי רַב הוּא. מִי זֶה הָאִישׁ יְרֵא יְיָ, יוֹרֶנּוּ בְּדֶרֶךְ יִבְחָר. נַפְשׁוֹ בְּטוֹב תָּלִין, וְזַרְעוֹ יִירַשׁ אָרֶץ. סוֹד יְיָ לִירֵאָיו, וּבְרִיתוֹ לְהוֹדִיעָם. עֵינַי תָּמִיד אֶל יְיָ, כִּי הוּא יוֹצִיא מֵרֶשֶׁת רַגְלָי. פְּנֵה אֵלַי וְחָנֵּנִי, כִּי יָחִיד וְעָנִי אָנִי. צָרוֹת לְבָבִי הִרְחִיבוּ, מִמְּצוּקוֹתַי הוֹצִיאֵנִי. רְאֵה עָנְיִי וַעֲמָלִי, וְשָׂא לְכָל חַטֹּאותָי. רְאֵה אֹיְבַי כִּי רָבּוּ, וְשִׂנְאַת חָמָס שְׂנֵאוּנִי. שָׁמְרָה נַפְשִׁי וְהַצִּילֵנִי, אַל אֵבוֹשׁ כִּי חָסִיתִי בָךְ. תֹּם וָיֹשֶׁר יִצְּרוּנִי, כִּי קִוִּיתִיךָ. פְּדֵה אֱלֹהִים אֶת יִשְׂרָאֵל, מִכֹּל צָרוֹתָיו.",
+                  "translation": "Of David. To You, Adhonay, I lift up my soul. My God, in You I trust; let me not be ashamed, let not my enemies triumph over me. Indeed, none who wait for You shall be ashamed; shamed shall be those who act treacherously without cause. Make me know Your ways, Adhonay; teach me Your paths. Guide me in Your truth and teach me, for You are the God of my salvation; for You I wait all day long. Remember Your compassion, Adhonay, and Your kindnesses, for they have been from of old. Do not remember the sins of my youth, or my transgressions; according to Your kindness remember me, for the sake of Your goodness, Adhonay. Good and upright is Adhonay; therefore He instructs sinners in the way. He guides the humble in justice, and teaches the humble His way. All the paths of Adhonay are kindness and truth to those who keep His covenant and His testimonies. For the sake of Your name, Adhonay, forgive my iniquity, for it is great. Who is the man who reveres Adhonay? He will instruct him in the way he should choose. His soul shall abide in prosperity, and his descendants shall inherit the land. The counsel of Adhonay is for those who revere Him, and He makes known to them His covenant. My eyes are always toward Adhonay, for He will free my feet from the net. Turn to me and be gracious to me, for I am lonely and afflicted. The troubles of my heart have grown; bring me out of my distresses. Look upon my affliction and my trouble, and forgive all my sins. Look at my enemies, for they are many, and they hate me with violent hatred. Guard my soul and deliver me; let me not be ashamed, for I have taken refuge in You. Let integrity and uprightness preserve me, for I wait for You. Redeem Israel, O God, out of all his troubles.",
+                  "translit": "lĕdhawīdh ʾelekha Adhonay nafshi ʾessaʾ. ʾĕlohay bĕkha vaṭaḥti ʾal ʾevosha, ʾal ya'alṣu ʾoyĕvay li. gam kol qowekha loʾ yevoshu, yevoshu habboghĕdhim reqam. dĕrakhekha Adhonay hodhi'eni, ʾorĕḥothekha lammĕdheni. hadhrikheni vaʾămittekha wĕlammĕdheni ki ʾatta ʾĕlohe yish'i, ʾothĕkha qiwwithi kol hayyom. zĕkhor raḥămekha Adhonay waḥăsadhekha, ki me'olam hemma. ḥaṭṭoʾwth nĕ'uray ufĕsha'ay ʾal tizkor, kĕḥasdĕkha zĕkhar li ʾatta, lĕma'an ṭuvĕkha Adhonay. ṭov wĕyashar Adhonay, 'al ken yoreh ḥaṭṭaʾim baddarekh. yadhrekh 'ănawim bammishpaṭ, wilammedh 'ănawim darko. kol ʾorḥoth Adhonay ḥesedh weʾĕmeth, lĕnoṣĕre vĕritho wĕ'edhothaw. lĕma'an shimkha Adhonay, wĕsalaḥta la'ăwoni ki rav huʾ. mi zeh haʾish yĕreʾ Adhonay, yorennu bĕdherekh yivḥar. nafsho bĕṭov talin, wĕzar'o yirash ʾareṣ. sodh Adhonay lireʾaw, uvĕritho lĕhodhi'am. 'enay tamidh ʾel Adhonay, ki huʾ yoṣiʾ meresheth raghlay. pĕneh ʾelay wĕḥonneni, ki yaḥidh wĕ'ani ʾani. ṣaroth lĕvavi hirḥivu, mimmĕṣuqothay hoṣiʾeni. rĕʾeh 'onyi wa'ămali, wĕsaʾ lĕkhol ḥaṭṭoʾwthay. rĕʾeh ʾoyĕvay ki rabbu, wĕsinʾath ḥamas sĕneʾuni. shamĕra nafshi wĕhaṣṣileni, ʾal ʾevosh ki ḥasithi vakh. tom wayosher yiṣṣĕruni, ki qiwwithikha. pĕdheh ʾĕlohim ʾeth yisraʾel, mikkol ṣarothaw."
+                },
+                {
+                  "type": "text",
+                  "id": "tachanun-vehu-yifdeh",
+                  "hebrew": "וְהוּא יִפְדֶּה אֶת יִשְׂרָאֵל מִכֹּל עֲוֹנֹתָיו.",
+                  "translation": "And He will redeem Israel from all his iniquities.",
+                  "translit": "wĕhuʾ yifdeh ʾeth yisraʾel mikkol 'ăwonothaw."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "id": "tachanun-sit-note",
+          "hebrew": "אחר כך הוא יושב ואומר",
+          "translation": "Then, sitting, one says:"
+        },
+        {
+          "type": "text",
+          "id": "avinu-malkeinu-short",
+          "hebrew": "אָבִינוּ מַלְכֵּנוּ אָבִינוּ אַתָּה. אָבִינוּ מַלְכֵּנוּ אֵין לָנוּ מֶלֶךְ אֶלָּא אַתָּה. אָבִינוּ מַלְכֵּנוּ רַחֵם עָלֵינוּ. אָבִינוּ מַלְכֵּנוּ חָנֵּנוּ וַעֲנֵנוּ כִּי אֵין בָּנוּ מַעֲשִׂים, עֲשֵׂה עִמָּנוּ צְדָקָה וָחֶסֶד לְמַעַן שִׁמְךָ הַגָּדוֹל וְהוֹשִׁיעֵנוּ.",
+          "translation": "Our Father, our King, You are our Father. Our Father, our King, we have no king but You. Our Father, our King, have mercy on us. Our Father, our King, be gracious to us and answer us, for we have no deeds of our own; deal with us in righteousness and kindness for the sake of Your great name, and save us.",
+          "translit": "ʾavinu malkenu ʾavinu ʾatta. ʾavinu malkenu ʾen lanu melekh ʾellaʾ ʾatta. ʾavinu malkenu raḥem 'alenu. ʾavinu malkenu ḥannenu wa'ănenu ki ʾen banu ma'ăsim, 'ăseh 'immanu ṣĕdhaqa waḥesedh lĕma'an shimkha haggadhol wĕhoshi'enu."
+        },
+        {
+          "type": "text",
+          "id": "vaanachnu-lo-neda",
+          "hebrew": "וַאֲנַחְנוּ לֹא נֵדַע מַה נַּעֲשֶׂה כִּי עָלֶיךָ עֵינֵינוּ. זְכֹר רַחֲמֶיךָ יְיָ וַחֲסָדֶיךָ כִּי מֵעוֹלָם הֵמָּה. אַל תִּזְכָּר לָנוּ עֲוֹנוֹת רִאשׁוֹנִים, מַהֵר יְקַדְּמוּנוּ רַחֲמֶיךָ כִּי דַלּוֹנוּ מְאֹד. קוּמָה עֶזְרָתָה לָּנוּ וּפְדֵנוּ לְמַעַן חַסְדֶּךָ. יְהִי חַסְדְּךָ יְיָ עָלֵינוּ כַּאֲשֶׁר יִחַלְנוּ לָךְ. אִם עֲוֹנוֹת תִּשְׁמָר יָהּ אֲדֹנָי מִי יַעֲמֹד. כִּי עִמְּךָ הַסְּלִיחָה לְמַעַן תִּוָּרֵא. יְיָ הוֹשִׁיעָה, הַמֶּלֶךְ יַעֲנֵנוּ בְיוֹם קָרְאֵנוּ. כִּי הוּא יָדַע יִצְרֵנוּ, זָכוּר כִּי עָפָר אֲנָחְנוּ. עָזְרֵנוּ אֱלֹהֵי יִשְׁעֵנוּ עַל דְּבַר כְּבוֹד שְׁמֶךָ, וְהַצִּילֵנוּ וְכַפֵּר עַל חַטֹּאתֵינוּ לְמַעַן שְׁמֶךָ.",
+          "translation": "And we do not know what to do, for our eyes are upon You. Remember Your compassion, Adhonay, and Your kindnesses, for they have been from of old. Do not remember against us our former sins; let Your compassion come quickly to meet us, for we have sunk very low. Arise, help us, and redeem us for the sake of Your kindness. May Your kindness, Adhonay, be upon us, as we have hoped in You. If You should keep account of sins, Adhonay, my Lord, who could stand? For with You there is forgiveness, so that You may be revered. Adhonay, save us; may the King answer us on the day we call. For He knows our nature; He remembers that we are dust. Help us, God of our salvation, for the sake of the glory of Your name, and deliver us and atone for our sins for Your name's sake.",
+          "translit": "waʾănaḥnu loʾ nedha' mah na'ăseh ki 'alekha 'enenu. zĕkhor raḥămekha Adhonay waḥăsadhekha ki me'olam hemma. ʾal tizkar lanu 'ăwonoth riʾshonim, maher yĕqaddĕmunu raḥămekha ki dhallonu mĕʾodh. quma 'ezratha lanu ufĕdhenu lĕma'an ḥasdekha. yĕhi ḥasdĕkha Adhonay 'alenu kaʾăsher yiḥalnu lakh. ʾīm 'ăwonoth tishmar yah ʾădhonay mi ya'ămodh. ki 'immĕkha hassĕliḥa lĕma'an tiwwareʾ. Adhonay hoshi'a, hammelekh ya'ănenu vĕyom qarĕʾenu. ki huʾ yadha' yiṣrenu, zakhur ki 'afar ʾănaḥĕnu. 'azĕrenu ʾĕlohe yish'enu 'al dĕvar kĕvodh shĕmekha, wĕhaṣṣilenu wĕkhapper 'al ḥaṭṭoʾthenu lĕma'an shĕmekha."
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "Conclusion",
+      "items": [
+        {
+          "type": "include",
+          "ref": "daily/arvith",
+          "sectionId": "conclusion",
+          "itemIds": [
+            "aleinu"
+          ]
+        }
+      ]
+    }
+  ]
+}

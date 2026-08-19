@@ -11,12 +11,23 @@
 {{- range $segments }}{{ $chapter = index $chapter . }}{{ end }}
 
 <h1 class="siddur-page-title">{{ .Title }}</h1>
+{{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
 
 <div class="siddur-display-toggle" role="group" aria-label="Display options">
   <button type="button" class="siddur-toggle-btn" data-toggle-class="show-hebrew">עברית</button>
   <button type="button" class="siddur-toggle-btn" data-toggle-class="show-translit">Translit</button>
   <button type="button" class="siddur-toggle-btn" data-toggle-class="show-translation">English</button>
 </div>
+
+{{- if .Params.toc }}
+<nav class="siddur-toc" aria-label="Table of contents">
+  <ol>
+    {{- range $chapter.sections }}
+    <li><a href="#{{ .id }}" dir="auto">{{ .title }}</a></li>
+    {{- end }}
+  </ol>
+</nav>
+{{- end }}
 
 {{ range $chapter.sections }}
 <section class="siddur-section">

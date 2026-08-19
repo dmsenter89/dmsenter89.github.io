@@ -9,8 +9,8 @@
           "type": "text",
           "id": "shema-verse",
           "hebrew": "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְיָ֥ אֱלֹהֵ֖ינוּ יְיָ֥ ׀ אֶחָֽד׃",
-          "translation": "Hear, O Israel: Adonay is our God, Adonay is One.",
-          "translit": "shĕma' yisraʾel Adonay ʾĕlohenu Adonay  ʾeḥadh"
+          "translation": "Hear, O Israel: Adhonay is our God, Adhonay is One.",
+          "translit": "shĕma' yisraʾel Adhonay ʾĕlohenu Adhonay ʾeḥadh."
         },
         {
           "type": "rubric",
@@ -23,14 +23,14 @@
           "id": "baruch-shem",
           "hebrew": "בָּרוּךְ שֵּׁם כְּבוֹד מַלְכוּתוֹ לְעוֹלָם וָעֶד׃",
           "translation": "Blessed is the name of His glorious kingdom forever and ever.",
-          "translit": "barukh shem kĕvodh malkhutho lĕ'olam wa'edh"
+          "translit": "barukh shem kĕvodh malkhutho lĕ'olam wa'edh."
         },
         {
           "type": "text",
           "id": "veahavta",
           "hebrew": "וְאָ֣הַבְתָּ֔ אֵ֖ת יְיָ֣ אֱלֹהֶ֑יךָ בְּכׇל־לְבָבְךָ֥ וּבְכׇל־נַפְשְׁךָ֖ וּבְכׇל־מְאֹדֶֽךָ׃ וְהָי֞וּ הַדְּבָרִ֣ים הָאֵ֗לֶּה אֲשֶׁ֨ר אָנֹכִ֧י מְצַוְּךָ֛ הַיּ֖וֹם עַל־לְבָבֶֽךָ׃ וְשִׁנַּנְתָּ֣ם לְבָנֶ֔יךָ וְדִבַּרְתָּ֖ בָּ֑ם בְּשִׁבְתְּךָ֤ בְּבֵיתֶ֙ךָ֙ וּבְלֶכְתְּךָ֣ בַדֶּ֔רֶךְ וּֽבְשׇׁכְבְּךָ֖ וּבְקוּמֶֽךָ׃ וּקְשַׁרְתָּ֥ם לְא֖וֹת עַל־יָדֶ֑ךָ וְהָי֥וּ לְטֹטָפֹ֖ת בֵּ֥ין עֵינֶֽיךָ׃ וּכְתַבְתָּ֛ם עַל־מְזֻז֥וֹת בֵּיתֶ֖ךָ וּבִשְׁעָרֶֽיךָ׃",
-          "translation": "You shall love Adonay your God with all your heart, with all your soul, and with all your might. These words that I command you today shall be upon your heart. You shall teach them diligently to your children, and speak of them when you sit in your house, when you walk on the way, when you lie down, and when you rise up. You shall bind them as a sign upon your hand, and they shall be a symbol between your eyes. You shall write them on the doorposts of your house and on your gates.",
-          "translit": "wĕʾahavta ʾeth Adonay ʾĕlohekha bĕkhol-lĕvavĕkha uvĕkhol-nafshĕkha uvĕkhol-mĕʾodhekha wĕhayu haddĕvarim haʾelleh ʾăsher ʾanokhi mĕṣawwĕkha hayyom 'al-lĕvavekha wĕshinnantam lĕvanekha wĕdhibbarta bam bĕshivtĕkha bĕvethekha uvĕlekhtĕkha vadderekh uvĕshokhbĕkha uvĕqumekha uqĕshartam lĕʾoth 'al-yadhekha wĕhayu lĕṭoṭafoth ben 'enekha ukhĕthavtam 'al-mĕzuzoth bethekha uvish'arekha"
+          "translation": "You shall love Adhonay your God with all your heart, with all your soul, and with all your might. These words that I command you today shall be upon your heart. You shall teach them diligently to your children, and speak of them when you sit in your house, when you walk on the way, when you lie down, and when you rise up. You shall bind them as a sign upon your hand, and they shall be a symbol between your eyes. You shall write them on the doorposts of your house and on your gates.",
+          "translit": "wĕʾahavta ʾeth Adhonay ʾĕlohekha bĕkhol-lĕvavĕkha uvĕkhol-nafshĕkha uvĕkhol-mĕʾodhekha. wĕhayu haddĕvarim haʾelleh ʾăsher ʾanokhi mĕṣawwĕkha hayyom 'al-lĕvavekha. wĕshinnantam lĕvanekha wĕdhibbarta bam bĕshivtĕkha bĕvethekha uvĕlekhtĕkha vadderekh uvĕshokhbĕkha uvĕqumekha. uqĕshartam lĕʾoth 'al-yadhekha wĕhayu lĕṭoṭafoth ben 'enekha. ukhĕthavtam 'al-mĕzuzoth bethekha uvish'arekha."
         }
       ]
     }
