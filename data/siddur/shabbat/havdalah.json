@@ -1,0 +1,156 @@
+{
+  "title": "Havdalah",
+  "sections": [
+    {
+      "id": "dinim",
+      "title": "Dinim",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "din-1",
+          "hebrew": "יש לו לאדם להבדיל על הכוס מבעוד יום, אף על פי שעדיין היא שבת, שמצות זכירה לאמרה בין בשעת כניסתו ויציאתו בין קודם לשעה זו במעט.",
+          "translation": "One may recite Havdalah over the cup somewhat before nightfall, even while it is still Shabbat, since the mitzvah of remembering [Shabbat's departure] may be fulfilled either at the very moment it leaves, or somewhat before that time."
+        },
+        {
+          "type": "rubric",
+          "id": "din-2",
+          "hebrew": "כיוון שהגיע השקיעה אסור לאכול או לשתות עד שיבדיל, וכל זה אם התחיל לאכול תוך חצי שעה לחשיכה [=היינו לצאת הכוכבים, והוא כעשר דקות לפני השקיעה], אבל אם התחיל לאכול אכילת פת קבע דהיינו פת קודם חצי שעה לחשיכה, ובאמצע אכילתו הגיע זמן השקיעה — אין צריך להפסיק לאכול, ויכול לגמור כרצונו. אבל אם קבע עצמו רק לשתות, צריך להפסיק בשקיעה. ואם הפסיק באמצע האכילה להתפלל ערבית — אפילו אם עדיין לא חשכה, אסור לו לחזור לאכול ולשתות עד שיבדיל (בא\"ח ש\"ש ויצא יח — יט).",
+          "translation": "Once sunset arrives, it is forbidden to eat or drink until one recites Havdalah — and this applies if one began eating within half an hour of nightfall [that is, of the stars' emergence, about ten minutes before sunset]. But if one began a fixed bread meal before that half-hour, and sunset arrived in the middle of the meal, he need not stop eating and may finish as he wishes. If, however, he had sat down only to drink, he must stop at sunset. And if he interrupted his meal to pray the evening service — even if it has not yet grown dark — he may not return to eating or drinking until he recites Havdalah (Ben Ish Chai, Year 2, Parashat Vayetzei 18–19)."
+        },
+        {
+          "type": "rubric",
+          "id": "din-3",
+          "hebrew": "אסור לעשות מלאכה קודם שיבדיל, ואם אמר \"אתה חוננתנו\" בתפלת ערבית בעמידה, הרי זה מותר לו לעשות מלאכה [ולא לאכול], ואם שכח לומר \"אתה חוננתנו\", או עדיין לא התפלל ערבית, ורוצה להדליק הנר להבדלה, יאמר קודם לכן ברכת המבדיל בלי שם ומלכות, וכך; בָּרוּךְ הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחֹל. ויש אומרים דאף על פי שאמר \"אתה חוננתנו\", עם כל זה קודם שידליק הנר יאמר ברכת המבדיל בלי שם ומלכות, וכן ראוי לעשות (שם כד).",
+          "translation": "It is forbidden to perform melacha before reciting Havdalah. If one said \"Ata Chonantanu\" while standing in the evening Amidah, he is then permitted to perform melacha [but not to eat]. And if he forgot to say \"Ata Chonantanu,\" or has not yet prayed the evening service, and wishes to light the candle for Havdalah, he should first say the blessing of Hamavdil without God's name or kingship, thus: \"Blessed is He who separates between holy and profane.\" Some say that even if one said \"Ata Chonantanu,\" he should nonetheless say the blessing of Hamavdil without name and kingship before lighting the candle, and this is proper practice (ibid. 24)."
+        },
+        {
+          "type": "rubric",
+          "id": "din-4",
+          "hebrew": "גם הנשים חייבות בהבדלה, ויכולות להבדיל לעצמן, ומי שהבדיל בבית הכנסת ויצא ידי חובה — יכול להבדיל להן, מיהו, באופן כזה אם האשה יודעת לברך, טוב שתברך ותבדיל לעצמה (שם כב).",
+          "translation": "Women, too, are obligated in Havdalah, and may recite it for themselves. One who has recited Havdalah in the synagogue and thereby fulfilled his own obligation may recite it for them as well; however, in such a case, if the woman knows how to recite the blessing, it is best that she recite the blessing and perform Havdalah for herself (ibid. 22)."
+        },
+        {
+          "type": "rubric",
+          "id": "din-5",
+          "hebrew": "אין מבדילין אלא על היין הראוי לנסך על גבי המזבח. לפיכך אם נתערב בו דבש או שאור, אפילו כטיפת חרדל בחבית גדולה, אין מבדילין עליו. וכך אנו מורים בכל המערב. ויש מי שמתיר להבדיל עליו ואומר, לא נאמר היין הראוי לגבי המזבח אלא להוציא יין שריחו רע, או מגולה, או מבושל, שאין מבדילין על אחד מהן. ובמדינה שרוב יינה שיכר, אף על פי שהוא פסול לקידוש, מותר להבדיל עליו, הואיל והוא חמר המדינה. ואין מבדילין על הפת, אלא על הכוס.",
+          "translation": "Havdalah may be recited only over wine fit to be poured upon the altar. Therefore, if honey or leaven has become mixed into it — even as little as a drop of mustard in a large barrel — Havdalah may not be recited over it, and so we rule throughout the Maghreb. Some permit reciting Havdalah over it, holding that \"wine fit for the altar\" excludes only wine with a bad odor, exposed wine, or cooked wine, over none of which Havdalah may be recited. And in a country where most of the wine available is beer, even though it is unfit for Kiddush, one may recite Havdalah over it, since it is the drink of the region. Havdalah is never recited over bread, only over the cup."
+        },
+        {
+          "type": "rubric",
+          "id": "din-6",
+          "hebrew": "אע\"פ שמותר לברך \"מאורי האש\" על כל סוג של נר, בכ\"ז, על פי הסוד עדיף לברך על נר של שעוה, וגם נכון לברך על אבוקה דהיינו שני נרות שעוה קלועים יחד (שם טז).",
+          "translation": "Although it is permitted to recite \"Me'orei Ha'esh\" over any kind of candle, nevertheless, according to the Kabbalah it is preferable to recite the blessing over a wax candle, and it is likewise proper to recite it over a torch — that is, two wax candles braided together (ibid. 16)."
+        },
+        {
+          "type": "rubric",
+          "id": "din-7",
+          "hebrew": "אין לברך \"בורא מאורי האש\" אלא עד שיראה גוף השלהבת ממש בלי הפסק. ולכן, אפילו אם הנר גלוי ומופיע אור הרבה בכל מקום, רק יש מי שעומד בצדו ואינו רואה את שלהבת הנר — אינו מברך. ואף שרואה את שלהבת הנר, צריך שיתקרב לאורו בכדי שיוכל להכיר בין מטבע מדינה זו למדינה אחרת שמידתם וכמותם שווה, ולמצוה מן המובחר טוב שיתקרב אל הנר ביותר עד שיגיע לו האור בשופע הרבה (שם יד).",
+          "translation": "\"Borei Me'orei Ha'esh\" may not be recited unless one sees the actual body of the flame without interruption. Therefore, even if the candle is uncovered and its light shines widely throughout the room, if one stands beside it without seeing the flame itself, he does not recite the blessing. And even when he does see the flame, he must draw close enough to its light to be able to distinguish between the coins of one country and another of similar size and denomination; and for the most preferred fulfillment of the mitzvah, it is good to draw as close to the candle as possible, until its light reaches him in abundance (ibid. 14)."
+        }
+      ]
+    },
+    {
+      "id": "havdalah",
+      "title": "Havdalah",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "havdalah-kos-instr",
+          "hebrew": "יקח את הכוס בידו ויאמר;",
+          "translation": "He takes the cup in his hand and says:"
+        },
+        {
+          "type": "text",
+          "id": "havdalah-kos-yeshuot",
+          "hebrew": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא, וּבְשֵׁם יְיָ אֶקְרָא׃ אָנָּא יְיָ הוֹשִׁיעָה נָּא, (שתי פעמים) אָנָּא יְיָ הַצְלִיחָה נָּא׃ (שתי פעמים)",
+          "translation": "I will lift up the cup of salvations, and call upon the name of Adhonay. (Psalm 116:13) Please, Adhonay, save us now! (twice) Please, Adhonay, grant success now! (twice) (Psalm 118:25)",
+          "translit": "kos-yĕshu'oth ʾessaʾ, uvĕshem Adhonay ʾeqraʾ. ʾannaʾ Adhonay hoshi'a naʾ, (twice) ʾannaʾ Adhonay haṣliḥa naʾ. (twice)"
+        },
+        {
+          "type": "toggle",
+          "id": "havdalah-minhag",
+          "options": [
+            {
+              "id": "bavel",
+              "label": "Minhag Bavel",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "havdalah-minhag-bavel",
+                  "hebrew": "בָּרוּךְ הַבָּא בְּשֵׁם יְיָ, בֵּרַכְנוּכֶם מִבֵּית יְיָ׃ אֵל יְיָ וַיָּאֶר לָנוּ, אִסְרוּ־חַג בַּעֲבֹתִים עַד־קַרְנוֹת הַמִּזְבֵּחַ׃ אֵלִי אַתָּה וְאוֹדֶךָ, אֱלֹהַי אֲרוֹמְמֶךָ׃ הוֹדוּ לַיְיָ כִּי־טוֹב, כִּי לְעוֹלָם חַסְדּוֹ׃",
+                  "translation": "Blessed is he who comes in the name of Adhonay; we have blessed you from the house of Adhonay. Adhonay is God, and He has given us light; bind the festival offering with cords, up to the horns of the altar. You are my God, and I will thank You; my God, I will exalt You. Give thanks to Adhonay, for He is good; His kindness endures forever. (Psalm 118:26–29)",
+                  "translit": "barukh habbaʾ bĕshem Adhonay, berakhnukhem mibbeth Adhonay. ʾel Adhonay wayyaʾer lanu, ʾisru-ḥagh ba'ăvothim 'adh-qarnoth hammizbeaḥ. ʾeli ʾatta wĕʾodhekha, ʾĕlohay ʾăromĕmekha. hodhu laAdhonay ki-ṭov, ki lĕ'olam ḥasdo."
+                }
+              ]
+            },
+            {
+              "id": "eretz-yisrael",
+              "label": "Minhag Eretz Yisrael",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "havdalah-minhag-eretz-yisrael",
+                  "hebrew": "הַצְלִיחֵנוּ הַצְלִיחַ דְּרָכֵנוּ, הַצְלִיחַ לִמּוּדֵנוּ, וּשְׁלַח בְּרָכָה רְוָחָה וְהַצְלָחָה בְּכָל־מַעֲשֵׂה יָדֵינוּ, כְּדִכְתִיב; יִשָּׂא בְרָכָה מֵאֵת יְיָ וּצְדָקָה מֵאֱלֹהֵי יִשְׁעוֹ׃ לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה, וְשָׂשֹׂן וִיקָר׃ וּכְתִיב; וַיְהִי דָוִד לְכָל־דְּרָכָיו מַשְׂכִּיל, וַיְיָ עִמּוֹ׃",
+                  "translation": "Grant us success; make our ways succeed, make our study succeed, and send blessing, abundance, and success into all the work of our hands, as it is written: \"He shall receive a blessing from Adhonay, and righteousness from the God of his salvation\" (Psalm 24:5); and it is written, \"The Jews had light and gladness, joy and honor\" (Esther 8:16); and it is written, \"And David succeeded in all his ways, and Adhonay was with him\" (1 Samuel 18:14).",
+                  "translit": "haṣliḥenu haṣliaḥ dĕrakhenu, haṣliaḥ limmudhenu, ushĕlaḥ bĕrakha rĕwaḥa wĕhaṣlaḥa bĕkhol-ma'ăseh yadhenu, kĕdhikhthiv; yissaʾ vĕrakha meʾeth Adhonay uṣĕdhaqa meʾĕlohe yish'o. layyĕhudhim hayĕtha ʾora wĕsimḥa, wĕsason wiqar. ukhĕthiv; wayĕhi dhawīdh lĕkhol-dhĕrakhaw maskil, waAdhonay 'immo."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "rubric",
+          "id": "havdalah-hagafen-instr",
+          "hebrew": "ויברך \"בורא פרי הגפן\", ולא ישתה כלל מהיין אלא עד שיסיים את ברכת ההבדלה.",
+          "translation": "He then recites the blessing \"Borei Peri HaGafen,\" and does not drink any of the wine at all until he has finished the blessing of Havdalah."
+        },
+        {
+          "type": "text",
+          "id": "havdalah-hagafen",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְרִי הַגֶּפֶן.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates the fruit of the vine.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, boreʾ fĕri haggefen."
+        },
+        {
+          "type": "rubric",
+          "id": "havdalah-besamim-instr",
+          "hebrew": "יזהר שיטול הבשמים כדרך גדילתם, וצריך שיאחז ביד ימין. וכשיריח טוב שימשוך ויישאב הריח בחוטמו שלש פעמים כזו אחר זו כנגד נפש רוח נשמה, וגם יכוין במחשבתו בארבע תיבות אלו; \"ריח ניחוח אשה לה'\" (בא\"ח ש\"ש ויצא י. ט).",
+          "translation": "He should take care to hold the spices in the manner in which they grow, and must hold them in his right hand. And when he smells them, he should draw and inhale the fragrance into his nostrils three times in succession, corresponding to nefesh, ruach, and neshamah, and he should also have in mind these four words: \"a pleasing fragrance, a fire-offering to Adhonay\" (Ben Ish Chai, Year 2, Parashat Vayetzei 9–10)."
+        },
+        {
+          "type": "text",
+          "id": "havdalah-besamim",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא עֲצֵי / מִינֵי / עִשְׂבֵי / בְּשָׂמִים.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates fragrant trees / fragrant species / fragrant herbs / spices (Ed.: say whichever term fits the spice being used).",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, boreʾ 'ăṣe / mine / 'isve / bĕsamim."
+        },
+        {
+          "type": "text",
+          "id": "havdalah-meorei-haesh",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא מְאוֹרֵי הָאֵשׁ.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates the lights of fire.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, boreʾ mĕʾore haʾesh."
+        },
+        {
+          "type": "text",
+          "id": "havdalah-hamavdil",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחֹל וּבֵין אוֹר לְחֹשֶׁךְ, וּבֵין יִשְׂרָאֵל לָעַמִּים, וּבֵין יוֹם הַשְּׁבִיעִי לְשֵׁשֶׁת יְמֵי הַמַּעֲשֶׂה. בָּרוּךְ אַתָּה יְיָ, הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחֹל.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who separates between holy and profane, between light and darkness, between Israel and the nations, and between the seventh day and the six days of labor. Blessed are You, Adhonay, who separates between holy and profane.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hammavdil ben qodhesh lĕḥol uven ʾor lĕḥoshekh, uven yisraʾel la'ammim, uven yom hashshĕvi'i lĕshesheth yĕme hamma'ăseh. barukh ʾatta Adhonay, hammavdil ben qodhesh lĕḥol."
+        },
+        {
+          "type": "rubric",
+          "id": "havdalah-drinking-instr",
+          "hebrew": "ישב המבדיל וישתה מהיין שבכוס, ולכתחילה צריך שיטעום המקדש מלא לוגמיו, ומן המובחר לשתות רביעית ויברך ברכה אחרונה \"מעין שלש\". ואם המבדיל אינו יכול לשתות מהיין — יכול ליתן לַאַחֵר שֶׁכִּוֵּן לצאת ידי חובה בברכתו לשתות במקומו רביעית, וזה ששתה יברך ברכה אחרונה \"מעין שלש\" (כה\"ח רצו ס\"ק טז). ואם הַאַחֵר לא כיוון לשתות — יברך רק הגפן וישתה (הראש\"ל רמ\"א שליט\"א).",
+          "translation": "The one reciting Havdalah sits and drinks from the wine in the cup; ideally, he should taste a full mouthful, and it is best to drink a revi'it and then recite the concluding blessing \"Me'ein Shalosh.\" If he is unable to drink the wine himself, he may give it to another person who intended to fulfill his own obligation through the blessing, to drink a revi'it in his place, and that person then recites the concluding blessing \"Me'ein Shalosh\" (Kaf HaChaim 296:16). And if that other person did not intend to drink, he recites only the blessing over the wine and drinks (HaRishon LeTzion, Rabbi Mordechai Eliyahu, may he live long)."
+        },
+        {
+          "type": "rubric",
+          "id": "havdalah-women-instr",
+          "hebrew": "יש אומרים שהנשים לא ישתו מכוס הבדלה (כה\"ח שם ס\"ק יד). ואנחנו לא מקפידים בזה, מיהו גם אלו שמקפידות, כשהן מבדילות לעצמן ישתו, ועדיף שיבדילו על מיץ ענבים או על בירה שחורה [ויברכו עליה \"שהכל\"] וישתו כשיעור (הראש\"ל רמ\"א שליט\"א).",
+          "translation": "Some say that women should not drink from the cup of Havdalah (Kaf HaChaim, ibid., 14). We are not particular about this; however, even those who are careful about it, when reciting Havdalah for themselves, should drink, and it is preferable that they recite Havdalah over grape juice or dark beer [reciting the blessing \"Shehakol\" over it] and drink the required amount (HaRishon LeTzion, Rabbi Mordechai Eliyahu, may he live long)."
+        }
+      ]
+    }
+  ]
+}
