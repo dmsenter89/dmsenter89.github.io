@@ -12,12 +12,12 @@
        alternatives shown side by side, e.g. the grain/wine/fruit choice in
        Me'en Shalosh -- same nested "items" array as expandable, just never
        collapsed) |
-       "toggle" (radio-button pair selecting between two alternative
-       renditions of the same passage, e.g. the full Amidah vs. Havinenu --
-       "options" is an array of exactly two {id, label, items}; the first
-       is selected by default. CSS keys the visible panel to radio/panel
-       position via :nth-of-type, so this only supports exactly two
-       options.) |
+       "toggle" (radio-button group selecting between alternative
+       renditions of the same passage, e.g. Full/Abbreviated/Havinenu
+       Amidah -- "options" is an array of two or three {id, label, items};
+       the first is selected by default. CSS keys the visible panel to
+       radio/panel position via :nth-of-type, so this only supports up to
+       three options.) |
        "subsection" (an h3-level sub-heading within a section, for a
        section whose printed source itself subdivides under further
        headings, e.g. Havu LaAdonai / Lecha Dodi within Kabbalat Shabbat --

@@ -366,8 +366,8 @@ html.show-translation .siddur-rubric .siddur-translation {
   margin-bottom: 0.1rem;
 }
 
-/* --- Toggle group (mutually exclusive alternatives, e.g. Havinenu vs
-   full Amidah) --- */
+/* --- Toggle group (mutually exclusive alternatives, e.g. Full/
+   Abbreviated/Havinenu Amidah) --- */
 
 .siddur-toggle-group {
   border: 1px solid var(--siddur-border);
@@ -401,7 +401,8 @@ html.show-translation .siddur-rubric .siddur-translation {
 }
 
 .siddur-toggle-group-radio:nth-of-type(1):checked + .siddur-toggle-group-btn,
-.siddur-toggle-group-radio:nth-of-type(2):checked + .siddur-toggle-group-btn {
+.siddur-toggle-group-radio:nth-of-type(2):checked + .siddur-toggle-group-btn,
+.siddur-toggle-group-radio:nth-of-type(3):checked + .siddur-toggle-group-btn {
   background: var(--siddur-accent);
   color: #fff;
   border-color: var(--siddur-accent);
@@ -412,7 +413,8 @@ html.show-translation .siddur-rubric .siddur-translation {
 .siddur-toggle-group-panel .siddur-item:last-child { margin-bottom: 0; }
 
 .siddur-toggle-group-radio:nth-of-type(1):checked ~ .siddur-toggle-group-panel:nth-of-type(1),
-.siddur-toggle-group-radio:nth-of-type(2):checked ~ .siddur-toggle-group-panel:nth-of-type(2) {
+.siddur-toggle-group-radio:nth-of-type(2):checked ~ .siddur-toggle-group-panel:nth-of-type(2),
+.siddur-toggle-group-radio:nth-of-type(3):checked ~ .siddur-toggle-group-panel:nth-of-type(3) {
   display: block;
 }
 

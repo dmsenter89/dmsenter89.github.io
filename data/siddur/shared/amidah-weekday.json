@@ -276,6 +276,143 @@
           "hebrew": "הֲבִינֵנוּ יְיָ אֱלֹהֵינוּ [במוצאי שבת ויום טוב: בֵּין קֹדֶשׁ לְחֹל] לָדַעַת דְּרָכֶיךָ, וּמוֹל אֶת לְבָבֵנוּ לְיִרְאָתֶךָ. תִּסְלַח לָנוּ לִהְיוֹת גְּאוּלִים. וְרַחֲקֵנוּ מִמַּכְאוֹב, וְדַשְּׁנֵנוּ בִּנְאוֹת אַרְצֶךָ, [בימות הגשמים: וְתֵן טַל וּמָטָר,] וּנְפוּצִים מֵאַרְבַּע תְּקַבֵּץ, וְהַתּוֹעִים בְּדַעְתְּךָ יִשָּׁפֵטוּ, וְעַל הָרְשָׁעִים תָּנִיף יָדֶךָ, וְיִשְׂמְחוּ צַדִּיקִים בְּבִנְיַן עִירָךְ וּבְתִקּוּן הֵיכָלָךְ, וּבִצְמִיחַת קֶרֶן לְדָוִד עַבְדָּךְ, וּבַעֲרִיכַת נֵר לְבֶן יִשַׁי מְשִׁיחָךְ. טֶרֶם נִקְרָא וְאַתָּה תַעֲנֶה. בָּרוּךְ אַתָּה יְיָ, שׁוֹמֵעַ תְּפִלָּה.",
           "translation": "Grant us understanding, Adhonay our God — [at the close of Shabbat and festivals: between the holy and the ordinary] — to know Your ways, and circumcise our hearts to revere You. Forgive us so that we may be redeemed; keep us far from pain, and let us feast on the pastures of Your land, [In the rainy season: and grant dew and rain,] gather our scattered from the four corners of the earth, and let those who stray from Your knowledge be judged; raise Your hand against the wicked, and let the righteous rejoice in the building of Your city, the restoration of Your Sanctuary, the flourishing of an heir for David Your servant, and the setting of a light for the son of Yishai, Your anointed. Before we call, may You answer. Blessed are You, Adhonay, who hears prayer.",
           "translit": "hăvinenu Adhonay ʾĕlohenu [vmwṣʾy shvth wywm ṭwv: ben qodhesh lĕḥol] ladha'ath dĕrakhekha, umol ʾeth lĕvavenu lĕyirʾathekha. tislaḥ lanu lihyoth gĕʾulim. wĕraḥăqenu mimmakhʾov, wĕdhashshĕnenu binʾoth ʾarṣekha, [vymwth hghshmym: wĕthen ṭal umaṭar,] unĕfuṣim meʾarba' tĕqabbeṣ, wĕhatto'im bĕdha'tĕkha yishshafeṭu, wĕ'al harĕsha'im tanif yadhekha, wĕyismĕḥu ṣaddiqim bĕvinyan 'irakh uvĕthiqqun hekhalakh, uviṣmiḥath qeren lĕdhawīdh 'avdakh, uva'ărikhath ner lĕven yishay mĕshiḥakh. ṭerem niqraʾ wĕʾatta tha'ăneh. barukh ʾatta Adhonay, shomea' tĕfilla."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-daat",
+          "hebrew": "אַתָּה חוֹנֵן לְאָדָם דַּעַת, וּמְלַמֵּד לֶאֱנוֹשׁ בִּינָה.",
+          "translation": "You favor humankind with knowledge and teach mortals understanding.",
+          "translit": "ʾatta ḥonen lĕʾadham da'ath, umĕlammedh leʾĕnosh bina."
+        },
+        {
+          "type": "expandable",
+          "id": "abbreviated-daat-havdalah",
+          "label": "Motzaei Shabbat / Yom Tov — Ata Hivdalta",
+          "items": [
+            {
+              "type": "text",
+              "id": "abbreviated-daat-havdalah-text",
+              "hebrew": "אַתָּה הִבְדַּלְתָּ בֵּין קֹדֶשׁ לְחֹל וּבֵין אוֹר לְחֹשֶׁךְ וּבֵין יִשְׂרָאֵל לָעַמִּים וּבֵין יוֹם הַשְּׁבִיעִי לְשֵׁשֶׁת יְמֵי הַמַּעֲשֶׂה",
+              "translation": "You have distinguished between holy and profane, between light and darkness, between Israel and the nations, and between the seventh day and the six days of labor.",
+              "translit": "ʾatta hivdalta ben qodhesh lĕḥol uven ʾor lĕḥoshekh uven yisraʾel la'ammim uven yom hashshĕvi'i lĕshesheth yĕme hamma'ăseh"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-daat-close",
+          "hebrew": "וְחָנֵּנוּ מֵאִתְּךָ חָכְמָה בִּינָה וָדָעַת. בָּרוּךְ אַתָּה יְיָ, חוֹנֵן הַדָּעַת.",
+          "translation": "Favor us with wisdom, understanding, and knowledge from You. Blessed are You, Adhonay, who favors us with knowledge.",
+          "translit": "wĕḥannenu meʾittĕkha ḥokhma bina wadha'ath. barukh ʾatta Adhonay, ḥonen hadda'ath."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-teshuva",
+          "hebrew": "הֲשִׁיבֵנוּ אָבִינוּ לְתוֹרָתֶךָ, וְהַחֲזִירֵנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶיךָ. בָּרוּךְ אַתָּה יְיָ, הָרוֹצֶה בִּתְשׁוּבָה.",
+          "translation": "Bring us back, our Father, to Your Torah, and return us in complete repentance before You. Blessed are You, Adhonay, who desires repentance.",
+          "translit": "hăshivenu ʾavinu lĕthorathekha, wĕhaḥăzirenu bithshuva shĕlema lĕfanekha. barukh ʾatta Adhonay, haroṣeh bithshuva."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-selicha",
+          "hebrew": "סְלַח לָנוּ אָבִינוּ, כִּי אֵל טוֹב וְסַלָּח אָתָּה. בָּרוּךְ אַתָּה יְיָ, חַנּוּן הַמַּרְבֶּה לִסְלֹחַ.",
+          "translation": "Forgive us, our Father, for You are a good and forgiving God. Blessed are You, Adhonay, gracious One who forgives abundantly.",
+          "translit": "sĕlaḥ lanu ʾavinu, ki ʾel ṭov wĕsallaḥ ʾatta. barukh ʾatta Adhonay, ḥannun hammarbeh lisloaḥ."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-geula",
+          "hebrew": "רְאֵה נָא בְעָנְיֵנוּ, כִּי אֵל גּוֹאֵל חָזָק אָתָּה. בָּרוּךְ אַתָּה יְיָ, גּוֹאֵל יִשְׂרָאֵל.",
+          "translation": "Look, please, upon our affliction, for You are a mighty redeeming God. Blessed are You, Adhonay, Redeemer of Israel.",
+          "translit": "rĕʾeh naʾ vĕ'onyenu, ki ʾel goʾel ḥazaq ʾatta. barukh ʾatta Adhonay, goʾel yisraʾel."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-refuah",
+          "hebrew": "רְפָאֵנוּ יְיָ וְנֵרָפֵא, כִּי אֵל רוֹפֵא רַחְמָן וְנֶאֱמָן אָתָּה. בָּרוּךְ אַתָּה יְיָ, רוֹפֵא חוֹלֵי עַמּוֹ יִשְׂרָאֵל.",
+          "translation": "Heal us, Adhonay, and we shall be healed, for You are a faithful and merciful healing God. Blessed are You, Adhonay, who heals the sick of His people Israel.",
+          "translit": "rĕfaʾenu Adhonay wĕnerafeʾ, ki ʾel rofeʾ raḥman wĕneʾĕman ʾatta. barukh ʾatta Adhonay, rofeʾ ḥole 'ammo yisraʾel."
+        },
+        {
+          "type": "group",
+          "id": "abbreviated-birkat-hashanim-season",
+          "items": [
+            {
+              "type": "rubric",
+              "id": "abbreviated-birkat-hashanim-summer-label",
+              "hebrew": "בקיץ:",
+              "translation": "In summer:"
+            },
+            {
+              "type": "text",
+              "id": "abbreviated-birkat-hashanim-summer",
+              "hebrew": "בָּרְכֵנוּ יְיָ אֱלֹהֵינוּ בְּכָל מַעֲשֵׂי יָדֵינוּ, כִּי אֵל טוֹב וּמֵטִיב אַתָּה וּמְבָרֵךְ הַשָּׁנִים. בָּרוּךְ אַתָּה יְיָ, מְבָרֵךְ הַשָּׁנִים.",
+              "translation": "Bless us, Adhonay our God, in all the work of our hands, for You are a good and beneficent God who blesses the years. Blessed are You, Adhonay, who blesses the years.",
+              "translit": "barĕkhenu Adhonay ʾĕlohenu bĕkhol ma'ăse yadhenu, ki ʾel ṭov umeṭiv ʾatta umĕvarekh hashshanim. barukh ʾatta Adhonay, mĕvarekh hashshanim."
+            },
+            {
+              "type": "rubric",
+              "id": "abbreviated-birkat-hashanim-winter-label",
+              "hebrew": "בחורף:",
+              "translation": "In winter:"
+            },
+            {
+              "type": "text",
+              "id": "abbreviated-birkat-hashanim-winter",
+              "hebrew": "בָּרֵךְ עָלֵינוּ יְיָ אֱלֹהֵינוּ אֶת הַשָּׁנָה הַזֹּאת וְאֶת כָּל מִינֵי תְבוּאָתָהּ לְטוֹבָה, וְתֵן טַל וּמָטָר לִבְרָכָה עַל כָּל פְּנֵי הָאֲדָמָה, כִּי אֵל טוֹב וּמֵטִיב אַתָּה וּמְבָרֵךְ הַשָּׁנִים. בָּרוּךְ אַתָּה יְיָ, מְבָרֵךְ הַשָּׁנִים.",
+              "translation": "Bless for us, Adhonay our God, this year and all the varieties of its produce for good, and give dew and rain for blessing upon the whole face of the earth, for You are a good and beneficent God who blesses the years. Blessed are You, Adhonay, who blesses the years.",
+              "translit": "barekh 'alenu Adhonay ʾĕlohenu ʾeth hashshana hazzoʾth wĕʾeth kol mine thĕvuʾathah lĕṭova, wĕthen ṭal umaṭar livrakha 'al kol pĕne haʾădhama, ki ʾel ṭov umeṭiv ʾatta umĕvarekh hashshanim. barukh ʾatta Adhonay, mĕvarekh hashshanim."
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-kibbutz-galuyot",
+          "hebrew": "תְּקַע בְּשׁוֹפָר גָּדוֹל לְחֵרוּתֵנוּ, וְקַבְּצֵנוּ יַחַד מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ לְאַרְצֵנוּ. בָּרוּךְ אַתָּה יְיָ, מְקַבֵּץ נִדְחֵי עַמּוֹ יִשְׂרָאֵל.",
+          "translation": "Sound the great shofar for our freedom, and bring us together from the four corners of the earth to our land. Blessed are You, Adhonay, who gathers the scattered of His people Israel.",
+          "translit": "tĕqa' bĕshofar gadhol lĕḥeruthenu, wĕqabbĕṣenu yaḥadh meʾarba' kanfoth haʾareṣ lĕʾarṣenu. barukh ʾatta Adhonay, mĕqabbeṣ nidhḥe 'ammo yisraʾel."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-din",
+          "hebrew": "הָשִׁיבָה שׁוֹפְטֵינוּ כְּבָרִאשׁוֹנָה וְיוֹעֲצֵינוּ כְּבַתְּחִלָּה, וּמְלוֹךְ עָלֵינוּ מְהֵרָה אַתָּה יְיָ לְבַדְּךָ, בְּחֶסֶד וּבְרַחֲמִים, בְּצֶדֶק וּבְמִשְׁפָּט. בָּרוּךְ אַתָּה יְיָ, מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט.",
+          "translation": "Restore our judges as of old, and our counselors as at first, and reign over us, You alone, Adhonay, in kindness and mercy, in righteousness and justice. Blessed are You, Adhonay, King who loves righteousness and justice.",
+          "translit": "hashiva shofĕṭenu kĕvariʾshona wĕyo'ăṣenu kĕvattĕḥilla, umĕlokh 'alenu mĕhera ʾatta Adhonay lĕvaddĕkha, bĕḥesedh uvĕraḥămim, bĕṣedheq uvĕmishpaṭ. barukh ʾatta Adhonay, melekh ʾohev ṣĕdhaqa umishpaṭ."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-birkat-haminim",
+          "hebrew": "לַמִּינִים וְלַמַּלְשִׁינִים אַל תְּהִי תִקְוָה, וּמַלְכוּת הָרִשְׁעָה מְהֵרָה תְעַקֵּר וּתְשַׁבֵּר וּתְכַלֵּם וְתַכְנִיעֵם בִּמְהֵרָה בְיָמֵינוּ. בָּרוּךְ אַתָּה יְיָ, שׁוֹבֵר אוֹיְבִים וּמַכְנִיעַ מִינִים.",
+          "translation": "Let there be no hope for informers and heretics, and may You quickly uproot, break, cast down, and subdue the dominion of wickedness, speedily in our days. Blessed are You, Adhonay, who breaks enemies and subdues the arrogant.",
+          "translit": "lamminim wĕlammalshinim ʾal tĕhi thiqwa, umalkhuth harish'a mĕhera thĕ'aqqer uthĕshabber uthĕkhallem wĕthakhni'em bimhera vĕyamenu. barukh ʾatta Adhonay, shover ʾoyĕvim umakhnia' minim."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-al-hatzaddikim",
+          "hebrew": "עַל הַצַּדִּיקִים וְעַל הַחֲסִידִים, וְעַל שְׁאֵרִית עַמְּךָ בֵּית יִשְׂרָאֵל, וְעַל פְּלֵיטַת בֵּית סוֹפְרֵיהֶם, וְעַל גֵּרֵי הַצֶּדֶק וְעָלֵינוּ, יֶהֱמוּ נָא רַחֲמֶיךָ יְיָ אֱלֹהֵינוּ, וּלְעוֹלָם לֹא נֵבוֹשׁ כִּי בְךָ בָטָחְנוּ, וְעַל חַסְדְּךָ הַגָּדוֹל בֶּאֱמֶת נִשְׁעָנּוּ. בָּרוּךְ אַתָּה יְיָ, מִשְׁעָן וּמִבְטָח לַצַּדִּיקִים.",
+          "translation": "Toward the righteous and the pious, toward the remnant of Your people the house of Israel, toward the survivors of their scholars, toward the righteous converts, and toward us — let Your mercy be stirred, Adhonay our God; may we never be ashamed, for we have trusted in You, and have truly relied on Your great kindness. Blessed are You, Adhonay, support and trust of the righteous.",
+          "translit": "'al haṣṣaddiqim wĕ'al haḥăsidhim, wĕ'al shĕʾerith 'ammĕkha beth yisraʾel, wĕ'al pĕleṭath beth sofĕrehem, wĕ'al gere haṣṣedheq wĕ'alenu, yehĕmu naʾ raḥămekha Adhonay ʾĕlohenu, ulĕ'olam loʾ nevosh ki vĕkha vaṭaḥĕnu, wĕ'al ḥasdĕkha haggadhol beʾĕmeth nish'annu. barukh ʾatta Adhonay, mish'an umivṭaḥ laṣṣaddiqim."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-boneh-yerushalayim",
+          "hebrew": "תִּשְׁכּוֹן בְּתוֹךְ יְרוּשָׁלַיִם עִירְךָ כַּאֲשֶׁר דִּבַּרְתָּ, וּבְנֵה אוֹתָהּ בִּנְיַן עוֹלָם בִּמְהֵרָה בְיָמֵינוּ. בָּרוּךְ אַתָּה יְיָ, בּוֹנֵה יְרוּשָׁלָיִם.",
+          "translation": "Dwell within Jerusalem Your city as You have spoken, and build it as an everlasting structure, speedily in our days. Blessed are You, Adhonay, who builds Jerusalem.",
+          "translit": "tishkon bĕthokh yĕrushalayim 'irĕkha kaʾăsher dibbarta, uvĕneh ʾothah binyan 'olam bimhera vĕyamenu. barukh ʾatta Adhonay, boneh yĕrushalayim."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-tzemach-david",
+          "hebrew": "אֶת צֶמַח דָּוִד עַבְדְּךָ מְהֵרָה תַצְמִיחַ, כִּי לִישׁוּעָתְךָ קִוִּינוּ כָּל הַיּוֹם. בָּרוּךְ אַתָּה יְיָ, מַצְמִיחַ קֶרֶן יְשׁוּעָה.",
+          "translation": "Speedily cause the offshoot of David Your servant to flourish, for we wait for Your salvation all day. Blessed are You, Adhonay, who causes the standing of salvation to flourish.",
+          "translit": "ʾeth ṣemaḥ dawīdh 'avdĕkha mĕhera thaṣmiaḥ, ki lishu'athĕkha qiwwinu kol hayyom. barukh ʾatta Adhonay, maṣmiaḥ qeren yĕshu'a."
+        },
+        {
+          "type": "text",
+          "id": "abbreviated-shomea-tefilah",
+          "hebrew": "שְׁמַע קוֹלֵנוּ, יְיָ אֱלֹהֵינוּ, כִּי אַתָּה שׁוֹמֵעַ תְּפִלַּת כָּל פֶּה. בָּרוּךְ אַתָּה יְיָ, שׁוֹמֵעַ תְּפִלָּה.",
+          "translation": "Hear our voice, Adhonay our God, for You hear the prayer of every mouth. Blessed are You, Adhonay, who hears prayer.",
+          "translit": "shĕma' qolenu, Adhonay ʾĕlohenu, ki ʾatta shomea' tĕfillath kol peh. barukh ʾatta Adhonay, shomea' tĕfilla."
         }
       ]
     }

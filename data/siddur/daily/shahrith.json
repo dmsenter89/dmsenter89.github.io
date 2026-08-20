@@ -99,6 +99,18 @@
           "translit": "barukh ʾĕlohenu shebbĕraʾanu likhvodho, wĕhivdilanu mīn hatto'im, wĕnathan lanu torath ʾĕmeth, wĕḥayye 'olam naṭa' bĕthokhenu. huʾ yiftaḥ libbenu bĕthoratho, wĕyasim bĕlibbenu ʾahăvatho wĕyirʾatho la'ăsoth rĕṣono, ulĕ'avĕdho bĕlevav shalem. loʾ nigha' lariq, wĕloʾ neledh labbehala. yĕhi raṣon millĕfanekha, Adhonay ʾĕlohenu weʾlohe ʾăvothenu, shennishmor ḥuqqekha umiṣwothekha ba'olam hazzeh, wĕnizkeh, wĕniḥyeh, wĕnirash ṭova uvĕrakha lĕḥayye ha'olam habbaʾ. lĕma'an yĕzammerkha khavodh wĕloʾ yiddom Adhonay ʾĕlohay lĕ'olam ʾodhekka. Adhonay ḥafeṣ lĕma'an ṣidhqo yaghdil tora wĕyaʾdir. wĕyivṭĕḥu vĕkha yodhĕ'e shĕmekha ki loʾ-'azavta dhorĕshekha Adhonay Adhonay ʾădhonenu ma-ʾaddir shimkha bĕkhol-haʾareṣ. ḥizqu wĕyaʾămeṣ lĕvavkhem kol-hamĕyaḥălim laAdhonay."
         }
       ]
+    },
+    {
+      "id": "conclusion",
+      "title": "Conclusion",
+      "items": [
+        {
+          "type": "include",
+          "ref": "daily/arvith",
+          "sectionId": "conclusion",
+          "itemIds": ["aleinu"]
+        }
+      ]
     }
   ]
 }

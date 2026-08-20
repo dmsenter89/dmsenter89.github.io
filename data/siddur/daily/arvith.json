@@ -113,7 +113,7 @@
           "options": [
             {
               "id": "full",
-              "label": "Full Amidah",
+              "label": "Full",
               "items": [
                 {
                   "type": "include",
@@ -156,6 +156,34 @@
                     "boneh-yerushalayim",
                     "tzemach-david",
                     "shomea-tefilah"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "abbreviated",
+              "label": "Abbreviated",
+              "items": [
+                {
+                  "type": "include",
+                  "ref": "shared/amidah-weekday",
+                  "sectionId": "weekday-amidah",
+                  "itemIds": [
+                    "abbreviated-daat",
+                    "abbreviated-daat-havdalah",
+                    "abbreviated-daat-close",
+                    "abbreviated-teshuva",
+                    "abbreviated-selicha",
+                    "abbreviated-geula",
+                    "abbreviated-refuah",
+                    "abbreviated-birkat-hashanim-season",
+                    "abbreviated-kibbutz-galuyot",
+                    "abbreviated-din",
+                    "abbreviated-birkat-haminim",
+                    "abbreviated-al-hatzaddikim",
+                    "abbreviated-boneh-yerushalayim",
+                    "abbreviated-tzemach-david",
+                    "abbreviated-shomea-tefilah"
                   ]
                 }
               ]
