@@ -1,0 +1,248 @@
+{
+  "title": "Kiddush",
+  "sections": [
+    {
+      "id": "kiddush-leil-shabbat",
+      "title": "Kiddush Leil Shabbat",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "kiddush-leil-a",
+          "hebrew": "א. אחר התפלה ילך לביתו ורוחץ כוס ומדיחו מבפנים ושוטפו מבחוץ, וממלאו לפחות רביעית יין ומקבלו בשתי ידיו. והנותנו נתנו לו בשתי ידיו, ואוחזו בימינו (ולא יסיע בשמאל) ומקדש. ושותה ומשקה לכל בני החבורה, וכן בכל קדוש (עין רמב\"ם פ\"ו כו', סוכה פ\"ב הע\"ב כד).",
+          "translation": "1. After the prayer service, he goes home and washes a cup, rinsing it inside and scouring it outside, and fills it with at least a revi'it of wine, receiving it in both hands. And the one who hands it to him gives it with both hands, and he holds it in his right hand (and should not be assisted by the left) and recites Kiddush. He drinks and gives to drink to all members of the company, and so for every Kiddush (see Rambam, ch. 6:26; Sukkah, ch. 2, note 2:24)."
+        },
+        {
+          "type": "rubric",
+          "id": "kiddush-leil-b",
+          "hebrew": "ב. מנהג יפה, לאחר הקדוש לאכל פרות וקליות ולשיר שירי שבת כשעה אחת, ואחר כך לטל ידים ולסעד. וכך בכל לילי שבת וימים טובים.",
+          "translation": "2. It is a fine custom, after Kiddush, to eat fruit and roasted seeds and sing Shabbat songs for about an hour, and afterward to wash the hands and eat the meal. And so on every Friday night and festival evening."
+        },
+        {
+          "type": "rubric",
+          "id": "kiddush-leil-c",
+          "hebrew": "ג. משקיעת החמה חל חובת קדוש, ואסור לטעום שום דבר אפלו מים עד שיקדש, ואפלו שלא התפלל עדין ערבית (בא\"ח ש\"ש בראשית יד).",
+          "translation": "3. From sunset the obligation of Kiddush takes effect, and it is forbidden to taste anything at all, even water, until one recites Kiddush — even if one has not yet prayed the evening service (Ben Ish Chai, Year 2, Parashat Bereishit 14)."
+        },
+        {
+          "type": "rubric",
+          "id": "kiddush-leil-d",
+          "hebrew": "ד. גם הנשים חיבות בקדוש של שבת מהתורה (בא\"ח ש\"ש יא), לכן אם אין בעלה בבית או שהיא (בר מינן) אלמנה — יכולה לקדש לעצמה, ולהוציא את בני ביתה ידי חובה.",
+          "translation": "4. Women too are obligated in the Kiddush of Shabbat by Torah law (Ben Ish Chai, Year 2, Parashat Bereishit 11); therefore, if her husband is not home, or if she is (Heaven forbid) a widow, she may recite Kiddush for herself, and discharge the obligation for the members of her household."
+        },
+        {
+          "type": "rubric",
+          "id": "kiddush-instr-1",
+          "hebrew": "ולוקח כוס יין המחזיק רביעית ומקבלו בשתי ידיו, והנותנו נתנו לו בשתי ידיו, ואוחזו בימינו, ואומר:",
+          "translation": "And one takes a cup of wine holding a revi'it and receives it in both hands, and the one who hands it to him gives it with both hands, and he holds it in his right hand, and says:"
+        },
+        {
+          "type": "text",
+          "id": "kos-yeshuot-hodu",
+          "hebrew": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם יְיָ אֶקְרָא׃ הוֹדוּ לַיְיָ כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
+          "translation": "I will lift up the cup of salvations, and call upon the name of Adhonay. (Psalm 116:13) Give thanks to Adhonay, for He is good; His kindness endures forever. (Psalm 118:1)",
+          "translit": "kos-yĕshu'oth ʾessaʾ uvĕshem Adhonay ʾeqraʾ. hodhu laAdhonay ki-ṭov ki lĕ'olam ḥasdo."
+        },
+        {
+          "type": "rubric",
+          "id": "vayechulu-note-1",
+          "hebrew": "מנהג פשוט בכל ישראל לקרות פרשת ויכלו לפני הקדוש.",
+          "translation": "It is a widespread custom among all of Israel to read the passage of Vayechulu before Kiddush."
+        },
+        {
+          "type": "rubric",
+          "id": "vayechulu-note-2",
+          "hebrew": "יש עומדים באמירת הקדוש ויותר טוב יושבים.",
+          "translation": "Some stand for the recitation of Kiddush, but it is better to sit."
+        },
+        {
+          "type": "text",
+          "id": "vayechulu-psalm",
+          "hebrew": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃ וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃ וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
+          "translation": "The heaven and the earth were finished, and all their array. On the seventh day God finished the work that He had done, and He ceased on the seventh day from all the work that He had done. And God blessed the seventh day and sanctified it, because on it He ceased from all His work that God had created to do. (Genesis 2:1–3)",
+          "translit": "wayĕkhullu hashshamayīm wĕhaʾareṣ wĕkhol-ṣĕvaʾam. wayĕkhal ʾĕlohim bayyom hashshĕvi'i mĕlaʾkhto ʾăsher 'asa wayyishboth bayyom hashshĕvi'i mikkol-mĕlaʾkhto ʾăsher 'asa. wayĕvarekh ʾĕlohim ʾeth-yom hashshĕvi'i wayĕqaddesh ʾotho ki vo shavath mikkol-mĕlaʾkhto ʾăsher-varaʾ ʾĕlohim la'ăsoth.",
+          "audio": "http://www.sephardichazzanut.com/6.Shabbat/kiddush_Friday_Night.mp3"
+        },
+        {
+          "type": "text",
+          "id": "kiddush-bracha-hagafen",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, בּוֹרֵא פְרִי הַגָּפֶן.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates the fruit of the vine.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, boreʾ fĕri haggafen."
+        },
+        {
+          "type": "text",
+          "id": "kiddush-bracha-mekadesh-hashabbat",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְרָצָה בָנוּ, וְשַׁבַּת קָדְשׁוֹ בְּאַהֲבָה וּבְרָצוֹן הִנְחִילָנוּ, זִכָּרוֹן לְמַעֲשֵׂה בְרֵאשִׁית, תְּחִלָּה לְמִקְרָאֵי קֹדֶשׁ, זֵכֶר לִיצִיאַת מִצְרָיִם, כִּי בָנוּ בָחַרְתָּ וְאוֹתָנוּ קִדַּשְׁתָּ מִכָּל הָעַמִּים, וְשַׁבַּת קָדְשְׁךָ בְּאַהֲבָה וּבְרָצוֹן הִנְחַלְתָּנוּ. בָּרוּךְ אַתָּה יְיָ, מְקַדֵּשׁ הַשַּׁבָּת.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has sanctified us with His commandments and found favor in us, and has given us His holy Sabbath in love and favor as a heritage — a remembrance of the work of creation, first among the holy convocations, a remembrance of the exodus from Egypt; for You have chosen us and sanctified us from among all peoples, and have given us Your holy Sabbath in love and favor as a heritage. Blessed are You, Adhonay, who sanctifies the Sabbath.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕraṣa vanu, wĕshabbath qodhsho bĕʾahăva uvĕraṣon hinḥilanu, zikkaron lĕma'ăseh vĕreʾshith, tĕḥilla lĕmiqraʾe qodhesh, zekher liṣiʾath miṣrayīm, ki vanu vaḥarta wĕʾothanu qiddashta mikkol ha'ammim, wĕshabbath qodhshĕkha bĕʾahăva uvĕraṣon hinḥaltanu. barukh ʾatta Adhonay, mĕqaddesh hashshabbath."
+        },
+        {
+          "type": "rubric",
+          "id": "kiddush-drinking-note",
+          "hebrew": "ושותה ומשקה לכל בני החבורה. ולכתחלה יטעם המקדש מלא לגמיו [דהינו כל שיסלקנו לצד אחד ויראה בפיו מלא לגמיו], ומן המבחר לשתות רביעית, ובדיעבד אם רק אחד מן המסבין טעם כשעור — יצאו כלם ידי חובה (בא\"ח שם ד). ולכתחלה צריך שיטעם המקדש מעט לפחות (כה\"ח רעא ס\"ק פו). ואין שתית שנים מצטרפין לשעור, ומכל מקום מן המבחר שיטעמו כלם כשעור, ובדיעבד אם כלם טעמו יחד כשעור — יצאו (בא\"ח שם ד). ואף ששתה רביעית מהיין — לא יברך ברכה אחרונה (בא\"ח נשא ד).",
+          "translation": "He drinks and gives to drink to all members of the company. Ideally, the one who recites Kiddush should taste a mouthful [that is, enough that if drawn to one side it would visibly fill his mouth], and it is best to drink a revi'it; after the fact, if only one of those seated tasted the required amount, all have fulfilled their obligation (Ben Ish Chai, ibid. 4). Ideally, the one reciting Kiddush should taste at least a small amount (Kaf HaChaim 271:86). The drinking of two people does not combine to reach the measure; still, it is best that all taste the required amount, and after the fact, if all tasted the amount together, they have fulfilled their obligation (Ben Ish Chai, ibid. 4). And even though he drank a revi'it of wine, he does not recite the concluding blessing (Ben Ish Chai, Parashat Naso 4)."
+        },
+        {
+          "type": "rubric",
+          "id": "kiddush-after-note",
+          "hebrew": "לאחר הקדוש אוכלים פרות וקליות ושרים שירי שבת כשעה אחת, ואחר כך נוטלים ידיהם וסועדים (עין מהרי\"ץ).",
+          "translation": "After Kiddush, one eats fruit and roasted seeds and sings Shabbat songs for about an hour, and afterward washes the hands and eats the meal (see Maharitz)."
+        },
+        {
+          "type": "subsection",
+          "id": "birkat-habanim",
+          "title": "Birkat HaBanim",
+          "items": [
+            {
+              "type": "rubric",
+              "id": "birkat-habanim-commentary",
+              "hebrew": "מנהגן של ישראל לברך בנים ובנות — בליל שבת האבות ואחד הרבנים אחר התפלה, שאז הוא עת רצון וחל השפע, וראוי להמשיך על הילדים ביחוד, שאין בכחם להמשיך שפע במעשיהם, אבל על ידי גדול — אמצעי משבח הוא, ויורד וחל ונאחז ביותר בקטנים, שעדין לא טעמו טעם חטא, ועל ידיהם הוא מתפשט יותר, אבל גם הבנים הגדולים מקבלים ברכה מאבותיהם, ונכון הוא (כה\"ח רסח ס\"ק יג). ונמצא בכתיבת יד רבנו חיים ויטאל שנהגו לנשק ידי אמו אחר הקדוש.",
+              "translation": "It is the custom of Israel for fathers, and for any of the rabbis, to bless sons and daughters on Friday night after the prayer service, since that is a time of favor when abundance descends; and it is fitting to draw this down specifically upon the children, since they do not have the strength to draw down abundance through their own deeds, but through a great person it is an excellent conduit, and it descends and rests and is grasped more readily by the young, who have not yet tasted the taste of sin, and through them it spreads further — but the older sons too receive a blessing from their fathers, and this is correct (Kaf HaChaim 268:13). And it is found in the handwriting of our teacher Rabbi Chaim Vital that the custom was to kiss the hands of one's mother after Kiddush."
+            },
+            {
+              "type": "rubric",
+              "id": "birkat-habanim-instr",
+              "hebrew": "וקדם הברכה יניח יד ימין על ראש הילד ויאמר:",
+              "translation": "And before the blessing, he places his right hand on the child's head and says:"
+            },
+            {
+              "type": "rubric",
+              "id": "birkat-habanim-boy-cue",
+              "hebrew": "לזכר:",
+              "translation": "For a boy:"
+            },
+            {
+              "type": "text",
+              "id": "birkat-habanim-boy",
+              "hebrew": "יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה.",
+              "translation": "May God make you like Ephraim and Manasseh. (Genesis 48:20)",
+              "translit": "yĕsimkha ʾĕlohim kĕʾefrayīm wĕkhimnashsheh."
+            },
+            {
+              "type": "rubric",
+              "id": "birkat-habanim-girl-cue",
+              "hebrew": "לנקבה:",
+              "translation": "For a girl:"
+            },
+            {
+              "type": "text",
+              "id": "birkat-habanim-girl",
+              "hebrew": "יְשִׂימֵךְ אֱלֹהִים כְּשָׂרָה רִבְקָה רָחֵל וְלֵאָה.",
+              "translation": "May God make you like Sarah, Rebecca, Rachel, and Leah.",
+              "translit": "yĕsimekh ʾĕlohim kĕsara rivqa raḥel wĕleʾa."
+            },
+            {
+              "type": "text",
+              "id": "birkat-kohanim",
+              "hebrew": "יְבָרֶכְךָ יְיָ וְיִשְׁמְרֶךָ׃ יָאֵר יְיָ פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃ יִשָּׂא יְיָ פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃ וְשָׂמוּ אֶת־שְׁמִי עַל־בְּנֵי יִשְׂרָאֵל וַאֲנִי אֲבָרְכֵם׃",
+              "translation": "Adhonay bless you and keep you. Adhonay make His face shine upon you and be gracious to you. Adhonay lift up His face toward you and grant you peace. And they shall set My name upon the children of Israel, and I will bless them. (Numbers 6:24–27)",
+              "translit": "yĕvarekhkha Adhonay wĕyishmĕrekha. yaʾer Adhonay panaw ʾelekha wiḥunnekka. yissaʾ Adhonay panaw ʾelekha wĕyasem lĕkha shalom. wĕsamu ʾeth-shĕmi 'al-vĕne yisraʾel waʾăni ʾăvarĕkhem."
+            },
+            {
+              "type": "rubric",
+              "id": "birkat-habanim-add-note",
+              "hebrew": "וכל אחד יוכל להוסיף ברכה משלו כפי צחות לשונו (יעב\"ץ בעמודי שמים דף שמ\"א ע\"א אות ה).",
+              "translation": "And each one may add a blessing of his own, according to the eloquence of his speech (Yaavetz, Amudei Shamayim, page 341a, note 5)."
+            }
+          ]
+        },
+        {
+          "type": "subsection",
+          "id": "netilat-yadayim",
+          "title": "Netilat Yadayim",
+          "items": [
+            {
+              "type": "text",
+              "id": "netilat-yadayim-bracha",
+              "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם.",
+              "translation": "Blessed are You, Adhonay our God, King of the universe, who has sanctified us with His commandments and commanded us concerning the washing of the hands.",
+              "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al nĕṭilath yadhayīm."
+            }
+          ]
+        },
+        {
+          "type": "subsection",
+          "id": "hamotzi",
+          "title": "HaMotzi",
+          "items": [
+            {
+              "type": "text",
+              "id": "einei-chol",
+              "hebrew": "עֵינֵי־כֹל אֵלֶיךָ יְשַׂבֵּרוּ וְאַתָּה נוֹתֵן־לָהֶם אֶת־אָכְלָם בְּעִתּוֹ׃ פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
+              "translation": "The eyes of all look to You, and You give them their food in due season. You open Your hand, and satisfy the desire of every living thing. (Psalm 145:15–16)",
+              "translit": "'ene-khol ʾelekha yĕsabberu wĕʾatta nothen-lahem ʾeth-ʾokhlam bĕ'itto. potheaḥ ʾeth-yadhekha umasbia' lĕkhol-ḥay raṣon."
+            },
+            {
+              "type": "text",
+              "id": "hamotzi-bracha",
+              "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמּוֹצִיא לֶחֶם מִן הָאָרֶץ.",
+              "translation": "Blessed are You, Adhonay our God, King of the universe, who brings forth bread from the earth.",
+              "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hammoṣiʾ leḥem mīn haʾareṣ."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kiddush-rabba",
+      "title": "Kiddush Rabba",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "kiddush-rabba-commentary",
+          "hebrew": "יהיה שלחנו ערוך ומטה מצעת יפה ומפה פרוסה כמו בסעדת הלילה, ויברך על היין בורא פרי הגפן והוא נקרא קדושא רבא, ואחר כך יטל ידיו ויבצע על לחם משנה כמו בלילה ויסעד. וגם זה הקדוש צריך שיהיה במקום סעדה, ושלא יטעם קדם לו כלום כמו בקדוש הלילה, ומיהו לשתות מים בבקר קדם תפלה מתר, מפני שעדין לא חל עליו חובת קדוש. במקום שאין יין מצוי, הוי שכר ושאר משקין חוץ מהמים חמר מדינה ומקדשין עליו, ואם אין לו אפלו שכר ושאר משקין — אוכל בלא קדוש (שו\"ע או\"ח רפט).",
+          "translation": "His table should be set and the bed nicely made, with a cloth spread as at the evening meal, and he blesses over the wine, \"who creates the fruit of the vine,\" and this is called Kiddusha Rabba (\"the Great Kiddush\"); afterward he washes his hands, breaks bread over lechem mishneh as at night, and eats the meal. This Kiddush, too, must take place where a meal is eaten, and one must not taste anything before it, just as with the Kiddush of the night; however, it is permitted to drink water in the morning before prayer, since the obligation of Kiddush has not yet taken effect for him. Where wine is not available, beer and other beverages besides water are considered \"the drink of the region,\" and one may recite Kiddush over them; and if he has neither beer nor other beverages, he eats without Kiddush (Shulchan Arukh, Orach Chaim 289)."
+        },
+        {
+          "type": "include",
+          "ref": "shabbat/kiddush",
+          "sectionId": "kiddush-leil-shabbat",
+          "itemIds": [
+            "kiddush-instr-1"
+          ]
+        },
+        {
+          "type": "include",
+          "ref": "shabbat/kiddush",
+          "sectionId": "kiddush-leil-shabbat",
+          "itemIds": [
+            "kos-yeshuot-hodu"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "veshamru-psalm",
+          "hebrew": "וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת לַעֲשׂוֹת אֶת־הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם׃ בֵּינִי וּבֵין בְּנֵי יִשְׂרָאֵל אוֹת הִוא לְעֹלָם כִּי־שֵׁשֶׁת יָמִים עָשָׂה יְיָ אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ וּבַיּוֹם הַשְּׁבִיעִי שָׁבַת וַיִּנָּפַשׁ׃",
+          "translation": "The children of Israel shall keep the Sabbath, to observe the Sabbath throughout their generations, as an everlasting covenant. It is a sign between Me and the children of Israel forever; for in six days Adhonay made the heavens and the earth, and on the seventh day He ceased from work and was refreshed. (Exodus 31:16–17)",
+          "translit": "wĕshamĕru vĕne-yisraʾel ʾeth-hashshabbath la'ăsoth ʾeth-hashshabbath lĕdhorotham bĕrith 'olam. beni uven bĕne yisraʾel ʾoth hīwʾ lĕ'olam ki-shesheth yamim 'asa Adhonay ʾeth-hashshamayīm wĕʾeth-haʾareṣ uvayyom hashshĕvi'i shavath wayyinnafash."
+        },
+        {
+          "type": "include",
+          "ref": "shabbat/kiddush",
+          "sectionId": "kiddush-leil-shabbat",
+          "itemIds": [
+            "kiddush-bracha-hagafen"
+          ]
+        },
+        {
+          "type": "rubric",
+          "id": "kiddush-rabba-drinking-note",
+          "hebrew": "וישתה מהיין שבכוס, ולכתחלה צריך שיטעם המקדש מלא לגמיו [דהינו כל שיסלקנו לצד אחד ויראה בפיו מלא לגמיו], ומן המבחר לשתות רביעית, ובדיעבד אם לא טעם המקדש וטעם אחד מן המסבין מלא לגמיו — יצאו כלם ידי חובה (ובתנאי שלכתחלה יטעם המקדש מעט לפחות). ומן המבחר שיטעמו כלם (בא\"ח שם כג). ואף ששתה רביעית מהיין — לא יברך ברכה אחרונה (בא\"ח נשא ד).",
+          "translation": "He drinks from the wine in the cup; ideally, the one reciting Kiddush should taste a mouthful [that is, enough that if drawn to one side it would visibly fill his mouth], and it is best to drink a revi'it; after the fact, if the one reciting Kiddush did not taste it but one of those seated tasted a mouthful, all have fulfilled their obligation (provided that, ideally, the one reciting Kiddush tastes at least a small amount). It is best that all taste it (Ben Ish Chai, ibid. 23). And even though he drank a revi'it of wine, he does not recite the concluding blessing (Ben Ish Chai, Parashat Naso 4)."
+        }
+      ]
+    },
+    {
+      "id": "seudah-shlishit",
+      "title": "Seudah Shlishit",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "seudah-shlishit-note",
+          "hebrew": "יהא זהיר מאד לקים סעדה שלישית, ואף אם הוא שבע יכול לקים אותה בכביצה, ואם אי אפשר לו כלל לאכל אינו חיב לצער את עצמו, והחכם עיניו בראשו שלא ימלא בטנו בסעדת הבקר כדי לתן מקום לסעדה שלישית. זמנה משיגיע זמן המנחה, דהינו משש שעות ומחצה ולמעלה, ואם עשאה קדם לכן לא קים מצות סעדה שלישית. אם נמשכה סעדת הבקר עד שמגיע זמן המנחה, יפסיק הסעדה ויברך ברכת המזון ויטל ידיו ויברך ברכת המוציא ויסעד, ונכון הדבר שאם לא היה עושה כן, מאחר שנמשכה סעדת הבקר עד אותה שעה, לא היה יכול לאכל אחר כך אלא אכילה גסה. אין צריך לקדש בסעדה שלישית, אבל צריך לבצע על שתי ככרות. צריך לעשותה בפת, ויש אומרים שיכול לעשותה בכל מאכל העשוי באחד מחמשת מיני דגן, ויש אומרים שיכול לעשותה בדברים שמלפתים בהם את הפת כבשר ודגים אבל לא בפרות, ויש אומרים דאפלו בפרות יכול לעשותה, וסברא ראשונה עקר שצריך לעשותה בפת אלא אם כן הוא שבע ביותר. נשים חיבות בסעדה שלישית (שו\"ע או\"ח רצא).",
+          "translation": "One should be very careful to observe the third meal (Seudah Shlishit); even if one is full, it can be fulfilled with the amount of an egg. If one cannot eat at all, one is not obligated to cause oneself discomfort; and the wise person keeps his eyes on his head, not filling his stomach at the morning meal so as to leave room for the third meal. Its time begins when the time for Mincha arrives — that is, from six and a half hours onward; if one held it before that time, one has not fulfilled the mitzvah of the third meal. If the morning meal continues until the time for Mincha arrives, one should pause the meal, recite Birkat HaMazon, wash the hands, recite the blessing of HaMotzi, and eat; and it is proper to do so, for otherwise, since the morning meal had continued until that hour, one would only be able to eat afterward with a forced appetite. There is no need to recite Kiddush at the third meal, but one must break bread over two loaves. It must be done with bread; some say it may be done with any food made from one of the five species of grain; some say it may be done with foods eaten together with bread, such as meat and fish, but not with fruit; and some say it may even be done with fruit — but the first opinion is primary, that it must be done with bread, unless one is exceedingly full. Women are obligated in the third meal (Shulchan Arukh, Orach Chaim 291)."
+        }
+      ]
+    }
+  ]
+}
