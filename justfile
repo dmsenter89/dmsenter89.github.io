@@ -36,9 +36,22 @@ setup:
 #   - regenerates "translit" for every type:"text" item
 # It never touches "translation" — that field is always hand-authored.
 
-# Regenerate transliteration + Divine Name normalization for one chapter file, e.g. `just update data/siddur/daily/before-sleep.json`
-update file:
-    cd siddur-build && node generate.mjs "{{ justfile_directory() }}/{{ file }}"
+# Leave the path off to regenerate every chapter file at once — handy after
+# a batch of edits when you don't want to list them all out individually.
+# (This skips data/siddur/appendix/*.json on purpose: those tables have
+# their own generators below, not this per-chapter one.)
+# Regenerate transliteration + Divine Name normalization for one chapter file, or every chapter file if you omit the path
+update file="":
+    #!/usr/bin/env bash
+    set -euo pipefail
+    cd siddur-build
+    if [ -z "{{ file }}" ]; then
+        find "{{ justfile_directory() }}/data/siddur" -name '*.json' -not -path '*/appendix/*' | sort | while IFS= read -r f; do
+            node generate.mjs "$f"
+        done
+    else
+        node generate.mjs "{{ justfile_directory() }}/{{ file }}"
+    fi
 
 # The Appendix > Transliteration page is generated straight from
 # siddur-build/schema.mjs, so it can never drift from actual behavior on
