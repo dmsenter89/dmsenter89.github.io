@@ -78,7 +78,7 @@
     },
     {
       "id": "ashrei",
-      "title": "Ashrei",
+      "title": "Ashre",
       "items": [
         {
           "type": "include",
@@ -97,6 +97,18 @@
           "hebrew": "בָּרוּךְ אֱלֹהֵֽינוּ שֶׁבְּרָאָֽנוּ לִכְבוֹדוֹ, וְהִבְדִּילָֽנוּ מִן הַתּוֹעִים, וְנָֽתַן לָֽנוּ תּוֹרַת אֱמֶת, וְחַיֵּי עוֹלָם נָטַע בְּתוֹכֵֽנוּ. הוּא יִפְתַּח לִבֵּֽנוּ בְּתֽוֹרָתוֹ, וְיָשִׂים בְּלִבֵּֽנוּ אַֽהֲבָתוֹ וְיִרְאָתוֹ לַֽעֲשׂוֹת רְצוֹנוֹ, וּלְעָבְדוֹ בְּלֵבָב שָׁלֵם. לֹא נִיגַע לָרִיק, וְלֹא נֵלֵד לַבֶּֽהָלָה. יְהִי רָצוֹן מִלְּפָנֶֽיךָ, יְיָ אֱלֹהֵֽינוּ וֵֽאלֹהֵי אֲבוֹתֵֽינוּ, שֶׁנִּשְׁמוֹר חֻקֶּֽיךָ וּמִצְוֹתֶֽיךָ בָּעוֹלָם הַזֶּה, וְנִזְכֶּה, וְנִחְיֶה, וְנִירַשׁ טוֹבָה וּבְרָכָה לְחַיֵּי הָעוֹלָם הַבָּא. לְמַ֤עַן ׀ יְזַמֶּרְךָ֣ כָ֭בוֹד וְלֹ֣א יִדֹּ֑ם יְיָ֥ אֱ֝לֹהַ֗י לְעוֹלָ֥ם אוֹדֶֽךָּ׃ יְיָ֥ חָפֵ֖ץ לְמַ֣עַן צִדְק֑וֹ יַגְדִּ֥יל תּוֹרָ֖ה וְיַאְדִּֽיר׃ וְיִבְטְח֣וּ בְ֭ךָ יוֹדְעֵ֣י שְׁמֶ֑ךָ כִּ֤י לֹֽא־עָזַ֖בְתָּ דֹרְשֶׁ֣יךָ יְיָ יְיָ֥ אֲדֹנֵ֑ינוּ מָה־אַדִּ֥יר שִׁ֝מְךָ֗ בְּכׇל־הָאָֽרֶץ׃ חִ֭זְקוּ וְיַאֲמֵ֣ץ לְבַבְכֶ֑ם כׇּל־הַ֝מְיַחֲלִ֗ים לַֽיְיָ׃",
           "translation": "Blessed is our God, who created us for His glory, and set us apart from those who go astray, and gave us a Torah of truth, and planted within us eternal life. May He open our heart to His Torah, and put into our heart love and reverence of Him, to do His will and serve Him with a whole heart, so that we may not labor in vain, nor bring forth for futility. May it be Your will, Adhonay our God and God of our ancestors, that we keep Your statutes and Your commandments in this world, and merit to live and inherit goodness and blessing in the life of the world to come. So that my soul may sing praise to You and not be silent; Adhonay my God, I will thank You forever. Adhonay desired, for the sake of His righteousness, to make the Torah great and glorious. Those who know Your name put their trust in You, for You, Adhonay, have not forsaken those who seek You. Adhonay, our Lord, how majestic is Your name throughout all the earth! Be strong, and let your heart take courage, all who wait for Adhonay.",
           "translit": "barukh ʾĕlohenu shebbĕraʾanu likhvodho, wĕhivdilanu mīn hatto'im, wĕnathan lanu torath ʾĕmeth, wĕḥayye 'olam naṭa' bĕthokhenu. huʾ yiftaḥ libbenu bĕthoratho, wĕyasim bĕlibbenu ʾahăvatho wĕyirʾatho la'ăsoth rĕṣono, ulĕ'avĕdho bĕlevav shalem. loʾ nigha' lariq, wĕloʾ neledh labbehala. yĕhi raṣon millĕfanekha, Adhonay ʾĕlohenu weʾlohe ʾăvothenu, shennishmor ḥuqqekha umiṣwothekha ba'olam hazzeh, wĕnizkeh, wĕniḥyeh, wĕnirash ṭova uvĕrakha lĕḥayye ha'olam habbaʾ. lĕma'an yĕzammerkha khavodh wĕloʾ yiddom Adhonay ʾĕlohay lĕ'olam ʾodhekka. Adhonay ḥafeṣ lĕma'an ṣidhqo yaghdil tora wĕyaʾdir. wĕyivṭĕḥu vĕkha yodhĕ'e shĕmekha ki loʾ-'azavta dhorĕshekha Adhonay Adhonay ʾădhonenu ma-ʾaddir shimkha bĕkhol-haʾareṣ. ḥizqu wĕyaʾămeṣ lĕvavkhem kol-hamĕyaḥălim laAdhonay."
+        }
+      ]
+    },
+    {
+      "id": "conclusion",
+      "title": "Conclusion",
+      "items": [
+        {
+          "type": "include",
+          "ref": "daily/arvith",
+          "sectionId": "conclusion",
+          "itemIds": ["aleinu"]
         }
       ]
     }

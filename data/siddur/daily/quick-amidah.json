@@ -1,0 +1,115 @@
+{
+  "title": "Quick Amidah",
+  "sections": [
+    {
+      "id": "quick-amidah",
+      "title": "Quick Amidah",
+      "items": [
+        {
+          "type": "include",
+          "ref": "shared/amidah-weekday",
+          "sectionId": "weekday-amidah",
+          "itemIds": [
+            "amidah-open",
+            "avot",
+            "gevurot-open",
+            "gevurot-season",
+            "gevurot-close",
+            "kedushat-hashem"
+          ]
+        },
+        {
+          "type": "toggle",
+          "id": "amidah-middle",
+          "options": [
+            {
+              "id": "abbreviated",
+              "label": "Abbreviated",
+              "items": [
+                {
+                  "type": "include",
+                  "ref": "shared/amidah-weekday",
+                  "sectionId": "weekday-amidah",
+                  "itemIds": [
+                    "abbreviated-daat",
+                    "abbreviated-daat-havdalah",
+                    "abbreviated-daat-close",
+                    "abbreviated-teshuva",
+                    "abbreviated-selicha",
+                    "abbreviated-geula",
+                    "abbreviated-refuah",
+                    "abbreviated-birkat-hashanim-season",
+                    "abbreviated-kibbutz-galuyot",
+                    "abbreviated-din",
+                    "abbreviated-birkat-haminim",
+                    "abbreviated-al-hatzaddikim",
+                    "abbreviated-boneh-yerushalayim",
+                    "abbreviated-tzemach-david",
+                    "abbreviated-shomea-tefilah"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "havinenu",
+              "label": "Havinenu",
+              "items": [
+                {
+                  "type": "include",
+                  "ref": "shared/amidah-weekday",
+                  "sectionId": "weekday-amidah",
+                  "itemIds": [
+                    "havinenu-note",
+                    "havinenu"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "include",
+          "ref": "shared/amidah-weekday",
+          "sectionId": "weekday-amidah",
+          "itemIds": [
+            "avodah",
+            "modim",
+            "sim-shalom"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tefillah-ketzarah",
+      "title": "Tefillah Ketzarah",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "tefillah-ketzarah-note",
+          "hebrew": "היה מהלך במקום סכנה כגון במקום גדודי חיות ולסטים והגיע זמן התפלה, מתפלל ברכה אחת. ומתפלל אותה כשהוא מהלך בדרך. ואם יכול לעמוד עומד. וכשהוא מגיע לישוב ותתקרר דעתו חוזר ומתפלל תפלה כתקנה תשע עשרה ברכות.",
+          "translation": "One who is walking in a place of danger — such as a place of bands of wild animals or bandits — and the time for prayer arrives, prays one blessing, and prays it while walking along the way; if he is able to stand, he stands. And when he reaches a settled place and his mind is calmed, he must return and pray the prayer as ordained, of nineteen blessings. (Rambam, Laws of Prayer 4:19; codified in Shulchan Arukh/Rema, Orach Chaim 110:3)"
+        },
+        {
+          "type": "text",
+          "id": "tefillah-ketzarah-text",
+          "hebrew": "צָרְכֵי עַמְּךָ יִשְׂרָאֵל מְרֻבִּין וְדַעְתָּם קְצָרָה. יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהֵינוּ, שֶׁתִּתֵּן לְכָל אֶחָד וְאֶחָד כְּדֵי פַּרְנָסָתוֹ, וּלְכָל גְּוִיָּה וּגְוִיָּה דֵּי מַחֲסוֹרָהּ, וְהַטּוֹב בְּעֵינֶיךָ עֲשֵׂה. בָּרוּךְ אַתָּה יְיָ, שׁוֹמֵעַ תְּפִלָּה.",
+          "translation": "The needs of Your people Israel are many, and their understanding is limited. May it be Your will, Adhonay our God, that You give to each and every one what is sufficient for their livelihood, and to each body what it lacks; and do what is good in Your eyes. Blessed are You, Adhonay, who hears prayer.",
+          "translit": "ṣarĕkhe 'ammĕkha yisraʾel mĕrubbin wĕdha'tam qĕṣara. yĕhi raṣon millĕfanekha Adhonay ʾĕlohenu, shettitten lĕkhol ʾeḥadh wĕʾeḥadh kĕdhe parnasatho, ulĕkhal gĕwiyya ughĕwiyya de maḥăsorah, wĕhaṭṭov bĕ'enekha 'ăseh. barukh ʾatta Adhonay, shomea' tĕfilla."
+        }
+      ]
+    },
+    {
+      "id": "tefillat-meein-shemoneh-esreh",
+      "title": "Tefillat Mei'ein Shemoneh Esreh",
+      "items": [
+        {
+          "type": "text",
+          "id": "meein-shemoneh-esreh-text",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, אֱלֹהֵי אַבְרָהָם, אֱלֹהֵי יִצְחָק, וֵאלֹהֵי יַעֲקֹב, הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא, אֵל עֶלְיוֹן, גּוֹמֵל חֲסָדִים טוֹבִים, קוֹנֵה הַכֹּל, וּמְחַיֶּה מֵתִים אַתָּה, וְאַתָּה קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ, וְחָנֵּנוּ מֵאִתְּךָ [במוצאי שבת ויום טוב: בֵּין קֹדֶשׁ לְחֹל] דָּעַת, וְהַחֲזִירֵנוּ בִּתְשׁוּבָה שְׁלֵמָה לְפָנֶיךָ, וּסְלַח לָנוּ אָבִינוּ כִּי חָטָאנוּ, וּגְאָלֵנוּ גְּאֻלָּה שְׁלֵמָה לְמַעַן שְׁמֶךָ, וּרְפָאֵנוּ מִכָּל תַּחֲלוּאֵינוּ, וּבָרֵךְ שְׁנָתֵנוּ [בימות הגשמים: וְתֵן טַל וּמָטָר לִבְרָכָה], וְקַבְּצֵנוּ יַחַד מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ לְאַרְצֵנוּ, וּבְחֶסֶד וּבְרַחֲמִים תִּשְׁפְּטֵנוּ, וְאוֹיְבֶיךָ מְהֵרָה יִכָּרֵתוּ, וְשִׂים חֶלְקֵנוּ עִם הַצַּדִּיקִים, וּבְנֵה אֶת יְרוּשָׁלַיִם עִירְךָ, וְאֶת צֶמַח דָּוִד עַבְדְּךָ מְהֵרָה תַצְמִיחַ, וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים, וּשְׁמַע תְּפִלָּתֵנוּ, וְנוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶךָ, וְשִׂים שָׁלוֹם עָלֵינוּ וְעַל כָּל יִשְׂרָאֵל עַמֶּךָ. בָּרוּךְ אַתָּה יְיָ, הַמְּבָרֵךְ אֶת עַמּוֹ יִשְׂרָאֵל בַּשָּׁלוֹם.",
+          "translation": "Blessed are You, Adhonay, our God and God of our ancestors, God of Abraham, God of Isaac, and God of Jacob — the great, mighty, and awesome God, God Most High, who bestows lovingkindness, who owns all things, and who gives life to the dead; and You are holy and Your name is holy. Favor us with knowledge from You — [at the close of Shabbat and festivals: between the holy and the ordinary] — and return us in complete repentance before You; and forgive us, our Father, for we have sinned; and redeem us with a complete redemption for Your name's sake; and heal us from all our ailments; and bless our year [in the rainy season: and grant dew and rain for blessing]; and gather us together from the four corners of the earth to our land; and judge us with kindness and mercy; and may Your enemies be swiftly cut off; and set our portion with the righteous; and build Jerusalem Your city; and speedily cause the offshoot of David Your servant to flourish; and let our eyes see Your merciful return to Zion; and hear our prayer; and we will thank You and recount Your praise; and grant peace upon us and upon all Israel Your people. Blessed are You, Adhonay, who blesses His people Israel with peace.",
+          "translit": "barukh ʾatta Adhonay, ʾĕlohenu weʾlohe ʾăvothenu, ʾĕlohe ʾavraham, ʾĕlohe yiṣḥaq, weʾlohe ya'ăqov, haʾel haggadhol haggibbor wĕhannoraʾ, ʾel 'elyon, gomel ḥăsadhim ṭovim, qoneh hakkol, umĕḥayyeh methim ʾatta, wĕʾatta qadhosh wĕshimkha qadhosh, wĕḥannenu meʾittĕkha [vmwṣʾy shvth wywm ṭwv: ben qodhesh lĕḥol] da'ath, wĕhaḥăzirenu bithshuva shĕlema lĕfanekha, usĕlaḥ lanu ʾavinu ki ḥaṭaʾnu, ughĕʾalenu gĕʾulla shĕlema lĕma'an shĕmekha, urĕfaʾenu mikkol taḥăluʾenu, uvarekh shĕnathenu [vymwth hghshmym: wĕthen ṭal umaṭar livrakha], wĕqabbĕṣenu yaḥadh meʾarba' kanfoth haʾareṣ lĕʾarṣenu, uvĕḥesedh uvĕraḥămim tishpĕṭenu, wĕʾoyĕvekha mĕhera yikkarethu, wĕsim ḥelqenu 'īm haṣṣaddiqim, uvĕneh ʾeth yĕrushalayim 'irĕkha, wĕʾeth ṣemaḥ dawīdh 'avdĕkha mĕhera thaṣmiaḥ, wĕtheḥĕzena 'enenu bĕshuvĕkha lĕṣiyyon bĕraḥămim, ushĕma' tĕfillathenu, wĕnodheh lĕkha unĕsapper tĕhillathekha, wĕsim shalom 'alenu wĕ'al kol yisraʾel 'ammekha. barukh ʾatta Adhonay, hammĕvarekh ʾeth 'ammo yisraʾel bashshalom."
+        }
+      ]
+    }
+  ]
+}

@@ -12,12 +12,12 @@
        alternatives shown side by side, e.g. the grain/wine/fruit choice in
        Me'en Shalosh -- same nested "items" array as expandable, just never
        collapsed) |
-       "toggle" (radio-button pair selecting between two alternative
-       renditions of the same passage, e.g. the full Amidah vs. Havinenu --
-       "options" is an array of exactly two {id, label, items}; the first
-       is selected by default. CSS keys the visible panel to radio/panel
-       position via :nth-of-type, so this only supports exactly two
-       options.) |
+       "toggle" (radio-button group selecting between alternative
+       renditions of the same passage, e.g. Full/Abbreviated/Havinenu
+       Amidah -- "options" is an array of two or three {id, label, items};
+       the first is selected by default. CSS keys the visible panel to
+       radio/panel position via :nth-of-type, so this only supports up to
+       three options.) |
        "subsection" (an h3-level sub-heading within a section, for a
        section whose printed source itself subdivides under further
        headings, e.g. Havu LaAdonai / Lecha Dodi within Kabbalat Shabbat --
@@ -25,10 +25,13 @@
        "youtube"/"audio" exactly like a top-level section carries.)
        Any item (of any type) may also carry an optional "audio" URL,
        rendered as a native player -- used for chapters with a per-line
-       recording, e.g. the "For Toddlers" page. On "expandable" and
-       "subsection" items the player renders inside the wrapped content
-       (hidden until expanded, for "expandable") instead of after the
-       heading/<details>, unlike every other type. */ -}}
+       recording, e.g. the "For Toddlers" page. It renders before the
+       item's own content: right up front for rubric/text/group/toggle,
+       inside the wrapped content (hidden until expanded, for
+       "expandable") for expandable/subsection. */ -}}
+{{- if and .audio (ne .type "expandable") (ne .type "subsection") }}
+<audio class="siddur-audio-player" controls preload="none" src="{{ .audio }}"></audio>
+{{- end }}
 {{- if eq .type "include" }}
   {{- $refSegments := split .ref "/" }}
   {{- $refData := hugo.Data.siddur }}
@@ -97,7 +100,4 @@
   <p class="siddur-translit">{{ .translit }}</p>
   <p class="siddur-translation">{{ .translation }}</p>
 </div>
-{{- end }}
-{{- if and .audio (ne .type "expandable") (ne .type "subsection") }}
-<audio class="siddur-audio-player" controls preload="none" src="{{ .audio }}"></audio>
 {{- end }}

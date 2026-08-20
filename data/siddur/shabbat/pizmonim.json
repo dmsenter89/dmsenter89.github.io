@@ -188,6 +188,62 @@
           "translit": "ḥazaq huʾ wĕnoraʾ 'elyon ne'lam mera'yon, yĕmaher yivneh har ṣiyyon wĕyanḥil 'am dal wĕʾevyon, 'olam shekkullo shabbath, ḥay ḥay ḥay."
         }
       ]
+    },
+    {
+      "id": "el-eliyahu",
+      "title": "El Eliyahu",
+      "audio": "https://pizmonim.org/MP3/habusha%20el%20eliahou.mp3",
+      "youtube": "https://youtu.be/15N484W5mnE?si=WP7kYRZrZw8dERq6",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "el-eliyahu-info",
+          "hebrew": "פזמון למוצאי שבת, חתום כאקרוסטיכון בשם המחבר \"אברהם\" בראשי הבתים. הפיוט קורא לאליהו הנביא, שעל פי המסורת נח מנדודיו בשבת וחוזר לבשר את הגאולה עם צאתה, למהר ולבוא",
+          "translation": "A pizmon for Motzei Shabbat (the conclusion of the Sabbath), signed acrostically with the author's name, Avraham, at the head of its stanzas. It calls on Elijah the Prophet — who, by tradition, rests from his wanderings on Shabbat and resumes his mission to herald the redemption once it ends — to hurry and come."
+        },
+        {
+          "type": "text",
+          "id": "el-eliyahu-refrain",
+          "hebrew": "אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
+          "translation": "God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translit": "ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
+        },
+        {
+          "type": "text",
+          "id": "el-eliyahu-1",
+          "hebrew": "בּוֹ יִרְתֹּם רִכְבּוֹ, נָע בַּשְּׁבִי כִּי בוֹ, לֹא שָׁכַב לִבּוֹ, גַּם לֹא רָאָה שֵׁנָה׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
+          "translation": "Now he harnesses his chariot again, wandering in exile — for through this his heart did not lie down, nor did his eyes know sleep. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translit": "bo yirtom rikhbo, na' bashshĕvi ki vo, loʾ shakhav libbo, gam loʾ raʾa shena. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
+        },
+        {
+          "type": "text",
+          "id": "el-eliyahu-2",
+          "hebrew": "רַב מַחְלִי בִּרְאוֹת כַּחְשִׁי, וּמְשַׂנְאוֹת יָפוֹת וּבְרִיאֹת בָּשָׂר, וַתִּרְעֶֽינָה׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
+          "translation": "Great is my anguish at seeing my own leanness — like the lean cows that hated and devoured the fair, well-fed ones. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translit": "rav maḥli birʾoth kaḥshi, umĕsanʾoth yafoth uvĕriʾoth basar, wattir'ena. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
+        },
+        {
+          "type": "text",
+          "id": "el-eliyahu-3",
+          "hebrew": "הַשְׁקֵה צוּר מֵי רֹאשׁ, צַר עֵינָיו יִלְטֹשׁ, יוֹם עֵינַי לִקְדוֹשׁ יִשְׂרָאֵל תִּשְׁעֶֽינָה׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
+          "translation": "O Rock, You have made me drink bitter water; the foe sharpens his eyes in malice — until the day my eyes shall gaze upon the Holy One of Israel. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translit": "hashqeh ṣur me roʾsh, ṣar 'enaw yilṭosh, yom 'enay liqdhosh yisraʾel tish'ena. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
+        },
+        {
+          "type": "text",
+          "id": "el-eliyahu-4",
+          "hebrew": "מָתַי תַּרְאֶה אוֹת יֶֽשַׁע, אֶל קוֹרְאוֹת לָךְ, וּלְךָ נוֹשְׂאוֹת קוֹלָן וַתִּבְכֶּֽנָה׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
+          "translation": "When will You show a sign of salvation to those who call out to You, who lift their voice to You and weep? God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translit": "mathay tarʾeh ʾoth yesha', ʾel qorĕʾoth lakh, ulĕkha nosĕʾoth qolan wattivkena. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
+        },
+        {
+          "type": "text",
+          "id": "el-eliyahu-5",
+          "hebrew": "מַלְאַךְ הַגּוֹאֵל לִפְנֵי דַל שׁוֹאֵל, אָנָּא הָאֵל, אֵל אַבְרָהָם הַקְרֵה נָא׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
+          "translation": "O redeeming angel, before this poor one who pleads: please, God, God of Abraham, send him swiftly. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translit": "malʾakh haggoʾel lifne dhal shoʾel, ʾannaʾ haʾel, ʾel ʾavraham haqreh naʾ. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
+        }
+      ]
     }
   ]
 }

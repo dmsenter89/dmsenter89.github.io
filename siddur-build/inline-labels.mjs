@@ -13,6 +13,7 @@ export const LABEL_MAP = {
   "אשה:": "a woman says:",
   "יִפְנֶה לְצַד יָמִין": "turn to the right",
   "יִפְנֶה לְצַד שְׂמֹאל": "turn to the left",
+  "(שתי פעמים)": "(twice)",
 };
 
 // @@-delimited ASCII placeholders (not e.g. null bytes) so this file stays

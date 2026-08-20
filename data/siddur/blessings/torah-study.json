@@ -14,9 +14,9 @@
         {
           "type": "text",
           "id": "yehi-ratzon-torah",
-          "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי, שֶׁלֹּא אֶכָּשֵׁל בִּדְבַר הֲלָכָה, שֶׁלֹּא אֹמַר עַל טָמֵא טָהוֹר, וְלֹא עַל טָהוֹר טָמֵא, וְלֹא עַל מֻתָּר אָסוּר, וְלֹא עַל אָסוּר מֻתָּר. וְאַל אֶכָּשֵׁל בִּדְבַר הֲלָכָה, וְיִשְׂמְחוּ בִי חֲבֵרַי, וְאַל יִכָּשְׁלוּ חֲבֵרַי בִּדְבַר הֲלָכָה וְאֶשְׂמַח בָּהֶם. בְּשֵׁם יְיָ אֵל עוֹלָם נַעֲשֶׂה וְנַצְלִיחַ. כָּל יִשְׂרָאֵל יֵשׁ לָהֶם חֵלֶק לָעוֹלָם הַבָּא, וְעַמֵּךְ כֻּלָּם צַדִּיקִים לְעוֹלָם יִירְשׁוּ אָרֶץ, נֵצֶר מַטָּעַי מַעֲשֵׂה יָדַי לְהִתְפָּאֵר.",
-          "translation": "May it be Your will, Adhonay my God, that I do not stumble in a matter of law — that I do not call the impure pure, or the pure impure; that I do not call the forbidden permitted, or the permitted forbidden. May I not stumble in a matter of law, so that my companions rejoice in me; and may my companions not stumble in a matter of law, so that I rejoice in them. In the name of Adhonay, God of the universe, we shall act and prosper. All Israel has a share in the world to come — and your people, all of them righteous, shall inherit the land forever, a shoot of My planting, the work of My hands, in which to glory.",
-          "translit": "yĕhi raṣon millĕfanekha Adhonay ʾĕlohay, shelloʾ ʾekkashel bidhvar hălakha, shelloʾ ʾomar 'al ṭameʾ ṭahor, wĕloʾ 'al ṭahor ṭameʾ, wĕloʾ 'al muttar ʾasur, wĕloʾ 'al ʾasur muttar. wĕʾal ʾekkashel bidhvar hălakha, wĕyismĕḥu vi ḥăveray, wĕʾal yikkashĕlu ḥăveray bidhvar hălakha wĕʾesmaḥ bahem. bĕshem Adhonay ʾel 'olam na'ăseh wĕnaṣliaḥ. kol yisraʾel yesh lahem ḥeleq la'olam habbaʾ, wĕ'ammekh kullam ṣaddiqim lĕ'olam yirĕshu ʾareṣ, neṣer maṭṭa'ay ma'ăseh yadhay lĕhithpaʾer."
+          "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי, שֶׁלֹּא אֶכָּשֵׁל בִּדְבַר הֲלָכָה, שֶׁלֹּא אֹמַר עַל טָמֵא טָהוֹר, וְלֹא עַל טָהוֹר טָמֵא, וְלֹא עַל מֻתָּר אָסוּר, וְלֹא עַל אָסוּר מֻתָּר. וְאַל אֶכָּשֵׁל בִּדְבַר הֲלָכָה, וְיִשְׂמְחוּ בִי חֲבֵרַי, וְאַל יִכָּשְׁלוּ חֲבֵרַי בִּדְבַר הֲלָכָה וְאֶשְׂמַח בָּהֶם. בְּשֵׁם יְיָ אֵל עוֹלָם נַעֲשֶׂה וְנַצְלִיחַ.",
+          "translation": "May it be Your will, Adhonay my God, that I do not stumble in a matter of law — that I do not call the impure pure, or the pure impure; that I do not call the forbidden permitted, or the permitted forbidden. May I not stumble in a matter of law, so that my companions rejoice in me; and may my companions not stumble in a matter of law, so that I rejoice in them. In the name of Adhonay, God of the universe, we shall act and prosper.",
+          "translit": "yĕhi raṣon millĕfanekha Adhonay ʾĕlohay, shelloʾ ʾekkashel bidhvar hălakha, shelloʾ ʾomar 'al ṭameʾ ṭahor, wĕloʾ 'al ṭahor ṭameʾ, wĕloʾ 'al muttar ʾasur, wĕloʾ 'al ʾasur muttar. wĕʾal ʾekkashel bidhvar hălakha, wĕyismĕḥu vi ḥăveray, wĕʾal yikkashĕlu ḥăveray bidhvar hălakha wĕʾesmaḥ bahem. bĕshem Adhonay ʾel 'olam na'ăseh wĕnaṣliaḥ."
         }
       ]
     },
@@ -84,9 +84,9 @@
         {
           "type": "text",
           "id": "torah-tzivah",
-          "hebrew": "תּוֹרָה צִוָּה לָנוּ מֹשֶׁה, מוֹרָשָׁה קְהִלַּת יַעֲקֹב, וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל. כִּ֤י לֶ֣קַח ט֭וֹב נָתַ֣תִּי לָכֶ֑ם תּ֝וֹרָתִ֗י אַֽל־תַּעֲזֹֽבוּ. בָּר֖וּךְ אַתָּ֥ה יְיָ֗ לַמְּדֵ֥נִי חֻקֶּֽיךָ.",
+          "hebrew": "תּוֹרָה צִוָּה לָנוּ מֹשֶׁה, מוֹרָשָׁה קְהִלַּת יַעֲקֹב. וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל. כִּ֤י לֶ֣קַח ט֭וֹב נָתַ֣תִּי לָכֶ֑ם תּ֝וֹרָתִ֗י אַֽל־תַּעֲזֹֽבוּ. בָּר֖וּךְ אַתָּ֥ה יְיָ֗ לַמְּדֵ֥נִי חֻקֶּֽיךָ.",
           "translation": "The Torah that Moses commanded us is the heritage of the congregation of Jacob. (Deuteronomy 33:4) And this is the Torah that Moses set before the children of Israel. (Deuteronomy 4:44) For I have given you good instruction; do not forsake My Torah. (Proverbs 4:2) Blessed are You, Adhonay; teach me Your statutes. (Psalm 119:12)",
-          "translit": "tora ṣiwwa lanu mosheh, morasha qĕhillath ya'ăqov, wĕzoʾth hattora ʾăsher sam mosheh lifne bĕne yisraʾel. ki leqaḥ ṭov nathatti lakhem torathi ʾal-tha'ăzovw. barukh ʾatta Adhonay lammĕdheni ḥuqqekha."
+          "translit": "tora ṣiwwa lanu mosheh, morasha qĕhillath ya'ăqov. wĕzoʾth hattora ʾăsher sam mosheh lifne bĕne yisraʾel. ki leqaḥ ṭov nathatti lakhem torathi ʾal-tha'ăzovw. barukh ʾatta Adhonay lammĕdheni ḥuqqekha."
         },
         {
           "type": "rubric",
@@ -129,9 +129,9 @@
         {
           "type": "text",
           "id": "rabbi-chananya",
-          "hebrew": "רַבִּי חֲנַנְיָה בֶּן עֲקַשְׁיָה אוֹמֵר: רָצָה הַקָּדוֹשׁ בָּרוּךְ הוּא לְזַכּוֹת אֶת יִשְׂרָאֵל, לְפִיכָךְ הִרְבָּה לָהֶם תּוֹרָה וּמִצְוֹת, שֶׁנֶּאֱמַר: יְיָ חָפֵץ לְמַעַן צִדְקוֹ, יַגְדִּיל תּוֹרָה וְיַאְדִּיר.",
+          "hebrew": "רִבִּי חֲנַנְיָה בֶּן עֲקַשְׁיָה אוֹמֵר: רָצָה הַקָּדוֹשׁ בָּרוּךְ הוּא לְזַכּוֹת אֶת יִשְׂרָאֵל, לְפִיכָךְ הִרְבָּה לָהֶם תּוֹרָה וּמִצְוֹת, שֶׁנֶּאֱמַר: יְיָ חָפֵץ לְמַעַן צִדְקוֹ, יַגְדִּיל תּוֹרָה וְיַאְדִּיר.",
           "translation": "Rabbi Chananya ben Akashya says: The Holy One, blessed be He, wished to make Israel worthy; therefore He gave them Torah and mitzvot in abundance, as it is said: \"Adhonay desired, for the sake of His righteousness, to make the Torah great and glorious.\" (Isaiah 42:21; Mishnah Makkot 3:16)",
-          "translit": "rabbi ḥănanya ben 'ăqashya ʾomer: raṣa haqqadhosh barukh huʾ lĕzakkoth ʾeth yisraʾel, lĕfikhakh hirba lahem tora umiṣwoth, shenneʾĕmar: Adhonay ḥafeṣ lĕma'an ṣidhqo, yaghdil tora wĕyaʾdir."
+          "translit": "ribbi ḥănanya ben 'ăqashya ʾomer: raṣa haqqadhosh barukh huʾ lĕzakkoth ʾeth yisraʾel, lĕfikhakh hirba lahem tora umiṣwoth, shenneʾĕmar: Adhonay ḥafeṣ lĕma'an ṣidhqo, yaghdil tora wĕyaʾdir."
         }
       ]
     }
