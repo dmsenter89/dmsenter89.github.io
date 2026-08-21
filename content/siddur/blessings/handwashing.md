@@ -1,5 +1,5 @@
 ---
-title: "Torah Study"
-weight: 30
+title: "Handwashing"
+weight: 5
 robots: "noindex, nofollow"
 ---

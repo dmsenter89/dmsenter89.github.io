@@ -17,3 +17,7 @@ hugo.linux
 
 # macOS
 .DS_Store
+
+# Local tool-generated config
+/.serena/
+/.claude/settings.local.json

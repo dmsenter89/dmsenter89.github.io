@@ -119,15 +119,18 @@ over the content tree.
   (Blessings After Eating → Other Foods): a `rubric` label + `text` row per
   option, boxed together so the reader can see all the choices without
   expanding anything.
-- `type: "toggle"` — a radio-button pair for choosing between two
-  alternative renditions of the same passage, e.g. the full Amidah vs.
-  Havinenu in the middle of the weekday Arvith Amidah. `options` is an
-  array of exactly two `{id, label, items}` objects; `items` is a nested
-  array rendered like a section's items. The first option is selected by
-  default. Only one panel is ever shown — unlike `group`, these aren't
-  meant to be compared side by side. The CSS keys the visible panel to
-  radio/panel position via `:nth-of-type`, so exactly two options is a
-  hard limit, not just a convention.
+- `type: "toggle"` — a radio-button group for choosing between alternative
+  renditions of the same passage, e.g. the full Amidah vs. Havinenu in the
+  middle of the weekday Arvith Amidah, or the four Shabbat nusachim
+  (Arvith/Shahrith/Minha/Eretz Yisrael) for Kedushat HaYom in Tefilah.
+  `options` is an array of `{id, label, items}` objects; `items` is a
+  nested array rendered like a section's items. The first option is
+  selected by default. Only one panel is ever shown — unlike `group`,
+  these aren't meant to be compared side by side. The CSS keys the visible
+  panel to radio/panel position via `:nth-of-type`, so up to four options
+  is a hard limit, not just a convention — extend the CSS rules in
+  `assets/siddur.css` (and the doc comment in
+  `layouts/_partials/siddur-item.html`) if a fifth is ever needed.
 
 ## Divine Name
 

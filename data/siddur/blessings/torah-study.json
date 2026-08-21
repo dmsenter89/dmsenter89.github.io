@@ -2,6 +2,36 @@
   "title": "Torah Study",
   "sections": [
     {
+      "id": "dinim",
+      "title": "Dinim",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "dinim-fixed-time",
+          "hebrew": "אחר התפלה יקבע עת ללמוד תורה. וצריך שאותו העת יהיה קבוע, שלא יעבירנו אף אם סבור להרויח הרבה. ואם צריך לעשות איזה דבר נחוץ מאד, ילמד מקדם לכל הפחות פסוק אחד או הלכה אחת, ויעשה מה שנחוץ לו, ואחר כך ישלים חקו. ובקצת קהלות קדושות נתיסדו חברות קדושות, ללמד תורה ברבים מיד לאחר התפלה. ויש לכל ירא שמים להתחבר אליהם (אורח חיים סימן קנ\"ה).",
+          "translation": "After prayer, one should set a fixed time to study Torah. This time must be fixed, so that one does not let it pass even if one thinks there is much to be gained elsewhere. And if one must attend to some very urgent matter, one should first study at least one verse or one law, then attend to what is necessary, and afterward complete one's fixed portion. In some holy communities, holy societies have been established to study Torah publicly immediately after prayer, and every God-fearing person should join them. (Orach Chayim 155)"
+        },
+        {
+          "type": "rubric",
+          "id": "dinim-obligation",
+          "hebrew": "כל איש ישראל חיב ללמד תורה, בין עני בין עשיר, בין שלם בגופו בין בעל יסורין, בין בחור בין זקן גדול. אפלו עני המחזיר על הפתחים, חיב לקבע לו זמן לתלמוד תורה ביום ובלילה, שנאמר והגית בו יומם ולילה. הרב מרדכי אליהו ממליץ שכל איש ישראל יקבע לפחות שעה אחת ללמוד בבקר ושעה אחת ללמוד בלילה.",
+          "translation": "Every Jewish man is obligated to study Torah, whether poor or wealthy, whether sound of body or afflicted with suffering, whether young or very old. Even a poor person who goes begging from door to door is obligated to set aside time for Torah study by day and by night, as it is said: \"and you shall meditate on it day and night.\" Rav Mordekhai Eliyahu recommends every Jewish man set aside at least one hour to learn in the morning and one hour to learn at night."
+        },
+        {
+          "type": "rubric",
+          "id": "dinim-fixed-portion",
+          "hebrew": "מי שאינו יכול לעשות תורתו קבע, אלא שהוא קובע עתים לתורה, יעסק בעתים הללו שהוא קובע, ללמד ההלכות השכיחות, הנצרכות לדעת לכל איש ישראל, וגם באגדות ומדרשים וספרי מוסר אשר יסודתם בהררי קדש. ממדרשי רבותינו זכרונם לברכה שהם מועילים להחליש כח היצר הרע. ואשרי מי שיש לו חק קבוע ולא יעבר, ללמד בספר \"חק לישראל\" דבר יום ביומו, וכל המוסיף, מוסיפין לו טובה מן השמים. (יו\"ד סימן רמ\"ו)",
+          "translation": "One who cannot make Torah study a constant occupation, but instead sets fixed times for it, should use those fixed times to study the laws that occur most frequently and that every Jewish person needs to know, as well as aggadot, midrashim, and books of moral instruction whose foundation is in the holy mountains — from the teachings of our sages, of blessed memory, which help weaken the power of the evil inclination. Fortunate is the one who has a fixed daily portion that is never skipped, studying from the book Chok LeYisrael a portion each day; and whoever adds to it, more good is added to him from Heaven. (Yoreh De'ah 246)"
+        },
+        {
+          "type": "rubric",
+          "id": "dinim-lips",
+          "hebrew": "צריך לזהר, בכל מה שהוא לומד, להוציאו בשפתיו ולהשמיע לאזניו. שנאמר לא ימוש ספר התורה הזה מפיך, והגית בו וגו'.",
+          "translation": "One must be careful, in all that one studies, to pronounce it with one's lips and let it be heard by one's own ears, as it is said: \"This book of the Torah shall not depart from your mouth, and you shall meditate on it...\""
+        }
+      ]
+    },
+    {
       "id": "before-learning",
       "title": "Before Learning",
       "items": [
@@ -21,21 +51,34 @@
       ]
     },
     {
-      "id": "mishnah",
-      "title": "Reading the Mishnah",
+      "id": "torah",
+      "title": "Reading the Torah",
       "items": [
         {
           "type": "rubric",
-          "id": "mishnah-cue",
-          "hebrew": "לקריאת המשנה פותחים",
-          "translation": "For reading the Mishnah, one opens with:"
+          "id": "torah-cue",
+          "hebrew": "לקריאת התורה פותחים",
+          "translation": "For reading the Torah, one opens with:"
         },
         {
           "type": "text",
-          "id": "kol-yisrael-mishnah",
-          "hebrew": "כָּל יִשְׂרָאֵל יֵשׁ לָהֶם חֵלֶק לָעוֹלָם הַבָּא, שֶׁנֶּאֱמַר: וְעַמֵּךְ כֻּלָּם צַדִּיקִים לְעוֹלָם יִירְשׁוּ אָרֶץ, נֵצֶר מַטָּעַי מַעֲשֵׂה יָדַי לְהִתְפָּאֵר.",
-          "translation": "All Israel has a share in the world to come, as it is said: \"And your people, all of them righteous, shall inherit the land forever — a shoot of My planting, the work of My hands, in which to glory.\" (Isaiah 60:21; Mishnah Sanhedrin 10:1)",
-          "translit": "kol yisraʾel yesh lahem ḥeleq la'olam habbaʾ, shenneʾĕmar: wĕ'ammekh kullam ṣaddiqim lĕ'olam yirĕshu ʾareṣ, neṣer maṭṭa'ay ma'ăseh yadhay lĕhithpaʾer."
+          "id": "torah-tzivah",
+          "hebrew": "תּוֹרָה צִוָּה לָנוּ מֹשֶׁה, מוֹרָשָׁה קְהִלַּת יַעֲקֹב. וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל. כִּ֤י לֶ֣קַח ט֭וֹב נָתַ֣תִּי לָכֶ֑ם תּ֝וֹרָתִ֗י אַֽל־תַּעֲזֹֽבוּ. בָּר֖וּךְ אַתָּ֥ה יְיָ֗ לַמְּדֵ֥נִי חֻקֶּֽיךָ.",
+          "translation": "The Torah that Moses commanded us is the heritage of the congregation of Jacob. (Deuteronomy 33:4) And this is the Torah that Moses set before the children of Israel. (Deuteronomy 4:44) For I have given you good instruction; do not forsake My Torah. (Proverbs 4:2) Blessed are You, Adhonay; teach me Your statutes. (Psalm 119:12)",
+          "translit": "tora ṣiwwa lanu mosheh, morasha qĕhillath ya'ăqov. wĕzoʾth hattora ʾăsher sam mosheh lifne bĕne yisraʾel. ki leqaḥ ṭov nathatti lakhem torathi ʾal-tha'ăzovw. barukh ʾatta Adhonay lammĕdheni ḥuqqekha."
+        },
+        {
+          "type": "rubric",
+          "id": "torah-conclusion-cue",
+          "hebrew": "וכשמסיימים אומרים",
+          "translation": "And upon concluding, one says:"
+        },
+        {
+          "type": "text",
+          "id": "baruch-hashem-noten-hatorah",
+          "hebrew": "בָּרוּךְ יְיָ נוֹתֵן הַתּוֹרָה. בָּרוּךְ יְיָ לְעוֹלָם, אָמֵן וְאָמֵן. יִמְלֹךְ יְיָ לְעוֹלָם, אָמֵן וְאָמֵן.",
+          "translation": "Blessed is Adhonay, who gives the Torah. Blessed is Adhonay forever, Amen and Amen. Adhonay shall reign forever, Amen and Amen.",
+          "translit": "barukh Adhonay nothen hattora. barukh Adhonay lĕ'olam, ʾamen wĕʾamen. yimlokh Adhonay lĕ'olam, ʾamen wĕʾamen."
         }
       ]
     },
@@ -72,34 +115,21 @@
       ]
     },
     {
-      "id": "torah",
-      "title": "Reading the Torah",
+      "id": "mishnah",
+      "title": "Reading the Mishnah",
       "items": [
         {
           "type": "rubric",
-          "id": "torah-cue",
-          "hebrew": "לקריאת התורה פותחים",
-          "translation": "For reading the Torah, one opens with:"
+          "id": "mishnah-cue",
+          "hebrew": "לקריאת המשנה פותחים",
+          "translation": "For reading the Mishnah, one opens with:"
         },
         {
           "type": "text",
-          "id": "torah-tzivah",
-          "hebrew": "תּוֹרָה צִוָּה לָנוּ מֹשֶׁה, מוֹרָשָׁה קְהִלַּת יַעֲקֹב. וְזֹאת הַתּוֹרָה אֲשֶׁר שָׂם מֹשֶׁה לִפְנֵי בְּנֵי יִשְׂרָאֵל. כִּ֤י לֶ֣קַח ט֭וֹב נָתַ֣תִּי לָכֶ֑ם תּ֝וֹרָתִ֗י אַֽל־תַּעֲזֹֽבוּ. בָּר֖וּךְ אַתָּ֥ה יְיָ֗ לַמְּדֵ֥נִי חֻקֶּֽיךָ.",
-          "translation": "The Torah that Moses commanded us is the heritage of the congregation of Jacob. (Deuteronomy 33:4) And this is the Torah that Moses set before the children of Israel. (Deuteronomy 4:44) For I have given you good instruction; do not forsake My Torah. (Proverbs 4:2) Blessed are You, Adhonay; teach me Your statutes. (Psalm 119:12)",
-          "translit": "tora ṣiwwa lanu mosheh, morasha qĕhillath ya'ăqov. wĕzoʾth hattora ʾăsher sam mosheh lifne bĕne yisraʾel. ki leqaḥ ṭov nathatti lakhem torathi ʾal-tha'ăzovw. barukh ʾatta Adhonay lammĕdheni ḥuqqekha."
-        },
-        {
-          "type": "rubric",
-          "id": "torah-conclusion-cue",
-          "hebrew": "וכשמסיימים אומרים",
-          "translation": "And upon concluding, one says:"
-        },
-        {
-          "type": "text",
-          "id": "baruch-hashem-noten-hatorah",
-          "hebrew": "בָּרוּךְ יְיָ נוֹתֵן הַתּוֹרָה. בָּרוּךְ יְיָ לְעוֹלָם, אָמֵן וְאָמֵן. יִמְלֹךְ יְיָ לְעוֹלָם, אָמֵן וְאָמֵן.",
-          "translation": "Blessed is Adhonay, who gives the Torah. Blessed is Adhonay forever, Amen and Amen. Adhonay shall reign forever, Amen and Amen.",
-          "translit": "barukh Adhonay nothen hattora. barukh Adhonay lĕ'olam, ʾamen wĕʾamen. yimlokh Adhonay lĕ'olam, ʾamen wĕʾamen."
+          "id": "kol-yisrael-mishnah",
+          "hebrew": "כָּל יִשְׂרָאֵל יֵשׁ לָהֶם חֵלֶק לָעוֹלָם הַבָּא, שֶׁנֶּאֱמַר: וְעַמֵּךְ כֻּלָּם צַדִּיקִים לְעוֹלָם יִירְשׁוּ אָרֶץ, נֵצֶר מַטָּעַי מַעֲשֵׂה יָדַי לְהִתְפָּאֵר.",
+          "translation": "All Israel has a share in the world to come, as it is said: \"And your people, all of them righteous, shall inherit the land forever — a shoot of My planting, the work of My hands, in which to glory.\" (Isaiah 60:21; Mishnah Sanhedrin 10:1)",
+          "translit": "kol yisraʾel yesh lahem ḥeleq la'olam habbaʾ, shenneʾĕmar: wĕ'ammekh kullam ṣaddiqim lĕ'olam yirĕshu ʾareṣ, neṣer maṭṭa'ay ma'ăseh yadhay lĕhithpaʾer."
         }
       ]
     },
