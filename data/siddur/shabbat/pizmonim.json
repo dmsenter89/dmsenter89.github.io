@@ -192,7 +192,7 @@
     {
       "id": "el-eliyahu",
       "title": "El Eliyahu",
-      "audio": "https://pizmonim.org/MP3/habusha%20el%20eliahou.mp3",
+      "audio": "https://jewish-music.huji.ac.il/sites/default/files/sounds/el%20eliyahu%20husseini.mp3",
       "youtube": "https://youtu.be/15N484W5mnE?si=WP7kYRZrZw8dERq6",
       "items": [
         {
@@ -242,6 +242,47 @@
           "hebrew": "מַלְאַךְ הַגּוֹאֵל לִפְנֵי דַל שׁוֹאֵל, אָנָּא הָאֵל, אֵל אַבְרָהָם הַקְרֵה נָא׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
           "translation": "O redeeming angel, before this poor one who pleads: please, God, God of Abraham, send him swiftly. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
           "translit": "malʾakh haggoʾel lifne dhal shoʾel, ʾannaʾ haʾel, ʾel ʾavraham haqreh naʾ. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
+        }
+      ]
+    },
+    {
+      "id": "hamavdil-ben-qodesh-lehol",
+      "title": "Hamavdil ben Qodesh LeHol",
+      "audio": "https://www.zemirotdatabase.org/download_audio.php?extension=mp3&recording=779&name=HaMavdil%20Bein%20Kodesh%20LChol",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "hamavdil-info",
+          "hebrew": "פזמון למוצאי שבת, הפותח בבקשת מחילת עוונות ומסתיים בכל בית בקריאה לאליהו הנביא",
+          "translation": "A pizmon for Motzei Shabbat, opening with a plea for forgiveness of sins and concluding each stanza with a call to Elijah the Prophet."
+        },
+        {
+          "type": "text",
+          "id": "hamavdil-1",
+          "hebrew": "הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל חַטֹּאתֵינוּ יִמְחוֹל, זַרְעֵנוּ וְכַסְפֵּנוּ יַרְבֶּה כַּחוֹל וְכַכּוֹכָבִים בַּלָּיְלָה׃ לִכְבוֹד חֶמְדַּת לְבָבִי אֵלִיָּהוּ הַנָּבִיא׃",
+          "translation": "He who separates between the sacred and the mundane, may He forgive our sins, and multiply our offspring and our silver like the sand and like the stars at night. In honor of the delight of my heart, Elijah the Prophet.",
+          "translit": "hammavdil ben qodhesh lĕḥol ḥaṭṭoʾthenu yimḥol, zar'enu wĕkhaspenu yarbeh kaḥol wĕkhakkokhavim ballayĕla. likhvodh ḥemdath lĕvavi ʾeliyyahu hannaviʾ."
+        },
+        {
+          "type": "text",
+          "id": "hamavdil-2",
+          "hebrew": "יוֹם פָּנָה כְּצֵל תֹּמֶר אֶקְרָא לָאֵל עָלַי גּוֹמֵר, יוֹם אֲשֶׁר אָמַר שׁוֹמֵר אָתָא בֹקֶר וְגַם לָיְלָה׃ לִכְבוֹד חֶמְדַּת לְבָבִי אֵלִיָּהוּ הַנָּבִיא׃",
+          "translation": "The day has turned like the shadow of a palm tree; I call to God, who accomplishes all things for me, on the day of which the Watchman said, \"Morning has come, and also night.\" In honor of the delight of my heart, Elijah the Prophet.",
+          "translit": "yom pana kĕṣel tomer ʾeqraʾ laʾel 'alay gomer, yom ʾăsher ʾamar shomer ʾathaʾ voqer wĕgham layĕla. likhvodh ḥemdath lĕvavi ʾeliyyahu hannaviʾ."
+        },
+        {
+          "type": "text",
+          "id": "hamavdil-3",
+          "hebrew": "מִימִינֵנוּ מִיכָאֵל וּמִשְּׂמֹאלֵנוּ גַּבְרִיאֵל, וְעַל רֹאשֵׁנוּ שְׁכִינַת אֵל בְּכָל יוֹם וּבְכָל לָיְלָה׃ לִכְבוֹד חֶמְדַּת לְבָבִי אֵלִיָּהוּ הַנָּבִיא׃",
+          "translation": "At our right is Michael, and at our left is Gabriel, and above our heads is the Divine Presence, every day and every night. In honor of the delight of my heart, Elijah the Prophet.",
+          "translit": "miminenu mikhaʾel umissĕmoʾlenu gavriʾel, wĕ'al roʾshenu shĕkhinath ʾel bĕkhol yom uvĕkhol layĕla. likhvodh ḥemdath lĕvavi ʾeliyyahu hannaviʾ."
+        },
+        {
+          "type": "text",
+          "id": "hamavdil-4",
+          "hebrew": "יְבוֹרַךְ הַבַּיִת הַזֶּה מִפִּי נָבִיא וְגַם חוֹזֶה, כִּי כֵן יְצַוֶּה אֱלֹהֵינוּ זֶה לְשָׁמְרוֹ יוֹמָם וָלָיְלָה׃ לִכְבוֹד חֶמְדַּת לְבָבִי אֵלִיָּהוּ הַנָּבִיא׃",
+          "translation": "May this house be blessed by the mouth of a prophet and also a seer, for so our God has commanded, to guard it day and night. In honor of the delight of my heart, Elijah the Prophet.",
+          "translit": "yĕvorakh habbayīth hazzeh mippi naviʾ wĕgham ḥozeh, ki khen yĕṣawweh ʾĕlohenu zeh lĕshamĕro yomam walayĕla. likhvodh ḥemdath lĕvavi ʾeliyyahu hannaviʾ."
         }
       ]
     }

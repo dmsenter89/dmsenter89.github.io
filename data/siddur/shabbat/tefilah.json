@@ -1,0 +1,223 @@
+{
+  "title": "Tefilah",
+  "sections": [
+    {
+      "id": "amidah",
+      "title": "Amidah",
+      "items": [
+        {
+          "type": "expandable",
+          "id": "amidah-opening",
+          "label": "Beginning of the Amidah (Avot – Kedushat HaShem)",
+          "items": [
+            {
+              "type": "include",
+              "ref": "shared/amidah-weekday",
+              "sectionId": "weekday-amidah",
+              "itemIds": [
+                "amidah-open",
+                "avot",
+                "gevurot-open",
+                "gevurot-season",
+                "gevurot-close",
+                "kedushat-hashem"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "toggle",
+          "id": "kedushat-hayom",
+          "options": [
+            {
+              "id": "arvith",
+              "label": "Arvith",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "arvith-varying",
+                  "hebrew": "אַתָּה קִדַּשְׁתָּ אֶת־יוֹם הַשְּׁבִיעִי לִשְׁמֶֽךָ, תַּכְלִית מַעֲשֵׂה שָׁמַֽיִם וָאָרֶץ, וּבֵרַכְתּוֹ מִכָּל־הַיָּמִים, וְקִדַּשְׁתּוֹ מִכָּל־הַזְּמַנִּים, וְכֵן כָּתוּב בְּתוֹרָתָךְ: וַיְכֻלּ֛וּ הַשָּׁמַ֥יִם וְהָאָ֖רֶץ וְכׇל־צְבָאָֽם׃ וַיְכַ֤ל אֱלֹהִים֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מְלַאכְתּ֖וֹ אֲשֶׁ֣ר עָשָׂ֑ה וַיִּשְׁבֹּת֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מִכׇּל־מְלַאכְתּ֖וֹ אֲשֶׁ֥ר עָשָֽׂה׃ וַיְבָ֤רֶךְ אֱלֹהִים֙ אֶת־י֣וֹם הַשְּׁבִיעִ֔י וַיְקַדֵּ֖שׁ אֹת֑וֹ כִּ֣י ב֤וֹ שָׁבַת֙ מִכׇּל־מְלַאכְתּ֔וֹ אֲשֶׁר־בָּרָ֥א אֱלֹהִ֖ים לַעֲשֽׂוֹת׃",
+                  "translation": "You sanctified the seventh day for Your name, the culmination of the making of heaven and earth; You blessed it above all days and sanctified it above all appointed times, and so it is written in Your Torah: The heavens and the earth were finished, and all their array. On the seventh day God finished the work He had made, and He ceased on the seventh day from all the work He had made. God blessed the seventh day and sanctified it, for on it He ceased from all His work which God had created to do.",
+                  "translit": "ʾatta qiddashta ʾeth-yom hashshĕvi'i lishmekha, takhlith ma'ăseh shamayīm waʾareṣ, uverakhto mikkol-hayyamim, wĕqiddashto mikkol-hazzĕmanim, wĕkhen kathuv bĕthorathakh: wayĕkhullu hashshamayim wĕhaʾareṣ wĕkhol-ṣĕvaʾam. wayĕkhal ʾĕlohim bayyom hashshĕvi'i mĕlaʾkhto ʾăsher 'asa wayyishboth bayyom hashshĕvi'i mikkol-mĕlaʾkhto ʾăsher 'asa. wayĕvarekh ʾĕlohim ʾeth-yom hashshĕvi'i wayĕqaddesh ʾotho ki vo shavath mikkol-mĕlaʾkhto ʾăsher-varaʾ ʾĕlohim la'ăsoth."
+                },
+                {
+                  "type": "text",
+                  "id": "arvith-fixed",
+                  "hebrew": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶאֱמֶת, וְהַנְחִילֵנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבַּת קָדְשֶׁךָ, וְיָנוּחוּ בָהּ כָּל יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְיָ, מְקַדֵּשׁ הַשַּׁבָּת:",
+                  "translation": "Our God and God of our ancestors, be pleased with our rest; sanctify us with Your commandments and grant us a share in Your Torah; satisfy us from Your goodness and gladden us with Your salvation; purify our hearts to serve You in truth; and, Adhonay our God, grant us in love and favor Your holy Shabbat as an inheritance, and may all Israel who sanctify Your name rest in it. Blessed are You, Adhonay, who sanctifies the Shabbat.",
+                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, rĕṣeh naʾ bimnuḥathenu, qaddĕshenu bĕmiṣwothekha, sim ḥelqenu bĕthorathakh, sabbĕ'enu miṭṭuvakh, sammeaḥ nafshenu bishu'athakh, wĕṭaher libbenu lĕ'avĕdĕkha veʾĕmeth, wĕhanḥilenu Adhonay ʾĕlohenu bĕʾahăva uvĕraṣon shabbath qodhshekha, wĕyanuḥu vah kol yisraʾel mĕqaddĕshe shĕmekha. barukh ʾatta Adhonay, mĕqaddesh hashshabbath:"
+                }
+              ]
+            },
+            {
+              "id": "shahrith",
+              "label": "Shahrith",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "shahrith-varying",
+                  "hebrew": "יִשְׂמַח מֹשֶׁה בְּמַתְּנַת חֶלְקוֹ, כִּי עֶבֶד נֶאֱמָן קָרָאתָ לּוֹ. כְּלִיל תִּפְאֶרֶת בּרֹאשׁוֹ נָתַתָּ, בְּעָמְדוֹ לְפָנֶֽיךָ עַל־הַר סִינַי. שְׁנֵי לוּחוֹת אֲבָנִים הוֹרִיד בְּיָדוֹ, וְכָתוּב בָּהֶם שְׁמִירַת שַׁבָּת, וְכֵן כָּתוּב בְּתוֹרָתָךְ: וְשָׁמְר֥וּ בְנֵֽי־יִשְׂרָאֵ֖ל אֶת־הַשַּׁבָּ֑ת לַעֲשׂ֧וֹת אֶת־הַשַּׁבָּ֛ת לְדֹרֹתָ֖ם בְּרִ֥ית עוֹלָֽם׃ בֵּינִ֗י וּבֵין֙ בְּנֵ֣י יִשְׂרָאֵ֔ל א֥וֹת הִ֖וא לְעֹלָ֑ם כִּי־שֵׁ֣שֶׁת יָמִ֗ים עָשָׂ֤ה יְיָ אֶת־הַשָּׁמַ֣יִם וְאֶת־הָאָ֔רֶץ וּבַיּוֹם֙ הַשְּׁבִיעִ֔י שָׁבַ֖ת וַיִּנָּפַֽשׁ׃ וְלֹא נְתַתּוֹ יְיָ אֱלֹהֵֽינוּ לְגוֹיֵי הָאֲרָצוֹת, וְלֹא הִנְחַלְתּוֹ מַלְכֵּנוּ לְעוֹבְדֵי אֱלִילִים, גַּם בִּמְנוּחָתוֹ לֹא יִשְׁכְּנוּ עֲרֵלִים, כִּי לְעַמְּךָ יִשְׂרָאֵל נְתַתּוֹ בְּאַהֲבָה, לְזֶרַע יַעֲקֹב אֲשֶׁר בָּם בָּחָרְתָּ: יִשְׂמְחוּ בְמַלְכוּתָךְ שׁוֹמְרֵי שַׁבָּת וְקוֹרְאֵי עֹנֶג, עַם מְקַדֵּשֵׁי שְׁבִיעִי, כֻּלָּם יִשְׂבְּעוּ וְיִתְעַנְּגוּ מִטּוּבֶךְ, וְהַשְּׁבִיעִי רָצִיתָ בּוֹ וְקִדַּשְׁתּוֹ, חֶמְדַּת יָמִים אוֹתוֹ קָרָאתָ:",
+                  "translation": "Moses rejoiced in the gift of his portion, for You called him a faithful servant. You set a crown of splendor on his head when he stood before You on Mount Sinai. He brought down two tablets of stone in his hand, and upon them was written the observance of Shabbat, and so it is written in Your Torah: The Children of Israel shall keep the Shabbat, observing the Shabbat throughout their generations as an everlasting covenant. It is a sign forever between Me and the Children of Israel, for in six days Adhonay made the heavens and the earth, and on the seventh day He ceased and rested. You did not give it, Adhonay our God, to the nations of the lands, nor did You bestow it, our King, upon idol-worshippers; nor will the uncircumcised dwell in its rest, for You gave it in love to Your people Israel, to the seed of Jacob whom You chose. Those who keep Shabbat and call it a delight shall rejoice in Your kingship — a people who sanctify the seventh day; all of them shall be satisfied and delighted with Your goodness. You favored the seventh day and sanctified it; You called it the most precious of days, a remembrance of the work of creation.",
+                  "translit": "yismaḥ mosheh bĕmattĕnath ḥelqo, ki 'evedh neʾĕman qaraʾtha lo. kĕlil tifʾereth broʾsho nathatta, bĕ'amĕdho lĕfanekha 'al-har sinay. shĕne luḥoth ʾăvanim horidh bĕyadho, wĕkhathuv bahem shĕmirath shabbath, wĕkhen kathuv bĕthorathakh: wĕshamĕru vĕne-yisraʾel ʾeth-hashshabbath la'ăsoth ʾeth-hashshabbath lĕdhorotham bĕrith 'olam. beni uven bĕne yisraʾel ʾoth hīwʾ lĕ'olam ki-shesheth yamim 'asa Adhonay ʾeth-hashshamayim wĕʾeth-haʾareṣ uvayyom hashshĕvi'i shavath wayyinnafash. wĕloʾ nĕthatto Adhonay ʾĕlohenu lĕghoye haʾăraṣoth, wĕloʾ hinḥalto malkenu lĕ'ovĕdhe ʾĕlilim, gam bimnuḥatho loʾ yishkĕnu 'ărelim, ki lĕ'ammĕkha yisraʾel nĕthatto bĕʾahăva, lĕzera' ya'ăqov ʾăsher bam baḥarĕta: yismĕḥu vĕmalkhuthakh shomĕre shabbath wĕqorĕʾe 'onegh, 'am mĕqaddeshe shĕvi'i, kullam yisbĕ'u wĕyith'annĕghu miṭṭuvekh, wĕhashshĕvi'i raṣitha bo wĕqiddashto, ḥemdath yamim ʾotho qaraʾtha:"
+                },
+                {
+                  "type": "text",
+                  "id": "shahrith-fixed",
+                  "hebrew": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶאֱמֶת, וְהַנְחִילֵנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבַּת קָדְשֶׁךָ, וְיָנוּחוּ בוֹ כָּל־יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְיָ, מְקַדֵּשׁ הַשַּׁבָּת:",
+                  "translation": "Our God and God of our ancestors, be pleased with our rest; sanctify us with Your commandments and grant us a share in Your Torah; satisfy us from Your goodness and gladden us with Your salvation; purify our hearts to serve You in truth; and, Adhonay our God, grant us in love and favor Your holy Shabbat as an inheritance, and may all Israel who sanctify Your name rest in it. Blessed are You, Adhonay, who sanctifies the Shabbat.",
+                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, rĕṣeh naʾ bimnuḥathenu, qaddĕshenu bĕmiṣwothekha, sim ḥelqenu bĕthorathakh, sabbĕ'enu miṭṭuvakh, sammeaḥ nafshenu bishu'athakh, wĕṭaher libbenu lĕ'avĕdĕkha veʾĕmeth, wĕhanḥilenu Adhonay ʾĕlohenu bĕʾahăva uvĕraṣon shabbath qodhshekha, wĕyanuḥu vo kol-yisraʾel mĕqaddĕshe shĕmekha. barukh ʾatta Adhonay, mĕqaddesh hashshabbath:"
+                }
+              ]
+            },
+            {
+              "id": "minha",
+              "label": "Minha",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "minha-varying",
+                  "hebrew": "אַתָּה אֶחָד וְשִׁמְךָ אֶחָד, וּמִי כְעַמְּךָ כְּיִשְׂרָאֵל גוֹי אֶחָד בָּאָרֶץ. תִּפְאֶרֶת גְּדֻלָּה, וַעֲטֶרֶת יְשׁוּעָה, יוֹם מְנוּחָה וּקְדֻשָּׁה לְעַמְּךָ נָתַתָּ. אַבְרָהָם יָגֵל, יִצְחָק יְרַנֵּן, יַעֲקֹב וּבָנָיו יָֽנוּחוּ בוֹ. מְנוּחַת אַהֲבָה וּנְדָבָה, מְנוּחַת אֱמֶת וֶאֱמוּנָה, מְנוּחַת שָׁלוֹם הַשְׁקֵט וָבֶטַח, מְנוּחָה שְׁלֵמָה שֶׁאַתָּה הוּא רוֹצֶה בָהּ. יַכִּירוּ בָנֶֽיךָ וְיֵדְעוּ כִּי מֵאִתְּךָ הִיא מְנוּחָתָם, וְעַל מְנוּחָתָם יַקְדִּישׁוּ אֶת שְׁמֶֽךָ:",
+                  "translation": "You are One and Your name is One, and who is like Your people Israel, a singular nation on earth. A crown of greatness and a wreath of salvation — a day of rest and holiness You gave to Your people. Abraham exults, Isaac sings, Jacob and his children rest in it. A rest of love and generosity, a rest of truth and faithfulness, a rest of peace, tranquility, and security, a complete rest in which You delight. May Your children recognize and know that their rest comes from You, and through their rest may they sanctify Your name.",
+                  "translit": "ʾatta ʾeḥadh wĕshimkha ʾeḥadh, umi khĕ'ammĕkha kĕyisraʾel ghoy ʾeḥadh baʾareṣ. tifʾereth gĕdhulla, wa'ăṭereth yĕshu'a, yom mĕnuḥa uqĕdhushsha lĕ'ammĕkha nathatta. ʾavraham yaghel, yiṣḥaq yĕrannen, ya'ăqov uvanaw yanuḥu vo. mĕnuḥath ʾahăva unĕdhava, mĕnuḥath ʾĕmeth weʾĕmuna, mĕnuḥath shalom hashqeṭ waveṭaḥ, mĕnuḥa shĕlema sheʾatta huʾ roṣeh vah. yakkiru vanekha wĕyedhĕ'u ki meʾittĕkha hiʾ mĕnuḥatham, wĕ'al mĕnuḥatham yaqdishu ʾeth shĕmekha:"
+                },
+                {
+                  "type": "text",
+                  "id": "minha-fixed",
+                  "hebrew": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶאֱמֶת, וְהַנְחִילֵנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבְּתוֹת קָדְשֶׁךָ, וְיָנוּחוּ בָם כָּל יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְיָ, מְקַדֵּשׁ הַשַּׁבָּת:",
+                  "translation": "Our God and God of our ancestors, be pleased with our rest; sanctify us with Your commandments and grant us a share in Your Torah; satisfy us from Your goodness and gladden us with Your salvation; purify our hearts to serve You in truth; and, Adhonay our God, grant us in love and favor the Shabbatot of Your holiness as an inheritance, and may all Israel who sanctify Your name rest in them. Blessed are You, Adhonay, who sanctifies the Shabbat.",
+                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, rĕṣeh naʾ bimnuḥathenu, qaddĕshenu bĕmiṣwothekha, sim ḥelqenu bĕthorathakh, sabbĕ'enu miṭṭuvakh, sammeaḥ nafshenu bishu'athakh, wĕṭaher libbenu lĕ'avĕdĕkha veʾĕmeth, wĕhanḥilenu Adhonay ʾĕlohenu bĕʾahăva uvĕraṣon shabbĕthoth qodhshekha, wĕyanuḥu vam kol yisraʾel mĕqaddĕshe shĕmekha. barukh ʾatta Adhonay, mĕqaddesh hashshabbath:"
+                }
+              ]
+            },
+            {
+              "id": "eretz-yisrael",
+              "label": "Eretz Yisrael",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "amidah-ey-varying",
+                  "hebrew": "הָנַח לְעַמְּךָ בְּשַׁבָּת בְּרִיתְךָ מְנוּחָה וְשָׁלוֹם הַשְׁקֵט וָבֶטַח כַּכָּתוּב בְּתוֹרָתֶךָ וְשָׁמְר֥וּ בְנֵֽי־יִשְׂרָאֵ֖ל אֶת־הַשַּׁבָּ֑ת לַעֲשׂ֧וֹת אֶת־הַשַּׁבָּ֛ת לְדֹרֹתָ֖ם בְּרִ֥ית עוֹלָֽם׃ בֵּינִ֗י וּבֵין֙ בְּנֵ֣י יִשְׂרָאֵ֔ל א֥וֹת הִ֖וא לְעֹלָ֑ם כִּי־שֵׁ֣שֶׁת יָמִ֗ים עָשָׂ֤ה יְיָ֙ אֶת־הַשָּׁמַ֣יִם וְאֶת־הָאָ֔רֶץ וּבַיּוֹם֙ הַשְּׁבִיעִ֔י שָׁבַ֖ת וַיִּנָּפַֽשׁ׃",
+                  "translation": "Grant Your people rest on the Shabbat of Your covenant — rest and peace, tranquility and security — as it is written in Your Torah: The Children of Israel shall keep the Shabbat, observing the Shabbat throughout their generations as an everlasting covenant. It is a sign forever between Me and the Children of Israel, for in six days Adhonay made the heavens and the earth, and on the seventh day He ceased and rested.",
+                  "translit": "hanaḥ lĕ'ammĕkha bĕshabbath bĕrithĕkha mĕnuḥa wĕshalom hashqeṭ waveṭaḥ kakkathuv bĕthorathekha wĕshamĕru vĕne-yisraʾel ʾeth-hashshabbath la'ăsoth ʾeth-hashshabbath lĕdhorotham bĕrith 'olam. beni uven bĕne yisraʾel ʾoth hīwʾ lĕ'olam ki-shesheth yamim 'asa Adhonay ʾeth-hashshamayim wĕʾeth-haʾareṣ uvayyom hashshĕvi'i shavath wayyinnafash."
+                },
+                {
+                  "type": "text",
+                  "id": "amidah-ey-fixed",
+                  "hebrew": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶאֱמֶת, וְהַנְחִילֵנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבַּת קָדְשֶׁךָ, וְיָנוּחוּ בוֹ כָּל יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְיָ, מְקַדֵּשׁ הַשַּׁבָּת:",
+                  "translation": "Our God and God of our ancestors, be pleased with our rest; sanctify us with Your commandments and grant us a share in Your Torah; satisfy us from Your goodness and gladden us with Your salvation; purify our hearts to serve You in truth; and, Adhonay our God, grant us in love and favor Your holy Shabbat as an inheritance, and may all Israel who sanctify Your name rest in it. Blessed are You, Adhonay, who sanctifies the Shabbat.",
+                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, rĕṣeh naʾ bimnuḥathenu, qaddĕshenu bĕmiṣwothekha, sim ḥelqenu bĕthorathakh, sabbĕ'enu miṭṭuvakh, sammeaḥ nafshenu bishu'athakh, wĕṭaher libbenu lĕ'avĕdĕkha veʾĕmeth, wĕhanḥilenu Adhonay ʾĕlohenu bĕʾahăva uvĕraṣon shabbath qodhshekha, wĕyanuḥu vo kol yisraʾel mĕqaddĕshe shĕmekha. barukh ʾatta Adhonay, mĕqaddesh hashshabbath:"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "expandable",
+          "id": "amidah-closing",
+          "label": "End of the Amidah (Retzei – Sim Shalom)",
+          "items": [
+            {
+              "type": "include",
+              "ref": "shared/amidah-weekday",
+              "sectionId": "weekday-amidah",
+              "itemIds": [
+                "avodah",
+                "modim",
+                "sim-shalom"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "musaf",
+      "title": "Musaf",
+      "items": [
+        {
+          "type": "expandable",
+          "id": "musaf-opening",
+          "label": "Beginning of the Amidah (Avot – Kedushat HaShem)",
+          "items": [
+            {
+              "type": "include",
+              "ref": "shared/amidah-weekday",
+              "sectionId": "weekday-amidah",
+              "itemIds": [
+                "amidah-open",
+                "avot",
+                "gevurot-open",
+                "gevurot-season",
+                "gevurot-close",
+                "kedushat-hashem"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "toggle",
+          "id": "musaf-kedushat-hayom",
+          "options": [
+            {
+              "id": "bavli",
+              "label": "Bavli",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "musaf-bavli-varying",
+                  "hebrew": "תִּכַּנְתָּ שַׁבָּת, רָצִיתָ קָרְבּנוֹתֶיהָ, צִוִּיתָ פֵירוּשֶׁיהָ עִם סִדּוּרֵי נְסָכֶיהָ, מְעַנְּגֶיהָ לְעוֹלָם כָּבוֹד יִנְחָלוּ, טוֹעֲמֶיהָ חַיִּים זָכוּ, וְגַם הָאוֹהֲבִים דְבָרֶיהָ גְּדֻלָּה בָחָרוּ. אָז מִסִּינַי נִצְטַוּוּ צִוּוּיֵי פְעָלֶיהָ כָּרָאוּי: יְהִי רָצוֹן מִלְּפָנֶֽיךָ יְיָ אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, שֶׁתַּעֲלֵֽנוּ בְשִׂמְחָה לְאַרְצֵֽנוּ וְתִטָּעֵֽנוּ בִּגְבוּלֵֽנוּ, וְשָׁם נַעֲשֶׂה לְפָנֶֽיךָ אֶת קָרְבּנוֹת חוֹבוֹתֵֽינוּ תְּמִידִים כְּסִדְרָם וּמוּסָפִים כְּהִלְכָתָם. אֶת מוּסַף יוֹם הַשַּׁבָּת הַזֶּה נַעֲשֶׂה וְנַקְרִיב לְפָנֶֽיךָ בְּאַהֲבָה, כְּמִצְוַת רְצוֹנָךְ, כְּמוֹ שֶׁכָּתַבְתָּ עָלֵֽינוּ בְּתוֹרָתָךְ, עַל־יְדֵי מֹשֶׁה עַבְדָּךְ, כָּאָמוּר: וּבְיוֹם֙ הַשַּׁבָּ֔ת שְׁנֵֽי־כְבָשִׂ֥ים בְּנֵֽי־שָׁנָ֖ה תְּמִימִ֑ם וּשְׁנֵ֣י עֶשְׂרֹנִ֗ים סֹ֧לֶת מִנְחָ֛ה בְּלוּלָ֥ה בַשֶּׁ֖מֶן וְנִסְכּֽוֹ׃ עֹלַ֥ת שַׁבַּ֖ת בְּשַׁבַּתּ֑וֹ עַל־עֹלַ֥ת הַתָּמִ֖יד וְנִסְכָּֽהּ׃ יִשְׂמְחוּ בְמַלְכוּתָךְ שׁוֹמְרֵי שַׁבָּת וְקוֹרְאֵי עֹנֶג, עַם מְקַדֵּשֵׁי שְׁבִיעִי, כֻּלָּם יִשְׂבְּעוּ וְיִתְעַנְּגוּ מִטּוּבָךְ, וְהַשְּׁבִיעִי רָצִיתָ בּוֹ וְקִדַּשְׁתּוֹ, חֶמְדַּת יָמִים אוֹתוֹ קָרָאתָ, זֵכֶר לְמַעֲשֵׂה בְרֵאשִׁית:",
+                  "translation": "You ordained Shabbat, You desired its offerings, You commanded the details of its laws together with the order of its libations. Those who delight in it inherit glory forever; those who taste of it merit life; and even those who love its teaching have chosen greatness. At Sinai they were commanded the details of its observance, as is fitting: May it be Your will, Adhonay our God and God of our ancestors, that You bring us up in joy to our land and plant us within our borders, and there we will offer before You our obligatory offerings: the daily offerings in their order and the additional offerings according to their law. The additional offering of this Shabbat day we will offer and bring near before You in love, as You have commanded us, as You wrote for us in Your Torah through Moses Your servant, as it is said: On the Shabbat day, two yearling lambs without blemish, and two-tenths of an ephah of fine flour mixed with oil as a meal offering, and its libation — this is the burnt offering of each Shabbat, in addition to the daily burnt offering and its libation. Those who keep Shabbat and call it a delight shall rejoice in Your kingship — a people who sanctify the seventh day; all of them shall be satisfied and delighted with Your goodness. You favored the seventh day and sanctified it; You called it the most precious of days, a remembrance of the work of creation.",
+                  "translit": "tikkanta shabbath, raṣitha qorbnotheha, ṣiwwitha ferusheha 'īm siddure nĕsakheha, mĕ'annĕgheha lĕ'olam kavodh yinḥalu, ṭo'ămeha ḥayyim zakhu, wĕgham haʾohăvim dhĕvareha gĕdhulla vaḥaru. ʾaz missinay niṣṭawwu ṣiwwuye fĕ'aleha karaʾuy: yĕhi raṣon millĕfanekha Adhonay ʾĕlohenu weʾlohe ʾăvothenu, shetta'ălenu vĕsimḥa lĕʾarṣenu wĕthiṭṭa'enu bighvulenu, wĕsham na'ăseh lĕfanekha ʾeth qorbnoth ḥovothenu tĕmidhim kĕsidhram umusafim kĕhilkhatham. ʾeth musaf yom hashshabbath hazzeh na'ăseh wĕnaqriv lĕfanekha bĕʾahăva, kĕmiṣwath rĕṣonakh, kĕmo shekkathavta 'alenu bĕthorathakh, 'al-yĕdhe mosheh 'avdakh, kaʾamur: uvĕyom hashshabbath shĕne-khĕvasim bĕne-shana tĕmimīm ushĕne 'esronim soleth minḥa bĕlula vashshemen wĕnisko. 'olath shabbath bĕshabbatto 'al-'olath hattamidh wĕniskah. yismĕḥu vĕmalkhuthakh shomĕre shabbath wĕqorĕʾe 'onegh, 'am mĕqaddeshe shĕvi'i, kullam yisbĕ'u wĕyith'annĕghu miṭṭuvakh, wĕhashshĕvi'i raṣitha bo wĕqiddashto, ḥemdath yamim ʾotho qaraʾtha, zekher lĕma'ăseh vĕreʾshith:"
+                },
+                {
+                  "type": "text",
+                  "id": "musaf-bavli-fixed",
+                  "hebrew": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶאֱמֶת, וְהַנְחִילֵנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבַּת קָדְשֶׁךָ, וְיָנוּחוּ בוֹ כָּל יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. בָּרוּךְ אַתָּה יְיָ, מְקַדֵּשׁ הַשַּׁבָּת:",
+                  "translation": "Our God and God of our ancestors, be pleased with our rest; sanctify us with Your commandments and grant us a share in Your Torah; satisfy us from Your goodness and gladden us with Your salvation; purify our hearts to serve You in truth; and, Adhonay our God, grant us in love and favor Your holy Shabbat as an inheritance, and may all Israel who sanctify Your name rest in it. Blessed are You, Adhonay, who sanctifies the Shabbat.",
+                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, rĕṣeh naʾ bimnuḥathenu, qaddĕshenu bĕmiṣwothekha, sim ḥelqenu bĕthorathakh, sabbĕ'enu miṭṭuvakh, sammeaḥ nafshenu bishu'athakh, wĕṭaher libbenu lĕ'avĕdĕkha veʾĕmeth, wĕhanḥilenu Adhonay ʾĕlohenu bĕʾahăva uvĕraṣon shabbath qodhshekha, wĕyanuḥu vo kol yisraʾel mĕqaddĕshe shĕmekha. barukh ʾatta Adhonay, mĕqaddesh hashshabbath:"
+                }
+              ]
+            },
+            {
+              "id": "eretz-yisrael",
+              "label": "Eretz Yisrael",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "musaf-ey-varying",
+                  "hebrew": "הָנַח לְעַמְּךָ בְּשַׁבָּת בְּרִיתְךָ מְנוּחָה וְשָׁלוֹם הַשְׁקֵט וָבֶטַח כַּכָּתוּב בְּתוֹרָתֶךָ וְשָׁמְר֥וּ בְנֵֽי־יִשְׂרָאֵ֖ל אֶת־הַשַּׁבָּ֑ת לַעֲשׂ֧וֹת אֶת־הַשַּׁבָּ֛ת לְדֹרֹתָ֖ם בְּרִ֥ית עוֹלָֽם׃ בֵּינִ֗י וּבֵין֙ בְּנֵ֣י יִשְׂרָאֵ֔ל א֥וֹת הִ֖וא לְעֹלָ֑ם כִּי־שֵׁ֣שֶׁת יָמִ֗ים עָשָׂ֤ה יְיָ֙ אֶת־הַשָּׁמַ֣יִם וְאֶת־הָאָ֔רֶץ וּבַיּוֹם֙ הַשְּׁבִיעִ֔י שָׁבַ֖ת וַיִּנָּפַֽשׁ׃ וְאוֹמֵר וּבְיוֹם֙ הַשַּׁבָּ֔ת שְׁנֵֽי־כְבָשִׂ֥ים בְּנֵֽי־שָׁנָ֖ה תְּמִימִ֑ם וּשְׁנֵ֣י עֶשְׂרֹנִ֗ים סֹ֧לֶת מִנְחָ֛ה בְּלוּלָ֥ה בַשֶּׁ֖מֶן וְנִסְכּֽוֹ׃ עֹלַ֥ת שַׁבַּ֖ת בְּשַׁבַּתּ֑וֹ עַל־עֹלַ֥ת הַתָּמִ֖יד וְנִסְכָּֽהּ׃",
+                  "translation": "Grant Your people rest on the Shabbat of Your covenant — rest and peace, tranquility and security — as it is written in Your Torah: The Children of Israel shall keep the Shabbat, observing the Shabbat throughout their generations as an everlasting covenant. It is a sign forever between Me and the Children of Israel, for in six days Adhonay made the heavens and the earth, and on the seventh day He ceased and rested. And it says: On the Shabbat day, two yearling lambs without blemish, and two-tenths of an ephah of fine flour mixed with oil as a meal offering, and its libation — this is the burnt offering of each Shabbat, in addition to the daily burnt offering and its libation.",
+                  "translit": "hanaḥ lĕ'ammĕkha bĕshabbath bĕrithĕkha mĕnuḥa wĕshalom hashqeṭ waveṭaḥ kakkathuv bĕthorathekha wĕshamĕru vĕne-yisraʾel ʾeth-hashshabbath la'ăsoth ʾeth-hashshabbath lĕdhorotham bĕrith 'olam. beni uven bĕne yisraʾel ʾoth hīwʾ lĕ'olam ki-shesheth yamim 'asa Adhonay ʾeth-hashshamayim wĕʾeth-haʾareṣ uvayyom hashshĕvi'i shavath wayyinnafash. wĕʾomer uvĕyom hashshabbath shĕne-khĕvasim bĕne-shana tĕmimīm ushĕne 'esronim soleth minḥa bĕlula vashshemen wĕnisko. 'olath shabbath bĕshabbatto 'al-'olath hattamidh wĕniskah."
+                },
+                {
+                  "type": "text",
+                  "id": "musaf-ey-fixed",
+                  "hebrew": "אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, רְצֵה נָא בִּמְנוּחָתֵנוּ, קַדְּשֵׁנוּ בְּמִצְוֹתֶיךָ, שִׂים חֶלְקֵנוּ בְּתוֹרָתָךְ, שַׂבְּעֵנוּ מִטּוּבָךְ, שַׂמֵּחַ נַפְשֵׁנוּ בִּישׁוּעָתָךְ, וְטַהֵר לִבֵּנוּ לְעָבְדְּךָ בֶאֱמֶת, וְהַנְחִילֵנוּ יְיָ אֱלֹהֵינוּ בְּאַהֲבָה וּבְרָצוֹן שַׁבַּת קָדְשֶׁךָ, וְיָנוּחוּ בוֹ כָּל יִשְׂרָאֵל מְקַדְּשֵׁי שְׁמֶךָ. וְנַעֲשֶׂה לְפָנֶיךָ חוֹבֹתֵינוּ תְּמִידֵי יוֹם וְקָרְבַּן מוּסָף. בָּרוּךְ אַתָּה יְיָ, מְקַדֵּשׁ הַשַּׁבָּת:",
+                  "translation": "Our God and God of our ancestors, be pleased with our rest; sanctify us with Your commandments and grant us a share in Your Torah; satisfy us from Your goodness and gladden us with Your salvation; purify our hearts to serve You in truth; and, Adhonay our God, grant us in love and favor Your holy Shabbat as an inheritance, and may all Israel who sanctify Your name rest in it. And we will perform before You our daily obligations and the Musaf offering. Blessed are You, Adhonay, who sanctifies the Shabbat.",
+                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, rĕṣeh naʾ bimnuḥathenu, qaddĕshenu bĕmiṣwothekha, sim ḥelqenu bĕthorathakh, sabbĕ'enu miṭṭuvakh, sammeaḥ nafshenu bishu'athakh, wĕṭaher libbenu lĕ'avĕdĕkha veʾĕmeth, wĕhanḥilenu Adhonay ʾĕlohenu bĕʾahăva uvĕraṣon shabbath qodhshekha, wĕyanuḥu vo kol yisraʾel mĕqaddĕshe shĕmekha. wĕna'ăseh lĕfanekha ḥovothenu tĕmidhe yom wĕqorban musaf. barukh ʾatta Adhonay, mĕqaddesh hashshabbath:"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "expandable",
+          "id": "musaf-closing",
+          "label": "End of the Amidah (Retzei – Sim Shalom)",
+          "items": [
+            {
+              "type": "include",
+              "ref": "shared/amidah-weekday",
+              "sectionId": "weekday-amidah",
+              "itemIds": [
+                "avodah",
+                "modim",
+                "sim-shalom"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

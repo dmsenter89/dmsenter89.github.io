@@ -1,0 +1,54 @@
+{
+  "title": "Handwashing",
+  "sections": [
+    {
+      "id": "netilat-yadayim-laws",
+      "title": "Laws of Handwashing",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "handwashing-law-a",
+          "hebrew": "כל האוכל פת שמברכין עליה \"המוציא\" חייב בנטילת ידיים תחילה, אף על פי שהיא פת חולין ואפילו אין ידיו מלוכלכות ואינו יודע להן טומאה. וכן כל האוכל דבר שטיבולו באחד משבעה משקין צריך נטילת ידיים בתחילה. כמו כן, הנוטל ידיו לקריאת שמע ולתפילה חייב בנטילה מן הדין. ברם, פירות של חולין אינם צריכים נטילת ידיים, לא בתחילה ולא בסוף, וכל הנוטל ידיו לפירות הרי זה מגסי הרוח.",
+          "translation": "Anyone eating bread that requires the blessing 'Hamotzi' is obligated to wash their hands beforehand, even if it is ordinary (non-sacred) bread and even if their hands appear completely clean and free of impurity. Likewise, eating any food dipped in one of the seven recognized liquids requires handwashing prior to eating. Furthermore, handwashing is required before reciting Shema and standing for Tefillah (prayer). However, ordinary fruit does not require handwashing, and one who washes their hands before eating fruit is considered arrogant."
+        },
+        {
+          "type": "rubric",
+          "id": "handwashing-law-b",
+          "hebrew": "כל הנוטל ידיו צריך להיזהר בארבעה דברים המעכבים את הנטילה: א) המים: שיהיו מים כשרים שלא נעשתה בהן מלאכה, שלא נשתנה מראיהן ושראויים לשתיית בהמה. ב) השיעור והשטח: שיהיה במים שיעור רביעית לכל שתי הידיים, ויש ליטול עד פרק כף היד בלא שום חוצץ. ג) הכלי: שהמים יינטלו מתוך כלי שלם המחזיק רביעית, ולא משברי כלים. ד) כוח נותן: שהמים יבואו מכוח אדם השופך, ולא מזרימה טבעית או שוקת שאין בה כוח נותן.",
+          "translation": "Anyone washing their hands must ensure four essential conditions are met: 1) The Water: Must be valid water that was not used for work or labor, has not changed color, and remains fit for animals to drink. 2) Volume & Coverage: Must contain at least a Revi'it (approx. 3 fl oz) for both hands, poured thoroughly up to the wrist joint without any barrier (Chatzitzah). 3) The Vessel: Water must be poured directly from an undamaged, intact container that holds a Revi'it. 4) Human Effort: The water must flow through direct human force (pouring) rather than passive or natural water movement."
+        },
+        {
+          "type": "rubric",
+          "id": "handwashing-law-c",
+          "hebrew": "צריך לברך בתחילה קודם הנטילה: \"אשר קידשנו במצוותיו וציוונו על נטילת ידיים\". הנטילה המובחרת היא שייתן אדם אחר מים על שתי ידיו כאחת בשטיפה אחת של רביעית מים, ואין צריך לצוק יותר מפעם אחת. אם אין שם אדם אחר, יניח את הכלי בין ברכיו או יטה את החבית ויצוק על שתי ידיו כאחת; ואם קשה לו, מותר ליטול בידו אחת ולצוק על חברתה, וחוזר וצוק בראשונה על השנייה. בשעת השפיכה יגביה ידיו למעלה כדי שלא ייצאו מים חוץ לפרק ויחזרו ויטמאו את הידיים. לאחר הנטילה חייב אדם לנגב את ידיו היטב ורק אחר כך יאכל, שכל האוכל בלא ניגוב ידיים כאוכל לחם טמא.",
+          "translation": "One must recite the blessing first, prior to washing: 'Asher Kidshanu B'mitzvotav V'tzivanu Al Netilat Yadayim.' The ideal method is to have another person pour a full Revi'it of water over both of one's hands simultaneously in a single, continuous pour—it is not necessary to pour more than once. If no other person is present to pour, one places the vessel between their knees or tilts a container to pour onto both hands at once. If that is too difficult, one may pour with one hand onto the other, and then switch to pour on the first hand. While pouring, one should elevate their hands upward so water does not flow past the wrist joint and return to re-contaminate the hands. Following washing, one must thoroughly dry their hands before eating, as eating with wet hands is likened to eating impure bread."
+        },
+        {
+          "type": "rubric",
+          "id": "handwashing-law-d",
+          "hebrew": "נהגו רבים שלא לשוח בין נטילת ידיים לברכת המוציא (וכמו שהביא השולחן ערוך מנהג הרא\"ש), ומתוך כך יש שמתקשרים ברמיזות וקולות. ברם, מן הדין מותר לדבר בין הנטילה לסעודה ואין הדיבור פוסל את הנטילה כלל. וכן היתה הנהגתו של מרן הרב עובדיה יוסף זצ\"ל לדבר בין הנטילה למוציא ללא חשש, ובלבד שלא יסיח דעתו מנטירת ניקיון ידיו.",
+          "translation": "Many have the custom not to speak between handwashing and reciting the 'Hamotzi' blessing over bread (as recorded in the Shulchan Arukh regarding the practice of the Rosh), often leading people to resort to gestures or noises. However, according to strict Halakha, speaking is fully permitted between handwashing and the meal and does not invalidate the washing at all. Indeed, it was the custom of Maran Rabbi Ovadia Yosef z\"l to speak between handwashing and 'Hamotzi', provided one does not become distracted or touch anything that would soil their hands."
+        }
+      ]
+    },
+    {
+      "id": "netilat-yadayim-blessing",
+      "title": "Blessing for Handwashing",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "handwashing-rubric",
+          "hebrew": "כשנוטל ידיו מברך תחילה",
+          "translation": "When washing one's hands, one blesses first:"
+        },
+        {
+          "type": "text",
+          "id": "netilat-yadayim-bracha",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְווֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם׃",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has sanctified us with His commandments and commanded us concerning the washing of hands.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al nĕṭilath yadhayīm."
+        }
+      ]
+    }
+  ]
+}
