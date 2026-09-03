@@ -21,3 +21,6 @@ hugo.linux
 # Local tool-generated config
 /.serena/
 /.claude/settings.local.json
+
+/.quarto/
+**/*.quarto_ipynb

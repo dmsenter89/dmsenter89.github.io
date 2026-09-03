@@ -33,3 +33,24 @@
 {{ (resources.Get "tabs.css" | minify).Content | safeCSS }}
 </style>
 
+{{- /* Table styling (captions, header shading, zebra rows, scroll-on-overflow),
+       loaded only on pages that actually contain a <table>. */ -}}
+{{- if and .IsPage (findRE `<table\b` .RawContent) }}
+<style>
+{{ (resources.Get "tables.css" | minify).Content | safeCSS }}
+</style>
+{{- end }}
+
+{{- /* Mermaid diagrams, loaded only on single pages with a ```mermaid fenced
+       code block (see layouts/_markup/render-codeblock-mermaid.html, which
+       renders it as <pre class="mermaid"> for mermaid.js to pick up). */ -}}
+{{- if and .IsPage (findRE "(?s)```mermaid" .RawContent) }}
+<script defer src="https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.min.js"></script>
+<script defer>
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: document.documentElement.dataset.theme === 'dark' ? 'dark' : 'default'
+  });
+</script>
+{{- end }}
+
