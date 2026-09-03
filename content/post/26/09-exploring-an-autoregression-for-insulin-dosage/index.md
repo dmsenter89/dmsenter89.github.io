@@ -68,7 +68,7 @@ The good news -- yes, it is identifiable! And quite simply, too. The minimal adj
 
 $$
 \begin{align}
-  y_{i+1} &\sim N(\mu_{i+1}, \sigma)\\
+  y_{i+1} &\sim N(\mu_{i+1}, \sigma)\\\
   \mu_{i+1} &= \alpha + \beta d_i + \gamma y_i
 \end{align}
 $$
@@ -81,7 +81,7 @@ Blood glucose is strictly positive, and insulin's effect plausibly behaves multi
 
 $$
 \begin{align}
-  \log(y_{i+1}) &\sim N(\mu_{i+1}, \sigma)\\
+  \log(y_{i+1}) &\sim N(\mu_{i+1}, \sigma)\\\
   \mu_{i+1} &= \alpha + \beta d_i + \gamma \log(y_i)
 \end{align}
 $$
