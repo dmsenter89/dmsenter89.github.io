@@ -8,7 +8,7 @@ tags:
   - sas
 ---
 
-My dog Sudo has diabetes. In humans, that is quite manageable. Constant monitoring of blood sugar levels and insulin dosage is required, but many tools exist to help with this and -- importantly -- are covered by medical insurance. The situation with dogs tends to be more challenging. Fewer tools are available and many people don't have medical insurance for their dogs. According to our local vet, this unfortunately leads to many dogs being euthanized instead of cared for. Care for the dogs themselves is more challenging as well. The process for establishing Sudo's dose was as follows: for about two weeks, he wore a continuous glucose monitor (CGM) and we recorded his blood sugar levels. We then used that data to determine his insulin dosage. We settled on one specific dog food that he would get the same amount twice a day, every day so that his carb intake stays stable. We administer insulin twice a day with his food. The vet used that data to generate a dosing table. Most people apparently just use a fixed dose twice daily, because some dogs are not particularly fond of blood sugar sticks and CGM is expensive. Sudo has been doing well with the blood sugar pricks, so we have generally been able to use adjustment doses as recommended.
+My dog Sudo has diabetes. In humans, that is quite manageable. Constant monitoring of blood sugar levels and insulin dosage is required, but many tools exist to help with this and -- importantly -- are covered by medical insurance. The situation with dogs tends to be more challenging. Fewer tools are available and many people don't have medical insurance for their dogs. According to our local vet, this unfortunately leads to many dogs being euthanized instead of cared for. Care for the dogs themselves is challenging. The process for establishing Sudo's dose was as follows: for about two weeks, he wore a continuous glucose monitor (CGM) and we recorded his blood sugar levels. We then used that data to determine his insulin dosage. We settled on one specific dog food that he would get the same amount twice a day, every day so that his carb intake stays stable. We administer insulin twice a day with his food. The vet used that data to generate a dosing table. Most people apparently just use a fixed dose twice daily, because some dogs are not particularly fond of blood sugar sticks and CGM is expensive. Sudo has been doing well with the blood sugar pricks, so we have generally been able to use adjustment doses as recommended.
 
 We have noticed lately that his blood sugar has been running high. Ideally, it should roughly stay in the range of 70-150 mg/dL. Once it starts dropping much lower than this, he needs immediate sugar because hypoglycemia can be fatal. If he strays far above this level, he is at risk for long-term complications due to damage from hyperglycemia. For the past months we've noticed he hasn't been responding to his insulin as well as he used to. We've started adjusting his dose slightly based on his blood sugar readings, but we are concerned that this is not a sustainable approach. We've been collecting data to share with his vet in coming up with a new strategy, but this is also a good excuse to learn about the basics of autoregression.
 
@@ -109,7 +109,7 @@ That's the behavior we're looking for and that's good enough for a start. The tw
 
 ## Fitting The Data
 
-Alright, now that we have a model and priors available, let's fit the data. I have a week's worth of blood sugar and insulin dose recordings for Sudo, which is enough to get a rough idea of the dynamics. (The full SAS script behind this post, including the code that produced every figure, is available as [`sudo.sas`](sudo.sas) if you'd like to follow along or run it yourself.) The data is read in via `datalines`, which has the following columns:
+Alright, now that we have a model and priors available, let's fit the data. I now have about two weeks' worth of blood sugar and insulin dose recordings for Sudo, which is enough to start narrowing things down. (The full SAS script behind this post, including the code that produced every figure, is available as [`sudo.sas`](sudo.sas) if you'd like to follow along or run it yourself.) The data is read in via `datalines`, which has the following columns:
 
 ```sas
 data sudo_glucose;
@@ -142,15 +142,29 @@ data sudo_glucose;
 08/31/2026 AM 192 23.0
 08/31/2026 PM 298 24.0
 09/01/2026 AM 119 23.0
+09/01/2026 PM 329 25.0
+09/02/2026 AM  98 23.0
+09/02/2026 PM 115 23.0
+09/03/2026 AM 202 24.0
+09/03/2026 PM 248 25.0
+09/04/2026 AM 106 23.0
+09/04/2026 PM 307 25.0
+09/05/2026 AM 240 25.0
+09/05/2026 PM 118 23.0
+09/06/2026 AM 300 25.0
+09/06/2026 PM 329 25.0
+09/07/2026 AM 331 25.0
+09/07/2026 PM 327 25.5
+09/08/2026 AM 260 25.0
 ;
 run;
 ```
 
-Which creates this data set:
+The full series runs 31 observations deep, which is long enough that printing the whole thing isn't very informative -- here are the first five so you can see the shape of it:
 
 <div class="table-wrap">
 <table>
-<caption>Sudo Glucose Data</caption>
+<caption>Sudo Glucose Data (first 5 of 31 observations)</caption>
 <thead>
 <tr><th>Observation Date</th><th>Dosing Window (AM/PM)</th><th>Blood Glucose (mg/dL)</th><th>Vetsulin Dose (Units)</th></tr>
 </thead>
@@ -160,21 +174,17 @@ Which creates this data set:
 <tr><td>08/25/2026</td><td>AM</td><td>416</td><td>28.0</td></tr>
 <tr><td>08/25/2026</td><td>PM</td><td>310</td><td>26.0</td></tr>
 <tr><td>08/26/2026</td><td>AM</td><td>280</td><td>27.0</td></tr>
-<tr><td>08/26/2026</td><td>PM</td><td>170</td><td>23.0</td></tr>
-<tr><td>08/27/2026</td><td>AM</td><td>298</td><td>25.0</td></tr>
-<tr><td>08/27/2026</td><td>PM</td><td>264</td><td>26.0</td></tr>
-<tr><td>08/28/2026</td><td>AM</td><td>128</td><td>22.0</td></tr>
-<tr><td>08/28/2026</td><td>PM</td><td>164</td><td>23.0</td></tr>
-<tr><td>08/29/2026</td><td>AM</td><td>95</td><td>22.0</td></tr>
-<tr><td>08/29/2026</td><td>PM</td><td>231</td><td>24.0</td></tr>
-<tr><td>08/30/2026</td><td>AM</td><td>143</td><td>23.0</td></tr>
-<tr><td>08/30/2026</td><td>PM</td><td>116</td><td>22.5</td></tr>
-<tr><td>08/31/2026</td><td>AM</td><td>192</td><td>23.0</td></tr>
-<tr><td>08/31/2026</td><td>PM</td><td>298</td><td>24.0</td></tr>
-<tr><td>09/01/2026</td><td>AM</td><td>119</td><td>23.0</td></tr>
 </tbody>
 </table>
 </div>
+
+Let' look at a scatter plot of this. I used `ods graphics / imagemap=on` to turn on hover tooltips for the plot below, so if your browser supports it you can hover over any point for its exact date, reading, and dose:
+
+<object type="image/svg+xml" data="fig-glucose-timeline.svg" width="768" height="480" style="max-width:100%;height:auto">
+Blood glucose readings over time, colored by AM/PM dosing window, with the 70-150 mg/dL target range shaded. Hover over a point to see its exact date, reading, and dose.
+</object>
+
+The trend is hard to miss. Readings have been drifting upward and spending more time above the target band than they used to, which is exactly the pattern that got us worried enough to want a better answer rather than maintaining the old equilibrium dose.
 
 We'll need to use SQL with a self-join to generate the analysis data set from here. We'll need an extra column for the following row's glucose reading and we can drop the dosing window since we don't need it.
 
@@ -195,10 +205,11 @@ proc sql;
 quit;
 ```
 
-This gives us the analysis data set as:
+This gives us the analysis data set, again showing just the first five of 31 rows:
 
 <div class="table-wrap">
 <table>
+<caption>Sudo Analysis Data (first 5 of 31 observations)</caption>
 <thead>
 <tr><th>Observation Date</th><th>Blood Glucose Now (mg/dL)</th><th>Vetsulin Dose Now (Units)</th><th>Blood Glucose Next Reading (mg/dL)</th></tr>
 </thead>
@@ -208,18 +219,6 @@ This gives us the analysis data set as:
 <tr><td>08/25/2026</td><td>416</td><td>28.0</td><td>310</td></tr>
 <tr><td>08/25/2026</td><td>310</td><td>26.0</td><td>280</td></tr>
 <tr><td>08/26/2026</td><td>280</td><td>27.0</td><td>170</td></tr>
-<tr><td>08/26/2026</td><td>170</td><td>23.0</td><td>298</td></tr>
-<tr><td>08/27/2026</td><td>298</td><td>25.0</td><td>264</td></tr>
-<tr><td>08/27/2026</td><td>264</td><td>26.0</td><td>128</td></tr>
-<tr><td>08/28/2026</td><td>128</td><td>22.0</td><td>164</td></tr>
-<tr><td>08/28/2026</td><td>164</td><td>23.0</td><td>95</td></tr>
-<tr><td>08/29/2026</td><td>95</td><td>22.0</td><td>231</td></tr>
-<tr><td>08/29/2026</td><td>231</td><td>24.0</td><td>143</td></tr>
-<tr><td>08/30/2026</td><td>143</td><td>23.0</td><td>116</td></tr>
-<tr><td>08/30/2026</td><td>116</td><td>22.5</td><td>192</td></tr>
-<tr><td>08/31/2026</td><td>192</td><td>23.0</td><td>298</td></tr>
-<tr><td>08/31/2026</td><td>298</td><td>24.0</td><td>119</td></tr>
-<tr><td>09/01/2026</td><td>119</td><td>23.0</td><td>.</td></tr>
 </tbody>
 </table>
 </div>
@@ -264,10 +263,10 @@ run;
 <tr><th>Parameter</th><th>N</th><th>Mean</th><th>Standard Deviation</th><th>95% HPD Lower</th><th>95% HPD Upper</th></tr>
 </thead>
 <tbody>
-<tr><td>mu_eq</td><td>10000</td><td>128.2</td><td>26.3122</td><td>76.1145</td><td>176.8</td></tr>
-<tr><td>beta</td><td>10000</td><td>-0.0289</td><td>0.0109</td><td>-0.0500</td><td>-0.00937</td></tr>
-<tr><td>sigma2</td><td>10000</td><td>0.1889</td><td>0.0560</td><td>0.0992</td><td>0.2985</td></tr>
-<tr><td>d_110</td><td>10000</td><td>23.7539</td><td>3.0840</td><td>19.1590</td><td>31.1369</td></tr>
+<tr><td>mu_eq</td><td>10000</td><td>151.6</td><td>27.4230</td><td>98.0568</td><td>205.3</td></tr>
+<tr><td>beta</td><td>10000</td><td>-0.0285</td><td>0.0114</td><td>-0.0504</td><td>-0.00866</td></tr>
+<tr><td>sigma2</td><td>10000</td><td>0.2389</td><td>0.0582</td><td>0.1372</td><td>0.3545</td></tr>
+<tr><td>d_110</td><td>10000</td><td>27.0785</td><td>5.3421</td><td>19.9314</td><td>37.8552</td></tr>
 </tbody>
 </table>
 </div>
@@ -278,23 +277,31 @@ run;
 <tr><th>Parameter</th><th>ESS</th><th>Autocorrelation Time</th><th>Efficiency</th></tr>
 </thead>
 <tbody>
-<tr><td>mu_eq</td><td>1321.2</td><td>7.5690</td><td>0.1321</td></tr>
-<tr><td>beta</td><td>1833.6</td><td>5.4537</td><td>0.1834</td></tr>
-<tr><td>sigma2</td><td>8499.6</td><td>1.1765</td><td>0.8500</td></tr>
-<tr><td>d_110</td><td>1601.2</td><td>6.2454</td><td>0.1601</td></tr>
+<tr><td>mu_eq</td><td>1007.0</td><td>9.9303</td><td>0.1007</td></tr>
+<tr><td>beta</td><td>1796.5</td><td>5.5664</td><td>0.1796</td></tr>
+<tr><td>sigma2</td><td>5294.4</td><td>1.8888</td><td>0.5294</td></tr>
+<tr><td>d_110</td><td>1440.1</td><td>6.9439</td><td>0.1440</td></tr>
 </tbody>
 </table>
 </div>
 
-<img src="fig-diagnostics-mu_eq.svg" alt="MCMC diagnostic plots (trace, autocorrelation, density) for mu_eq." />
+<object type="image/svg+xml" data="fig-diagnostics-mu_eq.svg" width="768" height="480" style="max-width:100%;height:auto">
+MCMC diagnostic plots (trace, autocorrelation, density) for mu_eq.
+</object>
 
-<img src="fig-diagnostics-beta.svg" alt="MCMC diagnostic plots (trace, autocorrelation, density) for beta." />
+<object type="image/svg+xml" data="fig-diagnostics-beta.svg" width="768" height="480" style="max-width:100%;height:auto">
+MCMC diagnostic plots (trace, autocorrelation, density) for beta.
+</object>
 
-<img src="fig-diagnostics-sigma2.svg" alt="MCMC diagnostic plots (trace, autocorrelation, density) for sigma2." />
+<object type="image/svg+xml" data="fig-diagnostics-sigma2.svg" width="768" height="480" style="max-width:100%;height:auto">
+MCMC diagnostic plots (trace, autocorrelation, density) for sigma2.
+</object>
 
-<img src="fig-diagnostics-d110.svg" alt="MCMC diagnostic plots (trace, autocorrelation, density) for d_110." />
+<object type="image/svg+xml" data="fig-diagnostics-d110.svg" width="768" height="480" style="max-width:100%;height:auto">
+MCMC diagnostic plots (trace, autocorrelation, density) for d_110.
+</object>
 
-Overall we see pretty good mixing. We only have a small number of data points, so we're looking for pointers in this data -- not publishable results.
+Overall we see pretty good mixing. We still only have a modest number of data points -- 30 usable pairs now, up from 16 -- so we're looking for pointers in this data, not publishable results.
 
 ```sql
 select
@@ -309,14 +316,18 @@ select
 <tr><th>P(μ_eq > 110)</th><th>P(μ_eq > 150)</th></tr>
 </thead>
 <tbody>
-<tr><td>0.7577</td><td>0.2069</td></tr>
+<tr><td>0.9263</td><td>0.5487</td></tr>
 </tbody>
 </table>
 </div>
 
-It appears we have good reason to believe that we have an equilibrium mean above 110 mg/dL, but only modest grounds to believe it is above 150 mg/dL. In part that's because we don't have that much data, so the prior isn't overwhelmed yet. But that's the point of it, we're updating. Our model still has uncertainty, as the next visualization shows and there's a decent chance of an out-of-range reading (roughly a third).
+We now have strong reason to believe the equilibrium mean sits above 110 mg/dL, and it's more likely than not to be above 150 mg/dL as well. Our model still has uncertainty, as the next visualization shows, and there's now a substantial chance of an out-of-range reading even if we dose with the model suggested equilibrium dose.
 
 
-<img src="fig-expected-variation-d110.svg" alt="Posterior predictive distribution of the next blood glucose reading when dosing at d_110, with 90% interval and out-of-range probabilities." />
+<object type="image/svg+xml" data="fig-expected-variation-d110.svg" width="768" height="480" style="max-width:100%;height:auto">
+Posterior predictive distribution of the next blood glucose reading when dosing at d_110, with 90% interval and out-of-range probabilities.
+</object>
 
-Overall, this is good intuition building and shows support for some of the ideas my wife and I have discussed as we have been monitoring Sudo. Next steps from a modeling perspective would be to get more data points to help sharpen the uncertainty windows. With enough data points, I think it would be worthwhile to build a hierarchical model with the dose window effect.
+Overall, this is good intuition building. It's pointing clearly in a direction my wife and I already suspected from watching Sudo day to day: his current dose is probably running below what he actually needs. Again, this is a very simple model, mostly for purposes of learning a bit about setting up an autoregression. We'll rely on the vet's experience to actually set a target dose.
+
+Next steps from a modeling perspective would be to keep collecting readings to sharpen the uncertainty windows further, and, with enough data points, build a hierarchical model with the dose window effect.
