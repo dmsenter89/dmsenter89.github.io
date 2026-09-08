@@ -1,0 +1,404 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" id="SVG_IDX" width="768" height="480" baseProfile="full" viewBox="-1 -1 769 481"><desc id="desc_SVG_IDX">The SGPlot Procedure</desc><defs><clipPath id="SVG_IDX_clipPage1"><path d="M-1-1h769v481H-1z"/></clipPath></defs><g id="SVG_IDX_Page1" clip-path="url(#SVG_IDX_clipPage1)"><path d="M0 0h767v479H0z" style="fill:#011829"/><path d="M0 0h767v479H0z" style="fill:#011829"/><path d="M0 0h767v479H0z" style="stroke:#f9fafb;stroke-width:1;fill:none"/><g transform="translate(11 11)"><defs><clipPath id="SVG_IDX_ClipPath0"><path d="M-1-1h747v459H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath0)"><defs><clipPath id="SVG_IDX_ClipPath1"><path d="M-1-1h747v434H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath1)"><path d="M63.415.499h659.116v381.168H63.415z" style="fill:#011829"/><path d="M62.916 346.917h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 347 1.032-.083" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><path d="M62.916 262.682h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 263 1.032-.318" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><path d="M62.916 178.448h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 178 1.032.448" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><path d="M62.916 94.213h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 94 1.032.213" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><path d="M62.916 9.978h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 10 1.032-.022" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><defs><clipPath id="SVG_IDX_ClipPath2"><path d="M62-1h662v384H62z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath2)"><path d="M723.03 304.8H62.917v67.387H723.03Z" style="fill:#2e8b57;fill-rule:evenodd;fill-opacity:.14901"/><path d="M72.902 118.641V9.978l42.676 70.757v89.29l42.677 25.27v92.658l42.676-107.82v28.64l42.676 114.558v-30.324l42.676 58.122v-114.56l42.676 74.127v22.743l42.676-64.018v-89.289l42.676 150.78V154.02l42.676 194.582v-14.32l42.677-73.284V222.25l42.676 119.613V172.55l42.676 56.437v102.767l42.676-153.307V154.02l42.676-1.685v3.37l42.676 56.436" style="stroke:gray;stroke-width:1;stroke-opacity:.69803;fill:none;stroke-dasharray:9,7"/><path d="m712 211 1.044 1.141" style="stroke:gray;stroke-width:1;stroke-opacity:.69803;fill:none"/><circle cx="72.902" cy="118.641" r="4" style="fill:#35a5ff"/><circle cx="72.902" cy="9.978" r="4" style="fill:#eace5c"/><circle cx="115.578" cy="80.735" r="4" style="fill:#35a5ff"/><circle cx="115.578" cy="170.024" r="4" style="fill:#eace5c"/><circle cx="158.255" cy="195.295" r="4" style="fill:#35a5ff"/><circle cx="158.255" cy="287.953" r="4" style="fill:#eace5c"/><circle cx="200.931" cy="180.132" r="4" style="fill:#35a5ff"/><circle cx="200.931" cy="208.772" r="4" style="fill:#eace5c"/><circle cx="243.607" cy="323.331" r="4" style="fill:#35a5ff"/><circle cx="243.607" cy="293.007" r="4" style="fill:#eace5c"/><circle cx="286.283" cy="351.129" r="4" style="fill:#35a5ff"/><circle cx="286.283" cy="236.57" r="4" style="fill:#eace5c"/><circle cx="328.959" cy="310.696" r="4" style="fill:#35a5ff"/><circle cx="328.959" cy="333.439" r="4" style="fill:#eace5c"/><circle cx="371.635" cy="269.421" r="4" style="fill:#35a5ff"/><circle cx="371.635" cy="180.132" r="4" style="fill:#eace5c"/><circle cx="414.311" cy="330.912" r="4" style="fill:#35a5ff"/><circle cx="414.311" cy="154.02" r="4" style="fill:#eace5c"/><circle cx="456.987" cy="348.602" r="4" style="fill:#35a5ff"/><circle cx="456.987" cy="334.282" r="4" style="fill:#eace5c"/><circle cx="499.664" cy="260.998" r="4" style="fill:#35a5ff"/><circle cx="499.664" cy="222.25" r="4" style="fill:#eace5c"/><circle cx="542.34" cy="341.863" r="4" style="fill:#35a5ff"/><circle cx="542.34" cy="172.551" r="4" style="fill:#eace5c"/><circle cx="585.016" cy="228.988" r="4" style="fill:#35a5ff"/><circle cx="585.016" cy="331.755" r="4" style="fill:#eace5c"/><circle cx="627.692" cy="178.448" r="4" style="fill:#35a5ff"/><circle cx="627.692" cy="154.02" r="4" style="fill:#eace5c"/><circle cx="670.368" cy="152.335" r="4" style="fill:#35a5ff"/><circle cx="670.368" cy="155.704" r="4" style="fill:#eace5c"/><circle cx="713.044" cy="212.141" r="4" style="fill:#35a5ff"/></g><defs><clipPath id="SVG_IDX_ClipPath3"><path d="M-1-1h747v434H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath3)"><path d="M62.916 382.166H723.03m0 0V0M62.916 0H723.03M62.916 382.166V0m0 382.166V0m0 346.917H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 351.417)">100</text><path d="M62.916 262.682H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 267.182)">200</text><path d="M62.916 178.448H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 182.948)">300</text><path d="M62.916 94.213H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 98.713)">400</text><path d="M62.916 9.978H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 14.478)">500</text><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#f9fafb;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:13px;white-space:pre" textLength="148" transform="rotate(-90 139.114 125.969)">Blood Glucose (mg/dL)</text><path d="M62.916 382.166H723.03m-650.128 0v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="65" transform="translate(40.402 403.916)">24Aug2026</text><path d="M158.255 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="65" transform="translate(125.755 403.916)">26Aug2026</text><path d="M243.607 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="65" transform="translate(211.107 403.916)">28Aug2026</text><path d="M328.959 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="65" transform="translate(296.459 403.916)">30Aug2026</text><path d="M414.311 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="64" transform="translate(382.311 403.916)">01Sep2026</text><path d="M499.664 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="64" transform="translate(467.664 403.916)">03Sep2026</text><path d="M585.016 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="64" transform="translate(553.016 403.916)">05Sep2026</text><path d="M670.368 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="64" transform="translate(638.368 403.916)">07Sep2026</text><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#f9fafb;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:13px;white-space:pre" textLength="29" transform="translate(378.473 427.416)">Date</text></g></g><g transform="translate(272 433)"><defs><clipPath id="SVG_IDX_ClipPath4"><path d="M-1-1h244v26H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath4)"><path d="M0 10h242v14H0z" style="fill:#011829"/><defs transform="translate(241 10)"><clipPath id="SVG_IDX_ClipPath5"><path d="M-1-1h3v16h-3z"/></clipPath></defs><defs transform="translate(195 10)"><clipPath id="SVG_IDX_ClipPath6"><path d="M-1-1h5v16h-5z"/></clipPath></defs><defs transform="translate(148 10)"><clipPath id="SVG_IDX_ClipPath7"><path d="M-1-1h5v16h-5z"/></clipPath></defs><defs transform="translate(0 10)"><clipPath id="SVG_IDX_ClipPath8"><path d="M-1-1h3v16h-3z"/></clipPath></defs><g transform="translate(216 10)"><defs><clipPath id="SVG_IDX_ClipPath9"><path d="M-1-1h26v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath9)"><text x="3" y="12" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="19">PM</text></g></g><g transform="translate(199 10)"><defs><clipPath id="SVG_IDX_ClipPath10"><path d="M-1-1h18v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath10)"><circle cx="8" cy="7" r="4" style="fill:#eace5c"/></g></g><g transform="translate(169 10)"><defs><clipPath id="SVG_IDX_ClipPath11"><path d="M-1-1h27v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath11)"><text x="3" y="12" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="20">AM</text></g></g><g transform="translate(152 10)"><defs><clipPath id="SVG_IDX_ClipPath12"><path d="M-1-1h18v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath12)"><circle cx="8" cy="7" r="4" style="fill:#35a5ff"/></g></g><g transform="translate(17 10)"><defs><clipPath id="SVG_IDX_ClipPath13"><path d="M-1-1h132v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath13)"><text x="3" y="12" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="125">target range (70-150)</text></g></g><g transform="translate(2 10)"><defs><clipPath id="SVG_IDX_ClipPath14"><path d="M-1-1h16v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath14)"><path d="M3 2h8v8H3z" style="fill:#2e8b57;fill-opacity:.14901"/><path d="M3 2h8v8H3z" style="stroke:#ccc;stroke-width:1;fill:none;stroke-linecap:square"/></g></g></g></g></g><defs><clipPath id="SVG_IDX_ClipPath15"><path d="M62-1h662v384H62z"/></clipPath></defs><defs><clipPath id="SVG_IDX_ClipPath16"><path d="M-1-1h747v459H-1z"/></clipPath></defs></g><g fill-opacity="0" stroke-opacity="0"><title>The SGPlot Procedure</title><path d="M0 0h767v479H0z" style="fill:#011829"/><path d="M0 0h767v479H0z" style="fill:#011829"/><path d="M0 0h767v479H0z" style="stroke:#f9fafb;stroke-width:1;fill:none"/><g transform="translate(11 11)"><defs><clipPath id="SVG_IDX_ClipPath17"><path d="M-1-1h747v459H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath17)"><defs><clipPath id="SVG_IDX_ClipPath18"><path d="M-1-1h747v434H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath18)"><path d="M0 0h745v432H0z" style="fill:#011829"/><path d="M63.415.499h659.116v381.168H63.415z" style="fill:#011829"/><path d="M62.916 346.917h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 347 1.032-.083" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><path d="M62.916 262.682h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 263 1.032-.318" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><path d="M62.916 178.448h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 178 1.032.448" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><path d="M62.916 94.213h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 94 1.032.213" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><path d="M62.916 9.978h659.116" style="stroke:#d3d3d3;stroke-width:1;fill:none;stroke-dasharray:1,3"/><path d="m721 10 1.032-.022" style="stroke:#d3d3d3;stroke-width:1;fill:none"/><defs><clipPath id="SVG_IDX_ClipPath19"><path d="M62-1h662v384H62z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath19)"><a>
+<title>LIMITUPPER = 150.0 
+ LIMITLOWER = 70.0</title>
+<path d="M62 304v68h330v-68z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>LIMITUPPER = 150.0 
+ LIMITLOWER = 70.0</title>
+<path d="M392 304v68h331v-68z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/24/2026 
+ Blood Glucose (mg/dL) = 371</title>
+<path d="M71 118V64h2v54Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/24/2026 
+ Blood Glucose (mg/dL) = 500</title>
+<path d="M71 64V9h2v55Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/24/2026 
+ Blood Glucose (mg/dL) = 500</title>
+<path d="m71 10 22 36 2-2L73 8Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/25/2026 
+ Blood Glucose (mg/dL) = 416</title>
+<path d="m93 46 21 35 2-2-21-35Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/25/2026 
+ Blood Glucose (mg/dL) = 416</title>
+<path d="M114 80v45h2V80Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/25/2026 
+ Blood Glucose (mg/dL) = 310</title>
+<path d="M114 125v45h2v-45Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/25/2026 
+ Blood Glucose (mg/dL) = 310</title>
+<path d="m115 171 21 12v-2l-21-12Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/26/2026 
+ Blood Glucose (mg/dL) = 280</title>
+<path d="m135 183 22 13 2-2-22-13Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/26/2026 
+ Blood Glucose (mg/dL) = 280</title>
+<path d="M157 195v46h2v-46Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/26/2026 
+ Blood Glucose (mg/dL) = 170</title>
+<path d="M157 241v46h2v-46Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/26/2026 
+ Blood Glucose (mg/dL) = 170</title>
+<path d="m157 287 21-53h2l-21 53Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/27/2026 
+ Blood Glucose (mg/dL) = 298</title>
+<path d="m178 234 21-54h2l-21 54Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/27/2026 
+ Blood Glucose (mg/dL) = 298</title>
+<path d="M199 180v14h2v-14Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/27/2026 
+ Blood Glucose (mg/dL) = 264</title>
+<path d="M199 194v14h2v-14Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/27/2026 
+ Blood Glucose (mg/dL) = 264</title>
+<path d="m199 208 22 58h2l-22-58Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/28/2026 
+ Blood Glucose (mg/dL) = 128</title>
+<path d="m221 266 21 57h2l-21-57Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/28/2026 
+ Blood Glucose (mg/dL) = 128</title>
+<path d="M242 323v-15h2v15Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/28/2026 
+ Blood Glucose (mg/dL) = 164</title>
+<path d="M242 308v-15h2v15Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/28/2026 
+ Blood Glucose (mg/dL) = 164</title>
+<path d="m242 294 21 29 2-2-21-29Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/29/2026 
+ Blood Glucose (mg/dL) = 95</title>
+<path d="m263 323 22 29 2-2-22-29Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/29/2026 
+ Blood Glucose (mg/dL) = 95</title>
+<path d="M285 351v-58h2v58Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/29/2026 
+ Blood Glucose (mg/dL) = 231</title>
+<path d="M285 293v-57h2v57Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/29/2026 
+ Blood Glucose (mg/dL) = 231</title>
+<path d="m285 236 21 37h2l-21-37Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/30/2026 
+ Blood Glucose (mg/dL) = 143</title>
+<path d="m306 273 21 37h2l-21-37Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/30/2026 
+ Blood Glucose (mg/dL) = 143</title>
+<path d="M327 310v12h2v-12Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/30/2026 
+ Blood Glucose (mg/dL) = 116</title>
+<path d="M327 322v11h2v-11Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/30/2026 
+ Blood Glucose (mg/dL) = 116</title>
+<path d="m327 332 22-32 2 2-22 32Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/31/2026 
+ Blood Glucose (mg/dL) = 192</title>
+<path d="m349 300 21-32 2 2-21 32Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/31/2026 
+ Blood Glucose (mg/dL) = 192</title>
+<path d="M370 269v-45h2v45Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/31/2026 
+ Blood Glucose (mg/dL) = 298</title>
+<path d="M370 224v-44h2v44Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/31/2026 
+ Blood Glucose (mg/dL) = 298</title>
+<path d="m370 180 21 75h2l-21-75Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/01/2026 
+ Blood Glucose (mg/dL) = 119</title>
+<path d="m391 255 22 75h2l-22-75Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/01/2026 
+ Blood Glucose (mg/dL) = 119</title>
+<path d="M413 330v-88h2v88Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/01/2026 
+ Blood Glucose (mg/dL) = 329</title>
+<path d="M413 242v-88h2v88Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/01/2026 
+ Blood Glucose (mg/dL) = 329</title>
+<path d="m413 154 21 97h2l-21-97Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/02/2026 
+ Blood Glucose (mg/dL) = 98</title>
+<path d="m434 251 21 97h2l-21-97Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/02/2026 
+ Blood Glucose (mg/dL) = 98</title>
+<path d="M455 348v-7h2v7Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/02/2026 
+ Blood Glucose (mg/dL) = 115</title>
+<path d="M455 341v-7h2v7Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/02/2026 
+ Blood Glucose (mg/dL) = 115</title>
+<path d="m455 333 22-37 2 2-22 37Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/03/2026 
+ Blood Glucose (mg/dL) = 202</title>
+<path d="m477 297 21-37h2l-21 37Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/03/2026 
+ Blood Glucose (mg/dL) = 202</title>
+<path d="M498 260v-19h2v19Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/03/2026 
+ Blood Glucose (mg/dL) = 248</title>
+<path d="M498 241v-19h2v19Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/03/2026 
+ Blood Glucose (mg/dL) = 248</title>
+<path d="m498 222 22 60h2l-22-60Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/04/2026 
+ Blood Glucose (mg/dL) = 106</title>
+<path d="m520 282 21 59h2l-21-59Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/04/2026 
+ Blood Glucose (mg/dL) = 106</title>
+<path d="M541 341v-84h2v84Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/04/2026 
+ Blood Glucose (mg/dL) = 307</title>
+<path d="M541 257v-85h2v85Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/04/2026 
+ Blood Glucose (mg/dL) = 307</title>
+<path d="m541 173 21 28 2-2-21-28Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/05/2026 
+ Blood Glucose (mg/dL) = 240</title>
+<path d="m562 201 22 28 2-2-22-28Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/05/2026 
+ Blood Glucose (mg/dL) = 240</title>
+<path d="M584 228v52h2v-52Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/05/2026 
+ Blood Glucose (mg/dL) = 118</title>
+<path d="M584 280v51h2v-51Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/05/2026 
+ Blood Glucose (mg/dL) = 118</title>
+<path d="m584 331 21-76h2l-21 76Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/06/2026 
+ Blood Glucose (mg/dL) = 300</title>
+<path d="m605 255 21-77h2l-21 77Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/06/2026 
+ Blood Glucose (mg/dL) = 300</title>
+<path d="M626 178v-12h2v12Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/06/2026 
+ Blood Glucose (mg/dL) = 329</title>
+<path d="M626 166v-12h2v12Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/06/2026 
+ Blood Glucose (mg/dL) = 329</title>
+<path d="m627 153 22-1v2l-22 1Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/07/2026 
+ Blood Glucose (mg/dL) = 331</title>
+<path d="m649 152 21-1v2l-21 1Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/07/2026 
+ Blood Glucose (mg/dL) = 331</title>
+<path d="M669 152v2h2v-2Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/07/2026 
+ Blood Glucose (mg/dL) = 327</title>
+<path d="M669 154v1h2v-1Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/07/2026 
+ Blood Glucose (mg/dL) = 327</title>
+<path d="m669 156 21 28 2-2-21-28Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/08/2026 
+ Blood Glucose (mg/dL) = 260</title>
+<path d="m690 184 22 29 2-2-22-29Z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/24/2026 
+ Blood Glucose (mg/dL) = 371 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M68 114h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/24/2026 
+ Blood Glucose (mg/dL) = 500 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M68 5h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/25/2026 
+ Blood Glucose (mg/dL) = 416 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M111 76h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/25/2026 
+ Blood Glucose (mg/dL) = 310 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M111 166h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/26/2026 
+ Blood Glucose (mg/dL) = 280 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M154 191h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/26/2026 
+ Blood Glucose (mg/dL) = 170 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M154 283h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/27/2026 
+ Blood Glucose (mg/dL) = 298 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M196 176h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/27/2026 
+ Blood Glucose (mg/dL) = 264 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M196 204h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/28/2026 
+ Blood Glucose (mg/dL) = 128 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M239 319h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/28/2026 
+ Blood Glucose (mg/dL) = 164 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M239 289h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/29/2026 
+ Blood Glucose (mg/dL) = 95 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M282 347h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/29/2026 
+ Blood Glucose (mg/dL) = 231 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M282 232h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/30/2026 
+ Blood Glucose (mg/dL) = 143 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M324 306h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/30/2026 
+ Blood Glucose (mg/dL) = 116 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M324 329h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/31/2026 
+ Blood Glucose (mg/dL) = 192 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M367 265h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 08/31/2026 
+ Blood Glucose (mg/dL) = 298 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M367 176h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/01/2026 
+ Blood Glucose (mg/dL) = 119 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M410 326h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/01/2026 
+ Blood Glucose (mg/dL) = 329 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M410 150h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/02/2026 
+ Blood Glucose (mg/dL) = 98 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M452 344h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/02/2026 
+ Blood Glucose (mg/dL) = 115 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M452 330h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/03/2026 
+ Blood Glucose (mg/dL) = 202 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M495 256h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/03/2026 
+ Blood Glucose (mg/dL) = 248 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M495 218h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/04/2026 
+ Blood Glucose (mg/dL) = 106 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M538 337h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/04/2026 
+ Blood Glucose (mg/dL) = 307 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M538 168h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/05/2026 
+ Blood Glucose (mg/dL) = 240 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M581 224h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/05/2026 
+ Blood Glucose (mg/dL) = 118 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M581 327h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/06/2026 
+ Blood Glucose (mg/dL) = 300 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M623 174h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/06/2026 
+ Blood Glucose (mg/dL) = 329 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M623 150h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/07/2026 
+ Blood Glucose (mg/dL) = 331 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M666 148h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/07/2026 
+ Blood Glucose (mg/dL) = 327 
+ Dosing Window (AM/PM) = PM</title>
+<path d="M666 151h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a><a>
+<title>Observation Date = 09/08/2026 
+ Blood Glucose (mg/dL) = 260 
+ Dosing Window (AM/PM) = AM</title>
+<path d="M709 208h8v8h-8z" style="fill:#d3d3d3;fill-rule:evenodd"/>
+</a></g><defs><clipPath id="SVG_IDX_ClipPath20"><path d="M-1-1h747v434H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath20)"><path d="M62.916 382.166H723.03m0 0V0M62.916 0H723.03M62.916 382.166V0m0 382.166V0m0 346.917H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 351.417)">100</text><path d="M62.916 262.682H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 267.182)">200</text><path d="M62.916 178.448H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 182.948)">300</text><path d="M62.916 94.213H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 98.713)">400</text><path d="M62.916 9.978H56.91" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="21" transform="translate(32.157 14.478)">500</text><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#f9fafb;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:13px;white-space:pre" textLength="148" transform="rotate(-90 139.114 125.969)">Blood Glucose (mg/dL)</text><path d="M62.916 382.166H723.03m-650.128 0v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="65" transform="translate(40.402 403.916)">24Aug2026</text><path d="M158.255 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="65" transform="translate(125.755 403.916)">26Aug2026</text><path d="M243.607 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="65" transform="translate(211.107 403.916)">28Aug2026</text><path d="M328.959 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="65" transform="translate(296.459 403.916)">30Aug2026</text><path d="M414.311 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="64" transform="translate(382.311 403.916)">01Sep2026</text><path d="M499.664 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="64" transform="translate(467.664 403.916)">03Sep2026</text><path d="M585.016 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="64" transform="translate(553.016 403.916)">05Sep2026</text><path d="M670.368 382.166v6" style="stroke:#f9fafb;stroke-width:1;fill:none"/><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="64" transform="translate(638.368 403.916)">07Sep2026</text><text y=".5" lengthAdjust="spacingAndGlyphs" style="fill:#f9fafb;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:13px;white-space:pre" textLength="29" transform="translate(378.473 427.416)">Date</text></g></g><g transform="translate(272 433)"><defs><clipPath id="SVG_IDX_ClipPath21"><path d="M-1-1h244v26H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath21)"><path d="M0 10h242v14H0z" style="fill:#011829"/><defs transform="translate(241 10)"><clipPath id="SVG_IDX_ClipPath22"><path d="M-1-1h3v16h-3z"/></clipPath></defs><defs transform="translate(195 10)"><clipPath id="SVG_IDX_ClipPath23"><path d="M-1-1h5v16h-5z"/></clipPath></defs><defs transform="translate(148 10)"><clipPath id="SVG_IDX_ClipPath24"><path d="M-1-1h5v16h-5z"/></clipPath></defs><defs transform="translate(0 10)"><clipPath id="SVG_IDX_ClipPath25"><path d="M-1-1h3v16h-3z"/></clipPath></defs><g transform="translate(216 10)"><defs><clipPath id="SVG_IDX_ClipPath26"><path d="M-1-1h26v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath26)"><text x="3" y="12" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="19">PM</text></g></g><g transform="translate(199 10)"><defs><clipPath id="SVG_IDX_ClipPath27"><path d="M-1-1h18v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath27)"><circle cx="8" cy="7" r="4" style="fill:#eace5c"/></g></g><g transform="translate(169 10)"><defs><clipPath id="SVG_IDX_ClipPath28"><path d="M-1-1h27v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath28)"><text x="3" y="12" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="20">AM</text></g></g><g transform="translate(152 10)"><defs><clipPath id="SVG_IDX_ClipPath29"><path d="M-1-1h18v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath29)"><circle cx="8" cy="7" r="4" style="fill:#35a5ff"/></g></g><g transform="translate(17 10)"><defs><clipPath id="SVG_IDX_ClipPath30"><path d="M-1-1h132v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath30)"><text x="3" y="12" lengthAdjust="spacingAndGlyphs" style="fill:#b0b8c3;font-family:&quot;SVG_IDX_Anova UI Font3&quot;,&quot;Anova UI&quot;,sans-serif;font-size:12px;white-space:pre" textLength="125">target range (70-150)</text></g></g><g transform="translate(2 10)"><defs><clipPath id="SVG_IDX_ClipPath31"><path d="M-1-1h16v16H-1z"/></clipPath></defs><g clip-path="url(#SVG_IDX_ClipPath31)"><path d="M3 2h8v8H3z" style="fill:#2e8b57"/><path d="M3 2h8v8H3z" style="stroke:#ccc;stroke-width:1;fill:none;stroke-linecap:square"/></g></g></g></g></g><defs><clipPath id="SVG_IDX_ClipPath32"><path d="M62-1h662v384H62z"/></clipPath></defs><defs><clipPath id="SVG_IDX_ClipPath33"><path d="M-1-1h747v459H-1z"/></clipPath></defs></g></g></g><defs><style>@font-face{font-family:&quot;SVG_IDX_Anova UI Font3&quot;;src:url(#SVG_IDX_Font3)format(&quot;svg&quot;)}</style><font id="SVG_IDX_Font3" horiz-adv-x="3712"><font-face ascent="959" descent="-251" font-family="SVG_IDX_Anova UI Font3" units-per-em="2048"><font-face-src><font-face-name name="SVG_IDX_Anova UI Font3"/></font-face-src></font-face><missing-glyph><path fill="none" d="M0 0v5472h3264V0z"/></missing-glyph><glyph d="M190 598q0 275 142 524t380 456l84-88q-204-188-317-414T366 598t113-479 317-415l-84-88Q473-177 332 72T190 598" horiz-adv-x="892" unicode="("/><glyph d="m380 598 428 940h158v-2L534 598 106-341H-51v2z" horiz-adv-x="1020" unicode="/"/><glyph d="M880 702q0 138-60 192t-136 53q-72 0-153-32t-179-83V0H186v1493h166V955q96 61 187 102t175 41q142 0 237-87t95-282V0H880z" horiz-adv-x="1190" unicode="h"/><glyph d="m1252 0-147 384H418L271 0H90l560 1450h237L1446 0zM781 1268h-39L473 533h577z" horiz-adv-x="1530" unicode="A"/><glyph d="M1020 47q0-213-99-301t-329-87H270v143h289q184 0 240 54t57 211v125q-88-50-163-78T546 85q-168 0-307 135T100 576q0 245 154 383t311 139q71 0 145-31t150-73v72h160zM272 578q0-168 101-260t211-92q59 0 124 26t148 67v546q-82 39-147 65t-115 27q-121 0-221-101T272 578" horiz-adv-x="1190" unicode="g"/><glyph d="M1085 143V0H229v143h363v908H223v143h188q119 0 152 50t33 206h162V143z" horiz-adv-x="1232" unicode="1"/><glyph d="M1114 676q0-203-49-348T932 96Q868 35 785 1T606-32q-94 0-177 32T280 101q-82 81-131 227t-49 348v98q0 203 49 348t133 232q64 61 148 95t178 33q94 0 177-32t151-101q82-81 130-227t48-348ZM608 115q55 0 105 20t93 64q60 59 96 177t36 302v94q0 186-36 303t-94 174q-42 45-95 66t-107 20q-56 0-105-20t-94-64q-57-59-94-177t-37-302v-94q0-186 36-304t93-175q45-43 96-64t107-20" horiz-adv-x="1232" unicode="0"/><glyph d="M1052 155V0H139v92q0 131 60 236t233 241l250 197q122 96 171 159t48 152q0 119-80 188t-193 70q-116 0-214-64t-166-173l-97 106q68 112 196 195t296 83q92 0 177-30t146-90q52-52 81-124t30-159q0-135-68-221T827 684L536 454q-125-96-173-160t-56-139Z" horiz-adv-x="1232" unicode="2"/><glyph d="M1056 1103q0-101-64-190T804 772v-6q136-45 202-144t67-229q0-177-141-301T565-32q-158 0-268 53T114 168l92 109q68-82 160-122t205-40q141 0 235 78t93 210q0 119-87 199t-251 80H418v146h122q164 0 252 77t88 183q0 127-86 187t-206 60q-117 0-209-55t-146-138l-92 109q63 92 180 162t287 69q196 0 322-106t126-273" horiz-adv-x="1232" unicode="3"/><glyph d="M1138 384H948V0H784v384H88v159l604 907h256V523h190zM246 523h538v783h-18z" horiz-adv-x="1232" unicode="4"/><glyph d="M1067 457q0-232-155-361T557-32q-177 0-290 71T90 205l96 117q60-92 152-150t221-57q139 0 236 87t97 248q0 123-79 212t-307 88H202l94 700h758v-155H434l-58-399h183q249 0 379-119t129-320" horiz-adv-x="1232" unicode="5"/><glyph d="M212 0v1450h541q223 0 347-90t124-263q0-111-64-196T980 770v-4q140-46 208-142t69-224q0-186-134-293T743 0Zm539 1303H382V830h328q162 0 248 67t86 183q0 109-76 166t-217 57m-27-621H382V147h345q165 0 258 63t92 200q0 118-93 195t-260 77" horiz-adv-x="1360" unicode="B"/><glyph d="M184 233v1260h166V280q0-88 26-112t115-25h68V0H411Q296 0 240 57t-56 176" horiz-adv-x="637" unicode="l"/><glyph d="M618-32q-215 0-366 152T100 512v42q0 236 150 390t366 154q217 0 367-153t151-391v-42q0-238-149-391T618-32m-2 141q156 0 253 110t97 290v43q0 182-98 293T616 955q-154 0-250-111t-96-292v-40q0-180 96-292t250-111" horiz-adv-x="1232" unicode="o"/><glyph d="M886 0v93Q796 36 716 2T555-32q-166 0-310 150T100 517q0 278 158 429t330 152q65 0 141-23t151-59v477h166V0zM270 519q0-204 108-305t214-101q65 0 136 29t152 74v661q-82 37-150 57t-126 21q-123 0-228-112T270 519" horiz-adv-x="1232" unicode="d"/><glyph horiz-adv-x="510"/><glyph d="M760-32q-242 0-441 190T120 721q0 361 224 561t487 200q170 0 309-60t234-165l-98-131q-82 100-203 152t-240 51q-213 0-373-163T299 713q0-259 142-426t341-167q94 0 194 31t220 120v345H768v152h598V0h-160v130Q1085 46 978 7T760-32" horiz-adv-x="1572" unicode="G"/><glyph d="M332 362q0-138 60-191t138-53q70 0 153 32t179 84v832h166V0H864v111Q768 50 676 9T497-32q-139 0-234 85t-95 281v732h164z" horiz-adv-x="1190" unicode="u"/><glyph d="M610 109q88 0 165 37t128 90l77-102Q911 56 809 12T594-32q-191 0-342 147T100 505v43q0 248 156 399t352 151q121 0 219-46t166-128l-90-112q-57 68-126 104t-165 37q-137 0-239-108T270 548v-43q0-173 101-285t239-111" horiz-adv-x="1105" unicode="c"/><glyph d="M522-32q-123 0-238 50T94 174l90 109q57-86 152-132t196-46q117 0 186 56t68 138q0 64-38 96t-150 57l-205 43q-119 27-193 89t-74 185q0 136 112 232t296 97q119 0 229-53t167-145l-93-106q-43 73-129 119t-182 46q-100 0-169-49t-69-131q0-47 30-81t144-61l205-43q131-29 206-92t75-184q0-144-115-247T522-32" horiz-adv-x="1062" unicode="s"/><glyph d="M1014 119Q921 44 817 6T604-32q-207 0-355 140T100 516v34q0 256 152 402t340 146q196 0 326-130t130-354V512H268q4-202 104-303t246-100q88 0 176 36t152 91ZM592 957q-119 0-212-78T272 643h614q0 152-86 233t-208 81" horiz-adv-x="1147" unicode="e"/><glyph d="M829 704q0 136-53 190t-121 53q-61 0-138-33t-165-84V0H186v1066h162V951q88 61 176 104t170 43q88 0 159-40t107-124q94 64 192 114t185 50q123 0 212-83t89-277V0h-166v704q0 136-53 190t-121 53q-62 0-140-35t-169-86q2-21 4-43t2-47V0H829z" horiz-adv-x="1785" unicode="m"/><glyph d="M1102 153V0H212v1450h175V153z" horiz-adv-x="1190" unicode="L"/><glyph d="M706 598q0-277-141-526T184-384l-84 88q205 189 318 415t112 479q0 252-112 479t-318 413l84 88q240-206 381-456t141-524" horiz-adv-x="892" unicode=")"/><glyph d="M684 938q178 0 305-124t127-336q0-225-148-368T614-32q-219 0-363 138T106 476q0 237 183 474t438 500h217v-2q-166-155-304-298T414 873q71 31 138 48t132 17M282 490q0-169 90-273t242-104q154 0 241 107t87 252q0 155-83 239t-229 84q-71 0-142-16t-150-47q-27-59-41-118t-15-124" horiz-adv-x="1232" unicode="6"/><glyph d="M596-32Q382-32 247 75T112 346q0 111 71 203t249 209q-115 61-190 139t-74 207q0 162 132 270t314 108q205 0 322-103t118-251q0-108-66-188T766 760q160-82 249-162t89-229q0-166-142-284T596-32m-2 878 53-27q141 94 190 160t49 143q0 76-70 146t-204 71q-123 0-199-70t-75-157q0-82 51-133t205-133M280 358q0-94 90-171t234-76q154 0 242 80t88 172q0 96-65 150T622 660l-72 36Q401 596 341 524t-61-166" horiz-adv-x="1232" unicode="8"/><glyph d="M989 402q0 90-63 156T651 664l-143 29q-172 37-260 125t-88 236q0 190 149 309t352 119q181 0 300-69t194-166l-111-125q-64 94-161 153t-218 58q-147 0-240-79t-93-184q0-84 55-138t247-93l136-27q198-38 295-137t96-255q0-198-148-325T647-32q-174 0-308 70T112 222l103 130q75-100 193-167t233-68q165 0 257 87t91 198" horiz-adv-x="1275" unicode="S"/><glyph d="M645-32q-66 0-142 24T352 50v-391H186v1407h160v-92q90 55 170 90t162 34q166 0 310-152t144-399q0-278-158-429T645-32m-4 985q-66 0-137-29t-152-74V189q82-39 150-59t126-21q123 0 229 111t105 325q0 204-107 306T641 953" horiz-adv-x="1232" unicode="p"/><glyph d="M225 0v2l692 1293H129v155h975v-129L411 0z" horiz-adv-x="1232" unicode="7"/><glyph d="M212 0v1450h424q365 0 578-181t213-534q0-352-226-544T641 0Zm437 1297H387V153h251q252 0 430 144t177 438q0 287-166 425t-430 137" horiz-adv-x="1530" unicode="D"/><glyph d="M104 287q0 59 20 113t62 96q39 41 119 75t221 44l276 25v41q0 141-66 208t-204 66q-82 0-170-40t-147-99l-78 112q75 76 183 123t232 47q181 0 299-101t117-335V0H804v122Q704 40 606 4T420-32q-119 0-217 85t-99 234m164 15q0-89 55-142t133-53q70 0 151 28t195 107v277l-235-23q-111-10-170-32t-84-48q-21-24-33-54t-12-60" horiz-adv-x="1105" unicode="a"/><glyph d="M749 143V0H528Q374 0 309 67t-65 224v632H78v143h166v290l165 52v-342h359V923H409V329q0-113 36-150t147-36Z" horiz-adv-x="850" unicode="t"/><glyph d="M1228 1010q0-203-135-329T670 554H387V0H212v1450h484q280 0 406-120t126-320m-534 289H387V706h293q194 0 281 83t87 221q0 136-82 213t-272 76" horiz-adv-x="1317" unicode="P"/><glyph d="M376 1267V0H212v1450h283l439-837h24l436 837h283V0h-170v1267h-31l-462-883H870l-465 883z" horiz-adv-x="1870" unicode="M"/><glyph d="M672 1066h77V898h-73q-76 0-142-35T352 722V0H186v1066h162V862q108 116 172 160t152 44" horiz-adv-x="807" unicode="r"/><glyph d="M880 702q0 138-60 192t-136 53q-72 0-153-32t-179-83V0H186v1066h162V953q96 61 189 103t177 42q142 0 237-87t95-282V0H880z" horiz-adv-x="1190" unicode="n"/><glyph d="M743 710V554H151v156z" horiz-adv-x="892" unicode="-"/></font></defs></svg>

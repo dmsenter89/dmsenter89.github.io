@@ -169,13 +169,58 @@ data sudo_glucose;
 08/31/2026 AM 192 23.0
 08/31/2026 PM 298 24.0
 09/01/2026 AM 119 23.0
+09/01/2026 PM 329 25.0
+09/02/2026 AM  98 23.0
+09/02/2026 PM 115 23.0
+09/03/2026 AM 202 24.0
+09/03/2026 PM 248 25.0
+09/04/2026 AM 106 23.0
+09/04/2026 PM 307 25.0
+09/05/2026 AM 240 25.0
+09/05/2026 PM 118 23.0
+09/06/2026 AM 300 25.0
+09/06/2026 PM 329 25.0
+09/07/2026 AM 331 25.0
+09/07/2026 PM 327 25.5
+09/08/2026 AM 260 25.0
 ;
 run;
 
-proc print data=sudo_glucose label noobs;
+proc print data=sudo_glucose(obs=05) label noobs;
     var DATE DOSEWIN GLUCOSE DOSE;
     title "Sudo Glucose Data";
 run;
+
+ods graphics/ imagemap=on;
+
+proc sgplot data=sudo_glucose;
+    /* 1. Target range band */
+    band x=date lower=70 upper=150 /
+        fillattrs=(color=seagreen) transparency=0.85
+        legendlabel="target range (70-150)" name="band";
+
+    /* 2. Chronological dashed line connecting the readings */
+    series x=date y=GLUCOSE /
+        lineattrs=(pattern=dash thickness=1 color=gray)
+        transparency=0.3;
+
+    /* 3. Scatter overlaid on top of the line */
+    scatter x=date y=GLUCOSE / group=DOSEWIN
+        markerattrs=(symbol=circlefilled size=10)
+        name="scatter";
+
+    /* 4. X-axis formatting: Fixed formatting keyword */
+    xaxis label="Date" type=time interval=day
+          valuesformat=date9.
+          fitpolicy=rotate valuesrotate=diagonal;
+
+    /* 5. Fixed Y-axis: Removed transparency, used lighter color */
+    yaxis label="Blood Glucose (mg/dL)"
+          grid gridattrs=(color=lightgray pattern=dot);
+
+    keylegend "band" "scatter";
+run;
+title;
 
 proc sql;
     create table sudo_analysis as
@@ -192,7 +237,7 @@ proc sql;
     order by now.period_index;
 quit;
 
-proc print data=sudo_analysis label noobs;
+proc print data=sudo_analysis(obs=5) label noobs;
     var DATE BG_now DOSE_now BG_next;
 run;
 
