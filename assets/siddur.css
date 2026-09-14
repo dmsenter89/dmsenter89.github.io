@@ -1,6 +1,19 @@
 /* Siddur section — fully bespoke, distraction-free chrome. Scoped to
    /siddur/ only; does not touch or inherit PaperMod's CSS. */
 
+/* SBL BibLit (Tiro Typeworks / SBL, free for non-commercial use, web
+   embedding permitted -- see the license text embedded in the font's own
+   'name' table) handles niqqud/te'amim collision positioning better than
+   Noto Serif Hebrew, so it's used for the Ta'amim reference page. Not
+   applied site-wide: browsers only fetch a @font-face file when a page
+   actually renders text in it, so declaring it here costs other siddur
+   pages nothing. */
+@font-face {
+  font-family: "SBL BibLit";
+  src: url("/fonts/SBL_BibLit.ttf") format("truetype");
+  font-display: swap;
+}
+
 :root {
   --siddur-bg: #ffffff;
   --siddur-fg: #1a1a1a;
@@ -303,6 +316,25 @@ html[data-theme="dark"] .icon-moon { display: inline; }
 html.show-hebrew .siddur-hebrew { display: block; }
 html.show-translit .siddur-translit { display: block; }
 html.show-translation .siddur-translation { display: block; }
+
+/* Hebrew-only reference text (e.g. Ta'amim names) -- no transliteration or
+   translation exists, so it's always shown rather than gated behind the
+   Hebrew/translit/translation display toggle. */
+.siddur-hebrew-static {
+  font-family: "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
+  font-size: 1.3rem;
+  line-height: 1.9;
+  text-align: right;
+  display: block;
+}
+
+/* Ta'amim > For Torah: the printed ta'amim names are the entire point of
+   the page, so they get a much larger treatment (150% of the usual
+   Hebrew-only reference size) than other appendix reference text. */
+#taamim-torah-list .siddur-hebrew-static {
+  font-family: "SBL BibLit", "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
+  font-size: 1.95rem;
+}
 
 .siddur-rubric {
   color: var(--siddur-muted);

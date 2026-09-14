@@ -97,6 +97,12 @@ over the content tree.
   niqqud to produce anything meaningful, and this text isn't recited anyway.
 - `type: "text"` — vocalized liturgy that goes through all three display
   toggle states (Hebrew / transliteration / translation).
+- `type: "hebrew"` — Hebrew-only reference text with no transliteration or
+  translation (e.g. the Ta'amim names in Appendix > Ta'amim). Always visible,
+  independent of the Hebrew/translit/translation display toggle, since
+  there's no other representation to fall back to. `generate.mjs` should
+  **not** be run against these items (there's no `translit` field to fill
+  in, and none should be added).
 - `type: "include"` — splices another data file's section in by id, inline,
   at this point in the item list (no extra heading is introduced). Used for
   content reused across chapters — see "Shared content" below. Resolves via
