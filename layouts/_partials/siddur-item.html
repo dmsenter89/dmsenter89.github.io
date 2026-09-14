@@ -1,5 +1,9 @@
 {{- /* Renders one liturgy item. Params: the item map itself.
-       type: "rubric" | "text" | "include" (splices in another section's
+       type: "rubric" | "text" | "hebrew" (Hebrew-only reference text with no
+       transliteration or translation, e.g. the Ta'amim names -- always
+       visible, independent of the Hebrew/translit/translation display
+       toggle, since there's no other representation to fall back to) |
+       "include" (splices in another section's
        items by id, e.g. the Shema first paragraph reused across chapters --
        ref is resolved against the full data/siddur tree, so it isn't
        limited to shared/*, any chapter's section can be reused this way.
@@ -88,6 +92,10 @@
   <audio class="siddur-audio-player" controls preload="none" src="{{ . }}"></audio>
   {{- end }}
   {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
+</div>
+{{- else if eq .type "hebrew" }}
+<div class="siddur-item siddur-hebrew-only" id="{{ .id }}">
+  <p class="siddur-hebrew-static" lang="he" dir="rtl">{{ .hebrew }}</p>
 </div>
 {{- else if eq .type "rubric" }}
 <p class="siddur-item siddur-rubric" id="{{ .id }}">
