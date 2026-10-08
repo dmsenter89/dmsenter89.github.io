@@ -2,6 +2,7 @@
 title: "Minha"
 weight: 22
 robots: "noindex, nofollow"
+toc: true
 ---
 
 The order of the Minḥa prayer: one begins reciting Tĕhilla LĕDhawidh (Psalm 145) while seated. Then one stands and prays the Minḥa prayer. When finished, one falls upon his face and supplicates; he raises his head, supplicates a little more, and takes leave to his affairs. (Rambam, *Mishneh Torah*, Hilkhoth Tefilla)

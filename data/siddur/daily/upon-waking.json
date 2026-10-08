@@ -45,32 +45,6 @@
         },
         {
           "type": "rubric",
-          "id": "clothed-cue",
-          "hebrew": "כשלובש בגדיו, מברך",
-          "translation": "Upon getting dressed, one recites:"
-        },
-        {
-          "type": "text",
-          "id": "malbish-arumim",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מַלְבִּישׁ עֲרֻמִּים׃",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who clothes the naked.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, malbish 'ărummim."
-        },
-        {
-          "type": "rubric",
-          "id": "head-covering-cue",
-          "hebrew": "כשמניח סדינו על ראשו, מברך",
-          "translation": "Upon placing a covering on one's head, one recites:"
-        },
-        {
-          "type": "text",
-          "id": "oter-yisrael",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עוֹטֵר יִשְׂרָאֵל בְּתִפְאָרָה׃",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who crowns Israel with glory.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, 'oṭer yisraʾel bĕthifʾara."
-        },
-        {
-          "type": "rubric",
           "id": "eyes-cue",
           "hebrew": "כשמעביר ידיו על עיניו מברך",
           "translation": "Upon passing one's hands over one's eyes, one recites:"
@@ -123,30 +97,49 @@
         },
         {
           "type": "rubric",
-          "id": "netilat-cue",
-          "hebrew": "כשנוטל ידיו מברך תחילה",
-          "translation": "Upon washing one's hands, one first recites:"
+          "id": "head-covering-cue",
+          "hebrew": "כשמניח סדינו על ראשו, מברך",
+          "translation": "Upon placing a covering on one's head, one recites:"
         },
         {
           "type": "text",
-          "id": "al-netilat-yadayim",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְווֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם׃",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us concerning the washing of hands.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al nĕṭilath yadhayīm."
+          "id": "oter-yisrael",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עוֹטֵר יִשְׂרָאֵל בְּתִפְאָרָה׃",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who crowns Israel with glory.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, 'oṭer yisraʾel bĕthifʾara."
         },
         {
           "type": "rubric",
-          "id": "washface-cue",
-          "hebrew": "כשרוחץ פניו מברך",
-          "translation": "Upon washing one's face, one recites:"
+          "id": "clothed-cue",
+          "hebrew": "כשלובש בגדיו, מברך",
+          "translation": "Upon getting dressed, one recites:"
         },
         {
           "type": "text",
-          "id": "hamaavir-shena",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמַּעֲבִיר שֵׁנָה מֵעֵינַי וּתְנוּמָה מֵעַפְעַפָּי. יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתַּרְגִּילֵנִי לִדְבַר מִצְוָה וְאַל תַּרְגִּילֵנִי לִדְבַר עֲבֵרָה, וְתַשְׁלֵט בִּי יֵצֶר טוֹב וְאַל תַּשְׁלֵט בִּי יֵצֶר רָע, וּתְחַזְּקֵנִי בְּמִצְווֹתֶיךָ וְתִתֵּן חֶלְקִי בְּתוֹרָתֶךָ, וְתִתְּנֵנִי לְחֵן וּלְחֶסֶד וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל רוֹאָי, וְתִגְמְלֵנִי חֲסָדִים טוֹבִים. בָּרוּךְ אַתָּה יְיָ, גּוֹמֵל חֲסָדִים טוֹבִים׃",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who removes sleep from my eyes and slumber from my eyelids. May it be Your will, Adhonay my God and God of my fathers, that You accustom me to Your commandments and not to transgression; that the good impulse rule over me, and not the evil impulse; that You strengthen me in Your commandments and grant me a share in Your Torah; that You grant me favor, kindness, and mercy in Your eyes and in the eyes of all who see me; and that You bestow good kindnesses upon me. Blessed are You, Adhonay, who bestows good kindnesses.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hamma'ăvir shena me'enay uthĕnuma me'af'appay. yĕhi raṣon millĕfanekha Adhonay ʾĕlohay weʾlohe ʾăvothay, shettargileni lidhvar miṣwa wĕʾal targileni lidhvar 'ăvera, wĕthashleṭ bi yeṣer ṭov wĕʾal tashleṭ bi yeṣer ra', uthĕḥazzĕqeni bĕmiṣwothekha wĕthitten ḥelqi bĕthorathekha, wĕthittĕneni lĕḥen ulĕḥesedh ulĕraḥămim bĕ'enekha uvĕ'ene khol roʾay, wĕthighmĕleni ḥăsadhim ṭovim. barukh ʾatta Adhonay, gomel ḥăsadhim ṭovim."
+          "id": "malbish-arumim",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מַלְבִּישׁ עֲרֻמִּים׃",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who clothes the naked.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, malbish 'ărummim."
         },
+        {
+          "type": "rubric",
+          "id": "belt-cue",
+          "hebrew": "כשחוגר חגורו מברך",
+          "translation": "Upon fastening one's belt, one recites:"
+        },
+        {
+          "type": "text",
+          "id": "ozer-yisrael",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אוֹזֵר יִשְׂרָאֵל בִּגְבוּרָה׃",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who girds Israel with strength.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾozer yisraʾel bighvura."
+        }
+      ]
+    },
+    {
+      "id": "asher-yatzar",
+      "title": "אשר יצר",
+      "items": [
         {
           "type": "rubric",
           "id": "bathroom-before",
@@ -162,6 +155,19 @@
         },
         {
           "type": "rubric",
+          "id": "netilat-cue",
+          "hebrew": "כשנוטל ידיו מברך תחילה",
+          "translation": "Upon washing one's hands, one first recites:"
+        },
+        {
+          "type": "text",
+          "id": "al-netilat-yadayim",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְווֹתָיו וְצִוָּנוּ עַל נְטִילַת יָדָיִם׃",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us concerning the washing of hands.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al nĕṭilath yadhayīm."
+        },
+        {
+          "type": "rubric",
           "id": "bathroom-after",
           "hebrew": "ואחר שיצא",
           "translation": "And after leaving, one recites:"
@@ -172,45 +178,25 @@
           "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר יָצַר אֶת הָאָדָם בְּחָכְמָה, וּבָרָא בוֹ נְקָבִים נְקָבִים וַחֲלָלִים חֲלָלִים, מֵהֶן פְּתוּחִים וּמֵהֶן סְתוּמִים, שֶׁאִם יִסָּתֵם אֶחָד מֵהֶן אוֹ יִפָּתֵחַ, אֵינוֹ יָכוֹל לְהִתְקַיֵּם אֲפִלּוּ שָׁעָה אֶחָת. בָּרוּךְ אַתָּה יְיָ, רוֹפֵא כָל בָּשָׂר וּמַפְלִיא לַעֲשׂוֹת׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who formed man in wisdom, and created in him many openings and many hollows — some open and some closed. It is known that if even one of them were to be blocked, or one of them opened, it would be impossible to survive even one hour. Blessed are You, Adhonay, who heals all flesh and does wonders.",
           "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher yaṣar ʾeth haʾadham bĕḥokhma, uvaraʾ vo nĕqavim nĕqavim waḥălalim ḥălalim, mehen pĕthuḥim umehen sĕthumim, sheʾīm yissathem ʾeḥadh mehen ʾo yippatheaḥ, ʾeno yakhol lĕhithqayyem ʾăfillu sha'a ʾeḥath. barukh ʾatta Adhonay, rofeʾ khol basar umafliʾ la'ăsoth."
-        },
+        }
+      ]
+    },
+    {
+      "id": "daily-blessings",
+      "title": "ברכות בכל יום",
+      "items": [
         {
           "type": "rubric",
-          "id": "belt-cue",
-          "hebrew": "כשחוגר חגורו מברך",
-          "translation": "Upon fastening one's belt, one recites:"
+          "id": "washface-cue",
+          "hebrew": "כשרוחץ פניו מברך",
+          "translation": "Upon washing one's face, one recites:"
         },
         {
           "type": "text",
-          "id": "ozer-yisrael",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אוֹזֵר יִשְׂרָאֵל בִּגְבוּרָה׃",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who girds Israel with strength.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾozer yisraʾel bighvura."
-        },
-        {
-          "type": "rubric",
-          "id": "shoes-cue",
-          "hebrew": "כשלובש מנעלו מברך",
-          "translation": "Upon putting on one's shoes, one recites:"
-        },
-        {
-          "type": "text",
-          "id": "sheasa-li",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה לִי כָּל צְרָכָי׃",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who has provided for all my needs.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, she'asa li kol ṣĕrakhay."
-        },
-        {
-          "type": "rubric",
-          "id": "walking-cue",
-          "hebrew": "כשמהלך לצאת לדרך מברך",
-          "translation": "Upon setting out on one's way, one recites:"
-        },
-        {
-          "type": "text",
-          "id": "hamekhin-mitsadei",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמֵּכִין מִצְעֲדֵי גָבֶר׃",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who directs the steps of man.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hammekhin miṣ'ădhe ghaver."
+          "id": "hamaavir-shena",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמַּעֲבִיר שֵׁנָה מֵעֵינַי וּתְנוּמָה מֵעַפְעַפָּי. יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתַּרְגִּילֵנִי לִדְבַר מִצְוָה וְאַל תַּרְגִּילֵנִי לִדְבַר עֲבֵרָה, וְתַשְׁלֵט בִּי יֵצֶר טוֹב וְאַל תַּשְׁלֵט בִּי יֵצֶר רָע, וּתְחַזְּקֵנִי בְּמִצְווֹתֶיךָ וְתִתֵּן חֶלְקִי בְּתוֹרָתֶךָ, וְתִתְּנֵנִי לְחֵן וּלְחֶסֶד וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל רוֹאָי, וְתִגְמְלֵנִי חֲסָדִים טוֹבִים. בָּרוּךְ אַתָּה יְיָ, גּוֹמֵל חֲסָדִים טוֹבִים׃",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who removes sleep from my eyes and slumber from my eyelids. May it be Your will, Adhonay my God and God of my fathers, that You accustom me to Your commandments and not to transgression; that the good impulse rule over me, and not the evil impulse; that You strengthen me in Your commandments and grant me a share in Your Torah; that You grant me favor, kindness, and mercy in Your eyes and in the eyes of all who see me; and that You bestow good kindnesses upon me. Blessed are You, Adhonay, who bestows good kindnesses.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hamma'ăvir shena me'enay uthĕnuma me'af'appay. yĕhi raṣon millĕfanekha Adhonay ʾĕlohay weʾlohe ʾăvothay, shettargileni lidhvar miṣwa wĕʾal targileni lidhvar 'ăvera, wĕthashleṭ bi yeṣer ṭov wĕʾal tashleṭ bi yeṣer ra', uthĕḥazzĕqeni bĕmiṣwothekha wĕthitten ḥelqi bĕthorathekha, wĕthittĕneni lĕḥen ulĕḥesedh ulĕraḥămim bĕ'enekha uvĕ'ene khol roʾay, wĕthighmĕleni ḥăsadhim ṭovim. barukh ʾatta Adhonay, gomel ḥăsadhim ṭovim."
         },
         {
           "type": "rubric",
@@ -257,6 +243,13 @@
           "hebrew": "בָּרוּךְ שֶׁעָשַׂנִי כִּרְצוֹנוֹ׃",
           "translation": "Blessed is He who made me according to His will.",
           "translit": "barukh she'asani kirṣono."
+        },
+        {
+          "type": "text",
+          "id": "yehi-ratzon-shetatzileni",
+          "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ, אֱלֹהַי וֵאלֹהֵי אֲבוֹתַי, שֶׁתַּצִּילֵנִי הַיּוֹם וּבְכָל יוֹם וָיוֹם, מֵעַזֵּי פָנִים, וּמֵעַזּוּת פָּנִים, מֵאָדָם רָע, מִיֵּצֶר רָע, מֵחָבֵר רָע, מִשָּׁכֵן רָע, מִפֶּגַע רָע, מֵעַיִן הָרָע, וּמִלָּשׁוֹן הָרָע, מִדִּין קָשֶׁה, וּמִבַּעַל דִּין קָשֶׁה, בֵּין שֶׁהוּא בֶן־בְּרִית, וּבֵין שֶׁאֵינוֹ בֶן־בְּרִית׃",
+          "translation": "May it be Your will, Adhonay my God and God of my fathers, that You deliver me today and every day from the brazen and from brazenness, from a bad person, from the evil impulse, from a bad companion, from a bad neighbor, from misfortune, from the evil eye, and from slander, from a harsh judgment and from a harsh adversary in judgment, whether or not he is a member of the covenant.",
+          "translit": "yĕhi raṣon millĕfanekha Adhonay, ʾĕlohay weʾlohe ʾăvothay, shettaṣṣileni hayyom uvĕkhol yom wayom, me'azze fanim, ume'azzuth panim, meʾadham ra', miyyeṣer ra', meḥaver ra', mishshakhen ra', mippegha' ra', me'ayīn hara', umillashon hara', middin qasheh, umibba'al din qasheh, ben shehuʾ ven-vĕrith, uven sheʾeno ven-vĕrith."
         }
       ]
     },
@@ -280,9 +273,9 @@
         {
           "type": "text",
           "id": "torah-blessing-2",
-          "hebrew": "הַעֲרֶב נָא יְיָ אֱלֹהֵינוּ אֶת דִּבְרֵי תוֹרָתְךָ בְּפִינוּ וּבְפִיפִיּוֹת עַמְּךָ כָּל בֵּית יִשְׂרָאֵל, וְנִהְיֶה אֲנַחְנוּ וְצֶאֱצָאֵינוּ וְצֶאֱצָאֵי עַמְּךָ כָּל בֵּית יִשְׂרָאֵל, יוֹדְעֵי שְׁמֶךָ וְלוֹמְדֵי תוֹרָתְךָ לִשְׁמָהּ. בָּרוּךְ אַתָּה יְיָ, נוֹתֵן הַתּוֹרָה׃",
-          "translation": "Please, Adhonay our God, make the words of Your Torah sweet in our mouths and in the mouths of Your people, the whole house of Israel, so that we, our descendants, and the descendants of Your people the house of Israel, may all know Your name and study Your Torah for its own sake. Blessed are You, Adhonay, who gives the Torah.",
-          "translit": "ha'ărev naʾ Adhonay ʾĕlohenu ʾeth divre thorathĕkha bĕfinu uvĕfifiyyoth 'ammĕkha kol beth yisraʾel, wĕnihyeh ʾănaḥnu wĕṣeʾĕṣaʾenu wĕṣeʾĕṣaʾe 'ammĕkha kol beth yisraʾel, yodhĕ'e shĕmekha wĕlomĕdhe thorathĕkha lishmah. barukh ʾatta Adhonay, nothen hattora."
+          "hebrew": "הַעֲרֵב נָא, יְיָ אֱלֹהֵֽינוּ, אֶת־דִּבְרֵי תוֹרָתְךָ בְּפִינוּ וּבְפִיפִיּוֹת עַמְּךָ בֵּית יִשְׂרָאֵל, וְנִהְיֶה אֲנַחְנוּ וְצֶאֱצָאֵינוּ, [וְצֶאֱצָאֵי צֶאֱצָאֵינוּ / וְצֶאֱצָאֵי עַמְּךָ בֵּית יִשְׂרָאֵל], כֻּלָּנוּ יוֹדְעֵי שְׁמֶךָ, וְלוֹמְדֵי תוֹרָתְךָ לִשְׁמָהּ. בָּרוּךְ אַתָּה יְיָ, נוֹתֵן הַתּוֹרָה (נ״א: הַמְלַמֵּד תּוֹרָה לְעַמּוֹ יִשְׂרָאֵל)׃",
+          "translation": "Please, Adhonay our God, make the words of Your Torah sweet in our mouths and in the mouths of Your people, the house of Israel, so that we and our descendants, [and the descendants of our descendants / and the descendants of Your people, the house of Israel], may all of us know Your name and study Your Torah for its own sake. Blessed are You, Adhonay, who gives the Torah (alternate version: who teaches Torah to His people Israel).",
+          "translit": "ha'ărev naʾ, Adhonay ʾĕlohenu, ʾeth-dhivre thorathĕkha bĕfinu uvĕfifiyyoth 'ammĕkha beth yisraʾel, wĕnihyeh ʾănaḥnu wĕṣeʾĕṣaʾenu, [wĕṣeʾĕṣaʾe ṣeʾĕṣaʾenu / wĕṣeʾĕṣaʾe 'ammĕkha beth yisraʾel], kullanu yodhĕ'e shĕmekha, wĕlomĕdhe thorathĕkha lishmah. barukh ʾatta Adhonay, nothen hattora (alternate version: hamĕlammedh tora lĕ'ammo yisraʾel)."
         },
         {
           "type": "text",
@@ -372,6 +365,58 @@
           "hebrew": "אַתָּה הוּא יְיָ לְבַדֶּךָ. אַתָּה עָשִׂיתָ אֶת הַשָּׁמַיִם שְׁמֵי הַשָּׁמַיִם וְכָל צְבָאָם, הָאָרֶץ וְכָל אֲשֶׁר עָלֶיהָ, הַיַּמִּים וְכָל אֲשֶׁר בָּהֶם, וְאַתָּה מְחַיֶּה אֶת כֻּלָּם, וּצְבָא הַשָּׁמַיִם לְךָ מִשְׁתַּחֲוִים. אַתָּה הוּא יְיָ הָאֱלֹהִים אֲשֶׁר בָּחַרְתָּ בְּאַבְרָם וְהוֹצֵאתוֹ מֵאוּר כַּשְׂדִּים, וְשַׂמְתָּ שְּׁמוֹ אַבְרָהָם. אַתָּה הוּא, וּשְׁנוֹתֶיךָ לֹא יִתָּמּוּ. יְיָ מֶלֶךְ, יְיָ מָלַךְ, יְיָ יִמְלֹךְ לְעוֹלָם וָעֶד. בָּרוּךְ יְיָ לְעוֹלָם, אָמֵן וְאָמֵן׃",
           "translation": "You alone are Adhonay. You made the heavens, the heaven of heavens, and all their host, the earth and all that is upon it, the seas and all that is in them; You give life to them all, and the heavenly hosts bow down to You. You are Adhonay the God, who chose Abram, brought him out of Ur of the Chaldeans, and named him Abraham. You are He, and Your years never end. Adhonay reigns; Adhonay has reigned; Adhonay will reign forever and ever. Blessed is Adhonay forever, Amen and Amen.",
           "translit": "ʾatta huʾ Adhonay lĕvaddekha. ʾatta 'asitha ʾeth hashshamayīm shĕme hashshamayīm wĕkhol ṣĕvaʾam, haʾareṣ wĕkhol ʾăsher 'aleha, hayyammim wĕkhol ʾăsher bahem, wĕʾatta mĕḥayyeh ʾeth kullam, uṣĕvaʾ hashshamayīm lĕkha mishtaḥăwim. ʾatta huʾ Adhonay haʾĕlohim ʾăsher baḥarta bĕʾavram wĕhoṣeʾtho meʾur kasdim, wĕsamta shĕmo ʾavraham. ʾatta huʾ, ushĕnothekha loʾ yittammu. Adhonay melekh, Adhonay malakh, Adhonay yimlokh lĕ'olam wa'edh. barukh Adhonay lĕ'olam, ʾamen wĕʾamen."
+        }
+      ]
+    },
+    {
+      "id": "leaving-home",
+      "title": "ביציאה מהבית",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "shoes-cue",
+          "hebrew": "כשלובש מנעלו מברך",
+          "translation": "Upon putting on one's shoes, one recites:"
+        },
+        {
+          "type": "text",
+          "id": "sheasa-li",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה לִי כָּל צְרָכָי׃",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has provided for all my needs.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, she'asa li kol ṣĕrakhay."
+        },
+        {
+          "type": "rubric",
+          "id": "walking-cue",
+          "hebrew": "כשמהלך לצאת לדרך מברך",
+          "translation": "Upon setting out on one's way, one recites:"
+        },
+        {
+          "type": "text",
+          "id": "hamekhin-mitsadei",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַמֵּכִין מִצְעֲדֵי גָבֶר׃",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who directs the steps of man.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hammekhin miṣ'ădhe ghaver."
+        },
+        {
+          "type": "rubric",
+          "id": "mezuzah-cue",
+          "hebrew": "כשיצא מביתו יניח ידו על המזוזה ויאמר כסדר זה",
+          "translation": "Upon leaving the house, one places a hand on the mezuzah and says, in this order:"
+        },
+        {
+          "type": "text",
+          "id": "mezuzah-shema",
+          "hebrew": "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְיָ֥ אֱלֹהֵ֖ינוּ יְיָ֥ ׀ אֶחָֽד׃",
+          "translation": "Hear, O Israel: Adhonay is our God, Adhonay is One.",
+          "translit": "shĕma' yisraʾel Adhonay ʾĕlohenu Adhonay ʾeḥadh."
+        },
+        {
+          "type": "text",
+          "id": "mezuzah-baqasha",
+          "hebrew": "יְיָ יִשְׁמֹר צֵאתִי וּבוֹאִי לְחַיִּים טוֹבִים וּלְשָׁלוֹם מֵעַתָּה וְעַד עוֹלָם. אֵל שַׁדַּי יְבָרֵךְ אוֹתִי וְיִתֵּן לִי רַחֲמִים׃",
+          "translation": "May Adhonay guard my going out and my coming in, for good life and for peace, from now and forever. May El Shaddai bless me and grant me mercy.",
+          "translit": "Adhonay yishmor ṣeʾthi uvoʾi lĕḥayyim ṭovim ulĕshalom me'atta wĕ'adh 'olam. ʾel shadday yĕvarekh ʾothi wĕyitten li raḥămim."
         }
       ]
     }

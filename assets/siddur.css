@@ -290,7 +290,7 @@ html[data-theme="dark"] .icon-moon { display: inline; }
 
 .siddur-hebrew {
   display: none;
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   line-height: 1.9;
   text-align: right;
 }
@@ -322,7 +322,7 @@ html.show-translation .siddur-translation { display: block; }
    Hebrew/translit/translation display toggle. */
 .siddur-hebrew-static {
   font-family: "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
-  font-size: 1.3rem;
+  font-size: 1.45rem;
   line-height: 1.9;
   text-align: right;
   display: block;
@@ -336,15 +336,25 @@ html.show-translation .siddur-translation { display: block; }
   font-size: 1.95rem;
 }
 
+/* Rubrics are set in the accent colour, upright, with a rule down the
+   leading edge -- the traditional "red letter" treatment. Transliteration
+   is muted italic, so the two can't be mistaken for each other when the
+   page is set to transliteration only (where a rubric's English gloss sits
+   directly above a line of transliterated prayer). */
 .siddur-rubric {
-  color: var(--siddur-muted);
+  color: var(--siddur-accent);
   font-size: 0.9rem;
 }
 .siddur-rubric .siddur-hebrew {
   font-size: 1rem;
   display: block;
 }
-.siddur-rubric .siddur-translation { font-style: italic; }
+/* Rule only on the English gloss: the <p> itself is LTR, so a rule on it
+   would sit on the wrong side of the right-aligned Hebrew rubric. */
+.siddur-rubric .siddur-translation {
+  border-inline-start: 2px solid var(--siddur-accent);
+  padding-inline-start: 0.6rem;
+}
 
 /* Rubrics (instructions) only ever show in Hebrew or in English, never
    transliterated -- they have no niqqud to transliterate meaningfully.
@@ -578,5 +588,5 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
     max-width: 100%;
   }
 
-  .siddur-hebrew { font-size: 1.25rem; }
+  .siddur-hebrew { font-size: 1.4rem; }
 }
