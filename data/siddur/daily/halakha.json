@@ -1,0 +1,961 @@
+{
+  "title": "Halakha",
+  "sections": [
+    {
+      "id": "shema-and-berakhoth",
+      "title": "The Miṣwa of Qiryath Shĕma' and Its Bĕrakhoth",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "shema-and-berakhoth-1",
+          "hebrewLead": "המצוה.",
+          "lead": "The Miṣwa.",
+          "hebrew": "מצות עשה לקרות קרית שמע פעמיים בכל יום, בערב ובבוקר, שנאמר \"ובשכבך ובקומך\": בשעה שדרך בני אדם שוכבין, והוא לילה, ובשעה שדרך בני אדם עומדין, והוא יום. (ק״ש א,א)",
+          "translation": "It is a positive miṣwa to recite Qiryath Shĕma' twice each day, in the evening and in the morning, as it is said: \"and when you lie down and when you rise up\" — at the time when people typically lie down, which is night, and at the time when people typically stand up, which is day. (Qiryath Shĕma' 1:1)"
+        },
+        {
+          "type": "rubric",
+          "id": "shema-and-berakhoth-2",
+          "hebrewLead": "שלוש הפרשיות.",
+          "lead": "The Three Parashiyyoth.",
+          "hebrew": "קוראים שלוש פרשיות על הסדר: \"שמע\", \"והיה אם שמוע\" ו\"ויאמר\". מקדימים \"שמע\" מפני שיש בה ייחוד השם, אהבתו ותלמודו, שהוא העיקר הגדול שהכול תלוי בו. אחריה \"והיה אם שמוע\", שיש בה ציווי על שאר המצוות, ואחריה פרשת ציצית, שיש בה זכירת כל המצוות. (ק״ש א,ב)",
+          "translation": "One recites three parashiyyoth in order: \"Shĕma'\", \"wĕhaya ʾim shamoa'\", and \"wayyoʾmer\". One places \"Shĕma'\" first because it contains the unification of the Divine Name, His love, and His study, which is the great foundation upon which everything depends. After it comes \"wĕhaya ʾim shamoa'\", which contains the command regarding the rest of the miṣwoth, and after it comes Parashath Ṣiṣith, which contains the remembrance of all the miṣwoth. (Qiryath Shĕma' 1:2)"
+        },
+        {
+          "type": "rubric",
+          "id": "shema-and-berakhoth-3",
+          "hebrewLead": "פרשת ציצית בלילה.",
+          "lead": "Parashath Ṣiṣith at Night.",
+          "hebrew": "אף שאין מצות ציצית נוהגת בלילה, קוראים אותה בלילה מפני שיש בה זכרון יציאת מצרים, ומצוה להזכיר יציאת מצרים ביום ובלילה. (ק״ש א,ג)",
+          "translation": "Even though the miṣwa of ṣiṣith does not apply at night, one recites it at night because it contains the remembrance of the Exodus from Egypt, and it is a miṣwa to mention the Exodus from Egypt by day and by night. (Qiryath Shĕma' 1:3)"
+        },
+        {
+          "type": "rubric",
+          "id": "shema-and-berakhoth-4",
+          "hebrewLead": "ברוך שם.",
+          "lead": "Barukh Shem.",
+          "hebrew": "כשגומר פסוק ראשון אומר בלחש \"ברוך שם כבוד מלכותו לעולם ועד\", וחוזר וקורא כדרכו מ\"ואהבת\" עד סופה. (ק״ש א,ד)",
+          "translation": "When one finishes the first verse, one says softly \"barukh shem kĕvodh malkhutho lĕ'olam wa'edh\", and then resumes reciting normally from \"wĕʾahavta\" to the end. (Qiryath Shĕma' 1:4)"
+        },
+        {
+          "type": "rubric",
+          "id": "shema-and-berakhoth-5",
+          "hebrewLead": "הברכות.",
+          "lead": "The Bĕrakhoth.",
+          "hebrew": "ביום מברך שתיים לפניה, יוצר אור ואהבת עולם, ואחת לאחריה, אמת ויציב. בלילה מברך שתיים לפניה, מעריב ערבים ואהבת עולם, ושתיים לאחריה, אמת ואמונה והשכיבנו. (ק״ש א,ה–ו)",
+          "translation": "By day, one recites two bĕrakhoth before it — Yoṣer ʾOr and ʾAhăvath 'Olam — and one after it — ʾĔmeth Wĕyaṣṣiv. At night, one recites two bĕrakhoth before it — Ma'ăriv 'Ăravim and ʾAhăvath 'Olam — and two after it — ʾĔmeth Weʾĕmuna and Hashkivenu. (Qiryath Shĕma' 1:5–6)"
+        },
+        {
+          "type": "rubric",
+          "id": "shema-and-berakhoth-6",
+          "hebrewLead": "מטבע הברכות.",
+          "lead": "The Formula of the Bĕrakhoth.",
+          "hebrew": "ברכות אלו עזרא ובית דינו תיקנום, ואין אדם רשאי לפחות מהן ולא להוסיף עליהן, ולא לשנות בפתיחתן ובחתימתן. כל המשנה ממטבע שטבעו חכמים בברכות טועה, וחוזר ומברך כמטבע. מי שלא אמר אמת ויציב בשחרית ואמת ואמונה בערבית לא יצא ידי חובתו. (ק״ש א,ח)",
+          "translation": "Ezra and his court instituted these bĕrakhoth, and a person is not permitted to reduce them, nor to add to them, nor to alter their openings or conclusions. Anyone who alters the formula minted by the Sages in bĕrakhoth errs, and must repeat and recite the bĕrakha according to the prescribed formula. One who did not say ʾĔmeth Wĕyaṣṣiv in Shaḥrith or ʾĔmeth Weʾĕmuna in 'Arvith has not fulfilled his obligation. (Qiryath Shĕma' 1:8)"
+        },
+        {
+          "type": "rubric",
+          "id": "shema-and-berakhoth-7",
+          "hebrewLead": "סדר הברכות.",
+          "lead": "The Order of the Bĕrakhoth.",
+          "hebrew": "הקדים ברכה שנייה לראשונה, בין לפניה בין לאחריה, יצא, לפי שאין סדר לברכות. (ק״ש א,ט)",
+          "translation": "If one recited the second bĕrakha before the first, whether before [the Shĕma'] or after it, he has fulfilled his obligation, because there is no required order among the bĕrakhoth. (Qiryath Shĕma' 1:9)"
+        }
+      ]
+    },
+    {
+      "id": "recitation",
+      "title": "Intent and Precision in Recitation",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "recitation-1",
+          "hebrewLead": "כוונה בפסוק ראשון.",
+          "lead": "Intent in the First Verse.",
+          "hebrew": "הקורא את שמע ולא כיוון ליבו בפסוק ראשון, \"שמע ישראל\", לא יצא ידי חובתו. ובשאר, אם לא כיוון ליבו, יצא. (ק״ש ב,א) וכך יכוון בו: \"שמע ישראל\", קבל דברים אלו והבינם, שה׳ הוא אלוהינו, שקיבלנו אלוהותו עלינו ואנו עבדיו, ושהוא ה׳ אחד, בלי שיתוף ואין לו שני. (בן איש חי, וארא ו–ז)",
+          "translation": "One who recites the Shĕma' and does not focus his heart on the first verse, \"shĕma' yisraʾel\", has not fulfilled his obligation; as for the rest, if he did not focus his heart, he has fulfilled his obligation. (Qiryath Shĕma' 2:1) And this is how he should intend: \"shĕma' yisraʾel\" — accept these words and understand them, that Adhonay is our God, that we have accepted His Divinity upon us and we are His servants, and that He is Adhonay One, without any partnership, and He has no second. (Ben ʾIsh Ḥay, Waʾeraʾ 6–7)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-2",
+          "hebrewLead": "אופן הקריאה.",
+          "lead": "Manner of Recitation.",
+          "hebrew": "כל אדם קורא כדרכו: עומד, מהלך, שוכב או רוכב. אסור לקרות כשפניו טוחות בקרקע או כשהוא מושלך על גבו, אבל קורא כשהוא שוכב על צידו. המהלך ברגליו עומד בפסוק ראשון, והשאר קורא כשהוא מהלך. (ק״ש ב,ב–ג)",
+          "translation": "Every person recites in his usual manner: standing, walking, lying down, or riding. It is forbidden to recite while one's face is pressed into the ground or while thrown on his back, but one may recite while lying on his side. One who is walking on foot stands during the first verse, and recites the remainder while walking. (Qiryath Shĕma' 2:2–3)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-3",
+          "hebrewLead": "העוסק במלאכה.",
+          "lead": "One Engaged in Work.",
+          "hebrew": "מפסיק עד שיקרא פרשה ראשונה כולה, כדי שלא תהא קריאת עראי, והשאר קורא ועוסק במלאכתו. וכן לא ירמוז בעיניו, לא יקרוץ בשפתיו ולא יראה באצבעותיו בשעת הקריאה. (ק״ש ב,ד; ב,ח; בן איש חי, וארא יג)",
+          "translation": "He stops until he recites the entire first parasha, so that his recitation will not be casual, and recites the rest while engaging in his work. Likewise, he should not signal with his eyes, gesture with his lips, or gesture with his fingers during the recitation. (Qiryath Shĕma' 2:4; 2:8; Ben ʾIsh Ḥay, Waʾeraʾ 13)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-4",
+          "hebrewLead": "העוסק בדבר אחר.",
+          "lead": "One Engaged in Other Matters.",
+          "hebrew": "העוסק בתלמוד תורה פוסק וקורא. העוסק בצורכי רבים גומר עסקיהם, וקורא אם נשאר זמן. העוסק באכילה, במרחץ, בתספורת או בדין גומר ואחר כך קורא; ואם חשש שיעבור זמן הקריאה ופסק וקרא, הרי זה משובח. (ק״ש ב,ה–ו)",
+          "translation": "One engaged in Torah study stops and recites. One engaged in public affairs finishes those affairs and recites if time remains. One engaged in eating, bathing, getting a haircut, or judging finishes and then recites; and if he feared that the time for recitation would pass and stopped and recited, he is praiseworthy. (Qiryath Shĕma' 2:5–6)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-5",
+          "hebrewLead": "השמעה לאוזן.",
+          "lead": "Audibility to One's Ear.",
+          "hebrew": "צריך להשמיע לאוזנו כשהוא קורא, ולדקדק באותיותיה. ואם לא השמיע לאוזנו או לא דקדק, יצא. (ק״ש ב,ח; בן איש חי, וארא יב)",
+          "translation": "One must make it audible to his own ear when he recites, and be precise with its letters. If he did not make it audible to his ear or was not precise, he has fulfilled his obligation. (Qiryath Shĕma' 2:8; Ben ʾIsh Ḥay, Waʾeraʾ 12)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-6",
+          "hebrewLead": "כיצד מדקדק.",
+          "lead": "How to Be Precise.",
+          "hebrew": "לא ירפה החזק ולא יחזק הרפה, לא יניד הנח ולא יניח הנד. נותן ריווח בין שתי אותיות דומות, שאחת בסוף תיבה והאחרת בתחילת התיבה הסמוכה, כגון \"בכל לבבך\", \"ואבדתם מהרה\", \"הכנף פתיל\". מבאר זי״ן של \"תזכרו\"; מאריך בדל״ת של \"אחד\", כדי שימליכהו על השמים ועל הארץ ועל ארבע רוחות העולם, ואינו חוטף בחי״ת. (ק״ש ב,ט) וייזהר שלא יקלקל את התיבה כשמאריך בה: ממהר באל״ף, שלא יישמע כאומר \"אי חד\", אינו ממהר בחי״ת, ומאריך בדל״ת במבטא רפה ולא דגושה, שלא יישמע כאומר \"דא\". (בן איש חי, וארא י)",
+          "translation": "One must not soften what is hard (daghesh) nor harden what is soft (rafeh), nor vocalize a silent letter (shĕwaʾ naḥ) nor silence a vocalized letter (shĕwaʾ na'). One provides a pause between two identical letters, where one is at the end of a word and the other at the beginning of the adjacent word, such as \"bĕkhol lĕvavĕkha\", \"waʾăvadhtem mĕhera\", \"hakkanaf pĕthil\". One clarifies the zayin of \"tizkĕru\"; lengthens the daleth of \"ʾeḥadh\", in order to declare Him King over the heavens, the earth, and the four directions of the world, and does not snatch the ḥeth. (Qiryath Shĕma' 2:9) And he should be careful not to distort the word when lengthening it: he moves quickly through the ʾalef, so it does not sound like saying \"ʾi ḥadh\", does not rush through the ḥeth, and lengthens the daleth with a soft (rafeh) pronunciation rather than a hard (daghesh) one, so it does not sound like saying \"daʾ\". (Ben ʾIsh Ḥay, Waʾeraʾ 10)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-7",
+          "hebrewLead": "אותיות דומות וטעמים.",
+          "lead": "Similar Letters and Cantillation.",
+          "hebrew": "יוציא כל אות כתיקונה ולא יחליפנה בדומה לה: מטעים עי״ן של \"נשבע\" שלא תישמע כה״א; מתיז זי״ן של \"תזכרו\" ושל \"וזכרתם\" שלא יישמע \"תשכרו\" או \"תשקרו\"; מדגיש יו״ד של \"ישראל\" ושל \"והיו\" שלא תיבלע; נותן ריווח בין \"וחרה\" ל\"אף\" שלא יישמע \"וחרף\"; ומפסיק בין מ״ם שבסוף תיבה לאל״ף שאחריה, כגון \"ולמדתם אותם\", \"וקשרתם אותם\", \"וראיתם אותו\". (שו״ע או״ח סא,טז–כא) וכן לא יקרא לאל״ף עי״ן ולא לעי״ן אל״ף (תפילה ח,יב), וכיוצא בזה יבחין בין חי״ת לכ״ף רפה. וקורא אותה בטעמיה כמו שהם בתורה, שזו היא \"קריאה\". (שו״ע או״ח סא,כד)",
+          "translation": "One must pronounce every letter properly and not substitute it with a similar one: enunciate the 'ayin of \"nishba'\" so it does not sound like a heʾ; articulate the zayin of \"tizkĕru\" and of \"uzĕkhartem\" so it does not sound like \"tiskĕru\" or \"tĕshaqqĕru\"; emphasize the yodh of \"yisraʾel\" and of \"wĕhayu\" so it is not swallowed; leave space between \"wĕḥara\" and \"ʾaf\" so it does not sound like \"wĕḥaraf\"; and pause between a mem at the end of a word and an ʾalef following it, such as \"wĕlimmadhtem ʾotham\", \"uqĕshartem ʾotham\", \"urĕʾithem ʾotho\". (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 61:16–21) Likewise, one should not pronounce an ʾalef as an 'ayin nor an 'ayin as an ʾalef (Tĕfilla 8:12), and similarly distinguish between a ḥeth and a soft kaf (khaf). And one recites it with its cantillation marks as they are in the Torah, for this is what constitutes proper \"recitation\". (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 61:24)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-8",
+          "hebrewLead": "בכל לשון.",
+          "lead": "In Any Language.",
+          "hebrew": "קורא אדם את שמע בכל לשון שהוא מכיר, ומדקדק באותה לשון כמו שמדקדק בלשון הקודש. (ק״ש ב,י)",
+          "translation": "A person may recite the Shĕma' in any language that he understands, and he must be as precise in that language as he is in the Holy Tongue (lĕshon haqqodhesh). (Qiryath Shĕma' 2:10)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-9",
+          "hebrewLead": "סדר הקריאה.",
+          "lead": "The Order of Recitation.",
+          "hebrew": "הקורא למפרע בסדר הפסוקים לא יצא. הקדים פרשה לפרשה, אף שאינו רשאי, יצא. הקורא פסוק וכופלו הרי זה מגונה, והכופל מילה, כגון \"שמע שמע\", משתקין אותו. (ק״ש ב,יא; בן איש חי, וארא ו)",
+          "translation": "One who recites backwards in the order of the verses has not fulfilled his obligation. If he placed one parasha before another, even though he is not permitted to do so, he has fulfilled his obligation. One who recites a verse and repeats it — this is disgraceful; and one who repeats a word, such as \"shĕma' shĕma'\", is silenced. (Qiryath Shĕma' 2:11; Ben ʾIsh Ḥay, Waʾeraʾ 6)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-10",
+          "hebrewLead": "סירוגין ומתנמנם.",
+          "lead": "Intermittently and Drowsing.",
+          "hebrew": "קראה בהפסקות יצא, אפילו שהה כדי לגמור את כולה, ובלבד שקרא על הסדר. קראה מתנמנם יצא, ובלבד שהיה ער בפסוק ראשון. (ק״ש ב,יב)",
+          "translation": "If one recites it with pauses, he has fulfilled his obligation, even if he paused long enough to finish the entire recitation, provided he recited in order. If he recited while drowsing, he has fulfilled his obligation, provided he was awake during the first verse. (Qiryath Shĕma' 2:12)"
+        },
+        {
+          "type": "rubric",
+          "id": "recitation-11",
+          "hebrewLead": "ספק וטעות.",
+          "lead": "Doubt and Error.",
+          "hebrew": "ספק קרא ספק לא קרא, חוזר וקורא ומברך לפניה ולאחריה. ידע שקרא ונסתפק אם בירך, אינו חוזר ומברך. טעה, חוזר למקום שטעה; לא ידע היכן פסק באמצע הפרק, חוזר לראש הפרק; לא ידע איזו פרשה השלים, חוזר ל\"ואהבת\". (ק״ש ב,יג–יד; בן איש חי, וארא יז)",
+          "translation": "If one is in doubt whether he recited or did not recite, he repeats and recites, saying the bĕrakhoth before and after it. If he knows that he recited but is in doubt whether he recited the bĕrakhoth, he does not repeat the bĕrakhoth. If he made a mistake, he returns to the place where he made the mistake; if he does not know where he stopped in the middle of a section, he returns to the beginning of the section; if he does not know which parasha he completed, he returns to \"wĕʾahavta\". (Qiryath Shĕma' 2:13–14; Ben ʾIsh Ḥay, Waʾeraʾ 17)"
+        }
+      ]
+    },
+    {
+      "id": "prayer",
+      "title": "The Miṣwa of Prayer and the Number of Prayers",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "prayer-1",
+          "hebrewLead": "המצוה.",
+          "lead": "The Miṣwa.",
+          "hebrew": "מצות עשה להתפלל בכל יום, שנאמר \"ועבדתם את ה׳ אלוהיכם\", ועבודה שבלב היא תפילה. מן התורה אין לתפילה מניין, נוסח או זמן קבוע. (תפילה א,א)",
+          "translation": "It is a positive miṣwa to pray every day, as it is said: \"And you shall serve Adhonay your God\", and service of the heart is prayer (tĕfilla). Biblical law does not set a fixed number, text, or set time for prayer. (Tĕfilla 1:1)"
+        },
+        {
+          "type": "rubric",
+          "id": "prayer-2",
+          "hebrewLead": "עיקר החיוב.",
+          "lead": "The Core Obligation.",
+          "hebrew": "שיהא אדם מתפלל ומתחנן בכל יום: מגיד שבחו של הקדוש ברוך הוא, אחר כך שואל צרכיו בבקשה ובתחינה, ואחר כך נותן שבח והודיה לה׳ על הטובה שהשפיע לו, כל אחד כפי כוחו. (תפילה א,ב)",
+          "translation": "That a person pray and supplicate every day: telling the praise of the Holy One, blessed be He, then asking for his needs in request and supplication, and afterwards giving praise and thanksgiving to Adhonay for the goodness He has bestowed upon him, each person according to his capacity. (Tĕfilla 1:2)"
+        },
+        {
+          "type": "rubric",
+          "id": "prayer-3",
+          "hebrewLead": "תקנת חכמים.",
+          "lead": "The Institution of the Sages.",
+          "hebrew": "משגלו ישראל ונשתבשה לשונם, עמדו עזרא ובית דינו ותיקנו שמונה עשרה ברכות על הסדר: שלוש ראשונות שבח, שלוש אחרונות הודיה, ואמצעיות שאלת צורכי היחיד והציבור, כדי שתהא תפילה ערוכה בפי הכול. וכן תיקנו את מניין התפילות כנגד הקרבנות: שחרית ומנחה כנגד שני התמידין, מוסף ביום שיש בו קרבן מוסף, ותפילה אחת בלילה. (תפילה א,ד–ח)",
+          "translation": "When Israel went into exile and their language became corrupted, Ezra and his court arose and established eighteen bĕrakhoth in order: the first three as praise, the last three as thanksgiving, and the middle ones asking for individual and communal needs, so that prayer would be structured in everyone's mouth. Likewise, they instituted the number of prayers corresponding to the sacrifices: Shaḥrith and Minḥa corresponding to the two daily offerings (tĕmidhin), Musaf on a day that has an additional sacrifice (qorban musaf), and one prayer at night. (Tĕfilla 1:4–8)"
+        },
+        {
+          "type": "rubric",
+          "id": "prayer-4",
+          "hebrewLead": "סך התפילות.",
+          "lead": "The Total Number of Prayers.",
+          "hebrew": "בכל יום שלוש: ערבית, שחרית ומנחה. בשבתות, במועדים ובראשי חודשים ארבע, עם תפילת המוספין; וביום הכיפורים חמש, עם תפילת נעילה. תפילת ערבית אינה חובה כשחרית ומנחה, אבל נהגו כל ישראל להתפלל אותה, וקיבלוה עליהם כתפילת חובה. (תפילה א,ח–י)",
+          "translation": "Every day there are three: 'Arvith, Shaḥrith, and Minḥa. On Shabbathoth, festivals (mo'ădhim), and New Moons (Raʾshe Ḥŏdhashim), four, with the prayer of Musafin; and on Yom Hakkippurim, five, with the prayer of Nĕ'ila. The 'Arvith prayer is not an absolute obligation like Shaḥrith and Minḥa, but all Israel have adopted the custom to pray it and accepted it upon themselves as an obligatory prayer. (Tĕfilla 1:8–10)"
+        },
+        {
+          "type": "rubric",
+          "id": "prayer-5",
+          "hebrewLead": "תפילת נדבה.",
+          "lead": "Voluntary Prayer.",
+          "hebrew": "תפילות אלו אין פוחתין מהן אבל מוסיפין עליהן, והמוסיף כמקריב נדבה. לפיכך מחדש דבר בברכה מן האמצעיות, מעין הברכה, להודיע שהיא נדבה ולא חובה. אין מתפללים מוסף נדבה; ויש מן הגאונים שהורה שאסור להתפלל נדבה בשבתות וימים טובים. (תפילה א,יא–יב; בן איש חי, משפטים טז)",
+          "translation": "One does not reduce these prayers, but one may add to them, and one who adds is like one bringing a voluntary offering (nĕdhava). Therefore, he must innovate something in one of the middle bĕrakhoth, relevant to that bĕrakha, to make it known that it is voluntary and not obligatory. One does not pray a voluntary Musaf; and some of the Gĕʾonim ruled that it is forbidden to pray a voluntary prayer on Shabbathoth and holidays (Yamim Ṭovim). (Tĕfilla 1:11–12; Ben ʾIsh Ḥay, Mishpaṭim 16)"
+        }
+      ]
+    },
+    {
+      "id": "order-additions-errors",
+      "title": "The Order of Prayer, Its Additions, and Errors Made in Them",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-1",
+          "hebrewLead": "תשע עשרה ברכות.",
+          "lead": "Nineteen Bĕrakhoth.",
+          "hebrew": "בימי רבן גמליאל התקינו ברכה כנגד המינים, ונמצאו ברכות התפילה תשע עשרה. בכל אחת משלוש תפילות היום מתפלל אותן על הסדר. (תפילה ב,א–ב)",
+          "translation": "In the days of Rabban Gamliʾel, they instituted a bĕrakha against the heretics (minim), bringing the bĕrakhoth of the prayer to nineteen. In each of the three daily prayers, one recites them in order. (Tĕfilla 2:1–2)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-2",
+          "hebrewLead": "הביננו.",
+          "lead": "Hăvinenu.",
+          "hebrew": "מי שהיה טרוד ודחוק, או שקצרה לשונו, מתפלל שלוש ראשונות, ברכה אחת מעין כל האמצעיות, והיא \"הביננו\", ושלוש אחרונות, ויצא ידי חובתו. אין מתפללים הביננו בימות הגשמים, מפני שאלת הגשמים, ולא במוצאי שבתות וימים טובים, מפני ההבדלה. (תפילה ב,ב–ד)",
+          "translation": "One who was preoccupied, pressed for time, or unable to speak at length prays the first three bĕrakhoth, one summary bĕrakha representing all the middle ones — which is \"Hăvinenu\" — and the last three bĕrakhoth, and fulfills his obligation. One does not pray Hăvinenu during the rainy season because of the petition for rain (shĕʾelath haggĕshamim), nor at the conclusion of Shabbathoth and holidays because of the Havdala. (Tĕfilla 2:2–4)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-3",
+          "hebrewLead": "תפילה קצרה במקום סכנה.",
+          "lead": "Short Prayer in a Place of Danger.",
+          "hebrew": "המהלך במקום גדודי חיה וליסטים והגיע זמן התפילה, מתפלל ברכה אחת, \"צורכי עמך ישראל מרובין\", אפילו כשהוא מהלך. כשמגיע ליישוב ומתיישבת דעתו, חוזר ומתפלל תפילה כתקנה. (תפילה ד,כ–כא)",
+          "translation": "One traveling through a place with bands of wild beasts or bandits when the time for prayer arrives prays a single bĕrakha, \"ṣorkhe 'ammĕkha yisraʾel mĕrubbin\", even while walking. When he arrives at a settled area and his mind is settled, he repeats and prays the full, properly ordained prayer. (Tĕfilla 4:20–21)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-4",
+          "hebrewLead": "פתיחה וחתימה.",
+          "lead": "Opening and Conclusion.",
+          "hebrew": "בכל תפילה פותח קודם ברכה ראשונה \"אדני שפתי תפתח\", וחותם בסופה \"יהיו לרצון אמרי פי\", ואחר כך צועד לאחריו. (תפילה ב,יא)",
+          "translation": "In every prayer, one opens before the first bĕrakha with \"Adhonay sĕfathay tiftaḥ\", and concludes at its end with \"yihyu lĕraṣon ʾimre fi\", and afterwards steps backwards. (Tĕfilla 2:11)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-5",
+          "hebrewLead": "שבת ויום טוב.",
+          "lead": "Shabbath and Holiday.",
+          "hebrew": "מתפלל שבע ברכות בכל תפילה: שלוש ראשונות, שלוש אחרונות, ואמצעית מעין היום. במוסף של ראש השנה מתפלל תשע: מלכויות, זכרונות ושופרות באמצע. (תפילה ב,ה; ב,ח)",
+          "translation": "One prays seven bĕrakhoth in each prayer: the first three, the last three, and a middle bĕrakha theme-appropriate to the day. In the Musaf of Roʾsh Hashshana, one prays nine: Malkhuyyoth, Zikhronoth, and Shofaroth in the middle. (Tĕfilla 2:5; 2:8)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-6",
+          "hebrewLead": "ראש חודש וחול המועד.",
+          "lead": "New Moon and Intermediate Days of Festivals.",
+          "hebrew": "בערבית, שחרית ומנחה מתפלל תשע עשרה ברכות, ואומר \"יעלה ויבוא\" בברכת העבודה (\"רצה\"). במוסף מתפלל שבע ברכות. (תפילה ב,יב)",
+          "translation": "In 'Arvith, Shaḥrith, and Minḥa, one prays nineteen bĕrakhoth, and says \"ya'ăleh wĕyavoʾ\" in the bĕrakha of Divine Service (\"Rĕṣeh\"). In Musaf, one prays seven bĕrakhoth. (Tĕfilla 2:12)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-7",
+          "hebrewLead": "הבדלה.",
+          "lead": "Havdala.",
+          "hebrew": "במוצאי שבת ובמוצאי יום טוב מבדיל ב\"אתה חונן\", אף על פי שהוא מבדיל על הכוס. (תפילה ב,יד)",
+          "translation": "At the conclusion of Shabbath and holidays, one recites Havdala in \"ʾatta ḥonen\", even though he also recites Havdala over a cup of wine. (Tĕfilla 2:14)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-8",
+          "hebrewLead": "חנוכה ופורים.",
+          "lead": "Ḥănukka and Purim.",
+          "hebrew": "מוסיפים \"על הניסים\" בברכת ההודיה (\"מודים\"). (תפילה ב,טו)",
+          "translation": "One adds \"'al hannissim\" in the bĕrakha of Thanksgiving (\"Modhim\"). (Tĕfilla 2:15)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-9",
+          "hebrewLead": "תענית.",
+          "lead": "Fast Day.",
+          "hebrew": "היחיד שהתענה מוסיף \"עננו\" בשומע תפילה. בתשעה באב מוסיפים \"רחם\" בבונה ירושלים. (תפילה ב,טז)",
+          "translation": "An individual who is fasting adds \"'ănenu\" in Shomea' Tĕfilla. On Tish'a Bĕʾav, one adds \"raḥem\" in Boneh Yĕrushalayim. (Tĕfilla 2:16)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-10",
+          "hebrewLead": "הזכרת גשם וטל.",
+          "lead": "Mentioning Rain and Dew.",
+          "hebrew": "כל ימות הגשמים אומר בברכה שנייה \"מוריד הגשם\", ובימות החמה \"מוריד הטל\". מתחיל \"מוריד הגשם\" במוסף של יום טוב האחרון של חג, ו\"מוריד הטל\" במוסף של יום טוב הראשון של פסח. (תפילה ב,יז)",
+          "translation": "Throughout the rainy season, one says \"moridh haggeshem\" in the second bĕrakha, and during the dry season, \"moridh haṭṭal\". One begins saying \"moridh haggeshem\" in the Musaf of the last Yom Ṭov of the Festival (Sukkoth), and \"moridh haṭṭal\" in the Musaf of the first Yom Ṭov of Pesaḥ. (Tĕfilla 2:17)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-11",
+          "hebrewLead": "שאלת גשמים.",
+          "lead": "Petition for Rain.",
+          "hebrew": "בארץ ישראל שואלים את הגשמים בברכת השנים משבעה במרחשוון. בשנער, בסוריה, במצרים ובמקומות הסמוכים והדומים להם שואלים ביום שישים אחר תקופת תשרי. ובזמננו מתחילים בתפילת ערבית שבערב 4 בדצמבר, ובשנה שלפני שנה אזרחית מעוברת בערב 5 בדצמבר; וכך הוא עד שנת 2099. (שו״ע או״ח קיז,א; הרב דוד יוסף, שיעור \"הזכרת ושאילת גשמים\") מקומות הצריכים לגשמים בימות החמה שואלים בשעת צורכם בשומע תפילה. (תפילה ב,יח–יט)",
+          "translation": "In the Land of Israel, one petitions for rain in Birkath Hashshanim starting from the seventh of Marḥeshwan. In Shin'ar (Babylonia), Syria, Egypt, and neighboring or similar places, one petitions starting on the sixtieth day after the autumnal equinox (tĕqufath Tishre). In our time, one begins in the 'Arvith prayer on the evening of December 4th, and in the year before a civil leap year on the evening of December 5th; and so it remains until the year 2099. (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 117:1; Rabbi David Yosef, lecture \"Hazkarath Ushĕʾelath Gĕshamim\") Places that require rain during the dry season petition when needed in Shomea' Tĕfilla. (Tĕfilla 2:18–19)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-12",
+          "hebrewLead": "עשרת ימי תשובה.",
+          "lead": "The Ten Days of Repentance.",
+          "hebrew": "מראש השנה עד מוצאי יום הכיפורים חותם בשלישית \"המלך הקדוש\" ובאחת עשרה \"המלך המשפט\". יש מקומות שנהגו להוסיף בימים אלו \"זכרנו לחיים\", \"מי כמוך\", \"זכור רחמיך\" ו\"ובספר חיים\". (תפילה ב,כ–כא)",
+          "translation": "From Roʾsh Hashshana until the conclusion of Yom Hakkippurim, one concludes the third bĕrakha with \"hammelekh haqqadhosh\" and the eleventh with \"hammelekh hammishpaṭ\". In some places, it is customary to add during these days \"zokhrenu lĕḥayyim\", \"mi khamokha\", \"zĕkhor raḥămekha\", and \"uvĕsefer ḥayyim\". (Tĕfilla 2:20–21)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-13",
+          "hebrewLead": "תפילות של פרקים.",
+          "lead": "Occasional Prayers.",
+          "hebrew": "תפילות שאינן שגורות, כגון מוסף של ראש חודש ותפילות המועדות, מסדיר תחילה ואחר כך עומד ומתפלל, כדי שלא ייכשל בהן. (תפילה ד,יט)",
+          "translation": "Prayers that are not fluent in one's mouth, such as the Musaf of New Moon and festival prayers, one reviews beforehand and only then stands and prays, so that he will not stumble in them. (Tĕfilla 4:19)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-14",
+          "hebrewLead": "הטועה בברכות.",
+          "lead": "One Who Errs in the Bĕrakhoth.",
+          "hebrew": "טעה באחת משלוש הראשונות, חוזר לראש התפילה; באחת משלוש האחרונות, חוזר לעבודה; באחת מן האמצעיות, חוזר לתחילת הברכה שטעה בה ומשלים תפילתו על הסדר. (תפילה י,א) ששלוש ראשונות חשובות כאחת, וכן שלוש אחרונות. (בן איש חי, בשלח טז)",
+          "translation": "If one made a mistake in one of the first three bĕrakhoth, he returns to the beginning of the prayer; in one of the last three, he returns to 'Ăvodha (\"Rĕṣeh\"); in one of the middle ones, he returns to the beginning of the bĕrakha in which he erred and completes his prayer in order. (Tĕfilla 10:1) For the first three are considered as one, and likewise the last three. (Ben ʾIsh Ḥay, Bĕshallaḥ 16)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-15",
+          "hebrewLead": "טעה בגשם ובטל.",
+          "lead": "One Who Erred Regarding Rain and Dew.",
+          "hebrew": "בימות הגשמים, לא אמר \"מוריד הגשם\" ולא \"מוריד הטל\", חוזר לראש; ואם הזכיר טל, אינו חוזר. בימות החמה, אמר \"מוריד הגשם\", חוזר לראש; ואם לא הזכיר טל, אינו חוזר, שאין הטל נעצר. (תפילה י,ח; בן איש חי, בשלח טז)",
+          "translation": "During the rainy season, if he said neither \"moridh haggeshem\" nor \"moridh haṭṭal\", he returns to the beginning; but if he mentioned dew, he does not return. During the dry season, if he said \"moridh haggeshem\", he returns to the beginning; but if he did not mention dew, he does not return, for dew is never withheld. (Tĕfilla 10:8; Ben ʾIsh Ḥay, Bĕshallaḥ 16)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-16",
+          "hebrewLead": "שכח שאלת גשמים.",
+          "lead": "One Who Forgot the Petition for Rain.",
+          "hebrew": "נזכר קודם שומע תפילה, שואל את הגשמים בשומע תפילה. נזכר אחר שבירך שומע תפילה, חוזר לברכת השנים. לא נזכר עד שהשלים כל תפילתו, חוזר ומתפלל. (תפילה י,ט; וראה בן איש חי, בשלח יח)",
+          "translation": "If he remembered before Shomea' Tĕfilla, he petitions for rain in Shomea' Tĕfilla. If he remembered after concluding the bĕrakha of Shomea' Tĕfilla, he returns to Birkath Hashshanim. If he did not remember until he completed his entire prayer, he repeats the prayer from the beginning. (Tĕfilla 10:9; see also Ben ʾIsh Ḥay, Bĕshallaḥ 18)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-17",
+          "hebrewLead": "שכח יעלה ויבוא.",
+          "lead": "One Who Forgot Ya'ăleh Wĕyavoʾ.",
+          "hebrew": "נזכר קודם שהשלים תפילתו, חוזר לעבודה ומזכיר. נזכר אחר שהשלים, חוזר לראש; ואם רגיל לומר תחנונים אחר תפילתו ונזכר קודם שיעקור רגליו, חוזר לעבודה. בערבית של ראש חודש אינו חוזר. (תפילה י,י–יא)",
+          "translation": "If he remembered before completing his prayer, he returns to 'Ăvodha (\"Rĕṣeh\") and mentions it. If he remembered after completing it, he returns to the beginning; but if he is accustomed to saying supplications (taḥănunim) after his prayer and remembered before moving his feet, he returns to 'Ăvodha. In the 'Arvith of Roʾsh Ḥodhesh, he does not repeat the prayer. (Tĕfilla 10:10–11)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-18",
+          "hebrewLead": "טעה בעשרת ימי תשובה.",
+          "lead": "One Who Erred During the Ten Days of Repentance.",
+          "hebrew": "חתם \"האל הקדוש\", חוזר לראש. חתם \"אוהב צדקה ומשפט\", חוזר לתחילת הברכה וחותם \"המלך המשפט\"; ואם לא נזכר עד שהשלים תפילתו, חוזר לראש. (תפילה י,יג)",
+          "translation": "If he concluded with \"haʾel haqqadhosh\", he returns to the beginning. If he concluded with \"ʾohev ṣĕdhaqa umishpaṭ\", he returns to the beginning of that bĕrakha and concludes with \"hammelekh hammishpaṭ\"; and if he did not remember until he completed his prayer, he returns to the beginning. (Tĕfilla 10:13)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-19",
+          "hebrewLead": "תוספות שאין חוזרים עליהן.",
+          "lead": "Additions for Which One Does Not Repeat.",
+          "hebrew": "שכח הבדלה ב\"חונן הדעת\", \"על הניסים\" בחנוכה ובפורים, או \"עננו\" בתענית, אינו חוזר ומתפלל. (תפילה י,יד)",
+          "translation": "If he forgot Havdala in \"ḥonen hadda'ath\", \"'al hannissim\" on Ḥănukka and Purim, or \"'ănenu\" on a fast day, he does not repeat the prayer. (Tĕfilla 10:14)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-20",
+          "hebrewLead": "של חול בשבת.",
+          "lead": "A Weekday Prayer on the Shabbath.",
+          "hebrew": "התחיל תפילה של חול בשבת ונזכר בתוך התפילה, גומר את הברכה שהתחיל בה וחוזר לשל שבת; ובמוסף פוסק אפילו באמצע הברכה. (תפילה י,ז)",
+          "translation": "If he started a weekday prayer on the Shabbath and remembered during the prayer, he finishes the bĕrakha he began and switches to the Shabbath prayer; in Musaf, however, he stops immediately, even in the middle of the bĕrakha. (Tĕfilla 10:7)"
+        },
+        {
+          "type": "rubric",
+          "id": "order-additions-errors-21",
+          "hebrewLead": "ספק התפלל.",
+          "lead": "Doubt Whether One Prayed.",
+          "hebrew": "מי שנסתפק אם התפלל אינו חוזר ומתפלל, אלא על דעת שהיא נדבה. היה עומד בתפילה ונזכר שכבר התפלל, פוסק אפילו באמצע הברכה. (תפילה י,ו; בן איש חי, משפטים יט)",
+          "translation": "One who is in doubt whether he prayed does not repeat the prayer except with the intention that it be a voluntary prayer (nĕdhava). If he was standing in prayer and remembered that he had already prayed, he stops immediately, even in the middle of a bĕrakha. (Tĕfilla 10:6; Ben ʾIsh Ḥay, Mishpaṭim 19)"
+        }
+      ]
+    },
+    {
+      "id": "times",
+      "title": "Times of Qiryath Shĕma' and Prayer",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "times-1",
+          "hebrew": "קרית שמע של ערבית — תחילת זמנה: צאת הכוכבים; סוף זמנה: חצי הלילה; בדיעבד או בשעת הדוחק: עד שיעלה עמוד השחר.",
+          "translation": "Qiryath Shĕma' of 'Arvith — begins: the emergence of the stars (ṣeʾth hakkokhavim); ends: midnight (ḥăṣi hallayla); after the fact (bĕdhi'ăvadh) or in pressing circumstances (shĕ'ath haddĕḥaq): until dawn ('ammudh hashshaḥar) rises."
+        },
+        {
+          "type": "rubric",
+          "id": "times-2",
+          "hebrew": "קרית שמע של שחרית — תחילת זמנה: מעט קודם הנץ החמה; סוף זמנה: סוף שלוש שעות; בדיעבד או בשעת הדוחק: משעלה עמוד השחר.",
+          "translation": "Qiryath Shĕma' of Shaḥrith — begins: slightly before sunrise (haneṣ haḥamma); ends: the end of three hours; after the fact (bĕdhi'ăvadh) or in pressing circumstances (shĕ'ath haddĕḥaq): from when dawn rises."
+        },
+        {
+          "type": "rubric",
+          "id": "times-3",
+          "hebrew": "תפילת השחר — תחילת זמנה: הנץ החמה; סוף זמנה: סוף ארבע שעות; בדיעבד או בשעת הדוחק: משעלה עמוד השחר; עד חצות היום.",
+          "translation": "Tĕfillath Hashshaḥar — begins: sunrise; ends: the end of four hours; after the fact (bĕdhi'ăvadh) or in pressing circumstances (shĕ'ath haddĕḥaq): from when dawn rises; until midday (ḥăṣoth hayyom)."
+        },
+        {
+          "type": "rubric",
+          "id": "times-4",
+          "hebrew": "תפילת המנחה — תחילת זמנה: שש שעות ומחצה; סוף זמנה: שקיעת החמה.",
+          "translation": "Tĕfillath Hamminḥa — begins: six and a half hours; ends: sunset (shĕqi'ath haḥamma)."
+        },
+        {
+          "type": "rubric",
+          "id": "times-5",
+          "hebrew": "תפילת המוספין — תחילת זמנה: אחר תפילת השחר; סוף זמנה: שבע שעות; בדיעבד או בשעת הדוחק: כל היום.",
+          "translation": "Tĕfillath Hammusafin — begins: after Tĕfillath Hashshaḥar; ends: seven hours; after the fact (bĕdhi'ăvadh) or in pressing circumstances (shĕ'ath haddĕḥaq): all day."
+        },
+        {
+          "type": "rubric",
+          "id": "times-6",
+          "hebrew": "תפילת הערב — תחילת זמנה: תחילת הלילה; סוף זמנה: עמוד השחר; בדיעבד או בשעת הדוחק: בערב שבת ובשבת, מבעוד יום.",
+          "translation": "Tĕfillath Ha'erev — begins: the beginning of night; ends: dawn; after the fact (bĕdhi'ăvadh) or in pressing circumstances (shĕ'ath haddĕḥaq): on 'Erev Shabbath and on Shabbath, while it is still day."
+        },
+        {
+          "type": "rubric",
+          "id": "times-7",
+          "hebrew": "כל השעות האמורות כאן שעות זמניות הן: מחלקים את היום לשנים עשר חלקים שווים, בין שהיום ארוך בין שהוא קצר. (בן איש חי, ויקהל ד; וארא ה; קיצור שו״ע יז,א) והיום נמדד מהנץ החמה עד שקיעתה, שהרי מנחה קטנה מתשע שעות ומחצה, ושתי השעות ומחצה שאחריה כלות בשקיעת החמה. (תפילה ג,ד; וכן הובא בבן איש חי, ויקהל ד, בשם יש אומרים) וכן הכריע הגר״א, שחשבון שעות זמניות בכל מקום אינו אלא מהנץ החמה עד שקיעתה, ואף לקרית שמע, וכתב שכן היא שיטת הרמב״ם. (ביאור הגר״א, או״ח תנט,ב, ד״ה ושיעור מיל)",
+          "translation": "All hours mentioned here are proportional hours (sha'oth zĕmanniyyoth): the day is divided into twelve equal parts, whether the day is long or short. (Ben ʾIsh Ḥay, Wayyaqhel 4; Waʾeraʾ 5; Qiṣṣur Shulḥan 'Arukh 17:1) And the day is measured from sunrise to sunset, for Minḥa Qĕṭanna begins at nine and a half hours, and the two and a half hours following it end at sunset. (Tĕfilla 3:4; cited also in Ben ʾIsh Ḥay, Wayyaqhel 4, in the name of \"some say\") And so decided the Vilna Gaʾon (Gra), that the calculation of proportional hours everywhere is strictly from sunrise to sunset, even for Qiryath Shĕma', writing that this is also the opinion of the Rambam. (Beʾur HaGra, ʾOraḥ Ḥayyim 459:2, s.v. wĕshi'ur mil)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-8",
+          "hebrewLead": "קרית שמע של ערבית.",
+          "lead": "Qiryath Shĕma' of 'Arvith.",
+          "hebrew": "מצותה משעת יציאת הכוכבים עד חצי הלילה. עבר ואיחר וקרא עד שלא עלה עמוד השחר, יצא ידי חובתו, שלא אמרו עד חצות אלא כדי להרחיק את האדם מן הפשיעה. (ק״ש א,י)",
+          "translation": "Its miṣwa extends from the emergence of the stars until midnight. If one passed this time and delayed and recited before dawn rose, he has fulfilled his obligation, as the Sages said \"until midnight\" only to distance a person from negligence. (Qiryath Shĕma' 1:10)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-9",
+          "hebrewLead": "אנוס בערבית.",
+          "lead": "One Under Compulsion at 'Arvith.",
+          "hebrew": "הקורא אחר שעלה עמוד השחר קודם הנץ החמה לא יצא, אלא אם כן היה אנוס, כגון שיכור או חולה. ואנוס שקרא בעת הזאת אינו מברך השכיבנו. (ק״ש א,יא; בן איש חי, וארא ד)",
+          "translation": "One who recites after dawn rises but before sunrise has not fulfilled his obligation, unless he was under compulsion (ʾanus), such as being intoxicated or sick. And one under compulsion who recites at this time does not recite the bĕrakha of Hashkivenu. (Qiryath Shĕma' 1:11; Ben ʾIsh Ḥay, Waʾeraʾ 4)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-10",
+          "hebrewLead": "קרית שמע של שחרית.",
+          "lead": "Qiryath Shĕma' of Shaḥrith.",
+          "hebrew": "מצותה שיתחיל לקרות קודם הנץ החמה, כדי שיגמור לקרות ולברך ברכה אחרונה עם הנץ החמה, והוא כעישור שעה קודם שתעלה השמש. איחר וקרא אחר שעלתה השמש יצא, שעונתה עד סוף שלוש שעות ביום. (ק״ש א,יב; בן איש חי, וארא ג, ה)",
+          "translation": "Its miṣwa is that one begin reciting before sunrise, so that he finishes reciting and saying the final bĕrakha together with sunrise, which is approximately a tenth of an hour before the sun rises. If he delayed and recited after the sun rose, he has fulfilled his obligation, as its proper timeframe extends until the end of three hours of the day. (Qiryath Shĕma' 1:12; Ben ʾIsh Ḥay, Waʾeraʾ 3, 5)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-11",
+          "hebrewLead": "המקדים בשחרית.",
+          "lead": "One Who Recites Early in Shaḥrith.",
+          "hebrew": "הקורא משעלה עמוד השחר יצא, אף שהשלים קודם הנץ החמה. ובשעת הדוחק, כגון המשכים לצאת לדרך, קורא לכתחילה משעלה עמוד השחר. (ק״ש א,יג)",
+          "translation": "One who recites from the rising of dawn has fulfilled his obligation, even if he completed it before sunrise. Under pressing circumstances (shĕ'ath haddĕḥaq), such as one rising early to set out on a journey, one may recite lĕkhattĕḥilla (as the preferred practice) from the rising of dawn. (Qiryath Shĕma' 1:13)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-12",
+          "hebrewLead": "אחר שלוש שעות.",
+          "lead": "After Three Hours.",
+          "hebrew": "הקורא אחר שלוש שעות ביום, אפילו היה אנוס, לא יצא ידי חובת קרית שמע בעונתה, אלא הרי הוא כקורא בתורה. ומברך לפניה ולאחריה כל היום. (ק״ש א,יד)",
+          "translation": "One who recites after three hours of the day, even if he was under compulsion, has not fulfilled the obligation of Qiryath Shĕma' in its designated timeframe, but rather is considered like one reading from the Torah. He recites the bĕrakhoth before and after it throughout the day. (Qiryath Shĕma' 1:14)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-13",
+          "hebrewLead": "תפילת השחר.",
+          "lead": "The Morning Prayer (Tĕfillath Hashshaḥar).",
+          "hebrew": "מצותה שיתחיל להתפלל עם הנץ החמה, וזמנה עד סוף שעה רביעית, שהוא שליש היום. עבר או טעה והתפלל אחר ארבע שעות עד חצות היום, יצא ידי חובת תפילה, אבל לא ידי חובת תפילה בזמנה. בשעת הדוחק, התפלל משעלה עמוד השחר, יצא. (תפילה ג,א; ג,ז)",
+          "translation": "Its miṣwa is that one begin praying with sunrise, and its time extends until the end of the fourth hour, which is one third of the day. If one passed this time or erred and prayed after four hours up until midday (ḥăṣoth hayyom), he has fulfilled the obligation of prayer, but not the obligation of prayer in its designated time. Under pressing circumstances (shĕ'ath haddĕḥaq), if he prayed from the rising of dawn, he has fulfilled his obligation. (Tĕfilla 3:1; 3:7)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-14",
+          "hebrewLead": "תפילת המנחה.",
+          "lead": "The Afternoon Prayer (Tĕfillath Hamminḥa).",
+          "hebrew": "זמן מנחה גדולה משש שעות ומחצה עד תשע ומחצה. זמן מנחה קטנה מתשע ומחצה עד שיישאר מן היום שעה ורביע, ויש לו להתפלל אותה עד שתשקע החמה. (תפילה ג,ב; ג,ד; בן איש חי, ויקהל ג)",
+          "translation": "The time for Minḥa Gĕdhola is from six and a half hours until nine and a half hours. The time for Minḥa Qĕṭanna is from nine and a half hours until one and a quarter hours remain in the day, and one may pray it until sunset. (Tĕfilla 3:2; 3:4; Ben ʾIsh Ḥay, Wayyaqhel 3)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-15",
+          "hebrewLead": "תפילת המוספין.",
+          "lead": "The Additional Prayer (Tĕfillath Hammusafin).",
+          "hebrew": "זמנה אחר תפילת השחר עד שבע שעות ביום. המתפלל אחר שבע שעות, אף על פי שפשע, יצא ידי חובתו, מפני שזמנה כל היום. היו לפניו מנחה ומוסף, מתפלל מנחה תחילה ואחר כך מוסף. (תפילה ג,ה; ג,יא)",
+          "translation": "Its time is after Tĕfillath Hashshaḥar until seven hours of the day. One who prays after seven hours, even though he acted negligently, has fulfilled his obligation, because its time extends throughout the day. If both Minḥa and Musaf lie before him, he prays Minḥa first and afterwards Musaf. (Tĕfilla 3:5; 3:11)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-16",
+          "hebrewLead": "תפילת הערב.",
+          "lead": "The Evening Prayer (Tĕfillath Ha'erev).",
+          "hebrew": "זמנה מתחילת הלילה עד שיעלה עמוד השחר. ויש לו להתפלל ערבית של ליל שבת בערב שבת קודם שתשקע השמש, וערבית של מוצאי שבת בשבת, לפי שתפילת ערבית רשות ואין מדקדקין בזמנה. ובלבד שיקרא קרית שמע בעונתה, אחר צאת הכוכבים. (תפילה ג,ו–ז)",
+          "translation": "Its time is from the beginning of the night until dawn rises. One may pray the 'Arvith of Friday night on Friday afternoon before the sun sets, and the 'Arvith of Saturday night on the Shabbath itself, because the 'Arvith prayer was optional in origin and one need not be overly exact regarding its time, provided that he recites Qiryath Shĕma' in its proper timeframe, after the emergence of the stars (ṣeʾth hakkokhavim). (Tĕfilla 3:6–7)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-17",
+          "hebrewLead": "מנחה וערבית סביב פלג המנחה.",
+          "lead": "Minḥa and 'Arvith Around Pĕlagh Hamminḥa.",
+          "hebrew": "זמן המנחה לחכמים עד הלילה, ולרבי יהודה עד פלג המנחה, שהוא שעה ורביע קודם סוף היום, ומשם ואילך זמן ערבית; ולא נפסקה הלכה כאחד מהם, והעושה כזה עשה והעושה כזה עשה. אבל היחיד המתפלל בביתו לא יתפוס שתי הקולות ביום אחד: התפלל מנחה אחר פלג המנחה, לא יתפלל ערבית עד צאת הכוכבים; והרוצה להתפלל ערבית מבעוד יום בערב שבת, יקדים מנחה קודם פלג המנחה. ואישה הטרודה בעסקי הבית, אין מדקדקין עליה בכך. (בן איש חי, ויקהל ז)",
+          "translation": "The time for Minḥa according to the Sages is until nightfall, and according to Rabbi Yĕhudha until Pĕlagh Hamminḥa, which is one and a quarter hours before the end of the day, and from then onward is the time for 'Arvith; the hălakha was not decisively ruled according to either one, so whoever acts like one master acts validly and whoever acts like the other acts validly. However, an individual praying at home should not adopt both lenient rulings on the same day: if he prayed Minḥa after Pĕlagh Hamminḥa, he should not pray 'Arvith until the emergence of stars; and one who wishes to pray 'Arvith while it is still day on Friday afternoon should move up Minḥa before Pĕlagh Hamminḥa. As for a woman preoccupied with household affairs, one is not strict with her in this matter. (Ben ʾIsh Ḥay, Wayyaqhel 7)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-18",
+          "hebrewLead": "תפילת נעילה.",
+          "lead": "The Closing Prayer (Tĕfillath Nĕ'ila).",
+          "hebrew": "זמנה כדי שישלים אותה סמוך לשקיעת החמה. (תפילה ג,ו)",
+          "translation": "Its time is such that he completes it close to sunset. (Tĕfilla 3:6)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-19",
+          "hebrewLead": "קודם זמנה.",
+          "lead": "Before Its Time.",
+          "hebrew": "המתפלל תפילה קודם זמנה לא יצא ידי חובתו, וחוזר ומתפלל אותה בזמנה. (תפילה ג,ז)",
+          "translation": "One who prays a prayer before its proper time has not fulfilled his obligation, and must repeat and pray it in its proper time. (Tĕfilla 3:7)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-20",
+          "hebrewLead": "תשלומין.",
+          "lead": "Make-Up Prayer (Tashlumin).",
+          "hebrew": "מי שעבר עליו זמן תפילה ולא התפלל במזיד, אין לו תקנה ואינו משלם. בשוגג, או שהיה אנוס או טרוד, משלם אותה בזמן התפילה הסמוכה לה: מתפלל תחילה את תפילת השעה, ואחריה את התשלומין. לא התפלל שחרית, מתפלל מנחה שתיים; לא התפלל מנחה, מתפלל ערבית שתיים; לא התפלל ערבית, מתפלל שחרית שתיים. (תפילה ג,ח–ט; בן איש חי, משפטים ט, יג)",
+          "translation": "One whose time for prayer passed and he intentionally failed to pray has no remedy and cannot make it up (tashlumin). If he omitted it inadvertently (bĕshoghegh), or was under compulsion or preoccupied, he makes it up during the timeframe of the adjacent prayer: he prays first the current hour's prayer, and after it the make-up prayer. If he did not pray Shaḥrith, he prays Minḥa twice; if he did not pray Minḥa, he prays 'Arvith twice; if he did not pray 'Arvith, he prays Shaḥrith twice. (Tĕfilla 3:8–9; Ben ʾIsh Ḥay, Mishpaṭim 9, 13)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-21",
+          "hebrewLead": "שתי תפילות שעברו.",
+          "lead": "Two Missed Prayers.",
+          "hebrew": "אינו משלם אלא את האחרונה בלבד. לא התפלל שחרית ולא מנחה, מתפלל ערבית שתיים, והשנייה תשלומי מנחה; ושחרית אין לה תשלומין, שכבר עבר יומה. (תפילה ג,י; בן איש חי, משפטים ט)",
+          "translation": "He makes up only the last one. If he prayed neither Shaḥrith nor Minḥa, he prays 'Arvith twice, the second being the make-up for Minḥa; as for Shaḥrith, it can no longer be made up, as its day has passed. (Tĕfilla 3:10; Ben ʾIsh Ḥay, Mishpaṭim 9)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-22",
+          "hebrewLead": "צורת התשלומין.",
+          "lead": "The Form of the Make-Up Prayer.",
+          "hebrew": "תפילת התשלומין כתפילת השעה שמשלים בה. לא התפלל מנחה בערב שבת, מתפלל ערבית שתיים של שבת. לא התפלל מנחה בשבת, מתפלל במוצאי שבת שתיים של חול, מבדיל בראשונה ואינו מבדיל בשנייה. (תפילה י,טו) וסימן לדבר: אורח שנתאכסן אצל בעל הבית אוכל ממה שבעל הבית אוכל. (בן איש חי, משפטים יב)",
+          "translation": "The make-up prayer takes the form of the current prayer in which he is making it up. If he did not pray Minḥa on Friday afternoon, he prays 'Arvith twice as the Shabbath prayer. If he did not pray Minḥa on the Shabbath, he prays twice on Saturday night as a weekday prayer, reciting Havdala in the first and not reciting Havdala in the second. (Tĕfilla 10:15) A mnemonic for this: a guest staying at a host's home eats whatever the host eats. (Ben ʾIsh Ḥay, Mishpaṭim 12)"
+        },
+        {
+          "type": "rubric",
+          "id": "times-23",
+          "hebrewLead": "סמיכות התשלומין.",
+          "lead": "Proximity of the Make-Up Prayer.",
+          "hebrew": "מתפלל את התשלומין סמוך לתפילת השעה, בעודו עוסק בתפילה, ואינו מפסיק ביניהן בדבר אחר (בן איש חי, משפטים י); אלא שוהה מעט בין תפילה לתפילה, כדי שתתחונן דעתו עליו. (תפילה י,טו) הקדים את התשלומין לתפילת השעה, לא עלתה לו; וסימן לדבר: בעל הבית נכנס תחילה, ואחריו האורח. (בן איש חי, משפטים ט)",
+          "translation": "He prays the make-up prayer directly adjacent to the current prayer while still engaged in prayer, and does not make an interruption between them with anything else (Ben ʾIsh Ḥay, Mishpaṭim 10); rather, he pauses briefly between one prayer and the other so that his mind becomes composed. (Tĕfilla 10:15) If he offered the make-up prayer before the current prayer, it is not credited to him; a mnemonic for this: the host enters first, and after him the guest. (Ben ʾIsh Ḥay, Mishpaṭim 9)"
+        }
+      ]
+    },
+    {
+      "id": "five-preconditions",
+      "title": "Five Things That Prevent Prayer",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "five-preconditions-1",
+          "hebrew": "חמישה דברים מעכבין את התפילה, אף על פי שהגיע זמנה: טהרת הידיים, כיסוי הערווה, טהרת מקום התפילה, דברים החופזים אותו, וכוונת הלב. (תפילה ד,א)",
+          "translation": "Five things prevent prayer [from being valid], even though its proper time has arrived: purity of the hands, covering of nakedness ('erwa), purity of the place of prayer, pressing bodily needs, and intent of the heart (kawwanath hallev). (Tĕfilla 4:1)"
+        },
+        {
+          "type": "rubric",
+          "id": "five-preconditions-2",
+          "hebrewLead": "טהרת הידיים.",
+          "lead": "Purity of the Hands.",
+          "hebrew": "רוחץ ידיו במים עד הפרק, ואחר כך מתפלל. אין לו מים: אם המים לפניו בתוך ארבעה מילין, או לאחריו בתוך מיל, הולך אליהם ורוחץ; יתר מכאן, מקנח ידיו בצרור, בעפר או בקורה ומתפלל. בשחרית רוחץ פניו, ידיו ורגליו, ואחר כך מתפלל. (תפילה ד,ב–ג) ומידת חסידות לרחוץ פניו, ידיו ורגליו לכל תפילה, כדברי רב סעדיה גאון בסידורו. ואף מי שרחץ ידיו בבוקר, אם נגע במקום מכוסה שבגופו או חיכך בראשו, או שהסיח דעתו מהן, חוזר ורוחצן לתפילה. (קיצור שו״ע יב,ה–ו)",
+          "translation": "One washes his hands with water up to the wrist joint, and afterwards prays. If he has no water: if water is ahead of him within four milin, or behind him within one mil, he walks to it and washes; beyond that distance, he wipes his hands on a pebble, earth, or a wooden beam and prays. In Shaḥrith, he washes his face, hands, and feet, and afterwards prays. (Tĕfilla 4:2–3) And it is a measure of piety (middath ḥăsidhuth) to wash one's face, hands, and feet for every prayer, as stated by Rav Sĕ'adhya Gaʾon in his Siddur. And even one who washed his hands in the morning, if he touched a covered place on his body or scratched his head, or diverted his attention from them, must wash them again for prayer. (Qiṣṣur Shulḥan 'Arukh 12:5–6)"
+        },
+        {
+          "type": "rubric",
+          "id": "five-preconditions-3",
+          "hebrewLead": "כיסוי הערווה.",
+          "lead": "Covering of Nakedness.",
+          "hebrew": "אף על פי שכיסה ערוותו כדרך שמכסה לקרית שמע, לא יתפלל עד שיכסה את ליבו. לא כיסה ליבו, או שנאנס ואין לו במה יכסה, הואיל וכיסה ערוותו והתפלל, יצא; ולכתחילה לא יעשה. (תפילה ד,ז)",
+          "translation": "Even though he covered his nakedness ('erwa) as one covers for Qiryath Shĕma', he should not pray until he covers his heart. If he did not cover his heart, or was forced by circumstances and had nothing with which to cover it, since he covered his nakedness and prayed, he has fulfilled his obligation; but lĕkhattĕḥilla he should not do so. (Tĕfilla 4:7)"
+        },
+        {
+          "type": "rubric",
+          "id": "five-preconditions-4",
+          "hebrewLead": "טהרת מקום התפילה.",
+          "lead": "Purity of the Place of Prayer.",
+          "hebrew": "לא יתפלל במקום הטינופת, במרחץ, בבית הכיסא או באשפה, ולא במקום שאינו בחזקת טהרה עד שיבדקנו. כללו של דבר: כל מקום שאין קורין בו קרית שמע אין מתפללין בו, וכל שמרחיקין ממנו לקרית שמע מרחיקין ממנו לתפילה (ראה סימן ח). התפלל ומצא צואה במקומו, חוזר ומתפלל במקום טהור. (תפילה ד,ח–ט)",
+          "translation": "One should not pray in a place of filth, in a bathhouse, in a bathroom, or on a garbage dump, nor in a place that is not presumed pure until he checks it. The general rule: any place in which one does not recite Qiryath Shĕma', one does not pray in; and whatever distance one distances oneself from for Qiryath Shĕma', one distances oneself from for prayer (see section 8). If he prayed and found excrement in his place, he must repeat and pray in a pure place. (Tĕfilla 4:8–9)"
+        },
+        {
+          "type": "rubric",
+          "id": "five-preconditions-5",
+          "hebrewLead": "דברים החופזים אותו.",
+          "lead": "Pressing Bodily Needs.",
+          "hebrew": "הצריך לנקביו לא יתפלל; ואם התפלל, תפילתו תועבה, וחוזר ומתפלל אחר שיעשה צרכיו. אם יכול להעמיד עצמו כדי פרסה, שהיא שעה וחומש, תפילתו תפילה. לכתחילה בודק עצמו יפה קודם שיתפלל, ומסיר כיחו וניעו וכל דבר הטורדו. המשתין שוהה כדי הילוך ארבע אמות, ואחר כך מתפלל. (תפילה ד,י; ד,יד; בן איש חי, משפטים ב) נתעורר לו הצורך באמצע תפילתו, אם יכול לעצור עצמו גומר תפילתו; ואם לאו, יוצא ונפנה וחוזר וגומר, שההליכה בלא דיבור אינה הפסק. (בן איש חי, משפטים ג) וכל שנאנס והפסיק, אם שהה כדי לגמור את כל התפילה, חוזר לראש (תפילה ד,יג); מה שאין כן בקרית שמע, שאפילו שהה כדי לגמור את כולה יצא (ראה סימן ב).",
+          "translation": "One who needs to relieve himself should not pray; and if he prayed, his prayer is an abomination (to'eva), and he must repeat and pray after relieving his needs. If he can contain himself for the time it takes to walk a parsa, which is an hour and a fifth, his prayer is valid. Lĕkhattĕḥilla, he examines himself thoroughly before praying, and removes his phlegm, mucus, and anything troubling him. One who urinates waits the time it takes to walk four cubits (ʾammoth), and afterwards prays. (Tĕfilla 4:10; 4:14; Ben ʾIsh Ḥay, Mishpaṭim 2) If the need arose in the middle of his prayer: if he can contain himself, he finishes his prayer; and if not, he goes out, relieves himself, and returns to finish, for walking without speaking is not an interruption. (Ben ʾIsh Ḥay, Mishpaṭim 3) And anyone who was forced by circumstances and interrupted: if he paused for as long as it takes to finish the entire prayer, he returns to the beginning (Tĕfilla 4:13); whereas with Qiryath Shĕma', even if he paused for as long as it takes to finish the whole of it, he has fulfilled his obligation (see section 2)."
+        },
+        {
+          "type": "rubric",
+          "id": "five-preconditions-6",
+          "hebrewLead": "כוונת הלב.",
+          "lead": "Intent of the Heart.",
+          "hebrew": "כל תפילה שאינה בכוונה אינה תפילה, ואם התפלל בלא כוונה חוזר ומתפלל בכוונה; ואם כיוון ליבו בברכה ראשונה, שוב אינו צריך. (תפילה י,א) מצא דעתו משובשת וליבו טרוד, אסור לו להתפלל עד שתתיישב דעתו. כיצד היא הכוונה? שיפנה ליבו מכל המחשבות, ויראה עצמו כאילו הוא עומד לפני השכינה. ויכוון פירוש המילות שמוציא מפיו, ויחשוב: אילו היה מדבר לפני מלך בשר ודם, ודאי היה מסדר דבריו ומכוון בהם יפה שלא ייכשל; קל וחומר לפני מלך מלכי המלכים הקדוש ברוך הוא. (קיצור שו״ע יח,ג–ד) לפיכך יושב מעט קודם התפילה כדי לכוון את ליבו, ומתפלל בנחת ובתחנונים; ויושב מעט אחריה, שלא תהא תפילתו כמשא שמשליכו והולך לו. (תפילה ד,טו–טז)",
+          "translation": "Any prayer without intent (kawwana) is not a prayer, and if one prayed without intent, he must repeat and pray with intent; but if he directed his heart in the first bĕrakha, he no longer needs to repeat. (Tĕfilla 10:1) If he finds his mind unsettled and his heart troubled, he is forbidden to pray until his mind becomes composed. What is proper intent? That he clear his heart of all thoughts, and view himself as though he is standing before the Divine Presence (Shĕkhina). He should intend the meaning of the words coming out of his mouth, thinking: if he were speaking before a king of flesh and blood, he would certainly arrange his words and direct them carefully so as not to stumble; how much more so before the King of kings, the Holy One, blessed be He. (Qiṣṣur Shulḥan 'Arukh 18:3–4) Therefore, he sits a little while before praying to direct his heart, praying gently and supplicating; and he sits a little while after it, so that his prayer will not seem like a burden that he casts off and leaves behind. (Tĕfilla 4:15–16)"
+        },
+        {
+          "type": "rubric",
+          "id": "five-preconditions-7",
+          "hebrew": "ובכלל הכוונה: שיכור אל יתפלל, מפני שאין לו כוונה, ואם התפלל תפילתו תועבה וחוזר ומתפלל כשיתפכח. שתוי, שיכול לדבר בפני המלך ואינו משתבש, אל יתפלל, ואם התפלל תפילתו תפילה. ואין עומדין להתפלל מתוך שחוק, קלות ראש, שיחה, מריבה או כעס, ולא מתוך עיון הלכה, אלא מתוך דברי תורה שאין בהם עיון. (תפילה ד,יז–יח)",
+          "translation": "Included in proper intent: an intoxicated person (shikkor) should not pray, because he lacks intent, and if he prayed, his prayer is an abomination (to'eva) and he must repeat and pray when he soberly recovers. A slightly intoxicated person (shathuy), who is capable of speaking before the king without becoming confused, should not pray [ab initio], but if he prayed, his prayer is valid. And one does not stand up to pray out of laughter, levity, casual conversation, quarrel, or anger, nor out of deep analytical study of hălakha, but rather out of words of Torah that do not require deep analysis. (Tĕfilla 4:17–18)"
+        }
+      ]
+    },
+    {
+      "id": "eight-observances",
+      "title": "Eight Things That One Who Prays Must Observe",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "eight-observances-1",
+          "hebrew": "שמונה דברים צריך המתפלל להיזהר בהן ולעשותן; ואם היה דחוק, או נאנס, או שעבר ולא עשה אותן, אינן מעכבין. ואלו הן: עמידה, נוכח המקדש, תיקון הגוף, תיקון המלבוש, תיקון המקום, השווית הקול, הכריעה וההשתחוויה. (תפילה ה,א)",
+          "translation": "Eight things must one who prays observe and practice; yet if he was pressed, or forced by circumstance, or transgressed and did not do them, they do not invalidate the prayer post facto. And these are: standing, facing the Temple, adjustment of the body, adjustment of clothing, adjustment of the place, modulation of the voice, bowing (kĕri'a), and prostration (hishtaḥăwaya). (Tĕfilla 5:1)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-2",
+          "hebrewLead": "עמידה.",
+          "lead": "Standing.",
+          "hebrew": "אין מתפללין אלא מעומד. היושב בספינה או בעגלה, אם יכול לעמוד יעמוד, ואם לאו יושב במקומו ומתפלל. חולה מתפלל אפילו שוכב על צידו, והוא שיכול לכוון את דעתו. הצמא והרעב בכלל חולים: אם אינו יכול לכוון, לא יתפלל עד שיאכל וישתה. (תפילה ה,ב)",
+          "translation": "One prays only while standing. One sitting in a boat or a wagon, if he can stand, should stand; if not, he sits in his place and prays. A sick person prays even while lying on his side, provided he can focus his mind. The thirsty and hungry are included among the sick: if he cannot focus, he should not pray until he eats and drinks. (Tĕfilla 5:2)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-3",
+          "hebrewLead": "נוכח המקדש.",
+          "lead": "Facing the Temple.",
+          "hebrew": "העומד בחוצה לארץ מחזיר פניו נוכח ארץ ישראל; בארץ, כנגד ירושלים; בירושלים, כנגד המקדש. סומה, ומי שאינו יכול לכוון את הרוחות, והמהלך בספינה, יכוון את ליבו כנגד השכינה ויתפלל. (תפילה ה,ג)",
+          "translation": "One standing outside the Land of Israel turns his face toward the Land of Israel; in the Land, toward Jerusalem; in Jerusalem, toward the Temple. A blind person, one unable to discern directions, and one traveling on a boat should direct his heart toward the Divine Presence (Shĕkhina) and pray. (Tĕfilla 5:3)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-4",
+          "hebrewLead": "תיקון הגוף.",
+          "lead": "Adjustment of the Body.",
+          "hebrew": "מכוון רגליו זו בצד זו, ונותן עיניו למטה כאילו הוא מביט לארץ, וליבו פנוי למעלה כאילו הוא עומד בשמים. מניח ידיו על ליבו כפותין, הימנית על השמאלית, ועומד כעבד לפני רבו, באימה, ביראה ובפחד. ולא יניח ידיו על חלציו. (תפילה ה,ד; בן איש חי, בשלח א–ב; ויקהל א)",
+          "translation": "He aligns his feet one alongside the other, casts his eyes downward as if looking at the earth, and directs his heart upward as if standing in heaven. He places his hands clasped upon his heart, the right over the left, standing like a servant before his master, in awe, fear, and dread. And he should not place his hands on his hips. (Tĕfilla 5:4; Ben ʾIsh Ḥay, Bĕshallaḥ 1–2; Wayyaqhel 1)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-5",
+          "hebrewLead": "תיקון המלבוש.",
+          "lead": "Adjustment of Clothing.",
+          "hebrew": "מתקן מלבושיו תחילה ומהדר עצמו, שנאמר \"השתחוו לה׳ בהדרת קודש\". לא יעמוד בתפילה באפונדתו, ולא בראש מגולה, ולא ברגליים מגולות במקום שאין עומדים כך לפני גדולים. לא יאחוז בידו תפילין, ספר תורה, מעות או כלים, מפני שליבו טרוד בהם. ודרך כל החכמים ותלמידיהם שלא יתפללו אלא כשהם עטופים. (תפילה ה,ה–ו)",
+          "translation": "He arranges his garments first and adorns himself, as it is said: \"Worship Adhonay in holy splendor\". He should not stand in prayer wearing his money belt (ʾăfunda), nor with a bare head, nor with bare feet in a place where people do not stand as such before dignitaries. He should not hold in his hand tĕfillin, a Torah scroll, money, or vessels, because his heart would be distracted by them. And it is the custom of all Sages and their disciples to pray only while wrapped in a cloak ('ăṭufim). (Tĕfilla 5:5–6)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-6",
+          "hebrewLead": "תיקון המקום.",
+          "lead": "Adjustment of the Place.",
+          "hebrew": "עומד במקום נמוך ומחזיר פניו לכותל; פותח חלונות או פתחים כנגד ירושלים כדי להתפלל כנגדם; וקובע מקום לתפילתו תמיד. אין מתפללים בחורבה, ולא במקום גבוה שלושה טפחים או יותר, כגון מיטה, ספסל או כיסא. ואסור לישב בצד העומד בתפילה, או לעבור לפניו, עד שירחיק ממנו ארבע אמות. (תפילה ה,ז–ח)",
+          "translation": "He stands in a low place and turns his face toward the wall; opens windows or doorways facing Jerusalem in order to pray toward them; and establishes a fixed place (qovea' maqom) for his prayer always. One does not pray in a ruin, nor in a place raised three handbreadths (ṭĕfaḥim) or higher, such as a bed, bench, or chair. And it is forbidden to sit beside one standing in prayer or to pass in front of him, unless one distances oneself four cubits (ʾammoth) from him. (Tĕfilla 5:7–8)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-7",
+          "hebrewLead": "השווית הקול.",
+          "lead": "Modulation of the Voice.",
+          "hebrew": "לא יגביה קולו בתפילתו ולא יתפלל בליבו, אלא מחתך הדברים בשפתיו ומשמיע לאוזנו בלחש. חולה, או מי שאינו יכול לכוון את ליבו עד שישמיע קולו, מותר. (תפילה ה,י)",
+          "translation": "One should not raise his voice in his prayer nor pray in his heart alone, but rather enunciate the words with his lips and make them audible to his ear softly. A sick person, or one who cannot focus his heart unless he makes his voice heard, is permitted to do so. (Tĕfilla 5:10)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-8",
+          "hebrewLead": "כריעה.",
+          "lead": "Bowing (Kĕri'a).",
+          "hebrew": "כורע חמש כריעות בכל תפילה: בברכה ראשונה בתחילה ובסוף, בהודיה בתחילה ובסוף, וכשגומר התפילה כורע ופוסע שלוש פסיעות לאחוריו, נותן שלום לשמאלו ואחר כך לימינו, ואחר כך מגביה ראשו. בארבע הכריעות כורע ב\"ברוך\" וזוקף בשם. כורע עד שיתפקפקו כל חוליות שבשדרה וייעשה כקשת; ואם שחה מעט וציער עצמו, ונראה ככורע בכל כוחו, אינו חושש. (תפילה ה,יא–יג) וזקן או חולה שאינו יכול לשחות כל כך, כיוון שהרכין ראשו דיו. (בן איש חי, בשלח ו; קיצור שו״ע יח,יא)",
+          "translation": "One bows five bowings in every prayer: in the first bĕrakha at the beginning and at the end, in Thanksgiving (Modhim) at the beginning and at the end, and when he completes the prayer he bows and steps three steps backward, gives peace to his left and then to his right, and afterwards raises his head. In the four bowings [during the bĕrakhoth], he bows at \"Barukh\" and straightens up at the Divine Name (Adhonay). He bows until all the vertebrae of his spine loosen and he becomes like a bow; yet if he bent slightly with effort, appearing as though he were bowing with all his strength, he need not worry. (Tĕfilla 5:11–13) An elderly or sick person who cannot bend so far, once he inclines his head, it suffices. (Ben ʾIsh Ḥay, Bĕshallaḥ 6; Qiṣṣur Shulḥan 'Arukh 18:11)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-9",
+          "hebrewLead": "השתחוויה.",
+          "lead": "Prostration (Hishtaḥăwaya).",
+          "hebrew": "אחר שמגביה ראשו מכריעה חמישית, יושב לארץ ונופל על פניו, ומתחנן בכל תחנונים שירצה; יש שעושה קידה ויש שעושה השתחוויה, ואסור להשתחוות על האבנים אלא במקדש. מנהג פשוט בכל ישראל שאין נפילת פנים בשבתות ובמועדים, בראש השנה, בראשי חודשים, בחנוכה ובפורים, במנחה של ערבי שבתות וימים טובים, ולא בערבית שבכל יום. (תפילה ה,יד–טז; בן איש חי, כי תשא יד)",
+          "translation": "After raising his head from the fifth bowing, he sits on the ground and falls upon his face (nofel 'al panaw), supplicating with whatever supplications he desires; some perform qidda (bowing to the face) and some perform hishtaḥăwaya (full prostration), and it is forbidden to prostrate upon stone floors except in the Temple. It is a universal custom throughout all Israel that there is no falling upon the face (nĕfilath panim) on Shabbathoth, festivals, Roʾsh Hashshana, New Moons, Ḥănukka, Purim, during the Minḥa of the eves of Shabbathoth and holidays, nor in the daily 'Arvith. (Tĕfilla 5:14–16; Ben ʾIsh Ḥay, Ki Thissaʾ 14)"
+        },
+        {
+          "type": "rubric",
+          "id": "eight-observances-10",
+          "hebrewLead": "כריעה, קידה והשתחוויה.",
+          "lead": "Kĕri'a, Qidda, and Hishtaḥăwaya.",
+          "hebrew": "שנו חכמים: \"קידה על אפיים, שנאמר 'ותיקוד בת שבע אפיים ארץ'; כריעה על ברכיים, שנאמר 'מכרוע על ברכיו'; השתחוואה זו פישוט ידיים ורגליים, שנאמר 'הבוא נבוא אני ואמך ואחיך להשתחוות לך ארצה'.\" (ברכות לד,ב) וכן פסק הרמב״ם: כריעה האמורה בכל מקום על ברכיים, קידה על אפיים, והשתחוויה זו פישוט ידיים ורגליים, עד שנמצא מוטל על פניו על הארץ. (תפילה ה,יד)",
+          "translation": "The Sages taught: \"Qidda is onto the face, as it is said: 'Then Bathsheba bowed (wattiqqodh) with her face to the ground'; kĕri'a is onto the knees, as it is said: 'from kneeling (mikkĕroa') on his knees'; hishtaḥăwaya is the spreading out of hands and feet, as it is said: 'Shall I and your mother and your brothers indeed come to bow down (lĕhishtaḥăwoth) ourselves to you to the earth?'.\" (Bĕrakhoth 34b) And so ruled the Rambam: Kĕri'a mentioned everywhere means onto the knees, qidda onto the face, and hishtaḥăwaya is the spreading out of hands and feet, until he is lying face down on the earth. (Tĕfilla 5:14)"
+        }
+      ]
+    },
+    {
+      "id": "cleanliness",
+      "title": "Cleanliness of Hands and Place, and Covering of Nakedness",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "cleanliness-1",
+          "hebrew": "דינים אלו שנויים בקרית שמע, והם נוהגים גם בתפילה: כל מקום שאין קורין בו קרית שמע אין מתפללין בו. (תפילה ד,ח)",
+          "translation": "These laws are taught regarding Qiryath Shĕma', and they apply also to prayer: any place in which one does not recite Qiryath Shĕma', one does not pray in. (Tĕfilla 4:8)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-2",
+          "hebrewLead": "רחיצת ידיים לקרית שמע.",
+          "lead": "Washing Hands for Qiryath Shĕma'.",
+          "hebrew": "רוחץ ידיו במים קודם שיקרא. הגיע זמן הקריאה ולא מצא מים, לא יאחר קריאתה כדי לבקש מים, אלא מקנח ידיו בעפר, בצרור או בקורה וקורא. (ק״ש ג,א)",
+          "translation": "One washes his hands with water before reciting. If the time for recitation arrived and he found no water, he should not delay its recitation to search for water, but rather wipes his hands on earth, a pebble, or a wooden beam and recites. (Qiryath Shĕma' 3:1)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-3",
+          "hebrewLead": "מקומות שאין קורין בהם.",
+          "lead": "Places Where One Does Not Recite.",
+          "hebrew": "אין קורין בבית המרחץ, ולא בבית הכיסא אף על פי שאין בו צואה, ולא בבית הקברות, ולא בצד המת עד שירחיק ארבע אמות. הקורא במקום שאין קורין בו חוזר וקורא. (ק״ש ג,ב)",
+          "translation": "One does not recite in a bathhouse, nor in a bathroom even if there is no excrement in it, nor in a cemetery, nor beside a corpse until he distances himself four cubits (ʾammoth). One who recites in a place where one must not recite must repeat and recite. (Qiryath Shĕma' 3:2)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-4",
+          "hebrewLead": "דברי קודש.",
+          "lead": "Sacred Matters.",
+          "hebrew": "לא קרית שמע בלבד, אלא כל עניין שהוא מדברי קודש אסור לאומרו בבית המרחץ ובבית הכיסא, אפילו בלשון חול. ואפילו להרהר בליבו בדברי תורה אסור שם ובמקום הטינופת. דברים של חול מותר לאומרם שם בלשון הקודש. (ק״ש ג,ד–ה)",
+          "translation": "Not only Qiryath Shĕma', but any matter that is of sacred words (divre qodhesh) is forbidden to be uttered in a bathhouse or in a bathroom, even in a secular language. And even to meditate in one's heart on matters of Torah is forbidden there and in a place of filth. Secular matters, however, are permitted to be spoken there in the Holy Tongue. (Qiryath Shĕma' 3:4–5)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-5",
+          "hebrewLead": "צואה ומי רגליים.",
+          "lead": "Excrement and Urine.",
+          "hebrew": "אסור לקרות כנגד צואת אדם וכל צואה שריחה רע, וכנגד מי רגלי אדם. קטן שעדיין אינו אוכל כזית דגן, אין מרחיקין מצואתו ולא ממי רגליו. (ק״ש ג,ו)",
+          "translation": "It is forbidden to recite facing human excrement, any foul-smelling excrement, or human urine. From the excrement or urine of an infant who does not yet eat an olive's bulk (kĕzayith) of grain, one need not distance oneself. (Qiryath Shĕma' 3:6)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-6",
+          "hebrewLead": "שיעור ההרחקה.",
+          "lead": "The Distance Required.",
+          "hebrew": "מרחיק ארבע אמות כשהן מאחוריו או מצדדיו. היו כנגד פניו, מרחיק עד שלא יראה אותן. (ק״ש ג,ח; בן איש חי, בא יד)",
+          "translation": "One distances oneself four cubits (ʾammoth) when it is behind him or at his sides. If it is in front of his face, he distances himself until he can no longer see it. (Qiryath Shĕma' 3:8; Ben ʾIsh Ḥay, Boʾ 14)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-7",
+          "hebrewLead": "הפסק וכיסוי.",
+          "lead": "Separation and Covering.",
+          "hebrew": "היו במקום גבוה או נמוך ממנו עשרה טפחים, קורא בצידו, והוא שלא יגיע אליו ריח רע. כפה עליהן כלי, הרי הן כקבורין. הייתה ביניהם מחיצה של זכוכית, מותר אף על פי שרואה אותה. (ק״ש ג,ט–י) ויש מחמירים שכל שהוא רואה אותה אסור לקרות, אפילו היא ברשות אחרת; ואם עוצם עיניו, או בלילה, יש להקל. (בן איש חי, בא טו)",
+          "translation": "If it was in a place ten handbreadths (ṭĕfaḥim) higher or lower than him, he recites beside it, provided no bad odor reaches him. If he inverted a vessel over it, it is considered as if buried. If there was a glass partition between them, it is permitted even though he sees it. (Qiryath Shĕma' 3:9–10) Some strict opinions maintain that as long as he sees it, it is forbidden to recite, even if it is in another domain; but if he closes his eyes, or at night, there is room to be lenient. (Ben ʾIsh Ḥay, Boʾ 15)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-8",
+          "hebrewLead": "ריח רע.",
+          "lead": "Bad Odor.",
+          "hebrew": "ריח רע שיש לו עיקר, מרחיק ארבע אמות וקורא אם פסק הריח, ואם לא פסק מרחיק עד מקום שפוסק. שאין לו עיקר, מרחיק עד מקום שתכלה הרוח. (ק״ש ג,יב)",
+          "translation": "A bad odor that has a tangible source ('iqqar): one distances oneself four cubits (ʾammoth) and recites if the odor has ceased, and if it has not ceased, one distances oneself until the place where it ceases. One that has no tangible source: one distances oneself until the place where the wind dissipates it. (Qiryath Shĕma' 3:12)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-9",
+          "hebrewLead": "ידיים מטונפות.",
+          "lead": "Dirty Hands.",
+          "hebrew": "כמה גאונים הורו שאסור לקרות אם היו ידיו מטונפות, וכך ראוי לעשות. (ק״ש ג,יא)",
+          "translation": "Several Gĕʾonim ruled that it is forbidden to recite if one's hands are dirty, and it is proper to act accordingly. (Qiryath Shĕma' 3:11)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-10",
+          "hebrewLead": "בתוך הקריאה והתפילה.",
+          "lead": "During Recitation and Prayer.",
+          "hebrew": "היה קורא והגיע למקום הטינופת, מפסיק עד שיעבור משם. העומד בתפילה וראה צואה כנגדו, מהלך לפניו עד שתהא מאחוריו ארבע אמות, או מסלקה לצדדין; ואם אינו יכול, יפסיק. (ק״ש ג,יד; תפילה ד,ט)",
+          "translation": "If one was reciting and arrived at a place of filth, he stops until he moves past there. One standing in prayer who saw excrement before him walks forward until it is four cubits (ʾammoth) behind him, or moves it to the side; and if he cannot, he stops. (Qiryath Shĕma' 3:14; Tĕfilla 4:9)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-11",
+          "hebrewLead": "תינוק שטינף.",
+          "lead": "An Infant Who Soiled Himself.",
+          "hebrew": "טינף בשעת התפילה תינוק שכבר אוכל דגן, מתרחק ארבע אמות ממקום שכלה הריח, או יוצא לחדר אחר, וגומר תפילתו. היו שם אחרים שמתפללים ולא הרגישו, מודיעם ברמז; ואם אי אפשר אלא בדיבור, מפסיק ומודיעם. השתין התינוק, מתרחק ארבע אמות וגומר תפילתו. (בן איש חי, משפטים ד)",
+          "translation": "If an infant who already eats grain soiled himself during prayer, one moves four cubits (ʾammoth) away from the place where the odor ceases, or goes out to another room, and finishes his prayer. If there were others praying there who did not notice, he informs them by hinting; and if it is impossible except by speaking, he interrupts and informs them. If the infant urinated, he moves four cubits away and finishes his prayer. (Ben ʾIsh Ḥay, Mishpaṭim 4)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-12",
+          "hebrewLead": "כנגד הערווה.",
+          "lead": "Facing Nakedness.",
+          "hebrew": "אסור לקרות כנגד הערווה עד שיחזיר פניו, אפילו ערוות גוי או קטן, ואפילו מאחורי מחיצה של זכוכית. וכל גוף האישה ערווה, לפיכך לא יסתכל בגוף האישה כשהוא קורא; ואפילו אשתו, אם היה מגולה טפח מגופה, לא יקרא כנגדה. (ק״ש ג,טז; בן איש חי, בא ה–ו, ח) אבל הפנים והידיים, שדרכן להיות מגולים, מותר לקרות כנגדם. (בן איש חי, בא ח) אישה המניקה ומגלה דדיה, אין קורין כנגדה, ואפילו היא אשתו; ויש אומרים שבשעת היניקה הרי הם כפנים וכידיים, ויש לסמוך על זה בשעת הדחק. (בן איש חי, בא י)",
+          "translation": "It is forbidden to recite facing nakedness ('erwa) until one turns his face away, even the nakedness of a non-Jew or a child, and even behind a glass partition. The entire body of a woman is considered 'erwa; therefore, he should not gaze at a woman's body while reciting; and even with his wife, if a handbreadth (ṭefaḥ) of her body was exposed, he should not recite facing her. (Qiryath Shĕma' 3:16; Ben ʾIsh Ḥay, Boʾ 5–6, 8) However, the face and hands, which are normally exposed, are permitted to be faced while reciting. (Ben ʾIsh Ḥay, Boʾ 8) A woman nursing and exposing her breasts — one does not recite facing her, even if she is his wife; yet some say that during nursing they are considered like face and hands, and one may rely on this in times of pressing need (shĕ'ath haddĕḥaq). (Ben ʾIsh Ḥay, Boʾ 10)"
+        },
+        {
+          "type": "rubric",
+          "id": "cleanliness-13",
+          "hebrewLead": "כיסוי ערוותו.",
+          "lead": "Covering One's Own Nakedness.",
+          "hebrew": "לא יקרא כשהוא ערום עד שיכסה ערוותו. הייתה חגורה על מותניו, מותר לקרות אף על פי ששאר גופו ערום; ולתפילה צריך לכסות גם את ליבו (ראה סימן ו). הישן ערום בטליתו חוצץ בה מתחת ליבו וקורא, ואינו חוצץ מצווארו, מפני שליבו רואה את הערווה. (ק״ש ג,יז; בן איש חי, בא ד)",
+          "translation": "One should not recite while naked until he covers his nakedness. If a belt was around his waist, he is permitted to recite even though the rest of his body is naked; for prayer, however, he must also cover his heart (see section 6). One sleeping naked in his cloak separates with it below his heart and recites, and does not separate from his neck, because his heart sees the nakedness. (Qiryath Shĕma' 3:17; Ben ʾIsh Ḥay, Boʾ 4)"
+        }
+      ]
+    },
+    {
+      "id": "before-and-during",
+      "title": "Before Prayer and During Prayer",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "before-and-during-1",
+          "hebrewLead": "קודם שחרית.",
+          "lead": "Before Shaḥrith.",
+          "hebrew": "אסור לאדם לטעום כלום או לעשות מלאכה משיעלה עמוד השחר עד שיתפלל תפילת שחרית. וכן לא ישכים לפתח חברו לשאול בשלומו, ולא ייצא לדרך, קודם שיתפלל. (תפילה ו,ד)",
+          "translation": "It is forbidden for a person to taste anything or do work from the rising of dawn until he prays the Shaḥrith prayer. Likewise, he should not rise early to go to his neighbor's doorway to greet him, nor set out on a journey, before he prays. (Tĕfilla 6:4)"
+        },
+        {
+          "type": "rubric",
+          "id": "before-and-during-2",
+          "hebrewLead": "קודם מוסף ומנחה.",
+          "lead": "Before Musaf and Minḥa.",
+          "hebrew": "טועם ועושה מלאכה קודם מוסף וקודם מנחה, אבל אינו סועד סמוך למנחה. משהגיע זמן מנחה גדולה לא ייכנס למרחץ, לא יאכל אפילו אכילת עראי, לא ידון ולא יישב לפני הספר, עד שיתפלל. ואם התחיל באחת מאלו, אינו מפסיק, אלא גומר ואחר כך מתפלל מנחה. (תפילה ו,ד–ה; בן איש חי, ויקהל יא–יב)",
+          "translation": "One may sample food and do work before Musaf and before Minḥa, but one does not sit down to a full meal close to Minḥa. Once the time for Minḥa Gĕdhola arrives, he should not enter a bathhouse, eat even a snack, judge a case, or sit before a barber until he prays. But if he began one of these, he does not interrupt, but finishes and afterwards prays Minḥa. (Tĕfilla 6:4–5; Ben ʾIsh Ḥay, Wayyaqhel 11–12)"
+        },
+        {
+          "type": "rubric",
+          "id": "before-and-during-3",
+          "hebrewLead": "קודם ערבית.",
+          "lead": "Before 'Arvith.",
+          "hebrew": "אף על פי שתפילת הערב רשות, לא יבוא אדם ממלאכתו ויאמר: אוכל מעט, אשתה מעט ואישן קמעה, ואחר כך אתפלל, שמא תאנוס אותו שינה. אלא מתפלל ערבית, ואחר כך אוכל, שותה או ישן. (תפילה ו,ז)",
+          "translation": "Even though the evening prayer was optional in origin, a person coming from his work should not say: \"I will eat a little, drink a little, and sleep a bit, and afterwards I will pray,\" lest sleep overcome him. Rather, he prays 'Arvith first, and afterwards eats, drinks, or sleeps. (Tĕfilla 6:7)"
+        },
+        {
+          "type": "rubric",
+          "id": "before-and-during-4",
+          "hebrewLead": "העוסק בתורה.",
+          "lead": "One Engaged in Torah.",
+          "hebrew": "מי שהיה עוסק בתלמוד תורה והגיע זמן תפילה, פוסק ומתפלל. מי שתורתו אומנותו ואינו עושה מלאכה כלל, אינו פוסק. וכל העוסק בצורכי רבים כעוסק בדברי תורה. (תפילה ו,ח)",
+          "translation": "One who was engaged in Torah study when the time for prayer arrived interrupts and prays. One whose sole occupation is Torah (toratho ʾummanutho) and does no secular work at all does not interrupt. And anyone engaged in communal needs is like one engaged in words of Torah. (Tĕfilla 6:8)"
+        },
+        {
+          "type": "rubric",
+          "id": "before-and-during-5",
+          "hebrewLead": "אריכות התפילה.",
+          "lead": "Length of Prayer.",
+          "hebrew": "המתפלל בינו לבין עצמו רשאי להאריך בתפילתו, ואם בא לומר אחר תפילתו אפילו כסדר וידוי יום הכיפורים, אומר. (תפילה ו,ב)",
+          "translation": "One who prays by himself is permitted to lengthen his prayer, and if he wishes to recite after his prayer even the order of the Yom Hakkippurim confession (Widduy), he may say it. (Tĕfilla 6:2)"
+        },
+        {
+          "type": "rubric",
+          "id": "before-and-during-6",
+          "hebrewLead": "תוספת בקשות.",
+          "lead": "Adding Personal Requests.",
+          "hebrew": "רשאי להוסיף בכל ברכה מן האמצעיות מעין הברכה: היה לו חולה, מבקש עליו רחמים בברכת חולים; היה צריך לפרנסה, מוסיף בברכת השנים. ואם רצה לשאול כל צרכיו בשומע תפילה, שואל. אבל לא ישאל בשלוש ראשונות ולא בשלוש אחרונות. (תפילה ו,ב–ג)",
+          "translation": "One is permitted to add in any of the middle bĕrakhoth requests relevant to that bĕrakha: if he has a sick relative, he petitions for mercy for him in the bĕrakha for the sick (Birkath Ḥolim); if he needs sustenance, he adds in the bĕrakha for the years (Birkath Hashshanim). And if he wished to ask all his personal needs in Shomea' Tĕfilla, he asks. But he should not ask personal needs in the first three nor in the last three bĕrakhoth. (Tĕfilla 6:2–3)"
+        },
+        {
+          "type": "rubric",
+          "id": "before-and-during-7",
+          "hebrewLead": "הפסק בתפילה.",
+          "lead": "Interruption During Prayer.",
+          "hebrew": "אין המתפלל מפסיק תפילתו אלא מפני סכנת נפשות בלבד. אפילו מלך ישראל שואל בשלומו, לא ישיבנו. ראה נחשים ועקרבים באים כנגדו, אם דרכם להמית פוסק ובורח, ואם לאו אינו פוסק. (תפילה ו,ט; בן איש חי, משפטים ו) ואין בכלל זה מי שנצרך לנקביו באמצע תפילתו, או שטינף תינוק בצידו: הולך למקום אחר וחוזר וגומר, שההליכה בלא דיבור אינה הפסק; ואם אי אפשר להודיע לאחרים אלא בדיבור, מפסיק ומודיעם. (בן איש חי, משפטים ג–ד; ראה סימנים ו, ח)",
+          "translation": "One who is praying does not interrupt his prayer except for mortal danger (sakkanath nĕfashoth) alone. Even if a Jewish king greets him, he should not respond to him. If he saw snakes or scorpions advancing toward him: if it is their nature to kill, he interrupts and flees; if not, he does not interrupt. (Tĕfilla 6:9; Ben ʾIsh Ḥay, Mishpaṭim 6) And this does not include one who needs to relieve himself in the middle of his prayer, or if an infant soiled himself beside him: he walks to another place and returns to finish, for walking without speaking is not an interruption; and if it is impossible to inform others except by speaking, he interrupts and informs them. (Ben ʾIsh Ḥay, Mishpaṭim 3–4; see sections 6 and 8)"
+        },
+        {
+          "type": "rubric",
+          "id": "before-and-during-8",
+          "hebrewLead": "דברים המטרידים בתפילה.",
+          "lead": "Distractions During Prayer.",
+          "hebrew": "מי שגיהק, פיהק או נתעטש בתפילתו לרצונו, הרי זה מגונה; ואם בדק גופו קודם שיתפלל ובאו לאונסו, אין בכך כלום. יצאה ממנו רוח שלא לדעתו, שותק עד שתכלה הרוח וחוזר לתפילתו. (תפילה ד,יא)",
+          "translation": "One who belched, yawned, or sneezed during his prayer intentionally — this is disgraceful; but if he examined his body before praying and these occurred involuntarily, it is of no consequence. If flatulence was passed involuntarily, he pauses silently until the odor dissipates and resumes his prayer. (Tĕfilla 4:11)"
+        }
+      ]
+    },
+    {
+      "id": "obligated-exempt",
+      "title": "Those Who Are Obligated and Those Who Are Exempt",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "obligated-exempt-1",
+          "hebrewLead": "בתפילה.",
+          "lead": "Regarding Prayer.",
+          "hebrew": "נשים ועבדים חייבים בתפילה מן התורה, לפי שהיא מצות עשה שלא הזמן גרמה. (תפילה א,א) וחייבים אף בתקנת חכמים: בשלוש התפילות שבכל יום, ובכל נוסח תשע עשרה ברכות. וקטנים שהגיעו לחינוך חייבים בה מדבריהם, והחובה על אביהם לחנכם. (תפילה ו,י; סדר משנה, הובא בפירוש ר״י קאפח לתפילה א,ב) ויש אומרים שאין הנשים חייבות אלא פעם אחת ביום: מעיקר הדין בכל בקשה ובכל נוסח שירצו (כף החיים קו,ז, בשם מגן אברהם וחסד לאלפים), ולמעשה טוב שיתפללו תפילת שמונה עשרה אחת, ועדיף שתהא שחרית (יביע אומר ח״ו, או״ח יז).",
+          "translation": "Women and servants are obligated in prayer by Biblical law, because it is a time-independent positive command (miṣwath 'ăseh shelloʾ hazzĕman gĕramah). (Tĕfilla 1:1) They are also obligated by rabbinic institution: in the three daily prayers each day, and in the entire nineteen bĕrakhoth formula. Minors who have reached the age of education (ḥinnukh) are obligated by rabbinic law, and the obligation rests upon their father to educate them. (Tĕfilla 6:10; Sedher Mishneh, cited in Rabbi Y. Qafiḥ's commentary to Tĕfilla 1:2) Some say that women are obligated only once a day: according to the core law, in any request and wording they desire (Kaf Haḥayyim 106:7, in the name of Maghen ʾAvraham and Ḥesedh Laʾălafim), and in practice it is good for them to pray one Shĕmoneh 'Esreh prayer, preferably Shaḥrith (Yabbia' ʾOmer, vol. 6, ʾOraḥ Ḥayyim 17)."
+        },
+        {
+          "type": "rubric",
+          "id": "obligated-exempt-2",
+          "hebrewLead": "בקרית שמע.",
+          "lead": "Regarding Qiryath Shĕma'.",
+          "hebrew": "נשים, עבדים וקטנים פטורים מקרית שמע. ומלמדין את הקטנים לקרותה בעונתה ולברך לפניה ולאחריה, כדי לחנכם במצוות. (ק״ש ד,א)",
+          "translation": "Women, servants, and minors are exempt from Qiryath Shĕma'. However, one teaches minors to recite it in its proper timeframe and to recite the bĕrakhoth before and after it, in order to educate them in the miṣwoth. (Qiryath Shĕma' 4:1)"
+        },
+        {
+          "type": "rubric",
+          "id": "obligated-exempt-3",
+          "hebrewLead": "העוסק במצוה.",
+          "lead": "One Engaged in a Miṣwa.",
+          "hebrew": "מי שליבו טרוד ונחפז בדבר מצוה פטור מקרית שמע, וכן מי שמתו מוטל לפניו, עד שיקברנו; וכל הפטור מקרית שמע פטור מן התפילה. רצה הפטור להחמיר ולקרות, קורא, והוא שתהא דעתו מיושבת עליו. (ק״ש ד,א; ד,ג; ד,ז; תפילה ו,י)",
+          "translation": "One whose heart is preoccupied and rushed with a matter of a miṣwa is exempt from Qiryath Shĕma', as is one whose deceased relative lies before him (ʾonen), until he buries him; and anyone exempt from Qiryath Shĕma' is exempt from prayer. If an exempt person wishes to be stringent and recite, he may recite, provided his mind is settled. (Qiryath Shĕma' 4:1; 4:3; 4:7; Tĕfilla 6:10)"
+        },
+        {
+          "type": "rubric",
+          "id": "obligated-exempt-4",
+          "hebrewLead": "הטמאים.",
+          "lead": "Those Who Are Ritually Impure.",
+          "hebrew": "כל הטמאים חייבים בקרית שמע ובתפילה, ומברכים והם בטומאתם, ואין הטבילה מעכבת. תקנת הטבילה לבעל קרי בטלה, לפי שלא פשטה בכל ישראל, ואין דברי תורה מקבלין טומאה. ומנהג פשוט בספרד ובשנער שאין בעל קרי מתפלל עד שירחץ כל בשרו במים. (ק״ש ד,ח; תפילה ד,ד–ו)",
+          "translation": "All who are ritually impure (ṭĕmeʾim) are obligated in Qiryath Shĕma' and prayer, and they recite the bĕrakhoth while in their impurity, immersion (ṭĕvila) not being an obstacle. The ordinance of immersion for one who had a seminal emission (ba'al qeri) was nullified, because it was not accepted throughout all Israel, and words of Torah do not contract impurity. Yet it was a widespread custom in Spain (Sĕfaradh) and Babylonia (Shin'ar) that one who had a seminal emission does not pray until he washes his entire body in water. (Qiryath Shĕma' 4:8; Tĕfilla 4:4–6)"
+        }
+      ]
+    },
+    {
+      "id": "individual-order",
+      "title": "The Order of Prayer for an Individual",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "individual-order-1",
+          "hebrewLead": "שחרית.",
+          "lead": "Shaḥrith.",
+          "hebrew": "אחר ברכות השחר קורא את הזמירות: שיבחו חכמים הראשונים למי שקורא בכל יום זמירות מספר תהילים, מ\"תהילה לדוד\" עד סוף הספר, ומברך לפניהן \"ברוך שאמר\" ולאחריהן \"ישתבח\". (תפילה ז,יב) אחר כך קורא את שמע ומברך לפניה ולאחריה, ומדלג הקדושה שבברכה ראשונה, שאין היחיד אומר קדושה. כשחותם \"גאל ישראל\" עומד מיד, כדי שיסמוך גאולה לתפילה, ומתפלל מעומד. (תפילה ז,יז; בן איש חי, שמות ט)",
+          "translation": "After Birkhoth Hashshaḥar, one recites the verses of praise (zĕmiroth): the early Sages praised one who recites every day verses of praise from the Book of Psalms, from \"Tĕhilla Lĕdhawidh\" (Psalm 145) until the end of the book, reciting before them \"barukh sheʾamar\" and after them \"yishtabbaḥ\". (Tĕfilla 7:12) Afterwards, he recites the Shĕma' and recites the bĕrakhoth before and after it, skipping the Qĕdhushsha in the first bĕrakha, for an individual does not recite Qĕdhushsha. When he concludes \"gaʾal yisraʾel\", he stands up immediately, so as to juxtapose redemption to prayer (somekh gĕʾulla lithfilla), and prays while standing. (Tĕfilla 7:17; Ben ʾIsh Ḥay, Shĕmoth 9)"
+        },
+        {
+          "type": "rubric",
+          "id": "individual-order-2",
+          "hebrewLead": "אחר התפילה.",
+          "lead": "After the Prayer.",
+          "hebrew": "כשמשלים תפילתו, יושב ונופל על פניו ומתחנן; מגביה ראשו ומתחנן מעט כשהוא יושב; ואחר כך קורא \"תהילה לדוד\", מתחנן כפי כוחו, ונפטר למעשיו. (תפילה ז,יז) ונפילת פנים נוהגת בכל מקום, ואפילו ביחיד. (בן איש חי, כי תשא יד)",
+          "translation": "When he completes his prayer, he sits and falls upon his face (nofel 'al panaw) and supplicates; raises his head and supplicates a little while sitting; and afterwards recites \"Tĕhilla Lĕdhawidh\", supplicates according to his capacity, and departs to his affairs. (Tĕfilla 7:17) And falling upon the face (nĕfilath panim) is practiced everywhere, even by an individual. (Ben ʾIsh Ḥay, Ki Thissaʾ 14)"
+        },
+        {
+          "type": "rubric",
+          "id": "individual-order-3",
+          "hebrewLead": "מנחה.",
+          "lead": "Minḥa.",
+          "hebrew": "קורא \"תהילה לדוד\" מיושב, ואחר כך עומד ומתפלל. כשמשלים, נופל על פניו ומתחנן, מגביה ראשו ומתחנן מעט, ונפטר למעשיו. (תפילה ז,יח)",
+          "translation": "He recites \"Tĕhilla Lĕdhawidh\" while seated, and afterwards stands and prays. When he completes it, he falls upon his face and supplicates, raises his head and supplicates a little, and departs to his affairs. (Tĕfilla 7:18)"
+        },
+        {
+          "type": "rubric",
+          "id": "individual-order-4",
+          "hebrewLead": "ערבית.",
+          "lead": "'Arvith.",
+          "hebrew": "קורא קרית שמע ומברך לפניה ולאחריה, סומך גאולה לתפילה ומתפלל מעומד; וכשמשלים יושב מעט ונפטר, ואם התחנן אחר תפילת ערבית הרי זה משובח. ואף על פי שמברך \"השכיבנו\" אחר \"גאל ישראל\", אינה הפסקה בין גאולה לתפילה, והרי שתיהן כברכה אחת ארוכה. (תפילה ז,יט; בן איש חי, פקודי ה)",
+          "translation": "He recites Qiryath Shĕma' and recites the bĕrakhoth before and after it, juxtaposes redemption to prayer (somekh gĕʾulla lithfilla), and prays while standing; and when he completes it, he sits a little while and departs, and if he supplicated after the 'Arvith prayer, he is praiseworthy. And even though he recites the bĕrakha of Hashkivenu after \"gaʾal yisraʾel\", it is not an interruption between redemption and prayer, for both together are considered like one long bĕrakha. (Tĕfilla 7:19; Ben ʾIsh Ḥay, Pĕqudhe 5)"
+        },
+        {
+          "type": "rubric",
+          "id": "individual-order-5",
+          "hebrewLead": "קודם השינה.",
+          "lead": "Before Sleeping.",
+          "hebrew": "כשנכנס למיטתו לישן מברך \"המפיל\", וקורא פרשה ראשונה מקרית שמע וישן. ואם אנסתו שינה, קורא אפילו פסוק ראשון או פסוקי רחמים. (תפילה ז,א–ב; וראה בן איש חי, פקודי יא)",
+          "translation": "When he gets into his bed to sleep, he recites the bĕrakha of \"hammappil\", recites the first parasha of Qiryath Shĕma', and goes to sleep. And if sleep overcomes him, he recites even just the first verse or verses of mercy. (Tĕfilla 7:1–2; see also Ben ʾIsh Ḥay, Pĕqudhe 11)"
+        }
+      ]
+    }
+  ]
+}

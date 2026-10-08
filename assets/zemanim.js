@@ -25,13 +25,16 @@
   // side of the minute: -1 rounds down (a latest time), 1 rounds up (an
   // earliest time), 0 rounds to nearest (cuts both ways). Labels follow the
   // siddur's transliteration schema (siddur-build/schema.mjs), capitalized.
+  // 'Ammudh Hashshaḥar is the Rambam's fixed 72 minutes before sunrise.
+  var DAWN = '\'Ammudh Hashshaḥar (72 min)';
   function zemanim(y, m, d, lat, lng) {
     var day = sunTimes(y, m, d, lat, lng, -0.833);
     var rise = day[0], set = day[1], hour = (set - rise) / 12;
     return [
+      [DAWN, rise - 72 * 6e4, 0],
       ['Sunrise', rise, 1],
       ['Sof Zĕman Shĕma\' (Gra)', rise + 3 * hour, -1],
-      ['Sof Zĕman Shaḥărith (Gra)', rise + 4 * hour, -1],
+      ['Sof Zĕman Shaḥrith (Gra)', rise + 4 * hour, -1],
       ['Ḥăṣoth', rise + 6 * hour, 0],
       ['Minḥa Gĕdhola', rise + 6.5 * hour, 1],
       ['Minḥa Qĕṭanna', rise + 9.5 * hour, 1],
@@ -51,19 +54,23 @@
   // always fill exactly half the circle whatever the season. Returns null
   // where there is no sunrise/sunset to hang it on.
   function dial(y, m, d, lat, lng) {
-    var rows = zemanim(y, m, d, lat, lng), rise = rows[0][1], set = rows[7][1];
+    var rows = zemanim(y, m, d, lat, lng), rise = rows[1][1], set = rows[8][1];
     var next = sunTimes(y, m, d + 1, lat, lng, -0.833)[0];
     var prevSet = sunTimes(y, m, d - 1, lat, lng, -0.833)[1];
     if (isNaN(rise) || isNaN(next) || isNaN(prevSet)) return null;
-    var tzet = rows.slice(8).map(function (r) { return r[1]; }).filter(isFinite);
+    var tzet = rows.slice(9).map(function (r) { return r[1]; }).filter(isFinite);
     var midnight = ['Ḥăṣoth Layla', (set + next) / 2, 0];
+    // ponytail: where the night is under 144 minutes dawn falls before
+    // midnight; the mark is dropped rather than drawn out of order.
+    var dawn = next - 72 * 6e4;
     return {
-      cardinal: [rows[0], rows[3], rows[7], midnight],
+      cardinal: [rows[1], rows[4], rows[8], midnight],
       // Twilight is one band out to the latest of the three Ṣeʾth times; they
       // sit within a degree or so of each other, too close to draw apart.
       // ponytail: where the sun never gets that low (high-latitude summer)
       // the band is dropped and the night shading shifts a step.
-      marks: rows.slice(0, 8).concat([['Ṣeʾth Hakkokhavim', Math.max.apply(null, tzet), 1], midnight, ['Sunrise', next, 1]])
+      marks: rows.slice(1, 9).concat([['Ṣeʾth Hakkokhavim', Math.max.apply(null, tzet), 1], midnight,
+        [DAWN, dawn > midnight[1] ? dawn : NaN, 0], ['Sunrise', next, 1]])
         .filter(function (r) { return isFinite(r[1]); }),
       // Before sunrise we are still in the previous night.
       angle: function (t) {
@@ -79,16 +86,19 @@
     var assert = require('assert');
     var z = zemanim(2026, 3, 20, 31.778, 35.235);
     var near = function (ms, iso) { assert(Math.abs(ms - Date.parse(iso)) < 2 * 6e4, new Date(ms).toISOString() + ' vs ' + iso); };
-    near(z[0][1], '2026-03-20T03:43:00Z');
-    near(z[7][1], '2026-03-20T15:50:00Z');
-    assert(z[10][1] > z[7][1] && z[9][1] > z[8][1] && z[8][1] > z[7][1]);
+    near(z[0][1], '2026-03-20T02:31:00Z');
+    near(z[1][1], '2026-03-20T03:43:00Z');
+    near(z[8][1], '2026-03-20T15:50:00Z');
+    assert(z[11][1] > z[8][1] && z[10][1] > z[9][1] && z[9][1] > z[8][1]);
     assert(isNaN(sunTimes(2026, 6, 21, 80, 0, -0.833)[0]));
     assert.deepStrictEqual([-1, 0, 1].map(function (r) { return roundMin(90001, r); }), [6e4, 12e4, 12e4]);
     var D = dial(2026, 3, 20, 31.778, 35.235);
     var angles = D.marks.map(function (r) { return D.angle(r[1]); });
     assert(angles.every(function (a, i) { return i === 0 || a > angles[i - 1]; }), 'angles increase');
     assert.deepStrictEqual(D.cardinal.map(function (r) { return Math.round(D.angle(r[1])); }), [0, 90, 180, 270]);
-    assert(Math.abs(D.angle(z[0][1] - 36e5) - 345) < 1, 'hour before sunrise sits in the previous night');
+    assert(Math.abs(D.angle(z[1][1] - 36e5) - 345) < 1, 'hour before sunrise sits in the previous night');
+    assert.strictEqual(D.marks.length, 12);
+    assert.strictEqual(D.marks[10][0], DAWN);
     assert.strictEqual(dial(2026, 6, 21, 80, 0), null);
     console.log('zemanim ok');
     return;
@@ -103,9 +113,9 @@
   var KEY = 'siddur-zemanim-loc';
   var R = 100, r = 76;
   // Morning golds, a neutral half hour after midday, afternoon ambers,
-  // twilight, then the two halves of the night.
+  // twilight, the two halves of the night, then dawn.
   var COLORS = ['#eda52b', '#fae3a3', '#deab35', '#bdb6a6', '#f7cf9a', '#ee9f5a', '#d9612f',
-    '#b891cc', '#3f4f8f', '#6c7fc4'];
+    '#b891cc', '#3f4f8f', '#6c7fc4', '#e8a0a8'];
   var current = null; // the dial on screen, or null
 
   function fmt(row) {

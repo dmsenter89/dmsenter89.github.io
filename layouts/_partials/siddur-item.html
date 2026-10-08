@@ -27,6 +27,9 @@
        headings, e.g. Havu LaAdonai / Lecha Dodi within Kabbalat Shabbat --
        same nested "items" array as expandable/group, plus optional
        "youtube"/"audio" exactly like a top-level section carries.)
+       A rubric may carry optional "lead" / "hebrewLead" strings, rendered
+       in bold ahead of its translation / Hebrew -- a run-in topic label
+       for long halakhic text, e.g. Daily > Halakha.
        Any item (of any type) may also carry an optional "audio" URL,
        rendered as a native player -- used for chapters with a per-line
        recording, e.g. the "For Toddlers" page. It renders before the
@@ -99,8 +102,8 @@
 </div>
 {{- else if eq .type "rubric" }}
 <p class="siddur-item siddur-rubric" id="{{ .id }}">
-  <span class="siddur-hebrew" lang="he" dir="rtl">{{ .hebrew }}</span>
-  <span class="siddur-translation">{{ .translation }}</span>
+  <span class="siddur-hebrew" lang="he" dir="rtl">{{ with .hebrewLead }}<strong>{{ . }}</strong> {{ end }}{{ .hebrew }}</span>
+  <span class="siddur-translation">{{ with .lead }}<strong>{{ . }}</strong> {{ end }}{{ .translation }}</span>
 </p>
 {{- else }}
 <div class="siddur-item siddur-text" id="{{ .id }}">

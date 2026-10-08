@@ -95,6 +95,8 @@ over the content tree.
 - `type: "rubric"` — unvocalized instructional Hebrew (stage directions,
   halachic notes). No transliteration is generated — the library needs
   niqqud to produce anything meaningful, and this text isn't recited anyway.
+  Optional `lead` / `hebrewLead` strings render in bold ahead of the
+  `translation` / `hebrew` text, as a run-in topic label (see Daily > Halakha).
 - `type: "text"` — vocalized liturgy that goes through all three display
   toggle states (Hebrew / transliteration / translation).
 - `type: "hebrew"` — Hebrew-only reference text with no transliteration or
