@@ -590,3 +590,46 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
 
   .siddur-hebrew { font-size: 1.4rem; }
 }
+
+/* --- Zemanim calculator (Appendix) --- */
+
+.siddur-zemanim-controls {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.siddur-zemanim-controls label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  color: var(--siddur-muted);
+}
+
+.siddur-zemanim-controls input {
+  border: 1px solid var(--siddur-border);
+  background: var(--siddur-bg);
+  color: var(--siddur-fg);
+  border-radius: 4px;
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
+  max-width: 9.5rem;
+}
+
+.siddur-zemanim-dial {
+  display: block;
+  width: 100%;
+  max-width: 24rem;
+  margin: 1rem auto;
+}
+
+.siddur-zemanim-dial text { fill: var(--siddur-fg); font-size: 9px; }
+.siddur-zemanim-dial .zem-muted { fill: var(--siddur-muted); }
+.siddur-zemanim-dial .zem-main { font-size: 13px; font-weight: 600; }
+
+.zem-seg { stroke: var(--siddur-bg); stroke-width: 2; cursor: pointer; outline: none; }
+.zem-seg.selected, .zem-seg:focus-visible { stroke: var(--siddur-fg); }
+.zem-edge { fill: none; stroke: var(--siddur-border); pointer-events: none; }
+.zem-tick { stroke: var(--siddur-muted); }
+.zem-now { fill: var(--siddur-accent); stroke: var(--siddur-bg); stroke-width: 2; }

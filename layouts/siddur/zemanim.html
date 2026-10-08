@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+{{- /* Zemanim calculator (Appendix). No data file: everything is computed
+       client-side by assets/zemanim.js from the date and coordinates below. */ -}}
+<h1 class="siddur-page-title">{{ .Title }}</h1>
+{{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
+
+<div class="siddur-zemanim-controls">
+  <label>Date <input type="date" id="zemanim-date"></label>
+  <label>Latitude <input type="number" id="zemanim-lat" min="-90" max="90" step="any" inputmode="decimal"></label>
+  <label>Longitude <input type="number" id="zemanim-lng" min="-180" max="180" step="any" inputmode="decimal"></label>
+</div>
+<p class="siddur-table-note" id="zemanim-status" role="status"></p>
+
+<svg id="zemanim-dial" class="siddur-zemanim-dial" viewBox="-165 -147 330 294" role="img" aria-label="Dial of the halakhic day: daytime across the top half, night across the bottom"></svg>
+
+<div class="siddur-table-wrap">
+  <table class="siddur-table">
+    <tbody id="zemanim-body"></tbody>
+  </table>
+</div>
+
+<p class="siddur-table-note">Sea-level sunrise and sunset, accurate to about a minute; latest times are rounded down and earliest times up. On the dial each half is twelve proportional hours. North and east are positive. Times are shown in this device's time zone.</p>
+
+<script>{{ (resources.Get "zemanim.js" | minify).Content | safeJS }}</script>
+
+{{ end }}
