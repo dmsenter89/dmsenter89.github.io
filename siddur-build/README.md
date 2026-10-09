@@ -266,6 +266,48 @@ translation**; write original translations from the Hebrew. The doc grows
 over time; re-fetch it rather than trusting a stale copy when picking up new
 content.
 
+## Biblical citations
+
+Two standing rules for any **direct biblical citation** (a verse or passage
+quoted as such, not liturgy that merely echoes biblical language):
+
+- **Hebrew: always pull the verse with ta'amim from Sefaria** ("Miqra
+  according to the Masorah", the default Hebrew version) rather than using
+  the unpointed-for-cantillation text from the source doc. Strip Sefaria's
+  HTML (`<b>`, `&thinsp;`, the `{פ}`/`{ס}` parasha-break spans), keep maqqef,
+  paseq and sof pasuq, drop any hand-added commas, then run `generate.mjs`
+  as usual — it normalizes the Divine Name while preserving the cantillation.
+- **English: take the translation from *THE JPS TANAKH: Gender-Sensitive
+  Edition* (JPS, 2023) via Sefaria** for every biblical book, Torah, Nevi'im
+  and Ketuvim alike, instead of writing an original one. Sefaria lists it as
+  CC-BY-NC; the site front page (`content/siddur/_index.md`) carries the
+  attribution this license requires — keep it in place. Adapt it only as
+  follows:
+  - Where it renders the Tetragrammaton ("the ETERNAL", "GOD" in small
+    caps, "O ETERNAL One", etc.), write **Adhonay**, matching the rest of
+    the site.
+  - Where the Hebrew actually reads אֲדֹנָי, keep JPS's own wording (e.g.
+    "my Sovereign") — do not change it to Adhonay.
+  - Drop footnotes and footnote markers, and flatten the poetry line-break
+    markup into one line; end with the reference, e.g. `(Psalm 118:20)`.
+
+  The user may hand-amend an individual verse afterward; leave such edits
+  alone rather than "restoring" the JPS wording.
+
+The liturgical sense is primary: where JPS reads a verse against the point
+the liturgy makes with it, the verse is emended in JPS's own register. Current
+emendations (do not "restore" these): Deut 6:4 ("Adhonay is one"), Deut 33:4
+(no leading "When"), Isa 42:21 ("for the sake of [Israel's] vindication"),
+Ps 20:10 ("grant victory! May the Sovereign answer us"), and Exod 34:7 as
+truncated in the Thirteen Attributes ("and granting pardon").
+
+Existing content was retrofitted to both rules on 2026-10-09. That pass
+covered whole verses/passages and explicitly introduced quotes ("as it is
+written…"), including ones embedded in longer prayers. It deliberately left
+alone sub-verse fragments woven into composed liturgy or piyyut (e.g. the
+Selihoth refrains, Al HaNissim's Esther phrasing, "Adhonay melekh…") — those
+are echoes, not citations.
+
 ## Verifying changes
 
 `hugo server -D`, then check the rendered chapter at a phone-width viewport

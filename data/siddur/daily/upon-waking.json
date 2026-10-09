@@ -293,15 +293,15 @@
         {
           "type": "text",
           "id": "tov-ata",
-          "hebrew": "טוֹב־אַתָּ֥ה וּמֵטִ֗יב לַמְּדֵ֥נִי חֻקֶּֽיךָ׃",
-          "translation": "You are good and do good; teach me Your statutes.",
+          "hebrew": "טוֹב־אַתָּ֥ה וּמֵטִ֗יב לַמְּדֵ֥נִי חֻקֶּֽיךָ׃",
+          "translation": "You are good and beneficent; teach me Your laws. (Psalm 119:68)",
           "translit": "ṭov-ʾatta umeṭiv lammĕdheni ḥuqqekha."
         },
         {
           "type": "text",
           "id": "birkat-kohanim",
-          "hebrew": "וַיְדַבֵּ֥ר יְיָ֖ אֶל־מֹשֶׁ֥ה לֵּאמֹֽר׃ דַּבֵּ֤ר אֶֽל־אַהֲרֹן֙ וְאֶל־בָּנָ֣יו לֵאמֹ֔ר כֹּ֥ה תְבָרְכ֖וּ אֶת־בְּנֵ֣י יִשְׂרָאֵ֑ל אָמ֖וֹר לָהֶֽם׃ יְבָרֶכְךָ֥ יְיָ֖ וְיִשְׁמְרֶֽךָ׃ יָאֵ֨ר יְיָ֧ ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ יִשָּׂ֨א יְיָ֤ ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ וְשָׂמ֥וּ אֶת־שְׁמִ֖י עַל־בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרְכֵֽם׃",
-          "translation": "Adhonay spoke to Moses, saying: Speak to Aaron and his sons, saying, thus shall you bless the children of Israel; say to them: May Adhonay bless you and keep you. May Adhonay make His face shine upon you and be gracious to you. May Adhonay lift up His face toward you and grant you peace. So shall they place My name upon the children of Israel, and I will bless them.",
+          "hebrew": "וַיְדַבֵּ֥ר יְיָ֖ אֶל־מֹשֶׁ֥ה לֵּאמֹֽר׃ דַּבֵּ֤ר אֶֽל־אַהֲרֹן֙ וְאֶל־בָּנָ֣יו לֵאמֹ֔ר כֹּ֥ה תְבָרְכ֖וּ אֶת־בְּנֵ֣י יִשְׂרָאֵ֑ל אָמ֖וֹר לָהֶֽם׃ יְבָרֶכְךָ֥ יְיָ֖ וְיִשְׁמְרֶֽךָ׃ יָאֵ֨ר יְיָ֧ ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ יִשָּׂ֨א יְיָ֤ ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ וְשָׂמ֥וּ אֶת־שְׁמִ֖י עַל־בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרְכֵֽם׃",
+          "translation": "Adhonay spoke to Moses: Speak to Aaron and his sons: Thus shall you bless the people of Israel. Say to them: Adhonay bless you and protect you! Adhonay deal kindly and graciously with you! Adhonay bestow favor upon you and grant you peace! Thus they shall link My name with the people of Israel, and I will bless them. (Numbers 6:22–27)",
           "translit": "wayĕdhabber Adhonay ʾel-mosheh leʾmor. dabber ʾel-ʾahăron wĕʾel-vanaw leʾmor koh thĕvarĕkhu ʾeth-vĕne yisraʾel ʾamor lahem. yĕvarekhkha Adhonay wĕyishmĕrekha. yaʾer Adhonay panaw ʾelekha wiḥunnekka. yissaʾ Adhonay panaw ʾelekha wĕyasem lĕkha shalom. wĕsamu ʾeth-shĕmi 'al-vĕne yisraʾel waʾăni ʾăvarĕkhem."
         },
         {
@@ -341,9 +341,9 @@
         {
           "type": "text",
           "id": "ribbon-haolamim",
-          "hebrew": "רִבּוֹן הָעוֹלָמִים, לֹא עַל צִדְקוֹתֵינוּ אֲנַחְנוּ מַפִּילִים תַּחֲנוּנֵינוּ לְפָנֶיךָ, כִּי עַל רַחֲמֶיךָ הָרַבִּים. מָה אָנוּ, מֶה חַיֵּינוּ, מֶה חַסְדֵּנוּ, מַה צִּדְקֵנוּ, מַה כֹּחֵנוּ, מַה גְּבוּרָתֵנוּ. מַה נֹּאמַר לְפָנֶיךָ, יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, הֲלֹא כָּל הַגִּבּוֹרִים כְּאַיִן לְפָנֶיךָ, וְאַנְשֵׁי הַשֵּׁם כְּלֹא הָיוּ, וַחֲכָמִים כִּבְלִי מַדָּע, וּנְבוֹנִים כִּבְלִי הַשְׂכֵּל, כִּי כָל מַעֲשֵׂינוּ תֹּהוּ, וִימֵי חַיֵּינוּ הֶבֶל לְפָנֶיךָ, כְּמוֹ שֶׁכָּתוּב בְּדִבְרֵי קָדְשֶׁךָ: וּמוֹתַר הָאָדָם מִן הַבְּהֵמָה אָיִן, כִּי הַכֹּל הָבֶל.",
-          "translation": "Sovereign of the worlds, it is not on account of our righteousness that we lay our supplications before You, but on account of Your abundant mercy. What are we? What is our life? What is our kindness? What is our righteousness? What is our strength? What is our might? What can we say before You, Adhonay our God and God of our ancestors? Are not all the mighty as nothing before You, the men of renown as though they had never been, the wise as if without knowledge, and the discerning as if without understanding? For all our deeds are emptiness, and the days of our lives are vapor before You, as it is written in Your holy words: \"Man has no advantage over the beast, for all is vapor.\"",
-          "translit": "ribbon ha'olamim, loʾ 'al ṣidhqothenu ʾănaḥnu mappilim taḥănunenu lĕfanekha, ki 'al raḥămekha harabbim. ma ʾanu, meh ḥayyenu, meh ḥasdenu, mah ṣidhqenu, mah koḥenu, mah gĕvurathenu. mah noʾmar lĕfanekha, Adhonay ʾĕlohenu weʾlohe ʾăvothenu, hăloʾ kol haggibborim kĕʾayīn lĕfanekha, wĕʾanshe hashshem kĕloʾ hayu, waḥăkhamim kivli madda', unĕvonim kivli haskel, ki khol ma'ăsenu tohu, wime ḥayyenu hevel lĕfanekha, kĕmo shekkathuv bĕdhivre qodhshekha: umothar haʾadham mīn habbĕhema ʾayīn, ki hakkol havel."
+          "hebrew": "רִבּוֹן הָעוֹלָמִים, לֹא עַל צִדְקוֹתֵינוּ אֲנַחְנוּ מַפִּילִים תַּחֲנוּנֵינוּ לְפָנֶיךָ, כִּי עַל רַחֲמֶיךָ הָרַבִּים. מָה אָנוּ, מֶה חַיֵּינוּ, מֶה חַסְדֵּנוּ, מַה צִּדְקֵנוּ, מַה כֹּחֵנוּ, מַה גְּבוּרָתֵנוּ. מַה נֹּאמַר לְפָנֶיךָ, יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, הֲלֹא כָּל הַגִּבּוֹרִים כְּאַיִן לְפָנֶיךָ, וְאַנְשֵׁי הַשֵּׁם כְּלֹא הָיוּ, וַחֲכָמִים כִּבְלִי מַדָּע, וּנְבוֹנִים כִּבְלִי הַשְׂכֵּל, כִּי כָל מַעֲשֵׂינוּ תֹּהוּ, וִימֵי חַיֵּינוּ הֶבֶל לְפָנֶיךָ, כְּמוֹ שֶׁכָּתוּב בְּדִבְרֵי קָדְשֶׁךָ: וּמוֹתַ֨ר הָאָדָ֤ם מִן־הַבְּהֵמָה֙ אָ֔יִן כִּ֥י הַכֹּ֖ל הָֽבֶל׃",
+          "translation": "Sovereign of the worlds, it is not on account of our righteousness that we lay our supplications before You, but on account of Your abundant mercy. What are we? What is our life? What is our kindness? What is our righteousness? What is our strength? What is our might? What can we say before You, Adhonay our God and God of our ancestors? Are not all the mighty as nothing before You, the men of renown as though they had never been, the wise as if without knowledge, and the discerning as if without understanding? For all our deeds are emptiness, and the days of our lives are vapor before You, as it is written in Your holy words: \"Humans have no superiority over animals, since both amount to nothing.\" (Ecclesiastes 3:19)",
+          "translit": "ribbon ha'olamim, loʾ 'al ṣidhqothenu ʾănaḥnu mappilim taḥănunenu lĕfanekha, ki 'al raḥămekha harabbim. ma ʾanu, meh ḥayyenu, meh ḥasdenu, mah ṣidhqenu, mah koḥenu, mah gĕvurathenu. mah noʾmar lĕfanekha, Adhonay ʾĕlohenu weʾlohe ʾăvothenu, hăloʾ kol haggibborim kĕʾayīn lĕfanekha, wĕʾanshe hashshem kĕloʾ hayu, waḥăkhamim kivli madda', unĕvonim kivli haskel, ki khol ma'ăsenu tohu, wime ḥayyenu hevel lĕfanekha, kĕmo shekkathuv bĕdhivre qodhshekha: umothar haʾadham min-habbĕhema ʾayin ki hakkol havel."
         },
         {
           "type": "text",
@@ -362,9 +362,9 @@
         {
           "type": "text",
           "id": "shema-1",
-          "hebrew": "שְׁמַע יִשְׂרָאֵל, יְיָ אֱלֹהֵינוּ, יְיָ אֶחָד.",
-          "translation": "Hear, O Israel: Adhonay is our God, Adhonay is One.",
-          "translit": "shĕma' yisraʾel, Adhonay ʾĕlohenu, Adhonay ʾeḥadh."
+          "hebrew": "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְיָ֥ אֱלֹהֵ֖ינוּ יְיָ֥ ׀ אֶחָֽד׃",
+          "translation": "Hear, O Israel! Adhonay is our God, Adhonay is one. (Deuteronomy 6:4)",
+          "translit": "shĕma' yisraʾel Adhonay ʾĕlohenu Adhonay ʾeḥadh."
         },
         {
           "type": "text",
@@ -376,9 +376,9 @@
         {
           "type": "text",
           "id": "shema-2",
-          "hebrew": "שְׁמַע יִשְׂרָאֵל, יְיָ אֱלֹהֵינוּ, יְיָ אֶחָד.",
-          "translation": "Hear, O Israel: Adhonay is our God, Adhonay is One.",
-          "translit": "shĕma' yisraʾel, Adhonay ʾĕlohenu, Adhonay ʾeḥadh."
+          "hebrew": "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְיָ֥ אֱלֹהֵ֖ינוּ יְיָ֥ ׀ אֶחָֽד׃",
+          "translation": "Hear, O Israel! Adhonay is our God, Adhonay is one. (Deuteronomy 6:4)",
+          "translit": "shĕma' yisraʾel Adhonay ʾĕlohenu Adhonay ʾeḥadh."
         },
         {
           "type": "text",
@@ -390,9 +390,9 @@
         {
           "type": "text",
           "id": "ata-hu-adonay",
-          "hebrew": "אַתָּה הוּא יְיָ הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל הָאָרֶץ מִתָּחַת, וּבִשְׁמֵי הַשָּׁמַיִם הָעֶלְיוֹנִים. אַתָּה הוּא רִאשׁוֹן וְאַתָּה הוּא אַחֲרוֹן, וּמִבַּלְעָדֶיךָ אֵין אֱלֹהִים. קַבֵּץ קֹוֶיךָ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ. יַכִּירוּ וְיֵדְעוּ כָּל בָּאֵי עוֹלָם כִּי אַתָּה הוּא הָאֱלֹהִים לְבַדְּךָ לְכֹל מַמְלְכוֹת הָאָרֶץ. אַתָּה עָשִׂיתָ אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ, וּמִי בְּכָל מַעֲשֵׂה יָדֶיךָ, בָּעֶלְיוֹנִים אוֹ בַתַּחְתּוֹנִים, שֶׁיֹּאמַר לָךְ מַה תַּעֲשֶׂה. אָבִינוּ שֶׁבַּשָּׁמַיִם, עֲשֵׂה עִמָּנוּ צְדָקָה וָחֶסֶד בַּעֲבוּר כְּבוֹד שִׁמְךָ הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא, רַחֵם עָלֵינוּ, וְקַיֵּם לָנוּ מְהֵרָה מַה שֶּׁהִבְטַחְתָּנוּ עַל יְדֵי צְפַנְיָה חוֹזֶךָ: בָּעֵת הַהִיא אָבִיא אֶתְכֶם, וּבָעֵת קַבְּצִי אֶתְכֶם, כִּי אֶתֵּן אֶתְכֶם לְשֵׁם וְלִתְהִלָּה בְּכֹל עַמֵּי הָאָרֶץ, בְּשׁוּבִי אֶת שְׁבוּתֵיכֶם לְעֵינֵיכֶם, אָמַר יְיָ.",
-          "translation": "You are Adhonay, God in the heavens above and on the earth below, and in the highest heaven of heavens. You are the first and You are the last, and besides You there is no God. Gather those who hope in You from the four corners of the earth. Let all who come into the world recognize and know that You alone are God over all the kingdoms of the earth. You made the heavens and the earth; and who among all the works of Your hands, above or below, can say to You, \"What are You doing?\" Our Father in heaven, deal with us in righteousness and kindness for the sake of the glory of Your name, the great, mighty, and awesome God; have mercy on us, and speedily fulfill for us what You promised us through Zephaniah Your seer: \"At that time I will bring you in, and at that time I will gather you; for I will make you renowned and praised among all the peoples of the earth, when I restore your fortunes before your eyes, says Adhonay.\"",
-          "translit": "ʾatta huʾ Adhonay haʾĕlohim bashshamayīm mimma'al wĕ'al haʾareṣ mittaḥath, uvishme hashshamayīm ha'elyonim. ʾatta huʾ riʾshon wĕʾatta huʾ ʾaḥăron, umibbal'adhekha ʾen ʾĕlohim. qabbeṣ qowekha meʾarba' kanfoth haʾareṣ. yakkiru wĕyedhĕ'u kol baʾe 'olam ki ʾatta huʾ haʾĕlohim lĕvaddĕkha lĕkhol mamlĕkhoth haʾareṣ. ʾatta 'asitha ʾeth hashshamayīm wĕʾeth haʾareṣ, umi bĕkhol ma'ăseh yadhekha, ba'elyonim ʾo vattaḥtonim, sheyyoʾmar lakh mah ta'ăseh. ʾavinu shebbashshamayīm, 'ăseh 'immanu ṣĕdhaqa waḥesedh ba'ăvur kĕvodh shimkha haʾel haggadhol haggibbor wĕhannoraʾ, raḥem 'alenu, wĕqayyem lanu mĕhera mah shehivṭaḥtanu 'al yĕdhe ṣĕfanya ḥozekha: ba'eth hahiʾ ʾaviʾ ʾethkhem, uva'eth qabbĕṣi ʾethkhem, ki ʾetten ʾethkhem lĕshem wĕlithhilla bĕkhol 'amme haʾareṣ, bĕshuvi ʾeth shĕvuthekhem lĕ'enekhem, ʾamar Adhonay."
+          "hebrew": "אַתָּה הוּא יְיָ הָאֱלֹהִים בַּשָּׁמַיִם מִמַּעַל וְעַל הָאָרֶץ מִתָּחַת, וּבִשְׁמֵי הַשָּׁמַיִם הָעֶלְיוֹנִים. אַתָּה הוּא רִאשׁוֹן וְאַתָּה הוּא אַחֲרוֹן, וּמִבַּלְעָדֶיךָ אֵין אֱלֹהִים. קַבֵּץ קֹוֶיךָ מֵאַרְבַּע כַּנְפוֹת הָאָרֶץ. יַכִּירוּ וְיֵדְעוּ כָּל בָּאֵי עוֹלָם כִּי אַתָּה הוּא הָאֱלֹהִים לְבַדְּךָ לְכֹל מַמְלְכוֹת הָאָרֶץ. אַתָּה עָשִׂיתָ אֶת הַשָּׁמַיִם וְאֶת הָאָרֶץ, וּמִי בְּכָל מַעֲשֵׂה יָדֶיךָ, בָּעֶלְיוֹנִים אוֹ בַתַּחְתּוֹנִים, שֶׁיֹּאמַר לָךְ מַה תַּעֲשֶׂה. אָבִינוּ שֶׁבַּשָּׁמַיִם, עֲשֵׂה עִמָּנוּ צְדָקָה וָחֶסֶד בַּעֲבוּר כְּבוֹד שִׁמְךָ הָאֵל הַגָּדוֹל הַגִּבּוֹר וְהַנּוֹרָא, רַחֵם עָלֵינוּ, וְקַיֵּם לָנוּ מְהֵרָה מַה שֶּׁהִבְטַחְתָּנוּ עַל יְדֵי צְפַנְיָה חוֹזֶךָ: בָּעֵ֤ת הַהִיא֙ אָבִ֣יא אֶתְכֶ֔ם וּבָעֵ֖ת קַבְּצִ֣י אֶתְכֶ֑ם כִּֽי־אֶתֵּ֨ן אֶתְכֶ֜ם לְשֵׁ֣ם וְלִתְהִלָּ֗ה בְּכֹל֙ עַמֵּ֣י הָאָ֔רֶץ בְּשׁוּבִ֧י אֶת־שְׁבוּתֵיכֶ֛ם לְעֵינֵיכֶ֖ם אָמַ֥ר יְיָ׃",
+          "translation": "You are Adhonay, God in the heavens above and on the earth below, and in the highest heaven of heavens. You are the first and You are the last, and besides You there is no God. Gather those who hope in You from the four corners of the earth. Let all who come into the world recognize and know that You alone are God over all the kingdoms of the earth. You made the heavens and the earth; and who among all the works of Your hands, above or below, can say to You, \"What are You doing?\" Our Father in heaven, deal with us in righteousness and kindness for the sake of the glory of Your name, the great, mighty, and awesome God; have mercy on us, and speedily fulfill for us what You promised us through Zephaniah Your seer: \"At that time I will gather you, and at [that] time I will bring you [home]; for I will make you renowned and famous among all the peoples on earth, when I restore your fortunes before their very eyes—said Adhonay.\" (Zephaniah 3:20)",
+          "translit": "ʾatta huʾ Adhonay haʾĕlohim bashshamayīm mimma'al wĕ'al haʾareṣ mittaḥath, uvishme hashshamayīm ha'elyonim. ʾatta huʾ riʾshon wĕʾatta huʾ ʾaḥăron, umibbal'adhekha ʾen ʾĕlohim. qabbeṣ qowekha meʾarba' kanfoth haʾareṣ. yakkiru wĕyedhĕ'u kol baʾe 'olam ki ʾatta huʾ haʾĕlohim lĕvaddĕkha lĕkhol mamlĕkhoth haʾareṣ. ʾatta 'asitha ʾeth hashshamayīm wĕʾeth haʾareṣ, umi bĕkhol ma'ăseh yadhekha, ba'elyonim ʾo vattaḥtonim, sheyyoʾmar lakh mah ta'ăseh. ʾavinu shebbashshamayīm, 'ăseh 'immanu ṣĕdhaqa waḥesedh ba'ăvur kĕvodh shimkha haʾel haggadhol haggibbor wĕhannoraʾ, raḥem 'alenu, wĕqayyem lanu mĕhera mah shehivṭaḥtanu 'al yĕdhe ṣĕfanya ḥozekha: ba'eth hahiʾ ʾaviʾ ʾethkhem uva'eth qabbĕṣi ʾethkhem ki-ʾetten ʾethkhem lĕshem wĕlithhilla bĕkhol 'amme haʾareṣ bĕshuvi ʾeth-shĕvuthekhem lĕ'enekhem ʾamar Adhonay."
         }
       ]
     },
@@ -435,8 +435,8 @@
         {
           "type": "text",
           "id": "mezuzah-shema",
-          "hebrew": "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְיָ֥ אֱלֹהֵ֖ינוּ יְיָ֥ ׀ אֶחָֽד׃",
-          "translation": "Hear, O Israel: Adhonay is our God, Adhonay is One.",
+          "hebrew": "שְׁמַ֖ע יִשְׂרָאֵ֑ל יְיָ֥ אֱלֹהֵ֖ינוּ יְיָ֥ ׀ אֶחָֽד׃",
+          "translation": "Hear, O Israel! Adhonay is our God, Adhonay is one. (Deuteronomy 6:4)",
           "translit": "shĕma' yisraʾel Adhonay ʾĕlohenu Adhonay ʾeḥadh."
         },
         {

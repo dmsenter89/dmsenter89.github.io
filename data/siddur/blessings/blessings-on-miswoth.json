@@ -1,0 +1,421 @@
+{
+  "title": "Blessings on Miṣwoth",
+  "sections": [
+    {
+      "id": "sisith",
+      "title": "Ṣiṣith",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "sisith-1",
+          "hebrewLead": "א.",
+          "lead": "1.",
+          "hebrew": "אין אדם מחיב לקנות טלית, אבל כל מי שלובש בגד של ארבע כנפות מחיב להטיל בו ציצית, ואם התכסה בו בלא ציצית ביטל מצות עשה. בגד של צמר או פשתים מחיב מן התורה, ושאר מינים מדברי חכמים, ושעורו כדי שיתכסה בו ראשו ורבו של קטן המהלך לבדו בשוק (רמב״ם ציצית ג:א–ב, יא; שו״ע או״ח ח:יז, ט:א, טז:א; בא״ח שנה א׳ נח א, ג, לך לך יא).",
+          "translation": "A person is not obligated to buy a ṭallith, but anyone who wears a four-cornered garment is obligated to attach ṣiṣith (fringes) to it, and one who covered himself with it without ṣiṣith has nullified a positive miṣwa. A garment of wool or linen is obligated min hattora (by Torah law), and other materials middivre ḥăkhamim (by rabbinic law). Its minimum size is enough to cover the head and most of the body of a child who walks alone in the marketplace (Rambam, Ṣiṣith 3:1–2, 11; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 8:17, 9:1, 16:1; Ben ʾIsh Ḥay, Year 1, Noaḥ 1, 3; Lekh Lĕkha 11)."
+        },
+        {
+          "type": "rubric",
+          "id": "sisith-2",
+          "hebrewLead": "ב.",
+          "lead": "2.",
+          "hebrew": "מצות ציצית ביום, שנאמר ״וראיתם אתו״, ובעת שילבשנה ביום יברך, משיכיר בין תכלת שבה ללבן שבה. ומתר ללבשה בלילה, בין בחל בין בשבת, ובלבד שלא יברך (רמב״ם ציצית ג:ז–ח; שו״ע או״ח יח:א, ג; בא״ח שנה א׳ לך לך טו–טז).",
+          "translation": "The miṣwa of ṣiṣith applies by day, as it is said, \"look at it\". When one puts it on by day one recites the bĕrakha, from the time one can distinguish between its tĕkheleth (blue) and its white. It is permitted to wear it at night, whether on a weekday or on Shabbath, provided one does not recite the bĕrakha (Rambam, Ṣiṣith 3:7–8; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 18:1, 3; Ben ʾIsh Ḥay, Year 1, Lekh Lĕkha 15–16)."
+        },
+        {
+          "type": "rubric",
+          "id": "sisith-3",
+          "hebrewLead": "ג.",
+          "lead": "3.",
+          "hebrew": "קטן היודע להתעטף חיב בציצית מדברי סופרים, כדי לחנכו במצות. ונשים פטורות, ואם רצו להתעטף מתעטפות בלא ברכה, ויש חולקים שאין להן להתעטף (רמב״ם ציצית ג:י; שו״ע או״ח יז:ב, ג; בא״ח שנה א׳ לך לך יג–יד).",
+          "translation": "A minor who knows how to wrap himself is obligated in ṣiṣith middivre sofĕrim (of rabbinic origin), in order to train him in miṣwoth. Women are exempt; if they wish to wrap themselves they do so without a bĕrakha, and some disagree and hold that they should not wrap themselves (Rambam, Ṣiṣith 3:10; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 17:2, 3; Ben ʾIsh Ḥay, Year 1, Lekh Lĕkha 13–14)."
+        },
+        {
+          "type": "rubric",
+          "id": "sisith-4",
+          "hebrewLead": "ד.",
+          "lead": "4.",
+          "hebrew": "אפשר להתעטף בטלית רחבה מקפלת לחצי רחבה או פשוטה לכל ארכה, שקפול אינו תפירה (נלמד מרמב״ם ציצית א:יז; שו״ע או״ח י:ז). ואסור לרקם על הטלית פסוקים מן התורה או ברכות (תשובות הרמב״ם סי׳ רס״ח).",
+          "translation": "One may wrap oneself in a wide ṭallith either folded to half its width or spread open along its full length, for folding is not sewing (derived from Rambam, Ṣiṣith 1:17; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 10:7). It is forbidden to embroider verses from the Torah or bĕrakhoth on a ṭallith (Tĕshuvoth HaRambam §268)."
+        },
+        {
+          "type": "rubric",
+          "id": "sisith-5",
+          "hebrewLead": "ה.",
+          "lead": "5.",
+          "hebrew": "קדם שיברך יעיין בחוטי הציצית שהם כשרים ויפריד אותם זה מזה. מברך מעמד, ואחר כך מתעטף ומכסה ראשו בטלית, ומחזיר שתי ציציות לפניו ושתים לאחריו. ואם פשט טליתו, אפלו פשטה זמנית ודעתו לחזור ולהתעטף בה מיד, כשיחזור ויתעטף יברך שנית (שו״ע או״ח ח:א, ב, ד, ז, ט, יד; וראה מור״ם בסעיף יד; בא״ח שנה א׳ בראשית ג, ו; ולענין פשיטה זמנית, שמקל, ראה בא״ח שם י).",
+          "translation": "Before reciting the bĕrakha one examines the threads of the ṣiṣith to see that they are valid and separates them from one another. One recites the bĕrakha standing, then wraps oneself and covers one's head with the ṭallith, and places two ṣiṣiyyoth in front and two behind. If one took off one's ṭallith — even temporarily, intending to wrap oneself in it again right away — one recites the bĕrakha again upon wrapping oneself anew (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 8:1, 2, 4, 7, 9, 14; and see Moram on paragraph 14; Ben ʾIsh Ḥay, Year 1, Bĕreʾshith 3, 6; and regarding temporary removal, where he is lenient, see Ben ʾIsh Ḥay, ibid. 10)."
+        },
+        {
+          "type": "rubric",
+          "id": "sisith-6",
+          "hebrewLead": "ו.",
+          "lead": "6.",
+          "hebrew": "לעולם ישתדל אדם להיות עטוף בכסות המחיבת בציצית, שאין ראוי לאדם חסיד לפטר עצמו ממצוה זו, ובשעת התפלה צריך להזהר ביותר (רמב״ם ציצית ג:יב; שו״ע או״ח כד:א). ולעולם יהא זהיר במצות ציצית, שהרי הכתוב שקלה ותלה בה כל המצות כלן, שנאמר ״וראיתם אתו וזכרתם את כל מצות יְיָ״ (רמב״ם ציצית ג:יג).",
+          "translation": "A person should always strive to be wrapped in a garment that is obligated in ṣiṣith, for it is not fitting for a ḥasidh (pious person) to exempt himself from this miṣwa; and at the time of prayer one must be especially careful (Rambam, Ṣiṣith 3:12; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 24:1). One should always be careful with the miṣwa of ṣiṣith, for Scripture weighed it and made all the miṣwoth depend on it, as it is said, \"look at it and recall all Adhonay's commandments\" (Rambam, Ṣiṣith 3:13)."
+        },
+        {
+          "type": "rubric",
+          "id": "sisith-berakha-cue",
+          "hebrew": "קדם שיתעטף מברך מעמד:",
+          "translation": "Before wrapping oneself, one recites the bĕrakha standing:"
+        },
+        {
+          "type": "text",
+          "id": "lehithattef-basisith",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהִתְעַטֵּף בַּצִּיצִית.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us to wrap ourselves in ṣiṣith.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu lĕhith'aṭṭef baṣṣiṣith."
+        },
+        {
+          "type": "rubric",
+          "id": "sisith-nusah-note",
+          "hebrew": "בן איש חי כתב לברך ״בְּצִיצִית״ בשוא תחת הבי״ת ולא בפתח (בא״ח שנה א׳ בראשית ב), והנוסח כאן כסידור הרב קאפח.",
+          "translation": "Ben ʾIsh Ḥay wrote to say \"bĕṣiṣith\", with a shĕwaʾ under the beth rather than a pattaḥ (Ben ʾIsh Ḥay, Year 1, Bĕreʾshith 2); the wording here follows the siddur of Rav Qafiḥ."
+        }
+      ]
+    },
+    {
+      "id": "tefillin",
+      "title": "Tĕfillin",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "tefillin-1",
+          "hebrewLead": "א.",
+          "lead": "1.",
+          "hebrew": "מצות עשה מן התורה להניח תפלין על היד ולהניח על הראש (רמב״ם תפלין ד:א–ב).",
+          "translation": "It is a positive miṣwa min hattora (by Torah law) to put tĕfillin on the arm and to put them on the head (Rambam, Tĕfillin 4:1–2)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-2",
+          "hebrewLead": "ב.",
+          "lead": "2.",
+          "hebrew": "מקום הנחת תפלין שליד, קושר אותה על שמאלו על הקביורת, והוא הבשר התפוח שבמרפק, ויטה אותה מעט לצד הגוף כדי שתהיה כנגד לבו (רמב״ם תפלין ד:ב; שו״ע או״ח כז:א; בא״ח שנה א׳ חיי שרה ו).",
+          "translation": "The place for the tĕfillin shel yadh (of the arm): one binds it on the left arm on the qibboreth, which is the bulging flesh of the upper arm, and tilts it slightly toward the body so that it is opposite the heart (Rambam, Tĕfillin 4:2; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 27:1; Ben ʾIsh Ḥay, Year 1, Ḥayye Sara 6)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-3",
+          "hebrewLead": "ג.",
+          "lead": "3.",
+          "hebrew": "מקום הנחת תפלין שלראש על הקדקוד, והוא המקום שמוחו של תינוק רופס, באמצע הראש כנגד בין העינים. ויהיה הקשר בגובה העורף, שהוא סוף הגלגלת (רמב״ם תפלין ד:א; שו״ע או״ח כז:ט–י; בא״ח שנה א׳ חיי שרה א–ג).",
+          "translation": "The place for the tĕfillin shel roʾsh (of the head) is on the crown, which is the place where an infant's skull is soft, in the middle of the head in line with the space between the eyes. The knot should be at the top of the nape, which is the end of the skull (Rambam, Tĕfillin 4:1; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 27:9–10; Ben ʾIsh Ḥay, Year 1, Ḥayye Sara 1–3)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-4",
+          "hebrewLead": "ד.",
+          "lead": "4.",
+          "hebrew": "איטר מניח תפלין בימינו, שהיא לו כשמאל כל אדם (רמב״ם תפלין ד:ג; שו״ע או״ח כז:ו; בא״ח שנה א׳ חיי שרה ז).",
+          "translation": "An ʾiṭṭer (left-handed person) puts tĕfillin on his right arm, which for him is like everyone else's left (Rambam, Tĕfillin 4:3; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 27:6; Ben ʾIsh Ḥay, Year 1, Ḥayye Sara 7)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-5",
+          "hebrewLead": "ה.",
+          "lead": "5.",
+          "hebrew": "כשיניח תפלין שליד על הקביורת, קדם קשירה יברך ״להניח תפלין״, ומהדק הרצועה סביב הקביורת, וממשיך לכרוך על הזרוע, ואחר כך מותח הרצועה על ידו ויכרוך אותה על אצבעו האמצעית, ואחר כך יניח שלראש (רמב״ם תפלין ד:ז; ג:יג).",
+          "translation": "When one places the tĕfillin shel yadh on the qibboreth, before binding it one recites the bĕrakha \"lĕhanniaḥ tĕfillin\", tightens the strap around the qibboreth, and continues winding it down the arm; one then stretches the strap across the hand and winds it around the middle finger, and afterward puts on the shel roʾsh (Rambam, Tĕfillin 4:7; 3:13)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-6",
+          "hebrewLead": "ו.",
+          "lead": "6.",
+          "hebrew": "אסור להפסיק בדבור בין תפלין שליד לשלראש, ואפלו להשיב שלום לרבו, לפי שברכה אחת לשתיהן. ואם הפסיק בדבור ביניהן, עבירה היא בידו, וצריך לברך על שלראש ברכה אחרת, והיא ״אשר קדשנו במצותיו וצונו על מצות תפלין״ (רמב״ם תפלין ד:ו; שו״ע או״ח כה:ט; בא״ח שנה א׳ וירא ז, י).",
+          "translation": "It is forbidden to interrupt by speaking between the tĕfillin shel yadh and the shel roʾsh, even to return a greeting to one's teacher, because there is one bĕrakha for both. If one did interrupt by speaking between them, one has committed a transgression, and must recite another bĕrakha over the shel roʾsh, namely \"ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al miṣwath tĕfillin\" (Rambam, Tĕfillin 4:6; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 25:9; Ben ʾIsh Ḥay, Year 1, Wayyeraʾ 7, 10)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-7",
+          "hebrewLead": "ז.",
+          "lead": "7.",
+          "hebrew": "בזמן שירצה להניח שלראש בלבד יברך על מצות תפלין, ואין תפלין שליד מעכבת של ראש, ולא שלראש מעכבת שליד (רמב״ם תפלין ד:ד–ה; שו״ע או״ח כה:ה; בא״ח שנה א׳ וירא ו).",
+          "translation": "When one wishes to put on the shel roʾsh alone, one recites \"'al miṣwath tĕfillin\". The tĕfillin shel yadh does not prevent fulfilling the shel roʾsh, nor does the shel roʾsh prevent fulfilling the shel yadh (Rambam, Tĕfillin 4:4–5; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 25:5; Ben ʾIsh Ḥay, Year 1, Wayyeraʾ 6)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-8",
+          "hebrewLead": "ח.",
+          "lead": "8.",
+          "hebrew": "זמן הנחת תפלין ביום ולא בלילה, שנאמר ״מימים ימימה״, משיראה את חברו ברחוק ארבע אמות ויכירנו (רמב״ם תפלין ד:י; שו״ע או״ח ל:א–ב; בא״ח שנה א׳ חיי שרה ח).",
+          "translation": "The time for putting on tĕfillin is by day and not at night, as it is said, \"from year to year\" — from when one can see one's fellow at a distance of 4 ʾammoth (cubits) and recognize him (Rambam, Tĕfillin 4:10; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 30:1–2; Ben ʾIsh Ḥay, Year 1, Ḥayye Sara 8)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-9",
+          "hebrewLead": "ט.",
+          "lead": "9.",
+          "hebrew": "אין מניחין תפלין לא בשבתות ולא בימים טובים, שנאמר ״והיה לך לאות״, ושבת ויום טוב הם עצמן אות (רמב״ם תפלין ד:י; שו״ע או״ח לא:א). בחל המועד אין מניחין תפלין, למנהג תימן וספרד, שגם ימיו אות, ולדעת הרב קאפח נראה שכן דעת רבנו (שו״ע או״ח לא:ב; בא״ח שנה א׳ וירא יב; רמב״ם תפלין ד:י, ובהערת הרב קאפח שם).",
+          "translation": "Tĕfillin are not put on on Shabbath or on yom ṭov, as it is said, \"And this shall serve you as a sign\", and Shabbath and yom ṭov are themselves an ʾoth (sign) (Rambam, Tĕfillin 4:10; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 31:1). On ḥol hammo'edh tĕfillin are not put on, by the minhagh of Teman and Sĕfaradh, for its days too are an ʾoth; and in Rav Qafiḥ's view it appears that this is also the opinion of Rabbenu (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 31:2; Ben ʾIsh Ḥay, Year 1, Wayyeraʾ 12; Rambam, Tĕfillin 4:10, and Rav Qafiḥ's note there)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-10",
+          "hebrewLead": "י.",
+          "lead": "10.",
+          "hebrew": "התפלין צריכין שמירה, שלא יפיח בהן, ולא ילך בהן למקומות המטנפים, ולא יסיח דעתו מהן (רמב״ם תפלין ד:יג–טו; שו״ע או״ח לז:ב; בא״ח שנה א׳ חיי שרה טז–יז).",
+          "translation": "Tĕfillin require guarding: one may not pass wind while wearing them, nor go with them into filthy places, nor let one's mind be diverted from them (Rambam, Tĕfillin 4:13–15; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 37:2; Ben ʾIsh Ḥay, Year 1, Ḥayye Sara 16–17)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-11",
+          "hebrewLead": "יא.",
+          "lead": "11.",
+          "hebrew": "קטן שיודע לשמור תפלין, אביו לוקח לו תפלין כדי לחנכו במצות (רמב״ם תפלין ד:יג; שו״ע או״ח לז:ג).",
+          "translation": "A minor who knows how to guard tĕfillin: his father acquires tĕfillin for him in order to train him in miṣwoth (Rambam, Tĕfillin 4:13; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 37:3)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-12",
+          "hebrewLead": "יב.",
+          "lead": "12.",
+          "hebrew": "יזהר להוציא שליד תחלה מן הכיס, כדי שיניחה תחלה (רמב״ם תפלין ד:ח; שו״ע או״ח כה:א; בא״ח שנה א׳ וירא יט). אם טעה או נאנס והוציא שלראש תחלה, יניח שלראש תחלה ויברך על מצות תפלין, ואחר כך יניח שליד ויברך להניח תפלין, כדי שלא יעביר על המצוות; ולדעת מרן יעביר על אותה מצוה ויניח שליד תחלה (רמב״ם תפלין ד:ח; שו״ע או״ח כה:ו).",
+          "translation": "One should take care to take the shel yadh out of the bag first, so as to put it on first (Rambam, Tĕfillin 4:8; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 25:1; Ben ʾIsh Ḥay, Year 1, Wayyeraʾ 19). If by mistake or by circumstance one took out the shel roʾsh first, one puts on the shel roʾsh first and recites \"'al miṣwath tĕfillin\", and afterward puts on the shel yadh and recites \"lĕhanniaḥ tĕfillin\", so as not to pass over miṣwoth; in Maran's view, one does pass over that miṣwa and puts on the shel yadh first (Rambam, Tĕfillin 4:8; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 25:6)."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-shel-yadh-cue",
+          "hebrew": "כשיניח שליד, קדם קשירה, מברך:",
+          "translation": "When putting on the shel yadh, before binding it, one recites the bĕrakha:"
+        },
+        {
+          "type": "text",
+          "id": "lehanniah-tefillin",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַנִּיחַ תְּפִלִּין.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us to put on tĕfillin.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu lĕhanniaḥ tĕfillin."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-shel-rosh-cue",
+          "hebrew": "וכשיניח שלראש בלבד, או אם הפסיק בדבור בין שליד לשלראש, מברך:",
+          "translation": "When putting on the shel roʾsh alone, or if one interrupted by speaking between the shel yadh and the shel roʾsh, one recites the bĕrakha:"
+        },
+        {
+          "type": "text",
+          "id": "al-miswath-tefillin",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל מִצְוַת תְּפִלִּין.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us concerning the miṣwa of tĕfillin.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al miṣwath tĕfillin."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillin-nusah-note",
+          "hebrew": "מרן ובן איש חי כתבו לברך ״לְהָנִיחַ״ בקמץ תחת ההא וללא דגש (שו״ע או״ח כה:ז; בא״ח שנה א׳ וירא ט), והנוסח כאן כסידור הרב קאפח.",
+          "translation": "Maran and Ben ʾIsh Ḥay wrote to say \"lĕhaniaḥ\", with a qamaṣ under the heʾ and without a daghesh (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 25:7; Ben ʾIsh Ḥay, Year 1, Wayyeraʾ 9); the wording here follows the siddur of Rav Qafiḥ."
+        }
+      ]
+    },
+    {
+      "id": "tevilath-nidda",
+      "title": "Immersion of a Nidda",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "tevilath-nidda-1",
+          "hebrewLead": "א.",
+          "lead": "1.",
+          "hebrew": "כל הטמאים אין להם טהרה אלא בטבילה במי מקוה. והנדה אינה עולה מטמאתה עד שתטבול; אין ההמתנה לבדה מטהרת אותה, ואפלו נפלו עליה כל מימות שבעולם הרי היא כמו שהיתה, ואין רחיצה באמבטיה מועילה, שאין הטמאה לכלוך גשמי שהמים מעבירים אותו, אלא גזרת הכתוב היא, והדבר תלוי בכוונת הלב (רמב״ם מקואות א:א, י״א:י״ב; איסורי ביאה י״א:ט״ז, י״ח; שו״ע יו״ד ר״א:א; בא״ח ש״ש שמיני א).",
+          "translation": "All who are ṭĕmeʾim have no ṭahŏra except through ṭĕvila (immersion) in the waters of a miqweh. A nidda does not emerge from her ṭumʾa until she immerses; waiting alone does not render her ṭĕhora, and even if all the waters of the world were to fall upon her she remains as she was. Washing in a bathtub is of no avail, for ṭumʾa is not physical dirt that water removes; rather, it is a gĕzerath hakkathuv, and the matter depends on kawwanath hallev (Rambam, Miqwaʾoth 1:1, 11:12; ʾIssure Viʾa 11:16, 18; Shulḥan 'Arukh, Yoreh De'a 201:1; Ben ʾIsh Ḥay, Year 2, Shĕmini 1)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-nidda-2",
+          "hebrewLead": "ב.",
+          "lead": "2.",
+          "hebrew": "המקוה הכשר הוא מים מכנסים שיש בהם ארבעים סאה (שיעור: 288 ליטר, או 77 גלון אמריקאי), כדי להעלות בהם כל גוף האדם בבת אחת, ושאינם שאובים, כלומר שלא נשאבו בכלי. ואלו המים הכשרים מן הטבע: מעין, והים, ונהר שמימיו נמשכים, ובור או ברכה שנקוו בהם מי גשמים בקרקע. ובנהר יש תנאים, וישאלו רב (רמב״ם מקואות ד:א–ב, ו:י, ט:ה–ח, ט:י״ב; שו״ע יו״ד ר״א:א; בא״ח ש״ש שמיני א).",
+          "translation": "A valid miqweh is gathered water containing 40 sĕʾa (the measure: 288 liters, or 77 US gallons), enough for a person's entire body to be covered at once, and which is not shĕʾuvim — that is, not drawn in a vessel. These are the waters that are naturally valid: a spring, the sea, a river whose waters flow, and a pit or pool in the ground in which rainwater has collected. For a river there are conditions, and one should ask a Rav (Rambam, Miqwaʾoth 4:1–2, 6:10, 9:5–8, 9:12; Shulḥan 'Arukh, Yoreh De'a 201:1; Ben ʾIsh Ḥay, Year 2, Shĕmini 1)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-nidda-3",
+          "hebrewLead": "ג.",
+          "lead": "3.",
+          "hebrew": "הטובלת מטבלת כל גופה וכל שערותיה בבת אחת, כדרך גדילתה, לא זקופה ולא כפופה יותר מדי, ולא יהיה דבר חוצץ בינה לבין המים. והכלל: דבר שהוא על רב גופה ומקפדת עליו, חוצץ מן התורה; על מעוטה ומקפדת עליו, או על רבה ואינה מקפדת עליו, חוצץ מדבריהם; על מעוטה ואינה מקפדת עליו, אינו חוצץ. ובדיעבד, אם יש ספק אם היה דבר חוצץ, אינה חוזרת וטובלת אלא בחציצה מן התורה. ובגדים שהמים באים בהם אינם חוצצים: טבלה בבגדיה עלתה לה טבילה ומתרת לבעלה (רמב״ם מקואות א:ז, י, י״ב; ב:כ״ב; שו״ע יו״ד קצ״ח:א, מ״ו).",
+          "translation": "The woman immersing immerses her entire body and all her hair at once, in her natural posture, neither standing too upright nor bending too far, and nothing may be ḥoṣeṣ (an interposing barrier) between her and the water. The rule: something covering most of her body that she minds is ḥoṣeṣ min hattora; something covering only a small part of her body that she minds, or covering most of it that she does not mind, is ḥoṣeṣ middivrehem; something covering only a small part that she does not mind is not ḥoṣeṣ. Bĕdhi'ăvadh, if there is doubt whether something was ḥoṣeṣ, she does not immerse again except for a ḥăṣiṣa min hattora. Garments that the water enters are not ḥoṣeṣ: if she immersed in her clothes, the ṭĕvila is valid for her and she is permitted to her husband (Rambam, Miqwaʾoth 1:7, 10, 12; 2:22; Shulḥan 'Arukh, Yoreh De'a 198:1, 46)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-nidda-4",
+          "hebrewLead": "ד.",
+          "lead": "4.",
+          "hebrew": "טבעות ותכשיטים, רפים אינם חוצצים, וחזקים ודבוקים בבשר חוצצים, ונוהגות להסירם קדם הטבילה (רמב״ם מקואות ב:ד).",
+          "translation": "Rings and jewelry: if loose they are not ḥoṣeṣ, but if tight and clinging to the flesh they are ḥoṣeṣ; the custom is to remove them before the ṭĕvila (Rambam, Miqwaʾoth 2:4)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-nidda-5",
+          "hebrewLead": "ה.",
+          "lead": "5.",
+          "hebrew": "מנהג פשוט בכל נשי הספרדים להסיר קדם הטבילה כל שער בגופן שדרכן להסירו (כגון בית השחי, הרגלים ובית הסתרים). ואם שכחה, והשער נקי ואינו מסרך, עלתה לה טבילה, ואינה צריכה לחזר ולטבל. אבל שער שנתקשר ונסרך חוצץ אם מקפדת עליו (שו״ע יו״ד קצ״ח:ו, וברכי יוסף שם; פתחי תשובה שם ס״ק י״ב; דרכי טהרה פט״ז; בא״ח ש״ש שמיני ז; רמב״ם מקואות ב:ז, ט״ו).",
+          "translation": "It is the widespread minhagh among all Sĕfaraddi women to remove all body hair that they ordinarily remove prior to ṭĕvila (such as the underarms, the legs, and the pubic area). If she forgot, and the hair is clean and not matted, the ṭĕvila is valid for her and she need not immerse again. But once hair has become knotted and matted it is ḥoṣeṣ if she minds it (Shulḥan 'Arukh, Yoreh De'a 198:6, and Birke Yosef ad loc.; Pithḥe Thĕshuva ad loc., §12; Darkhe Ṭahŏra, ch. 16; Ben ʾIsh Ḥay, Year 2, Shĕmini 7; Rambam, Miqwaʾoth 2:7, 15)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-nidda-6",
+          "hebrewLead": "ו.",
+          "lead": "6.",
+          "hebrew": "ומברכת קדם הטבילה, בעודה עומדת בחלוקה. וטוב להניח סודר על ראשה בשעת הברכה; ואחר הברכה מסירה את הסודר ופושטת חלוקה וטובלת. ואם לא ברכה אז, תברך אחר שתכנס במים עד צוארה. וטובלת פעם אחת בלבד, שהטובל פעמים הרי זה מגנה, וכך מנהגנו (שו״ע יו״ד ר:א; בא״ח ש״ש שמיני י״ט; רמב״ם ברכות י״א:ב; מקואות א:ט).",
+          "translation": "She recites the bĕrakha before the ṭĕvila, while still standing in her robe. It is good to cover her head during the bĕrakha; after the bĕrakha she removes her headcovering and robe and immerses. If she did not recite the bĕrakha then, she should recite it after entering the water up to her neck. She immerses only once, for one who immerses twice is acting improperly, and such is our minhagh (Shulḥan 'Arukh, Yoreh De'a 200:1; Ben ʾIsh Ḥay, Year 2, Shĕmini 19; Rambam, Bĕrakhoth 11:2; Miqwaʾoth 1:9)."
+        },
+        {
+          "type": "rubric",
+          "id": "wihi-noam-cue",
+          "hebrew": "וטוב לומר פסוק ״ויהי נעם״ קדם הברכה (בא״ח שם):",
+          "translation": "It is good to say the verse \"Wihi no'am\" before the bĕrakha (Ben ʾIsh Ḥay, ibid.):"
+        },
+        {
+          "type": "text",
+          "id": "wihi-noam",
+          "hebrew": "וִיהִ֤י ׀ נֹ֤עַם אֲדֹנָ֥י אֱלֹהֵ֗ינוּ עָ֫לֵ֥ינוּ וּמַעֲשֵׂ֣ה יָ֭דֵינוּ כּוֹנְנָ֥ה עָלֵ֑ינוּ וּֽמַעֲשֵׂ֥ה יָ֝דֵ֗ינוּ כּוֹנְנֵֽהוּ׃",
+          "translation": "May the favor of my Sovereign, our God, be upon us; let the work of our hands prosper, O prosper the work of our hands! (Psalm 90:17)",
+          "translit": "wihi no'am ʾădhonay ʾĕlohenu 'alenu uma'ăseh yadhenu konĕna 'alenu uma'ăseh yadhenu konĕnehu."
+        },
+        {
+          "type": "rubric",
+          "id": "tevila-berakha-cue",
+          "hebrew": "לפני הטבילה מברכת:",
+          "translation": "Before the ṭĕvila she recites the bĕrakha:"
+        },
+        {
+          "type": "text",
+          "id": "al-hattevila",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל הַטְּבִילָה.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us concerning immersion.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al haṭṭĕvila."
+        }
+      ]
+    },
+    {
+      "id": "tevilath-kelim",
+      "title": "Immersion of Kelim",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "tevilath-kelim-1",
+          "hebrewLead": "א.",
+          "lead": "1.",
+          "hebrew": "כלי סעודה של מתכת או של זכוכית, וכן כלי המצפה אבר מבפנים, שקנאו ישראל מגוי, ואפלו הוא חדש, צריך טבילה במקוה כשר, ואחר כך מתר לאכל ולשתות בו. וטבילה זו מדברי סופרים, ואינה לעניין טמאה וטהרה אלא משום גיעולי גוים. אבל כלי עץ וכלי אבנים אינם צריכים טבילה (רמב״ם מאכלות אסורות י״ז:ג, ה, ו; שו״ע יו״ד ק״כ:א).",
+          "translation": "Kelim (vessels) used for a meal that are made of metal or glass, and likewise a kĕli coated with lead on the inside, which a Jew acquired from a non-Jew — even if new — require ṭĕvila in a valid miqweh, after which it is permitted to eat and drink from them. This ṭĕvila is middivre sofĕrim (of rabbinic origin), and it is not a matter of ṭumʾa and ṭahŏra but is on account of gi'ule ghoyim. Kelim of wood and kelim of stone, however, do not require ṭĕvila (Rambam, Maʾăkhaloth ʾĂsuroth 17:3, 5, 6; Shulḥan 'Arukh, Yoreh De'a 120:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-kelim-2",
+          "hebrewLead": "ב.",
+          "lead": "2.",
+          "hebrew": "כלי שנשתמש בו הגוי צריך קדם הטבילה הכשרת כלים (רמב״ם שם ג–ד).",
+          "translation": "A kĕli that the non-Jew has used requires hakhsharath kelim (kashering) before the ṭĕvila (Rambam, ibid. 3–4)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-kelim-3",
+          "hebrewLead": "ג.",
+          "lead": "3.",
+          "hebrew": "השואל או שוכר כלי מהגוי אינו צריך להטבילו, אבל אם ישראל קנאו מהגוי והשאילו לחברו, צריך טבילה (רמב״ם שם ו; שו״ע יו״ד ק״כ:ח; בא״ח ש״ש מטות א).",
+          "translation": "One who borrows or rents a kĕli from a non-Jew need not immerse it; but if a Jew acquired it from a non-Jew and lent it to another, it requires ṭĕvila (Rambam, ibid. 6; Shulḥan 'Arukh, Yoreh De'a 120:8; Ben ʾIsh Ḥay, Year 2, Maṭṭoth 1)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-kelim-4",
+          "hebrewLead": "ד.",
+          "lead": "4.",
+          "hebrew": "צריך לנקות הכלי מכל לכלוך וחלודה, שלא יהיה חציצה, וצריך להטביל את כל הכלי בין מבפנים בין מבחוץ, שיכניסו במים ולא ישאר ממנו חוץ למים אפלו קצת. ואם הוא כלי גדול, לא יטביל תחלה צד אחד ואחר כך הצד השני, מפני שצריך שכלו יהיה נטבל בפעם אחת (בא״ח ש״ש מטות ב, י״ז).",
+          "translation": "One must clean the kĕli of all dirt and rust so that there is no ḥăṣiṣa, and must immerse the entire kĕli, inside and out, putting it into the water so that not even a little of it remains outside the water. If it is a large kĕli, one may not immerse one side first and then the other, because all of it must be immersed at one time (Ben ʾIsh Ḥay, Year 2, Maṭṭoth 2, 17)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-kelim-5",
+          "hebrewLead": "ה.",
+          "lead": "5.",
+          "hebrew": "אם מטביל כמה כלים מברך ״על טבילת כלים״, ואם מטביל כלי אחד מברך ״על טבילת כלי״ (שו״ע יו״ד ק״כ:ג; רב פעלים ח״א סימן י״ח).",
+          "translation": "If one is immersing several kelim, one recites \"'al ṭĕvilath kelim\"; if one is immersing a single kĕli, one recites \"'al ṭĕvilath kĕli\" (Shulḥan 'Arukh, Yoreh De'a 120:3; Rav Pĕ'alim, vol. 1, §18)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-kelim-berakha-cue",
+          "hebrew": "קדם שיטביל מברך:",
+          "translation": "Before immersing, one recites the bĕrakha:"
+        },
+        {
+          "type": "text",
+          "id": "al-tevilath-kelim",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ עַל טְבִילַת כֵּלִים (כְּלִי).",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us concerning the immersion of vessels (a vessel).",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu 'al ṭĕvilath kelim (kĕli)."
+        },
+        {
+          "type": "rubric",
+          "id": "tevilath-kelim-after-berakha",
+          "hebrew": "ומיד אחר הברכה יטביל. ובשעה שהוא מטביל לא יאחז הכלי בחזקה אלא ברפיון, ולכתחלה ירטיב קדם את ידיו במי המקוה עצמו (שו״ע יו״ד ק״כ:ב; בא״ח ש״ש מטות מ).",
+          "translation": "Immediately after the bĕrakha one immerses. While immersing, one should not grip the kĕli tightly but hold it loosely, and lĕkhattĕḥilla (ideally) one should first wet one's hands in the water of the miqweh itself (Shulḥan 'Arukh, Yoreh De'a 120:2; Ben ʾIsh Ḥay, Year 2, Maṭṭoth 40)."
+        }
+      ]
+    },
+    {
+      "id": "mezuza",
+      "title": "Affixing a Mĕzuza",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "mezuza-1",
+          "hebrewLead": "א.",
+          "lead": "1.",
+          "hebrew": "מצות עשה לכתוב על קלף של עור פרשת ״שמע ישראל״ ופרשת ״והיה אם שמוע״, ולקבעם על מזוזת הפתח. ובכל פעם שנכנס ויוצא יפגע בה ביחוד השם ויזכור אהבתו, ולא תהיה כוונת האדם בהנחתה בשביל שמירה או שכר, אלא לקיים מצות הבורא יתברך (שו״ע יו״ד רפ״ה:א; רמב״ם תפילין ומזוזה ה:ד, ו:י״ג; בא״ח ש״ש כי תבא א).",
+          "translation": "It is a positive miṣwa to write on qĕlaf (parchment) of hide the parasha \"Shĕma' Yisraʾel\" and the parasha \"wĕhaya ʾim shamoa'\", and to affix them to the doorpost of the entrance. Each time one enters and leaves, one encounters in it the unity of the Divine Name and remembers His love. A person's intention in placing it should not be for the sake of protection or reward, but to fulfill the miṣwa of the Creator, blessed be He (Shulḥan 'Arukh, Yoreh De'a 285:1; Rambam, Tĕfillin Umĕzuza 5:4, 6:13; Ben ʾIsh Ḥay, Year 2, Ki Thavoʾ 1)."
+        },
+        {
+          "type": "rubric",
+          "id": "mezuza-2",
+          "hebrewLead": "ב.",
+          "lead": "2.",
+          "hebrew": "הבית או החדר החיב במזוזה צריך שיהיו בו עשרה תנאים, ואם חסר אחד מהם פטור: שיהיה בו ארבע אמות על ארבע אמות או יותר; ושיהיו לו שתי מזוזות; ומשקוף; ותקרה; ודלתות; ושיהיה השער גבוה עשרה טפחים או יותר; ושיהיה הבית חל; ועשוי לדירת אדם; ולדירת כבוד; ולדירת קבע. ופרטי הדינים עיין שם בפרק ו (רמב״ם תפילין ומזוזה ו:א). ומרן מחיב גם רפת, לולין ואוצרות יין ושמן, ובית תבן ועצים, ושאלו רב (שו״ע יו״ד רפ״ו:א–ב).",
+          "translation": "A house or room that is obligated in mĕzuza must meet ten conditions, and if one of them is lacking it is exempt: it must be 4 ʾammoth (cubits) by 4 ʾammoth or more; it must have two doorposts; a lintel; a ceiling; and doors; the entrance must be 10 ṭĕfaḥim (handbreadths) high or more; the house must be ḥol (not sacred); made for human habitation; for dignified habitation; and for permanent habitation. For the details of these laws, see chapter 6 there (Rambam, Tĕfillin Umĕzuza 6:1). Maran also obligates a cattle barn, poultry coops, storehouses of wine and oil, and a storehouse for straw or wood; ask a Rav (Shulḥan 'Arukh, Yoreh De'a 286:1–2)."
+        },
+        {
+          "type": "rubric",
+          "id": "mezuza-3",
+          "hebrewLead": "ג.",
+          "lead": "3.",
+          "hebrew": "כיצד קובעים: גוללה מסוף הכתב לתחלתו עד שיהיה ״שמע״ לצד חוץ, ומנהג פשוט שכותבים עליה מבחוץ ״שדי״, ואחר שגוללה יראה ״שדי״ בחוץ. ומניחה בתוך שפופרת וקובעה במזוזת הפתח במסמרים, או חופר במזוזה ומכניסה בה, ויחפר פחות מטפח (כ-8 ס״מ), וישאיר קצת מהמזוזה בחוץ שיראו אותה (רמב״ם תפילין ומזוזה ה:ד, ו, ח; שו״ע יו״ד רפ״ט:ד, ו; בא״ח ש״ש כי תבא י״ד).",
+          "translation": "How it is affixed: one rolls it from the end of the writing toward its beginning, so that \"Shĕma'\" is toward the outside. It is the widespread minhagh to write \"Shadday\" on its outer side, and once it is rolled \"Shadday\" should be visible on the outside. One places it in a tube and affixes it to the doorpost of the entrance with nails, or hollows out the doorpost and inserts it there; one should hollow out less than a ṭefaḥ (about 8 cm) and leave a little of the mĕzuza protruding so that it can be seen (Rambam, Tĕfillin Umĕzuza 5:4, 6, 8; Shulḥan 'Arukh, Yoreh De'a 289:4, 6; Ben ʾIsh Ḥay, Year 2, Ki Thavoʾ 14)."
+        },
+        {
+          "type": "rubric",
+          "id": "mezuza-4",
+          "hebrewLead": "ד.",
+          "lead": "4.",
+          "hebrew": "יקבענה בטפח החיצון של חלל הפתח, בצד ימין של הנכנס, ואם קבעה בשמאל פסולה. ומניחה בתחלת השליש העליון של גובה השער, דהינו אם גובה השער מהרצפה עד המשקוף הוא 1.80 מטר, מניחה בגובה של 1.20 מטר מהרצפה. ואם קבעה למעלה מזה כשרה, ובלבד שתהיה רחוקה מהמשקוף טפח. ואם הניחה למטה מ-1.20 מטר, או שהניחה למעלה סמוך למשקוף, פסולה, וצריך להחזירה למקומה הראוי בלי ברכה. צריך להניחה זקופה, ארכה לאורך מזוזת הפתח, ולא באלכסון כמו אחינו האשכנזים. ואם הניחה באלכסון צריך להפרישה ולהניחה זקופה (שו״ע יו״ד רפ״ט:ב, ו; רמב״ם תפילין ומזוזה ו:י״ב; בא״ח ש״ש כי תבא ז, ח).",
+          "translation": "One affixes it within the outermost ṭefaḥ of the doorway's opening, on the right side of one entering; if one affixed it on the left, it is pĕsula (invalid). One places it at the beginning of the upper third of the entrance's height: that is, if the height of the entrance from the floor to the lintel is 1.80 meters, one places it at a height of 1.20 meters from the floor. If one affixed it higher than this it is kĕshera (valid), provided it is a ṭefaḥ away from the lintel. If one placed it below 1.20 meters, or placed it high up next to the lintel, it is pĕsula, and one must return it to its proper place without a bĕrakha. It must be placed upright, its length running along the doorpost of the entrance, and not diagonally as our ʾAshkĕnazzi brethren do. If one placed it diagonally, one must remove it and place it upright (Shulḥan 'Arukh, Yoreh De'a 289:2, 6; Rambam, Tĕfillin Umĕzuza 6:12; Ben ʾIsh Ḥay, Year 2, Ki Thavoʾ 7, 8)."
+        },
+        {
+          "type": "rubric",
+          "id": "mezuza-berakha-cue",
+          "hebrew": "קדם שיקבע מברך (שו״ע יו״ד רפ״ט:א; רמב״ם תפילין ומזוזה ה:ז):",
+          "translation": "Before affixing it, one recites the bĕrakha (Shulḥan 'Arukh, Yoreh De'a 289:1; Rambam, Tĕfillin Umĕzuza 5:7):"
+        },
+        {
+          "type": "text",
+          "id": "liqboa-mezuza",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לִקְבֹּעַ מְזוּזָה.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who sanctified us with His commandments and commanded us to affix a mezuzah.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu liqboa' mĕzuza."
+        },
+        {
+          "type": "rubric",
+          "id": "zeh-hashaar-cue",
+          "hebrew": "ואחר שיקבענה ינשקנה ויאמר (בא״ח שם):",
+          "translation": "After affixing it, one kisses it and says (Ben ʾIsh Ḥay, ibid.):"
+        },
+        {
+          "type": "text",
+          "id": "zeh-hashaar",
+          "hebrew": "זֶה־הַשַּׁ֥עַר לַיְיָ֑ צַ֝דִּיקִ֗ים יָבֹ֥אוּ בֽוֹ׃",
+          "translation": "This is the gateway to Adhonay—the victorious shall enter through it. (Psalm 118:20)",
+          "translit": "zeh-hashsha'ar laAdhonay ṣaddiqim yavoʾu vo."
+        }
+      ]
+    }
+  ]
+}

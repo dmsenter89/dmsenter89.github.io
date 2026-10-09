@@ -384,9 +384,9 @@
         {
           "type": "text",
           "id": "shomer-yisrael-2",
-          "hebrew": "שׁוֹמֵר גּוֹי אֶחָד. שְׁמֹר שְׁאֵרִית גּוֹי אֶחָד. וְאַל יֹאבַד גּוֹי אֶחָד. הָאוֹמְרִים בְּכָל יוֹם. שְׁמַע יִשְׂרָאֵל. יְיָ אֱלֹהֵינוּ. יְיָ אֶחָד׃",
-          "translation": "Guardian of a single nation, guard the remnant of a single nation, and let a single nation not perish — those who say every day: \"Hear, O Israel, Adhonay is our God, Adhonay is One.\"",
-          "translit": "shomer goy ʾeḥadh. shĕmor shĕʾerith goy ʾeḥadh. wĕʾal yoʾvadh goy ʾeḥadh. haʾomĕrim bĕkhol yom. shĕma' yisraʾel. Adhonay ʾĕlohenu. Adhonay ʾeḥadh."
+          "hebrew": "שׁוֹמֵר גּוֹי אֶחָד. שְׁמֹר שְׁאֵרִית גּוֹי אֶחָד. וְאַל יֹאבַד גּוֹי אֶחָד. הָאוֹמְרִים בְּכָל יוֹם. שְׁמַ֖ע יִשְׂרָאֵ֑ל יְיָ֥ אֱלֹהֵ֖ינוּ יְיָ֥ ׀ אֶחָֽד׃",
+          "translation": "Guardian of a single nation, guard the remnant of a single nation, and let a single nation not perish — those who say every day: \"Hear, O Israel! Adhonay is our God, Adhonay is one.\" (Deuteronomy 6:4)",
+          "translit": "shomer goy ʾeḥadh. shĕmor shĕʾerith goy ʾeḥadh. wĕʾal yoʾvadh goy ʾeḥadh. haʾomĕrim bĕkhol yom. shĕma' yisraʾel Adhonay ʾĕlohenu Adhonay ʾeḥadh."
         },
         {
           "type": "text",
@@ -417,9 +417,9 @@
         {
           "type": "text",
           "id": "kaddish-teanu-veteateru",
-          "hebrew": "תֵּעָנוּ וְתֵעָתְרוּ בְּרַחֲמִים מִן הַשָּׁמַיִם. תְּקֻבַּל צַעֲקַתְכֶם. תִּשָּׁמַע תְּפִלַּתְכֶם בְּרָצוֹן. וְיֵעָנֶה קוֹל עֲתִירַתְכֶם. וִיקַיֵּם בָּכֶם מִקְרָא שֶׁכָּתוּב: יְיָ אֱלֹהֵי אֲבוֹתֵכֶם יֹסֵף עֲלֵיכֶם כָּכֶם אֶלֶף פְּעָמִים. וִיבָרֵךְ אֶתְכֶם כַּאֲשֶׁר דִּבֶּר לָכֶם.",
-          "translation": "May you be answered and entreated with mercy from heaven; may your cry be accepted, may your prayer be heard with favor, and may the voice of your supplication be answered; and may there be fulfilled in you the verse that is written: \"Adhonay, the God of your fathers, add to you a thousand times as many as you are, and bless you as He has spoken to you.\"",
-          "translit": "te'anu wĕthe'athĕru bĕraḥămim mīn hashshamayīm. tĕqubbal ṣa'ăqathkhem. tishshama' tĕfillathkhem bĕraṣon. wĕye'aneh qol 'ăthirathkhem. wiqayyem bakhem miqraʾ shekkathuv: Adhonay ʾĕlohe ʾăvothekhem yosef 'ălekhem kakhem ʾelef pĕ'amim. wivarekh ʾethkhem kaʾăsher dibber lakhem."
+          "hebrew": "תֵּעָנוּ וְתֵעָתְרוּ בְּרַחֲמִים מִן הַשָּׁמַיִם. תְּקֻבַּל צַעֲקַתְכֶם. תִּשָּׁמַע תְּפִלַּתְכֶם בְּרָצוֹן. וְיֵעָנֶה קוֹל עֲתִירַתְכֶם. וִיקַיֵּם בָּכֶם מִקְרָא שֶׁכָּתוּב: יְיָ֞ אֱלֹהֵ֣י אֲבֽוֹתֵכֶ֗ם יֹסֵ֧ף עֲלֵיכֶ֛ם כָּכֶ֖ם אֶ֣לֶף פְּעָמִ֑ים וִיבָרֵ֣ךְ אֶתְכֶ֔ם כַּאֲשֶׁ֖ר דִּבֶּ֥ר לָכֶֽם׃",
+          "translation": "May you be answered and entreated with mercy from heaven; may your cry be accepted, may your prayer be heard with favor, and may the voice of your supplication be answered; and may there be fulfilled in you the verse that is written: \"May Adhonay, the God of your ancestors, increase your numbers a thousandfold, and bless you as promised.\" (Deuteronomy 1:11)",
+          "translit": "te'anu wĕthe'athĕru bĕraḥămim mīn hashshamayīm. tĕqubbal ṣa'ăqathkhem. tishshama' tĕfillathkhem bĕraṣon. wĕye'aneh qol 'ăthirathkhem. wiqayyem bakhem miqraʾ shekkathuv: Adhonay ʾĕlohe ʾăvothekhem yosef 'ălekhem kakhem ʾelef pĕ'amim wivarekh ʾethkhem kaʾăsher dibber lakhem."
         },
         {
           "type": "expandable",

@@ -1,5 +1,5 @@
 ---
 title: "Quick Amidah"
-weight: 24
+weight: 25
 robots: "noindex, nofollow"
 ---

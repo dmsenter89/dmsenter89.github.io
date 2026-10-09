@@ -62,9 +62,9 @@
         {
           "type": "text",
           "id": "havdalah-kos-yeshuot",
-          "hebrew": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא, וּבְשֵׁם יְיָ אֶקְרָא׃ אָנָּא יְיָ הוֹשִׁיעָה נָּא, (שתי פעמים) אָנָּא יְיָ הַצְלִיחָה נָּא׃ (שתי פעמים)",
-          "translation": "I will lift up the cup of salvations, and call upon the name of Adhonay. (Psalm 116:13) Please, Adhonay, save us now! (twice) Please, Adhonay, grant success now! (twice) (Psalm 118:25)",
-          "translit": "kos-yĕshu'oth ʾessaʾ, uvĕshem Adhonay ʾeqraʾ. ʾannaʾ Adhonay hoshi'a naʾ, (twice) ʾannaʾ Adhonay haṣliḥa naʾ. (twice)"
+          "hebrew": "כּוֹס־יְשׁוּע֥וֹת אֶשָּׂ֑א וּבְשֵׁ֖ם יְיָ֣ אֶקְרָֽא׃ אָנָּ֣א יְיָ֭ הוֹשִׁ֘יעָ֥ה נָּ֑א (שתי פעמים) אָנָּ֥א יְיָ֝֗ הַצְלִ֘יחָ֥ה נָּֽא׃ (שתי פעמים)",
+          "translation": "I raise the cup of deliverance and invoke Adhonay’s name. (Psalm 116:13) O Adhonay, deliver us! (twice) O Adhonay, let us prosper! (twice) (Psalm 118:25)",
+          "translit": "kos-yĕshu'oth ʾessaʾ uvĕshem Adhonay ʾeqraʾ. ʾannaʾ Adhonay hoshi'a naʾ (twice) ʾannaʾ Adhonay haṣliḥa naʾ. (twice)"
         },
         {
           "type": "toggle",
@@ -77,9 +77,9 @@
                 {
                   "type": "text",
                   "id": "havdalah-minhag-bavel",
-                  "hebrew": "בָּרוּךְ הַבָּא בְּשֵׁם יְיָ, בֵּרַכְנוּכֶם מִבֵּית יְיָ׃ אֵל יְיָ וַיָּאֶר לָנוּ, אִסְרוּ־חַג בַּעֲבֹתִים עַד־קַרְנוֹת הַמִּזְבֵּחַ׃ אֵלִי אַתָּה וְאוֹדֶךָ, אֱלֹהַי אֲרוֹמְמֶךָ׃ הוֹדוּ לַיְיָ כִּי־טוֹב, כִּי לְעוֹלָם חַסְדּוֹ׃",
-                  "translation": "Blessed is he who comes in the name of Adhonay; we have blessed you from the house of Adhonay. Adhonay is God, and He has given us light; bind the festival offering with cords, up to the horns of the altar. You are my God, and I will thank You; my God, I will exalt You. Give thanks to Adhonay, for He is good; His kindness endures forever. (Psalm 118:26–29)",
-                  "translit": "barukh habbaʾ bĕshem Adhonay, berakhnukhem mibbeth Adhonay. ʾel Adhonay wayyaʾer lanu, ʾisru-ḥagh ba'ăvothim 'adh-qarnoth hammizbeaḥ. ʾeli ʾatta wĕʾodhekha, ʾĕlohay ʾăromĕmekha. hodhu laAdhonay ki-ṭov, ki lĕ'olam ḥasdo."
+                  "hebrew": "בָּר֣וּךְ הַ֭בָּא בְּשֵׁ֣ם יְיָ֑ בֵּ֝רַ֥כְנוּכֶ֗ם מִבֵּ֥ית יְיָ׃ אֵ֤ל ׀ יְיָ֮ וַיָּ֢אֶ֫ר לָ֥נוּ אִסְרוּ־חַ֥ג בַּעֲבֹתִ֑ים עַד־קַ֝רְנ֗וֹת הַמִּזְבֵּֽחַ׃ אֵלִ֣י אַתָּ֣ה וְאוֹדֶ֑ךָּ אֱ֝לֹהַ֗י אֲרוֹמְמֶֽךָּ׃ הוֹד֣וּ לַיְיָ֣ כִּי־ט֑וֹב כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+                  "translation": "May everyone who enters be blessed in the name of Adhonay; we bless you from the House of Adhonay. Adhonay is God, who has given us light; bind the festal offering to the horns of the altar with cords. You are my God and I will praise You; You are my God and I will extol You. Praise Adhonay, who is good—whose steadfast love is eternal. (Psalm 118:26–29)",
+                  "translit": "barukh habbaʾ bĕshem Adhonay berakhnukhem mibbeth Adhonay. ʾel Adhonay wayyaʾer lanu ʾisru-ḥagh ba'ăvothim 'adh-qarnoth hammizbeaḥ. ʾeli ʾatta wĕʾodhekka ʾĕlohay ʾăromĕmekka. hodhu laAdhonay ki-ṭov ki lĕ'olam ḥasdo."
                 }
               ]
             },
@@ -90,9 +90,9 @@
                 {
                   "type": "text",
                   "id": "havdalah-minhag-eretz-yisrael",
-                  "hebrew": "הַצְלִיחֵנוּ הַצְלִיחַ דְּרָכֵנוּ, הַצְלִיחַ לִמּוּדֵנוּ, וּשְׁלַח בְּרָכָה רְוָחָה וְהַצְלָחָה בְּכָל־מַעֲשֵׂה יָדֵינוּ, כְּדִכְתִיב; יִשָּׂא בְרָכָה מֵאֵת יְיָ וּצְדָקָה מֵאֱלֹהֵי יִשְׁעוֹ׃ לַיְּהוּדִים הָיְתָה אוֹרָה וְשִׂמְחָה, וְשָׂשֹׂן וִיקָר׃ וּכְתִיב; וַיְהִי דָוִד לְכָל־דְּרָכָיו מַשְׂכִּיל, וַיְיָ עִמּוֹ׃",
-                  "translation": "Grant us success; make our ways succeed, make our study succeed, and send blessing, abundance, and success into all the work of our hands, as it is written: \"He shall receive a blessing from Adhonay, and righteousness from the God of his salvation\" (Psalm 24:5); and it is written, \"The Jews had light and gladness, joy and honor\" (Esther 8:16); and it is written, \"And David succeeded in all his ways, and Adhonay was with him\" (1 Samuel 18:14).",
-                  "translit": "haṣliḥenu haṣliaḥ dĕrakhenu, haṣliaḥ limmudhenu, ushĕlaḥ bĕrakha rĕwaḥa wĕhaṣlaḥa bĕkhol-ma'ăseh yadhenu, kĕdhikhthiv; yissaʾ vĕrakha meʾeth Adhonay uṣĕdhaqa meʾĕlohe yish'o. layyĕhudhim hayĕtha ʾora wĕsimḥa, wĕsason wiqar. ukhĕthiv; wayĕhi dhawīdh lĕkhol-dhĕrakhaw maskil, waAdhonay 'immo."
+                  "hebrew": "הַצְלִיחֵנוּ הַצְלִיחַ דְּרָכֵנוּ, הַצְלִיחַ לִמּוּדֵנוּ, וּשְׁלַח בְּרָכָה רְוָחָה וְהַצְלָחָה בְּכָל־מַעֲשֵׂה יָדֵינוּ, כְּדִכְתִיב; יִשָּׂ֣א בְ֭רָכָה מֵאֵ֣ת יְיָ֑ וּ֝צְדָקָ֗ה מֵאֱלֹהֵ֥י יִשְׁעֽוֹ׃ לַיְּהוּדִ֕ים הָֽיְתָ֥ה אוֹרָ֖ה וְשִׂמְחָ֑ה וְשָׂשֹׂ֖ן וִיקָֽר׃ וּכְתִיב; וַיְהִ֥י דָוִ֛ד לְכׇל־דְּרָכָ֖ו מַשְׂכִּ֑יל וַיְיָ֖ עִמּֽוֹ׃",
+                  "translation": "Grant us success; make our ways succeed, make our study succeed, and send blessing, abundance, and success into all the work of our hands, as it is written: \"They shall carry away a blessing from Adhonay, a just reward from God, their deliverer\" (Psalm 24:5); and it is written, \"The Jews enjoyed light and gladness, happiness and honor\" (Esther 8:16); and it is written, \"David was successful in all his undertakings, for Adhonay was with him\" (1 Samuel 18:14).",
+                  "translit": "haṣliḥenu haṣliaḥ dĕrakhenu, haṣliaḥ limmudhenu, ushĕlaḥ bĕrakha rĕwaḥa wĕhaṣlaḥa bĕkhol-ma'ăseh yadhenu, kĕdhikhthiv; yissaʾ vĕrakha meʾeth Adhonay uṣĕdhaqa meʾĕlohe yish'o. layyĕhudhim hayĕtha ʾora wĕsimḥa wĕsason wiqar. ukhĕthiv; wayĕhi dhawīdh lĕkhol-dhĕrakhaw maskil waAdhonay 'immo."
                 }
               ]
             }

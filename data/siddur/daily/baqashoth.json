@@ -1,0 +1,659 @@
+{
+  "title": "Baqashoth",
+  "sections": [
+    {
+      "id": "dinim",
+      "title": "Dinim",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "dinim-zohar",
+          "hebrew": "איתא בזוהר הקדוש (זהר חדש בראשית יח) ואלו דבריו [מתורגם]: יש חיוב על ישראל בשעה שעולה עמוד השחר לקום ולהתגבר בשירות ותשבחות לפני הקב\"ה, מהו הטעם? מפני שהם לוקחים את השירה אחר מלאכי השרת והקב\"ה מצוי עמהם למטה, וזהו שכתוב; \"ומשחרי ימצאונני\". ואמר רבי יהודה; ובלבד שלא יפסיק משיתחיל עד שיתפלל עם הנץ החמה. עכ\"ד.",
+          "translation": "It is stated in the holy Zohar (Zohar Ḥadash, Bereshith 18), and these are its words [translated]: Israel is obligated, at the hour when the dawn rises, to get up and rouse themselves with songs and praises before the Holy One, blessed be He. What is the reason? Because they take up the song after the ministering angels, and the Holy One, blessed be He, is present with them below — as it is written, \"and those who seek Me early shall find Me.\" And Rabbi Yehuda said: provided that, once he has begun, he does not break off until he prays at sunrise. Thus far its words."
+        },
+        {
+          "type": "rubric",
+          "id": "dinim-custom",
+          "hebrew": "ובאמת שכך נהגו בדור הקודם רבים ושלמים, וכן סדרו בקשות בסידורים קודם התפלה, ובדורנו הרי הם מיחידי סגולה, ולכן לא הבאנו כאן \"שירי בקשות\" כפי שהודפס בסידורים הישנים. ברם ראיתי בקהילות יוצאי בבל שעדיין נשאר אצלם שמץ כל דהו, שאומרים קודם התפלה — אף שלא אומרים אותו בעמוד השחר — פזמון \"אדון עולם\", ובשבת יש מוסיפים פזמון \"יום השבת אין כמוהו\", ואחר כך \"ושמרו בני ישראל\" וכו'. ואומרים אחריו \"אמר ר' יהודה אשרי מי שעמלו בתורה\" וכו', \"רבי חנניא\" וקדיש \"על ישראל\".",
+          "translation": "And indeed, many good and upright people did so in the previous generation, and accordingly baqashoth were set out in the siddurim before the prayer. In our generation those who do so are a select few, and therefore we have not brought here the \"songs of baqashoth\" as they were printed in the old siddurim. Yet I have seen that in the communities that came from Babylonia some small trace of it still remains: before the prayer — though they do not say it at dawn — they recite the pizmon \"Adhon 'Olam\"; on Shabbath some add the pizmon \"Yom haShabbath en kamohu,\" and afterward \"WeShameru vene Yisrael,\" and so on. After it they say \"Rabbi Yehuda said: Happy is the one whose toil is in Torah,\" and so on, \"Rabbi Ḥananya,\" and the Qaddish \"'Al Yisrael.\""
+        }
+      ]
+    },
+    {
+      "id": "yedhidh-nefesh",
+      "title": "Yedhidh Nefesh",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "yedhidh-nefesh-info",
+          "hebrew": "סימן: שם הויה ב\"ה. להרב אלעזר אזכרי ז\"ל",
+          "translation": "Acrostic: the Divine Name, blessed be He. By Rabbi El'azar Azikri, of blessed memory."
+        },
+        {
+          "type": "text",
+          "id": "yedhidh-nefesh-1",
+          "hebrew": "יְדִיד נֶפֶשׁ אָב הָרַחֲמָן, מְשֹׁךְ עַבְדָּךְ אֶל רְצוֹנָךְ. יָרוּץ עַבְדָּךְ כְּמוֹ אַיָּל, יִשְׁתַּחֲוֶה מוּל הֲדָרָךְ. כִּי יֶעְרַב לוֹ יְדִידוּתָךְ, מִנֹּפֶת צוּף וְכָל־טָעַם.",
+          "translation": "Beloved of the soul, merciful Father, draw Your servant to Your will. Your servant will run like a deer and bow before Your splendor, for Your affection is sweeter to him than the drip of the honeycomb and every taste.",
+          "translit": "yĕdhidh nefesh ʾav haraḥăman, mĕshokh 'avdakh ʾel rĕṣonakh. yaruṣ 'avdakh kĕmo ʾayyal, yishtaḥăweh mul hădharakh. ki ye'rav lo yĕdhidhuthakh, minnofeth ṣuf wĕkhol-ṭa'am."
+        },
+        {
+          "type": "text",
+          "id": "yedhidh-nefesh-2",
+          "hebrew": "הָדוּר נָאֶה זִיו הָעוֹלָם, נַפְשִׁי חוֹלַת אַהֲבָתָךְ. אָנָּא אֵל נָא רְפָא נָא לָהּ, בְּהַרְאוֹת לָהּ נֹעַם זִיוָךְ. אָז תִּתְחַזֵּק וְתִתְרַפֵּא, וְהָיְתָה לָּהּ שִׂמְחַת עוֹלָם.",
+          "translation": "Splendid and beautiful, radiance of the world, my soul is sick with love for You. Please, God, please heal her, by showing her the pleasantness of Your radiance. Then she will be strengthened and healed, and everlasting joy will be hers.",
+          "translit": "hadhur naʾeh ziw ha'olam, nafshi ḥolath ʾahăvathakh. ʾannaʾ ʾel naʾ rĕfaʾ naʾ lah, bĕharʾoth lah no'am ziwakh. ʾaz tithḥazzeq wĕthithrappeʾ, wĕhayĕtha lah simḥath 'olam."
+        },
+        {
+          "type": "text",
+          "id": "yedhidh-nefesh-3",
+          "hebrew": "וָתִיק יֶהֱמוּ רַחֲמֶיךָ, וְחוּסָה נָּא עַל בֵּן אֲהוּבֶךָ. כִּי זֶה כַמָּה נִכְסֹף נִכְסַף, לִרְאוֹת בְּתִפְאֶרֶת עֻזָּךְ. אָנָּא אֵלִי מַחְמַד לִבִּי, חוּשָׁה נָּא וְאַל תִּתְעַלַּם.",
+          "translation": "Ancient One, let Your mercies be stirred, and have pity on Your beloved child. For so long he has yearned and yearned to see the glory of Your might. Please, my God, delight of my heart, hasten, and do not hide Yourself.",
+          "translit": "wathiq yehĕmu raḥămekha, wĕḥusa naʾ 'al ben ʾăhuvekha. ki zeh khamma nikhsof nikhsaf, lirʾoth bĕthifʾereth 'uzzakh. ʾannaʾ ʾeli maḥmadh libbi, ḥusha naʾ wĕʾal tith'allam."
+        },
+        {
+          "type": "text",
+          "id": "yedhidh-nefesh-4",
+          "hebrew": "הִגָּלֶה־נָא וּפְרֹשׂ חָבִיב, עָלַי אֶת סֻכַּת שְׁלוֹמָךְ. תָּאִיר אֶרֶץ מִכְּבוֹדָךְ, נָגִילָה וְנִשְׂמְחָה בָךְ. מַהֵר אָהוּב כִּי בָא מוֹעֵד, וְחָנֵּנִי כִּימֵי עוֹלָם.",
+          "translation": "Reveal Yourself, please, Beloved, and spread over me the shelter of Your peace. Let the earth shine with Your glory; we will rejoice and be glad in You. Hurry, Beloved, for the appointed time has come, and be gracious to me as in days of old.",
+          "translit": "higgaleh-naʾ ufĕros ḥaviv, 'alay ʾeth sukkath shĕlomakh. taʾir ʾereṣ mikkĕvodhakh, naghila wĕnismĕḥa vakh. maher ʾahuv ki vaʾ mo'edh, wĕḥonneni kime 'olam."
+        }
+      ]
+    },
+    {
+      "id": "yahidh-ween-bilto",
+      "title": "Yahidh WeEn Bilto",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "yahidh-ween-bilto-info",
+          "hebrew": "סימן: ישראל.",
+          "translation": "Acrostic: Yisrael."
+        },
+        {
+          "type": "text",
+          "id": "yahidh-ween-bilto-refrain",
+          "hebrew": "יָחִיד וְאֵין בִּלְתּוֹ אַחֵר, אֵל בְּשִׁירֵי זִמְרָה בּוֹחֵר.",
+          "translation": "One alone, there is no other beside Him — God, who chooses songs of praise.",
+          "translit": "yaḥidh wĕʾen bilto ʾaḥer, ʾel bĕshire zimra boḥer."
+        },
+        {
+          "type": "text",
+          "id": "yahidh-ween-bilto-1",
+          "hebrew": "וְיוֹשֵׁב בִּשְׁמֵי שְׁמֵי זְבוּל, וּמַצְמִיחַ כָּל־עֵץ יְבוּל, גָּדוֹל בְּלִי חֵקֶר וּגְבוּל, יוֹם יוֹם פָּנֶיךָ אֲשַׁחֵר.",
+          "translation": "You who dwell in the highest heavens of the lofty abode, and make every fruit-bearing tree grow; great beyond searching and beyond bound — day by day I seek Your face.",
+          "translit": "wĕyoshev bishme shĕme zĕvul, umaṣmiaḥ kol-'eṣ yĕvul, gadhol bĕli ḥeqer ughĕvul, yom yom panekha ʾăshaḥer."
+        },
+        {
+          "type": "text",
+          "id": "yahidh-ween-bilto-2",
+          "hebrew": "שִׂבַּרְתִּי עַד עֵת בּוֹא שִׁילֹה, יָשִׁיב נִדְּחֵי יָרִים דִּגְלוֹ, אִם יִתְמַהְמַהּ אֲחַכֶּה־לּוֹ, כִּי בֹא יָבֹא לֹא יְאַחֵר.",
+          "translation": "I have hoped until the time that Shiloh comes; he will bring back the outcasts and raise his banner. Though he tarry, I will wait for him, for he will surely come; he will not delay.",
+          "translit": "sibbarti 'adh 'eth boʾ shiloh, yashiv niddĕḥe yarim dighlo, ʾīm yithmahmah ʾăḥakkeh-lo, ki voʾ yavoʾ loʾ yĕʾaḥer."
+        },
+        {
+          "type": "text",
+          "id": "yahidh-ween-bilto-3",
+          "hebrew": "רָדֹף אוֹיְבַי וְהַשִּׂיגֵם, וְכַדּוֹנַג תְּמוֹגְגֵם, בְּגֵיא צַלְמָוֶת נַהֲגֵם, תָּאֳרָם מִשְּׁחוֹר שַׁחֵר.",
+          "translation": "Pursue my enemies and overtake them; melt them away like wax; drive them into the valley of deepest darkness; make their look darker than soot.",
+          "translit": "radhof ʾoyĕvay wĕhassighem, wĕkhaddonagh tĕmoghĕghem, bĕgheʾ ṣalmaweth nahăghem, toʾŏram mishshĕḥor shaḥer."
+        },
+        {
+          "type": "text",
+          "id": "yahidh-ween-bilto-4",
+          "hebrew": "אַל יָשׁוּב דַּךְ מִמְּךָ נִכְלָם, צוּר מִבְטָחִי מֶלֶךְ עוֹלָם, מִשַּׁוְעַת דַּל אַל תִּתְעַלַּם, לְבַקֵּשׁ רָצוֹן טוֹב שׁוֹחֵר.",
+          "translation": "Let the downtrodden not turn back from You ashamed, Rock of my trust, eternal King. Do not hide Yourself from the cry of the poor, for one who seeks the good is seeking favor.",
+          "translit": "ʾal yashuv dakh mimmĕkha nikhlam, ṣur mivṭaḥi melekh 'olam, mishshaw'ath dal ʾal tith'allam, lĕvaqqesh raṣon ṭov shoḥer."
+        }
+      ]
+    },
+    {
+      "id": "odhe-lael",
+      "title": "Odhe LaEl",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "odhe-lael-info",
+          "hebrew": "סימן: שמעיה קוסון.",
+          "translation": "Acrostic: Shema'ya Qoson."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-refrain",
+          "hebrew": "אוֹדֶה לָאֵל לֵבָב חוֹקֵר, בְּרָן־יַחַד כּוֹכְבֵי בֹקֶר.",
+          "translation": "I give thanks to God, who searches the heart, when the morning stars sing together.",
+          "translit": "ʾodheh laʾel levav ḥoqer, bĕran-yaḥadh kokhĕve voqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-1",
+          "hebrew": "שִׂימוּ לֵב עַל הַנְּשָׁמָה, לֶשֶׁם שְׁבוֹ וְאַחְלָמָה, וְאוֹרָהּ כְּאוֹר הַחַמָּה, שִׁבְעָתַיִם כְּאוֹר בֹּקֶר.",
+          "translation": "Set your heart upon the soul — jacinth, agate, and amethyst — whose light is like the light of the sun, sevenfold the light of morning.",
+          "translit": "simu lev 'al hannĕshama, leshem shĕvo wĕʾaḥlama, wĕʾorah kĕʾor haḥamma, shiv'athayīm kĕʾor boqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-2",
+          "hebrew": "מִכִּסֵּא כָבוֹד חֻצָּבָה, לָגוּר בְּאֶרֶץ עֲרָבָה, לְהַצִּילָהּ מִלֶּהָבָה, וּלְהָאִירָהּ לִפְנוֹת בֹּקֶר.",
+          "translation": "She was hewn from the Throne of Glory to dwell in a desert land, to save her from the flame and to give her light toward morning.",
+          "translit": "mikkisseʾ khavodh ḥuṣṣava, laghur bĕʾereṣ 'ărava, lĕhaṣṣilah millehava, ulĕhaʾirah lifnoth boqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-3",
+          "hebrew": "עוּרוּ נָא כִּי בְכָל־לַיְלָה, נִשְׁמַתְכֶם עוֹלָה לְמַעְלָה, לָתֵת דִּין וְחֶשְׁבּוֹן מִפָּעֳלָהּ, לְיוֹצֵר עֶרֶב וָבֹקֶר.",
+          "translation": "Awake, for every night your soul ascends on high, to give an account and reckoning of its deeds to the Maker of evening and morning.",
+          "translit": "'uru naʾ ki vĕkhol-layla, nishmathkhem 'ola lĕma'la, latheth din wĕḥeshbon mippo'ŏlah, lĕyoṣer 'erev wavoqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-4",
+          "hebrew": "יִמְצָאָהּ מְקֻדֶּשֶׁת, בְּמִצְוֹת וּבְתוֹסֶפֶת, כְּמוֹ כַלָּה מְקֻשֶּׁטֶת, תָּמִיד בַּבֹּקֶר בַּבֹּקֶר.",
+          "translation": "He finds her sanctified with commandments and more besides, like a bride in her adornment — always, morning after morning.",
+          "translit": "yimṣaʾah mĕquddesheth, bĕmiṣwoth uvĕthosefeth, kĕmo khalla mĕqushsheṭeth, tamidh babboqer babboqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-5",
+          "hebrew": "הַנֶּאֱמָן בְּפִקְדוֹנוֹ, יַחֲזִירֶנָּה לּוֹ כִּרְצוֹנוֹ, אִישׁ לֹא גָוַע בַּעֲוֹנוֹ, וַיְהִי עֶרֶב וַיְהִי בֹקֶר.",
+          "translation": "He who is faithful with what is entrusted to Him will return her to him as He wills; no one has perished for his sin — and there was evening and there was morning.",
+          "translit": "hanneʾĕman bĕfiqdhono, yaḥăzirenna lo kirṣono, ʾish loʾ ghawa' ba'ăwono, wayĕhi 'erev wayĕhi voqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-6",
+          "hebrew": "קוּמוּ וְלֹא זֹאת הַמְּנוּחָה, מִדַּת רַחֲמִים מְתוּחָה, שׁוּבוּ כִּי יָדוֹ פְתוּחָה, לְכָל מַשְׁכִּימֵי בַבֹּקֶר.",
+          "translation": "Arise, for this is not the place of rest; the measure of mercy is extended. Return, for His hand is open to all who rise early in the morning.",
+          "translit": "qumu wĕloʾ zoʾth hammĕnuḥa, middath raḥămim mĕthuḥa, shuvu ki yadho fĕthuḥa, lĕkhol mashkime vabboqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-7",
+          "hebrew": "וְשֵׁנָה אַל תֶּאֱהָבוּ, לְהַקְדִּישׁ לָאֵל אֱהָבוּ, הָבוּ לַיְיָ הָבוּ, כָּבוֹד וְהָיָה הַבֹּקֶר.",
+          "translation": "Do not love sleep; love rather to hallow God. Ascribe to Adhonay, ascribe glory — and the morning will come.",
+          "translit": "wĕshena ʾal teʾĕhavu, lĕhaqdish laʾel ʾĕhavu, havu laAdhonay havu, kavodh wĕhaya habboqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-8",
+          "hebrew": "סָלּוּהָ כְּמוֹ עֲרֵמִים, נֶפֶשׁ בְּהֵמוֹת נִרְדָּמִים, יַעַן לְמִשְׁטַח חֲרָמִים, לְסַדֵּר עוֹלַת הַבֹּקֶר.",
+          "translation": "Pile her up like heaps of grain — the brutish souls of the slumbering — left as a place for spreading nets, at the hour to set the morning offering in order.",
+          "translit": "salluha kĕmo 'ăremim, nefesh bĕhemoth nirdamim, ya'an lĕmishṭaḥ ḥăramim, lĕsadder 'olath habboqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-9",
+          "hebrew": "וְהַחֲיוּ הָעֲנִיָּה, יְחִידָה תַּמָּה וּנְקִיָּה, וַאֲשֶׁר נַפְשׁוֹ לֹא חִיָּה, אֵיךְ יִזְכֶּה לְאוֹר הַבֹּקֶר.",
+          "translation": "Give life to the afflicted one, the only one, innocent and pure; for one who has not kept his soul alive — how will he merit the light of morning?",
+          "translit": "wĕhaḥăyu ha'ăniyya, yĕḥidha tamma unĕqiyya, waʾăsher nafsho loʾ ḥiyya, ʾekh yizkeh lĕʾor habboqer."
+        },
+        {
+          "type": "text",
+          "id": "odhe-lael-10",
+          "hebrew": "נֹעַם יְיָ לַחֲזוֹת, נִזְכֶּה וּבַשָּׁנָה הַזֹּאת, בְּשִׂמְחוֹת תַּחַת רְגָזוֹת, בַּבֹּקֶר תִּשְׁמַע קוֹלִי בֹּקֶר.",
+          "translation": "May we merit to behold the pleasantness of Adhonay, this very year, with joys in place of troubles: in the morning You will hear my voice — in the morning.",
+          "translit": "no'am Adhonay laḥăzoth, nizkeh uvashshana hazzoʾth, bĕsimḥoth taḥath rĕghazoth, babboqer tishma' qoli boqer."
+        }
+      ]
+    },
+    {
+      "id": "shefal-ruah",
+      "title": "Shefal Ruah",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "shefal-ruah-info",
+          "hebrew": "סימן: שלמה.",
+          "translation": "Acrostic: Shelomo."
+        },
+        {
+          "type": "text",
+          "id": "shefal-ruah-1",
+          "hebrew": "שְׁפַל רוּחַ שְׁפַל בֶּרֶךְ וְקוֹמָה, אֲקַדֶּמְךָ בְּרָב־פַּחַד וְאֵימָה.",
+          "translation": "Lowly in spirit, lowly of knee and stature, I come before You in great fear and awe.",
+          "translit": "shĕfal ruaḥ shĕfal berekh wĕqoma, ʾăqaddemkha bĕrov-faḥadh wĕʾema."
+        },
+        {
+          "type": "text",
+          "id": "shefal-ruah-2",
+          "hebrew": "לְפָנֶיךָ אֲנִי נֶחְשָׁב בְּעֵינַי, כְּתוֹלַעַת קְטַנָּה בָּאֲדָמָה.",
+          "translation": "Before You I count myself, in my own eyes, as a small worm in the earth.",
+          "translit": "lĕfanekha ʾăni neḥshav bĕ'enay, kĕthola'ath qĕṭanna baʾădhama."
+        },
+        {
+          "type": "text",
+          "id": "shefal-ruah-3",
+          "hebrew": "מְלֹא עוֹלָם אֲשֶׁר אֵין קֵץ לְגָדְלוֹ, הֲכָמוֹנִי יְהַלֶּלְךָ וּבַמָּה.",
+          "translation": "You who fill the world, whose greatness has no end — can one such as I praise You, and with what?",
+          "translit": "mĕloʾ 'olam ʾăsher ʾen qeṣ lĕghodhlo, hăkhamoni yĕhallelkha uvamma."
+        },
+        {
+          "type": "text",
+          "id": "shefal-ruah-4",
+          "hebrew": "הֲדָרָךְ לֹא יְכִילוּן מַלְאֲכֵי רוֹם, וְעַל אַחַת אֲנִי כַּמָּה וְכַמָּה.",
+          "translation": "The angels on high cannot contain Your splendor — how much less, then, can I!",
+          "translit": "hădharakh loʾ yĕkhilun malʾăkhe rom, wĕ'al ʾaḥath ʾăni kamma wĕkhamma."
+        },
+        {
+          "type": "text",
+          "id": "shefal-ruah-5",
+          "hebrew": "הֱטִיבוֹתָ וְהִגְדַּלְתָּ חֲסָדִים, לְךָ תַגְדִּיל לְהוֹדוֹת כָּל־נְשָׁמָה.",
+          "translation": "You have done good and multiplied kindnesses; every soul shall give You abundant thanks.",
+          "translit": "hĕṭivotha wĕhighdalta ḥăsadhim, lĕkha thaghdil lĕhodhoth kol-nĕshama."
+        }
+      ]
+    },
+    {
+      "id": "aghadelkha",
+      "title": "Aghadelkha",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "aghadelkha-info",
+          "hebrew": "סימן: אברהם (הראב\"ע).",
+          "translation": "Acrostic: Avraham (Ibn 'Ezra)."
+        },
+        {
+          "type": "text",
+          "id": "aghadelkha-1",
+          "hebrew": "אֲגַדֶּלְךָ אֱלֹהֵי כָל־נְשָׁמָה, וְאוֹדְךָ בְּרָב־פַּחַד וְאֵימָה.",
+          "translation": "I will magnify You, God of every soul, and give You thanks in great fear and awe.",
+          "translit": "ʾăghaddelkha ʾĕlohe khol-nĕshama, wĕʾodhĕkha bĕrov-faḥadh wĕʾema."
+        },
+        {
+          "type": "text",
+          "id": "aghadelkha-2",
+          "hebrew": "בְּעָמְדִי תּוֹךְ קְהָלְךָ צוּר לְרוֹמֵם, לְךָ אֶכְרַע וְאֶכֹּף רֹאשׁ וְקוֹמָה.",
+          "translation": "When I stand amid Your congregation, O Rock, to exalt You, to You I bend the knee and bow head and frame.",
+          "translit": "bĕ'amĕdhi tokh qĕhalĕkha ṣur lĕromem, lĕkha ʾekhra' wĕʾekkof roʾsh wĕqoma."
+        },
+        {
+          "type": "text",
+          "id": "aghadelkha-3",
+          "hebrew": "רְקִיעֵי רוֹם הֲלֹא נָטָה בְּמִבְטָא, וְהָאָרֶץ יְסָדָהּ עַל בְּלִימָה.",
+          "translation": "The heavens on high — did He not stretch them out with an utterance, and found the earth upon nothing?",
+          "translit": "rĕqi'e rom hăloʾ naṭa bĕmivṭaʾ, wĕhaʾareṣ yĕsadhah 'al bĕlima."
+        },
+        {
+          "type": "text",
+          "id": "aghadelkha-4",
+          "hebrew": "הֲיוּכַל אִישׁ חֲקֹר אֶת סוֹד יוֹצְרוֹ, וּמִי הוּא זֶה בְּכָל־קֵדְמָה וָיָמָּה.",
+          "translation": "Can anyone fathom the secret of his Maker — who is there, in all the east and west?",
+          "translit": "hăyukhal ʾish ḥăqor ʾeth sodh yoṣĕro, umi huʾ zeh bĕkhol-qedhĕma wayamma."
+        },
+        {
+          "type": "text",
+          "id": "aghadelkha-5",
+          "hebrew": "מְרוֹמָם הוּא עֲלֵי כָל־פֶּה וָלָשׁוֹן, אֲשֶׁר הִפְלִיא וְעָשָׂה כֹל בְּחָכְמָה.",
+          "translation": "He is exalted above every mouth and tongue, who has done wonders and made all with wisdom.",
+          "translit": "mĕromam huʾ 'ăle khol-feh walashon, ʾăsher hifliʾ wĕ'asa khol bĕḥokhma."
+        },
+        {
+          "type": "text",
+          "id": "aghadelkha-6",
+          "hebrew": "וְיִתְגַּדַּל בְּגוֹי קָדוֹשׁ וְעֶלְיוֹן, וְיִתְקַדַּשׁ שְׁמֵיהּ רַבָּא בְּעָלְמָא.",
+          "translation": "May He be magnified among a holy and exalted nation, and may His great name be sanctified in the world.",
+          "translit": "wĕyithgaddal bĕghoy qadhosh wĕ'elyon, wĕyithqaddash shĕmeh rabbaʾ bĕ'alĕmaʾ."
+        }
+      ]
+    },
+    {
+      "id": "yah-ribbon",
+      "title": "Yah Ribbon Alam",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "yah-ribbon-info",
+          "hebrew": "סימן: ישראל.",
+          "translation": "Acrostic: Yisrael."
+        },
+        {
+          "type": "text",
+          "id": "yah-ribbon-1",
+          "hebrew": "יָהּ רִבּוֹן עָלַם וְעָלְמַיָּא, אַנְתְּ הוּא מַלְכָּא מֶלֶךְ מַלְכַיָּא. עוֹבַד גְּבוּרְתָּךְ וְתִמְהַיָּא, שְׁפַר קֳדָמַי לְהַחֲוָיָא.",
+          "translation": "Yah, Master of this world and of all worlds, You are the King, King of kings. The work of Your might and Your wonders — it is fitting for me to declare before You.",
+          "translit": "yah ribbon 'alam wĕ'alĕmayyaʾ, ʾant huʾ malkaʾ melekh malkhayyaʾ. 'ovadh gĕvurĕtakh wĕthimhayyaʾ, shĕfar qŏdhamay lĕhaḥăwayaʾ."
+        },
+        {
+          "type": "text",
+          "id": "yah-ribbon-2",
+          "hebrew": "שְׁבָחִין אֲסַדֵּר צַפְרָא וְרַמְשָׁא, לָךְ אֱלָהָא קַדִּישָׁא, דִּי בְרָא כָּל־נַפְשָׁא, עִירִין קַדִּישִׁין וּבְנֵי אֱנָשָׁא, חֵיוַת בָּרָא וְעוֹף שְׁמַיָּא.",
+          "translation": "Praises I will set in order, morning and evening, to You, holy God, who created every soul: holy angels and the children of men, the beasts of the field and the birds of the sky.",
+          "translit": "shĕvaḥin ʾăsadder ṣafraʾ wĕramshaʾ, lakh ʾĕlahaʾ qaddishaʾ, di vĕraʾ kol-nafshaʾ, 'irin qaddishin uvĕne ʾĕnashaʾ, ḥewath baraʾ wĕ'of shĕmayyaʾ."
+        },
+        {
+          "type": "text",
+          "id": "yah-ribbon-3",
+          "hebrew": "רַבְרְבִין עוֹבָדָךְ וְתַקִּיפִין, מַכִּיךְ רָמַיָּא וְזָקֵף כְּפִיפִין, לוּ יְחֵי גְבַר שְׁנִין אַלְפִין, לָא יֵעוּל גְּבוּרְתָּךְ בְּחֻשְׁבַּנַּיָּא.",
+          "translation": "Great are Your works, and mighty; You humble the lofty and raise up the bowed. Were a man to live thousands of years, he could not reckon the measure of Your might.",
+          "translit": "ravrĕvin 'ovadhakh wĕthaqqifin, makkikh ramayyaʾ wĕzaqef kĕfifin, lu yĕḥe ghĕvar shĕnin ʾalfin, laʾ ye'ul gĕvurĕtakh bĕḥushbannayyaʾ."
+        },
+        {
+          "type": "text",
+          "id": "yah-ribbon-4",
+          "hebrew": "אֱלָהָא דִּי לֵיהּ יְקָר וּרְבוּתָא, פְּרֹק יַת עָנָךְ מִפֻּם אַרְיָוָתָא, וְאַפֵּק יַת עַמָּךְ מִגּוֹ גָלוּתָא, עַמָּךְ דִּי בַחַרְתָּ מִכָּל־אֻמַּיָּא.",
+          "translation": "God, to whom belong honor and greatness, rescue Your flock from the mouth of the lions, and bring Your people out of exile — the people You chose from all the nations.",
+          "translit": "ʾĕlahaʾ di leh yĕqar urĕvuthaʾ, pĕroq yath 'anakh mippūm ʾaryawathaʾ, wĕʾappeq yath 'ammakh miggo ghaluthaʾ, 'ammakh di vaḥarta mikkol-ʾummayaʾ."
+        },
+        {
+          "type": "text",
+          "id": "yah-ribbon-5",
+          "hebrew": "לְמִקְדְּשָׁךְ תּוּב וּלְקֹדֶשׁ קָדָשִׁין, אֲתַר דִּי בֵיהּ יֶחְדוּן רוּחִין וְנַפְשִׁין, וִיזַמְּרוּן לָךְ שִׁירִין וְרַחְשִׁין, בִּירוּשְׁלֶם קַרְתָּא דְּשֻׁפְרַיָּא.",
+          "translation": "Return to Your Temple and to the Holy of Holies, the place where spirits and souls will rejoice and sing You songs and praises, in Jerusalem, city of beauty.",
+          "translit": "lĕmiqdĕshakh tuv ulĕqodhesh qadhashin, ʾăthar di veh yeḥdhun ruḥin wĕnafshin, wizammĕrun lakh shirin wĕraḥshin, birushĕlem qartaʾ dĕshufrayyaʾ."
+        }
+      ]
+    },
+    {
+      "id": "shaar-harahamim",
+      "title": "Sha'ar HaRahamim",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "shaar-harahamim-info",
+          "hebrew": "סימן: יהודה. לראש חודש",
+          "translation": "Acrostic: Yehuda. For Rosh Chodesh."
+        },
+        {
+          "type": "text",
+          "id": "shaar-harahamim-1",
+          "hebrew": "שַׁעַר הָרַחֲמִים, לְעַם בָּךְ בּוֹטֵחַ, בְּיוֹם רֹאשׁ הַחֹדֶשׁ, הַזֶּה יִפָּתֵחַ.",
+          "translation": "The gate of mercy — for the people that trusts in You, on this day of Rosh Chodesh may it be opened.",
+          "translit": "sha'ar haraḥămim, lĕ'am bakh boṭeaḥ, bĕyom roʾsh haḥodhesh, hazzeh yippatheaḥ."
+        },
+        {
+          "type": "text",
+          "id": "shaar-harahamim-2",
+          "hebrew": "יִשְׁעִי לְךָ אֶקְרָא, בַּיָּמִים וּבַלֵּילוֹת, אֵל גָּדוֹל וְנֹרָא, נֹרָא עֲלִילוֹת, שְׁלַח נָא גְאֻלּוֹת, וְלָךְ נְשַׁבֵּחַ, וְנַקְרִיב קָרְבָּנוֹת, עַל גַּבֵּי הַמִּזְבֵּחַ.",
+          "translation": "My salvation, to You I call, by day and by night. Great and awesome God, awesome in deeds, send deliverance, and we will praise You and bring offerings upon the altar.",
+          "translit": "yish'i lĕkha ʾeqraʾ, bayyamim uvalleloth, ʾel gadhol wĕnoraʾ, noraʾ 'ăliloth, shĕlaḥ naʾ ghĕʾulloth, wĕlakh nĕshabbeaḥ, wĕnaqriv qorbanoth, 'al gabbe hammizbeaḥ."
+        },
+        {
+          "type": "text",
+          "id": "shaar-harahamim-3",
+          "hebrew": "הָסֵר מֵעָלֵינוּ צוּר, זַעַם וְעֶבְרָה, הֱיֵה־נָא בְעֶזְרֵנוּ, צִנָּה וְסֹחֵרָה, פֶּשַׁע וְעֶבְרָה, הֱיֵה־נָא סוֹלֵחַ, שְׁעֵה־נָא עֲתִירָה, בְּקֶרֶב מִזְבֵּחַ.",
+          "translation": "Remove from us, O Rock, wrath and fury; be our help, a shield and a buckler. Forgive transgression and offense; heed our entreaty at the altar.",
+          "translit": "haser me'alenu ṣur, za'am wĕ'evra, hĕyeh-naʾ vĕ'ezrenu, ṣinna wĕsoḥera, pesha' wĕ'evra, hĕyeh-naʾ soleaḥ, shĕ'eh-naʾ 'ăthira, bĕqerev mizbeaḥ."
+        },
+        {
+          "type": "text",
+          "id": "shaar-harahamim-4",
+          "hebrew": "וְעַד אָן עַמְּךָ, יִהְיוּ בֵין צָרִים, חֲשֹׂף זְרוֹעֲךָ, עַל רְשָׁעִים אַכְזָרִים, אַדִּיר אַדִּירִים, אֵל נָא יִהְיוּ לָבֶטַח, גְּאֻלָּה לַעֲבָדִים, הֱיֵה־נָא שׁוֹלֵחַ.",
+          "translation": "How long will Your people be among foes? Bare Your arm against the cruel and wicked. Mightiest of the mighty, God, let them dwell in safety; send redemption to Your servants.",
+          "translit": "wĕ'adh ʾan 'ammĕkha, yihyu ven ṣarim, ḥăsof zĕro'ăkha, 'al rĕsha'im ʾakhzarim, ʾaddir ʾaddirim, ʾel naʾ yihyu laveṭaḥ, gĕʾulla la'ăvadhim, hĕyeh-naʾ sholeaḥ."
+        },
+        {
+          "type": "text",
+          "id": "shaar-harahamim-5",
+          "hebrew": "דְּרוֹר תִּהְיֶה קוֹרֵא, לְעַם הַנִּדְכָּאִים, וְאוֹיֵב זוֹרֶה, הַצֵּל־נָא חֵלְכָּאִים, עֲשֵׂה־נָא פְלָאִים, וְלָךְ נְשַׁבֵּחַ, וּבְקוֹל שִׁירִים נָאִים, נַקְטִיר וּנְזַבֵּחַ.",
+          "translation": "Proclaim liberty to the people of the crushed; let the enemy be scattered; rescue the helpless. Work wonders, and we will praise You, and with the sound of sweet songs we will burn incense and bring offerings.",
+          "translit": "dĕror tihyeh qoreʾ, lĕ'am hannidhkaʾim, wĕʾoyev zoreh, haṣṣel-naʾ ḥelĕkaʾim, 'ăseh-naʾ fĕlaʾim, wĕlakh nĕshabbeaḥ, uvĕqol shirim naʾim, naqṭir unĕzabbeaḥ."
+        },
+        {
+          "type": "text",
+          "id": "shaar-harahamim-6",
+          "hebrew": "הָשֵׁב־נָא שְׁכִינָה, לְבֵית הַבְּחִירָה, וְהָסֵר מְגִנָּה, מֵעַל שֶׂה פְזוּרָה, עֵדָה הַסּוֹרֵרָה, כְּבֵדָם פַּלֵּחַ, וּבְשִׂמְחוֹת וּבְרִנָּה, לִבֵּנוּ שַׂמֵּחַ.",
+          "translation": "Bring the Shekhina back to the Chosen House, and lift the anguish from the scattered flock. The rebellious band — pierce them to the liver; and with joys and song gladden our heart.",
+          "translit": "hashev-naʾ shĕkhina, lĕveth habbĕḥira, wĕhaser mĕghinna, me'al seh fĕzura, 'edha hassorera, kĕvedham palleaḥ, uvĕsimḥoth uvĕrinna, libbenu sammeaḥ."
+        }
+      ]
+    },
+    {
+      "id": "shiru-lael-nevoni",
+      "title": "Shiru LaEl Nevonay",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "shiru-lael-nevoni-info",
+          "hebrew": "סימן: יעקב. לשבת וראש חודש",
+          "translation": "Acrostic: Ya'aqov. For Shabbath and Rosh Chodesh."
+        },
+        {
+          "type": "text",
+          "id": "shiru-lael-nevoni-1",
+          "hebrew": "שִׁירוּ לָאֵל נְבוֹנַי, שִׁירֵי רְנָנַי, שַׁבָּת וְרֹאשׁ חֹדֶשׁ יַחַד יוֹם זֶה לַיְיָ.",
+          "translation": "Sing to God, my discerning ones, my songs of joy: Shabbath and Rosh Chodesh together — this day is Adhonay's.",
+          "translit": "shiru laʾel nĕvonay, shire rĕnanay, shabbath wĕroʾsh ḥodhesh yaḥadh yom zeh laAdhonay."
+        },
+        {
+          "type": "text",
+          "id": "shiru-lael-nevoni-2",
+          "hebrew": "יְקַר שְׁמוֹ הוֹדִיעוּ, לַכֹּל וְהַשְׁמִיעוּ, זַמְּרוּ הָרִיעוּ, לִפְנֵי הַמֶּלֶךְ יְיָ.",
+          "translation": "Make known the glory of His name to all, and let it be heard; sing, raise a shout before the King, Adhonay.",
+          "translit": "yĕqar shĕmo hodhi'u, lakkol wĕhashmi'u, zammĕru hari'u, lifne hammelekh Adhonay."
+        },
+        {
+          "type": "text",
+          "id": "shiru-lael-nevoni-3",
+          "hebrew": "עֹז לוֹ בְּמִקְדָּשׁוֹ, תְּנוּ חוּשׁוּ לְדׇרְשׁוֹ, הִתְהַלְלוּ בְּשֵׁם קָדְשׁוֹ, יִשְׂמַח לֵב מְבַקְשֵׁי יְיָ.",
+          "translation": "Ascribe strength to Him in His sanctuary; hasten to seek Him. Glory in His holy name; let the heart of those who seek Adhonay rejoice.",
+          "translit": "'oz lo bĕmiqdasho, tĕnu ḥushu lĕdhorsho, hithhalĕlu bĕshem qodhsho, yismaḥ lev mĕvaqshe Adhonay."
+        },
+        {
+          "type": "text",
+          "id": "shiru-lael-nevoni-4",
+          "hebrew": "קְדוֹשִׁים שִׁמְךָ יוֹדוּ, וַחֲסָדֶיךָ יַגִּידוּ, אַף יְהַלְלוּ וִיעִידוּ, שָׁמַיִם פִּלְאֲךָ יְיָ.",
+          "translation": "The holy ones give thanks to Your name and tell of Your kindnesses; they praise and bear witness — the heavens, to Your wonders, Adhonay.",
+          "translit": "qĕdhoshim shimkha yodhu, waḥăsadhekha yaggidhu, ʾaf yĕhalĕlu wi'idhu, shamayīm pilʾăkha Adhonay."
+        },
+        {
+          "type": "text",
+          "id": "shiru-lael-nevoni-5",
+          "hebrew": "בָּאתִי וְקִדַּשְׁתִּי, שִׁמְךָ וְשִׁירִים שַׁרְתִּי, וְאֵלֶּה הִגַּשְׁתִּי, בִּכּוּרִים לַיְיָ.",
+          "translation": "I have come and hallowed Your name, and I have sung songs; and these I have brought — first fruits to Adhonay.",
+          "translit": "baʾthi wĕqiddashti, shimkha wĕshirim sharti, wĕʾelleh higgashti, bikkurim laAdhonay."
+        }
+      ]
+    },
+    {
+      "id": "adhon-olam",
+      "title": "Adhon Olam",
+      "audio": "/siddur/audio/adon-olam-habusha.m4a",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "adhon-olam-info",
+          "hebrew": "כתבו בשם ר' יהודה החסיד, רב האי גאון ורב שרירא גאון, שמעלה גדולה למי שמכוון בעת התחלת \"אדון עולם\".",
+          "translation": "Rabbi Yehuda heḤasidh, Rav Hai Gaon and Rav Sherira Gaon are cited as attaching great merit to saying Adhon 'Olam with concentration, at the outset of prayer."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-1",
+          "hebrew": "אֲדוֹן עוֹלָם אֲשֶׁר מָלַךְ, בְּטֶרֶם כָּל־יְצִיר נִבְרָא.",
+          "translation": "Master of the world, who reigned before any creature was created.",
+          "translit": "ʾădhon 'olam ʾăsher malakh, bĕṭerem kol-yĕṣir nivraʾ."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-2",
+          "hebrew": "לְעֵת נַעֲשָׂה בְחֶפְצוֹ כֹּל, אֲזַי מֶלֶךְ שְׁמוֹ נִקְרָא.",
+          "translation": "When all was made by His will, then was His name proclaimed King.",
+          "translit": "lĕ'eth na'ăsa vĕḥefṣo kol, ʾăzay melekh shĕmo niqraʾ."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-3",
+          "hebrew": "וְאַחֲרֵי כִּכְלוֹת הַכֹּל, לְבַדּוֹ יִמְלֹךְ נוֹרָא.",
+          "translation": "And after all has ceased to be, He alone will reign, the Awesome One.",
+          "translit": "wĕʾaḥăre kikhloth hakkol, lĕvaddo yimlokh noraʾ."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-4",
+          "hebrew": "וְהוּא הָיָה וְהוּא הֹוֶה, וְהוּא יִהְיֶה בְּתִפְאָרָה.",
+          "translation": "He was, He is, and He will be, in splendor.",
+          "translit": "wĕhuʾ haya wĕhuʾ howeh, wĕhuʾ yihyeh bĕthifʾara."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-5",
+          "hebrew": "וְהוּא אֶחָד וְאֵין שֵׁנִי, לְהַמְשִׁיל לוֹ וּלְהַחְבִּירָה.",
+          "translation": "He is one, and there is no second to compare to Him or set beside Him.",
+          "translit": "wĕhuʾ ʾeḥadh wĕʾen sheni, lĕhamĕshil lo ulĕhaḥbira."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-6",
+          "hebrew": "בְּלִי רֵאשִׁית בְּלִי תַכְלִית, וְלוֹ הָעֹז וְהַמִּשְׂרָה.",
+          "translation": "Without beginning, without end; His are the power and the dominion.",
+          "translit": "bĕli reʾshith bĕli thakhlith, wĕlo ha'oz wĕhammisra."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-7",
+          "hebrew": "בְּלִי עֵרֶךְ בְּלִי דִמְיוֹן, בְּלִי שִׁנּוּי וּתְמוּרָה.",
+          "translation": "Without measure, without likeness, without change or alteration.",
+          "translit": "bĕli 'erekh bĕli dhimyon, bĕli shinnuy uthĕmura."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-8",
+          "hebrew": "בְּלִי חִבּוּר בְּלִי פִרוּד, גְּדׇל־כֹּחַ וּגְבוּרָה.",
+          "translation": "Without joining, without division; great in power and might.",
+          "translit": "bĕli ḥibbur bĕli firudh, gĕdhol-khoaḥ ughĕvura."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-9",
+          "hebrew": "וְהוּא אֵלִי וְחַי גֹּאֲלִי, וְצוּר חֶבְלִי בְּעֵת צָרָה.",
+          "translation": "He is my God, my living Redeemer, my Rock in my anguish in time of trouble.",
+          "translit": "wĕhuʾ ʾeli wĕḥay goʾăli, wĕṣur ḥevli bĕ'eth ṣara."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-10",
+          "hebrew": "וְהוּא נִסִּי וּמָנוֹס לִי, מְנָת כּוֹסִי בְּיוֹם אֶקְרָא.",
+          "translation": "He is my banner and my refuge, the portion of my cup on the day I call.",
+          "translit": "wĕhuʾ nissi umanos li, mĕnath kosi bĕyom ʾeqraʾ."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-11",
+          "hebrew": "וְהוּא רוֹפֵא וְהוּא מַרְפֵּא, וְהוּא צוֹפֶה וְהוּא עֶזְרָה.",
+          "translation": "He is the healer and He is the cure; He watches, and He is the help.",
+          "translit": "wĕhuʾ rofeʾ wĕhuʾ marpeʾ, wĕhuʾ ṣofeh wĕhuʾ 'ezra."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-12",
+          "hebrew": "בְּיָדוֹ אַפְקִיד רוּחִי, בְּעֵת אִישַׁן וְאָעִירָה.",
+          "translation": "Into His hand I entrust my spirit, when I sleep and when I wake.",
+          "translit": "bĕyadho ʾafqidh ruḥi, bĕ'eth ʾishan wĕʾa'ira."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-13",
+          "hebrew": "וְעִם רוּחִי גְּוִיָּתִי, יְיָ לִי וְלֹא אִירָא.",
+          "translation": "And with my spirit, my body too: Adhonay is with me, I shall not fear.",
+          "translit": "wĕ'īm ruḥi gĕwiyyathi, Adhonay li wĕloʾ ʾiraʾ."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-14",
+          "hebrew": "בְּמִקְדָּשׁוֹ תָּגֵל נַפְשִׁי, מְשִׁיחֵנוּ יִשְׁלַח מְהֵרָה.",
+          "translation": "In His sanctuary my soul will rejoice; may He send our Messiah speedily.",
+          "translit": "bĕmiqdasho taghel nafshi, mĕshiḥenu yishlaḥ mĕhera."
+        },
+        {
+          "type": "text",
+          "id": "adhon-olam-15",
+          "hebrew": "וְאָז נָשִׁיר בְּבֵית קָדְשִׁי, אָמֵן אָמֵן שֵׁם הַנּוֹרָא.",
+          "translation": "Then we will sing in my holy house: Amen, amen, to the awesome Name.",
+          "translit": "wĕʾaz nashir bĕveth qodhshi, ʾamen ʾamen shem hannoraʾ."
+        }
+      ]
+    },
+    {
+      "id": "yom-hashabbat-ein-kamohu",
+      "title": "Yom HaShabbath En Kamohu",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "yom-hashabbat-info",
+          "hebrew": "סימן: מנצור. לשבת",
+          "translation": "Acrostic: Manṣur. For Shabbath."
+        },
+        {
+          "type": "text",
+          "id": "yom-hashabbat-refrain",
+          "hebrew": "יוֹם הַשַּׁבָּת אֵין כָּמוֹהוּ, בֵּרְכוֹ אֱלֹהִים וַיְקַדְּשֵׁהוּ.",
+          "translation": "There is no day like the Shabbath day; God blessed it and made it holy.",
+          "translit": "yom hashshabbath ʾen kamohu, berĕkho ʾĕlohim wayĕqaddĕshehu."
+        },
+        {
+          "type": "text",
+          "id": "yom-hashabbat-1",
+          "hebrew": "מִיּוֹם רִאשׁוֹן עַד יוֹם שִׁשִּׁי, לִקְרַאת שַׁבָּת נִכְסְפָה נַפְשִׁי, כִּי בַשַּׁבָּת אֵצֵא חָפְשִׁי, וְכִי יוֹם מְנוּחָה אֶקְרָאֵהוּ.",
+          "translation": "From the first day to the sixth, my soul longs for Shabbath; for on Shabbath I go out free, and a day of rest I call it.",
+          "translit": "miyyom riʾshon 'adh yom shishshi, liqraʾth shabbath nikhsĕfa nafshi, ki vashshabbath ʾeṣeʾ ḥofshi, wĕkhi yom mĕnuḥa ʾeqraʾehu."
+        },
+        {
+          "type": "text",
+          "id": "yom-hashabbat-2",
+          "hebrew": "נָגִיל וְנִשְׂמַח כִּי טוֹב לְהֹדוֹת, וּלְזַמֵּר עֶלְיוֹן עַל־כָּל־אֹדוֹת, כִּי הַשַּׁבָּת לָנוּ חֲמוּדוֹת, אִישׁ בַּעַר לֹא יְדָעֵהוּ.",
+          "translation": "Let us rejoice and be glad, for it is good to give thanks and to sing to the Most High for everything; for Shabbath is our treasure — a brutish man cannot know it.",
+          "translit": "naghil wĕnismaḥ ki ṭov lĕhodhoth, ulĕzammer 'elyon 'al-khol-ʾodhoth, ki hashshabbath lanu ḥămudhoth, ʾish ba'ar loʾ yĕdha'ehu."
+        },
+        {
+          "type": "text",
+          "id": "yom-hashabbat-3",
+          "hebrew": "צִוָּה לַעֲשׂוֹת שַׁבָּת כַּהֲלָכָה, אָז מִסִּינַי מִצְוָה עֲרוּכָה, גַּם הִיא לְשׁוֹמְרָהּ כֶּתֶר מְלוּכָה, וְכָבוֹד וְהָדָר תְּעַטְּרֵהוּ.",
+          "translation": "He commanded that Shabbath be kept according to its law — a commandment set out long ago at Sinai. To the one who keeps it, it is a royal crown, and crowns him with honor and splendor.",
+          "translit": "ṣiwwa la'ăsoth shabbath kahălakha, ʾaz missinay miṣwa 'ărukha, gam hiʾ lĕshomĕrah kether mĕlukha, wĕkhavodh wĕhadhar tĕ'aṭṭĕrehu."
+        },
+        {
+          "type": "text",
+          "id": "yom-hashabbat-4",
+          "hebrew": "וּמְאַהֲבֶיהָ חַיִּים יַאֲרִיכוּ, וְגַם טוֹעֲמֶיהָ חַיִּים זָכוּ, וּבִנְתִיב יֹשֶׁר הֵמָּה יֵלֵכוּ, עֵדְוֹתָיו בְּכָל־לֵב יִדְרְשׁוּהוּ.",
+          "translation": "Those who love it lengthen their lives, and those who savor it have merited life; they walk in the path of uprightness and seek His testimonies with a whole heart.",
+          "translit": "umĕʾahăveha ḥayyim yaʾărikhu, wĕgham ṭo'ămeha ḥayyim zakhu, uvinthiv yosher hemma yelekhu, 'edhĕwothaw bĕkhol-lev yidhrĕshuhu."
+        },
+        {
+          "type": "text",
+          "id": "yom-hashabbat-5",
+          "hebrew": "רָצָה יְיָ וּבָחַר בָּנוּ, וּמִכָּל־לָשׁוֹן הִבְדִּילָנוּ, וּקְדֻשַּׁת הַשַּׁבָּת הִנְחִילָנוּ, כָּל־זֶרַע יַעֲקֹב כַּבְּדוּהוּ.",
+          "translation": "Adhonay favored us and chose us, and set us apart from every tongue, and gave us the holiness of Shabbath as our inheritance. All you seed of Ya'aqov, honor Him.",
+          "translit": "raṣa Adhonay uvaḥar banu, umikkol-lashon hivdilanu, uqĕdhushshath hashshabbath hinḥilanu, kol-zera' ya'ăqov kabbĕdhuhu."
+        }
+      ]
+    },
+    {
+      "id": "hatimah",
+      "title": "Hathima",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "hathima-shabbath",
+          "hebrew": "בשבת בלבד:",
+          "translation": "On Shabbath only:"
+        },
+        {
+          "type": "text",
+          "id": "veshamru",
+          "hebrew": "וְשָׁמְר֥וּ בְנֵֽי־יִשְׂרָאֵ֖ל אֶת־הַשַּׁבָּ֑ת לַעֲשׂ֧וֹת אֶת־הַשַּׁבָּ֛ת לְדֹרֹתָ֖ם בְּרִ֥ית עוֹלָֽם׃ בֵּינִ֗י וּבֵין֙ בְּנֵ֣י יִשְׂרָאֵ֔ל א֥וֹת הִ֖וא לְעֹלָ֑ם כִּי־שֵׁ֣שֶׁת יָמִ֗ים עָשָׂ֤ה יְיָ אֶת־הַשָּׁמַ֣יִם וְאֶת־הָאָ֔רֶץ וּבַיּוֹם֙ הַשְּׁבִיעִ֔י שָׁבַ֖ת וַיִּנָּפַֽשׁ׃",
+          "translation": "The Israelite people shall keep the sabbath, observing the sabbath throughout the ages as a covenant for all time: it shall be a sign for all time between Me and the people of Israel. For in six days Adhonay made heaven and earth, [before] ceasing from work and being refreshed on the seventh day. (Exodus 31:16–17)",
+          "translit": "wĕshamĕru vĕne-yisraʾel ʾeth-hashshabbath la'ăsoth ʾeth-hashshabbath lĕdhorotham bĕrith 'olam. beni uven bĕne yisraʾel ʾoth hīwʾ lĕ'olam ki-shesheth yamim 'asa Adhonay ʾeth-hashshamayim wĕʾeth-haʾareṣ uvayyom hashshĕvi'i shavath wayyinnafash."
+        },
+        {
+          "type": "rubric",
+          "id": "hathima-daily",
+          "hebrew": "בכל יום:",
+          "translation": "Every day:"
+        },
+        {
+          "type": "text",
+          "id": "amar-rabbi-yehuda",
+          "hebrew": "אָמַר רַבִּי יְהוּדָה; אַשְׁרֵי מִי שֶׁעֲמָלוֹ בַּתּוֹרָה, וְעֹשֶׂה נַחַת רוּחַ לְיוֹצְרוֹ, גָּדַל בְּשֵׁם טוֹב, וְנִפְטָר בְּשֵׁם טוֹב מִן הָעוֹלָם, וְעָלָיו אָמַר שְׁלֹמֹה בְּחָכְמָתוֹ; ט֥וֹב שֵׁ֖ם מִשֶּׁ֣מֶן ט֑וֹב וְי֣וֹם הַמָּ֔וֶת מִיּ֖וֹם הִוָּלְדֽוֹ׃ לְמַד תּוֹרָה הַרְבֵּה, וְיִתְּנוּ לְךָ שָׂכָר הַרְבֵּה. וְדַע, מַתַּן שְׂכָרָן שֶׁל צַדִּיקִים לֶעָתִיד לָבוֹא.",
+          "translation": "Rabbi Yehuda said: Happy is the one whose toil is in Torah and who gives contentment to his Maker; he grew up with a good name and departed the world with a good name. Of him Shelomo said in his wisdom: \"A good name is better than fragrant oil, and the day of death than the day of birth.\" (Ecclesiastes 7:1) Learn much Torah, and you will be given much reward; and know that the reward of the righteous is given in the time to come.",
+          "translit": "ʾamar rabbi yĕhudha; ʾashre mi she'ămalo battora, wĕ'oseh naḥath ruaḥ lĕyoṣĕro, gadhal bĕshem ṭov, wĕnifṭar bĕshem ṭov mīn ha'olam, wĕ'alaw ʾamar shĕlomoh bĕḥokhmatho; ṭov shem mishshemen ṭov wĕyom hammaweth miyyom hiwwalĕdho. lĕmadh tora harbeh, wĕyittĕnu lĕkha sakhar harbeh. wĕdha', mattan sĕkharan shel ṣaddiqim le'athidh lavoʾ."
+        },
+        {
+          "type": "text",
+          "id": "rabbi-hananya",
+          "hebrew": "רַבִּי חֲנַנְיָא בֶּן־עֲקַשְׁיָא אוֹמֵר; רָצָה הַקָּדוֹשׁ בָּרוּךְ הוּא לְזַכּוֹת אֶת יִשְׂרָאֵל, לְפִיכָךְ הִרְבָּה לָהֶם תּוֹרָה וּמִצְוֹת, שֶׁנֶּאֱמַר; יְיָ֥ חָפֵ֖ץ לְמַ֣עַן צִדְק֑וֹ יַגְדִּ֥יל תּוֹרָ֖ה וְיַאְדִּֽיר׃",
+          "translation": "Rabbi Ḥananya ben 'Aqashya says: The Holy One, blessed be He, wished to make Israel worthy; therefore He gave them Torah and commandments in abundance, as it is said: \"Adhonay desires, for the sake of [Israel’s] vindication, to magnify and glorify the Teaching.\" (Isaiah 42:21; Mishnah Makkoth 3:16)",
+          "translit": "rabbi ḥănanyaʾ ben-'ăqashyaʾ ʾomer; raṣa haqqadhosh barukh huʾ lĕzakkoth ʾeth yisraʾel, lĕfikhakh hirba lahem tora umiṣwoth, shenneʾĕmar; Adhonay ḥafeṣ lĕma'an ṣidhqo yaghdil tora wĕyaʾdir."
+        }
+      ]
+    }
+  ]
+}

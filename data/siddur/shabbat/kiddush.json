@@ -38,8 +38,8 @@
         {
           "type": "text",
           "id": "kos-yeshuot-hodu",
-          "hebrew": "כּוֹס־יְשׁוּעוֹת אֶשָּׂא וּבְשֵׁם יְיָ אֶקְרָא׃ הוֹדוּ לַיְיָ כִּי־טוֹב כִּי לְעוֹלָם חַסְדּוֹ׃",
-          "translation": "I will lift up the cup of salvations, and call upon the name of Adhonay. (Psalm 116:13) Give thanks to Adhonay, for He is good; His kindness endures forever. (Psalm 118:1)",
+          "hebrew": "כּוֹס־יְשׁוּע֥וֹת אֶשָּׂ֑א וּבְשֵׁ֖ם יְיָ֣ אֶקְרָֽא׃ הוֹד֣וּ לַיְיָ֣ כִּי־ט֑וֹב כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+          "translation": "I raise the cup of deliverance and invoke Adhonay’s name. (Psalm 116:13) Praise Adhonay, who is good—whose steadfast love is eternal. (Psalm 118:1)",
           "translit": "kos-yĕshu'oth ʾessaʾ uvĕshem Adhonay ʾeqraʾ. hodhu laAdhonay ki-ṭov ki lĕ'olam ḥasdo."
         },
         {
@@ -57,9 +57,9 @@
         {
           "type": "text",
           "id": "vayechulu-psalm",
-          "hebrew": "וַיְכֻלּוּ הַשָּׁמַיִם וְהָאָרֶץ וְכָל־צְבָאָם׃ וַיְכַל אֱלֹהִים בַּיּוֹם הַשְּׁבִיעִי מְלַאכְתּוֹ אֲשֶׁר עָשָׂה וַיִּשְׁבֹּת בַּיּוֹם הַשְּׁבִיעִי מִכָּל־מְלַאכְתּוֹ אֲשֶׁר עָשָׂה׃ וַיְבָרֶךְ אֱלֹהִים אֶת־יוֹם הַשְּׁבִיעִי וַיְקַדֵּשׁ אֹתוֹ כִּי בוֹ שָׁבַת מִכָּל־מְלַאכְתּוֹ אֲשֶׁר־בָּרָא אֱלֹהִים לַעֲשׂוֹת׃",
-          "translation": "The heaven and the earth were finished, and all their array. On the seventh day God finished the work that He had done, and He ceased on the seventh day from all the work that He had done. And God blessed the seventh day and sanctified it, because on it He ceased from all His work that God had created to do. (Genesis 2:1–3)",
-          "translit": "wayĕkhullu hashshamayīm wĕhaʾareṣ wĕkhol-ṣĕvaʾam. wayĕkhal ʾĕlohim bayyom hashshĕvi'i mĕlaʾkhto ʾăsher 'asa wayyishboth bayyom hashshĕvi'i mikkol-mĕlaʾkhto ʾăsher 'asa. wayĕvarekh ʾĕlohim ʾeth-yom hashshĕvi'i wayĕqaddesh ʾotho ki vo shavath mikkol-mĕlaʾkhto ʾăsher-varaʾ ʾĕlohim la'ăsoth.",
+          "hebrew": "וַיְכֻלּ֛וּ הַשָּׁמַ֥יִם וְהָאָ֖רֶץ וְכׇל־צְבָאָֽם׃ וַיְכַ֤ל אֱלֹהִים֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מְלַאכְתּ֖וֹ אֲשֶׁ֣ר עָשָׂ֑ה וַיִּשְׁבֹּת֙ בַּיּ֣וֹם הַשְּׁבִיעִ֔י מִכׇּל־מְלַאכְתּ֖וֹ אֲשֶׁ֥ר עָשָֽׂה׃ וַיְבָ֤רֶךְ אֱלֹהִים֙ אֶת־י֣וֹם הַשְּׁבִיעִ֔י וַיְקַדֵּ֖שׁ אֹת֑וֹ כִּ֣י ב֤וֹ שָׁבַת֙ מִכׇּל־מְלַאכְתּ֔וֹ אֲשֶׁר־בָּרָ֥א אֱלֹהִ֖ים לַעֲשֽׂוֹת׃",
+          "translation": "The heaven and the earth were finished, and all their array. On the seventh day God finished the work that had been undertaken, ceasing on the seventh day from doing any of the work. And God blessed the seventh day and declared it holy—having ceased on it from all the work of creation that God had done. (Genesis 2:1–3)",
+          "translit": "wayĕkhullu hashshamayim wĕhaʾareṣ wĕkhol-ṣĕvaʾam. wayĕkhal ʾĕlohim bayyom hashshĕvi'i mĕlaʾkhto ʾăsher 'asa wayyishboth bayyom hashshĕvi'i mikkol-mĕlaʾkhto ʾăsher 'asa. wayĕvarekh ʾĕlohim ʾeth-yom hashshĕvi'i wayĕqaddesh ʾotho ki vo shavath mikkol-mĕlaʾkhto ʾăsher-varaʾ ʾĕlohim la'ăsoth.",
           "audio": "http://www.sephardichazzanut.com/6.Shabbat/kiddush_Friday_Night.mp3"
         },
         {
@@ -114,9 +114,9 @@
             {
               "type": "text",
               "id": "birkat-habanim-boy",
-              "hebrew": "יְשִׂמְךָ אֱלֹהִים כְּאֶפְרַיִם וְכִמְנַשֶּׁה.",
-              "translation": "May God make you like Ephraim and Manasseh. (Genesis 48:20)",
-              "translit": "yĕsimkha ʾĕlohim kĕʾefrayīm wĕkhimnashsheh."
+              "hebrew": "יְשִֽׂמְךָ֣ אֱלֹהִ֔ים כְּאֶפְרַ֖יִם וְכִמְנַשֶּׁ֑ה.",
+              "translation": "God make you like Ephraim and Manasseh. (Genesis 48:20)",
+              "translit": "yĕsimĕkha ʾĕlohim kĕʾefrayim wĕkhimnasheh."
             },
             {
               "type": "rubric",
@@ -134,8 +134,8 @@
             {
               "type": "text",
               "id": "birkat-kohanim",
-              "hebrew": "יְבָרֶכְךָ יְיָ וְיִשְׁמְרֶךָ׃ יָאֵר יְיָ פָּנָיו אֵלֶיךָ וִיחֻנֶּךָּ׃ יִשָּׂא יְיָ פָּנָיו אֵלֶיךָ וְיָשֵׂם לְךָ שָׁלוֹם׃ וְשָׂמוּ אֶת־שְׁמִי עַל־בְּנֵי יִשְׂרָאֵל וַאֲנִי אֲבָרְכֵם׃",
-              "translation": "Adhonay bless you and keep you. Adhonay make His face shine upon you and be gracious to you. Adhonay lift up His face toward you and grant you peace. And they shall set My name upon the children of Israel, and I will bless them. (Numbers 6:24–27)",
+              "hebrew": "יְבָרֶכְךָ֥ יְיָ֖ וְיִשְׁמְרֶֽךָ׃ יָאֵ֨ר יְיָ֧ ׀ פָּנָ֛יו אֵלֶ֖יךָ וִֽיחֻנֶּֽךָּ׃ יִשָּׂ֨א יְיָ֤ ׀ פָּנָיו֙ אֵלֶ֔יךָ וְיָשֵׂ֥ם לְךָ֖ שָׁלֽוֹם׃ וְשָׂמ֥וּ אֶת־שְׁמִ֖י עַל־בְּנֵ֣י יִשְׂרָאֵ֑ל וַאֲנִ֖י אֲבָרְכֵֽם׃",
+              "translation": "Adhonay bless you and protect you! Adhonay deal kindly and graciously with you! Adhonay bestow favor upon you and grant you peace! Thus they shall link My name with the people of Israel, and I will bless them. (Numbers 6:24–27)",
               "translit": "yĕvarekhkha Adhonay wĕyishmĕrekha. yaʾer Adhonay panaw ʾelekha wiḥunnekka. yissaʾ Adhonay panaw ʾelekha wĕyasem lĕkha shalom. wĕsamu ʾeth-shĕmi 'al-vĕne yisraʾel waʾăni ʾăvarĕkhem."
             },
             {
@@ -168,8 +168,8 @@
             {
               "type": "text",
               "id": "einei-chol",
-              "hebrew": "עֵינֵי־כֹל אֵלֶיךָ יְשַׂבֵּרוּ וְאַתָּה נוֹתֵן־לָהֶם אֶת־אָכְלָם בְּעִתּוֹ׃ פּוֹתֵחַ אֶת־יָדֶךָ וּמַשְׂבִּיעַ לְכָל־חַי רָצוֹן׃",
-              "translation": "The eyes of all look to You, and You give them their food in due season. You open Your hand, and satisfy the desire of every living thing. (Psalm 145:15–16)",
+              "hebrew": "עֵֽינֵי־כֹ֭ל אֵלֶ֣יךָ יְשַׂבֵּ֑רוּ וְאַתָּ֤ה נֽוֹתֵן־לָהֶ֖ם אֶת־אׇכְלָ֣ם בְּעִתּֽוֹ׃ פּוֹתֵ֥חַ אֶת־יָדֶ֑ךָ וּמַשְׂבִּ֖יעַ לְכׇל־חַ֣י רָצֽוֹן׃",
+              "translation": "The eyes of all look to You expectantly, and You give them their food when it is due. You give it openhandedly, feeding every creature to its heart’s content. (Psalm 145:15–16)",
               "translit": "'ene-khol ʾelekha yĕsabberu wĕʾatta nothen-lahem ʾeth-ʾokhlam bĕ'itto. potheaḥ ʾeth-yadhekha umasbia' lĕkhol-ḥay raṣon."
             },
             {
@@ -212,9 +212,9 @@
         {
           "type": "text",
           "id": "veshamru-psalm",
-          "hebrew": "וְשָׁמְרוּ בְנֵי־יִשְׂרָאֵל אֶת־הַשַּׁבָּת לַעֲשׂוֹת אֶת־הַשַּׁבָּת לְדֹרֹתָם בְּרִית עוֹלָם׃ בֵּינִי וּבֵין בְּנֵי יִשְׂרָאֵל אוֹת הִוא לְעֹלָם כִּי־שֵׁשֶׁת יָמִים עָשָׂה יְיָ אֶת־הַשָּׁמַיִם וְאֶת־הָאָרֶץ וּבַיּוֹם הַשְּׁבִיעִי שָׁבַת וַיִּנָּפַשׁ׃",
-          "translation": "The children of Israel shall keep the Sabbath, to observe the Sabbath throughout their generations, as an everlasting covenant. It is a sign between Me and the children of Israel forever; for in six days Adhonay made the heavens and the earth, and on the seventh day He ceased from work and was refreshed. (Exodus 31:16–17)",
-          "translit": "wĕshamĕru vĕne-yisraʾel ʾeth-hashshabbath la'ăsoth ʾeth-hashshabbath lĕdhorotham bĕrith 'olam. beni uven bĕne yisraʾel ʾoth hīwʾ lĕ'olam ki-shesheth yamim 'asa Adhonay ʾeth-hashshamayīm wĕʾeth-haʾareṣ uvayyom hashshĕvi'i shavath wayyinnafash."
+          "hebrew": "וְשָׁמְר֥וּ בְנֵֽי־יִשְׂרָאֵ֖ל אֶת־הַשַּׁבָּ֑ת לַעֲשׂ֧וֹת אֶת־הַשַּׁבָּ֛ת לְדֹרֹתָ֖ם בְּרִ֥ית עוֹלָֽם׃ בֵּינִ֗י וּבֵין֙ בְּנֵ֣י יִשְׂרָאֵ֔ל א֥וֹת הִ֖וא לְעֹלָ֑ם כִּי־שֵׁ֣שֶׁת יָמִ֗ים עָשָׂ֤ה יְיָ֙ אֶת־הַשָּׁמַ֣יִם וְאֶת־הָאָ֔רֶץ וּבַיּוֹם֙ הַשְּׁבִיעִ֔י שָׁבַ֖ת וַיִּנָּפַֽשׁ׃",
+          "translation": "The Israelite people shall keep the sabbath, observing the sabbath throughout the ages as a covenant for all time: it shall be a sign for all time between Me and the people of Israel. For in six days Adhonay made heaven and earth, [before] ceasing from work and being refreshed on the seventh day. (Exodus 31:16–17)",
+          "translit": "wĕshamĕru vĕne-yisraʾel ʾeth-hashshabbath la'ăsoth ʾeth-hashshabbath lĕdhorotham bĕrith 'olam. beni uven bĕne yisraʾel ʾoth hīwʾ lĕ'olam ki-shesheth yamim 'asa Adhonay ʾeth-hashshamayim wĕʾeth-haʾareṣ uvayyom hashshĕvi'i shavath wayyinnafash."
         },
         {
           "type": "include",
