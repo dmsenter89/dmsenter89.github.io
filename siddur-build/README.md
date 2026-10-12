@@ -96,11 +96,11 @@ over the content tree.
   halachic notes). No transliteration is generated — the library needs
   niqqud to produce anything meaningful, and this text isn't recited anyway.
   Optional `lead` / `hebrewLead` strings render in bold ahead of the
-  `translation` / `hebrew` text, as a run-in topic label (see Daily > Halakha).
+  `translation` / `hebrew` text, as a run-in topic label (see Daily > Hălakha).
 - `type: "text"` — vocalized liturgy that goes through all three display
   toggle states (Hebrew / transliteration / translation).
 - `type: "hebrew"` — Hebrew-only reference text with no transliteration or
-  translation (e.g. the Ta'amim names in Appendix > Ta'amim). Always visible,
+  translation (e.g. the ṭĕ'amim names in Appendix > Ṭĕ'amim). Always visible,
   independent of the Hebrew/translit/translation display toggle, since
   there's no other representation to fall back to. `generate.mjs` should
   **not** be run against these items (there's no `translit` field to fill
@@ -222,7 +222,7 @@ as any other content file.
 ## Appendix / reference tables
 
 Some pages aren't liturgy at all — they're plain reference tables (Appendix
-> Transliteration, Appendix > Seder ha-Mishmarah). These use a different
+> Transliteration, Appendix > Sedher HaMishmara). These use a different
 content shape and a different layout, not the `sections`/`items` schema
 above:
 
@@ -247,7 +247,7 @@ to `layouts/siddur/tables.html`, which resolves the data file the same
 path-mirroring way `single.html` does, then hands each table off to
 `layouts/_partials/siddur-table.html`). `hebrewColumn: true` styles and
 marks up (`lang="he" dir="rtl"`) each row's first cell as Hebrew; omit it
-for tables with no Hebrew column (e.g. Seder ha-Mishmarah).
+for tables with no Hebrew column (e.g. Sedher HaMishmara).
 
 **Appendix > Transliteration is auto-generated, not hand-authored.** Run
 `node generate-transliteration-table.mjs` (no arguments) to regenerate
@@ -268,45 +268,331 @@ content.
 
 ## Biblical citations
 
-Two standing rules for any **direct biblical citation** (a verse or passage
-quoted as such, not liturgy that merely echoes biblical language):
+For any **direct biblical citation** (a verse or passage quoted as such, not
+liturgy that merely echoes biblical language), **always pull the Hebrew with
+ta'amim from Sefaria** ("Miqra according to the Masorah", the default Hebrew
+version) rather than using the unpointed-for-cantillation text from the
+source doc. Strip Sefaria's HTML (`<b>`, `&thinsp;`, the `{פ}`/`{ס}`
+parasha-break spans), keep maqqef, paseq and sof pasuq, drop any hand-added
+commas, then run `generate.mjs` as usual — it normalizes the Divine Name
+while preserving the cantillation.
 
-- **Hebrew: always pull the verse with ta'amim from Sefaria** ("Miqra
-  according to the Masorah", the default Hebrew version) rather than using
-  the unpointed-for-cantillation text from the source doc. Strip Sefaria's
-  HTML (`<b>`, `&thinsp;`, the `{פ}`/`{ס}` parasha-break spans), keep maqqef,
-  paseq and sof pasuq, drop any hand-added commas, then run `generate.mjs`
-  as usual — it normalizes the Divine Name while preserving the cantillation.
-- **English: take the translation from *THE JPS TANAKH: Gender-Sensitive
-  Edition* (JPS, 2023) via Sefaria** for every biblical book, Torah, Nevi'im
-  and Ketuvim alike, instead of writing an original one. Sefaria lists it as
-  CC-BY-NC; the site front page (`content/siddur/_index.md`) carries the
-  attribution this license requires — keep it in place. Adapt it only as
-  follows:
-  - Where it renders the Tetragrammaton ("the ETERNAL", "GOD" in small
-    caps, "O ETERNAL One", etc.), write **Adhonay**, matching the rest of
-    the site.
-  - Where the Hebrew actually reads אֲדֹנָי, keep JPS's own wording (e.g.
-    "my Sovereign") — do not change it to Adhonay.
-  - Drop footnotes and footnote markers, and flatten the poetry line-break
-    markup into one line; end with the reference, e.g. `(Psalm 118:20)`.
+The English is an original translation like everything else (see below), and
+carries **no inline verse reference** — no `(Psalm 118:20)` after the text.
 
-  The user may hand-amend an individual verse afterward; leave such edits
-  alone rather than "restoring" the JPS wording.
+## Translation style
 
-The liturgical sense is primary: where JPS reads a verse against the point
-the liturgy makes with it, the verse is emended in JPS's own register. Current
-emendations (do not "restore" these): Deut 6:4 ("Adhonay is one"), Deut 33:4
-(no leading "When"), Isa 42:21 ("for the sake of [Israel's] vindication"),
-Ps 20:10 ("grant victory! May the Sovereign answer us"), and Exod 34:7 as
-truncated in the Thirteen Attributes ("and granting pardon").
+All English is original, written from the Hebrew, in one of two registers.
 
-Existing content was retrofitted to both rules on 2026-10-09. That pass
-covered whole verses/passages and explicitly introduced quotes ("as it is
-written…"), including ones embedded in longer prayers. It deliberately left
-alone sub-verse fragments woven into composed liturgy or piyyut (e.g. the
-Selihoth refrains, Al HaNissim's Esther phrasing, "Adhonay melekh…") — those
-are echoes, not citations.
+**Recited texts** (`type: "text"` — prayers, psalms, Tanakh quotes):
+
+- Loose iambic meter, a natural 4–5 stress-beat pulse per thought unit, easy
+  to say aloud.
+- Continuous prose, never broken into poetic lines; commas, semicolons and
+  em-dashes mark the breath pauses.
+- Warm, dignified, traditional and reverent, in the register of prayerbooks
+  like Kehot or ArtScroll.
+- Fixed vocabulary: *melekh* = King (never "Sovereign"); *qoneh* = Maker,
+  Creator or Possessor (never "owner"); *ḥesedh* = loving-kindness, kindness
+  or devotion; *raḥamim* = compassion or mercy; *ḥasde avoth* = devotion /
+  merits of the Patriarchs.
+- *ʾavoth* / *ʾăvothenu* = forefathers, our forefathers (not "ancestors" or
+  "fathers"); "the Patriarchs" where the three are meant.
+- Avoid "sin": in English it carries Christian connotations the Hebrew does
+  not have. *ḥeṭʾ* is missing the mark — "err", "error", "failings", "shortcomings", whichever reads naturally in
+  context; *'awon* = wrongdoing (plural "wrongs"; "guilt" where it means the
+  burden carried); *pesha'* = defiance, "defy". Not "iniquity" or
+  "transgression" either — they sound just as churchly. "Sin" is a last resort, for where nothing else works.
+- *tĕshuva* = return ("who desires our return"), never "repentance". In
+  rubrics it stays untranslated — tĕshuva, glossed once as "(return)".
+- The Tetragrammaton is always "Adhonay". Where the Hebrew actually reads
+  אֲדֹנָי (not the Tetragrammaton), write "my Lord".
+- שַׁבָּת is "Shabbath", never "Sabbath".
+- No KJV archaisms (thou, thee, wilt, doth) — modern capitalized pronouns
+  (You, Your, He, His). No bracketed editorial insertions. No academic or
+  bureaucratic wording.
+
+**Informational texts** (`type: "rubric"` — halakha, instructions, notes):
+
+- Plain, modern, accessible prose with no poetic rhythm; clarity comes first.
+- Friendly, warm and conversational, like an encouraging guide; address the
+  reader as "you" where the Hebrew's impersonal "he" allows it.
+- Technical terms stay in transliteration: bĕrakha (not "blessing"), miṣwa
+  (not "commandment"), and nouns like ṣiṣith, miqweh, ṭumʾa — glossed once in
+  parentheses where a reader may not know them. Procedural jargon goes into
+  English: "by Torah law", "by rabbinic law", "ideally", "after the fact"
+  (not min hattora, middivre sofĕrim, lĕkhattĕḥilla, bĕdhi'ăvadh).
+- *ṣeʾth hakkokhavim* stays transliterated — an English stand-in like
+  "nightfall" misleads — glossed "(when the stars come out)" once per
+  section where it appears.
+- Source citations are kept exactly as they stand.
+- Never cut content. If a passage reads as heavily mystical or kabbalistic,
+  translate it and flag it to the user, who decides what to remove.
+
+**Hebrew terms in visible English** (translations, section and page titles,
+labels) use the site's technical transliteration scheme, the same one
+`generate.mjs` produces, capitalized as English: Qiddush, Shabbath, Minḥa,
+rĕvi'ith, Shulḥan 'Arukh, Sĕ'udha Shĕlishith — not Kiddush, Shabbat, Mincha.
+Ids, file names and URLs stay plain ASCII (`kiddush-leil-shabbat`).
+
+The title רִבִּי of a Talmudic sage is "Ribbi" (two ḥiriqs, as we pronounce
+it) — Ribbi Ḥănanya ben 'Ăqashya, Ribbi Yĕhudha. Later and modern rabbis are
+"Rabbi" (Rabbi Mordechai Eliyahu). In Hebrew, write ז״ל with gershayim (״),
+not a straight quotation mark.
+
+## Settled wording
+
+Wording the user has approved. Before translating anything new, grep its
+opening Hebrew words across `data/siddur/` and check this list: if a verse,
+blessing formula or stock phrase is already translated, reuse that wording
+verbatim so the site reads as one voice. Add to the list as new wording is
+approved. ("Batch" numbers below refer to the 2026-10 retranslation passes.)
+
+- **Blessing opening:** "Blessed are You, Adhonay our God, King of the
+  universe, who has sanctified us with His commandments and commanded us …"
+- **Boreʾ pĕri haggefen** (הַגֶּפֶן, never haggafen): "… who creates the fruit of the vine."
+- **HaMoṣiʾ:** "… who brings forth bread from the earth."
+- **Mĕqaddesh hashShabbath:** "… who makes the Shabbath holy."
+- **Psalm 116:13:** "I lift the cup of salvation, and call upon the name of
+  Adhonay."
+- **Psalm 118:1:** "Give thanks to Adhonay, for He is good, for His
+  loving-kindness endures forever."
+- **Psalm 118:20:** "This is the gate of Adhonay; the righteous shall enter
+  through it."
+- **Psalm 90:17:** "May the pleasantness of my Lord, our God, be upon us;
+  establish for us the work of our hands — the work of our hands, establish
+  it."
+- **Psalm 145:15–16:** "The eyes of all look to You in hope, and You give
+  them their food in its season. You open Your hand, and satisfy the desire
+  of every living thing."
+- **Numbers 6:24–26:** "May Adhonay bless you and keep you. May Adhonay make
+  His face shine upon you, and be gracious to you. May Adhonay lift up His
+  face toward you, and grant you peace."
+- **Genesis 2:1–3** and **Exodus 31:16–17:** as on the Qiddush page.
+- **Shared core** — the Shĕma' (Deuteronomy 6:4–9), the Thirteen Attributes
+  (Exodus 34:5–7, 9) and every weekday 'Ămidha blessing are settled as they
+  stand in `data/siddur/shared/`; copy from there, including Psalm 51:17,
+  Psalm 19:15, Psalm 113:2–4, Psalm 8:10 and 'Oseh shalom.
+- **Daniel 9:18:** "… not on account of our own righteousness do we lay our
+  pleas before You, but on account of Your great compassion." (Minḥa
+  Taḥănun and Ribbon ha'olamim alike.)
+- **Psalm 19:15:** "May the words of my mouth and the meditation of my heart
+  find favor before You, Adhonay, my Rock and my Redeemer."
+- **Daily services** — the three Shĕma' paragraphs, the 'Arvith bĕrakhoth
+  (Ma'ăriv 'ăravim, ʾAhăvath 'olam, ʾEmeth weʾĕmuna, Hashkivenu), ʾAtta
+  ḥonantanu, Psalm 121 and 'Alenu are settled as they stand in
+  `data/siddur/daily/arvith.json`; Psalm 145, Psalm 25 and the Taḥănun
+  verses as in `data/siddur/daily/minha.json`. Copy from there.
+- **Psalm 20:10:** "Adhonay, save us! May the King answer us on the day we
+  call."
+- **Psalm 78:38:** "And He, being compassionate, pardons wrongdoing and does
+  not destroy; time and again He turns back His anger, and does not rouse
+  all His wrath."
+- **Psalm 46:8 / 84:13:** "Adhonay of hosts is with us; the God of Jacob is
+  our stronghold, Selah. Adhonay of hosts, happy is the one who trusts in
+  You."
+- **Psalm 84:5 / 144:15:** "Happy are those who dwell in Your house; they
+  shall praise You evermore, Selah. Happy is the people for whom this is so;
+  happy is the people whose God is Adhonay."
+- **Psalm 25:6:** "Remember Your compassion, Adhonay, and Your kindnesses,
+  for they are from of old."
+- **More fixed renderings:** כפר = pardon; הַשָּׂטָן = the Adversary; צְדָקָה
+  וָחֶסֶד = charity and loving-kindness; חֲסִידִים = the devout / Your devout
+  ones; inline Hebrew cues stay bracketed ("[Quietly:]", "[in the rainy
+  season: …]").
+- **Page intros:** the prose body of a page's `.md` file is informational
+  register too — rewrite it along with the JSON.
+- **Citations in rubrics** keep their references but go into the scheme
+  (Shulḥan 'Arukh, ʾOraḥ Ḥayyim; Moram for the Rema; "Rambam, Tĕfilla 4:19").
+- **Havdala formula:** "… between the holy and the ordinary, between light
+  and darkness, between Israel and the nations, and between the seventh day
+  and the six days of work."
+- **Stock phrases:** "our God and God of our forefathers"; "May it be Your
+  will, Adhonay our God and God of our forefathers, …"; "speedily in our
+  days"; "for the sake of His name"; "Selah" (English form, like Amen).
+- **Fixed renderings:** רחמים = compassion ("have mercy on us" only for the
+  verb רַחֵם); מַצְמִיחַ = makes … spring forth; צֶמַח דָּוִד = the branch of
+  David; קֶרֶן = horn; שְׁכִינָה = His Presence; טֹטָפֹת = an emblem; מִינִים =
+  heretics; biblical names in their English forms (Jesse, Zion, Rebecca).
+- **חטא / עון / פשע:** err, error, failings, shortcomings ("for we have
+  erred", "those who err") / wrongdoing, wrongs / defiance, "we have defied
+  You", "the defiant". יִרְאַת חֵטְא = "we fear to do wrong".
+  See the "sin" rule in `README.md`.
+- **תְּשׁוּבָה:** "return" in recited text ("restore us to Your presence in
+  whole-hearted return … who desires our return"); "tĕshuva" in rubrics.
+- **Participles after a second-person opening** stay second person ("You
+  make the dew fall", "You sustain the living").
+- **Rubric vocabulary:** "say the bĕrakha" (not "recite the blessing");
+  "the service" for תפלה as a prayer service; "ask a rabbi"; "our custom" /
+  "the widespread custom" for מנהג; "a barrier (ḥăṣiṣa)"; "vessels" for כלים.
+- **Shaḥrith** — Yoṣer ʾor, ʾAhăvath 'olam, ʾĔmeth wĕyaṣṣiv, the Sedher HaYom
+  verses, Qawweh and ʾEn kelohenu are settled as they stand in
+  `data/siddur/daily/shahrith.json`; HaMappil and Psalm 31:6 as in
+  `data/siddur/daily/before-sleep.json`; Modeh ʾăni, 'Al divre thora and
+  Deuteronomy 33:4 as in `data/siddur/daily/for-toddlers.json`. Copy from
+  there.
+- **Isaiah 42:21:** "Adhonay was pleased, for the sake of His righteousness,
+  to make the Torah great and glorious."
+- **Deuteronomy 33:4:** "Moses commanded us the Torah, the heritage of the
+  congregation of Jacob."
+- **More fixed renderings (batch 3):** חֶמְלָה = tenderness / tender care;
+  פודה = ransom (גואל = redeem, מציל = deliver); יִרְאָה = fear; כָבוֹד in
+  Psalm 30:13 = "my soul"; לְאָבוֹת וּבָנִים = "for fathers and for children"
+  (literal parents, not the forefathers rule).
+- **Upon Waking** — ʾĔlohay nĕshama, the morning bĕrakhoth, ʾĂsher yaṣar,
+  the Torah bĕrakhoth with ʾEllu dhĕvarim, Ribbon ha'olamim through ʾAtta huʾ,
+  and Numbers 6:22–27 are settled as they stand in
+  `data/siddur/daily/upon-waking.json`. Copy from there.
+- **More fixed renderings (batch 4):** עֲבֵרָה = misdeed(s); יֵצֶר טוֹב / רָע =
+  the good / evil inclination; לְשׁוֹן הָרָע = slander; אֵל שַׁדַּי = God
+  Almighty; הֶבֶל = a breath; רִבּוֹן = Master (of the worlds, of all works);
+  מַתִּיר אֲסוּרִים as a morning bĕrakha = "who frees the bound" (the 'Ămidha
+  keeps "set the captives free"); שם ומלכות in rubrics = "God's Name and
+  Kingship"; Yom HaKippurim, Tish'a BĕʾAv.
+- **Wordplay and glosses in recited text** go in quotation marks, never
+  brackets (hălikhoth, "ways" / hălakhoth, "laws"); explanatory glosses the
+  Hebrew doesn't have are dropped.
+- **Shabbath services** — Psalms 29, 92 and 93 and Lĕkha Dhodhi are settled
+  as they stand in `data/siddur/shabbat/kabbalat-shabbat.json`; the
+  Qĕdhushath HaYom paragraphs (ʾAtta qiddashta, Yismaḥ Mosheh, ʾAtta ʾeḥadh,
+  Hanaḥ lĕ'ammĕkha, Tikkanta Shabbath, Rĕṣeh na bimnuḥathenu) and Numbers
+  28:9–10 as in `data/siddur/shabbat/tefilah.json`; Psalm 118:25–29, the
+  spice, fire and HaMavdil bĕrakhoth as in
+  `data/siddur/shabbat/havdalah.json`. Copy from there.
+- **Proverbs 6:23:** "For the commandment is a lamp, and the Torah is
+  light."
+- **More fixed renderings (batch 5):** נֵר שֶׁל שַׁבָּת = the Shabbath light
+  ("to kindle the Shabbath light"; "candle" only for the Havdala candle);
+  הַמַּבְדִּיל = "who distinguishes"; מְנוּחָה … הַשְׁקֵט וָבֶטַח = "rest … quiet and
+  security"; חֶמְדַּת יָמִים = "the most cherished of days"; קָרְבַּן מוּסָף = the
+  additional offering; "make Havdala" / "make Qiddush" in rubrics; Rambam
+  cited as "Rambam, Shabbath 5:1"; Ben ʾIsh Ḥay as "Year 2, Wayyeṣeʾ 14".
+- **Blessings after and before eating** — Birkath HaMazon (HazZan, Nodheh,
+  'Al HanNissim for Purim and Ḥănukka, Raḥem, Ya'ăleh Wĕyavoʾ, HaṭṬov
+  wĕhamMeṭiv) is settled as it stands in
+  `data/siddur/blessings/blessings-after-eating/birkat-hamazon.json`; Mĕ'en
+  Shalosh and Boreʾ Nĕfashoth as in `other-foods.json` beside it; the food
+  and fragrance bĕrakhoth as in
+  `data/siddur/blessings/blessings-on-enjoyments.json`. Copy from there.
+- **More fixed renderings (batch 6):** מָזוֹן = food; מִחְיָה = nourishment;
+  כַּלְכָּלָה = sustenance; אֶרֶץ חֶמְדָּה = a cherished land; פֻּרְקָן = rescue;
+  פְּלֵיטָה = deliverance; תְּשׁוּעוֹת = victories; רַחֲמֶיךָ הָרַבִּים = Your great
+  compassion; דְּבִיר = shrine, הֵיכָל = Temple, מִקְדָּשׁ = sanctuary; מָשִׁיחַ
+  בֶּן־דָּוִד = the Messiah, son of David (מְשִׁיחָךְ = Your anointed); חֵי
+  הָעוֹלָמִים = the Life of the worlds.
+- **Festival names** stay Hebrew in recited text, like Shabbath: Roʾsh
+  Ḥodhesh, Pesaḥ, the Festival of Maṣṣoth, the Festival of Sukkoth, Ḥănukka,
+  Purim. Post-biblical names take English forms too (Mattathias son of
+  Johanan).
+- **Split formulas** (Mĕ'en Shalosh): each alternative row carries its own
+  "for", as the Hebrew עַל does; "(בא״י: …)" cues read "[In the Land of
+  Israel: …]". Rubric cue before a bĕrakha: "Over bread, say:".
+- **Ribbi** for Talmudic sages only (Ribbi Ḥănanya ben 'Ăqashya, Ribbi
+  Yĕhudha); later and modern rabbis are "Rabbi" and keep their usual
+  English spellings (Rabbi Mordechai Eliyahu, Ovadia Yosef, Salman Mutzafi).
+  Hebrew ז״ל takes gershayim, not a straight quote.
+- **Blessings, part 2, and lifecycle** — the Torah-study verses and prayers
+  (Deuteronomy 4:44, Proverbs 4:2, Psalm 119:12, Hosea 12:11, Amos 2:11,
+  Isaiah 60:21, the Bĕrakhoth 28b prayers, Ribbi Ḥănanya) are settled as
+  they stand in `data/siddur/blessings/torah-study.json`; HaGomel, Psalm
+  111:1 and 1 Chronicles 29:10–12 as in `birkat-hagomel.json` beside it;
+  Song of Songs 2:14 and 6:9 and the Mi Shebberakh as in
+  `data/siddur/lifecycle/zeved-habat.json`. Copy from there.
+- **More fixed renderings (batch 7):** הַקָּדוֹשׁ בָּרוּךְ הוּא = the Holy One,
+  blessed is He; לְחַיָּבִים = the undeserving; בֵּית הַמִּדְרָשׁ = the house of
+  study; אֵל עוֹלָם = the everlasting God; הֲלָכָה in recited text = "law";
+  נְאֻם = declares; "think them in your heart" for יהרהר בלבו; "before ten"
+  for בעשרה; ז״ל = of blessed memory; "Before reading from …, begin with:".
+- **Hălakha page (batch 8):** תפילה = "the 'Ămidha" where the standing
+  prayer is meant ("go back to the beginning of the 'Ămidha"), "service" for
+  Shaḥrith / Minḥa / 'Arvith / Musaf / Nĕ'ila, "prayer" for the miṣwa in
+  general. יצא ידי חובתו = "you have fulfilled your obligation"; חוזר = "go
+  back to …"; the 'Ăvodha bĕrakha ("Rĕṣeh"); Birkath HashShanim; Shomea'
+  tĕfilla; Roʾsh HashShana; "the Ten Days of Tĕshuva". Citations there stay
+  bare, as the Hebrew has them: "(Qiryath Shĕma' 1:1)", "(Tĕfilla 2:11)".
+- **Kawwana:** stays transliterated, glossed once; its absence is reciting
+  "mechanically, without that focus" — never "your heart wasn't in it",
+  which sounds like a lack of feeling.
+- **Zĕmannim:** ṣeʾth hakkokhavim stays transliterated, glossed "(when the
+  stars come out)" once per section where it appears. Otherwise: dawn
+  ('ammudh hashshaḥar), sunrise (haneṣ haḥamma), sunset, midnight, midday,
+  "seasonal hours", pĕlagh haMinḥa, Minḥa Gĕdhola / Qĕṭanna; "the third
+  hour"; ימות החמה = summer; בדיעבד או בשעת הדוחק = "after the fact or in
+  pressing circumstances"; אנוס = "prevented by something beyond your
+  control (ʾanus)"; תשלומין = "the make-up (tashlumin)"; סימן לדבר = "A way
+  to remember it:".
+- **Hălakha page (batch 9):** מעכבין = "stand in the way of prayer"; טהרת
+  הידיים / המקום = clean hands, a clean place; ליבו as a body part = chest;
+  בית הכיסא = bathroom; מגונה = "looked down on"; תפילתו תפילה = "your prayer
+  counts"; סומך גאולה לתפילה = "join redemption to prayer"; nĕfilath panim,
+  kĕri'a, qidda, hishtaḥăwaya stay transliterated; "the Shĕkhina (God's
+  Presence)"; עבדים = servants; Psalm 29:2 as on the Qabbalath Shabbath page.
+  רשות is normally "optional", but "the evening service is voluntary" in the
+  Before 'Arvith paragraph. Cross-references stay as "(see section 8)"; "see
+  also" is kept where the Hebrew has וראה.
+- **Piyyut (batches 10–11):** continuous prose with a loose iambic pulse, no
+  rhyme, one paragraph per stanza. In the piyyutim the Name follows the
+  print: `אֲדֹנָי` = "my Lord". Acrostic notes spell the name in the site
+  scheme (Yisraʾel, Shĕlomo, Ya'ăqov); biblical figures in running text keep
+  English names (Solomon, Jacob). וָתִיק = Faithful One; גֵיא צַלְמָוֶת = "the
+  valley of death's shadow"; שִׁילֹה = Shilo; נשמה is "she". סוֹד יְצָרוֹ (ʾĂghaddelkha) = "the secret
+  of what He has formed". Wĕshamĕru as in the Shabbath 'Ămidha; Ribbi Ḥănanya as in `torah-study.json`.
+- **Shabbath pizmonim** — Dĕror Yiqraʾ, Ki ʾEshmĕra Shabbath, ʾEreṣ WĕRum,
+  ʾEl ʾEliyyahu and HaMavdil ben Qodhesh LĕḤol are settled as they stand in
+  `data/siddur/shabbat/pizmonim.json`. Refrains: "It is a sign forever
+  between Him and me."; חַי חַי חַי = "He lives, He lives, He lives."; "God of
+  Elijah, God of Elijah — by the merit of Elijah the prophet, bring him, we
+  pray."; "In honor of my heart's delight, Elijah the prophet."
+- **More fixed renderings (batch 11):** מוצאי שבת = "Moṣaʾe Shabbath
+  (Saturday night, once Shabbath has gone out)", glossed once per page;
+  אוֹת יֶשַׁע = a sign of salvation; לֶחֶם פָּנִים = the showbread; יוֹם כִּפּוּר
+  עֲוֹנִי = "the day my wrongdoing is pardoned"; שְׁכִינַת אֵל = the Presence of
+  God; עוֹלָם שֶׁכֻּלּוֹ שַׁבָּת = "a world that is wholly Shabbath"; service names
+  in recited text stay Hebrew ('Arvith, Shaḥrith, Musaf, Minḥa); "Elijah the
+  prophet"; "Sephardic" as an English word. Pizmon authors keep their usual
+  English spellings (Dunash ben Labrat, Rabbi Abraham ibn Ezra); the
+  acrostic itself is in the scheme (ʾAvraham).
+- **Yamim Noraʾim (batch 12)** — Ben ʾAdham, Lĕma'ankha ʾĔlohay, ʾErʾele
+  Ma'la, Bĕṭerem Shĕḥaqim, 'Ănenu, ʾĂdhon HasSĕliḥoth, ʾEl Raḥum Shimkha,
+  Yah Shĕma' ʾEvyonekha, Bĕzokhri 'al Mishkavi, Shomer Yisraʾel and Te'anu
+  Wĕthe'athĕru are settled as they stand in
+  `data/siddur/yamim-noraim/selihoth.json`; 'Ozreni ʾEl Ḥay as in
+  `pizmonim.json` beside it. Refrains: "Adhonay reigns, Adhonay has reigned,
+  Adhonay will reign forever and ever."; "Adhonay, He is God; Adhonay, He is
+  God."; "My Lord, give heed and act; do not delay." (as in Minḥa); "we have
+  erred before You; have mercy on us."; "Let us fall, we pray, into the hand
+  of Adhonay, for His compassion is great."
+- **Deuteronomy 1:11:** "May Adhonay, the God of your forefathers, add to
+  you a thousand times as many as you are, and bless you, as He has promised
+  you."
+- **More fixed renderings (batch 12):** תְּפִלַּת הַשַּׁחַר in piyyut = "the prayer
+  of dawn"; אֲרָקִים = the earth; פַּחַד יִצְחָק = Fear of Isaac; מָלֵא זַכִּיּוּת =
+  full of clemency; אוֹת לְטוֹבָה = a sign for good; נֶפֶשׁ is "she", like
+  נשמה; Talmudic sages in the scheme (Meʾir, Bar Yoḥay); "(twice)" and
+  "(Amen)" stay in parentheses as the Hebrew has them; expandable label
+  "The Ten Days of Tĕshuva"; "to keep things short, it isn't given here in
+  full"; Hebrew abbreviations take gershayim (זצ״ל, הי״ט).
+- **More fixed renderings (final sweep):** הֲלָכָה in rubrics and titles =
+  hălakha; תחילת הלילה = "the start of the night" (never "nightfall");
+  "Sephardic" and "Ashkenazi" as English words; Gaʾon (Rav Hai Gaʾon), but
+  "the Vilna Gaon"; "ibn Ezra"; Pesaḥ in rubrics too; 'ăliyya / 'ăliyyoth,
+  hafṭara / hafṭaroth, parashiyyoth, sidhraʾ; Nĕviʾim, Kĕthuvim, Mishna.
+
+## Hebrew to re-check against the source
+
+Passages whose Hebrew reads as garbled (possibly OCR damage). They were
+translated by sense and the Hebrew left alone; check them against the
+printed source.
+
+- `blessings/birkat-hagomel.json`, `hagomel-law-a`: `ומי שחלה בעיניו ונתרפא,
+  לא נהגו לברך במקום, בעשרה בלי שם ומלכות` — probably "לא נהגו לברך, ומכל
+  מקום יברך בעשרה…". Translated in line with law 2. The same item's
+  Ben ʾIsh Ḥay references (`עקב ב, ו־ז`; `עקב ב, א` in
+  `hagomel-instr-before`) were carried over as "'Eqev 2:6–7" / "'Eqev 2:1";
+  confirm what the ב stands for.
+- `lifecycle/zeved-habat.json`, `zeved-habat-commentary-1`: `שבזה משבחים
+  ברוך הוא גם על טובה על שזכתה לבת`, and `מן המקבל הגר"ש סלמן מוצפי` (read
+  as המקובל, "the kabbalist").
 
 ## Verifying changes
 

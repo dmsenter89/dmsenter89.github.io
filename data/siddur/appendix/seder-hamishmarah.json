@@ -1,14 +1,14 @@
 {
-  "title": "Seder ha-Mishmarah",
+  "title": "Sedher HaMishmara",
   "tables": [
     {
       "id": "seder-hamishmarah",
       "title": "Weekly Cycle",
       "headers": [
         "Weekly Torah Portion",
-        "Nevi'im",
-        "Ketuvim",
-        "Mishnah"
+        "Nĕviʾim",
+        "Kĕthuvim",
+        "Mishna"
       ],
       "rows": [
         [
@@ -111,7 +111,7 @@
           "<strong>Yithro</strong><br><span class=\"siddur-table-subtext\">Ex. 18:1-20:23</span>",
           "II Kings 13-18",
           "Job 21-25",
-          "Pirqe ʾavoth and 'Ăvodha Zara"
+          "Pirqe ʾAvoth and 'Ăvodha Zara"
         ],
         [
           "<strong>Mishpaṭim</strong><br><span class=\"siddur-table-subtext\">Ex. 21:1-24:18</span>",
@@ -144,7 +144,7 @@
           "Shabbath"
         ],
         [
-          "<strong>Fĕqudhe</strong><br><span class=\"siddur-table-subtext\">Ex. 38:21-40:38</span>",
+          "<strong>Pĕqudhe</strong><br><span class=\"siddur-table-subtext\">Ex. 38:21-40:38</span>",
           "Jeremiah 38-48",
           "Proverbs 1-6",
           "Ṭohŏroth and Yadhayīm"
@@ -168,7 +168,7 @@
           "Ḥullin"
         ],
         [
-          "<strong>Thazria'</strong><br><span class=\"siddur-table-subtext\">Lev. 12:1-13:59</span>",
+          "<strong>Tazria'</strong><br><span class=\"siddur-table-subtext\">Lev. 12:1-13:59</span>",
           "Ezekiel 18-22",
           "Proverbs 23-27",
           "Nidda"
@@ -180,7 +180,7 @@
           "Zavim"
         ],
         [
-          "<strong>ʾaḥăre Moth</strong><br><span class=\"siddur-table-subtext\">Lev. 16:1-18:30</span>",
+          "<strong>ʾAḥăre Moth</strong><br><span class=\"siddur-table-subtext\">Lev. 16:1-18:30</span>",
           "Ezekiel 28-30",
           "Proverbs 31-end",
           "Kĕrithoth"
@@ -192,7 +192,7 @@
           "'Orla"
         ],
         [
-          "<strong>ʾĕmor</strong><br><span class=\"siddur-table-subtext\">Lev. 21:1-24:23</span>",
+          "<strong>ʾĔmor</strong><br><span class=\"siddur-table-subtext\">Lev. 21:1-24:23</span>",
           "Ezekiel 41-43",
           "Daniel 4-6",
           "Beṣa and Yomaʾ"
@@ -249,7 +249,7 @@
           "<strong>Balaq</strong><br><span class=\"siddur-table-subtext\">Num. 22:2-25:9</span>",
           "Isaiah 30-33",
           "I Chronicles 6-11",
-          "ʾohaloth"
+          "ʾOhaloth"
         ],
         [
           "<strong>Pinĕḥas</strong><br><span class=\"siddur-table-subtext\">Num. 25:10-30:1</span>",

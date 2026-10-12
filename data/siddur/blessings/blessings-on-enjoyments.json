@@ -9,7 +9,7 @@
           "type": "rubric",
           "id": "rubric-1",
           "hebrew": "על הלחם מברך",
-          "translation": "Over bread, one recites:"
+          "translation": "Over bread, say:"
         },
         {
           "type": "text",
@@ -22,20 +22,20 @@
           "type": "rubric",
           "id": "rubric-2",
           "hebrew": "על תבשיל מחמשת מיני דגן ועל מאפה ממינים אלה (חוץ מן הלחם), ועל האורז מברך",
-          "translation": "Over a cooked dish made from one of the five grains, or a baked good from these grains (other than bread), and over rice, one recites:"
+          "translation": "Over a cooked dish made from the five kinds of grain, over baked goods made from them (other than bread), and over rice, say:"
         },
         {
           "type": "text",
           "id": "mezonot",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא מִינֵי מְזוֹנוֹת:",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates varieties of sustenance.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates the many kinds of food.",
           "translit": "barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, boreʾ mine mĕzonoth:"
         },
         {
           "type": "rubric",
           "id": "rubric-3",
           "hebrew": "על היין מברך",
-          "translation": "Over wine, one recites:"
+          "translation": "Over wine, say:"
         },
         {
           "type": "text",
@@ -48,7 +48,7 @@
           "type": "rubric",
           "id": "rubric-4",
           "hebrew": "על פירות העץ מברך",
-          "translation": "Over fruit of the tree, one recites:"
+          "translation": "Over fruit that grows on trees, say:"
         },
         {
           "type": "text",
@@ -61,7 +61,7 @@
           "type": "rubric",
           "id": "rubric-5",
           "hebrew": "על פירות האדמה מברך",
-          "translation": "Over fruit of the ground, one recites:"
+          "translation": "Over produce that grows from the ground, say:"
         },
         {
           "type": "text",
@@ -74,7 +74,7 @@
           "type": "rubric",
           "id": "rubric-6",
           "hebrew": "על דבר שאין גדולו מן הארץ כגון בשר, דגים, חלב, גבינה, וכדומה. וכן על משקים (חוץ מן היין) מברך",
-          "translation": "Over something that does not grow from the ground — such as meat, fish, milk, or cheese — and over beverages other than wine, one recites:"
+          "translation": "Over anything that doesn't grow from the earth — meat, fish, milk, cheese and the like — and over drinks (other than wine), say:"
         },
         {
           "type": "text",
@@ -93,7 +93,7 @@
           "type": "rubric",
           "id": "rubric-7",
           "hebrew": "על ריח טוב שבעצים מברך",
-          "translation": "Over a pleasant fragrance from wood, one recites:"
+          "translation": "Over a pleasant scent that comes from a tree, say:"
         },
         {
           "type": "text",
@@ -106,26 +106,26 @@
           "type": "rubric",
           "id": "rubric-8",
           "hebrew": "על ריח טוב שבעשבים מברך",
-          "translation": "Over a pleasant fragrance from an herb, one recites:"
+          "translation": "Over a pleasant scent that comes from an herb, say:"
         },
         {
           "type": "text",
           "id": "isvei-vesamim",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא עִשְׂבֵּי בְשָׂמִים:",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates fragrant plants.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates fragrant herbs.",
           "translit": "barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, boreʾ 'isbe vĕsamim:"
         },
         {
           "type": "rubric",
           "id": "rubric-9",
           "hebrew": "על ריח טוב שאינו עץ ולא עשב, או שהוא מסופק בו בין עץ לעשב, מברך",
-          "translation": "Over a pleasant fragrance that is neither wood nor herb, or uncertain between the two, one recites:"
+          "translation": "Over a pleasant scent that comes from neither a tree nor an herb, or when you aren't sure which of the two it is, say:"
         },
         {
           "type": "text",
           "id": "minei-vesamim",
           "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵֽינוּ מֶֽלֶךְ הָעוֹלָם, בּוֹרֵא מִינֵי בְשָׂמִים:",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates varieties of spices.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who creates kinds of fragrance.",
           "translit": "barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, boreʾ mine vĕsamim:"
         }
       ]

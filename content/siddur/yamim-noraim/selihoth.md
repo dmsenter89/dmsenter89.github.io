@@ -1,5 +1,5 @@
 ---
-title: "Selihoth"
+title: "Sĕliḥoth"
 weight: 10
 robots: "noindex, nofollow"
 toc: true

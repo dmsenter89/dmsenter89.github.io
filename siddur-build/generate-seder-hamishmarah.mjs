@@ -28,7 +28,7 @@ function translit(hebrew) {
 function titleCase(text) {
   return text
     .split(" ")
-    .map((word) => word.replace(/\p{L}/u, (c) => c.toUpperCase()))
+    .map((word) => word.replace(/[\p{Ll}\p{Lu}]/u, (c) => c.toUpperCase()))
     .join(" ");
 }
 
@@ -60,11 +60,11 @@ const PARASHAH_HEBREW = {
   "Tetzaveh": "תְּצַוֶּה",
   "Ki Tisa": "כִּי תִשָּׂא",
   "Vayakhel": "וַיַּקְהֵל",
-  "Pekudei": "פְקוּדֵי",
+  "Pekudei": "פְּקוּדֵי",
   "Vayikra": "וַיִּקְרָא",
   "Tzav": "צַו",
   "Shmini": "שְׁמִינִי",
-  "Tazria": "תַזְרִיעַ",
+  "Tazria": "תַּזְרִיעַ",
   "Metzora": "מְצֹרָע",
   "Achrei Mot": "אַחֲרֵי מוֹת",
   "Kedoshim": "קְדֹשִׁים",
@@ -194,12 +194,12 @@ const rows = source.map((row) => [
 ]);
 
 const data = {
-  title: "Seder ha-Mishmarah",
+  title: "Sedher HaMishmara",
   tables: [
     {
       id: "seder-hamishmarah",
       title: "Weekly Cycle",
-      headers: ["Weekly Torah Portion", "Nevi'im", "Ketuvim", "Mishnah"],
+      headers: ["Weekly Torah Portion", "Nĕviʾim", "Kĕthuvim", "Mishna"],
       rows,
     },
   ],

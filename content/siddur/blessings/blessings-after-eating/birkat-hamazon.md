@@ -1,5 +1,5 @@
 ---
-title: "Birkat Hamazon"
+title: "Birkath HaMazon"
 weight: 10
 robots: "noindex, nofollow"
 ---

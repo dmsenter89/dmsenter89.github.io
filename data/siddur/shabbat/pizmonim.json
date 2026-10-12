@@ -3,7 +3,7 @@
   "sections": [
     {
       "id": "deror-yikra",
-      "title": "Dror Yikra",
+      "title": "Dĕror Yiqraʾ",
       "audio": "https://www.learntefillah.com/wp-content/uploads/2020/09/Pizmonin-15-01-Deror-Yikra.mp3",
       "youtube": "https://www.youtube.com/watch?v=nC9ouuNnvTA",
       "items": [
@@ -11,55 +11,55 @@
           "type": "rubric",
           "id": "deror-yikra-info",
           "hebrew": "פזמון לשבת מאת דונש בן לברט (המאה הי'), חתום כאקרוסטיכון בשם המחבר בבתים א-ג ו-ו",
-          "translation": "A Shabbat pizmon by Dunash ibn Labrat (10th century), signed acrostically in stanzas 1-3 and 6."
+          "translation": "A pizmon for Shabbath by Dunash ben Labrat (10th century). The author's name is spelled out as an acrostic in stanzas 1–3 and 6."
         },
         {
           "type": "text",
           "id": "deror-yikra-1",
           "hebrew": "דְּרוֹר יִקְרָא לְבֵן עִם בַּת, וְיִנְצָרְכֶם כְּמוֹ בָבַת, נְעִים שִׁמְכֶם וְלֹא יֻשְׁבַּת, שְׁבוּ וְנֽוּחוּ בְּיוֹם שַׁבָּת׃",
-          "translation": "He will proclaim freedom for son and daughter, and guard you as the pupil of an eye; your pleasant name shall never cease — rest and find repose on the Sabbath day.",
+          "translation": "Freedom He proclaims for son and daughter, and He will guard you like the pupil of the eye; your name is sweet, and never shall it cease — sit and rest upon the Shabbath day.",
           "translit": "dĕror yiqraʾ lĕven 'īm bath, wĕyinṣarĕkhem kĕmo vavath, nĕ'im shimkhem wĕloʾ yushbath, shĕvu wĕnuḥu bĕyom shabbath."
         },
         {
           "type": "text",
           "id": "deror-yikra-2",
           "hebrew": "דְּרוֹשׁ נָוִי וְאוּלָמִי, וְאוֹת יֶֽשַׁע עֲשֵׂה עִמִּי, נְטַע שׂוֹרֵק בְּתוֹךְ כַּרְמִי, שְׁעֵה שַׁוְעַת בְּנֵי עַמִּי׃",
-          "translation": "Seek out my dwelling and my hall, and show me a sign of salvation; plant a choice vine within my vineyard, and heed the cry of my people's children.",
+          "translation": "Seek out my dwelling and my hall, and show me a sign of salvation; plant a choice vine within my vineyard, and turn to the cry of the children of my people.",
           "translit": "dĕrosh nawi wĕʾulami, wĕʾoth yesha' 'ăseh 'immi, nĕṭa' soreq bĕthokh karmi, shĕ'eh shaw'ath bĕne 'ammi."
         },
         {
           "type": "text",
           "id": "deror-yikra-3",
           "hebrew": "דְּרוֹךְ פּוּרָה בְּתוֹךְ בָּצְרָה, וְגַם בָּבֶל אֲשֶׁר גָּבְרָה, נְתוֹץ צָרַי בְּאַף וְעֶבְרָה, שְׁמַע קוֹלִי בְּיוֹם אֶקְרָא׃",
-          "translation": "Tread the winepress in Bozrah, and Babylon too, which has grown mighty; tear down my foes in anger and fury; hear my voice on the day I call.",
+          "translation": "Tread the winepress in the midst of Bozrah, and in Babylon too, that grew so strong; tear down my foes in anger and in wrath; hear my voice on the day I call.",
           "translit": "dĕrokh pura bĕthokh baṣĕra, wĕgham bavel ʾăsher gavĕra, nĕthoṣ ṣaray bĕʾaf wĕ'evra, shĕma' qoli bĕyom ʾeqraʾ."
         },
         {
           "type": "text",
           "id": "deror-yikra-4",
           "hebrew": "אֱלֹהִים תֵּן בַּמִּדְבָּר הַר, הֲדַס שִׁטָּה בְּרוֹשׁ תִּדְהָר, וְלַמַּזְהִיר וְלַנִּזְהָר, שְׁלוֹמִים תֵּן כְּמֵי נָהָר׃",
-          "translation": "God, set in the wilderness a mountain of myrtle, acacia, cypress, and elm; and to teacher and taught alike grant peace flowing like a river.",
+          "translation": "God, set in the wilderness a mountain of myrtle, acacia, cypress and elm; and to the one who warns and the one who heeds, give peace like the waters of a river.",
           "translit": "ʾĕlohim ten bammidhbar har, hădhas shiṭṭa bĕrosh tidhhar, wĕlammazhir wĕlannizhar, shĕlomim ten kĕme nahar."
         },
         {
           "type": "text",
           "id": "deror-yikra-5",
           "hebrew": "הֲדוֹךְ קָמַי אֵל קַנָּא, בְּמוֹג לֵבָב וּבַמְּגִנָּה, וְנַרְחִיב פֶּה וּנְמַלֶּֽאנָה, לְשׁוֹנֵנוּ לְךָ רִנָּה׃",
-          "translation": "Crush those who rise against me, O zealous God, with faintness of heart and with terror; then we will open our mouths wide and fill our tongues with song for You.",
+          "translation": "Crush those who rise against me, jealous God, with melting heart and with anguish; then we will open wide our mouths, and fill our tongues with song to You.",
           "translit": "hădhokh qamay ʾel qannaʾ, bĕmogh levav uvammĕghinna, wĕnarḥiv peh unĕmalleʾna, lĕshonenu lĕkha rinna."
         },
         {
           "type": "text",
           "id": "deror-yikra-6",
           "hebrew": "דְּעֵה חָכְמָה לְנַפְשֶֽׁךָ, וְהִיא כֶֽתֶר לְרֹאשֶֽׁךָ, נְצוֹר מִצְוַת קְדוֹשֶֽׁךָ, שְׁמוֹר שַׁבַּת קָדְשֶֽׁךָ׃",
-          "translation": "Know wisdom for your soul, for it is a crown for your head; keep the commandment of your Holy One, and guard His holy Sabbath.",
+          "translation": "Know wisdom for your soul, and it will be a crown upon your head; hold fast to the commandment of your Holy One, and keep your holy Shabbath.",
           "translit": "dĕ'eh ḥokhma lĕnafshekha, wĕhiʾ khether lĕroʾshekha, nĕṣor miṣwath qĕdhoshekha, shĕmor shabbath qodhshekha."
         }
       ]
     },
     {
       "id": "ki-eshmera-shabbat",
-      "title": "Ki Eshmera Shabbat",
+      "title": "Ki ʾEshmĕra Shabbath",
       "audio": "https://www.learntefillah.com/wp-content/uploads/2020/09/Pizmonin-20-01-Ki-eshmera-shabat.mp3",
       "youtube": "https://www.youtube.com/watch?v=BxPuaz6DmkQ",
       "items": [
@@ -67,131 +67,131 @@
           "type": "rubric",
           "id": "ki-eshmera-shabbat-info",
           "hebrew": "פזמון לשבת מאת רבי אברהם אבן עזרא (המאה הי\"ב), חתום כאקרוסטיכון בשם המחבר בראשי חמשת הבתים",
-          "translation": "A Shabbat pizmon by Rabbi Abraham ibn Ezra (12th century), signed acrostically with the author's name at the head of its five stanzas."
+          "translation": "A pizmon for Shabbath by Rabbi Abraham ibn Ezra (12th century). The author's name is spelled out as an acrostic by the opening letters of the five stanzas."
         },
         {
           "type": "text",
           "id": "ki-eshmera-shabbat-opening",
           "hebrew": "כִּי אֶשְׁמְרָה שַׁבָּת אֵל יִשְׁמְרֵנִי, אוֹת הִיא לְעוֹלְמֵי עַד בֵּינוֹ וּבֵינִי׃",
-          "translation": "For I will keep the Sabbath, God will keep me — it is a sign forever between Him and me.",
+          "translation": "If I keep the Shabbath, God will keep me; it is a sign forever between Him and me.",
           "translit": "ki ʾeshmĕra shabbath ʾel yishmĕreni, ʾoth hiʾ lĕ'olĕme 'adh beno uveni."
         },
         {
           "type": "text",
           "id": "ki-eshmera-shabbat-1",
           "hebrew": "אָסוּר מְצֹא חֵפֶץ לַעְשוֹת דְּרָכִים, גַּם לְדַבֶּר בּוֹ דִּבְרֵי מְלָכִים, דִּבְרֵי סְחוֹרָה אוֹ דִּבְרֵי צְרָכִים, אֶהְגֶּה בְּתוֹרַת אֵל וּתְחַכְּמֵנִי׃ אוֹת הִיא לְעוֹלְמֵי עַד בֵּינוֹ וּבֵינִי׃",
-          "translation": "It is forbidden to seek to go about one's ways on it, or even to speak on it of the affairs of rulers, matters of trade or matters of one's needs; I will meditate on God's Torah, and it will make me wise. It is a sign forever between Him and me.",
+          "translation": "Forbidden on it are the search for gain and going on one's ways, and speaking, too, of the affairs of kings, of matters of trade or of one's needs; I will dwell on the Torah of God, and it will make me wise. It is a sign forever between Him and me.",
           "translit": "ʾasur mĕṣoʾ ḥefeṣ la'shoth dĕrakhim, gam lĕdhabber bo divre mĕlakhim, divre sĕḥora ʾo divre ṣĕrakhim, ʾehgeh bĕthorath ʾel uthĕḥakkĕmeni. ʾoth hiʾ lĕ'olĕme 'adh beno uveni."
         },
         {
           "type": "text",
           "id": "ki-eshmera-shabbat-2",
           "hebrew": "בּוֹ אֶמְצְאָה תָמִיד נֹפֶשׁ לְנַפְשִׁי, הִנֵּה לְדוֹר רִאשׁוֹן נָתַן קְדוֹשִׁי, מוֹפֵת בְּתֵת לֶחֶם מִשְׁנֶה בַּשִּׁשִּׁי, כָּכָה בְּכָל שִׁשִּׁי יַכְפִּיל מְזוֹנִי׃ אוֹת הִיא לְעוֹלְמֵי עַד בֵּינוֹ וּבֵינִי׃",
-          "translation": "In it I always find rest for my soul; behold, to the first generation my Holy One gave a wonder — a double portion of bread on the sixth day; so too each sixth day He doubles my sustenance. It is a sign forever between Him and me.",
+          "translation": "On it I always find rest for my soul. See, to the first generation my Holy One gave a wonder, giving a double portion of bread on the sixth day; so on every sixth day He doubles my food. It is a sign forever between Him and me.",
           "translit": "bo ʾemṣĕʾa thamidh nofesh lĕnafshi, hinneh lĕdhor riʾshon nathan qĕdhoshi, mofeth bĕtheth leḥem mishneh bashshishshi, kakha bĕkhol shishshi yakhpil mĕzoni. ʾoth hiʾ lĕ'olĕme 'adh beno uveni."
         },
         {
           "type": "text",
           "id": "ki-eshmera-shabbat-3",
           "hebrew": "רָשַׁם בְּדַת הַיּוֹם חֹק אֶל סְגָנָיו, בּוֹ לַעֲרֹךְ לֶחֶם פָּנִים לְפָנָיו, עַל כֵּן לְהִתְעַנּוֹת עַל פִּי נְבוֹנָיו, אָסוּר לְבַד מִיּוֹם כִּפּוּר עֲוֹנִי׃ אוֹת הִיא לְעוֹלְמֵי עַד בֵּינוֹ וּבֵינִי׃",
-          "translation": "He inscribed in the law of the day a statute for His officers, to arrange the showbread before Him on it; therefore, by the counsel of the wise, fasting is forbidden on it — except for the Day of Atonement for my sin. It is a sign forever between Him and me.",
+          "translation": "He wrote into the law of the day a statute for His priests: on it to set the showbread before Him. And so to fast on it, by the word of His sages, is forbidden — except on the day my wrongdoing is pardoned. It is a sign forever between Him and me.",
           "translit": "rasham bĕdhath hayyom ḥoq ʾel sĕghanaw, bo la'ărokh leḥem panim lĕfanaw, 'al ken lĕhith'annoth 'al pi nĕvonaw, ʾasur lĕvadh miyyom kippur 'ăwoni. ʾoth hiʾ lĕ'olĕme 'adh beno uveni."
         },
         {
           "type": "text",
           "id": "ki-eshmera-shabbat-4",
           "hebrew": "הוּא יוֹם מְכֻבָּד הוּא יוֹם תַּעֲנוּגִים, לֶחֶם וְיַיִן טוֹב בָּשָׂר וְדָגִים, מִתְאַבְּלִים בּוֹ הֵם אָחוֹר נְסוֹגִים, כִּי יוֹם שְׂמָחוֹת הוּא וִישַׂמְּחֵנִי׃ אוֹת הִיא לְעוֹלְמֵי עַד בֵּינוֹ וּבֵינִי׃",
-          "translation": "It is a day of honor, a day of delights — bread and good wine, meat and fish; those who mourn turn back from it, for it is a day of joy, and may it gladden me. It is a sign forever between Him and me.",
+          "translation": "It is a day of honor, a day of delights: bread and good wine, meat and fish. Those who mourn on it draw back, for it is a day of joys, and it will make me glad. It is a sign forever between Him and me.",
           "translit": "huʾ yom mĕkhubbadh huʾ yom ta'ănughim, leḥem wĕyayīn ṭov basar wĕdhaghim, mithʾabbĕlim bo hem ʾaḥor nĕsoghim, ki yom sĕmaḥoth huʾ wisammĕḥeni. ʾoth hiʾ lĕ'olĕme 'adh beno uveni."
         },
         {
           "type": "text",
           "id": "ki-eshmera-shabbat-5",
           "hebrew": "מֵחֵל מְלָאכָה בוֹ סוֹפוֹ לְהַכְרִית, עַל כֵּן אֲכַבֵּס בּוֹ לִבִּי בְּבוֹרִית, אֶתְפַּלֲלָה אֶל אֵל עַרְבִית וְשַׁחְרִית, מוּסַף וְגַם מִנְחָה כִּי יַעֲנֵנִי׃ אוֹת הִיא לְעוֹלְמֵי עַד בֵּינוֹ וּבֵינִי׃",
-          "translation": "Whoever begins work on it will in the end be cut off; therefore I will cleanse my heart on it with soap, and I will pray to God evening and morning, and at Musaf and at Mincha too, for He will answer me. It is a sign forever between Him and me.",
+          "translation": "One who profanes it with work will in the end be cut off; and so on it I will wash my heart clean as with soap, and pray to God at 'Arvith and Shaḥrith, at Musaf and at Minḥa too, for He will answer me. It is a sign forever between Him and me.",
           "translit": "meḥel mĕlaʾkha vo sofo lĕhakhrith, 'al ken ʾăkhabbes bo libbi bĕvorith, ʾethpalăla ʾel ʾel 'arvith wĕshaḥrith, musaf wĕgham minḥa ki ya'ăneni. ʾoth hiʾ lĕ'olĕme 'adh beno uveni."
         }
       ]
     },
     {
       "id": "eretz-varum",
-      "title": "Eretz VaRum BeHibar'am",
+      "title": "ʾEreṣ WĕRum BĕHibbarĕʾam",
       "youtube": "https://www.youtube.com/watch?v=60345tPZGgI",
       "items": [
         {
           "type": "rubric",
           "id": "eretz-varum-info",
           "hebrew": "פזמון המיוחס לרבי אברהם אבן עזרא, חתום כאקרוסטיכון \"אני אברהם חזק\". נהוג לשירו כחלק משירת הבקשות במסורת קהילות הספרדים בירושלים ובבל, ויש הנוהגים לשירו כפזמון בליל שבת.",
-          "translation": "A pizmon attributed to Rabbi Abraham ibn Ezra, signed acrostically \"Ani Avraham Chazak\" (I, Abraham, am strong). It is customary to sing it as part of Shirat HaBakashot in the tradition of the Sephardic communities of Jerusalem and Babylonia, and some have the custom of singing it as a pizmon on Friday night."
+          "translation": "A pizmon attributed to Rabbi Abraham ibn Ezra, with the acrostic \"ʾĂni ʾAvraham ḥazaq\" (I am ʾAvraham — be strong). It is sung as part of the baqashoth in the tradition of the Sephardic communities of Jerusalem and Babylonia, and some sing it as a pizmon on Friday night."
         },
         {
           "type": "text",
           "id": "eretz-varum-1",
           "hebrew": "אֶרֶץ וְרוּם בְּהִבָּרְאָם בְּהֵא בְּרָאָם, בְּלִי עָמָל אֵל הִמְצִיאָם אֲדוֹן עוֹלָם צוּר נְשִׂיאָם, שָׁבַת בְּיוֹם הַשַּׁבָּת, חַי חַי חַי׃",
-          "translation": "Earth and heaven, when they were created, He created with the letter heh; without labor did God bring them into being — Master of the universe, Rock who bears them up. He rested on the Sabbath day. Alive, alive, alive.",
+          "translation": "Earth and the heights, when they were created — with the letter heʾ He created them; without toil God brought them into being, the Master of the world, the Rock who bears them up; He rested on the Shabbath day. He lives, He lives, He lives.",
           "translit": "ʾereṣ wĕrum bĕhibbarĕʾam bĕheʾ bĕraʾam, bĕli 'amal ʾel himṣiʾam ʾădhon 'olam ṣur nĕsiʾam, shavath bĕyom hashshabbath, ḥay ḥay ḥay."
         },
         {
           "type": "text",
           "id": "eretz-varum-2",
           "hebrew": "נְקִי כַפַּיִם וְטָהוֹר מְאוֹר הַנָּאוֹר, בִּלְתִּי חֹמֶר יָצַר הָאוֹר בְּרֵאשִׁית הַכֹּל בָּרָא אוֹר, בְּיוֹם אֶחָד בְּשַּׁבָּת, חַי חַי חַי׃",
-          "translation": "Clean of hands and pure, the beautiful luminary — without matter He formed the light; in the beginning of all things He created light, on the first day of the week. Alive, alive, alive.",
+          "translation": "Clean of hands and pure, the Light resplendent — from no substance He fashioned the light; first of all things He created light, on the first day of the week. He lives, He lives, He lives.",
           "translit": "nĕqi khappayīm wĕṭahor mĕʾor hannaʾor, bilti ḥomer yaṣar haʾor bĕreʾshith hakkol baraʾ ʾor, bĕyom ʾeḥadh bĕshabbath, ḥay ḥay ḥay."
         },
         {
           "type": "text",
           "id": "eretz-varum-3",
           "hebrew": "יְחִידִי בְלִי שְׁנַיִם בָּרָא שָׁמַיִם, בִּלְתִּי עֵזֶר וְיָדַיִם הִבְדִיל בֵּין מַיִם לְמַיִם, בְּיוֹם שֵׁנִי בְּשַּׁבָּת, חַי חַי חַי׃",
-          "translation": "Alone, without a second, He created the heavens; without help or hands He divided the waters from the waters, on the second day of the week. Alive, alive, alive.",
+          "translation": "Alone, with no second, He created the heavens; with no helper and no hands He parted water from water, on the second day of the week. He lives, He lives, He lives.",
           "translit": "yĕḥidhi vĕli shĕnayīm baraʾ shamayīm, bilti 'ezer wĕyadhayīm hivdhil ben mayīm lĕmayīm, bĕyom sheni bĕshabbath, ḥay ḥay ḥay."
         },
         {
           "type": "text",
           "id": "eretz-varum-4",
           "hebrew": "אֵל יוֹצֵר עוֹלָמִים בְּיָהּ הִמְצִיא, שֶׁתּוֹצִיא הָאָרֶץ פִּרְיָהּ גָּזַר אֹמֶר וְכֵן הָיָה, בַּשְׁלִישִׁי בְּשַּׁבָּת, חַי חַי חַי׃",
-          "translation": "God, Former of worlds, brought forth with Yah [His word] that the earth should bring forth its fruit; He decreed, and so it was, on the third day of the week. Alive, alive, alive.",
+          "translation": "God, who forms the worlds by the name Yah, brought it to pass that the earth should yield her fruit; He gave the word, and so it was, on the third day of the week. He lives, He lives, He lives.",
           "translit": "ʾel yoṣer 'olamim bĕyah himṣiʾ, shettoṣiʾ haʾareṣ piryah gazar ʾomer wĕkhen haya, bashlishi bĕshabbath, ḥay ḥay ḥay."
         },
         {
           "type": "text",
           "id": "eretz-varum-5",
           "hebrew": "בְּלִי אוֹן בְּלִי גְבוּרוֹת יָצַר מְאוֹרוֹת, לָאוֹר וּלְהַצְמִיחַ פֵּרוֹת גָזַר וְנִתְלוּ מְאוֹרוֹת, בָּרְבִיעִי בְּשַּׁבָּת, חַי חַי חַי׃",
-          "translation": "Without force, without power, He formed the luminaries; He decreed that they give light and cause fruit to grow, and the lights were set in place, on the fourth day of the week. Alive, alive, alive.",
+          "translation": "Without exertion, without feats of strength, He formed the lights; to shine and to make fruit spring forth He decreed, and the lights were hung, on the fourth day of the week. He lives, He lives, He lives.",
           "translit": "bĕli ʾon bĕli ghĕvuroth yaṣar mĕʾoroth, laʾor ulĕhaṣmiaḥ peroth ghazar wĕnithlu mĕʾoroth, barĕvi'i bĕshabbath, ḥay ḥay ḥay."
         },
         {
           "type": "text",
           "id": "eretz-varum-6",
           "hebrew": "רָב כֹּחַ אֵלִי אַנְוֵהוּ וַאֲרוֹמְמֶנְהוּ, כָּל נֶפֶשׁ חַיָּה הִמְצִיא הוּא כָּל עוֹף כָּנָף לְמִינֵהוּ, בַּחֲמִישִׁי בְּשַּׁבָּת, חַי חַי חַי׃",
-          "translation": "Great in strength is my God — I will glorify Him and exalt Him; He brought forth every living creature, every winged bird after its kind, on the fifth day of the week. Alive, alive, alive.",
+          "translation": "Great in power is my God — I will glorify Him and exalt Him; He brought forth every living creature, every winged bird after its kind, on the fifth day of the week. He lives, He lives, He lives.",
           "translit": "rav koaḥ ʾeli ʾanwehu waʾăromĕmenhu, kol nefesh ḥayya himṣiʾ huʾ kol 'of kanaf lĕminehu, baḥămishi bĕshabbath, ḥay ḥay ḥay."
         },
         {
           "type": "text",
           "id": "eretz-varum-7",
           "hebrew": "הָאֵל רָם נִמְלַךְ בְּתֻמּוֹ עַל נַפְשׁוֹת עַמּוֹ, וּבָרָא אָדָם בְּצַלְמוֹ הִשְׁלִיטוֹ בְּכָל עוֹלָמוֹ, בְּיוֹם שִׁשִׁי בְּשַּׁבָּת, חַי חַי חַי׃",
-          "translation": "God on high took counsel in His integrity for the souls of His people, and created man in His image, giving him dominion over all His world, on the sixth day of the week. Alive, alive, alive.",
+          "translation": "The exalted God took counsel, in His perfection, over the souls of His people, and created man in His image, and gave him rule over all His world, on the sixth day of the week. He lives, He lives, He lives.",
           "translit": "haʾel ram nimlakh bĕthummo 'al nafshoth 'ammo, uvaraʾ ʾadham bĕṣalmo hishliṭo bĕkhol 'olamo, bĕyom shishi bĕshabbath, ḥay ḥay ḥay."
         },
         {
           "type": "text",
           "id": "eretz-varum-8",
           "hebrew": "מַלְכִּי הִשְׁלִים כָּל מְלַאכְתּוֹ בְּיוֹם שַׁבַּתּוֹ, וַיְקַדֵּשׁ וַיְבָרֶךְ אוֹתוֹ עַל כֵּן יִשְׁמְרוּ עֲדָתוֹ, יִשְׂרָאֵל אֶת הַשַּׁבָּת, חַי חַי חַי׃",
-          "translation": "My King completed all His work on His Sabbath day, and He sanctified it and blessed it; therefore let His congregation, Israel, keep the Sabbath. Alive, alive, alive.",
+          "translation": "My King completed all His work on His Shabbath day, and He made it holy and blessed it; therefore His congregation, Israel, shall keep the Shabbath. He lives, He lives, He lives.",
           "translit": "malki hishlim kol mĕlaʾkhto bĕyom shabbatto, wayĕqaddesh wayĕvarekh ʾotho 'al ken yishmĕru 'ădhatho, yisraʾel ʾeth hashshabbath, ḥay ḥay ḥay."
         },
         {
           "type": "text",
           "id": "eretz-varum-9",
           "hebrew": "חָזָק הוּא וְנוֹרָא עֶלְיוֹן נֶעְלָם מֵרַעְיוֹן, יְמַהֵר יִבְנֶה הַר צִיּוֹן וְיַנְחִיל עַם דַּל וְאֶבְיוֹן, עוֹלָם שֶׁכֻּלּוֹ שַׁבָּת, חַי חַי חַי׃",
-          "translation": "Mighty and awesome is He, Most High, hidden from thought; may He swiftly rebuild the Mount of Zion, and grant to the poor and needy people an inheritance in the world that is entirely Sabbath. Alive, alive, alive.",
+          "translation": "Mighty is He and awesome, Most High, hidden beyond all thought; may He soon rebuild Mount Zion, and give a poor and needy people, as their heritage, a world that is wholly Shabbath. He lives, He lives, He lives.",
           "translit": "ḥazaq huʾ wĕnoraʾ 'elyon ne'lam mera'yon, yĕmaher yivneh har ṣiyyon wĕyanḥil 'am dal wĕʾevyon, 'olam shekkullo shabbath, ḥay ḥay ḥay."
         }
       ]
     },
     {
       "id": "el-eliyahu",
-      "title": "El Eliyahu",
+      "title": "ʾEl ʾEliyyahu",
       "audio": "https://jewish-music.huji.ac.il/sites/default/files/sounds/el%20eliyahu%20husseini.mp3",
       "youtube": "https://youtu.be/15N484W5mnE?si=WP7kYRZrZw8dERq6",
       "items": [
@@ -199,89 +199,89 @@
           "type": "rubric",
           "id": "el-eliyahu-info",
           "hebrew": "פזמון למוצאי שבת, חתום כאקרוסטיכון בשם המחבר \"אברהם\" בראשי הבתים. הפיוט קורא לאליהו הנביא, שעל פי המסורת נח מנדודיו בשבת וחוזר לבשר את הגאולה עם צאתה, למהר ולבוא",
-          "translation": "A pizmon for Motzei Shabbat (the conclusion of the Sabbath), signed acrostically with the author's name, Avraham, at the head of its stanzas. It calls on Elijah the Prophet — who, by tradition, rests from his wanderings on Shabbat and resumes his mission to herald the redemption once it ends — to hurry and come."
+          "translation": "A pizmon for Moṣaʾe Shabbath (Saturday night, once Shabbath has gone out). The author's name, ʾAvraham, is spelled out as an acrostic by the opening letters of the stanzas. The piyyuṭ calls on Elijah the prophet — who, by tradition, rests from his wanderings on Shabbath and comes back to announce the redemption as it goes out — to hurry and come."
         },
         {
           "type": "text",
           "id": "el-eliyahu-refrain",
           "hebrew": "אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
-          "translation": "God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translation": "God of Elijah, God of Elijah — by the merit of Elijah the prophet, bring him, we pray.",
           "translit": "ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
         },
         {
           "type": "text",
           "id": "el-eliyahu-1",
           "hebrew": "בּוֹ יִרְתֹּם רִכְבּוֹ, נָע בַּשְּׁבִי כִּי בוֹ, לֹא שָׁכַב לִבּוֹ, גַּם לֹא רָאָה שֵׁנָה׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
-          "translation": "Now he harnesses his chariot again, wandering in exile — for through this his heart did not lie down, nor did his eyes know sleep. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translation": "Now let him harness his chariot; for the one who wanders in captivity has had no rest of heart there, nor has he looked on sleep. God of Elijah, God of Elijah — by the merit of Elijah the prophet, bring him, we pray.",
           "translit": "bo yirtom rikhbo, na' bashshĕvi ki vo, loʾ shakhav libbo, gam loʾ raʾa shena. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
         },
         {
           "type": "text",
           "id": "el-eliyahu-2",
           "hebrew": "רַב מַחְלִי בִּרְאוֹת כַּחְשִׁי, וּמְשַׂנְאוֹת יָפוֹת וּבְרִיאֹת בָּשָׂר, וַתִּרְעֶֽינָה׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
-          "translation": "Great is my anguish at seeing my own leanness — like the lean cows that hated and devoured the fair, well-fed ones. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translation": "Great is my sickness as I see how gaunt I am, while those who hate me are fair and fat of flesh, and there they graze. God of Elijah, God of Elijah — by the merit of Elijah the prophet, bring him, we pray.",
           "translit": "rav maḥli birʾoth kaḥshi, umĕsanʾoth yafoth uvĕriʾoth basar, wattir'ena. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
         },
         {
           "type": "text",
           "id": "el-eliyahu-3",
           "hebrew": "הַשְׁקֵה צוּר מֵי רֹאשׁ, צַר עֵינָיו יִלְטֹשׁ, יוֹם עֵינַי לִקְדוֹשׁ יִשְׂרָאֵל תִּשְׁעֶֽינָה׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
-          "translation": "O Rock, You have made me drink bitter water; the foe sharpens his eyes in malice — until the day my eyes shall gaze upon the Holy One of Israel. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translation": "Rock, give bitter water to drink to the foe who whets his eyes against me, on the day my eyes shall look to the Holy One of Israel. God of Elijah, God of Elijah — by the merit of Elijah the prophet, bring him, we pray.",
           "translit": "hashqeh ṣur me roʾsh, ṣar 'enaw yilṭosh, yom 'enay liqdhosh yisraʾel tish'ena. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
         },
         {
           "type": "text",
           "id": "el-eliyahu-4",
           "hebrew": "מָתַי תַּרְאֶה אוֹת יֶֽשַׁע, אֶל קוֹרְאוֹת לָךְ, וּלְךָ נוֹשְׂאוֹת קוֹלָן וַתִּבְכֶּֽנָה׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
-          "translation": "When will You show a sign of salvation to those who call out to You, who lift their voice to You and weep? God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translation": "When will You show a sign of salvation to those who call to You, who lift their voices to You and weep? God of Elijah, God of Elijah — by the merit of Elijah the prophet, bring him, we pray.",
           "translit": "mathay tarʾeh ʾoth yesha', ʾel qorĕʾoth lakh, ulĕkha nosĕʾoth qolan wattivkena. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
         },
         {
           "type": "text",
           "id": "el-eliyahu-5",
           "hebrew": "מַלְאַךְ הַגּוֹאֵל לִפְנֵי דַל שׁוֹאֵל, אָנָּא הָאֵל, אֵל אַבְרָהָם הַקְרֵה נָא׃ אֵל אֵלִיָּֽהוּ, אֵל אֵלִיָּֽהוּ, בִּזְכוּת אֵלִיָּֽהוּ הַנָּבִיא, הָבֵא נָא׃",
-          "translation": "O redeeming angel, before this poor one who pleads: please, God, God of Abraham, send him swiftly. God of Elijah, God of Elijah — for the sake of Elijah the Prophet, bring him swiftly.",
+          "translation": "The angel who redeems — bring him, please, O God, God of Abraham, to meet the poor one who asks. God of Elijah, God of Elijah — by the merit of Elijah the prophet, bring him, we pray.",
           "translit": "malʾakh haggoʾel lifne dhal shoʾel, ʾannaʾ haʾel, ʾel ʾavraham haqreh naʾ. ʾel ʾeliyyahu, ʾel ʾeliyyahu, bizkhuth ʾeliyyahu hannaviʾ, haveʾ naʾ."
         }
       ]
     },
     {
       "id": "hamavdil-ben-qodesh-lehol",
-      "title": "Hamavdil ben Qodesh LeHol",
+      "title": "HaMavdil ben Qodhesh LĕḤol",
       "audio": "https://www.zemirotdatabase.org/download_audio.php?extension=mp3&recording=779&name=HaMavdil%20Bein%20Kodesh%20LChol",
       "items": [
         {
           "type": "rubric",
           "id": "hamavdil-info",
           "hebrew": "פזמון למוצאי שבת, הפותח בבקשת מחילת עוונות ומסתיים בכל בית בקריאה לאליהו הנביא",
-          "translation": "A pizmon for Motzei Shabbat, opening with a plea for forgiveness of sins and concluding each stanza with a call to Elijah the Prophet."
+          "translation": "A pizmon for Moṣaʾe Shabbath. It opens by asking for our wrongs to be forgiven, and every stanza ends with a call to Elijah the prophet."
         },
         {
           "type": "text",
           "id": "hamavdil-1",
           "hebrew": "הַמַּבְדִּיל בֵּין קֹדֶשׁ לְחוֹל חַטֹּאתֵינוּ יִמְחוֹל, זַרְעֵנוּ וְכַסְפֵּנוּ יַרְבֶּה כַּחוֹל וְכַכּוֹכָבִים בַּלָּיְלָה׃ לִכְבוֹד חֶמְדַּת לְבָבִי אֵלִיָּהוּ הַנָּבִיא׃",
-          "translation": "He who separates between the sacred and the mundane, may He forgive our sins, and multiply our offspring and our silver like the sand and like the stars at night. In honor of the delight of my heart, Elijah the Prophet.",
+          "translation": "May He who distinguishes between the holy and the ordinary forgive our failings; may He make our children and our silver as many as the sand, and as the stars at night. In honor of my heart's delight, Elijah the prophet.",
           "translit": "hammavdil ben qodhesh lĕḥol ḥaṭṭoʾthenu yimḥol, zar'enu wĕkhaspenu yarbeh kaḥol wĕkhakkokhavim ballayĕla. likhvodh ḥemdath lĕvavi ʾeliyyahu hannaviʾ."
         },
         {
           "type": "text",
           "id": "hamavdil-2",
           "hebrew": "יוֹם פָּנָה כְּצֵל תֹּמֶר אֶקְרָא לָאֵל עָלַי גּוֹמֵר, יוֹם אֲשֶׁר אָמַר שׁוֹמֵר אָתָא בֹקֶר וְגַם לָיְלָה׃ לִכְבוֹד חֶמְדַּת לְבָבִי אֵלִיָּהוּ הַנָּבִיא׃",
-          "translation": "The day has turned like the shadow of a palm tree; I call to God, who accomplishes all things for me, on the day of which the Watchman said, \"Morning has come, and also night.\" In honor of the delight of my heart, Elijah the Prophet.",
+          "translation": "The day has passed like a palm tree's shade; I call to God, who fulfills all things for me — the day of which the watchman said: Morning has come, and night as well. In honor of my heart's delight, Elijah the prophet.",
           "translit": "yom pana kĕṣel tomer ʾeqraʾ laʾel 'alay gomer, yom ʾăsher ʾamar shomer ʾathaʾ voqer wĕgham layĕla. likhvodh ḥemdath lĕvavi ʾeliyyahu hannaviʾ."
         },
         {
           "type": "text",
           "id": "hamavdil-3",
           "hebrew": "מִימִינֵנוּ מִיכָאֵל וּמִשְּׂמֹאלֵנוּ גַּבְרִיאֵל, וְעַל רֹאשֵׁנוּ שְׁכִינַת אֵל בְּכָל יוֹם וּבְכָל לָיְלָה׃ לִכְבוֹד חֶמְדַּת לְבָבִי אֵלִיָּהוּ הַנָּבִיא׃",
-          "translation": "At our right is Michael, and at our left is Gabriel, and above our heads is the Divine Presence, every day and every night. In honor of the delight of my heart, Elijah the Prophet.",
+          "translation": "On our right is Michael, on our left is Gabriel, and above our heads the Presence of God, every day and every night. In honor of my heart's delight, Elijah the prophet.",
           "translit": "miminenu mikhaʾel umissĕmoʾlenu gavriʾel, wĕ'al roʾshenu shĕkhinath ʾel bĕkhol yom uvĕkhol layĕla. likhvodh ḥemdath lĕvavi ʾeliyyahu hannaviʾ."
         },
         {
           "type": "text",
           "id": "hamavdil-4",
           "hebrew": "יְבוֹרַךְ הַבַּיִת הַזֶּה מִפִּי נָבִיא וְגַם חוֹזֶה, כִּי כֵן יְצַוֶּה אֱלֹהֵינוּ זֶה לְשָׁמְרוֹ יוֹמָם וָלָיְלָה׃ לִכְבוֹד חֶמְדַּת לְבָבִי אֵלִיָּהוּ הַנָּבִיא׃",
-          "translation": "May this house be blessed by the mouth of a prophet and also a seer, for so our God has commanded, to guard it day and night. In honor of the delight of my heart, Elijah the Prophet.",
+          "translation": "May this house be blessed by the mouth of prophet and of seer; for so shall He command, this God of ours, to guard it by day and by night. In honor of my heart's delight, Elijah the prophet.",
           "translit": "yĕvorakh habbayīth hazzeh mippi naviʾ wĕgham ḥozeh, ki khen yĕṣawweh ʾĕlohenu zeh lĕshamĕro yomam walayĕla. likhvodh ḥemdath lĕvavi ʾeliyyahu hannaviʾ."
         }
       ]

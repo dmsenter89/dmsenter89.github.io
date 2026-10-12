@@ -1,10 +1,10 @@
 ---
-title: "Shahrith"
+title: "Shaḥrith"
 weight: 22
 robots: "noindex, nofollow"
 toc: true
 ---
 
-Rambam sets out the order of the morning service in *Mishneh Torah, Hilkhoth Tefilla* 7:17: rise early, recite the morning blessings, then the psalms of praise with their blessings before and after. Recite the Shema with its blessings, omitting the Kedusha from the first of them when praying alone. On concluding "who redeemed Israel," rise at once — so that redemption is joined directly to the Amida — and pray standing. Afterward sit, bow low in supplication, then sit up and add a few more words of entreaty. Finish with Tehilla LeDavid (Psalm 145) and whatever further supplication one is able, then go about the day.
+Rambam sets out the order of Shaḥrith (*Mishneh Torah*, Hilkhoth Tĕfilla 7:17): get up early, say the morning bĕrakhoth, then the psalms of praise with a bĕrakha before and after them. Say the Shĕma' with its bĕrakhoth, leaving the Qĕdhushsha out of the first one when you pray alone. As soon as you finish "who redeemed Israel," stand up right away, so that redemption runs straight into the 'Ămidha, and pray standing. Afterward sit down, fall on your face and plead; then lift your head and plead a little more. Finish with Tĕhilla LĕDhawidh (Psalm 145), add whatever further pleas you can, and go on your way.
 
-This page picks up from there, at the Shema — the blessings and readings that come before it have their own page (Upon Waking).
+This page picks up at the Shĕma'. The bĕrakhoth and readings that come before it have their own page (Upon Waking).

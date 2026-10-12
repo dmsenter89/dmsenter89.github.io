@@ -9,25 +9,25 @@
           "type": "rubric",
           "id": "dinim-fixed-time",
           "hebrew": "אחר התפלה יקבע עת ללמוד תורה. וצריך שאותו העת יהיה קבוע, שלא יעבירנו אף אם סבור להרויח הרבה. ואם צריך לעשות איזה דבר נחוץ מאד, ילמד מקדם לכל הפחות פסוק אחד או הלכה אחת, ויעשה מה שנחוץ לו, ואחר כך ישלים חקו. ובקצת קהלות קדושות נתיסדו חברות קדושות, ללמד תורה ברבים מיד לאחר התפלה. ויש לכל ירא שמים להתחבר אליהם (אורח חיים סימן קנ\"ה).",
-          "translation": "After prayer, one should set a fixed time to study Torah. This time must be fixed, so that one does not let it pass even if one thinks there is much to be gained elsewhere. And if one must attend to some very urgent matter, one should first study at least one verse or one law, then attend to what is necessary, and afterward complete one's fixed portion. In some holy communities, holy societies have been established to study Torah publicly immediately after prayer, and every God-fearing person should join them. (Orach Chayim 155)"
+          "translation": "After the service, set a fixed time to study Torah. That time has to be truly fixed: don't let it slip even if you think you stand to make a large profit. If something very urgent comes up, first study at least one verse or one hălakha, take care of what you need to, and afterward make up your regular portion. In some holy communities, holy societies have been founded to teach Torah in public right after the service, and every God-fearing person should join them (ʾOraḥ Ḥayyim 155)."
         },
         {
           "type": "rubric",
           "id": "dinim-obligation",
           "hebrew": "כל איש ישראל חיב ללמד תורה, בין עני בין עשיר, בין שלם בגופו בין בעל יסורין, בין בחור בין זקן גדול. אפלו עני המחזיר על הפתחים, חיב לקבע לו זמן לתלמוד תורה ביום ובלילה, שנאמר והגית בו יומם ולילה. הרב מרדכי אליהו ממליץ שכל איש ישראל יקבע לפחות שעה אחת ללמוד בבקר ושעה אחת ללמוד בלילה.",
-          "translation": "Every Jewish man is obligated to study Torah, whether poor or wealthy, whether sound of body or afflicted with suffering, whether young or very old. Even a poor person who goes begging from door to door is obligated to set aside time for Torah study by day and by night, as it is said: \"and you shall meditate on it day and night.\" Rav Mordekhai Eliyahu recommends every Jewish man set aside at least one hour to learn in the morning and one hour to learn at night."
+          "translation": "Every Jewish man is obligated to study Torah — poor or rich, healthy or suffering, young or very old. Even a poor man who goes begging from door to door must set himself a time for Torah study by day and by night, as it says, \"you shall meditate on it day and night.\" Rabbi Mordechai Eliyahu recommends that every Jewish man set aside at least one hour to study in the morning and one hour to study at night."
         },
         {
           "type": "rubric",
           "id": "dinim-fixed-portion",
           "hebrew": "מי שאינו יכול לעשות תורתו קבע, אלא שהוא קובע עתים לתורה, יעסק בעתים הללו שהוא קובע, ללמד ההלכות השכיחות, הנצרכות לדעת לכל איש ישראל, וגם באגדות ומדרשים וספרי מוסר אשר יסודתם בהררי קדש. ממדרשי רבותינו זכרונם לברכה שהם מועילים להחליש כח היצר הרע. ואשרי מי שיש לו חק קבוע ולא יעבר, ללמד בספר \"חק לישראל\" דבר יום ביומו, וכל המוסיף, מוסיפין לו טובה מן השמים. (יו\"ד סימן רמ\"ו)",
-          "translation": "One who cannot make Torah study a constant occupation, but instead sets fixed times for it, should use those fixed times to study the laws that occur most frequently and that every Jewish person needs to know, as well as aggadot, midrashim, and books of moral instruction whose foundation is in the holy mountains — from the teachings of our sages, of blessed memory, which help weaken the power of the evil inclination. Fortunate is the one who has a fixed daily portion that is never skipped, studying from the book Chok LeYisrael a portion each day; and whoever adds to it, more good is added to him from Heaven. (Yoreh De'ah 246)"
+          "translation": "If you can't make Torah your full-time occupation and instead set fixed times for it, use those times to study the everyday halakhoth that every Jew needs to know, along with ʾaggadhoth, midhrashim and books of musar (ethical teaching) whose foundations lie in the holy mountains — in the midhrashim of our sages, of blessed memory — which help weaken the power of the evil inclination. Happy is the one who has a fixed portion and never misses it, studying each day's reading in the book Ḥoq LĕYisraʾel; and whoever adds more, Heaven adds good to him (Yoreh De'a 246)."
         },
         {
           "type": "rubric",
           "id": "dinim-lips",
           "hebrew": "צריך לזהר, בכל מה שהוא לומד, להוציאו בשפתיו ולהשמיע לאזניו. שנאמר לא ימוש ספר התורה הזה מפיך, והגית בו וגו'.",
-          "translation": "One must be careful, in all that one studies, to pronounce it with one's lips and let it be heard by one's own ears, as it is said: \"This book of the Torah shall not depart from your mouth, and you shall meditate on it...\""
+          "translation": "Whatever you study, take care to say it with your lips and let your own ears hear it, as it says, \"This book of the Torah shall not depart from your mouth; you shall meditate on it…\""
         }
       ]
     },
@@ -39,13 +39,13 @@
           "type": "rubric",
           "id": "before-learning-cue",
           "hebrew": "קודם הלימוד יאמר",
-          "translation": "Before learning, one says:"
+          "translation": "Before studying, say:"
         },
         {
           "type": "text",
           "id": "yehi-ratzon-torah",
           "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי, שֶׁלֹּא אֶכָּשֵׁל בִּדְבַר הֲלָכָה, שֶׁלֹּא אֹמַר עַל טָמֵא טָהוֹר, וְלֹא עַל טָהוֹר טָמֵא, וְלֹא עַל מֻתָּר אָסוּר, וְלֹא עַל אָסוּר מֻתָּר. וְאַל אֶכָּשֵׁל בִּדְבַר הֲלָכָה, וְיִשְׂמְחוּ בִי חֲבֵרַי, וְאַל יִכָּשְׁלוּ חֲבֵרַי בִּדְבַר הֲלָכָה וְאֶשְׂמַח בָּהֶם. בְּשֵׁם יְיָ אֵל עוֹלָם נַעֲשֶׂה וְנַצְלִיחַ.",
-          "translation": "May it be Your will, Adhonay my God, that I do not stumble in a matter of law — that I do not call the impure pure, or the pure impure; that I do not call the forbidden permitted, or the permitted forbidden. May I not stumble in a matter of law, so that my companions rejoice in me; and may my companions not stumble in a matter of law, so that I rejoice in them. In the name of Adhonay, God of the universe, we shall act and prosper.",
+          "translation": "May it be Your will, Adhonay my God, that I not stumble in a matter of law — that I not call the impure pure, nor the pure impure, nor the permitted forbidden, nor the forbidden permitted. May I not stumble in a matter of law, and may my companions rejoice in me; and may my companions not stumble in a matter of law, and may I rejoice in them. In the name of Adhonay, the everlasting God, we shall act and prosper.",
           "translit": "yĕhi raṣon millĕfanekha Adhonay ʾĕlohay, shelloʾ ʾekkashel bidhvar hălakha, shelloʾ ʾomar 'al ṭameʾ ṭahor, wĕloʾ 'al ṭahor ṭameʾ, wĕloʾ 'al muttar ʾasur, wĕloʾ 'al ʾasur muttar. wĕʾal ʾekkashel bidhvar hălakha, wĕyismĕḥu vi ḥăveray, wĕʾal yikkashĕlu ḥăveray bidhvar hălakha wĕʾesmaḥ bahem. bĕshem Adhonay ʾel 'olam na'ăseh wĕnaṣliaḥ."
         }
       ]
@@ -58,20 +58,20 @@
           "type": "rubric",
           "id": "torah-cue",
           "hebrew": "לקריאת התורה פותחים",
-          "translation": "For reading the Torah, one opens with:"
+          "translation": "Before reading from the Torah, begin with:"
         },
         {
           "type": "text",
           "id": "torah-tzivah",
           "hebrew": "תּוֹרָ֥ה צִוָּה־לָ֖נוּ מֹשֶׁ֑ה מוֹרָשָׁ֖ה קְהִלַּ֥ת יַעֲקֹֽב׃ וְזֹ֖את הַתּוֹרָ֑ה אֲשֶׁר־שָׂ֣ם מֹשֶׁ֔ה לִפְנֵ֖י בְּנֵ֥י יִשְׂרָאֵֽל׃ כִּ֤י לֶ֣קַח ט֭וֹב נָתַ֣תִּי לָכֶ֑ם תּ֝וֹרָתִ֗י אַֽל־תַּעֲזֹֽבוּ׃ בָּר֖וּךְ אַתָּ֥ה יְיָ֗ לַמְּדֵ֥נִי חֻקֶּֽיךָ׃",
-          "translation": "Moses charged us with the Teaching, the heritage of the congregation of Jacob. (Deuteronomy 33:4) This is the Teaching that Moses set before the Israelites. (Deuteronomy 4:44) For I give you good instruction; do not forsake my teaching. (Proverbs 4:2) Blessed are You, O Adhonay; train me in Your laws. (Psalm 119:12)",
+          "translation": "Moses commanded us the Torah, the heritage of the congregation of Jacob. And this is the Torah that Moses set before the children of Israel. For I have given you good teaching; do not forsake My Torah. Blessed are You, Adhonay; teach me Your statutes.",
           "translit": "tora ṣiwwa-lanu mosheh morasha qĕhillath ya'ăqov. wĕzoʾth hattora ʾăsher-sam mosheh lifne bĕne yisraʾel. ki leqaḥ ṭov nathatti lakhem torathi ʾal-tha'ăzovu. barukh ʾatta Adhonay lammĕdheni ḥuqqekha."
         },
         {
           "type": "rubric",
           "id": "torah-conclusion-cue",
           "hebrew": "וכשמסיימים אומרים",
-          "translation": "And upon concluding, one says:"
+          "translation": "And when you finish, say:"
         },
         {
           "type": "text",
@@ -90,45 +90,45 @@
           "type": "rubric",
           "id": "prophets-cue",
           "hebrew": "לקריאת הנביאים פותחים",
-          "translation": "For reading the Prophets, one opens with:"
+          "translation": "Before reading from the Prophets, begin with:"
         },
         {
           "type": "text",
           "id": "prophets-verses",
           "hebrew": "וְדִבַּ֙רְתִּי֙ עַל־הַנְּבִיאִ֔ים וְאָנֹכִ֖י חָז֣וֹן הִרְבֵּ֑יתִי וּבְיַ֥ד הַנְּבִיאִ֖ים אֲדַמֶּֽה׃ וָאָקִ֤ים מִבְּנֵיכֶם֙ לִנְבִיאִ֔ים וּמִבַּחוּרֵיכֶ֖ם לִנְזִרִ֑ים הַאַ֥ף אֵֽין־זֹ֛את בְּנֵ֥י יִשְׂרָאֵ֖ל נְאֻם־יְיָ׃",
-          "translation": "When I spoke to the prophets; for I granted many visions, and spoke parables through the prophets. (Hosea 12:11) And I raised up prophets from among your sons and nazirites from among your young men. Is that not so, O people of Israel?—says Adhonay. (Amos 2:11)",
+          "translation": "I have spoken to the prophets, and it is I who multiplied visions, and through the prophets I spoke in parables. And I raised up prophets from among your sons, and nazirites from among your young men. Is this not so, O children of Israel? — declares Adhonay.",
           "translit": "wĕdhibbarti 'al-hannĕviʾim wĕʾanokhi ḥazon hirbethi uvĕyadh hannĕviʾim ʾădhammeh. waʾaqim mibbĕnekhem linviʾim umibbaḥurekhem linzirim haʾaf ʾen-zoʾth bĕne yisraʾel nĕʾum-Adhonay."
         },
         {
           "type": "rubric",
           "id": "prophets-conclusion-cue",
           "hebrew": "וכשמסיימים",
-          "translation": "And upon concluding:"
+          "translation": "And when you finish:"
         },
         {
           "type": "text",
           "id": "goalenu-prophets",
           "hebrew": "גֹּאֲלֵ֕נוּ יְיָ֥ צְבָא֖וֹת שְׁמ֑וֹ קְד֖וֹשׁ יִשְׂרָאֵֽל׃",
-          "translation": "Our Redeemer—whose name is Adhonay of Hosts—is the Holy One of Israel. (Isaiah 47:4)",
+          "translation": "Our Redeemer — Adhonay of hosts is His name — the Holy One of Israel.",
           "translit": "goʾălenu Adhonay ṣĕvaʾoth shĕmo qĕdhosh yisraʾel."
         }
       ]
     },
     {
       "id": "mishnah",
-      "title": "Reading the Mishnah",
+      "title": "Reading the Mishna",
       "items": [
         {
           "type": "rubric",
           "id": "mishnah-cue",
           "hebrew": "לקריאת המשנה פותחים",
-          "translation": "For reading the Mishnah, one opens with:"
+          "translation": "Before reading the Mishna, begin with:"
         },
         {
           "type": "text",
           "id": "kol-yisrael-mishnah",
           "hebrew": "כָּל יִשְׂרָאֵל יֵשׁ לָהֶם חֵלֶק לָעוֹלָם הַבָּא, שֶׁנֶּאֱמַר: וְעַמֵּךְ֙ כֻּלָּ֣ם צַדִּיקִ֔ים לְעוֹלָ֖ם יִ֣ירְשׁוּ אָ֑רֶץ נֵ֧צֶר מַטָּעַ֛י מַעֲשֵׂ֥ה יָדַ֖י לְהִתְפָּאֵֽר׃",
-          "translation": "All Israel has a share in the world to come, as it is said: \"And your people, all of them righteous, shall possess the land for all time; they are the shoot that I planted, My handiwork in which I glory.\" (Isaiah 60:21; Mishnah Sanhedrin 10:1)",
+          "translation": "All Israel have a share in the world to come, as it is said, \"Your people, all of them righteous, shall inherit the land forever — the shoot of My planting, the work of My hands, in which I glory.\"",
           "translit": "kol yisraʾel yesh lahem ḥeleq la'olam habbaʾ, shenneʾĕmar: wĕ'ammekh kullam ṣaddiqim lĕ'olam yirĕshu ʾareṣ neṣer maṭṭa'ay ma'ăseh yadhay lĕhithpaʾer."
         }
       ]
@@ -141,26 +141,26 @@
           "type": "rubric",
           "id": "after-learning-cue",
           "hebrew": "אחר סיום הלימוד יאמר",
-          "translation": "After concluding one's study, one says:"
+          "translation": "When you finish studying, say:"
         },
         {
           "type": "text",
           "id": "modeh-ani-torah",
           "hebrew": "מוֹדֶה אֲנִי לְפָנֶיךָ יְיָ אֱלֹהַי, שֶׁשַּׂמְתָּ חֶלְקִי מִיּוֹשְׁבֵי בֵּית הַמִּדְרָשׁ, וְלֹא שַׂמְתָּ חֶלְקִי מִיּוֹשְׁבֵי קְרָנוֹת. שֶׁאֲנִי מַשְׁכִּים וְהֵם מַשְׁכִּימִים — אֲנִי מַשְׁכִּים לְדִבְרֵי תוֹרָה וְהֵם מַשְׁכִּימִים לִדְבָרִים בְּטֵלִים. אֲנִי עָמֵל וְהֵם עֲמֵלִים — אֲנִי עָמֵל וּמְקַבֵּל שָׂכָר וְהֵם עֲמֵלִים וְאֵינָם מְקַבְּלִים שָׂכָר. אֲנִי רָץ וְהֵם רָצִים — אֲנִי רָץ לְחַיֵּי הָעוֹלָם הַבָּא וְהֵם רָצִים לִבְאֵר שַׁחַת. אַנְשֵׁי דָמִים וּמִרְמָה לֹא יֶחֱצוּ יְמֵיהֶם, וַאֲנִי אֶבְטַח בָּךְ. וַאֲנִי אֶבְטַח בָּךְ כִּי לֹא עָזַבְתָּ דֹרְשֶׁיךָ יְיָ. כִּ֚י כׇּל־הָ֣עַמִּ֔ים יֵלְכ֕וּ אִ֖ישׁ בְּשֵׁ֣ם אֱלֹהָ֑יו וַאֲנַ֗חְנוּ נֵלֵ֛ךְ בְּשֵׁם־יְיָ֥ אֱלֹהֵ֖ינוּ לְעוֹלָ֥ם וָעֶֽד׃",
-          "translation": "I give thanks before You, Adhonay my God, that You have placed my portion among those who sit in the study hall, and not placed my portion among those who sit on street corners. For I rise early and they rise early — I rise early for words of Torah, and they rise early for idle things. I labor and they labor — I labor and receive a reward, and they labor and receive no reward. I run and they run — I run toward the life of the world to come, and they run toward the pit of destruction. Men of bloodshed and deceit shall not live out half their days, but I will trust in You. And I will trust in You, for You have not forsaken those who seek You, Adhonay. Though all the peoples walk each in the names of its gods, we will walk in the name of Adhonay our God forever and ever. (Micah 4:5) (Baraita, Berakhot 28b)",
+          "translation": "I give thanks before You, Adhonay my God, that You have set my portion among those who sit in the house of study, and have not set my portion among those who sit at the street corners. For I rise early and they rise early — I rise early for words of Torah, and they rise early for idle things. I labor and they labor — I labor and receive a reward, and they labor and receive no reward. I run and they run — I run to the life of the world to come, and they run to the pit of destruction. Men of blood and deceit shall not live out half their days; but as for me, I will trust in You. And I will trust in You, for You have not forsaken those who seek You, Adhonay. For all the peoples walk, each in the name of its god; but we will walk in the name of Adhonay our God, forever and ever.",
           "translit": "modheh ʾăni lĕfanekha Adhonay ʾĕlohay, shessamta ḥelqi miyyoshĕve beth hammidhrash, wĕloʾ samta ḥelqi miyyoshĕve qĕranoth. sheʾăni mashkim wĕhem mashkimim — ʾăni mashkim lĕdhivre thora wĕhem mashkimim lidhvarim bĕṭelim. ʾăni 'amel wĕhem 'ămelim — ʾăni 'amel umĕqabbel sakhar wĕhem 'ămelim wĕʾenam mĕqabbĕlim sakhar. ʾăni raṣ wĕhem raṣim — ʾăni raṣ lĕḥayye ha'olam habbaʾ wĕhem raṣim livʾer shaḥath. ʾanshe dhamim umirma loʾ yeḥĕṣu yĕmehem, waʾăni ʾevṭaḥ bakh. waʾăni ʾevṭaḥ bakh ki loʾ 'azavta dhorĕshekha Adhonay. ki kol-ha'ammim yelĕkhu ʾish bĕshem ʾĕlohaw waʾănaḥnu nelekh bĕshem-Adhonay ʾĕlohenu lĕ'olam wa'edh."
         },
         {
           "type": "rubric",
           "id": "chananya-cue",
           "hebrew": "לאחר כל לימוד תורה נהגו לומר",
-          "translation": "After any session of Torah study, it is customary to say:"
+          "translation": "After any Torah study, the custom is to say:"
         },
         {
           "type": "text",
           "id": "rabbi-chananya",
           "hebrew": "רִבִּי חֲנַנְיָה בֶּן עֲקַשְׁיָה אוֹמֵר: רָצָה הַקָּדוֹשׁ בָּרוּךְ הוּא לְזַכּוֹת אֶת יִשְׂרָאֵל, לְפִיכָךְ הִרְבָּה לָהֶם תּוֹרָה וּמִצְוֹת, שֶׁנֶּאֱמַר: יְיָ֥ חָפֵ֖ץ לְמַ֣עַן צִדְק֑וֹ יַגְדִּ֥יל תּוֹרָ֖ה וְיַאְדִּֽיר׃",
-          "translation": "Rabbi Chananya ben Akashya says: The Holy One, blessed be He, wished to make Israel worthy; therefore He gave them Torah and mitzvot in abundance, as it is said: \"Adhonay desires, for the sake of [Israel’s] vindication, to magnify and glorify the Teaching.\" (Isaiah 42:21; Mishnah Makkot 3:16)",
+          "translation": "Ribbi Ḥănanya ben 'Ăqashya says: The Holy One, blessed is He, wished to give Israel merit; therefore He gave them Torah and commandments in abundance, as it is said, \"Adhonay was pleased, for the sake of His righteousness, to make the Torah great and glorious.\"",
           "translit": "ribbi ḥănanya ben 'ăqashya ʾomer: raṣa haqqadhosh barukh huʾ lĕzakkoth ʾeth yisraʾel, lĕfikhakh hirba lahem tora umiṣwoth, shenneʾĕmar: Adhonay ḥafeṣ lĕma'an ṣidhqo yaghdil tora wĕyaʾdir."
         }
       ]

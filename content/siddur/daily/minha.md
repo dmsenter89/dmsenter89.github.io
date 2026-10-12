@@ -1,12 +1,12 @@
 ---
-title: "Minha"
+title: "Minḥa"
 weight: 23
 robots: "noindex, nofollow"
 toc: true
 ---
 
-The order of the Minḥa prayer: one begins reciting Tĕhilla LĕDhawidh (Psalm 145) while seated. Then one stands and prays the Minḥa prayer. When finished, one falls upon his face and supplicates; he raises his head, supplicates a little more, and takes leave to his affairs. (Rambam, *Mishneh Torah*, Hilkhoth Tefilla)
+The order of Minḥa: begin by saying Tĕhilla LĕDhawidh (Psalm 145) while seated. Then stand and pray Minḥa. When you finish, fall on your face and plead; then lift your head, plead a little more, and go on your way. (Rambam, *Mishneh Torah*, Hilkhoth Tĕfilla)
 
-Minḥa's time was set to correspond to the afternoon Tamid offering. Since the Tamid was ordinarily brought each day at the ninth and a half hour, that became Minḥa's standard time — called Minḥa Qĕṭanna ("Lesser Minḥa"). But because on a Passover eve that fell on a Friday the Tamid was slaughtered at the sixth and a half hour, one who prayed from that hour onward was likewise held to have fulfilled the obligation; once that earlier hour arrives, the obligation to pray has already begun — this is called Minḥa Gĕdhola ("Greater Minḥa"). So Minḥa Gĕdhola runs from the sixth and a half hour to the ninth and a half, and Minḥa Qĕṭanna from the ninth and a half hour until an hour and a quarter remains in the day; either may still be prayed up until sunset.
+Minḥa's time was set to match the afternoon Tamidh offering. The Tamidh was ordinarily brought each day at nine and a half hours, so that became Minḥa's standard time, called Minḥa Qĕṭanna ("Lesser Minḥa"). But when the eve of Pesaḥ fell on a Friday, the Tamidh was slaughtered at six and a half hours, so anyone who prays from that hour on has also fulfilled the obligation; once that earlier hour arrives, the obligation to pray has already begun. This is called Minḥa Gĕdhola ("Greater Minḥa"). So Minḥa Gĕdhola runs from six and a half hours to nine and a half, and Minḥa Qĕṭanna from nine and a half hours until an hour and a quarter is left in the day. Either may still be prayed until sunset.
 
-Before praying, one washes the hands with water up to the wrist, first reciting the blessing *'Al Nĕṭilath Yadhayim* ("concerning the washing of the hands"), and only then prays.
+Before praying, wash your hands with water up to the wrist, saying the bĕrakha *'Al Nĕṭilath Yadhayim* ("concerning the washing of the hands"), and only then pray.

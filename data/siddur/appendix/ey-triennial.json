@@ -1,6 +1,6 @@
 {
   "title": "EY Triennial Cycle",
-  "note": "Torah readings following the Eretz Yisrael triennial (three-year) reading cycle, per Machon Shiloh. Use the \"Aliyot\" toggle above to also show the suggested 7-aliyah breakdown for each sidra.",
+  "note": "Torah readings following the ʾEreṣ Yisraʾel triennial (three-year) reading cycle, per Machon Shiloh. Use the \"'Ăliyyoth\" toggle above to also show the suggested 7-'ăliyya breakdown for each sidhraʾ.",
   "books": [
     {
       "id": "bereshith",
@@ -2009,7 +2009,7 @@
   ],
   "specialHaftarot": {
     "id": "special-haftarot",
-    "title": "Special Shabbat Haftarot",
+    "title": "Special Shabbath Hafṭaroth",
     "headers": [
       "שבת מיוחדת",
       "הפטרה מיוחדת",

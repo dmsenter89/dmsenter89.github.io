@@ -1,5 +1,5 @@
 ---
-title: "Ta'amim"
+title: "Ṭĕ'amim"
 weight: 40
 robots: "noindex, nofollow"
 ---

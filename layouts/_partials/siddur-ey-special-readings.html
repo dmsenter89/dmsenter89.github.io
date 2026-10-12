@@ -11,14 +11,14 @@
         <tr>
           <th>Reading</th>
           <th>Text (weekday)</th>
-          <th>Text (Shabbat)</th>
-          <th>Haftarah</th>
+          <th>Text (Shabbath)</th>
+          <th>Hafṭara</th>
           <th>Notes</th>
           {{- range $i, $e := (seq 7) }}
-          <th class="siddur-aliyah-col">Aliyah {{ $i | add 1 }} (weekday)</th>
+          <th class="siddur-aliyah-col">'Ăliyya {{ $i | add 1 }} (weekday)</th>
           {{- end }}
           {{- range $i, $e := (seq 7) }}
-          <th class="siddur-aliyah-col">Aliyah {{ $i | add 1 }} (Shabbat)</th>
+          <th class="siddur-aliyah-col">'Ăliyya {{ $i | add 1 }} (Shabbath)</th>
           {{- end }}
         </tr>
       </thead>
