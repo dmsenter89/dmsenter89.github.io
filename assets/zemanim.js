@@ -25,25 +25,38 @@
   // side of the minute: -1 rounds down (a latest time), 1 rounds up (an
   // earliest time), 0 rounds to nearest (cuts both ways). Labels follow the
   // siddur's transliteration schema (siddur-build/schema.mjs), capitalized.
-  // 'Ammudh Hashshaḥar is the Rambam's fixed 72 minutes before sunrise.
-  var DAWN = '\'Ammudh Hashshaḥar (72 min)';
-  function zemanim(y, m, d, lat, lng) {
+  // The ten fixed rows use the Rambam's 72 minutes before sunrise and 20
+  // after sunset, and are all the dial ever sees. `all` adds the opt-in
+  // alternatives sorted in by time: depression angles
+  // (16.1° is 72 minutes at the Jerusalem equinox, 15.08° the year's average;
+  // 4.15° is 18 minutes on Jerusalem's longest day, 4.43° the average, 4.66°
+  // 18 minutes at the equinox) and R. Qafiḥ's 35 minutes.
+  var DAWN = '\'Ammudh Hashshaḥar', SETH = 'Ṣeʾth Hakkokhavim';
+  function zemanim(y, m, d, lat, lng, all) {
     var day = sunTimes(y, m, d, lat, lng, -0.833);
     var rise = day[0], set = day[1], hour = (set - rise) / 12;
-    return [
-      [DAWN, rise - 72 * 6e4, 0],
+    var at = function (label, deg, i) { return [label + ' (' + deg + '°)', sunTimes(y, m, d, lat, lng, -deg)[i], i]; };
+    var rows = [
+      [DAWN + ' (72 min)', rise - 72 * 6e4, 0],
       ['Sunrise', rise, 1],
-      ['Sof Zĕman Shĕma\' (Gra)', rise + 3 * hour, -1],
-      ['Sof Zĕman Shaḥrith (Gra)', rise + 4 * hour, -1],
+      ['Sof Zĕman Shĕma\'', rise + 3 * hour, -1],
+      ['Sof Zĕman Shaḥrith', rise + 4 * hour, -1],
       ['Ḥăṣoth', rise + 6 * hour, 0],
       ['Minḥa Gĕdhola', rise + 6.5 * hour, 1],
       ['Minḥa Qĕṭanna', rise + 9.5 * hour, 1],
       ['Pĕlagh Hamminḥa', rise + 10.75 * hour, 0],
       ['Sunset', set, -1],
-      ['Ṣeʾth Hakkokhavim (4.15°)', sunTimes(y, m, d, lat, lng, -4.15)[1], 1],
-      ['Ṣeʾth Hakkokhavim (4.43°)', sunTimes(y, m, d, lat, lng, -4.43)[1], 1],
-      ['Ṣeʾth Hakkokhavim (20 min)', set + 20 * 6e4, 1]
+      [SETH + ' (20 min)', set + 20 * 6e4, 1]
     ];
+    if (!all) return rows;
+    // Where the sun never reaches an angle, its row sorts with the fixed time
+    // it stands in for and shows a dash.
+    var keyed = function (fallback) { return function (r) { return [isNaN(r[1]) ? fallback : r[1], r]; }; };
+    return rows.map(keyed(NaN))
+      .concat([at(DAWN, 16.1, 0), at(DAWN, 15.08, 0)].map(keyed(rows[0][1])),
+        [at(SETH, 4.15, 1), at(SETH, 4.43, 1), at(SETH, 4.66, 1), [SETH + ' (35 min)', set + 35 * 6e4, 1]].map(keyed(rows[9][1])))
+      .sort(function (a, b) { return a[0] - b[0] || 0; })
+      .map(function (k) { return k[1]; });
   }
 
   function roundMin(ms, mode) { return Math[['floor', 'round', 'ceil'][mode + 1]](ms / 6e4) * 6e4; }
@@ -58,19 +71,14 @@
     var next = sunTimes(y, m, d + 1, lat, lng, -0.833)[0];
     var prevSet = sunTimes(y, m, d - 1, lat, lng, -0.833)[1];
     if (isNaN(rise) || isNaN(next) || isNaN(prevSet)) return null;
-    var tzet = rows.slice(9).map(function (r) { return r[1]; }).filter(isFinite);
     var midnight = ['Ḥăṣoth Layla', (set + next) / 2, 0];
     // ponytail: where the night is under 144 minutes dawn falls before
     // midnight; the mark is dropped rather than drawn out of order.
     var dawn = next - 72 * 6e4;
     return {
       cardinal: [rows[1], rows[4], rows[8], midnight],
-      // Twilight is one band out to the latest of the three Ṣeʾth times; they
-      // sit within a degree or so of each other, too close to draw apart.
-      // ponytail: where the sun never gets that low (high-latitude summer)
-      // the band is dropped and the night shading shifts a step.
-      marks: rows.slice(1, 9).concat([['Ṣeʾth Hakkokhavim', Math.max.apply(null, tzet), 1], midnight,
-        [DAWN, dawn > midnight[1] ? dawn : NaN, 0], ['Sunrise', next, 1]])
+      marks: rows.slice(1).concat([midnight,
+        [rows[0][0], dawn > midnight[1] ? dawn : NaN, 0], ['Sunrise', next, 1]])
         .filter(function (r) { return isFinite(r[1]); }),
       // Before sunrise we are still in the previous night.
       angle: function (t) {
@@ -89,7 +97,21 @@
     near(z[0][1], '2026-03-20T02:31:00Z');
     near(z[1][1], '2026-03-20T03:43:00Z');
     near(z[8][1], '2026-03-20T15:50:00Z');
-    assert(z[11][1] > z[8][1] && z[10][1] > z[9][1] && z[9][1] > z[8][1]);
+    assert.strictEqual(z.length, 10);
+    assert.strictEqual(z[9][1] - z[8][1], 20 * 6e4);
+    var all = zemanim(2026, 3, 20, 31.778, 35.235, true);
+    assert.strictEqual(all.length, 16);
+    var find = function (end) { return all.filter(function (r) { return r[0].slice(-end.length) === end; })[0][1]; };
+    assert(all.every(function (r, i) { return i === 0 || r[1] >= all[i - 1][1]; }), 'extended table is chronological');
+    assert(Math.abs(find('(16.1°)') - z[0][1]) < 3 * 6e4, '16.1° is about 72 minutes at the Jerusalem equinox');
+    assert(Math.abs(find('(4.66°)') - z[8][1] - 18 * 6e4) < 2 * 6e4, '4.66° is about 18 minutes at the Jerusalem equinox');
+    // Stockholm at midsummer: the sun never reaches 15° or 16° below, so
+    // those rows are dashes kept beside the fixed dawn, the rest in order.
+    var north = zemanim(2026, 6, 21, 59.33, 18.07, true);
+    assert.strictEqual(north.length, 16);
+    assert(isNaN(north[1][1]) && isNaN(north[2][1]) && north[0][0] === z[0][0]);
+    var times = north.map(function (r) { return r[1]; }).filter(isFinite);
+    assert(times.every(function (t, i) { return i === 0 || t >= times[i - 1]; }));
     assert(isNaN(sunTimes(2026, 6, 21, 80, 0, -0.833)[0]));
     assert.deepStrictEqual([-1, 0, 1].map(function (r) { return roundMin(90001, r); }), [6e4, 12e4, 12e4]);
     var D = dial(2026, 3, 20, 31.778, 35.235);
@@ -98,7 +120,7 @@
     assert.deepStrictEqual(D.cardinal.map(function (r) { return Math.round(D.angle(r[1])); }), [0, 90, 180, 270]);
     assert(Math.abs(D.angle(z[1][1] - 36e5) - 345) < 1, 'hour before sunrise sits in the previous night');
     assert.strictEqual(D.marks.length, 12);
-    assert.strictEqual(D.marks[10][0], DAWN);
+    assert.strictEqual(D.marks[10][0], z[0][0]);
     assert.strictEqual(dial(2026, 6, 21, 80, 0), null);
     console.log('zemanim ok');
     return;
@@ -110,7 +132,9 @@
   var status = document.getElementById('zemanim-status');
   var tbody = document.getElementById('zemanim-body');
   var svg = document.getElementById('zemanim-dial');
-  var KEY = 'siddur-zemanim-loc';
+  var altInput = document.getElementById('zemanim-alt');
+  var altNote = document.getElementById('zemanim-alt-note');
+  var KEY = 'siddur-zemanim-loc', ALT_KEY = 'siddur-zemanim-alt';
   var R = 100, r = 76;
   // Morning golds, a neutral half hour after midday, afternoon ambers,
   // twilight, the two halves of the night, then dawn.
@@ -190,9 +214,11 @@
     var lat = parseFloat(latInput.value), lng = parseFloat(lngInput.value);
     var valid = ymd.length === 3 && Math.abs(lat) <= 90 && Math.abs(lng) <= 180;
     tbody.textContent = '';
+    altNote.hidden = !altInput.checked;
+    try { localStorage.setItem(ALT_KEY, altInput.checked ? '1' : ''); } catch (e) {}
     if (!valid) { current = null; svg.textContent = ''; return; }
     try { localStorage.setItem(KEY, lat + ',' + lng); } catch (e) {}
-    zemanim(ymd[0], ymd[1], ymd[2], lat, lng).forEach(function (row) {
+    zemanim(ymd[0], ymd[1], ymd[2], lat, lng, altInput.checked).forEach(function (row) {
       var tr = tbody.insertRow();
       tr.insertCell().textContent = row[0];
       tr.insertCell().textContent = fmt(row);
@@ -204,8 +230,9 @@
   try {
     var saved = (localStorage.getItem(KEY) || '').split(',');
     if (saved.length === 2) { latInput.value = saved[0]; lngInput.value = saved[1]; }
+    altInput.checked = !!localStorage.getItem(ALT_KEY);
   } catch (e) {}
-  [dateInput, latInput, lngInput].forEach(function (el) { el.addEventListener('input', render); });
+  [dateInput, latInput, lngInput, altInput].forEach(function (el) { el.addEventListener('input', render); });
   render();
 
   function manual() { status.textContent = 'Location unavailable — enter latitude and longitude.'; }

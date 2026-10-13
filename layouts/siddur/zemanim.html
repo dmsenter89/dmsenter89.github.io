@@ -14,6 +14,8 @@
 
 <svg id="zemanim-dial" class="siddur-zemanim-dial" viewBox="-165 -147 330 294" role="img" aria-label="Dial of the halakhic day: daytime across the top half, night across the bottom"></svg>
 
+<p class="siddur-table-note"><label><input type="checkbox" id="zemanim-alt"> Show alternative times</label></p>
+
 <div class="siddur-table-wrap">
   <table class="siddur-table">
     <tbody id="zemanim-body"></tbody>
@@ -21,6 +23,10 @@
 </div>
 
 <p class="siddur-table-note">Sea-level sunrise and sunset, accurate to about a minute; latest times are rounded down and earliest times up. On the dial each half is twelve proportional hours. North and east are positive. Times are shown in this device's time zone.</p>
+
+<p class="siddur-table-note">Proportional hours are measured from sunrise to sunset, following the Gra. The 72 minutes before sunrise follow the Rambam's Pĕrush Hammishna, Bĕrakhoth 1:1; the 20 minutes after sunset follow Hilkhoth Tĕrumoth 7:2. The dial always uses these two.</p>
+
+<p class="siddur-table-note" id="zemanim-alt-note" hidden>Alternative times use the sun's depression below the horizon. For dawn, 16.1° matches 72 minutes at the equinox in Jerusalem and 15.08° the average over the year. For nightfall, 4.15° matches 18 minutes on the longest day in Jerusalem, 4.43° the average over the year, and 4.66° 18 minutes at the equinox, following the Gra. The 35 minutes follow R. Yosef Qafiḥ.</p>
 
 <script>{{ (resources.Get "zemanim.js" | minify).Content | safeJS }}</script>
 
