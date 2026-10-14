@@ -3,7 +3,7 @@
   "sections": [
     {
       "id": "quick-amidah",
-      "title": "Quick 'Ămidha",
+      "title": "Abbreviated 'Ămidha",
       "items": [
         {
           "type": "include",
@@ -102,6 +102,12 @@
       "id": "tefillat-meein-shemoneh-esreh",
       "title": "Tĕfillath Me'en Shĕmoneh 'Esreh",
       "items": [
+        {
+          "type": "rubric",
+          "id": "meein-shemoneh-esreh-note",
+          "hebrew": "תפלה זו נתקנה על פי דוגמה מנוסח ארץ ישראל שנמצאה בגניזת קהיר, ולשונה הותאמה לנוסח הבבלי. אינה נמצאת במנהג הבבלי, אבל יוצאים בה ידי חובת תפלה מן התורה: שבח, בקשה והודאה (רמב״ם, הלכות תפלה א:א–ב). והיא ראויה ביותר לנשים ולקטנים, שלדעת המגן אברהם אין הנשים חייבות מן התורה אלא בתפלה אחת ביום, בכל נוסח שירצו (מגן אברהם, אורח חיים קו:ב).",
+          "translation": "This short prayer is modeled on a Nosaḥ Ereṣ Yisraʾel example from the Cairo Geniza, with its wording fitted to the Bavli tradition. It doesn't appear anywhere in the Bavli liturgy itself, but it still fulfills the core obligation of tĕfilla by Torah law: praising God, asking for your needs, and giving thanks (Rambam, Tĕfilla 1:1–2). It works especially well for women and children, since according to Magen Avraham, women are obligated by Torah law only in one prayer a day, in whatever words they choose (Magen Avraham, ʾOraḥ Ḥayyim 106:2)."
+        },
         {
           "type": "text",
           "id": "meein-shemoneh-esreh-text",

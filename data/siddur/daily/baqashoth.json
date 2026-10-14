@@ -21,6 +21,7 @@
     },
     {
       "id": "yedhidh-nefesh",
+      "audio": "/siddur/audio/yedhidh-nefesh.mp3",
       "title": "Yĕdhidh Nefesh",
       "items": [
         {
@@ -108,6 +109,7 @@
     },
     {
       "id": "odhe-lael",
+      "audio": "/siddur/audio/odhe-lael.mp3",
       "title": "ʾOdheh LaʾEl",
       "items": [
         {
@@ -298,6 +300,7 @@
     },
     {
       "id": "yah-ribbon",
+      "audio": "/siddur/audio/yah-ribbon.mp3",
       "title": "Yah Ribbon 'Alam",
       "items": [
         {
