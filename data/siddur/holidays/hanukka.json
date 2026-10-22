@@ -1,0 +1,193 @@
+{
+  "title": "Ḥănukka",
+  "sections": [
+    {
+      "id": "days-of-hanukka",
+      "title": "The Days of Ḥănukka",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "days-1",
+          "hebrew": "בבית שני, כשגזרו מלכי יון גזרות על ישראל, גברו בני חשמונאי הכהנים והושיעו ישראל, ובכ״ה בכסלו נכנסו להיכל ולא מצאו אלא פך שמן אחד שהיה בו להדליק יום אחד, והדליקו ממנו שמונה ימים. לפיכך התקינו חכמים שיהיו שמונת הימים האלו ימי שמחה והלל, אסורים בהספד ותענית, ומדליקין בהם נרות בכל לילה (רמב״ם חנוכה ג:א–ג; שו״ע או״ח תרע:א).",
+          "translation": "In the time of the Second Temple, when the kings of Greece issued decrees against Israel, the Hasmoneans, a family of priests, rose up and saved Israel. On the 25th of Kislev they entered the Temple and found only a single jar of oil, enough to light for one day, and they lit from it for eight days. So the Sages established these eight days as days of joy and Hallel, when eulogies and fasting are not allowed, and lights are lit on each night (Rambam, Ḥănukka 3:1–3; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 670:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "days-2",
+          "hebrew": "מתר בעשיית מלאכה בימי חנוכה, ונוהגות הנשים שלא לעשות מלאכה בשעה שהנרות דולקים (שו״ע או״ח תרע:א; בא״ח שנה א׳ חנוכה כז).",
+          "translation": "Work is permitted on the days of Ḥănukka, and women have the custom not to work while the lights are burning (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 670:1; Ben ʾIsh Ḥay, Year 1, Ḥănukka 27)."
+        },
+        {
+          "type": "rubric",
+          "id": "days-3",
+          "hebrew": "בכל יום גומרין את ההלל בברכה, בין יחיד בין צבור. ומזכירין ״על הנסים״ בתפלה ובברכת המזון, ואם לא הזכיר אין מחזירין אותו (רמב״ם חנוכה ג:ה; תפלה ב:יג; ברכות ב:ו; שו״ע או״ח תרפב:א, תרפג:א).",
+          "translation": "Every day the full Hallel is said with its bĕrakha, whether you pray alone or with a congregation. \"'Al HanNissim\" is added in the 'Ămidha and in Birkath HaMazon; if you forgot it, you don't go back (Rambam, Ḥănukka 3:5; Tĕfilla 2:13; Bĕrakhoth 2:6; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 682:1, 683:1)."
+        }
+      ]
+    },
+    {
+      "id": "lighting",
+      "title": "Lighting the Candles",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "lighting-1",
+          "hebrewLead": "חיוב המצוה וחביבותה.",
+          "lead": "The Obligation and How Dear It Is.",
+          "hebrew": "מצות נר חנוכה חביבה עד מאד, ואפלו עני המתפרנס מן הצדקה שואל או מוכר כסותו ולוקח שמן להדליק (רמב״ם חנוכה ד:יב; שו״ע או״ח תרעא:א). אחד אנשים ואחד נשים חיבים בה, ואחד מבני הבית מדליק ומוציא את כלם (רמב״ם חנוכה ג:ד, ד:א; שו״ע או״ח תרעה:ג). עקר המצוה נר אחד לכל בית בכל לילה, ומנהג ספרד להוסיף נר בכל לילה עד שבליל שמיני מדליקין שמונה (רמב״ם חנוכה ד:א–ג; שו״ע או״ח תרעא:ב).",
+          "translation": "The miṣwa of the Ḥănukka light is exceedingly dear: even a poor person who lives on charity borrows, or sells their clothing, to buy oil to light (Rambam, Ḥănukka 4:12; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 671:1). Men and women alike are obligated, and one member of the household lights on behalf of everyone (Rambam, Ḥănukka 3:4, 4:1; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 675:3). The core of the miṣwa is one light per household each night; the Sephardic custom is to add a light each night, so that on the eighth night eight are lit (Rambam, Ḥănukka 4:1–3; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 671:2)."
+        },
+        {
+          "type": "rubric",
+          "id": "lighting-2",
+          "hebrewLead": "השמנים והפתילות.",
+          "lead": "Oils and Wicks.",
+          "hebrew": "כל השמנים והפתילות כשרים, ונרות שעוה כשרים, ומצוה מן המבחר בשמן זית. ואין צריך חנכיה ולא נרות מיחדים, ואפלו נר שעוה קטן אחד, שהדליקו בזמנו ובמקומו, יצא ידי חובתו (רמב״ם חנוכה ד:א, ו; שו״ע או״ח תרעג:א).",
+          "translation": "All oils and wicks are fine, and so are wax candles, but the choicest way to do the miṣwa is with olive oil. You don't need a ḥănukkiyya or special candles: even a single small wax candle, lit at the right time and in the right place, and you have fulfilled your obligation (Rambam, Ḥănukka 4:1, 6; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 673:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "lighting-3",
+          "hebrewLead": "מקום ההנחה.",
+          "lead": "Where to Place Them.",
+          "hebrew": "מצוה להניח הנרות על פתח ביתו מבחוץ, בטפח הסמוך לפתח, משמאל הנכנס, כדי שתהיה מזוזה מימין ונר חנוכה משמאל. ומרן כתב להניחם למעלה משלשה טפחים (כ-24 ס״מ) ולמטה מעשרה (כ-80 ס״מ) מן הקרקע (שו״ע או״ח תרעא:ו). הניחם למעלה מעשרים אמה (כ-9.5 מטר) לא יצא. הדר בעליה מדליק בחלון הפונה לרשות הרבים; ואין מדליקין בתוך הבית אלא בשעת הסכנה, ואף אז מניחם סמוך לפתח (רמב״ם חנוכה ד:ז–ח; בא״ח שנה א׳ חנוכה ד).",
+          "translation": "The miṣwa is to set the lights at the entrance of your home, on the outside, within a handbreadth of the doorway and on the left as you enter, so that the mĕzuza is on the right and the Ḥănukka light on the left. Maran writes to place them higher than three handbreadths (about 24 cm) and lower than ten (about 80 cm) above the ground (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 671:6). If you placed them higher than twenty cubits (about 9.5 meters), you have not fulfilled the miṣwa. If you live upstairs, light in a window facing the public street. Lights are not lit inside the house except in times of danger, and even then they go near the doorway (Rambam, Ḥănukka 4:7–8; Ben ʾIsh Ḥay, Year 1, Ḥănukka 4)."
+        },
+        {
+          "type": "rubric",
+          "id": "lighting-3-order",
+          "hebrewLead": "סדר ההדלקה, מנהג.",
+          "lead": "The Order of Lighting (Custom).",
+          "hebrew": "בלילה הראשון מניח בקצה הרחוק מן הפתח, ובכל לילה מוסיף נר סמוך לפתח ומתחיל להדליק ממנו, כדי שיפנה לצד ימין (בא״ח שנה א׳ חנוכה ד).",
+          "translation": "On the first night, place the light at the end farthest from the doorway. Each night, add a light on the side nearest the doorway and begin lighting from it, so that you move toward the right (Ben ʾIsh Ḥay, Year 1, Ḥănukka 4)."
+        },
+        {
+          "type": "rubric",
+          "id": "lighting-4",
+          "hebrewLead": "זמן ההדלקה.",
+          "lead": "When to Light.",
+          "hebrew": "אין מדליקין קדם שתשקע החמה, אלא עם שקיעתה הנראית לעין, לא מאחרין ולא מקדימין; ומשהגיע זמנה לא יאכל ולא ילמד עד שידליק (רמב״ם חנוכה ד:ה; בא״ח שנה א׳ חנוכה ז; מעשה רב רל״ה).",
+          "translation": "Don't light before the sun sets, but right at its visible setting — neither later nor earlier. Once the time has come, don't eat or study until you have lit (Rambam, Ḥănukka 4:5; Ben ʾIsh Ḥay, Year 1, Ḥănukka 7; Ma'ăse Rav 235)."
+        },
+        {
+          "type": "rubric",
+          "id": "lighting-4-reason",
+          "hebrewLead": "טעמו של דין.",
+          "lead": "The Reason for the Law.",
+          "hebrew": "קדם השקיעה אין הנר ניכר, ומשחשך הלילה אינו ניכר שהדליק לשם חנוכה; לפיכך קבעו זמנה בשקיעה, שעדין אין צריך נר בחוץ ואורו ניכר. ואף שיש שאחרו ההדלקה עד צאת הכוכבים על פי שיטת רבנו תם, רוב העולם תופסים כשיטת הגאונים ורבנו בשאר זמני היום, ואין לחלק ביניהם. לפיכך עקר הדין להדליק עם השקיעה ממש, וכן הורה הגר״א (הרב קאפח על הרמב״ם חנוכה ד:ה, הע׳ ה; ביאור הגר״א או״ח תרעב ס״ק ב).",
+          "translation": "Before sunset the light doesn't stand out, and once night has fallen dark it isn't noticeable that it was lit for Ḥănukka. So its time was fixed at sunset, when no one yet needs a light outdoors and its glow stands out. Some delayed lighting until ṣeʾth hakkokhavim (when the stars come out), following the view of Rabbenu Tam; but most of the world follows the view of the Gĕʾonim and Rabbenu for all the other times of the day, and there is no reason to treat this one differently. So the law at its core is to light right at sunset, and this is how the Vilna Gaon ruled as well (Rav Qafiḥ on Rambam, Ḥănukka 4:5, note 5; Biʾur HaGra, ʾOraḥ Ḥayyim 672:2)."
+        },
+        {
+          "type": "rubric",
+          "id": "lighting-4-duration",
+          "hebrewLead": "שעור הזמן.",
+          "lead": "How Long It Should Burn.",
+          "hebrew": "צריך ליתן שמן כדי שתדלק עד שתכלה רגל מן השוק, ואין זה תאור אלא שעור זמן קבוע, כחצי שעה עד שעה לפי השיטות; הדליקה וכבתה, אינו זקוק לה. שכח ולא הדליק בשקיעה, מדליק כל זמן שלא עבר שעור זה. עבר, לדעת רבנו אינו מדליק, ולדעת מרן מדליק כל הלילה; ולמעשה ידליק בלא ברכה (רמב״ם חנוכה ד:ה; שו״ע או״ח תרעב:ב; מעשה רב רל״ו).",
+          "translation": "Put in enough oil to burn \"until the foot traffic has left the marketplace\". This is a fixed measure of time, not a description of the street outside: about half an hour to an hour, depending on the view. If you lit it and it went out, you don't need to relight it. If you forgot and didn't light at sunset, you may still light as long as that time hasn't passed. Once it has passed, in Rabbenu's view you don't light, and in Maran's view you may light all night long; in practice, light without the bĕrakha (Rambam, Ḥănukka 4:5; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 672:2; Ma'ăse Rav 236)."
+        },
+        {
+          "type": "rubric",
+          "id": "lighting-5",
+          "hebrewLead": "איסור תשמיש לאורה.",
+          "lead": "Not Using Its Light.",
+          "hebrew": "אסור להשתמש לאור הנרות, ולפיכך צריך שיהיה שם אור אחר להשתמש לאורו (רמב״ם חנוכה ד:ו, ח). ובזמן הזה שהבית מאיר בחשמל, אין צריך נר נוסף, וכן מנהג תימן (שיח ירושלים); ויש נוהגים להוסיף תמיד ״שמש״ (בא״ח שנה א׳ חנוכה יג).",
+          "translation": "You may not make use of the lights' glow, so there needs to be another light there to use instead (Rambam, Ḥănukka 4:6, 8). Nowadays, when the house is lit by electricity, no extra candle is needed, and this is the Yemenite custom (Siaḥ Yĕrushalayim); some have the custom of always adding a \"shammash\" (Ben ʾIsh Ḥay, Year 1, Ḥănukka 13)."
+        },
+        {
+          "type": "rubric",
+          "id": "lighting-6",
+          "hebrewLead": "אורחים.",
+          "lead": "Guests.",
+          "hebrew": "אורח שמדליקין עליו בביתו אינו צריך להדליק; ואם אין מדליקין עליו בביתו, משתתף בשמן עם בעל הבית (רמב״ם חנוכה ד:יא; שו״ע או״ח תרעז:א).",
+          "translation": "A guest whose household is lighting for them at home doesn't need to light. If no one at home is lighting for them, they chip in toward the oil with their host (Rambam, Ḥănukka 4:11; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 677:1)."
+        }
+      ]
+    },
+    {
+      "id": "shabbath",
+      "title": "'Erev Shabbath and Moṣaʾe Shabbath",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "shabbath-1",
+          "hebrewLead": "ערב שבת.",
+          "lead": "'Erev Shabbath.",
+          "hebrew": "יתפלל מנחה ואחר כך ידליק נר חנוכה (בא״ח שנה א׳ חנוכה כ). מנהג ספרד להדליק נר חנוכה קדם נר שבת (שו״ע או״ח תרעט:א; בא״ח שם), ומנהג תימן להדליק נר שבת ואחר כך נר חנוכה (שיח ירושלים); וכל אחד יעשה כמנהגו. ויתן שמן כדי שידלק אחר השקיעה כשעור ״עד שתכלה רגל מן השוק״, כחצי שעה עד שעה לפי השיטות (נלמד מרמב״ם חנוכה ד:ה).",
+          "translation": "Pray Minḥa first, and then light the Ḥănukka lights (Ben ʾIsh Ḥay, Year 1, Ḥănukka 20). The Sephardic custom is to light the Ḥănukka lights before the Shabbath light (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 679:1; Ben ʾIsh Ḥay, ibid.), and the Yemenite custom is to light the Shabbath light first and then the Ḥănukka lights (Siaḥ Yĕrushalayim); each should follow their own custom. Put in enough oil to burn past sunset for the full measure of \"until the foot traffic has left the marketplace\" — about half an hour to an hour, depending on the view (learned from Rambam, Ḥănukka 4:5)."
+        },
+        {
+          "type": "rubric",
+          "id": "shabbath-2",
+          "hebrewLead": "מוצאי שבת.",
+          "lead": "Moṣaʾe Shabbath.",
+          "hebrew": "מבדיל על הכוס ואחר כך מדליק נר חנוכה (בא״ח שנה א׳ חנוכה כא; הרב קאפח על הרמב״ם חנוכה ד:ה, הע׳ ה).",
+          "translation": "On Moṣaʾe Shabbath (Saturday night, once Shabbath has gone out), make Havdala over the cup first, and then light the Ḥănukka lights (Ben ʾIsh Ḥay, Year 1, Ḥănukka 21; Rav Qafiḥ on Rambam, Ḥănukka 4:5, note 5)."
+        }
+      ]
+    },
+    {
+      "id": "berakhoth",
+      "title": "Bĕrakhoth of the Lighting",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "berakhoth-instr",
+          "hebrew": "בלילה הראשון מברך שלש ברכות, ובשאר הלילות מברך שתים, קדם ההדלקה (רמב״ם חנוכה ג:ד; שו״ע או״ח תרעו:א).",
+          "translation": "On the first night, say three bĕrakhoth before lighting; on the other nights, say two (Rambam, Ḥănukka 3:4; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 676:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "berakhoth-cue-before",
+          "hebrew": "קדם ההדלקה מברך:",
+          "translation": "Before lighting, say:"
+        },
+        {
+          "type": "text",
+          "id": "lehadlik",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר קִדְּשָׁנוּ בְּמִצְוֹתָיו וְצִוָּנוּ לְהַדְלִיק נֵר [שֶׁל] חֲנֻכָּה.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has sanctified us with His commandments and commanded us to kindle the Ḥănukka light.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher qiddĕshanu bĕmiṣwothaw wĕṣiwwanu lĕhadhliq ner [shel] ḥănukka."
+        },
+        {
+          "type": "text",
+          "id": "sheasa-nissim",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה נִסִּים לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who worked miracles for our forefathers in those days, at this season.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, she'asa nissim laʾăvothenu bayyamim hahem bazzĕman hazzeh."
+        },
+        {
+          "type": "rubric",
+          "id": "berakhoth-cue-first-night",
+          "hebrew": "בלילה הראשון מוסיף:",
+          "translation": "On the first night, add:"
+        },
+        {
+          "type": "text",
+          "id": "sheheheyanu",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has kept us alive, sustained us, and brought us to this season.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, sheheḥĕyanu wĕqiyyĕmanu wĕhiggi'anu lazzĕman hazzeh."
+        },
+        {
+          "type": "rubric",
+          "id": "berakhoth-nusah",
+          "hebrew": "הנוסח ״נֵר שֶׁל חֲנֻכָּה״ כרבנו (רמב״ם חנוכה ג:ד), ומרן ובן איש חי כתבו ״נֵר חֲנֻכָּה״ (שו״ע או״ח תרעו:א; בא״ח שנה א׳ חנוכה ב).",
+          "translation": "The wording \"ner shel Ḥănukka\" follows Rabbenu (Rambam, Ḥănukka 3:4); Maran and the Ben ʾIsh Ḥay write \"ner Ḥănukka\" (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 676:1; Ben ʾIsh Ḥay, Year 1, Ḥănukka 2)."
+        },
+        {
+          "type": "rubric",
+          "id": "berakhoth-cue-after",
+          "hebrew": "אחר ההדלקה אומרים (שו״ע או״ח תרעו:ד):",
+          "translation": "After lighting, say (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 676:4):"
+        },
+        {
+          "type": "text",
+          "id": "hanneroth-hallalu",
+          "hebrew": "הַנֵּרוֹת הַלַּלּוּ אָנוּ מַדְלִיקִין עַל הַתְּשׁוּעוֹת וְעַל הַנִּסִּים וְעַל הַנִּפְלָאוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה, עַל יְדֵי כֹּהֲנֶיךָ הַקְּדוֹשִׁים. וְכָל שְׁמוֹנַת יְמֵי חֲנֻכָּה הַנֵּרוֹת הַלַּלּוּ קֹדֶשׁ הֵן, וְאֵין לָנוּ רְשׁוּת לְהִשְׁתַּמֵּשׁ בָּהֵן, אֶלָּא לִרְאוֹתָן בִּלְבָד, כְּדֵי לְהוֹדוֹת לְשִׁמְךָ עַל נִפְלְאוֹתֶיךָ וְעַל נִסֶּיךָ וְעַל יְשׁוּעָתֶךָ.",
+          "translation": "We kindle these lights for the victories, the miracles and the wonders that You worked for our forefathers in those days, at this season, through Your holy priests. Throughout the eight days of Ḥănukka these lights are holy; we have no leave to make use of them, but only to look at them, so that we may give thanks to Your name for Your wonders, Your miracles and Your salvation.",
+          "translit": "hanneroth hallallu ʾanu madhliqin 'al hattĕshu'oth wĕ'al hannissim wĕ'al hanniflaʾoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh, 'al yĕdhe kohănekha haqqĕdhoshim. wĕkhol shĕmonath yĕme ḥănukka hanneroth hallallu qodhesh hen, wĕʾen lanu rĕshuth lĕhishtammesh bahen, ʾellaʾ lirʾothan bilvadh, kĕdhe lĕhodhoth lĕshimkha 'al niflĕʾothekha wĕ'al nissekha wĕ'al yĕshu'athekha."
+        }
+      ]
+    }
+  ]
+}
