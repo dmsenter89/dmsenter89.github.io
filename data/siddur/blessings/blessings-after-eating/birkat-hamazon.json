@@ -15,9 +15,9 @@
         {
           "type": "text",
           "id": "noda",
-          "hebrew": "נֽוֹדֶה לְּךָ, יְיָ אֱלֹהֵינוּ, שֶׁהִנְחַלְתָּ לַאֲבוֹתֵינוּ אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, בְּרִית וְתוֹרָה.",
-          "translation": "We thank You, Adhonay our God, for giving our forefathers as their heritage a cherished land, good and broad, the covenant and the Torah.",
-          "translit": "nodheh lĕkha, Adhonay ʾĕlohenu, shehinḥalta laʾăvothenu ʾereṣ ḥemda ṭova urĕḥava, bĕrith wĕthora."
+          "hebrew": "נֽוֹדֶה לְּךָ, יְיָ אֱלֹהֵינוּ, שֶׁהִנְחַלְתָּ לַאֲבוֹתֵינוּ אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, בְּרִית וְתוֹרָה, [וְעַל שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם].",
+          "translation": "We thank You, Adhonay our God, for giving our forefathers as their heritage a cherished land, good and broad, the covenant and the Torah, [and for bringing us out of the land of Egypt].",
+          "translit": "nodheh lĕkha, Adhonay ʾĕlohenu, shehinḥalta laʾăvothenu ʾereṣ ḥemda ṭova urĕḥava, bĕrith wĕthora, [wĕ'al shehoṣeʾthanu meʾereṣ miṣrayīm]."
         },
         {
           "type": "expandable",
@@ -92,8 +92,21 @@
         {
           "type": "expandable",
           "id": "yaaleh-veyavo",
-          "label": "Roʾsh Ḥodhesh, Pesaḥ & Sukkoth — Ya'ăleh Wĕyavoʾ",
+          "label": "Shabbath, Roʾsh Ḥodhesh, Festivals & Roʾsh HashShana — Additions",
           "items": [
+            {
+              "type": "rubric",
+              "id": "retzeh-shabbat-label",
+              "hebrew": "בשבת",
+              "translation": "On Shabbath:"
+            },
+            {
+              "type": "text",
+              "id": "retzeh-shabbat-cue",
+              "hebrew": "וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה",
+              "translation": "And be pleased with us, and give us rest and strength on this Shabbath day.",
+              "translit": "urĕṣeh wĕhaḥăliṣenu bĕyom hashshabbath hazzeh"
+            },
             {
               "type": "rubric",
               "id": "yaaleh-veyavo-roshchodesh-label",
@@ -103,9 +116,9 @@
             {
               "type": "text",
               "id": "yaaleh-veyavo-roshchodesh-cue",
-              "hebrew": "וְזָכְרֵנוּ בְּיוֹם רֹאשׁ הַחֹֽדֶשׁ הַזֶה",
+              "hebrew": "וְזָכְרֵנוּ בְּיוֹם רֹאשׁ הַחֹֽדֶשׁ הַזֶּה",
               "translation": "And remember us on this day of Roʾsh Ḥodhesh.",
-              "translit": "wĕzakhĕrenu bĕyom roʾsh haḥodhesh hazeh"
+              "translit": "wĕzakhĕrenu bĕyom roʾsh haḥodhesh hazzeh"
             },
             {
               "type": "rubric",
@@ -116,9 +129,35 @@
             {
               "type": "text",
               "id": "yaaleh-veyavo-pesach-cue",
-              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַמַּצּוֹת הַזֶה",
+              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַמַּצּוֹת הַזֶּה",
               "translation": "And gladden us on this day of the Festival of Maṣṣoth.",
-              "translit": "wĕsammĕḥenu bĕyom ḥagh hammaṣṣoth hazeh"
+              "translit": "wĕsammĕḥenu bĕyom ḥagh hammaṣṣoth hazzeh"
+            },
+            {
+              "type": "rubric",
+              "id": "yaaleh-veyavo-shavuot-label",
+              "hebrew": "בשבועות",
+              "translation": "On Shavu'oth:"
+            },
+            {
+              "type": "text",
+              "id": "yaaleh-veyavo-shavuot-cue",
+              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַשָּׁבֻעוֹת הַזֶּה",
+              "translation": "And gladden us on this day of the Festival of Shavu'oth.",
+              "translit": "wĕsammĕḥenu bĕyom ḥagh hashshavu'oth hazzeh"
+            },
+            {
+              "type": "rubric",
+              "id": "yaaleh-veyavo-rosh-hashana-label",
+              "hebrew": "בראש השנה",
+              "translation": "On Roʾsh HashShana:"
+            },
+            {
+              "type": "text",
+              "id": "yaaleh-veyavo-rosh-hashana-cue",
+              "hebrew": "וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה",
+              "translation": "And remember us for good on this Day of Remembrance.",
+              "translit": "wĕzakhĕrenu lĕṭova bĕyom hazzikkaron hazzeh"
             },
             {
               "type": "rubric",
@@ -129,9 +168,22 @@
             {
               "type": "text",
               "id": "yaaleh-veyavo-sukkot-cue",
-              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַסֻּכּוֹת הַזֶה",
+              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַסֻּכּוֹת הַזֶּה",
               "translation": "And gladden us on this day of the Festival of Sukkoth.",
-              "translit": "wĕsammĕḥenu bĕyom ḥagh hassukkoth hazeh"
+              "translit": "wĕsammĕḥenu bĕyom ḥagh hassukkoth hazzeh"
+            },
+            {
+              "type": "rubric",
+              "id": "yaaleh-veyavo-shemini-atzeret-label",
+              "hebrew": "בשמיני עצרת",
+              "translation": "On Shĕmini 'Ăṣereth:"
+            },
+            {
+              "type": "text",
+              "id": "yaaleh-veyavo-shemini-atzeret-cue",
+              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם הַשְּׁמִינִי חַג הָעֲצֶרֶת הַזֶּה",
+              "translation": "And gladden us on this day of Shĕmini 'Ăṣereth, the Festival of Assembly.",
+              "translit": "wĕsammĕḥenu bĕyom hashshĕmini ḥagh ha'ăṣereth hazzeh"
             },
             {
               "type": "expandable",
@@ -141,9 +193,9 @@
                 {
                   "type": "text",
                   "id": "yaaleh-veyavo-full",
-                  "hebrew": "אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם [רֹאשׁ הַחֹֽדֶשׁ הַזֶּה / חַג הַמַּצּוֹת הַזֶּה / חַג הַסֻּכּוֹת הַזֶּה], לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְיָ אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים, חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה.",
-                  "translation": "Our God and God of our forefathers, may there rise and come, arrive and be seen, find favor and be heard, be recalled and be remembered before You our remembrance and the remembrance of our forefathers, the remembrance of Jerusalem, Your city, the remembrance of the Messiah, son of David, Your servant, and the remembrance of all Your people, the house of Israel — for deliverance, for good, for grace, for loving-kindness and compassion, for good life and for peace, on this day of [Roʾsh Ḥodhesh / the Festival of Maṣṣoth / the Festival of Sukkoth], to have mercy on us on it and to save us. Remember us on it, Adhonay our God, for good; recall us on it for blessing; and save us on it for good life. With a word of salvation and compassion, spare us and be gracious to us, have pity and mercy on us, and save us; for our eyes are on You, for You are God, a gracious and compassionate King.",
-                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, ya'ăleh wĕyavoʾ, wĕyaggia' wĕyeraʾeh, wĕyeraṣeh wĕyishshama', wĕyippaqedh wĕyizzakher, zikhronenu wĕzikhron ʾăvothenu, zikhron yĕrushalayim 'irakh, wĕzikhron mashiaḥ ben-dhawīdh 'avdakh, wĕzikhron kol-'ammĕkha beth yisraʾel lĕfanekha, lifleṭa, lĕṭova, lĕḥen, lĕḥesedh ulĕraḥămim, lĕḥayyim ṭovim ulĕshalom, bĕyom [roʾsh haḥodhesh hazzeh / ḥagh hammaṣṣoth hazzeh / ḥagh hassukkoth hazzeh], lĕraḥem bo 'alenu ulĕhoshi'enu. zakhĕrenu Adhonay ʾĕlohenu bo lĕṭova, ufaqĕdhenu vo livrakha, wĕhoshi'enu vo lĕḥayyim ṭovim, bidhvar yĕshu'a wĕraḥămim, ḥus wĕḥannenu, waḥămol wĕraḥem 'alenu, wĕhoshi'enu ki ʾelekha 'enenu, ki ʾel melekh ḥannun wĕraḥum ʾatta."
+                  "hebrew": "אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם [רֹאשׁ הַחֹֽדֶשׁ הַזֶּה / חַג הַמַּצּוֹת הַזֶּה / חַג הַשָּׁבֻעוֹת הַזֶּה / הַזִּכָּרוֹן הַזֶּה / חַג הַסֻּכּוֹת הַזֶּה / הַשְּׁמִינִי חַג הָעֲצֶרֶת הַזֶּה], לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְיָ אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים, חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה.",
+                  "translation": "Our God and God of our forefathers, may there rise and come, arrive and be seen, find favor and be heard, be recalled and be remembered before You our remembrance and the remembrance of our forefathers, the remembrance of Jerusalem, Your city, the remembrance of the Messiah, son of David, Your servant, and the remembrance of all Your people, the house of Israel — for deliverance, for good, for grace, for loving-kindness and compassion, for good life and for peace, on this day of [Roʾsh Ḥodhesh / the Festival of Maṣṣoth / the Festival of Shavu'oth / the Day of Remembrance / the Festival of Sukkoth / Shĕmini 'Ăṣereth, the Festival of Assembly], to have mercy on us on it and to save us. Remember us on it, Adhonay our God, for good; recall us on it for blessing; and save us on it for good life. With a word of salvation and compassion, spare us and be gracious to us, have pity and mercy on us, and save us; for our eyes are on You, for You are God, a gracious and compassionate King.",
+                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, ya'ăleh wĕyavoʾ, wĕyaggia' wĕyeraʾeh, wĕyeraṣeh wĕyishshama', wĕyippaqedh wĕyizzakher, zikhronenu wĕzikhron ʾăvothenu, zikhron yĕrushalayim 'irakh, wĕzikhron mashiaḥ ben-dhawīdh 'avdakh, wĕzikhron kol-'ammĕkha beth yisraʾel lĕfanekha, lifleṭa, lĕṭova, lĕḥen, lĕḥesedh ulĕraḥămim, lĕḥayyim ṭovim ulĕshalom, bĕyom [roʾsh haḥodhesh hazzeh / ḥagh hammaṣṣoth hazzeh / ḥagh hashshavu'oth hazzeh / hazzikkaron hazzeh / ḥagh hassukkoth hazzeh / hashshĕmini ḥagh ha'ăṣereth hazzeh], lĕraḥem bo 'alenu ulĕhoshi'enu. zakhĕrenu Adhonay ʾĕlohenu bo lĕṭova, ufaqĕdhenu vo livrakha, wĕhoshi'enu vo lĕḥayyim ṭovim, bidhvar yĕshu'a wĕraḥămim, ḥus wĕḥannenu, waḥămol wĕraḥem 'alenu, wĕhoshi'enu ki ʾelekha 'enenu, ki ʾel melekh ḥannun wĕraḥum ʾatta."
                 }
               ]
             }
