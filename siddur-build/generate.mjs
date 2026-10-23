@@ -39,11 +39,31 @@ if (!path) {
   process.exit(1);
 }
 
+// hebrew-transliteration 2.11.0 drops every dagesh in a maqaf compound that
+// touches a non-Hebrew character on either side ("כָּל־שׁוּק." -> "kol-shwq.",
+// "[כָּל־לִבּוֹ" -> "[kol-livo"). Punctuation runs are split off and passed
+// through untouched, so the library only ever sees the Hebrew between them.
+const ASCII_PUNCTUATION = /([.,;:!?()[\]—]+)/;
+
+function transliterateAroundPunctuation(text) {
+  return text
+    .split(ASCII_PUNCTUATION)
+    // The library throws on input with no Hebrew letters (e.g. a lone space)
+    // and trims the whitespace around what it does transliterate, so only the
+    // Hebrew core of each piece goes through it.
+    .map((piece) =>
+      piece.replace(/\S(?:.*\S)?/s, (core) =>
+        /[א-ת]/.test(core) ? transliterate(core, sephardicSchema) : core
+      )
+    )
+    .join("");
+}
+
 function transliterateWithDivineName(hebrew) {
   const labelShielded = shieldLabels(hebrew);
   const punctuationShielded = shieldPunctuation(labelShielded);
   const shielded = shieldDivineName(punctuationShielded);
-  const rendered = transliterate(shielded, sephardicSchema);
+  const rendered = transliterateAroundPunctuation(shielded);
   // Placeholder may pick up surrounding whitespace changes from the
   // library; replace on the raw token regardless of adjacent spacing.
   const withDivineName = rendered.split(DIVINE_NAME_PLACEHOLDER).join("Adhonay");

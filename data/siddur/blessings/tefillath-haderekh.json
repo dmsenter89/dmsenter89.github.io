@@ -1,0 +1,325 @@
+{
+  "title": "Tĕfillath HaDerekh",
+  "sections": [
+    {
+      "id": "levaya",
+      "title": "Accompanying a Traveler",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "levaya-1",
+          "hebrewLead": "א. המצוה.",
+          "lead": "1. The Miṣwa.",
+          "hebrew": "שכר הלויה מרובה מן הכל, והוא החק שחקקו אברהם אבינו, ולוויים של אורחים יותר מהכנסתם. ואמרו חכמים: כל שאינו מלוה, כאלו שופך דמים (רמב״ם אבל יד:ב).",
+          "translation": "The reward for accompanying someone on their way (lĕwaya) is greater than anything. It is the practice Abraham our father established, and seeing guests off counts for more than taking them in. The Sages said: whoever does not accompany is as though he sheds blood (Rambam, ʾEvel 14:2)."
+        },
+        {
+          "type": "rubric",
+          "id": "levaya-2",
+          "hebrewLead": "ב. שיעורה.",
+          "lead": "2. How Far.",
+          "hebrew": "כל המלוה את חברו ארבע אמות בעיר אינו ניזוק (סוטה מו:), ואפלו ארבע אמות יש לו שכר הרבה. ושיעור הלויה מן הדין: האיש לחברו עד תחום שבת (רמב״ם אבל יד:ג). ובזמן הזה נהגו ללוותו עד פתח העיר, או לכל הפחות ארבע אמות (כף החיים קי:טו, בשם דרכי משה).",
+          "translation": "Whoever accompanies a friend four cubits within the city comes to no harm (Soṭa 46b), and even four cubits earn a great reward. By strict law, a man accompanies his friend as far as the Shabbath boundary (teḥum Shabbath) (Rambam, ʾEvel 14:3). Nowadays the custom is to walk him to the edge of town, or at least four cubits (Kaf HaḤayyim 110:15, citing the Darkhe Moshe)."
+        },
+        {
+          "type": "rubric",
+          "id": "levaya-3",
+          "hebrewLead": "ג. מי שאין לו לויה.",
+          "lead": "3. With No One to See You Off.",
+          "hebrew": "ההולך בדרך ואין לו מי שילוהו, יעסוק בתורה (סוטה מו:).",
+          "translation": "If you set out on the road with no one to accompany you, keep yourself busy with Torah (Soṭa 46b)."
+        },
+        {
+          "type": "rubric",
+          "id": "levaya-4",
+          "hebrewLead": "ד. בפרידה.",
+          "lead": "4. On Parting.",
+          "hebrew": "אל יפטר אדם מחברו אלא מתוך דבר הלכה, שמתוך כך זוכרהו (ברכות לא.). ונהגו לומר בפרידה ״יָחִיד וְרַבִּים, הֲלָכָה כְּרַבִּים״ (עוד יוסף חי). והנפטר מחברו, אל יאמר לו ״לֵךְ בְּשָׁלוֹם״ אלא ״לֵךְ לְשָׁלוֹם״ (ברכות סד.).",
+          "translation": "Don't take leave of a friend except with a word of hălakha, so that he will remember you by it (Bĕrakhoth 31a). The custom is to say on parting, \"yaḥidh wĕrabbim, hălakha kĕrabbim\" (\"between one and many, the law follows the many\") ('Odh Yosef Ḥay). And when you part from a friend, don't say to him \"lekh bĕshalom\" (\"go in peace\") but \"lekh lĕshalom\" (\"go toward peace\") (Bĕrakhoth 64a)."
+        },
+        {
+          "type": "rubric",
+          "id": "levaya-5",
+          "hebrewLead": "ה. עד שיתעלם.",
+          "lead": "5. Until Out of Sight.",
+          "hebrew": "המלוה את חברו, עומד במקומו עד שיתעלם מעיניו (כף החיים קי:טז, בשם החזקוני).",
+          "translation": "When you see a friend off, stay where you are until he has passed out of sight (Kaf HaḤayyim 110:16, citing the Ḥizzĕquni)."
+        }
+      ]
+    },
+    {
+      "id": "seder",
+      "title": "Which Prayer When",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "seder-1",
+          "hebrewLead": "א. שתי תפלות.",
+          "lead": "1. Two Prayers.",
+          "hebrew": "שתי תפלות נתקנו לדרך: תפלת הדרך (ברכות כט:), ותפלות הכרך, שהן שתי בקשות ושתי הודאות, אחת בכניסתו ואחת ביציאתו (ברכות נד., ס.). והרמב״ם לא הזכיר אלא תפלות הכרך (רמב״ם ברכות י:כה; ב״י או״ח קי). וביאר הפרי חדש, שלדעתו תפלת הדרך שבגמרא, שחותמים בה, אינה אלא במקום סכנה, והיא התפלה הקצרה (רמב״ם תפלה ד:יט; פר״ח או״ח קי:ד). ומרן הזכיר את שתיהן (שו״ע או״ח קי:ד; רל:א).",
+          "translation": "Two prayers were instituted for the road: Tĕfillath HaDerekh (Bĕrakhoth 29b), and the prayers for a city (kĕrakh) — two requests and two thanksgivings, one on entering and one on leaving (Bĕrakhoth 54a, 60a). The Rambam mentions only the city prayers (Rambam, Bĕrakhoth 10:25; Beth Yosef, ʾOraḥ Ḥayyim 110). The Pĕri Ḥadhash explains that in his view the Tĕfillath HaDerekh of the Talmud, which closes with a bĕrakha, is said only in a place of danger, and is the same as the short prayer (Rambam, Tĕfilla 4:19; Pĕri Ḥadhash, ʾOraḥ Ḥayyim 110:4). Maran mentions both (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:4; 230:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "seder-2",
+          "hebrewLead": "ב. היוצא מעירו.",
+          "lead": "2. Leaving Your Own Town.",
+          "hebrew": "היוצא לדרך מעיר שאינה כרך, אומר תפלת הדרך לבדה, אחר שיצא מן העיר ומעיבורה (שו״ע או״ח קי:ד, ז; כף החיים קי:נב).",
+          "translation": "When you set out from a town that isn't a city (kĕrakh), say Tĕfillath HaDerekh alone, once you have left the town and its outskirts (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:4, 7; Kaf HaḤayyim 110:52)."
+        },
+        {
+          "type": "rubric",
+          "id": "seder-3",
+          "hebrewLead": "ג. היוצא מכרך.",
+          "lead": "3. Leaving a City.",
+          "hebrew": "היוצא בתחלת דרכו מכרך שדר בו או שלן בו, אומר ״יְהִי רָצוֹן... שֶׁתּוֹצִיאֵנִי״ קדם שיצא. וכשיצא בשלום אומר ״מוֹדֶה אֲנִי... שֶׁהוֹצֵאתַנִי״ וחותם בה ״בָּרוּךְ [אַתָּה יְיָ] שׁוֹמֵעַ תְּפִלָּה״, ויוצא בה ידי תפלת הדרך, שעושה משתיהן אחת (ב״י או״ח רל, בשם הכלבו; שו״ע או״ח רל:א; ט״ז רל:א; משנה ברורה רל:ג). ויש אומרים שימתין בה עד שיחזיק בדרך (מגן אברהם רל:ד; כף החיים רל:ט). ואם לא חתם בה, אומר אחר כך תפלת הדרך כדינה.",
+          "translation": "If you are starting your journey from a city where you live or spent the night, say \"yĕhi raṣon… shettoṣiʾeni\" before you leave. Once you have left safely, say \"modheh ʾăni… shehoṣeʾthani\" and close it with \"barukh [ʾatta Adhonay] shomea' tĕfilla\"; that fulfills Tĕfillath HaDerekh, since you make the two into one (Beth Yosef, ʾOraḥ Ḥayyim 230, citing the Kol Bo; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 230:1; Ṭaz 230:1; Mishna Bĕrura 230:3). Some say to hold off on it until you are well on your way (Maghen ʾAvraham 230:4; Kaf HaḤayyim 230:9). If you didn't close it with the bĕrakha, say Tĕfillath HaDerekh afterward as usual."
+        },
+        {
+          "type": "rubric",
+          "id": "seder-4",
+          "hebrewLead": "ד. העובר דרך כרך.",
+          "lead": "4. Passing Through a City.",
+          "hebrew": "מי שכבר אמר תפלת הדרך, ובאמצע דרכו נכנס לכרך ויוצא ממנו ביום, אומר תפלות הכרך בלבד, ואינו חוזר לומר תפלת הדרך (ט״ז רל:א; מגן אברהם רל:ג; כף החיים רל:ח). ואם אינו נשהה בכרך אלא עובר בו, כולל הכל בשתי תפלות: קדם שיכנס אומר ״שֶׁתַּכְנִיסֵנִי וְתוֹצִיאֵנִי מִכְּרַךְ זֶה לְשָׁלוֹם״, וכשיצא אומר ״שֶׁהִכְנַסְתַּנִי וְהוֹצֵאתַנִי מִכְּרַךְ זֶה לְשָׁלוֹם״ (כף החיים רל:ז).",
+          "translation": "If you have already said Tĕfillath HaDerekh, and partway through your journey you enter a city and leave it the same day, say only the city prayers; don't say Tĕfillath HaDerekh again (Ṭaz 230:1; Maghen ʾAvraham 230:3; Kaf HaḤayyim 230:8). If you aren't stopping in the city but just passing through, fold it all into two prayers: before you enter, say \"shettakhniseni wĕthoṣiʾeni mikkĕrakh zeh lĕshalom\" (\"that You bring me into this city and out of it in peace\"), and once you have left, say \"shehikhnastani wĕhoṣeʾthani mikkĕrakh zeh lĕshalom\" (\"that You have brought me into this city and out of it in peace\") (Kaf HaḤayyim 230:7)."
+        },
+        {
+          "type": "rubric",
+          "id": "seder-5",
+          "hebrewLead": "ה. איזה כרך.",
+          "lead": "5. What Counts as a City.",
+          "hebrew": "כרך הוא עיר גדולה, ובעיר רגילה אין צריך לתפלות אלו. אבל אם יש חשש שיעלילו עליו, יאמרן אף בכפר, לפי הענין. והטעם שבכרך מצויים מושלים ומחפשים עלילות (כף החיים רל:ד, י).",
+          "translation": "A kĕrakh is a large city; an ordinary town doesn't call for these prayers. But if there is reason to fear you could be falsely accused, say them even in a village, as the situation warrants. The reason for them is that a city is full of rulers and people looking for a pretext against you (Kaf HaḤayyim 230:4, 10)."
+        }
+      ]
+    },
+    {
+      "id": "tefillath-haderekh",
+      "title": "Tĕfillath HaDerekh",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "haderekh-1",
+          "hebrewLead": "א. החיוב.",
+          "lead": "1. The Obligation.",
+          "hebrew": "כל היוצא לדרך מתפלל תפלת הדרך, שנאמר לו ״הִמָּלֵךְ בְּקוֹנְךָ וָצֵא״ (ברכות כט:; שו״ע או״ח קי:ד). ובסידור הרב קאפח נדפסה בלשון ״יש שנהגו לאמרה״, שהרמב״ם לא הזכירה (ראה לעיל, סדר התפלות, א).",
+          "translation": "Anyone setting out on the road says Tĕfillath HaDerekh, as the traveler is told: \"Take counsel with your Maker, and go\" (Bĕrakhoth 29b; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:4). Rabbi Qafih's siddur prints it with the note \"some have the custom to say it\", since the Rambam doesn't mention it (see above, Which Prayer When, 1)."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-2",
+          "hebrewLead": "ב. זמנה.",
+          "lead": "2. When to Say It.",
+          "hebrew": "אחר שיצא מן העיר ומעיבורה, דהיינו שבעים אמה ושיריים (שני שלישי אמה) אחר הבית האחרון, ויחזיק בדרך. ואין לאומרה בתוך העיר, ובדיעבד אם אמרה בעיר יצא (שו״ע או״ח קי:ז; כף החיים קי:מט, נב).",
+          "translation": "Once you have left the town and its outskirts — that is, seventy cubits and a remainder (two-thirds of a cubit) past the last house — and are on your way. Don't say it inside the town; after the fact, if you did say it in town, you have fulfilled your obligation (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:7; Kaf HaḤayyim 110:49, 52)."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-3",
+          "hebrewLead": "ג. שיעור הדרך.",
+          "lead": "3. Length of the Journey.",
+          "hebrew": "אין לאומרה בחתימה אלא למי שיש לו ללכת פרסה (שמונת אלפים אמה), ובפחות מפרסה אין חותמין בברוך. ובזמן הזה משערים פרסה בשבעים ושתים דקות נסיעה, בין ההולך ברגליו בין הנוסע ברכב, ברכבת, באניה או באוירון (עוד יוסף חי, דיני תפלת הדרך א). ולכתחלה יאמרנה בפרסה הראשונה (הגהת מור״ם). ואם שכח, אומרה כל זמן שלא הגיע לתוך הפרסה הסמוכה לעיר שרוצה ללון בה, ומשם ואילך אומרה בלא ברכה. ואם הוא הולך במקום סכנה יאמרנה אף בפחות מפרסה (שו״ע או״ח קי:ז; כף החיים קי:נד–נו).",
+          "translation": "Say it with its closing bĕrakha only if you have a parsa (eight thousand cubits) to travel; for less than a parsa, don't close with \"barukh\". Nowadays a parsa is reckoned as seventy-two minutes of travel, whether you go on foot or by car, train, ship or airplane ('Odh Yosef Ḥay, Laws of Tĕfillath HaDerekh 1). Ideally, say it within the first parsa (Moram's gloss). If you forgot, you can still say it as long as you haven't reached the last parsa before the town where you mean to spend the night; from there on, say it without the bĕrakha. If you are traveling through a dangerous place, say it even for less than a parsa (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:7; Kaf HaḤayyim 110:54–56)."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-4",
+          "hebrewLead": "ד. עמידה.",
+          "lead": "4. Standing.",
+          "hebrew": "מצוה לאמרה מעומד, ואם אי אפשר לו אומרה מהלך. ואם היה רוכב אינו צריך לרדת, אלא יעמיד את הבהמה אם אפשר לו (ברכות ל.; שו״ע או״ח קי:ד; כף החיים קי:מג–מה). וכן הנוסע ברכב לבדו, אם אפשר לו יעצור בצד הדרך ויאמרנה, ובמקום שיש סכנה בעצירה אינו עוצר (כף החיים קי:מד; עוד יוסף חי, דיני תפלת הדרך ה).",
+          "translation": "It is a miṣwa to say it standing; if you can't, say it while walking. If you are riding, you don't need to dismount, but stop the animal if you can (Bĕrakhoth 30a; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:4; Kaf HaḤayyim 110:43–45). Likewise, if you are driving alone, pull over to the side of the road and say it if you can; where stopping would be dangerous, don't stop (Kaf HaḤayyim 110:44; 'Odh Yosef Ḥay, Laws of Tĕfillath HaDerekh 5)."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-5",
+          "hebrewLead": "ה. לשון רבים.",
+          "lead": "5. In the Plural.",
+          "hebrew": "אומרים אותה בלשון רבים אף ההולך לבדו, שמתוך כך תפלתו נשמעת, ואם אמרה בלשון יחיד יצא (ברכות ל.; שו״ע או״ח קי:ד; כף החיים קי:לח). והנוסח כאן כבגמרא, בלשון רבים כדברי אביי, ופתיחתו כמרן (ברכות כט:–ל.; שו״ע או״ח קי:ד). ובסידור הרב קאפח נדפסה בלשון יחיד ובנוסח אחר.",
+          "translation": "It is said in the plural even if you are traveling alone, since that way your prayer is heard; if you said it in the singular, you have fulfilled your obligation (Bĕrakhoth 30a; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:4; Kaf HaḤayyim 110:38). The wording here follows the Talmud, in the plural as ʾAbbaye says, with the opening as in Maran (Bĕrakhoth 29b–30a; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:4). Rabbi Qafih's siddur prints it in the singular, with different wording."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-6",
+          "hebrewLead": "ו. פעם ביום.",
+          "lead": "6. Once a Day.",
+          "hebrew": "אין צריך לאמרה אלא פעם אחת ביום, אפלו אם ינוח בעיר באמצע היום. אבל אם היה דעתו ללון בעיר ואחר כך נמלך ויצא ממנה לעבור חוצה לה או לשוב לביתו, צריך לחזור ולאמרה פעם אחרת. ואם לן בעיר, למחרת כשיוצא לדרך אומרה שוב (שו״ע או״ח קי:ה; כף החיים קי:מו–מז).",
+          "translation": "You only need to say it once a day, even if you stop to rest in a town partway through the day. But if you meant to spend the night in a town, then changed your mind and left it — to go on past it or to head home — you have to say it again. If you did spend the night in a town, say it again the next day when you set out (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:5; Kaf HaḤayyim 110:46–47)."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-7",
+          "hebrewLead": "ז. אחד מוציא את חבריו.",
+          "lead": "7. One Says It for Everyone.",
+          "hebrew": "היו כמה נוסעים יחד, אחד אומרה בקול ומכוין להוציאם, והם מכוונים לצאת ועונים אמן, ואין צריך לעצור את הרכב (עוד יוסף חי, דיני תפלת הדרך ה).",
+          "translation": "When several people are traveling together, one says it aloud, with the intention of fulfilling the obligation for the others; they have in mind to fulfill it and answer Amen. There's no need to stop the car ('Odh Yosef Ḥay, Laws of Tĕfillath HaDerekh 5)."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-8",
+          "hebrewLead": "ח. הסמיכה.",
+          "lead": "8. Pairing It with Another Bĕrakha.",
+          "hebrew": "ראוי לסמוך אותה לברכה אחרת, כגון שיאכל או ישתה ויברך ברכה אחרונה, או שיברך ״אשר יצר״, ומיד יאמר תפלת הדרך. ואם יוצא בבקר קדם ברכות השחר, יאמרנה אחר ״הגומל חסדים טובים לעמו ישראל״ (שו״ע או״ח קי:ו; כף החיים קי:נא; עוד יוסף חי, דיני תפלת הדרך ד).",
+          "translation": "It is best to say it right after another bĕrakha — for instance, eat or drink something and say the bĕrakha after it, or say ʾĂsher yaṣar, and then say Tĕfillath HaDerekh straight away. If you set out in the morning before the morning bĕrakhoth, say it after \"haggomel ḥăsadhim ṭovim lĕ'ammo yisraʾel\" (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 110:6; Kaf HaḤayyim 110:51; 'Odh Yosef Ḥay, Laws of Tĕfillath HaDerekh 4)."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-9",
+          "hebrewLead": "ט. החתימה.",
+          "lead": "9. The Closing Bĕrakha.",
+          "hebrew": "חותמת ״בָּרוּךְ אַתָּה יְיָ שׁוֹמֵעַ תְּפִלָּה״ כבגמרא, וכן פסק מרן, וכן דעת רוב הפוסקים (ברכות כט:; שו״ע או״ח רל:א; כף החיים קי:יג). והפרי חדש פסק כרמב״ם, שאין חותמים אלא במקום סכנה, משום ספק ברכות להקל, ודחה דברי מרן לחתום בתפלת היציאה (פר״ח או״ח קי:ד; וראה לעיל, סדר התפלות, א). ובכתבי יד של הבן איש חי נמצא בה שם מחוק, ונמצא בהם גם שחותם בשם (עוד יוסף חי, דיני תפלת הדרך א, בשם ״שפתי צדיקים״ ו״מעשה נסים״). ובסידור הרב קאפח נדפס ״בָּרוּךְ שׁוֹמֵעַ תְּפִלָּה״. לפיכך ״אַתָּה יְיָ״ בסוגריים. ואינה פותחת בברוך, שאינה אלא תפלה (ב״י או״ח קי, בשם תוספות פסחים קד.; כף החיים קי:נ).",
+          "translation": "It closes with \"barukh ʾatta Adhonay shomea' tĕfilla\", as in the Talmud; so Maran rules, and so most authorities hold (Bĕrakhoth 29b; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 230:1; Kaf HaḤayyim 110:13). The Pĕri Ḥadhash rules like the Rambam, that it closes with a bĕrakha only in a place of danger — since where a bĕrakha is in doubt we take the lenient course — and rejects Maran's ruling to close the prayer for leaving a city with one (Pĕri Ḥadhash, ʾOraḥ Ḥayyim 110:4; see also above, Which Prayer When, 1). In the Ben ʾIsh Ḥay's manuscripts, the Name in it is found crossed out, and the same manuscripts also show it closing with the Name ('Odh Yosef Ḥay, Laws of Tĕfillath HaDerekh 1, citing \"Sifthe Ṣaddiqim\" and \"Ma'ăse Nissim\"). Rabbi Qafih's siddur prints \"barukh shomea' tĕfilla\". That is why \"ʾatta Adhonay\" is in brackets. It does not open with \"barukh\", since it is only a prayer (Beth Yosef, ʾOraḥ Ḥayyim 110, citing Tosafoth on Pĕsaḥim 104a; Kaf HaḤayyim 110:50)."
+        },
+        {
+          "type": "rubric",
+          "id": "haderekh-cue",
+          "hebrew": "היוצא לדרך, אחר שיצא מן העיר והחזיק בדרך, אומר:",
+          "translation": "Once you have left town and are on your way, say:"
+        },
+        {
+          "type": "text",
+          "id": "haderekh-text",
+          "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ, שֶׁתּוֹלִיכֵנוּ לְשָׁלוֹם וְתַצְעִידֵנוּ לְשָׁלוֹם וְתִסְמְכֵנוּ לְשָׁלוֹם, וְתַצִּילֵנוּ מִכַּף כָּל־אוֹיֵב וְאוֹרֵב בַּדֶּרֶךְ, וְתִשְׁלַח בְּרָכָה בְּמַעֲשֵׂי יָדֵינוּ, וְתִתְּנֵנוּ לְחֵן לְחֶסֶד וּלְרַחֲמִים בְּעֵינֶיךָ וּבְעֵינֵי כָל־רוֹאֵינוּ. בָּרוּךְ [אַתָּה יְיָ] שׁוֹמֵעַ תְּפִלָּה.",
+          "translation": "May it be Your will, Adhonay our God and God of our forefathers, to lead us in peace, to guide our steps in peace, and to uphold us in peace; to deliver us from the hand of every enemy and lurking foe along the way; to send blessing on the work of our hands; and to grant us grace, kindness and compassion in Your eyes and in the eyes of all who see us. Blessed [are You, Adhonay,] who hears prayer.",
+          "translit": "yĕhi raṣon millĕfanekha Adhonay ʾĕlohenu weʾlohe ʾăvothenu, shettolikhenu lĕshalom wĕthaṣ'idhenu lĕshalom wĕthismĕkhenu lĕshalom, wĕthaṣṣilenu mikkaf kol-ʾoyev wĕʾorev badderekh, wĕthishlaḥ bĕrakha bĕma'ăse yadhenu, wĕthittĕnenu lĕḥen lĕḥesedh ulĕraḥămim bĕ'enekha uvĕ'ene khol-roʾenu. barukh [ʾatta Adhonay] shomea' tĕfilla."
+        }
+      ]
+    },
+    {
+      "id": "pesuqim",
+      "title": "Customary Verses",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "pesuqim-minhag",
+          "hebrewLead": "מנהג.",
+          "lead": "Custom.",
+          "hebrew": "נהגו לומר אחר תפלת הדרך פסוקים מענין הדרך, ואינם מעיקר הדין (כף החיים קי:לט; עוד יוסף חי).",
+          "translation": "The custom is to say verses about the road after Tĕfillath HaDerekh; they aren't required by the law itself (Kaf HaḤayyim 110:39; 'Odh Yosef Ḥay)."
+        },
+        {
+          "type": "text",
+          "id": "pesuq-tehillim-91-11",
+          "hebrew": "כִּ֣י מַ֭לְאָכָיו יְצַוֶּה־לָּ֑ךְ לִ֝שְׁמׇרְךָ֗ בְּכׇל־דְּרָכֶֽיךָ׃",
+          "translation": "For He will charge His messengers concerning you, to guard you in all your ways.",
+          "translit": "ki malʾakhaw yĕṣawweh-lakh lishmorkha bĕkhol-dhĕrakhekha."
+        },
+        {
+          "type": "text",
+          "id": "pesuq-tehillim-121-8",
+          "hebrew": "יְיָ֗ יִשְׁמׇר־צֵאתְךָ֥ וּבוֹאֶ֑ךָ מֵ֝עַתָּ֗ה וְעַד־עוֹלָֽם׃",
+          "translation": "Adhonay will guard your going out and your coming in, from now and forever.",
+          "translit": "Adhonay yishmor-ṣeʾthĕkha uvoʾekha me'atta wĕ'adh-'olam."
+        },
+        {
+          "type": "text",
+          "id": "pesuq-bereshith-32-2",
+          "hebrew": "וְיַעֲקֹ֖ב הָלַ֣ךְ לְדַרְכּ֑וֹ וַיִּפְגְּעוּ־ב֖וֹ מַלְאֲכֵ֥י אֱלֹהִֽים׃ וַיֹּ֤אמֶר יַעֲקֹב֙ כַּאֲשֶׁ֣ר רָאָ֔ם מַחֲנֵ֥ה אֱלֹהִ֖ים זֶ֑ה וַיִּקְרָ֛א שֵֽׁם־הַמָּק֥וֹם הַה֖וּא מַֽחֲנָֽיִם׃",
+          "translation": "Jacob went on his way, and messengers of God came to meet him. When Jacob saw them, he said, \"This is the camp of God\"; and he named that place Mahanaim.",
+          "translit": "wĕya'ăqov halakh lĕdharko wayyifgĕ'u-vo malʾăkhe ʾĕlohim. wayyoʾmer ya'ăqov kaʾăsher raʾam maḥăneh ʾĕlohim zeh wayyiqraʾ shem-hammaqom hahuʾ maḥănayīm."
+        },
+        {
+          "type": "text",
+          "id": "pesuq-shemoth-23-20",
+          "hebrew": "הִנֵּ֨ה אָנֹכִ֜י שֹׁלֵ֤חַ מַלְאָךְ֙ לְפָנֶ֔יךָ לִשְׁמׇרְךָ֖ בַּדָּ֑רֶךְ וְלַהֲבִ֣יאֲךָ֔ אֶל־הַמָּק֖וֹם אֲשֶׁ֥ר הֲכִנֹֽתִי׃",
+          "translation": "See, I am sending a messenger before you, to guard you on the way and to bring you to the place that I have prepared.",
+          "translit": "hinneh ʾanokhi sholeaḥ malʾakh lĕfanekha lishmorkha baddarekh wĕlahăviʾăkha ʾel-hammaqom ʾăsher hăkhinothi."
+        }
+      ]
+    },
+    {
+      "id": "kerakh",
+      "title": "Entering and Leaving a City",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "kerakh-1",
+          "hebrewLead": "א. בקשה והודאה.",
+          "lead": "1. Request and Thanks.",
+          "hebrew": "הנכנס לכרך מבקש בכניסתו, ומודה אחר שנכנס בשלום. ובצאתו מבקש, ומודה אחר שיצא בשלום, כנוסח להלן. והכלל: יתפלל אדם על העתיד לבוא ויודה על מה שעבר (ברכות ס.; רמב״ם ברכות י:כה–כו; שו״ע או״ח רל:א).",
+          "translation": "When you enter a city, make a request as you go in, and give thanks once you are safely inside. When you leave, make a request, and give thanks once you are safely out, in the words below. The principle: pray about what is still to come, and give thanks for what has passed (Bĕrakhoth 60a; Rambam, Bĕrakhoth 10:25–26; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 230:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "kerakh-2",
+          "hebrewLead": "ב. בלא חתימה.",
+          "lead": "2. No Closing Bĕrakha.",
+          "hebrew": "תפלות אלו אינן חותמות (רמב״ם ברכות י:כה). ולדעת מרן, היוצא בתחלת דרכו מכרך שדר בו או שלן בו, חותם בהודאת היציאה ויוצא בה ידי תפלת הדרך (ראה לעיל, סדר התפלות, ג).",
+          "translation": "These prayers don't close with a bĕrakha (Rambam, Bĕrakhoth 10:25). In Maran's view, if you are starting your journey from a city where you live or spent the night, close the thanksgiving for leaving with one, and it fulfills Tĕfillath HaDerekh (see above, Which Prayer When, 3)."
+        },
+        {
+          "type": "rubric",
+          "id": "kerakh-3",
+          "hebrewLead": "ג. הנוסח.",
+          "lead": "3. The Wording.",
+          "hebrew": "כנוסח הרמב״ם שבסידור הרב קאפח, שהביאו מתכלאל קדמונים, שבזי ומהרי״ץ (רמב״ם ברכות י:כה), ובלשון יחיד כבגמרא. וסדר ״וְתַסְמִיכֵנִי וְתַצְעִידֵנִי״ כבגמרא (ברכות ס.), ובדפוסי הרמב״ם ״וְתַצְעִידֵנִי״ קודם. ובסידור הרב קאפח ״בְּשָׁלוֹם״ בשני המקומות שבסוף התפלה, ובגמרא ובפוסקים גרסו ״לְשָׁלוֹם״ (כף החיים רל:ו).",
+          "translation": "The wording is the Rambam's, as given in Rabbi Qafih's siddur, which takes it from early Tiklalim (Yemenite prayer books), Shabazi and Maharitz (Rambam, Bĕrakhoth 10:25), and is in the singular as in the Talmud. The order \"wĕthasmikheni wĕthaṣ'idheni\" follows the Talmud (Bĕrakhoth 60a); printed editions of the Rambam put \"wĕthaṣ'idheni\" first. Rabbi Qafih's siddur has \"bĕshalom\" in both places at the end of the prayer, where the Talmud and the authorities read \"lĕshalom\" (Kaf HaḤayyim 230:6)."
+        },
+        {
+          "type": "rubric",
+          "id": "kerakh-cue-enter",
+          "hebrew": "הנכנס לכרך אומר:",
+          "translation": "On entering a city, say:"
+        },
+        {
+          "type": "text",
+          "id": "kerakh-enter-request",
+          "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי שֶׁתַּכְנִיסֵנִי לִכְרַךְ זֶה לְשָׁלוֹם.",
+          "translation": "May it be Your will, Adhonay my God, to bring me into this city in peace.",
+          "translit": "yĕhi raṣon millĕfanekha Adhonay ʾĕlohay shettakhniseni likhrakh zeh lĕshalom."
+        },
+        {
+          "type": "rubric",
+          "id": "kerakh-cue-entered",
+          "hebrew": "נכנס בשלום אומר:",
+          "translation": "Once you are safely inside, say:"
+        },
+        {
+          "type": "text",
+          "id": "kerakh-enter-thanks",
+          "hebrew": "מוֹדֶה אֲנִי לְפָנֶיךָ יְיָ אֱלֹהַי שֶׁהִכְנַסְתַּנִי לִכְרַךְ זֶה לְשָׁלוֹם.",
+          "translation": "I give thanks before You, Adhonay my God, that You have brought me into this city in peace.",
+          "translit": "modheh ʾăni lĕfanekha Adhonay ʾĕlohay shehikhnastani likhrakh zeh lĕshalom."
+        },
+        {
+          "type": "rubric",
+          "id": "kerakh-cue-leave",
+          "hebrew": "ביקש לצאת אומר:",
+          "translation": "When you are about to leave, say:"
+        },
+        {
+          "type": "text",
+          "id": "kerakh-leave-request",
+          "hebrew": "יְהִי רָצוֹן מִלְּפָנֶיךָ יְיָ אֱלֹהַי שֶׁתּוֹצִיאֵנִי מִכְּרַךְ זֶה לְשָׁלוֹם.",
+          "translation": "May it be Your will, Adhonay my God, to bring me out of this city in peace.",
+          "translit": "yĕhi raṣon millĕfanekha Adhonay ʾĕlohay shettoṣiʾeni mikkĕrakh zeh lĕshalom."
+        },
+        {
+          "type": "rubric",
+          "id": "kerakh-cue-left",
+          "hebrew": "יצא בשלום אומר:",
+          "translation": "Once you are safely out, say:"
+        },
+        {
+          "type": "text",
+          "id": "kerakh-leave-thanks",
+          "hebrew": "מוֹדֶה אֲנִי לְפָנֶיךָ יְיָ אֱלֹהַי שֶׁהוֹצֵאתַנִי מִכְּרַךְ זֶה לְשָׁלוֹם, וּכְשֵׁם שֶׁהוֹצֵאתַנִי בְּשָׁלוֹם כֵּן תּוֹלִיכֵנִי בְּשָׁלוֹם וְתַסְמִיכֵנִי לְשָׁלוֹם וְתַצְעִידֵנִי לְשָׁלוֹם, וְתַצִּילֵנִי מִכַּף כָּל־אוֹיֵב וְאוֹרֵב בַּדֶּרֶךְ.",
+          "translation": "I give thanks before You, Adhonay my God, that You have brought me out of this city in peace; and just as You have brought me out in peace, so lead me in peace, uphold me in peace, and guide my steps in peace, and deliver me from the hand of every enemy and lurking foe along the way.",
+          "translit": "modheh ʾăni lĕfanekha Adhonay ʾĕlohay shehoṣeʾthani mikkĕrakh zeh lĕshalom, ukhĕshem shehoṣeʾthani bĕshalom ken tolikheni bĕshalom wĕthasmikheni lĕshalom wĕthaṣ'idheni lĕshalom, wĕthaṣṣileni mikkaf kol-ʾoyev wĕʾorev badderekh."
+        },
+        {
+          "type": "rubric",
+          "id": "kerakh-cue-hatima",
+          "hebrew": "ולדעת מרן, היוצא בתחלת דרכו, חותם (שו״ע או״ח רל:א):",
+          "translation": "In Maran's view, if you are just starting your journey, close with (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 230:1):"
+        },
+        {
+          "type": "text",
+          "id": "kerakh-hatima",
+          "hebrew": "בָּרוּךְ [אַתָּה יְיָ] שׁוֹמֵעַ תְּפִלָּה.",
+          "translation": "Blessed [are You, Adhonay,] who hears prayer.",
+          "translit": "barukh [ʾatta Adhonay] shomea' tĕfilla."
+        }
+      ]
+    }
+  ]
+}

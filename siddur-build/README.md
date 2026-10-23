@@ -180,6 +180,14 @@ whitespace collapsed to one space. The saved `hebrew` field is untouched.
 Add another cantillation mark here if a future chapter needs one; nothing
 else needs to change.
 
+Ordinary punctuation has a related library bug: a maqaf compound touching any
+non-Hebrew character (`.` `,` `;` `:` brackets, parentheses, em-dash) loses
+every dagesh in its second word — `כָל־רוֹאֵינוּ.` came out `khol-roʾenw.`,
+`הַזְּמַנִּים` lost its doubling. `generate.mjs` therefore splits each `hebrew`
+string on punctuation and transliterates only the Hebrew between, passing the
+punctuation through as-is. ASCII `"` is left out of the split, since it
+stands in for gershayim inside abbreviations.
+
 ## Gender-variant inline labels
 
 Some liturgy has a short instructional label marking where the text differs
@@ -577,6 +585,22 @@ approved. ("Batch" numbers below refer to the 2026-10 retranslation passes.)
   "Sephardic" and "Ashkenazi" as English words; Gaʾon (Rav Hai Gaʾon), but
   "the Vilna Gaon"; "ibn Ezra"; Pesaḥ in rubrics too; 'ăliyya / 'ăliyyoth,
   hafṭara / hafṭaroth, parashiyyoth, sidhraʾ; Nĕviʾim, Kĕthuvim, Mishna.
+- **מַלְאָךְ = messenger**, never "angel" ("His messengers", "the messenger
+  of Adhonay", "the ministering messengers", "the messenger who redeems").
+  Other heavenly beings keep "angels": אֶרְאֵלֵי (Sĕliḥoth) and Aramaic
+  עִירִין (Yah Ribbon) aren't מַלְאָךְ.
+- **Tĕfillath HaDerekh** — the prayer itself, the city (kĕrakh) requests and
+  thanksgivings, Psalm 91:11, Genesis 32:2–3 and Exodus 23:20 are settled as
+  they stand in `data/siddur/blessings/tefillath-haderekh.json`. Copy from
+  there. Fixed renderings: לְשָׁלוֹם in recited text = "in peace" (the
+  bĕshalom/lĕshalom distinction is explained in rubrics, "go toward peace");
+  תַּצְעִידֵנוּ = guide our steps; תִּסְמְכֵנוּ = uphold us; אוֹיֵב וְאוֹרֵב = "every
+  enemy and lurking foe"; שׁוֹמֵעַ תְּפִלָּה = "who hears prayer"; לְוָיָה =
+  accompanying (lĕwaya); פַּרְסָה = parsa; כְּרַךְ = city (kĕrakh); Mahanaim.
+  Authorities: Maran, Beth Yosef, Ṭaz, Maghen ʾAvraham, Mishna Bĕrura, Pĕri
+  Ḥadhash, Kaf HaḤayyim, 'Odh Yosef Ḥay, Kol Bo, Ḥizzĕquni, Darkhe Moshe,
+  "Moram's gloss"; Rabbi Qafih, Shabazi, Maharitz, Tiklalim (Yemenite prayer
+  books); Talmudic ʾAbbaye in the scheme.
 
 ## Hebrew to re-check against the source
 
