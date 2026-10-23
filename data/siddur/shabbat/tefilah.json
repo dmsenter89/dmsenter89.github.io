@@ -123,7 +123,14 @@
               "itemIds": [
                 "avodah",
                 "modim",
-                "sim-shalom"
+                "sim-shalom",
+                "yihyu-leratzon",
+                "elohai-netzor",
+                "tefilat-rav-note",
+                "tefilat-rav",
+                "yihyu-leratzon-closing",
+                "oseh-shalom",
+                "yehi-ratzon-mikdash"
               ]
             }
           ]
@@ -212,7 +219,14 @@
               "itemIds": [
                 "avodah",
                 "modim",
-                "sim-shalom"
+                "sim-shalom",
+                "yihyu-leratzon",
+                "elohai-netzor",
+                "tefilat-rav-note",
+                "tefilat-rav",
+                "yihyu-leratzon-closing",
+                "oseh-shalom",
+                "yehi-ratzon-mikdash"
               ]
             }
           ]
