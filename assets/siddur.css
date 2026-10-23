@@ -607,7 +607,9 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
   color: var(--siddur-muted);
 }
 
-.siddur-zemanim-controls input {
+.siddur-zemanim-controls input,
+.siddur-zemanim-controls select,
+.siddur-zemanim-controls button {
   border: 1px solid var(--siddur-border);
   background: var(--siddur-bg);
   color: var(--siddur-fg);
@@ -616,6 +618,8 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
   font-size: 1rem;
   max-width: 9.5rem;
 }
+
+.siddur-zemanim-controls button { align-self: flex-end; cursor: pointer; }
 
 .siddur-zemanim-dial {
   display: block;

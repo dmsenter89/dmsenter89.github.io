@@ -9,7 +9,10 @@
   <label>Date <input type="date" id="zemanim-date"></label>
   <label>Latitude <input type="number" id="zemanim-lat" min="-90" max="90" step="any" inputmode="decimal"></label>
   <label>Longitude <input type="number" id="zemanim-lng" min="-180" max="180" step="any" inputmode="decimal"></label>
+  <label>Time zone <select id="zemanim-tz"></select></label>
+  <button type="button" id="zemanim-locate">Use my location</button>
 </div>
+<p class="siddur-table-note" id="zemanim-hebdate" lang="he" dir="rtl"></p>
 <p class="siddur-table-note" id="zemanim-status" role="status"></p>
 
 <svg id="zemanim-dial" class="siddur-zemanim-dial" viewBox="-165 -147 330 294" role="img" aria-label="Dial of the halakhic day: daytime across the top half, night across the bottom"></svg>
@@ -22,12 +25,13 @@
   </table>
 </div>
 
-<p class="siddur-table-note">Sea-level sunrise and sunset, accurate to about a minute; latest times are rounded down and earliest times up. On the dial each half is twelve proportional hours. North and east are positive. Times are shown in this device's time zone.</p>
+<p class="siddur-table-note">Sea-level sunrise and sunset, accurate to about a minute; latest times are rounded down and earliest times up. On the dial each half is twelve proportional hours. North and east are positive. Times are shown in the selected time zone, which follows the coordinates as you type them, or this device when your location is used.</p>
 
 <p class="siddur-table-note">Proportional hours are measured from sunrise to sunset, following the Gra. The 72 minutes before sunrise follow the Rambam's Pĕrush Hammishna, Bĕrakhoth 1:1; the 20 minutes after sunset follow Hilkhoth Tĕrumoth 7:2. The dial always uses these two.</p>
 
 <p class="siddur-table-note" id="zemanim-alt-note" hidden>Alternative times use the sun's depression below the horizon. For dawn, 16.1° matches 72 minutes at the equinox in Jerusalem and 15.08° the average over the year. For nightfall, 4.15° matches 18 minutes on the longest day in Jerusalem, 4.43° the average over the year, and 4.66° 18 minutes at the equinox, following the Gra. The 35 minutes follow R. Yosef Qafiḥ.</p>
 
+<script src="{{ (resources.Get "tz-lookup.js" | fingerprint).RelPermalink }}"></script>
 <script>{{ (resources.Get "zemanim.js" | minify).Content | safeJS }}</script>
 
 {{ end }}

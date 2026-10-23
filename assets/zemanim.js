@@ -59,6 +59,12 @@
       .map(function (k) { return k[1]; });
   }
 
+  // Hebrew date of the civil day y-m-d (its daytime; it turns at sunset),
+  // from the browser's own Hebrew calendar.
+  var HEB = typeof Intl !== 'undefined' && new Intl.DateTimeFormat('he-u-ca-hebrew',
+    { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' });
+  function hebDate(y, m, d) { return HEB.format(new Date(Date.UTC(y, m - 1, d))); }
+
   function roundMin(ms, mode) { return Math[['floor', 'round', 'ceil'][mode + 1]](ms / 6e4) * 6e4; }
 
   // The dial: sunrise at 0 (left), clockwise through Ḥăṣoth at 90 (top) and
@@ -122,6 +128,8 @@
     assert.strictEqual(D.marks.length, 12);
     assert.strictEqual(D.marks[10][0], z[0][0]);
     assert.strictEqual(dial(2026, 6, 21, 80, 0), null);
+    assert.strictEqual(hebDate(2026, 10, 22), '11 בחשוון 5787');
+    assert.strictEqual(hebDate(2026, 12, 32), hebDate(2027, 1, 1));
     console.log('zemanim ok');
     return;
   }
@@ -134,7 +142,19 @@
   var svg = document.getElementById('zemanim-dial');
   var altInput = document.getElementById('zemanim-alt');
   var altNote = document.getElementById('zemanim-alt-note');
-  var KEY = 'siddur-zemanim-loc', ALT_KEY = 'siddur-zemanim-alt';
+  var hebEl = document.getElementById('zemanim-hebdate');
+  var tzInput = document.getElementById('zemanim-tz');
+  var KEY = 'siddur-zemanim-loc', ALT_KEY = 'siddur-zemanim-alt', TZ_KEY = 'siddur-zemanim-tz';
+  var DEVICE_TZ = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  (Intl.supportedValuesOf ? Intl.supportedValuesOf('timeZone') : [])
+    .forEach(function (z) { tzInput.add(new Option(z.replace(/_/g, ' '), z)); });
+  // Selects a zone, adding it first if the browser's list lacks it (tz-lookup
+  // gives Etc/GMT±n over open sea).
+  function setZone(z) {
+    if (![].some.call(tzInput.options, function (o) { return o.value === z; })) tzInput.add(new Option(z.replace(/_/g, ' '), z));
+    tzInput.value = z;
+  }
+  setZone(DEVICE_TZ);
   var R = 100, r = 76;
   // Morning golds, a neutral half hour after midday, afternoon ambers,
   // twilight, the two halves of the night, then dawn.
@@ -144,12 +164,10 @@
 
   function fmt(row) {
     return isNaN(row[1]) ? '—' :
-      new Date(roundMin(row[1], row[2])).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+      new Date(roundMin(row[1], row[2])).toLocaleTimeString([], { hour: 'numeric', minute: '2-digit', timeZone: tzInput.value });
   }
-  function today() {
-    var now = new Date();
-    return now.getFullYear() + '-' + ('0' + (now.getMonth() + 1)).slice(-2) + '-' + ('0' + now.getDate()).slice(-2);
-  }
+  // Today's date in the selected zone, as YYYY-MM-DD (the en-CA format).
+  function today() { return new Date().toLocaleDateString('en-CA', { timeZone: tzInput.value }); }
   function pt(a, rad) { return (-rad * Math.cos(a * RAD)).toFixed(2) + ' ' + (-rad * Math.sin(a * RAD)).toFixed(2); }
 
   function center(top, main, bottom) {
@@ -214,8 +232,10 @@
     var lat = parseFloat(latInput.value), lng = parseFloat(lngInput.value);
     var valid = ymd.length === 3 && Math.abs(lat) <= 90 && Math.abs(lng) <= 180;
     tbody.textContent = '';
+    hebEl.innerHTML = ymd.length === 3 && ymd.every(isFinite) ? hebDate(ymd[0], ymd[1], ymd[2]) +
+      '<br>מהשקיעה: ' + hebDate(ymd[0], ymd[1], ymd[2] + 1) : '';
     altNote.hidden = !altInput.checked;
-    try { localStorage.setItem(ALT_KEY, altInput.checked ? '1' : ''); } catch (e) {}
+    try { localStorage.setItem(ALT_KEY, altInput.checked ? '1' : ''); localStorage.setItem(TZ_KEY, tzInput.value); } catch (e) {}
     if (!valid) { current = null; svg.textContent = ''; return; }
     try { localStorage.setItem(KEY, lat + ',' + lng); } catch (e) {}
     zemanim(ymd[0], ymd[1], ymd[2], lat, lng, altInput.checked).forEach(function (row) {
@@ -226,22 +246,36 @@
     drawDial(ymd[0], ymd[1], ymd[2], lat, lng);
   }
 
-  dateInput.value = today();
   try {
     var saved = (localStorage.getItem(KEY) || '').split(',');
     if (saved.length === 2) { latInput.value = saved[0]; lngInput.value = saved[1]; }
     altInput.checked = !!localStorage.getItem(ALT_KEY);
+    if (localStorage.getItem(TZ_KEY)) setZone(localStorage.getItem(TZ_KEY));
   } catch (e) {}
-  [dateInput, latInput, lngInput, altInput].forEach(function (el) { el.addEventListener('input', render); });
+  dateInput.value = today();
+  // Typed coordinates pick their zone (tz-lookup, loaded by the layout); the
+  // menu stays as an override.
+  [latInput, lngInput].forEach(function (el) {
+    el.addEventListener('input', function () {
+      var lat = parseFloat(latInput.value), lng = parseFloat(lngInput.value);
+      if (window.tzlookup && Math.abs(lat) <= 90 && Math.abs(lng) <= 180) setZone(tzlookup(lat, lng));
+    });
+  });
+  [dateInput, latInput, lngInput, altInput, tzInput].forEach(function (el) { el.addEventListener('input', render); });
   render();
 
   function manual() { status.textContent = 'Location unavailable — enter latitude and longitude.'; }
-  if (navigator.geolocation) {
+  function locate() {
+    if (!navigator.geolocation) return manual();
+    status.textContent = 'Finding your location…';
     navigator.geolocation.getCurrentPosition(function (pos) {
       latInput.value = pos.coords.latitude.toFixed(4);
       lngInput.value = pos.coords.longitude.toFixed(4);
-      status.textContent = 'Using your current location.';
+      setZone(DEVICE_TZ);
+      status.textContent = 'Using your current location and time zone.';
       render();
     }, manual, { timeout: 10000, maximumAge: 36e5 });
-  } else manual();
+  }
+  document.getElementById('zemanim-locate').addEventListener('click', locate);
+  locate();
 })();
