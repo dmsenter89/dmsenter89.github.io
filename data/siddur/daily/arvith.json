@@ -101,6 +101,17 @@
     {
       "id": "amidah",
       "title": "'Ămidha",
+      "jumpLinks": {
+        "type": "links",
+        "id": "amidah-jump",
+        "label": "Not a weekday?",
+        "links": [
+          {
+            "href": "/siddur/shabbat/tefilah/#siddur-toggle-kedushat-hayom-arvith",
+            "label": "Shabbat →"
+          }
+        ]
+      },
       "items": [
         {
           "type": "include",

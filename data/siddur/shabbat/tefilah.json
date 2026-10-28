@@ -134,6 +134,25 @@
               ]
             }
           ]
+        },
+        {
+          "type": "links",
+          "id": "amidah-return",
+          "label": "Continue:",
+          "links": [
+            {
+              "href": "/siddur/daily/arvith/#conclusion",
+              "label": "← 'Arvith"
+            },
+            {
+              "href": "/siddur/daily/shahrith/#ashrei",
+              "label": "← Shaḥrith (ʾAshre)"
+            },
+            {
+              "href": "/siddur/daily/minha/#conclusion",
+              "label": "← Minḥa"
+            }
+          ]
         }
       ]
     },
@@ -228,6 +247,17 @@
                 "oseh-shalom",
                 "yehi-ratzon-mikdash"
               ]
+            }
+          ]
+        },
+        {
+          "type": "links",
+          "id": "musaf-return",
+          "label": "Continue:",
+          "links": [
+            {
+              "href": "/siddur/daily/shahrith/#kawe",
+              "label": "← Shaḥrith (Qawweh)"
             }
           ]
         }

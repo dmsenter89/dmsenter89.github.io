@@ -26,7 +26,13 @@
        section whose printed source itself subdivides under further
        headings, e.g. Havu LaAdonai / Lecha Dodi within Kabbalat Shabbat --
        same nested "items" array as expandable/group, plus optional
-       "youtube"/"audio" exactly like a top-level section carries.)
+       "youtube"/"audio" exactly like a top-level section carries.) |
+       "links" (a row of pill-shaped jump links to another page/section,
+       e.g. Shabbat <-> daily -- "label" plus "links", an
+       array of {href, label}. Also usable as a section's "jumpLinks"
+       field (see single.html). An href whose hash is a toggle radio's id,
+       e.g. #siddur-toggle-kedushat-hayom-shahrith, opens with that
+       option selected; see siddur.js.)
        A rubric may carry optional "lead" / "hebrewLead" strings, rendered
        in bold ahead of its translation / Hebrew -- a run-in topic label
        for long halakhic text, e.g. Daily > Halakha.
@@ -96,6 +102,13 @@
   {{- end }}
   {{- range .items }}{{ partial "siddur-item.html" . }}{{ end }}
 </div>
+{{- else if eq .type "links" }}
+<nav class="siddur-item siddur-links" id="{{ .id }}" aria-label="{{ .label }}">
+  <span class="siddur-links-label">{{ .label }}</span>
+  {{- range .links }}
+  <a class="siddur-link-btn" href="{{ .href }}">{{ .label }}</a>
+  {{- end }}
+</nav>
 {{- else if eq .type "hebrew" }}
 <div class="siddur-item siddur-hebrew-only" id="{{ .id }}">
   <p class="siddur-hebrew-static" lang="he" dir="rtl">{{ .hebrew }}</p>

@@ -123,6 +123,14 @@ workflow, the Divine Name normalization convention (and why it's vocalized
 how shared content (e.g. the Shema, reused across chapters) works via
 `type: "include"` items.
 
+Daily ↔ Shabbat navigation (e.g. the daily 'Ămidha's "Not a weekday?
+Shabbat →" pill, and the "Continue:" row back from the Shabbat 'Ămidha) uses
+`type: "links"` items, or a section-level `jumpLinks` field when the
+section's items are `include`d elsewhere. Otherwise the link gets copied
+along with the items and shows up twice. A link to a toggle radio's id
+preselects that toggle option. When adding Yom Ṭov, add a pill to the
+existing rows rather than a new row. Details in `siddur-build/README.md`.
+
 ### Deployment
 
 Pushing to `master` (or `main`) triggers `.github/workflows/hugo.yml`, which builds with Hugo and publishes to GitHub Pages via `actions/deploy-pages`. No manual deployment step is needed. The repository's Pages source must be set to **GitHub Actions** in Settings → Pages.

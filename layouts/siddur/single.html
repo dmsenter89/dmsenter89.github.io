@@ -42,6 +42,10 @@
   {{- with .audio }}
   <audio class="siddur-audio-player" controls preload="none" src="{{ . }}"></audio>
   {{- end }}
+  {{- /* Section-level, not an item, so an "include" of this section's items
+         elsewhere (e.g. Shahrith's Amidah reusing Minha's) doesn't drag
+         along links meant for this page only. */ -}}
+  {{- with .jumpLinks }}{{ partial "siddur-item.html" . }}{{ end }}
   {{ range .items }}{{ partial "siddur-item.html" . }}{{ end }}
 </section>
 {{ end }}

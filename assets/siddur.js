@@ -70,4 +70,15 @@
     });
   });
   syncToggleButtons();
+
+  // A link whose hash names a toggle radio (e.g. #siddur-toggle-kedushat-
+  // hayom-shahrith, from a daily 'Amidah's Shabbat link) selects that option.
+  function selectToggleFromHash() {
+    var el = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (!el || !el.classList.contains('siddur-toggle-group-radio')) return;
+    el.checked = true;
+    el.closest('.siddur-toggle-group').scrollIntoView();
+  }
+  selectToggleFromHash();
+  window.addEventListener('hashchange', selectToggleFromHash);
 })();

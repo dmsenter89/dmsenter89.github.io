@@ -631,3 +631,37 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
 .zem-edge { fill: none; stroke: var(--siddur-border); pointer-events: none; }
 .zem-tick { stroke: var(--siddur-muted); }
 .zem-now { fill: var(--siddur-accent); stroke: var(--siddur-bg); stroke-width: 2; }
+
+/* --- Jump links (e.g. daily 'Amidah <-> Shabbat 'Amidah) --- */
+
+.siddur-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 1rem 0;
+  padding: 0.5rem 0.75rem;
+  border-inline-start: 3px solid var(--siddur-accent);
+  background: var(--siddur-sidebar-bg);
+  border-radius: 0 8px 8px 0;
+}
+
+.siddur-links-label {
+  font-size: 0.85rem;
+  color: var(--siddur-muted);
+  margin-inline-end: 0.2rem;
+}
+
+.siddur-link-btn {
+  border: 1px solid var(--siddur-accent);
+  color: var(--siddur-accent);
+  border-radius: 999px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+.siddur-link-btn:hover {
+  background: var(--siddur-accent);
+  color: #fff;
+}

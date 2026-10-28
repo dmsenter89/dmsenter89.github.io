@@ -139,6 +139,37 @@ over the content tree.
   is a hard limit, not just a convention — extend the CSS rules in
   `assets/siddur.css` (and the doc comment in
   `layouts/_partials/siddur-item.html`) if a fifth is ever needed.
+- `type: "links"` — a row of pill-shaped jump links to another chapter or
+  section, used to move between a daily service and its Shabbat (later Yom
+  Ṭov) replacement. `label` is the row's lead-in text; `links` is an array
+  of `{href, label}`. Keep the label generic ("Not a weekday?") and let each
+  pill name the occasion ("Shabbat →"), so a new occasion is just another
+  pill. An `href` whose hash is a toggle radio's id
+  (`#siddur-toggle-<toggleId>-<optionId>`, e.g.
+  `/siddur/shabbat/tefilah/#siddur-toggle-kedushat-hayom-shahrith`) opens
+  with that option preselected (`assets/siddur.js`). No `hebrew`, so
+  `generate.mjs` leaves it alone.
+
+  It can sit in a section's `items` like any other item, or in the
+  section-level **`jumpLinks`** field, which renders right under the
+  section heading. Use `jumpLinks` for any link meant only for this page
+  when the section's items get `include`d elsewhere: `include` copies only
+  `items`, so `jumpLinks` stays put. (Shaḥrith's 'Ămidha includes Minḥa's,
+  so an item-level link there showed up twice, once pointing at the wrong
+  service.)
+
+  ```json
+  { "id": "amidah", "title": "'Ămidha",
+    "jumpLinks": { "type": "links", "id": "amidah-jump", "label": "Not a weekday?",
+      "links": [ { "href": "/siddur/shabbat/tefilah/#siddur-toggle-kedushat-hayom-minha", "label": "Shabbat →" } ] },
+    "items": [ ... ] }
+  ```
+
+  Current wiring: each daily 'Ămidha → Shabbat 'Ămidha (matching service);
+  end of Shaḥrith's ʾAshre → Shabbat Musaf; after the Shabbat 'Ămidha, a
+  "Continue:" row back to 'Arvith/Minḥa `#conclusion` and Shaḥrith
+  `#ashrei` (Sedher HaYom is skipped on Shabbat); after Musaf → Shaḥrith
+  `#kawe`.
 
 ## Divine Name
 
