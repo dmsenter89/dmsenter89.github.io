@@ -545,12 +545,6 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
 }
 .siddur-pronunciation-list li:last-child { border-bottom: none; }
 
-.siddur-pronunciation-hebrew {
-  font-family: "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
-  font-size: 1.15rem;
-  margin-right: 0.4rem;
-}
-
 /* --- Mobile: off-canvas sidebar --- */
 
 @media (max-width: 768px) {

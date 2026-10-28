@@ -1,186 +1,229 @@
 {
-  "title": "Transliteration",
+  "title": "Pronunciation & Transliteration",
   "tables": [
     {
-      "id": "begedkefet",
-      "title": "Begedkefet Letters (dagesh vs. rafe)",
+      "id": "alphabet",
+      "title": "The Alphabet",
+      "intro": "Where a letter has two values, the first is with a dagesh and the second without (rafe). Following the Talmud (Shabbath 104a), the ordinary forms of נ פ צ are <em>kĕfufa</em> (bent) and their final forms <em>pĕshuṭa</em> (straight); ך follows the same pattern. Open מ is <em>pĕthuḥa</em> and closed ם is <em>sĕthuma</em>.",
       "headers": [
         "Letter",
         "Name",
-        "With Dagesh",
-        "Without Dagesh (Rafe)"
-      ],
-      "hebrewColumn": true,
-      "rows": [
-        [
-          "ב",
-          "Bet",
-          "b",
-          "v"
-        ],
-        [
-          "ג",
-          "Gimel",
-          "g",
-          "gh"
-        ],
-        [
-          "ד",
-          "Dalet",
-          "d",
-          "dh"
-        ],
-        [
-          "כ",
-          "Kaf",
-          "k",
-          "kh"
-        ],
-        [
-          "פ",
-          "Pe",
-          "p",
-          "f"
-        ],
-        [
-          "ת",
-          "Tav",
-          "t",
-          "th"
-        ]
-      ]
-    },
-    {
-      "id": "other-consonants",
-      "title": "Other Consonants",
-      "headers": [
-        "Letter",
-        "Name",
-        "Transliteration"
+        "Write",
+        "Say it like"
       ],
       "hebrewColumn": true,
       "rows": [
         [
           "א",
-          "Alef",
-          "ʾ"
+          "ʾAlef",
+          "ʾ",
+          "the catch in your throat in “uh-oh”"
+        ],
+        [
+          "ב",
+          "Be",
+          "b / v",
+          "“b” in <em>boy</em> / “v” in <em>victory</em>"
+        ],
+        [
+          "ג",
+          "Gimal",
+          "g / gh",
+          "“g” in <em>go</em> / Arabic غ (ghayn), a voiced gargle from the back of the throat"
+        ],
+        [
+          "ד",
+          "Dal",
+          "d / dh",
+          "“d” in <em>day</em> / “th” in <em>this</em>"
         ],
         [
           "ה",
           "He",
-          "h"
+          "h",
+          "“h” in <em>house</em>"
         ],
         [
           "ו",
-          "Vav",
-          "w"
+          "Waw",
+          "w",
+          "“w” in <em>water</em>"
         ],
         [
           "ז",
-          "Zayin",
-          "z"
+          "Zan",
+          "z",
+          "“z” in <em>zoo</em>"
         ],
         [
           "ח",
-          "Het",
-          "ḥ"
+          "Ḥeth",
+          "ḥ",
+          "Arabic ح (ḥāʾ): the breath you use to fog up glasses"
         ],
         [
           "ט",
-          "Tet",
-          "ṭ"
+          "Ṭeth",
+          "ṭ",
+          "Arabic ط (ṭāʾ): a “t” with the tongue tensed and pulled back"
         ],
         [
           "י",
           "Yod",
-          "y"
+          "y",
+          "“y” in <em>yes</em>"
+        ],
+        [
+          "כ",
+          "Kaf",
+          "k / kh",
+          "“k” in <em>kite</em> / Arabic خ (khāʾ), like “ch” in German <em>Bach</em>"
+        ],
+        [
+          "ך",
+          "Kaf pĕshuṭa",
+          "kh",
+          "final form"
         ],
         [
           "ל",
-          "Lamed",
-          "l"
+          "Lamad",
+          "l",
+          "“l” in <em>lamp</em>"
         ],
         [
           "מ",
-          "Mem",
-          "m"
+          "Mim pĕthuḥa",
+          "m",
+          "“m” in <em>mother</em>"
+        ],
+        [
+          "ם",
+          "Mim sĕthuma",
+          "m",
+          "final form"
         ],
         [
           "נ",
-          "Nun",
-          "n"
+          "Nun kĕfufa",
+          "n",
+          "“n” in <em>nice</em>"
+        ],
+        [
+          "ן",
+          "Nun pĕshuṭa",
+          "n",
+          "final form"
         ],
         [
           "ס",
-          "Samekh",
-          "s"
+          "Sĕmmakh",
+          "s",
+          "“s” in <em>sun</em>"
         ],
         [
           "ע",
-          "Ayin",
-          "'"
+          "'An",
+          "'",
+          "Arabic ع (ʿayn): a voiced tightening deep in the throat"
+        ],
+        [
+          "פ",
+          "Pe kĕfufa",
+          "p / f",
+          "“p” in <em>pot</em> / “f” in <em>fun</em>"
+        ],
+        [
+          "ף",
+          "Pe pĕshuṭa",
+          "f",
+          "final form"
         ],
         [
           "צ",
-          "Tsadi",
-          "ṣ"
+          "Ṣad kĕfufa",
+          "ṣ",
+          "Arabic ص (ṣād): a tensed “s”, tongue pulled back"
+        ],
+        [
+          "ץ",
+          "Ṣad pĕshuṭa",
+          "ṣ",
+          "final form"
         ],
         [
           "ק",
           "Qof",
-          "q"
+          "q",
+          "Arabic ق (qāf): a “k” made further back in the throat"
         ],
         [
           "ר",
-          "Resh",
-          "r"
+          "Rosh",
+          "r",
+          "a tongue-tip r, tapped or trilled, as in Spanish <em>pero</em> / <em>perro</em>"
         ],
         [
           "שׁ",
           "Shin",
-          "sh"
+          "sh",
+          "“sh” in <em>shoe</em>"
         ],
         [
           "שׂ",
           "Sin",
-          "s"
+          "s",
+          "“s” in <em>sun</em>"
+        ],
+        [
+          "ת",
+          "Ta",
+          "t / th",
+          "“t” in <em>top</em> / “th” in <em>think</em>"
         ]
       ]
     },
     {
-      "id": "finals",
-      "title": "Final Letter Forms",
+      "id": "groups",
+      "title": "The Five Groups",
+      "intro": "Tradition sorts the letters by where in the mouth they are made: אחה״ע גיכ״ק דטלנ״ת זסשר״ץ בומ״ף (Ibn Ezra on Shemoth 3:15). It is the traditional classification, not modern phonetics, but it explains why ח and ע stay throat sounds and why ו belongs with the lips.",
       "headers": [
-        "Letter",
-        "Name",
-        "Transliteration"
+        "Letters",
+        "Group",
+        "Write",
+        "Where"
       ],
       "hebrewColumn": true,
       "rows": [
         [
-          "ך",
-          "Final Kaf",
-          "kh"
+          "אחה״ע",
+          "Throat <span lang=\"he\">(אותיות הגרון)</span>",
+          "ʾ ḥ h '",
+          "the throat"
         ],
         [
-          "ם",
-          "Final Mem",
-          "m"
+          "גיכ״ק",
+          "Palate <span lang=\"he\">(אותיות החיך)</span>",
+          "g gh y k kh q",
+          "back of the tongue against the palate"
         ],
         [
-          "ן",
-          "Final Nun",
-          "n"
+          "דטלנ״ת",
+          "Tongue <span lang=\"he\">(אותיות הלשון)</span>",
+          "d dh ṭ l n t th",
+          "the tongue tip"
         ],
         [
-          "ף",
-          "Final Pe",
-          "f"
+          "זסשר״ץ",
+          "Teeth <span lang=\"he\">(אותיות השיניים)</span>",
+          "z s sh r ṣ",
+          "the teeth, with a hissing or whistling sound"
         ],
         [
-          "ץ",
-          "Final Tsadi",
-          "ṣ"
+          "בומ״ף",
+          "Lips <span lang=\"he\">(אותיות השפה)</span>",
+          "b v w m p f",
+          "the lips"
         ]
       ]
     },
@@ -188,183 +231,160 @@
       "id": "vowels",
       "title": "Vowels",
       "headers": [
-        "Niqqud",
+        "Sign",
         "Name",
-        "Transliteration"
+        "Write",
+        "Say it like"
       ],
       "hebrewColumn": true,
       "rows": [
         [
-          "ְ",
-          "Sheva (vocal)",
-          "ĕ"
+          "ַ",
+          "Pataḥ",
+          "a",
+          "“a” in <em>father</em>"
         ],
         [
-          "ֱ",
-          "Hataf Segol",
-          "ĕ"
+          "ָ",
+          "Qamaṣ",
+          "a",
+          "“a” in <em>father</em>"
         ],
         [
-          "ֲ",
-          "Hataf Patah",
-          "ă"
-        ],
-        [
-          "ֳ",
-          "Hataf Qamats",
-          "ŏ"
-        ],
-        [
-          "ִ",
-          "Hiriq",
-          "i"
-        ],
-        [
-          "ִי",
-          "Hiriq + Yod",
-          "i"
+          "ָה",
+          "Qamaṣ + He (word-final)",
+          "a",
+          "“a” in <em>father</em>"
         ],
         [
           "ֵ",
-          "Tsere",
-          "e"
+          "Ṣere",
+          "e",
+          "“e” in <em>bed</em>"
         ],
         [
           "ֵי",
-          "Tsere + Yod",
-          "e"
+          "Ṣere + Yod",
+          "e",
+          "“e” in <em>bed</em>"
         ],
         [
           "ֶ",
           "Segol",
-          "e"
+          "e",
+          "“e” in <em>bed</em>"
         ],
         [
           "ֶי",
           "Segol + Yod",
-          "e"
+          "e",
+          "“e” in <em>bed</em>"
         ],
         [
-          "ַ",
-          "Patah",
-          "a"
+          "ִ",
+          "Ḥireq",
+          "i / ī",
+          "“ee” in <em>see</em>"
         ],
         [
-          "ָ",
-          "Qamats",
-          "a"
-        ],
-        [
-          "ָה",
-          "Qamats + He (word-final)",
-          "a"
-        ],
-        [
-          "ֹ",
-          "Holam",
-          "o"
+          "ִי",
+          "Ḥireq + Yod",
+          "i",
+          "“ee” in <em>see</em>"
         ],
         [
           "ֹ",
-          "Holam Haser (no vav)",
-          "o"
+          "Ḥolam",
+          "o",
+          "“o” in <em>more</em>"
         ],
         [
           "וֹ",
-          "Holam + Vav",
-          "o"
+          "Ḥolam + Waw",
+          "o",
+          "“o” in <em>more</em>"
+        ],
+        [
+          "ָ",
+          "Qamaṣ qaṭan",
+          "o",
+          "“o” in <em>more</em>"
         ],
         [
           "ֻ",
-          "Qubuts",
-          "u"
+          "Qibbuṣ",
+          "u",
+          "“oo” in <em>food</em>"
         ],
         [
           "וּ",
           "Shureq",
-          "u"
+          "u",
+          "“oo” in <em>food</em>"
+        ],
+        [
+          "ְ",
+          "Shĕwa (vocal)",
+          "ĕ",
+          "a very short “e”"
+        ],
+        [
+          "ֱ",
+          "Ḥaṭaf Segol",
+          "ĕ",
+          "a very short “e”"
+        ],
+        [
+          "ֲ",
+          "Ḥaṭaf Pataḥ",
+          "ă",
+          "a very short “a”"
+        ],
+        [
+          "ֳ",
+          "Ḥaṭaf Qamaṣ",
+          "ŏ",
+          "a very short “o”"
         ],
         [
           "ָיו",
-          "Qamats + Yod + Vav (3ms suffix)",
-          "aw"
+          "Qamaṣ + Yod + Waw (“his”)",
+          "aw",
+          "“ow” in <em>how</em>"
         ]
       ]
     }
   ],
-  "note": "The Divine Name (י״י / יְיָ) is a special case handled outside this schema -- it always renders as “Adhonay”, regardless of its vocalization in the source text. See normalize-divine-name.mjs.",
-  "pronunciation": [
+  "notes": [
     {
-      "hebrew": "א",
-      "name": "Alef",
-      "symbol": "ʾ",
-      "description": "A glottal stop — the light catch in the throat before “uh-oh,” often barely audible mid-word."
+      "id": "special-cases",
+      "title": "Special Cases",
+      "items": [
+        "<strong>Divine Name.</strong> The Divine Name (י״י / יְיָ) always renders as “Adhonay”, whatever its vocalization in the source text.",
+        "<strong>Qamaṣ qaṭan</strong> is written o: כָּל is <em>kol</em>, חָכְמָה is <em>ḥokhma</em>.",
+        "<strong>Doubled letters.</strong> A dagesh that doubles a letter is written as a doubled letter: שַׁבָּת is <em>shabbath</em>.",
+        "<strong>Mappiq.</strong> A word-final ה with a mappiq is pronounced and written <em>h</em>: אַרְצָהּ is <em>ʾarṣah</em>. Otherwise final ה is silent.",
+        "<strong>Long i.</strong> A ḥireq without a yod is sometimes written <em>ī</em>, where the syllable division treats it as long: שָׁמַיִם is <em>shamayīm</em>, דָּוִד is <em>dawīdh</em>. Say it the same as <em>i</em>.",
+        "<strong>Silent shĕwa</strong> is not written: מַלְכּוּת is <em>malkuth</em>."
+      ]
     },
     {
-      "hebrew": "ג",
-      "name": "Gimel (rafe)",
-      "symbol": "gh",
-      "description": "Arabic غ (ghayn) — no English equivalent, a voiced gargle from the back of the throat."
+      "id": "letter-names",
+      "title": "About the Letter Names",
+      "items": [
+        "The names follow the list Baghdadi teachers used when teaching children the alphabet, as recorded by Jacob Mansour (<em>The Jewish Baghdadi Dialect</em>, 1991). Where a name looks shorter than the school form (Be, Dal, Zan, 'An, Ṣad, Ta), that is the traditional form; the same shortened pattern is described for Yemenite tradition.",
+        "Modern equivalents: ʾAlef = Alef, Be = Bet, Gimal = Gimel, Dal = Dalet, Zan = Zayin, Ḥeth = Het, Ṭeth = Tet, Lamad = Lamed, Mim = Mem, Sĕmmakh = Samekh, 'An = Ayin, Ṣad = Tsadi, Rosh = Resh, Ta = Tav."
+      ]
     },
     {
-      "hebrew": "ד",
-      "name": "Dalet (rafe)",
-      "symbol": "dh",
-      "description": "The “th” in this (voiced)."
-    },
-    {
-      "hebrew": "ו",
-      "name": "Vav",
-      "symbol": "w",
-      "description": "The “w” in water."
-    },
-    {
-      "hebrew": "ח",
-      "name": "Het",
-      "symbol": "ḥ",
-      "description": "Arabic ح (ḥa) — the sound of fogging up your glasses."
-    },
-    {
-      "hebrew": "ט",
-      "name": "Tet",
-      "symbol": "ṭ",
-      "description": "Arabic ط (ṭa) — a “t” with the tongue tensed and pulled back."
-    },
-    {
-      "hebrew": "כ",
-      "name": "Kaf (rafe)",
-      "symbol": "kh",
-      "description": "Arabic خ (kha) — like the German “Bach.”"
-    },
-    {
-      "hebrew": "ע",
-      "name": "Ayin",
-      "symbol": "ʿ",
-      "description": "Arabic ع (ʿayn) — the voiced counterpart to ḥ, a tightening in the throat."
-    },
-    {
-      "hebrew": "צ",
-      "name": "Tsadi",
-      "symbol": "ṣ",
-      "description": "Arabic ص (ṣad) — a tensed “s,” tongue pulled back."
-    },
-    {
-      "hebrew": "ק",
-      "name": "Qof",
-      "symbol": "q",
-      "description": "Arabic ق (qaf) — a voiceless uvular stop, like a deep [k] made further back in the throat."
-    },
-    {
-      "hebrew": "ר",
-      "name": "Resh",
-      "symbol": "r",
-      "description": "trilled r; similar to Spanish."
-    },
-    {
-      "hebrew": "ת",
-      "name": "Tav (rafe)",
-      "symbol": "th",
-      "description": "The “th” in think (voiceless)."
+      "id": "pronunciation-notes",
+      "title": "Notes on Pronunciation",
+      "items": [
+        "<strong>w and th/dh are kept.</strong> Iraqi tradition keeps the classical w for waw and the interdental sounds for rafe dal and rafe ta, which most other communities have lost.",
+        "<strong>Throat letters and emphatics.</strong> ḥ and ' are true throat sounds, and ṭ and ṣ are emphatic, as in Arabic. Ibn Ezra already remarks that ח and ע are “very heavy”, and that someone who did not grow up saying them cannot pronounce them as Arabic speakers do.",
+        "<strong>Qof.</strong> q is a deep stop at the back of the throat, distinct from k.",
+        "<strong>Rosh.</strong> r is made with the tip of the tongue, tapped or trilled, never the French- or Israeli-style r in the back of the throat. That keeps it with the other tongue-and-teeth letters of its group, and apart from gh (rafe gimal), which is the back-of-the-throat sound."
+      ]
     }
   ]
 }

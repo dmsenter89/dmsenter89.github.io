@@ -230,7 +230,7 @@ as any other content file.
 ## Appendix / reference tables
 
 Some pages aren't liturgy at all — they're plain reference tables (Appendix
-> Transliteration, Appendix > Sedher HaMishmara). These use a different
+> Pronunciation & Transliteration, Appendix > Sedher HaMishmara). These use a different
 content shape and a different layout, not the `sections`/`items` schema
 above:
 
@@ -241,12 +241,16 @@ above:
     {
       "id": "table-slug",
       "title": "Table Heading (renders as <h2 id=\"table-slug\">)",
+      "intro": "optional HTML paragraph shown above the table",
       "headers": ["Column 1", "Column 2"],
       "hebrewColumn": true,
       "rows": [["א", "..."], ["ב", "..."]]
     }
   ],
-  "note": "optional italic footnote shown below all tables"
+  "note": "optional italic footnote shown below all tables",
+  "notes": [
+    { "id": "slug", "title": "Heading", "items": ["HTML bullet", "..."] }
+  ]
 }
 ```
 
@@ -257,13 +261,16 @@ path-mirroring way `single.html` does, then hands each table off to
 marks up (`lang="he" dir="rtl"`) each row's first cell as Hebrew; omit it
 for tables with no Hebrew column (e.g. Sedher HaMishmara).
 
-**Appendix > Transliteration is auto-generated, not hand-authored.** Run
+**Appendix > Pronunciation & Transliteration is auto-generated, not
+hand-authored.** Letter names, sound descriptions, and notes live as
+hand-curated prose in the generator; only the "Write" symbols come from
+the schema. Run
 `node generate-transliteration-table.mjs` (no arguments) to regenerate
 `data/siddur/appendix/transliteration.json` straight from `schema.mjs`,
 resolved through the same `new SBL(sephardicSchema)` default-merging that
 `transliterate()` itself does internally — so the reference page can never
 drift from the actual transliteration behavior. Re-run it any time
-`schema.mjs` changes; there is nothing else to update by hand.
+`schema.mjs` changes, or after editing the prose in the generator.
 
 ## Content source
 

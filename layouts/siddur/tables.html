@@ -23,16 +23,11 @@
 <p class="siddur-table-note">{{ . }}</p>
 {{ end }}
 
-{{ with $page.pronunciation }}
-<section class="siddur-table-section" id="pronunciation">
-  <h2>Pronunciation</h2>
+{{ range $page.notes }}
+<section class="siddur-table-section" id="{{ .id }}">
+  <h2>{{ .title }}</h2>
   <ul class="siddur-pronunciation-list">
-    {{ range . }}
-    <li>
-      <span class="siddur-pronunciation-hebrew" lang="he" dir="rtl">{{ .hebrew }}</span>
-      <strong>{{ .name }}</strong> (<code>{{ .symbol }}</code>) — {{ .description }}
-    </li>
-    {{ end }}
+    {{ range .items }}<li>{{ . | safeHTML }}</li>{{ end }}
   </ul>
 </section>
 {{ end }}
