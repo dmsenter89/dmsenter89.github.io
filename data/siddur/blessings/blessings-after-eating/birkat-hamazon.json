@@ -1,225 +1,551 @@
 {
-  "title": "Birkath HaMazon (Abadi)",
+  "title": "Birkath HaMazon",
   "sections": [
     {
-      "id": "birkat-hamazon-abadi",
-      "title": "Birkath HaMazon (Abadi)",
+      "id": "birkat-hamazon-halakha",
+      "title": "Laws of Birkath HaMazon",
       "items": [
         {
-          "type": "text",
-          "id": "hazan",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים, וּמְפַרְנֵס לַכֹּל וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא. בָּרוּךְ אַתָּה יְיָ, הַזָּן אֶת הַכֹּל.",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, who feeds the whole world in His goodness, with grace, with loving-kindness and compassion; who provides for all, and prepares food for all His creatures that He has made. Blessed are You, Adhonay, who feeds all.",
-          "translit": "barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, hazzan ʾeth ha'olam kullo bĕṭuvo bĕḥen bĕḥesedh uvĕraḥămim, umĕfarnes lakkol umekhin mazon lĕkhol bĕriyyothaw ʾăsher baraʾ. barukh ʾatta Adhonay, hazzan ʾeth hakkol."
-        },
-        {
-          "type": "text",
-          "id": "noda",
-          "hebrew": "נֽוֹדֶה לְּךָ, יְיָ אֱלֹהֵינוּ, שֶׁהִנְחַלְתָּ לַאֲבוֹתֵינוּ אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, בְּרִית וְתוֹרָה, [וְעַל שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם].",
-          "translation": "We thank You, Adhonay our God, for giving our forefathers as their heritage a cherished land, good and broad, the covenant and the Torah, [and for bringing us out of the land of Egypt].",
-          "translit": "nodheh lĕkha, Adhonay ʾĕlohenu, shehinḥalta laʾăvothenu ʾereṣ ḥemda ṭova urĕḥava, bĕrith wĕthora, [wĕ'al shehoṣeʾthanu meʾereṣ miṣrayīm]."
-        },
-        {
-          "type": "expandable",
-          "id": "purim-al-hanissim",
-          "label": "Purim — 'Al HanNissim",
-          "items": [
-            {
-              "type": "text",
-              "id": "purim-cue",
-              "hebrew": "וְעַל נִסֶּיךָ שֶׁעָשִׂיתָ לָנוּ בִּימֵי פּוּרִים",
-              "translation": "And for Your miracles, which You worked for us in the days of Purim.",
-              "translit": "wĕ'al nissekha she'asitha lanu bime purim"
-            },
-            {
-              "type": "expandable",
-              "id": "purim-full-toggle",
-              "label": "Full text",
-              "items": [
-                {
-                  "type": "text",
-                  "id": "purim-full",
-                  "hebrew": "וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה. בִּימֵי מָרְדֳּכַי וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלוֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים הֵפַרְתָּ אֶת עֲצָתוֹ וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ וַהֲשֵׁבוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ.",
-                  "translation": "And for the miracles and the rescue, the mighty deeds, the victories and the battles that You worked for our forefathers in those days, at this season. In the days of Mordecai and Esther, in Shushan the capital, when the wicked Haman rose against them, he sought to destroy, to slay and to wipe out all the Jews, young and old, children and women, in a single day, on the thirteenth of the twelfth month, the month of Adar, and to take their goods as plunder. But You, in Your great compassion, brought his counsel to nothing and undid his design, and turned his deed back upon his own head; and they hanged him and his sons upon the gallows.",
-                  "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mordŏkhay wĕʾester bĕshushan habbira kĕshe'amadh 'ălehem haman harasha' biqqesh lĕhashmidh lahărogh ulĕʾabbedh ʾeth kol hayyĕhudhim minna'ar wĕ'adh zaqen ṭaf wĕnashim bĕyom ʾeḥadh bishlosha 'asar lĕḥodhesh shĕnem 'asar huʾ ḥodhesh ʾădhar ushĕlalam lavoz. wĕʾatta bĕraḥămekha harabbim hefarta ʾeth 'ăṣatho wĕqilqalta ʾeth maḥăshavto wahăshevotha lo gĕmulo vĕroʾsho wĕthalu ʾotho wĕʾeth banaw 'al ha'eṣ."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "expandable",
-          "id": "chanukah-al-hanissim",
-          "label": "Ḥănukka — 'Al HanNissim",
-          "items": [
-            {
-              "type": "text",
-              "id": "chanukah-cue",
-              "hebrew": "וְעַל נִסֶּיךָ שֶׁעָשִׂיתָ לָנוּ בִּימֵי הַחַנֻכָּה",
-              "translation": "And for Your miracles, which You worked for us in the days of Ḥănukka.",
-              "translit": "wĕ'al nissekha she'asitha lanu bime haḥanukka"
-            },
-            {
-              "type": "expandable",
-              "id": "chanukah-full-toggle",
-              "label": "Full text",
-              "items": [
-                {
-                  "type": "text",
-                  "id": "chanukah-full",
-                  "hebrew": "וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה. בִּימֵי מַתִּתְיָהוּ בֶּן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנַאי וּבָנָיו כְּשֶׁעָמְדָה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶךָ. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים עָמַדְתָּ לָהֶם בְּעֵת צָרָתָם רַבְתָּ אֶת רִיבָם דַּנְתָּ אֶת דִּינָם נָקַמְתָּ אֶת נִקְמָתָם מָסַרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְקֵי תוֹרָתֶךָ. וּלְךָ עָשִׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶךָ וּלְעַמְּךָ יִשְׂרָאֵל עָשִׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּאוּ בָנֶיךָ לִדְבִיר בֵּיתֶךָ וּפִנּוּ אֶת הֵיכָלֶךָ וְטִהֲרוּ אֶת מִקְדָּשֶׁךָ וְהִדְלִיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶׁךָ וְקָבְעוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל.",
-                  "translation": "And for the miracles and the rescue, the mighty deeds, the victories and the battles that You worked for our forefathers in those days, at this season. In the days of Mattathias son of Johanan, the High Priest, the Hasmonean, and his sons, when the wicked kingdom of Greece rose against Your people Israel, to make them forget Your Torah and to turn them from the statutes of Your will. But You, in Your great compassion, stood by them in their time of trouble: You pleaded their cause, You judged their claim, You avenged their wrong. You gave the mighty into the hands of the weak, the many into the hands of the few, the impure into the hands of the pure, the wicked into the hands of the righteous, and the insolent into the hands of those who labor in Your Torah. For Yourself You made a great and holy name in Your world, and for Your people Israel You brought about a great victory and rescue, as on this day. And afterward Your children came to the shrine of Your house; they cleared Your Temple and purified Your sanctuary, kindled lights in Your holy courts, and set these eight days of Ḥănukka for giving thanks and praise to Your great name.",
-                  "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mattithyahu ben yoḥanan kohen gadhol ḥashmonaʾy uvanaw kĕshe'amĕdha malkhuth yawan harĕsha'a 'al 'ammĕkha yisraʾel lĕhashkiḥam torathekha ulĕha'ăviram meḥuqqe rĕṣonekha. wĕʾatta bĕraḥămekha harabbim 'amadhta lahem bĕ'eth ṣaratham ravta ʾeth rivam danta ʾeth dinam naqamta ʾeth niqmatham masarta ghibborim bĕyadh ḥallashim wĕrabbim bĕyadh mĕ'aṭṭim uṭĕmeʾim bĕyadh ṭĕhorim urĕsha'im bĕyadh ṣaddiqim wĕzedhim bĕyadh 'osĕqe thorathekha. ulĕkha 'asitha shem gadhol wĕqadhosh bĕ'olamekha ulĕ'ammĕkha yisraʾel 'asitha tĕshu'a ghĕdhola ufurqan kĕhayyom hazzeh. wĕʾaḥar kakh baʾu vanekha lidhvir bethekha ufinnu ʾeth hekhalekha wĕṭihăru ʾeth miqdashekha wĕhidhliqu neroth bĕḥaṣroth qodhshekha wĕqavĕ'u shĕmonath yĕme ḥănukka ʾellu lĕhodhoth ulĕhallel lĕshimkha haggadhol."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "al-hakol",
-          "hebrew": "עַל הַכֹּל אֲנַֽחְנוּ מוֹדִים לָךְ וּמְבָרְכִים שְׁמָךְ, בָּרוּךְ אַתָּה יְיָ, עַל הָאָֽרֶץ וְעַל הַמָּזוֹן.",
-          "translation": "For all of this we thank You and bless Your name. Blessed are You, Adhonay, for the land and for the food.",
-          "translit": "'al hakkol ʾănaḥĕnu modhim lakh umĕvarĕkhim shĕmakh, barukh ʾatta Adhonay, 'al haʾareṣ wĕ'al hammazon."
-        },
-        {
-          "type": "text",
-          "id": "rachem",
-          "hebrew": "רַחֵם יְיָ אֱלֹהֵֽינוּ עַל יִשְׂרָאֵל עֲמָּךְ וְעַל יְרוּשָׁלַֽיִם עִירָךְ וְעַל מִקְדָשָׁךְ, וְעַל מַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ.",
-          "translation": "Have mercy, Adhonay our God, on Israel, Your people, on Jerusalem, Your city, on Your sanctuary, and on the kingship of the house of David, Your anointed.",
-          "translit": "raḥem Adhonay ʾĕlohenu 'al yisraʾel 'ămmakh wĕ'al yĕrushalayim 'irakh wĕ'al miqdhashakh, wĕ'al malkhuth beth dawīdh mĕshiḥakh."
-        },
-        {
-          "type": "expandable",
-          "id": "yaaleh-veyavo",
-          "label": "Shabbath, Roʾsh Ḥodhesh, Festivals & Roʾsh HashShana — Additions",
-          "items": [
-            {
-              "type": "rubric",
-              "id": "retzeh-shabbat-label",
-              "hebrew": "בשבת",
-              "translation": "On Shabbath:"
-            },
-            {
-              "type": "text",
-              "id": "retzeh-shabbat-cue",
-              "hebrew": "וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה",
-              "translation": "And be pleased with us, and give us rest and strength on this Shabbath day.",
-              "translit": "urĕṣeh wĕhaḥăliṣenu bĕyom hashshabbath hazzeh"
-            },
-            {
-              "type": "rubric",
-              "id": "yaaleh-veyavo-roshchodesh-label",
-              "hebrew": "בראש חדש",
-              "translation": "On Roʾsh Ḥodhesh:"
-            },
-            {
-              "type": "text",
-              "id": "yaaleh-veyavo-roshchodesh-cue",
-              "hebrew": "וְזָכְרֵנוּ בְּיוֹם רֹאשׁ הַחֹֽדֶשׁ הַזֶּה",
-              "translation": "And remember us on this day of Roʾsh Ḥodhesh.",
-              "translit": "wĕzakhĕrenu bĕyom roʾsh haḥodhesh hazzeh"
-            },
-            {
-              "type": "rubric",
-              "id": "yaaleh-veyavo-pesach-label",
-              "hebrew": "בפסח",
-              "translation": "On Pesaḥ:"
-            },
-            {
-              "type": "text",
-              "id": "yaaleh-veyavo-pesach-cue",
-              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַמַּצּוֹת הַזֶּה",
-              "translation": "And gladden us on this day of the Festival of Maṣṣoth.",
-              "translit": "wĕsammĕḥenu bĕyom ḥagh hammaṣṣoth hazzeh"
-            },
-            {
-              "type": "rubric",
-              "id": "yaaleh-veyavo-shavuot-label",
-              "hebrew": "בשבועות",
-              "translation": "On Shavu'oth:"
-            },
-            {
-              "type": "text",
-              "id": "yaaleh-veyavo-shavuot-cue",
-              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַשָּׁבֻעוֹת הַזֶּה",
-              "translation": "And gladden us on this day of the Festival of Shavu'oth.",
-              "translit": "wĕsammĕḥenu bĕyom ḥagh hashshavu'oth hazzeh"
-            },
-            {
-              "type": "rubric",
-              "id": "yaaleh-veyavo-rosh-hashana-label",
-              "hebrew": "בראש השנה",
-              "translation": "On Roʾsh HashShana:"
-            },
-            {
-              "type": "text",
-              "id": "yaaleh-veyavo-rosh-hashana-cue",
-              "hebrew": "וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה",
-              "translation": "And remember us for good on this Day of Remembrance.",
-              "translit": "wĕzakhĕrenu lĕṭova bĕyom hazzikkaron hazzeh"
-            },
-            {
-              "type": "rubric",
-              "id": "yaaleh-veyavo-sukkot-label",
-              "hebrew": "בסוכות",
-              "translation": "On Sukkoth:"
-            },
-            {
-              "type": "text",
-              "id": "yaaleh-veyavo-sukkot-cue",
-              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַסֻּכּוֹת הַזֶּה",
-              "translation": "And gladden us on this day of the Festival of Sukkoth.",
-              "translit": "wĕsammĕḥenu bĕyom ḥagh hassukkoth hazzeh"
-            },
-            {
-              "type": "rubric",
-              "id": "yaaleh-veyavo-shemini-atzeret-label",
-              "hebrew": "בשמיני עצרת",
-              "translation": "On Shĕmini 'Ăṣereth:"
-            },
-            {
-              "type": "text",
-              "id": "yaaleh-veyavo-shemini-atzeret-cue",
-              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם הַשְּׁמִינִי חַג הָעֲצֶרֶת הַזֶּה",
-              "translation": "And gladden us on this day of Shĕmini 'Ăṣereth, the Festival of Assembly.",
-              "translit": "wĕsammĕḥenu bĕyom hashshĕmini ḥagh ha'ăṣereth hazzeh"
-            },
-            {
-              "type": "expandable",
-              "id": "yaaleh-veyavo-full-toggle",
-              "label": "Full text",
-              "items": [
-                {
-                  "type": "text",
-                  "id": "yaaleh-veyavo-full",
-                  "hebrew": "אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם [רֹאשׁ הַחֹֽדֶשׁ הַזֶּה / חַג הַמַּצּוֹת הַזֶּה / חַג הַשָּׁבֻעוֹת הַזֶּה / הַזִּכָּרוֹן הַזֶּה / חַג הַסֻּכּוֹת הַזֶּה / הַשְּׁמִינִי חַג הָעֲצֶרֶת הַזֶּה], לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְיָ אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים, חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה.",
-                  "translation": "Our God and God of our forefathers, may there rise and come, arrive and be seen, find favor and be heard, be recalled and be remembered before You our remembrance and the remembrance of our forefathers, the remembrance of Jerusalem, Your city, the remembrance of the Messiah, son of David, Your servant, and the remembrance of all Your people, the house of Israel — for deliverance, for good, for grace, for loving-kindness and compassion, for good life and for peace, on this day of [Roʾsh Ḥodhesh / the Festival of Maṣṣoth / the Festival of Shavu'oth / the Day of Remembrance / the Festival of Sukkoth / Shĕmini 'Ăṣereth, the Festival of Assembly], to have mercy on us on it and to save us. Remember us on it, Adhonay our God, for good; recall us on it for blessing; and save us on it for good life. With a word of salvation and compassion, spare us and be gracious to us, have pity and mercy on us, and save us; for our eyes are on You, for You are God, a gracious and compassionate King.",
-                  "translit": "ʾĕlohenu weʾlohe ʾăvothenu, ya'ăleh wĕyavoʾ, wĕyaggia' wĕyeraʾeh, wĕyeraṣeh wĕyishshama', wĕyippaqedh wĕyizzakher, zikhronenu wĕzikhron ʾăvothenu, zikhron yĕrushalayim 'irakh, wĕzikhron mashiaḥ ben-dhawīdh 'avdakh, wĕzikhron kol-'ammĕkha beth yisraʾel lĕfanekha, lifleṭa, lĕṭova, lĕḥen, lĕḥesedh ulĕraḥămim, lĕḥayyim ṭovim ulĕshalom, bĕyom [roʾsh haḥodhesh hazzeh / ḥagh hammaṣṣoth hazzeh / ḥagh hashshavu'oth hazzeh / hazzikkaron hazzeh / ḥagh hassukkoth hazzeh / hashshĕmini ḥagh ha'ăṣereth hazzeh], lĕraḥem bo 'alenu ulĕhoshi'enu. zakhĕrenu Adhonay ʾĕlohenu bo lĕṭova, ufaqĕdhenu vo livrakha, wĕhoshi'enu vo lĕḥayyim ṭovim, bidhvar yĕshu'a wĕraḥămim, ḥus wĕḥannenu, waḥămol wĕraḥem 'alenu, wĕhoshi'enu ki ʾelekha 'enenu, ki ʾel melekh ḥannun wĕraḥum ʾatta."
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "id": "uvneh",
-          "hebrew": "וּבְנֵה יְרוּשָׁלַיִם בִּמְהֵרָה בְיָמֵינוּ. בָּרוּךְ אַתָּה יְיָ, בּוֹנֵה יְרוּשָׁלָיִם. אָמֵן.",
-          "translation": "And build Jerusalem, speedily in our days. Blessed are You, Adhonay, who builds Jerusalem. Amen.",
-          "translit": "uvĕneh yĕrushalayim bimhera vĕyamenu. barukh ʾatta Adhonay, boneh yĕrushalayim. ʾamen."
-        },
-        {
-          "type": "text",
-          "id": "hatov-vehametiv",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אָבִינוּ מַלְכֵּנוּ הַמֶּלֶךְ הַטּוֹב וְהַמֵּטִיב לַכֹּל, הוּא הֵטִיב הוּא מֵטִיב הוּא יֵיטִיב לָנוּ. הוּא גְמָלָנוּ, הוּא גוֹמְלֵנוּ, הוּא יִגְמְלֵנוּ חֵן וָחֶסֶד וְרַחֲמִים וְכָל טוּב.",
-          "translation": "Blessed are You, Adhonay our God, King of the universe, our Father, our King, the King who is good and does good to all. He has done good, He does good, He will do good to us; He has bestowed, He bestows, He will bestow on us grace, loving-kindness and compassion, and all that is good.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾavinu malkenu hammelekh haṭṭov wĕhammeṭiv lakkol, huʾ heṭiv huʾ meṭiv huʾ yeṭiv lanu. huʾ ghĕmalanu, huʾ ghomĕlenu, huʾ yighmĕlenu ḥen waḥesedh wĕraḥămim wĕkhol ṭuv."
+          "type": "rubric",
+          "id": "birkat-hamazon-law-1",
+          "hebrewLead": "א. המצוה.",
+          "lead": "1. The Miṣwa.",
+          "hebrew": "מצות עשה מן התורה לברך אחר אכילת פת, שנאמר ״ואכלת ושבעת וברכת את ה׳ אלהיך״. ואינו חיב מן התורה אלא אם שבע; ומדברי סופרים, אפלו אכל כזית פת מברך אחריו (רמב״ם ברכות א:א; שו״ע או״ח קפד:ו).",
+          "translation": "It is a positive miṣwa of the Torah to bless after eating bread, as it says: \"You shall eat and be satisfied, and bless Adhonay your God.\" By Torah law you're only obligated if you ate until satisfied; by rabbinic law, even if you ate just a kĕzayith (an olive's bulk) of bread, you bless afterward (Rambam, Bĕrakhoth 1:1; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 184:6)."
         },
         {
           "type": "rubric",
-          "id": "nusach-note",
-          "hebrew": "נוסח זה של ברכת המזון מבוסס על דברי הרמב\"ם ושאר הראשונים, ומי שקשה לו לומר את כל הנוסח הנהוג יכול לצאת בזה אפילו לכתחילה, וטוב מעט בכוונה מהרבות שלא בכוונה",
-          "translation": "This version (nusaḥ) of Birkath HaMazon is based on the Rambam and the other Riʾshonim (early authorities). If you find the full customary text hard to say, you can fulfill your obligation with this one, even ideally — a little said with intention is better than a lot said without it."
+          "id": "birkat-hamazon-law-2",
+          "hebrewLead": "ב. הכונה.",
+          "lead": "2. Kawwana.",
+          "hebrew": "יברך בשמחה ובכונת הלב, וישמיע לאזניו מה שהוא אומר (רמב״ם ברכות א:ז; בא״ח שנה א׳ חקת א, ז).",
+          "translation": "Bless with joy and with kawwana (focused intention) of the heart, saying the words loud enough for your own ears to hear (Rambam, Bĕrakhoth 1:7; Ben ʾIsh Ḥay, Year 1, Ḥuqqath 1, 7)."
+        },
+        {
+          "type": "rubric",
+          "id": "birkat-hamazon-law-3",
+          "hebrewLead": "ג. מים אחרונים.",
+          "lead": "3. Mayim ʾAḥăronim.",
+          "hebrew": "מים אחרונים חובה, ואין מברכין עליהם, ולפי שהם מפני הסכנה צריך להזהר בהם יותר. ומשפיל ידיו למטה, ואין נוטלין אותם על גבי קרקע ולא בחמין שהיד סולדת בהם. ומנגב ידיו ומברך מיד, ולא יפסיק ביניהם בשום דבר, ואפלו לשתות מים (רמב״ם ברכות ו:ב, יז, כא; שו״ע או״ח קפא:א–ג, ה, ז–ח; בא״ח שנה א׳ שלח ו, י–יא, טו).",
+          "translation": "Mayim ʾaḥăronim (washing the hands after the meal) is an obligation, and no bĕrakha is said over it. Because it is there to prevent danger, you need to be even more careful about it. Hold your hands pointing downward; don't wash them out onto the bare ground, or with water so hot your hand recoils from it. Dry your hands and say Birkath HaMazon right away, without any interruption in between — not even to drink water (Rambam, Bĕrakhoth 6:2, 17, 21; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 181:1–3, 5, 7–8; Ben ʾIsh Ḥay, Year 1, Shĕlaḥ 6, 10–11, 15)."
+        },
+        {
+          "type": "rubric",
+          "id": "birkat-hamazon-law-4",
+          "hebrewLead": "ד. משאמר ״נברך״.",
+          "lead": "4. Once You've Said \"Let Us Bless\".",
+          "hebrew": "משנטל מים אחרונים, או שאמר ״בואו ונברך״, אסור לו לאכל ולשתות עד שיברך (רמב״ם ברכות ד:ח; שו״ע או״ח קעט:א; בא״ח שנה א׳ בהעלותך יא).",
+          "translation": "Once you have washed mayim ʾaḥăronim, or said \"Come, let us bless\", you may not eat or drink until you have said Birkath HaMazon (Rambam, Bĕrakhoth 4:8; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 179:1; Ben ʾIsh Ḥay, Year 1, Bĕha'ălothĕkha 11)."
+        },
+        {
+          "type": "rubric",
+          "id": "birkat-hamazon-law-5",
+          "hebrewLead": "ה. ישיבה ומקום.",
+          "lead": "5. Sitting, and Where.",
+          "hebrew": "צריך לברך במקום שאכל, וכשהוא יושב, ולא יעסק בשום מלאכה בשעה שמברך. ואם שכח ויצא ממקומו, מברך במקום שנזכר; ואם יצא במזיד, חוזר למקומו ומברך, ואם ברך במקום שנזכר יצא (רמב״ם ברכות ד:א; שו״ע או״ח קפג:ט, יב, קפד:א; בא״ח שנה א׳ חקת ד–ה).",
+          "translation": "Say Birkath HaMazon where you ate, sitting down, and don't busy yourself with any task while you're saying it. If you forgot and left the place, bless wherever you remember; if you left on purpose, go back to your place and bless there — though if you blessed where you remembered, you have fulfilled your obligation (Rambam, Bĕrakhoth 4:1; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 183:9, 12, 184:1; Ben ʾIsh Ḥay, Year 1, Ḥuqqath 4–5)."
+        },
+        {
+          "type": "rubric",
+          "id": "birkat-hamazon-law-6",
+          "hebrewLead": "ו. זמן הברכה.",
+          "lead": "6. How Long You Have.",
+          "hebrew": "מי שאכל ושכח ולא ברך, חוזר ומברך כל זמן שלא נתעכל המזון במעיו, דהינו כל זמן שאינו רעב מחמת אותה אכילה. וכן אם נסתפק אם ברך או לא ברך, ואכל כדי שביעה, חוזר ומברך שלש ברכות ראשונות, מפני שהן מן התורה (רמב״ם ברכות ב:יג; שו״ע או״ח קפד:ד–ה; בא״ח שנה א׳ חקת ט).",
+          "translation": "If you ate and forgot to bless, go back and bless as long as the food hasn't been digested — that is, as long as you aren't hungry again from that meal. Likewise, if you're unsure whether you blessed or not, and you ate until satisfied, go back and say the first three bĕrakhoth, since they are required by Torah law (Rambam, Bĕrakhoth 2:13; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 184:4–5; Ben ʾIsh Ḥay, Year 1, Ḥuqqath 9)."
+        },
+        {
+          "type": "rubric",
+          "id": "birkat-hamazon-law-7",
+          "hebrewLead": "ז. מה שמעכב.",
+          "lead": "7. What Can't Be Left Out.",
+          "hebrew": "כל שלא אמר ״ארץ חמדה טובה ורחבה״ בברכת הארץ, או שלא הזכיר בה ברית ותורה, או שלא אמר מלכות בית דוד בברכה שלישית, לא יצא ידי חובתו (רמב״ם ברכות ב:ג–ד; שו״ע או״ח קפז:ג–ד).",
+          "translation": "If you didn't say \"a cherished land, good and spacious\" in the bĕrakha for the Land, or didn't mention the covenant and the Torah in it, or didn't mention the kingdom of the house of David in the third bĕrakha, you have not fulfilled your obligation (Rambam, Bĕrakhoth 2:3–4; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 187:3–4)."
+        },
+        {
+          "type": "rubric",
+          "id": "birkat-hamazon-law-8",
+          "hebrewLead": "ח. אמן אחר בונה ירושלים.",
+          "lead": "8. Amen After \"Who Builds Jerusalem\".",
+          "hebrew": "עונה אמן אחר ברכת ״בונה ירושלים״ שלו, ואומרו בלחש, לפי שהיא סוף עקר ברכות המזון, וברכת ״הטוב והמטיב״ כתוספת היא (רמב״ם ברכות א:טז–יז; שו״ע או״ח קפח:א–ב).",
+          "translation": "Answer Amen, quietly, after your own bĕrakha \"who builds Jerusalem\", since it ends the core bĕrakhoth of Birkath HaMazon, and HaṭṬov wĕhamMeṭiv is a kind of addition (Rambam, Bĕrakhoth 1:16–17; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 188:1–2)."
+        },
+        {
+          "type": "rubric",
+          "id": "birkat-hamazon-law-9",
+          "hebrewLead": "ט. שכח רצה או יעלה ויבוא.",
+          "lead": "9. If You Forgot Rĕṣeh or Ya'ăleh Wĕyavoʾ.",
+          "hebrew": "שכח ״רצה״ בשבת או ״יעלה ויבוא״ ביום טוב, ונזכר קדם שהתחיל ברכה רביעית, אומר שם ״ברוך אשר נתן שבת מנוחה לעמו ישראל לאות ולברית קדש, ברוך אתה ה׳ מקדש השבת״, וביום טוב ״ברוך אשר נתן ימים טובים לעמו ישראל לששון ולשמחה, ברוך אתה ה׳ מקדש ישראל והזמנים״, וגומר; ואם נזכר אחר שהתחיל ברכה רביעית, חוזר לראש ברכת המזון. ובראש חדש ובחלו של מועד, אם נזכר קדם ברכה רביעית, אומר ״ברוך שנתן ראשי חדשים לעמו ישראל לזכרון״ בלא חתימה, ואם נזכר אחר כך, אינו חוזר. ובחנכה ובפורים, אם שכח ״על הנסים״, אינו חוזר (רמב״ם ברכות ב:יא–יב; שו״ע או״ח קפז:ד, קפח:ו–ז).",
+          "translation": "If you forgot Rĕṣeh on Shabbath, or Ya'ăleh Wĕyavoʾ on a Festival, and remember before starting the fourth bĕrakha, say there: \"Blessed is He who gave Shabbath rest to His people Israel, as a sign and a holy covenant. Blessed are You, Adhonay, who makes the Shabbath holy\" — or on a Festival: \"Blessed is He who gave festivals to His people Israel for gladness and joy. Blessed are You, Adhonay, who sanctifies Israel and the seasons\" — and then finish. If you remember after starting the fourth bĕrakha, go back to the beginning of Birkath HaMazon. On Roʾsh Ḥodhesh and Ḥol HamMo'edh, if you remember before the fourth bĕrakha, say \"Blessed is He who gave new moons to His people Israel as a remembrance\", without a closing bĕrakha; if you remember later, don't go back. On Ḥănukka and Purim, if you forgot 'Al HanNissim, don't go back (Rambam, Bĕrakhoth 2:11–12; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 187:4, 188:6–7)."
+        }
+      ]
+    },
+    {
+      "id": "zimmun-halakha",
+      "title": "Laws of Zimmun",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "zimmun-law-1",
+          "hebrewLead": "א. החיוב.",
+          "lead": "1. The Obligation.",
+          "hebrew": "שלשה שאכלו פת כאחד, חיבין לזמן קדם ברכת המזון, וצריך להשתדל מאד לרדף אחר הזימון, כי דבר גדול הוא. ואם היו עשרה, מזמנין בשם ומוסיפין ״אלהינו״, ולכן מצוה מן המבחר להשתדל לאכל בעשרה (רמב״ם ברכות ה:ב–ג; שו״ע או״ח קצב:א, קצג:א; בא״ח שנה א׳ קרח א).",
+          "translation": "When three people have eaten bread together, they are obligated to make a zimmun before Birkath HaMazon, and you should really go out of your way for it, because it is a great thing. If there are ten, the zimmun is made with God's Name, adding \"our God\" — so the finest way to do the miṣwa is to make an effort to eat with ten (Rambam, Bĕrakhoth 5:2–3; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 192:1, 193:1; Ben ʾIsh Ḥay, Year 1, Qoraḥ 1)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-2",
+          "hebrewLead": "ב. סדר הזימון.",
+          "lead": "2. How It Goes.",
+          "hebrew": "המזמן אומר ״נברך שאכלנו משלו״, והמסבין עונין ״ברוך שאכלנו משלו ובטובו חיינו״, והוא חוזר ואומר כמותם, ומתחיל ברכת המזון (רמב״ם ברכות ה:ב; שו״ע או״ח קצב:א).",
+          "translation": "The one leading (the mĕzammen) says \"Let us bless the One whose food we have eaten\", and the others answer \"Blessed is the One whose food we have eaten, and through whose goodness we live.\" The leader repeats their words after them and begins Birkath HaMazon (Rambam, Bĕrakhoth 5:2; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 192:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-3",
+          "hebrewLead": "ג. המזמן מברך לכלם.",
+          "lead": "3. The Leader Says It for Everyone.",
+          "hebrew": "זהו סדר הזימון על פי הדין: המזמן מברך ברכת המזון כלה בקול רם, והמסבין שומעין ממנו ומכונין לכל מלה, ועונין אמן אחר כל ברכה וברכה, ויוצאין ידי חובתן בשמיעתו, וכלם מברכין כאחד. ומי שחושש שלא יוכל לכון לשמוע הכל, יאמר עמו בלחש מלה במלה, ויקדים מעט לסים כל ברכה כדי לענות אמן. אבל אין לנהג שכל אחד מברך לעצמו ואינו שומע מן המזמן כלל, שבזה בטל ענין הזימון; ולכל הפחות יברך המזמן ברכה ראשונה בקול רם, והמסבין שומעין ממנו (רמב״ם ברכות ה:ב, יד; שו״ע או״ח קפג:ז; מ״ב קפג:כז–כח).",
+          "translation": "This is how zimmun works by law: the leader says all of Birkath HaMazon aloud, and the others listen, with kawwana (focused intention) on every word, and answer Amen after each bĕrakha. They fulfill their obligation by hearing it, and so everyone blesses as one. If you're worried you won't manage to focus on hearing all of it, say it along with the leader quietly, word for word, finishing each bĕrakha a little ahead so you can answer Amen. But don't follow the practice of everyone saying it to themselves without listening to the leader at all — that defeats the whole point of zimmun. At the very least, the leader should say the first bĕrakha aloud while the others listen (Rambam, Bĕrakhoth 5:2, 14; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 183:7; Mishna Bĕrura 183:27–28)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-4",
+          "hebrewLead": "ד. הנכנס באמצע.",
+          "lead": "4. Coming In Partway.",
+          "hebrew": "הנכנס אצל המסבין ומצא המזמן אומר ״נברך״, עונה ״ברוך ומבורך שמו תמיד לעולם ועד״; ואם מצאם עונים ״ברוך שאכלנו״, עונה אחריהם אמן (רמב״ם ברכות ה:טז; שו״ע או״ח קצח:א).",
+          "translation": "If you walk in on a group and find the leader saying \"Let us bless\", answer \"Blessed and praised is His name, continually, forever and ever\"; if you find them answering \"Blessed is the One whose food we have eaten\", answer Amen after them (Rambam, Bĕrakhoth 5:16; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 198:1)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-5",
+          "hebrewLead": "ה. שעור האכילה.",
+          "lead": "5. How Much You Must Eat.",
+          "hebrew": "אין מזמנין אלא על מי שאכל כזית פת. ואם אכלו שנים פת, והשלישי לא אכל אלא דבר אחר הטעון ברכה אחרונה, או ששתה משקה חוץ מן המים, מצטרף בדיעבד; ולכתחלה יפצירו בו שיאכל כזית פת. ובעשרה, די שיאכלו רבם פת, כגון שבעה מתוך עשרה, ובלבד שיהא המזמן מאוכלי הפת (רמב״ם ברכות ה:ז; שו״ע או״ח קצז:ב–ג; בא״ח שנה א׳ קרח ה, ח).",
+          "translation": "A zimmun is made only with someone who has eaten a kĕzayith (an olive's bulk) of bread. If two ate bread and the third ate only something else that needs a bĕrakha afterward, or drank something other than water, the third counts after the fact; ideally, urge them to eat a kĕzayith of bread. With ten, it's enough that most of them ate bread — say, seven out of ten — as long as the leader is one of those who did (Rambam, Bĕrakhoth 5:7; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 197:2–3; Ben ʾIsh Ḥay, Year 1, Qoraḥ 5, 8)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-6",
+          "hebrewLead": "ו. מי מצטרף.",
+          "lead": "6. Who Counts.",
+          "hebrew": "קטן שיודע למי מברכין, אפלו הוא כבן שבע או שמונה, מצטרף בין לשלשה בין לעשרה. נשים שאכלו עם האנשים חיבות בזימון ויוצאות בזימונם, אבל אינן מצטרפות עמהם; ושלש נשים שאכלו לבדן רשאות לזמן לעצמן, ולא בשם, ולא יזמנו נשים וקטנים יחד. ואין מזמנין על הגוי (רמב״ם ברכות ה:ה–ו; שו״ע או״ח קצט:ד, ו–ז, י).",
+          "translation": "A child who understands to whom we are blessing, even at around seven or eight, counts toward three or toward ten. Women who ate with the men are obligated in zimmun and fulfill it through the men's zimmun, but don't count toward their number. Three women who ate on their own may make a zimmun for themselves, though not with God's Name; women and children shouldn't make a zimmun together. A non-Jew isn't counted toward a zimmun (Rambam, Bĕrakhoth 5:5–6; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 199:4, 6–7, 10)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-7",
+          "hebrewLead": "ז. שלא ליחלק.",
+          "lead": "7. Don't Split Up.",
+          "hebrew": "שלשה שאכלו כאחד אינן רשאין ליחלק ולברך כל אחד לעצמו, ואין אחד מהם רשאי להקדים ולברך לעצמו, אפלו יש לו עסק גדול. ואם הוא ממהר ללכת, יבקש מהם שיפסיקו ויזמנו עמו, ואם אי אפשר, ימתין להם עד שיגמרו. ואם קדם ובירך לעצמו, מזמנין עליו ויצאו השנים ידי זימון, והוא לא יצא (רמב״ם ברכות ה:ט, יג; שו״ע או״ח קצג:א–ב, קצד:א, ר:א; בא״ח שנה א׳ קרח ד, ו, ט).",
+          "translation": "Three who ate together may not split up and each say Birkath HaMazon alone, and none of them may go ahead and say it alone first, even with important business to get to. If you're in a hurry to leave, ask the others to pause and make the zimmun with you; if that isn't possible, wait for them until they finish. If one of them went ahead and said it alone anyway, the other two still make the zimmun with him and fulfill their zimmun, but he doesn't (Rambam, Bĕrakhoth 5:9, 13; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 193:1–2, 194:1, 200:1; Ben ʾIsh Ḥay, Year 1, Qoraḥ 4, 6, 9)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-8",
+          "hebrewLead": "ח. מי מזמן.",
+          "lead": "8. Who Leads.",
+          "hebrew": "גדול שבמסבין מזמן, אף על פי שלא בא אלא באחרונה; ואם יש שם אורח, הוא מזמן, כדי שיברך לבעל הבית. ואם יש שם כהן, מצוה להקדימו, אלא אם כן יש שם תלמיד חכם שאינו כהן; וכהן תלמיד חכם קודם לכלם. ורשאי מי שראוי לזמן לתת רשות לאחר (רמב״ם ברכות ה:ח, ז:ב; שו״ע או״ח רא:א–ב; בא״ח שנה א׳ קרח יד).",
+          "translation": "The most distinguished person at the table leads, even if he only arrived last. If there's a guest, the guest leads, so that he can bless the host. If a kohen is present, it's a miṣwa to give him precedence, unless there is a Torah scholar (talmidh ḥakham) who isn't a kohen; a kohen who is a Torah scholar comes before everyone. Whoever is entitled to lead may give permission to someone else (Rambam, Bĕrakhoth 5:8, 7:2; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 201:1–2; Ben ʾIsh Ḥay, Year 1, Qoraḥ 14)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-9",
+          "hebrewLead": "ט. כוס של ברכה.",
+          "lead": "9. The Cup of Blessing.",
+          "hebrew": "אף על פי שאין ברכת המזון טעונה כוס, מצוה מן המבחר לזמן על כוס יין, ומדיח הכוס מבפנים ושוטפו מבחוץ, ואין מסיחין עד שתכלה ברכת המזון (רמב״ם ברכות ז:טו; שו״ע או״ח קפב:א, קפג:א, ו).",
+          "translation": "Although Birkath HaMazon doesn't require a cup, the finest way to do the miṣwa is to make the zimmun over a cup of wine. Rinse the cup inside and wash it outside, and no one talks until Birkath HaMazon is finished (Rambam, Bĕrakhoth 7:15; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 182:1, 183:1, 6)."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-law-10",
+          "hebrewLead": "י. בסעדת נשואין.",
+          "lead": "10. At a Wedding Meal.",
+          "hebrew": "בסעדה שעושין מחמת הנשואין, מוסיפין ״שהשמחה במעונו״ (רמב״ם ברכות ה:ד).",
+          "translation": "At a meal held to celebrate a wedding, add \"in whose dwelling is joy\" (Rambam, Bĕrakhoth 5:4)."
+        }
+      ]
+    },
+    {
+      "id": "zimmun",
+      "title": "Zimmun",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "zimmun-intro",
+          "hebrew": "כשאכלו שלשה או יותר, המזמן אומר זה; ובעשרה מוסיפין ״אֱלֹהֵינוּ״.",
+          "translation": "When three or more have eaten together, the leader says this; before ten, add \"our God\"."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-leader-1",
+          "hebrew": "המזמן:",
+          "translation": "The leader:"
+        },
+        {
+          "type": "text",
+          "id": "zimmun-birshutkhem",
+          "hebrew": "בִּרְשׁוּתְכֶם",
+          "translation": "With your permission.",
+          "translit": "birshuthĕkhem"
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-others-1",
+          "hebrew": "המסבין:",
+          "translation": "The others:"
+        },
+        {
+          "type": "text",
+          "id": "zimmun-shamayim",
+          "hebrew": "שָׁמַֽיִם",
+          "translation": "With Heaven's.",
+          "translit": "shamayīm"
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-leader-2",
+          "hebrew": "המזמן:",
+          "translation": "The leader:"
+        },
+        {
+          "type": "text",
+          "id": "zimmun-nevarekh",
+          "hebrew": "נְבָרֵךְ (בעשרה: אֱלֹהֵֽינוּ) (בסעדת נשואין: שֶׁהַשִּׂמְחָה בִּמְעוֹנוֹ) שֶׁאָכַלְנוּ מִשֶּׁלּוֹ.",
+          "translation": "Let us bless [before ten: our God,] the One [at a wedding meal: in whose dwelling is joy,] whose food we have eaten.",
+          "translit": "nĕvarekh (before ten: ʾĕlohenu) (at a wedding meal: shehassimḥa bim'ono) sheʾakhalnu mishshello."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-others-2",
+          "hebrew": "המסבין:",
+          "translation": "The others:"
+        },
+        {
+          "type": "text",
+          "id": "zimmun-barukh-others",
+          "hebrew": "בָּרוּךְ (בעשרה: אֱלֹהֵֽינוּ) (בסעדת נשואין: שֶׁהַשִּׂמְחָה בִּמְעוֹנוֹ) שֶׁאָכַלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ [הַגָּדוֹל] חָיִֽינוּ.",
+          "translation": "Blessed is [before ten: our God,] the One [at a wedding meal: in whose dwelling is joy,] whose food we have eaten, and through whose [great] goodness we live.",
+          "translit": "barukh (before ten: ʾĕlohenu) (at a wedding meal: shehassimḥa bim'ono) sheʾakhalnu mishshello uvĕṭuvo [haggadhol] ḥayinu."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-leader-3",
+          "hebrew": "המזמן:",
+          "translation": "The leader:"
+        },
+        {
+          "type": "text",
+          "id": "zimmun-barukh-leader",
+          "hebrew": "בָּרוּךְ (בעשרה: אֱלֹהֵֽינוּ) (בסעדת נשואין: שֶׁהַשִּׂמְחָה בִּמְעוֹנוֹ) שֶׁאָכַלְנוּ מִשֶּׁלּוֹ וּבְטוּבוֹ [הַגָּדוֹל] חָיִֽינוּ.",
+          "translation": "Blessed is [before ten: our God,] the One [at a wedding meal: in whose dwelling is joy,] whose food we have eaten, and through whose [great] goodness we live.",
+          "translit": "barukh (before ten: ʾĕlohenu) (at a wedding meal: shehassimḥa bim'ono) sheʾakhalnu mishshello uvĕṭuvo [haggadhol] ḥayinu."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-yesh-omrim",
+          "hebrew": "יש אומרים:",
+          "translation": "Some say:"
+        },
+        {
+          "type": "text",
+          "id": "zimmun-barukh-hu",
+          "hebrew": "בָּרוּךְ הוּא וּבָרוּךְ שְׁמוֹ, וּבָרוּךְ זִכְרוֹ לְעוֹלְמֵי עַד.",
+          "translation": "Blessed is He, and blessed is His name, and blessed is His remembrance forever and ever.",
+          "translit": "barukh huʾ uvarukh shĕmo, uvarukh zikhro lĕ'olĕme 'adh."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-nikhnas",
+          "hebrew": "הנכנס ושומע ״נברך״ עונה:",
+          "translation": "If you come in and hear \"Let us bless\", answer:"
+        },
+        {
+          "type": "text",
+          "id": "zimmun-barukh-umevorakh",
+          "hebrew": "בָּרוּךְ וּמְבֹרָךְ שְׁמוֹ תָּמִיד לְעוֹלָם וָעֶד.",
+          "translation": "Blessed and praised is His name, continually, forever and ever.",
+          "translit": "barukh umĕvorakh shĕmo tamidh lĕ'olam wa'edh."
+        },
+        {
+          "type": "rubric",
+          "id": "zimmun-then",
+          "hebrew": "ואחר כך המזמן מברך ברכת המזון בקול רם, והמסבין שומעין ממנו ועונין אמן אחר כל ברכה וברכה.",
+          "translation": "Then the leader says Birkath HaMazon aloud, and the others listen and answer Amen after each bĕrakha."
+        }
+      ]
+    },
+    {
+      "id": "birkat-hamazon",
+      "title": "Birkath HaMazon",
+      "items": [
+        {
+          "type": "toggle",
+          "id": "birkat-hamazon-nusah",
+          "options": [
+            {
+              "id": "abadi",
+              "label": "Abadi",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "hazan",
+                  "hebrew": "בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוּבוֹ בְּחֵן בְּחֶסֶד וּבְרַחֲמִים, וּמְפַרְנֵס לַכֹּל וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא. בָּרוּךְ אַתָּה יְיָ, הַזָּן אֶת הַכֹּל.",
+                  "translation": "Blessed are You, Adhonay our God, King of the universe, who feeds the whole world in His goodness, with grace, with loving-kindness and compassion; who provides for all, and prepares food for all His creatures that He has made. Blessed are You, Adhonay, who feeds all.",
+                  "translit": "barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, hazzan ʾeth ha'olam kullo bĕṭuvo bĕḥen bĕḥesedh uvĕraḥămim, umĕfarnes lakkol umekhin mazon lĕkhol bĕriyyothaw ʾăsher baraʾ. barukh ʾatta Adhonay, hazzan ʾeth hakkol."
+                },
+                {
+                  "type": "text",
+                  "id": "noda",
+                  "hebrew": "נֽוֹדֶה לְּךָ, יְיָ אֱלֹהֵינוּ, שֶׁהִנְחַלְתָּ לַאֲבוֹתֵינוּ אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, בְּרִית וְתוֹרָה, [וְעַל שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם].",
+                  "translation": "We thank You, Adhonay our God, for giving our forefathers as their heritage a cherished land, good and broad, the covenant and the Torah, [and for bringing us out of the land of Egypt].",
+                  "translit": "nodheh lĕkha, Adhonay ʾĕlohenu, shehinḥalta laʾăvothenu ʾereṣ ḥemda ṭova urĕḥava, bĕrith wĕthora, [wĕ'al shehoṣeʾthanu meʾereṣ miṣrayīm]."
+                },
+                {
+                  "type": "expandable",
+                  "id": "purim-al-hanissim",
+                  "label": "Purim — 'Al HanNissim",
+                  "items": [
+                    {
+                      "type": "text",
+                      "id": "purim-cue",
+                      "hebrew": "וְעַל נִסֶּיךָ שֶׁעָשִׂיתָ לָנוּ בִּימֵי פּוּרִים",
+                      "translation": "And for Your miracles, which You worked for us in the days of Purim.",
+                      "translit": "wĕ'al nissekha she'asitha lanu bime purim"
+                    },
+                    {
+                      "type": "expandable",
+                      "id": "purim-full-toggle",
+                      "label": "Full text",
+                      "items": [
+                        {
+                          "type": "text",
+                          "id": "purim-full",
+                          "hebrew": "וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה. בִּימֵי מָרְדֳּכַי וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלוֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים הֵפַרְתָּ אֶת עֲצָתוֹ וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ וַהֲשֵׁבוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ.",
+                          "translation": "And for the miracles and the rescue, the mighty deeds, the victories and the battles that You worked for our forefathers in those days, at this season. In the days of Mordecai and Esther, in Shushan the capital, when the wicked Haman rose against them, he sought to destroy, to slay and to wipe out all the Jews, young and old, children and women, in a single day, on the thirteenth of the twelfth month, the month of Adar, and to take their goods as plunder. But You, in Your great compassion, brought his counsel to nothing and undid his design, and turned his deed back upon his own head; and they hanged him and his sons upon the gallows.",
+                          "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mordŏkhay wĕʾester bĕshushan habbira kĕshe'amadh 'ălehem haman harasha' biqqesh lĕhashmidh lahărogh ulĕʾabbedh ʾeth kol hayyĕhudhim minna'ar wĕ'adh zaqen ṭaf wĕnashim bĕyom ʾeḥadh bishlosha 'asar lĕḥodhesh shĕnem 'asar huʾ ḥodhesh ʾădhar ushĕlalam lavoz. wĕʾatta bĕraḥămekha harabbim hefarta ʾeth 'ăṣatho wĕqilqalta ʾeth maḥăshavto wahăshevotha lo gĕmulo vĕroʾsho wĕthalu ʾotho wĕʾeth banaw 'al ha'eṣ."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "expandable",
+                  "id": "chanukah-al-hanissim",
+                  "label": "Ḥănukka — 'Al HanNissim",
+                  "items": [
+                    {
+                      "type": "text",
+                      "id": "chanukah-cue",
+                      "hebrew": "וְעַל נִסֶּיךָ שֶׁעָשִׂיתָ לָנוּ בִּימֵי הַחַנֻכָּה",
+                      "translation": "And for Your miracles, which You worked for us in the days of Ḥănukka.",
+                      "translit": "wĕ'al nissekha she'asitha lanu bime haḥanukka"
+                    },
+                    {
+                      "type": "expandable",
+                      "id": "chanukah-full-toggle",
+                      "label": "Full text",
+                      "items": [
+                        {
+                          "type": "text",
+                          "id": "chanukah-full",
+                          "hebrew": "וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה. בִּימֵי מַתִּתְיָהוּ בֶּן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנַאי וּבָנָיו כְּשֶׁעָמְדָה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶךָ. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים עָמַדְתָּ לָהֶם בְּעֵת צָרָתָם רַבְתָּ אֶת רִיבָם דַּנְתָּ אֶת דִּינָם נָקַמְתָּ אֶת נִקְמָתָם מָסַרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְקֵי תוֹרָתֶךָ. וּלְךָ עָשִׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶךָ וּלְעַמְּךָ יִשְׂרָאֵל עָשִׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּאוּ בָנֶיךָ לִדְבִיר בֵּיתֶךָ וּפִנּוּ אֶת הֵיכָלֶךָ וְטִהֲרוּ אֶת מִקְדָּשֶׁךָ וְהִדְלִיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶׁךָ וְקָבְעוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל.",
+                          "translation": "And for the miracles and the rescue, the mighty deeds, the victories and the battles that You worked for our forefathers in those days, at this season. In the days of Mattathias son of Johanan, the High Priest, the Hasmonean, and his sons, when the wicked kingdom of Greece rose against Your people Israel, to make them forget Your Torah and to turn them from the statutes of Your will. But You, in Your great compassion, stood by them in their time of trouble: You pleaded their cause, You judged their claim, You avenged their wrong. You gave the mighty into the hands of the weak, the many into the hands of the few, the impure into the hands of the pure, the wicked into the hands of the righteous, and the insolent into the hands of those who labor in Your Torah. For Yourself You made a great and holy name in Your world, and for Your people Israel You brought about a great victory and rescue, as on this day. And afterward Your children came to the shrine of Your house; they cleared Your Temple and purified Your sanctuary, kindled lights in Your holy courts, and set these eight days of Ḥănukka for giving thanks and praise to Your great name.",
+                          "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mattithyahu ben yoḥanan kohen gadhol ḥashmonaʾy uvanaw kĕshe'amĕdha malkhuth yawan harĕsha'a 'al 'ammĕkha yisraʾel lĕhashkiḥam torathekha ulĕha'ăviram meḥuqqe rĕṣonekha. wĕʾatta bĕraḥămekha harabbim 'amadhta lahem bĕ'eth ṣaratham ravta ʾeth rivam danta ʾeth dinam naqamta ʾeth niqmatham masarta ghibborim bĕyadh ḥallashim wĕrabbim bĕyadh mĕ'aṭṭim uṭĕmeʾim bĕyadh ṭĕhorim urĕsha'im bĕyadh ṣaddiqim wĕzedhim bĕyadh 'osĕqe thorathekha. ulĕkha 'asitha shem gadhol wĕqadhosh bĕ'olamekha ulĕ'ammĕkha yisraʾel 'asitha tĕshu'a ghĕdhola ufurqan kĕhayyom hazzeh. wĕʾaḥar kakh baʾu vanekha lidhvir bethekha ufinnu ʾeth hekhalekha wĕṭihăru ʾeth miqdashekha wĕhidhliqu neroth bĕḥaṣroth qodhshekha wĕqavĕ'u shĕmonath yĕme ḥănukka ʾellu lĕhodhoth ulĕhallel lĕshimkha haggadhol."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "al-hakol",
+                  "hebrew": "עַל הַכֹּל אֲנַֽחְנוּ מוֹדִים לָךְ וּמְבָרְכִים שְׁמָךְ, בָּרוּךְ אַתָּה יְיָ, עַל הָאָֽרֶץ וְעַל הַמָּזוֹן.",
+                  "translation": "For all of this we thank You and bless Your name. Blessed are You, Adhonay, for the land and for the food.",
+                  "translit": "'al hakkol ʾănaḥĕnu modhim lakh umĕvarĕkhim shĕmakh, barukh ʾatta Adhonay, 'al haʾareṣ wĕ'al hammazon."
+                },
+                {
+                  "type": "text",
+                  "id": "rachem",
+                  "hebrew": "רַחֵם יְיָ אֱלֹהֵֽינוּ עַל יִשְׂרָאֵל עֲמָּךְ וְעַל יְרוּשָׁלַֽיִם עִירָךְ וְעַל מִקְדָשָׁךְ, וְעַל מַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ.",
+                  "translation": "Have mercy, Adhonay our God, on Israel, Your people, on Jerusalem, Your city, on Your sanctuary, and on the kingship of the house of David, Your anointed.",
+                  "translit": "raḥem Adhonay ʾĕlohenu 'al yisraʾel 'ămmakh wĕ'al yĕrushalayim 'irakh wĕ'al miqdhashakh, wĕ'al malkhuth beth dawīdh mĕshiḥakh."
+                },
+                {
+                  "type": "expandable",
+                  "id": "yaaleh-veyavo",
+                  "label": "Shabbath, Roʾsh Ḥodhesh, Festivals & Roʾsh HashShana — Additions",
+                  "items": [
+                    {
+                      "type": "rubric",
+                      "id": "retzeh-shabbat-label",
+                      "hebrew": "בשבת",
+                      "translation": "On Shabbath:"
+                    },
+                    {
+                      "type": "text",
+                      "id": "retzeh-shabbat-cue",
+                      "hebrew": "וּרְצֵה וְהַחֲלִיצֵנוּ בְּיוֹם הַשַּׁבָּת הַזֶּה",
+                      "translation": "And be pleased with us, and give us rest and strength on this Shabbath day.",
+                      "translit": "urĕṣeh wĕhaḥăliṣenu bĕyom hashshabbath hazzeh"
+                    },
+                    {
+                      "type": "rubric",
+                      "id": "yaaleh-veyavo-roshchodesh-label",
+                      "hebrew": "בראש חדש",
+                      "translation": "On Roʾsh Ḥodhesh:"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yaaleh-veyavo-roshchodesh-cue",
+                      "hebrew": "וְזָכְרֵנוּ בְּיוֹם רֹאשׁ הַחֹֽדֶשׁ הַזֶּה",
+                      "translation": "And remember us on this day of Roʾsh Ḥodhesh.",
+                      "translit": "wĕzakhĕrenu bĕyom roʾsh haḥodhesh hazzeh"
+                    },
+                    {
+                      "type": "rubric",
+                      "id": "yaaleh-veyavo-pesach-label",
+                      "hebrew": "בפסח",
+                      "translation": "On Pesaḥ:"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yaaleh-veyavo-pesach-cue",
+                      "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַמַּצּוֹת הַזֶּה",
+                      "translation": "And gladden us on this day of the Festival of Maṣṣoth.",
+                      "translit": "wĕsammĕḥenu bĕyom ḥagh hammaṣṣoth hazzeh"
+                    },
+                    {
+                      "type": "rubric",
+                      "id": "yaaleh-veyavo-shavuot-label",
+                      "hebrew": "בשבועות",
+                      "translation": "On Shavu'oth:"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yaaleh-veyavo-shavuot-cue",
+                      "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַשָּׁבֻעוֹת הַזֶּה",
+                      "translation": "And gladden us on this day of the Festival of Shavu'oth.",
+                      "translit": "wĕsammĕḥenu bĕyom ḥagh hashshavu'oth hazzeh"
+                    },
+                    {
+                      "type": "rubric",
+                      "id": "yaaleh-veyavo-rosh-hashana-label",
+                      "hebrew": "בראש השנה",
+                      "translation": "On Roʾsh HashShana:"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yaaleh-veyavo-rosh-hashana-cue",
+                      "hebrew": "וְזָכְרֵנוּ לְטוֹבָה בְּיוֹם הַזִּכָּרוֹן הַזֶּה",
+                      "translation": "And remember us for good on this Day of Remembrance.",
+                      "translit": "wĕzakhĕrenu lĕṭova bĕyom hazzikkaron hazzeh"
+                    },
+                    {
+                      "type": "rubric",
+                      "id": "yaaleh-veyavo-sukkot-label",
+                      "hebrew": "בסוכות",
+                      "translation": "On Sukkoth:"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yaaleh-veyavo-sukkot-cue",
+                      "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַסֻּכּוֹת הַזֶּה",
+                      "translation": "And gladden us on this day of the Festival of Sukkoth.",
+                      "translit": "wĕsammĕḥenu bĕyom ḥagh hassukkoth hazzeh"
+                    },
+                    {
+                      "type": "rubric",
+                      "id": "yaaleh-veyavo-shemini-atzeret-label",
+                      "hebrew": "בשמיני עצרת",
+                      "translation": "On Shĕmini 'Ăṣereth:"
+                    },
+                    {
+                      "type": "text",
+                      "id": "yaaleh-veyavo-shemini-atzeret-cue",
+                      "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם הַשְּׁמִינִי חַג הָעֲצֶרֶת הַזֶּה",
+                      "translation": "And gladden us on this day of Shĕmini 'Ăṣereth, the Festival of Assembly.",
+                      "translit": "wĕsammĕḥenu bĕyom hashshĕmini ḥagh ha'ăṣereth hazzeh"
+                    },
+                    {
+                      "type": "expandable",
+                      "id": "yaaleh-veyavo-full-toggle",
+                      "label": "Full text",
+                      "items": [
+                        {
+                          "type": "text",
+                          "id": "yaaleh-veyavo-full",
+                          "hebrew": "אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם [רֹאשׁ הַחֹֽדֶשׁ הַזֶּה / חַג הַמַּצּוֹת הַזֶּה / חַג הַשָּׁבֻעוֹת הַזֶּה / הַזִּכָּרוֹן הַזֶּה / חַג הַסֻּכּוֹת הַזֶּה / הַשְּׁמִינִי חַג הָעֲצֶרֶת הַזֶּה], לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְיָ אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים, חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה.",
+                          "translation": "Our God and God of our forefathers, may there rise and come, arrive and be seen, find favor and be heard, be recalled and be remembered before You our remembrance and the remembrance of our forefathers, the remembrance of Jerusalem, Your city, the remembrance of the Messiah, son of David, Your servant, and the remembrance of all Your people, the house of Israel — for deliverance, for good, for grace, for loving-kindness and compassion, for good life and for peace, on this day of [Roʾsh Ḥodhesh / the Festival of Maṣṣoth / the Festival of Shavu'oth / the Day of Remembrance / the Festival of Sukkoth / Shĕmini 'Ăṣereth, the Festival of Assembly], to have mercy on us on it and to save us. Remember us on it, Adhonay our God, for good; recall us on it for blessing; and save us on it for good life. With a word of salvation and compassion, spare us and be gracious to us, have pity and mercy on us, and save us; for our eyes are on You, for You are God, a gracious and compassionate King.",
+                          "translit": "ʾĕlohenu weʾlohe ʾăvothenu, ya'ăleh wĕyavoʾ, wĕyaggia' wĕyeraʾeh, wĕyeraṣeh wĕyishshama', wĕyippaqedh wĕyizzakher, zikhronenu wĕzikhron ʾăvothenu, zikhron yĕrushalayim 'irakh, wĕzikhron mashiaḥ ben-dhawīdh 'avdakh, wĕzikhron kol-'ammĕkha beth yisraʾel lĕfanekha, lifleṭa, lĕṭova, lĕḥen, lĕḥesedh ulĕraḥămim, lĕḥayyim ṭovim ulĕshalom, bĕyom [roʾsh haḥodhesh hazzeh / ḥagh hammaṣṣoth hazzeh / ḥagh hashshavu'oth hazzeh / hazzikkaron hazzeh / ḥagh hassukkoth hazzeh / hashshĕmini ḥagh ha'ăṣereth hazzeh], lĕraḥem bo 'alenu ulĕhoshi'enu. zakhĕrenu Adhonay ʾĕlohenu bo lĕṭova, ufaqĕdhenu vo livrakha, wĕhoshi'enu vo lĕḥayyim ṭovim, bidhvar yĕshu'a wĕraḥămim, ḥus wĕḥannenu, waḥămol wĕraḥem 'alenu, wĕhoshi'enu ki ʾelekha 'enenu, ki ʾel melekh ḥannun wĕraḥum ʾatta."
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "uvneh",
+                  "hebrew": "וּבְנֵה יְרוּשָׁלַיִם בִּמְהֵרָה בְיָמֵינוּ. בָּרוּךְ אַתָּה יְיָ, בּוֹנֵה יְרוּשָׁלָיִם. אָמֵן.",
+                  "translation": "And build Jerusalem, speedily in our days. Blessed are You, Adhonay, who builds Jerusalem. Amen.",
+                  "translit": "uvĕneh yĕrushalayim bimhera vĕyamenu. barukh ʾatta Adhonay, boneh yĕrushalayim. ʾamen."
+                },
+                {
+                  "type": "text",
+                  "id": "hatov-vehametiv",
+                  "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אָבִינוּ מַלְכֵּנוּ הַמֶּלֶךְ הַטּוֹב וְהַמֵּטִיב לַכֹּל, הוּא הֵטִיב הוּא מֵטִיב הוּא יֵיטִיב לָנוּ. הוּא גְמָלָנוּ, הוּא גוֹמְלֵנוּ, הוּא יִגְמְלֵנוּ חֵן וָחֶסֶד וְרַחֲמִים וְכָל טוּב.",
+                  "translation": "Blessed are You, Adhonay our God, King of the universe, our Father, our King, the King who is good and does good to all. He has done good, He does good, He will do good to us; He has bestowed, He bestows, He will bestow on us grace, loving-kindness and compassion, and all that is good.",
+                  "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾavinu malkenu hammelekh haṭṭov wĕhammeṭiv lakkol, huʾ heṭiv huʾ meṭiv huʾ yeṭiv lanu. huʾ ghĕmalanu, huʾ ghomĕlenu, huʾ yighmĕlenu ḥen waḥesedh wĕraḥămim wĕkhol ṭuv."
+                },
+                {
+                  "type": "rubric",
+                  "id": "nusach-note",
+                  "hebrew": "נוסח זה של ברכת המזון מבוסס על דברי הרמב\"ם ושאר הראשונים, ומי שקשה לו לומר את כל הנוסח הנהוג יכול לצאת בזה אפילו לכתחילה, וטוב מעט בכוונה מהרבות שלא בכוונה",
+                  "translation": "This version (nusaḥ) of Birkath HaMazon is based on the Rambam and the other Riʾshonim (early authorities). If you find the full customary text hard to say, you can fulfill your obligation with this one, even ideally — a little said with intention is better than a lot said without it."
+                }
+              ]
+            },
+            {
+              "id": "rambam",
+              "label": "Rambam",
+              "items": [
+                {
+                  "type": "text",
+                  "id": "rambam-hazan",
+                  "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַזָּן אֶת הָעוֹלָם כֻּלּוֹ בְּטוֹב בְּחֶסֶד וּבְרַחֲמִים, וְטוּבוֹ הַגָּדוֹל לֹא חָסַר לָנוּ וְאַל יֶחְסַר לָנוּ לְעוֹלָם וָעֶד, כִּי הוּא זָן וּמְפַרְנֵס לַכֹּל, כָּאָמוּר: פּוֹתֵ֥חַ אֶת־יָדֶ֑ךָ וּמַשְׂבִּ֖יעַ לְכׇל־חַ֣י רָצֽוֹן׃ וּמֵכִין מָזוֹן לְכָל בְּרִיּוֹתָיו אֲשֶׁר בָּרָא. בָּרוּךְ אַתָּה יְיָ, הַזָּן אֶת הַכֹּל.",
+                  "translation": "Blessed are You, Adhonay our God, King of the universe, who feeds the whole world with goodness, with loving-kindness and compassion. His great goodness has never failed us, and may it never fail us, forever and ever; for He feeds and provides for all, as it is said: You open Your hand, and satisfy the desire of every living thing. He prepares food for all His creatures that He has made. Blessed are You, Adhonay, who feeds all.",
+                  "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, hazzan ʾeth ha'olam kullo bĕṭov bĕḥesedh uvĕraḥămim, wĕṭuvo haggadhol loʾ ḥasar lanu wĕʾal yeḥsar lanu lĕ'olam wa'edh, ki huʾ zan umĕfarnes lakkol, kaʾamur: potheaḥ ʾeth-yadhekha umasbia' lĕkhol-ḥay raṣon. umekhin mazon lĕkhol bĕriyyothaw ʾăsher baraʾ. barukh ʾatta Adhonay, hazzan ʾeth hakkol."
+                },
+                {
+                  "type": "text",
+                  "id": "rambam-noda",
+                  "hebrew": "נוֹדֶה לָךְ יְיָ אֱלֹהֵינוּ, וּנְבָרְכָךְ מַלְכֵּנוּ, כִּי הִנְחַלְתָּ אֶת אֲבוֹתֵינוּ אֶרֶץ חֶמְדָּה טוֹבָה וּרְחָבָה, בְּרִית וְתוֹרָה, עַל שֶׁהוֹצֵאתָנוּ מֵאֶרֶץ מִצְרַיִם וּפְדִיתָנוּ מִבֵּית עֲבָדִים, עַל תּוֹרָתָךְ שֶׁלִּמַּדְתָּנוּ וְעַל חֻקֵּי רְצוֹנָךְ שֶׁהוֹדַעְתָּנוּ, עַל כֻּלָּם יְיָ אֱלֹהֵינוּ אָנוּ מוֹדִים לָךְ וּמְבָרְכִים אֶת שְׁמָךְ, כָּאָמוּר: וְאָכַלְתָּ֖ וְשָׂבָ֑עְתָּ וּבֵֽרַכְתָּ֙ אֶת־יְיָ֣ אֱלֹהֶ֔יךָ עַל־הָאָ֥רֶץ הַטֹּבָ֖ה אֲשֶׁ֥ר נָֽתַן־לָֽךְ׃ בָּרוּךְ אַתָּה יְיָ, עַל הָאָרֶץ וְעַל הַמָּזוֹן.",
+                  "translation": "We thank You, Adhonay our God, and bless You, our King, for You gave our forefathers as their heritage a cherished land, good and broad, the covenant and the Torah; for bringing us out of the land of Egypt and ransoming us from the house of bondage; for Your Torah that You taught us, and for the laws of Your will that You made known to us. For all of them, Adhonay our God, we thank You and bless Your name, as it is said: You shall eat and be satisfied, and bless Adhonay your God for the good land that He has given you. Blessed are You, Adhonay, for the land and for the food.",
+                  "translit": "nodheh lakh Adhonay ʾĕlohenu, unĕvarĕkhakh malkenu, ki hinḥalta ʾeth ʾăvothenu ʾereṣ ḥemda ṭova urĕḥava, bĕrith wĕthora, 'al shehoṣeʾthanu meʾereṣ miṣrayīm ufĕdhithanu mibbeth 'ăvadhim, 'al torathakh shellimmadhtanu wĕ'al ḥuqqe rĕṣonakh shehodha'tanu, 'al kullam Adhonay ʾĕlohenu ʾanu modhim lakh umĕvarĕkhim ʾeth shĕmakh, kaʾamur: wĕʾakhalta wĕsava'ĕta uverakhta ʾeth-Adhonay ʾĕlohekha 'al-haʾareṣ haṭṭova ʾăsher nathan-lakh. barukh ʾatta Adhonay, 'al haʾareṣ wĕ'al hammazon."
+                },
+                {
+                  "type": "text",
+                  "id": "rambam-rachem",
+                  "hebrew": "רַחֵם יְיָ אֱלֹהֵינוּ עַל יִשְׂרָאֵל עַמָּךְ וְעַל יְרוּשָׁלַיִם עִירָךְ וְעַל צִיּוֹן מִשְׁכַּן כְּבוֹדָךְ וְעַל הַבַּיִת הַגָּדוֹל וְהַקָּדוֹשׁ שֶׁנִּקְרָא שִׁמְךָ עָלָיו, וּמַלְכוּת בֵּית דָּוִד מְשִׁיחָךְ תַּחֲזִיר לִמְקוֹמָהּ בְּיָמֵינוּ. וּבְנֵה אֶת יְרוּשָׁלַיִם בְּקָרוֹב, כַּאֲשֶׁר דִּבַּרְתָּ. בָּרוּךְ אַתָּה יְיָ, בּוֹנֵה בְּרַחֲמָיו אֶת יְרוּשָׁלַיִם. אָמֵן.",
+                  "translation": "Have mercy, Adhonay our God, on Israel, Your people, on Jerusalem, Your city, on Zion, the dwelling place of Your glory, and on the great and holy House that is called by Your name; and restore the kingship of the house of David, Your anointed, to its place in our days. And build Jerusalem soon, as You have spoken. Blessed are You, Adhonay, who in His compassion builds Jerusalem. Amen.",
+                  "translit": "raḥem Adhonay ʾĕlohenu 'al yisraʾel 'ammakh wĕ'al yĕrushalayim 'irakh wĕ'al ṣiyyon mishkan kĕvodhakh wĕ'al habbayīth haggadhol wĕhaqqadhosh shenniqraʾ shimkha 'alaw, umalkhuth beth dawīdh mĕshiḥakh taḥăzir limqomah bĕyamenu. uvĕneh ʾeth yĕrushalayim bĕqarov, kaʾăsher dibbarta. barukh ʾatta Adhonay, boneh bĕraḥămaw ʾeth yĕrushalayim. ʾamen."
+                },
+                {
+                  "type": "text",
+                  "id": "rambam-hatov-vehametiv",
+                  "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הָאֵל, אָבִינוּ, מַלְכֵּנוּ, אַדִּירֵנוּ, בּוֹרְאֵנוּ, קְדוֹשֵׁנוּ, קְדוֹשׁ יַעֲקֹב, הַמֶּלֶךְ הַטּוֹב וְהַמֵּטִיב, שֶׁבְּכָל יוֹם וָיוֹם הוּא גּוֹמְלֵנוּ חֵן וָחֶסֶד וְרַחֲמִים וְכָל טוֹב.",
+                  "translation": "Blessed are You, Adhonay our God, King of the universe — the God, our Father, our King, our Mighty One, our Creator, our Holy One, the Holy One of Jacob, the King who is good and does good, who every single day bestows on us grace, loving-kindness and compassion, and all that is good.",
+                  "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, haʾel, ʾavinu, malkenu, ʾaddirenu, borĕʾenu, qĕdhoshenu, qĕdhosh ya'ăqov, hammelekh haṭṭov wĕhammeṭiv, shebbĕkhal yom wayom huʾ gomĕlenu ḥen waḥesedh wĕraḥămim wĕkhol ṭov."
+                },
+                {
+                  "type": "text",
+                  "id": "rambam-harahaman",
+                  "hebrew": "הָרַחֲמָן יִשְׁתַּבַּח לְדוֹרֵי דוֹרִים. הָרַחֲמָן יִתְפָּאַר לְנֵצַח נְצָחִים. הָרַחֲמָן יְפַרְנְסֵנוּ בְּכָבוֹד. הָרַחֲמָן יְזַכֵּנוּ לִימוֹת הַמָּשִׁיחַ וּלְבִנְיַן בֵּית הַמִּקְדָּשׁ וּלְחַיֵּי הָעוֹלָם הַבָּא. מִגְדּ֖וֹל יְשׁוּע֣וֹת מַלְכּ֑וֹ וְעֹֽשֶׂה־חֶ֧סֶד לִמְשִׁיח֛וֹ לְדָוִ֥ד וּלְזַרְע֖וֹ עַד־עוֹלָֽם׃ כְּ֭פִירִים רָשׁ֣וּ וְרָעֵ֑בוּ וְדֹרְשֵׁ֥י יְיָ֝֗ לֹא־יַחְסְר֥וּ כׇל־טֽוֹב׃ הוֹד֣וּ לַיְיָ֣ כִּי־ט֑וֹב כִּ֖י לְעוֹלָ֣ם חַסְדּֽוֹ׃",
+                  "translation": "May the Compassionate One be praised for all generations. May the Compassionate One be glorified for all eternity. May the Compassionate One provide for us with dignity. May the Compassionate One make us worthy of the days of the Messiah, the building of the sanctuary, and the life of the world to come. He gives great victories to His king, and shows loving-kindness to His anointed, to David and his descendants forever. Young lions lack and go hungry, but those who seek Adhonay shall not lack any good. Give thanks to Adhonay, for He is good, for His loving-kindness endures forever.",
+                  "translit": "haraḥăman yishtabbaḥ lĕdhore dhorim. haraḥăman yithpaʾar lĕneṣaḥ nĕṣaḥim. haraḥăman yĕfarnĕsenu bĕkhavodh. haraḥăman yĕzakkenu limoth hammashiaḥ ulĕvinyan beth hammiqdash ulĕḥayye ha'olam habbaʾ. mighdol yĕshu'oth malko wĕ'oseh-ḥesedh limshiḥo lĕdhawīdh ulĕzar'o 'adh-'olam. kĕfirim rashu wĕra'evu wĕdhorĕshe Adhonay loʾ-yaḥsĕru khol-ṭov. hodhu laAdhonay ki-ṭov ki lĕ'olam ḥasdo."
+                }
+              ]
+            }
+          ]
         }
       ]
     }

@@ -17,6 +17,8 @@ export const LABEL_MAP = {
   "(שתי פעמים)": "(twice)",
   "נ״א:": "alternate version:",
   "אִם חוֹזֵר בּוֹ בַּיּוֹם:": "if returning the same day:",
+  "בעשרה:": "before ten:",
+  "בסעדת נשואין:": "at a wedding meal:",
 };
 
 // @@-delimited ASCII placeholders (not e.g. null bytes) so this file stays
