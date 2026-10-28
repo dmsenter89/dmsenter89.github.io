@@ -43,7 +43,7 @@ if (!path) {
 // touches a non-Hebrew character on either side ("כָּל־שׁוּק." -> "kol-shwq.",
 // "[כָּל־לִבּוֹ" -> "[kol-livo"). Punctuation runs are split off and passed
 // through untouched, so the library only ever sees the Hebrew between them.
-const ASCII_PUNCTUATION = /([.,;:!?()[\]—]+)/;
+const ASCII_PUNCTUATION = /([.,;:!?()[\]—/]+)/;
 
 function transliterateAroundPunctuation(text) {
   return text

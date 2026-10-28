@@ -191,25 +191,28 @@ stands in for gershayim inside abbreviations.
 ## Gender-variant inline labels
 
 Some liturgy has a short instructional label marking where the text differs
-by the reciter's gender, e.g. `מוֹדֶה (אִשָּׁה: מוֹדָה) אֲנִי` — the label
-itself (`אִשָּׁה:`) isn't recited, so transliterating it literally
-(`ʾishsha:`) would be misleading. `inline-labels.mjs` maps known labels to a
-plain English rendering (`אִשָּׁה:` → `a woman says:`) that `generate.mjs`
-substitutes into `translit` only — the saved `hebrew` and rendered page both
-keep the real label. Add new labels to `LABEL_MAP` there as they come up;
-nothing else needs to change.
+by the reciter's gender. Following ArtScroll, both choices go inline in one
+bracket, each labeled: `[אִישׁ: מוֹדֶה / אִשָּׁה: מוֹדָה] אֲנִי`. The labels
+themselves (`אִישׁ:`, `אִשָּׁה:`) aren't recited, so transliterating them
+literally (`ʾishsha:`) would be misleading. `inline-labels.mjs` maps known
+labels to a plain English rendering (`אִשָּׁה:` → `a woman says:`) that
+`generate.mjs` substitutes into `translit` only — the saved `hebrew` and
+rendered page both keep the real label. Add new labels to `LABEL_MAP` there
+as they come up; nothing else needs to change. The same labeled-bracket form
+works for other conditional insertions, e.g. Tĕfillath HaDerekh's
+`[אִם חוֹזֵר בּוֹ בַּיּוֹם: וְתַחֲזִירֵנוּ לְשָׁלוֹם]`.
 
-Two established patterns for gender variation, both drawn from
-`Siddur_Edot_HaMizrach` on Sefaria (public API, no auth:
-`https://www.sefaria.org/api/texts/<ref>?lang=he&with=all`) — check there
-before inventing a new pattern for a blessing that already has one:
+Two patterns for gender variation:
 
-- **Same blessing, one word swaps**: append the alternate as a trailing
-  note after the sof pasuq, e.g.
-  `...שֶׁלֹּא עָשַׂנִי גּוֹי׃ (אִשָּׁה: גּוֹיָה)`.
+- **Same blessing, one word swaps**: the labeled bracket above, in place of
+  the word, e.g. `...שֶׁלֹּא עָשַׂנִי [אִישׁ: גּוֹי / אִשָּׁה: גּוֹיָה]׃`. The
+  English translation stays unmarked when English doesn't vary.
 - **Fully separate blessing**: e.g. the third of the three "shelo asani"
   blessings — a rubric cues each version (`האיש מברך` / `האשה מברכת בלי שם
-  ומלכות`) and each gets its own `text` item.
+  ומלכות`) and each gets its own `text` item. Check
+  `Siddur_Edot_HaMizrach` on Sefaria (public API, no auth:
+  `https://www.sefaria.org/api/texts/<ref>?lang=he&with=all`) before
+  inventing a new pattern for a blessing that already has one.
 
 ## Optional bracketed text
 

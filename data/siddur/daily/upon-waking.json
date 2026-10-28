@@ -14,9 +14,9 @@
         {
           "type": "text",
           "id": "modeh-ani",
-          "hebrew": "אֱלֹהַי, הַנְּשָׁמָה שֶׁנָּתַתָּ בִּי טְהוֹרָה, אַתָּה בְרָאתָהּ, אַתָּה יְצַרְתָּהּ, אַתָּה נְפַחְתָּהּ בִּי, וְאַתָּה מְשַׁמְּרָהּ בְּקִרְבִּי, וְאַתָּה עָתִיד לִטְּלָהּ מִמֶּנִּי, וּלְהַחֲזִירָהּ לִי לֶעָתִיד לָבוֹא, כָּל־זְמַן שֶׁהַנְּשָׁמָה בְקִרְבִּי, מוֹדֶה (אִשָּׁה: מוֹדָה) אֲנִי לְפָנֶיךָ יְיָ אֱלֹהַי [וֵאלֹהֵי אֲבוֹתַי], רִבּוֹן כָּל־הַמַּעֲשִׂים [אֲדוֹן כָּל־הַנְּשָׁמוֹת]. בָּרוּךְ אַתָּה יְיָ, הַמַּחֲזִיר נְשָׁמוֹת לִפְגָרִים מֵתִים׃",
+          "hebrew": "אֱלֹהַי, הַנְּשָׁמָה שֶׁנָּתַתָּ בִּי טְהוֹרָה, אַתָּה בְרָאתָהּ, אַתָּה יְצַרְתָּהּ, אַתָּה נְפַחְתָּהּ בִּי, וְאַתָּה מְשַׁמְּרָהּ בְּקִרְבִּי, וְאַתָּה עָתִיד לִטְּלָהּ מִמֶּנִּי, וּלְהַחֲזִירָהּ לִי לֶעָתִיד לָבוֹא, כָּל־זְמַן שֶׁהַנְּשָׁמָה בְקִרְבִּי, [אִישׁ: מוֹדֶה / אִשָּׁה: מוֹדָה] אֲנִי לְפָנֶיךָ יְיָ אֱלֹהַי [וֵאלֹהֵי אֲבוֹתַי], רִבּוֹן כָּל־הַמַּעֲשִׂים [אֲדוֹן כָּל־הַנְּשָׁמוֹת]. בָּרוּךְ אַתָּה יְיָ, הַמַּחֲזִיר נְשָׁמוֹת לִפְגָרִים מֵתִים׃",
           "translation": "My God, the soul You have given me is pure. You created it, You formed it, You breathed it into me, and You keep it safe within me; and one day You will take it from me, and give it back to me in the time to come. As long as the soul is within me, I give thanks before You, Adhonay my God [and God of my forefathers], Master of all works, [Lord of all souls]. Blessed are You, Adhonay, who restores souls to lifeless bodies.",
-          "translit": "ʾĕlohay, hannĕshama shennathatta bi ṭĕhora, ʾatta vĕraʾthah, ʾatta yĕṣartah, ʾatta nĕfaḥtah bi, wĕʾatta mĕshammĕrah bĕqirbi, wĕʾatta 'athidh liṭṭĕlah mimmenni, ulĕhaḥăzirah li le'athidh lavoʾ, kol-zĕman shehannĕshama vĕqirbi, modheh (a woman says: modha) ʾăni lĕfanekha Adhonay ʾĕlohay [weʾlohe ʾăvothay], ribbon kol-hamma'ăsim [ʾădhon kol-hannĕshamoth]. barukh ʾatta Adhonay, hammaḥăzir nĕshamoth lifgharim methim."
+          "translit": "ʾĕlohay, hannĕshama shennathatta bi ṭĕhora, ʾatta vĕraʾthah, ʾatta yĕṣartah, ʾatta nĕfaḥtah bi, wĕʾatta mĕshammĕrah bĕqirbi, wĕʾatta 'athidh liṭṭĕlah mimmenni, ulĕhaḥăzirah li le'athidh lavoʾ, kol-zĕman shehannĕshama vĕqirbi, [a man says: modheh / a woman says: modha] ʾăni lĕfanekha Adhonay ʾĕlohay [weʾlohe ʾăvothay], ribbon kol-hamma'ăsim [ʾădhon kol-hannĕshamoth]. barukh ʾatta Adhonay, hammaḥăzir nĕshamoth lifgharim methim."
         }
       ]
     },
@@ -207,16 +207,16 @@
         {
           "type": "text",
           "id": "shelo-asani-goy",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי גּוֹי׃ (אִשָּׁה: גּוֹיָה)",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי [אִישׁ: גּוֹי / אִשָּׁה: גּוֹיָה]׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who has not made me a gentile.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani goy. (a woman says: goya)"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani [a man says: goy / a woman says: goya]."
         },
         {
           "type": "text",
           "id": "shelo-asani-eved",
-          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי עָבֶד׃ (אִשָּׁה: שִׁפְחָה)",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא עָשַׂנִי [אִישׁ: עָבֶד / אִשָּׁה: שִׁפְחָה]׃",
           "translation": "Blessed are You, Adhonay our God, King of the universe, who has not made me a slave.",
-          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani 'avedh. (a woman says: shifḥa)"
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ 'asani [a man says: 'avedh / a woman says: shifḥa]."
         },
         {
           "type": "rubric",

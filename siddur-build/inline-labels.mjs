@@ -1,5 +1,5 @@
-// Small inline instructional labels -- e.g. the "(woman: <alternate word>)"
-// parenthetical used for gender-variant liturgy -- that should render as a
+// Small inline instructional labels -- e.g. the "[man: <word> / woman: <word>]"
+// bracket used for gender-variant liturgy -- that should render as a
 // plain English phrase in the transliteration column instead of being
 // transliterated themselves. They're a reading instruction, not text that's
 // actually recited, so "אִשָּׁה:" transliterating to "ʾishsha:" is wrong in
@@ -9,12 +9,14 @@
 //
 // To add a new label, add an entry here; nothing else needs to change.
 export const LABEL_MAP = {
+  "אִישׁ:": "a man says:",
   "אִשָּׁה:": "a woman says:",
   "אשה:": "a woman says:",
   "יִפְנֶה לְצַד יָמִין": "turn to the right",
   "יִפְנֶה לְצַד שְׂמֹאל": "turn to the left",
   "(שתי פעמים)": "(twice)",
   "נ״א:": "alternate version:",
+  "אִם חוֹזֵר בּוֹ בַּיּוֹם:": "if returning the same day:",
 };
 
 // @@-delimited ASCII placeholders (not e.g. null bytes) so this file stays
