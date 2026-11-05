@@ -30,13 +30,19 @@ The devcontainer also installs `lmt` (`go install github.com/driusan/lmt@latest`
 
 | Section | Path | Notes |
 |---|---|---|
-| Posts | `content/post/` | Page bundles; recent posts grouped by year under `content/post/24/`, `content/post/25/`, etc. |
+| Posts | `content/post/` | Page bundles grouped by year (`content/post/20/`…`26/`), named `MM-slug`; unfinished posts go in `wip/` (see below). Posts moved out of the old flat `YY-MM-slug` layout carry an `aliases:` entry for their old URL — keep it. |
 | Publications | `content/publication/` | Metadata-heavy front matter; body is optional |
 | Talks | `content/talk/` | Similar to publications |
 | Projects | `content/project/` | Similar to publications |
 | Static pages | `content/` root | `about.md`, `search.md`, `archives.md`, `privacy.md`, `terms.md` |
 
 All posts/talks/publications/projects use **page bundles** (a folder named for the slug containing `index.md` plus any images or data files).
+
+### Work-in-progress posts (`content/post/wip/`)
+
+Unfinished posts live in `content/post/wip/<slug>/`, named by slug only (no `MM-` prefix, since the publish month isn't known yet). `content/post/wip/_index.md` cascades `draft: true` onto everything under it and is itself never rendered, so **WIP posts must not set `draft:` in their own front matter** — the folder is the only switch. They show up under `hugo server -D` at `/post/wip/<slug>/` and are skipped by production builds.
+
+To publish: `git mv content/post/wip/<slug> content/post/YY/MM-<slug>`, then set `date:` to the publish date. Don't add an `aliases:` entry for the old `/post/wip/...` path — it was never public. New drafts go in `wip/`, never directly in a year folder.
 
 ### Custom layouts (`layouts/`)
 
