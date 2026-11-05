@@ -295,6 +295,24 @@ path-mirroring way `single.html` does, then hands each table off to
 marks up (`lang="he" dir="rtl"`) each row's first cell as Hebrew; omit it
 for tables with no Hebrew column (e.g. Sedher HaMishmara).
 
+**Appendix > Study Cycles** (`content/siddur/appendix/study-cycles/`) groups
+the one-year Tanakh plans: Sedher HaMishmara (a `tables` page) plus Tanakh by
+Parasha and Even Tanakh Year, which use `layout: "tanakh-cycle"`
+(`layouts/siddur/tanakh-cycle.html` + `assets/tanakh-cycle.js`). Their data
+file is `{ weekNames?, plans: {"6": [day], "5": [day]} }`, generated outside
+this repo, so replace it whole rather than hand-editing it. The intro is
+the page body and "How the plan was made" is front matter `notes`. The
+6/5-day and Torah/Nakh choice is remembered per page in localStorage under
+`siddur-cycle-<file name>`.
+
+Sedher HaMishmara's word counts (the stats row and the Words column) come
+from `node mishmara-lengths.mjs`, which fetches each row's Torah, Nĕviʾim,
+Kĕthuvim and Mishna text from Sefaria and writes `lengths` and `stats` into
+its JSON. Re-run it after changing any of that table's readings. Words are
+split on spaces and maqaf, matching the other two cycles' data to within
+about half a percent. A new Mishna name in the table needs a `MISHNA` entry
+in the script (site spelling → Sefaria title).
+
 **Appendix > Pronunciation & Transliteration is auto-generated, not
 hand-authored.** Letter names, sound descriptions, and notes live as
 hand-curated prose in the generator; only the "Write" symbols come from

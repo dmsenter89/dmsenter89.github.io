@@ -2,27 +2,61 @@
        intro (HTML paragraph above the table), headers
        ([]string), rows ([][]string), and optional hebrewColumn -- `true`
        styles/marks just each row's first cell as Hebrew, `"all"` does the
-       same for every cell (for tables where every column is Hebrew text). */ -}}
+       same for every cell (for tables where every column is Hebrew text).
+       Optional stack: true turns each row into a labelled card on phones,
+       for tables with too many text columns to fit (Sedher HaMishmara).
+       Optional lengths ([][4]int word counts per row) + stats add a stats
+       row, a legend and a stacked length bar per row; both are written by
+       siddur-build/mishmara-lengths.mjs. */ -}}
 <section class="siddur-table-section" id="{{ .id }}">
   <h2>{{ .title }}</h2>
   {{ with .intro }}<p>{{ . | safeHTML }}</p>{{ end }}
+  {{- with .stats }}
+  <div class="cycle-stats">
+    <div><b>{{ lang.FormatNumber 0 .avg }}</b><span>words / week</span></div>
+    <div><b>{{ lang.FormatNumber 0 .min }}–{{ lang.FormatNumber 0 .max }}</b><span>range</span></div>
+    <div><b>{{ lang.FormatNumber 0 .sd }}</b><span>std. dev.</span></div>
+    <div><b>{{ lang.FormatNumber 0 (div .avg 6.0) }}</b><span>words / day, 6 days</span></div>
+  </div>
+  <div class="cycle-legend">
+    {{- range $i, $c := slice "t" "m" "k" "q" }}
+    <span><span class="cycle-sw {{ $c }}"></span>{{ cond (eq $i 0) "Torah" (index $.headers $i) }} · {{ lang.FormatNumber 0 (index $.stats.trackAvg $i) }}</span>
+    {{- end }}
+    <span>(average words / week)</span>
+  </div>
+  {{- end }}
   <div class="siddur-table-wrap">
-    <table class="siddur-table">
+    <table class="siddur-table{{ if .stack }} siddur-table-stack{{ end }}">
       <thead>
         <tr>
           {{- range .headers }}<th>{{ . }}</th>{{ end }}
+          {{- if .lengths }}<th>Words</th>{{ end }}
         </tr>
       </thead>
       <tbody>
         {{- $hebrewColumn := .hebrewColumn }}
-        {{- range .rows }}
+        {{- $headers := .headers }}
+        {{- $lengths := .lengths }}
+        {{- $scale := cond (isset . "stats") (mul (float (index . "stats" "max")) 1.02) 1.0 }}
+        {{- range $r, $row := .rows }}
         <tr>
-          {{- range $i, $cell := . }}
+          {{- range $i, $cell := $row }}
           {{- if or (eq $hebrewColumn "all") (and (eq $i 0) $hebrewColumn) }}
           <td class="siddur-table-hebrew" lang="he" dir="rtl">{{ $cell | safeHTML }}</td>
           {{- else }}
-          <td>{{ $cell | safeHTML }}</td>
+          <td data-label="{{ index $headers $i }}">{{ $cell | safeHTML }}</td>
           {{- end }}
+          {{- end }}
+          {{- with $lengths }}
+          {{- $l := index . $r }}
+          {{- $left := 0.0 }}
+          {{- $names := slice "Torah" (index $headers 1) (index $headers 2) (index $headers 3) }}
+          <td class="siddur-table-len" data-label="Words"><span class="track">
+            {{- range $i, $c := slice "t" "m" "k" "q" }}
+            {{- $w := div (mul (float (index $l $i)) 100) $scale }}
+            {{- $tip := printf "%s: %s words" (index $names $i) (lang.FormatNumber 0 (index $l $i)) }}<i class="{{ $c }}" style="left:{{ $left }}%;width:{{ $w }}%" tabindex="0" data-tip="{{ $tip }}" aria-label="{{ $tip }}"></i>
+            {{- $left = add $left $w }}
+            {{- end }}</span><span>{{ lang.FormatNumber 0 (add (index $l 0) (index $l 1) (index $l 2) (index $l 3)) }}</span></td>
           {{- end }}
         </tr>
         {{- end }}

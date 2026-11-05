@@ -472,7 +472,17 @@ html.show-translation .siddur-rubric .siddur-translation {
   padding-bottom: 0.3rem;
 }
 
-.siddur-table-wrap { overflow-x: auto; }
+/* Edge shadows show when a table is wider than the screen: the "local"
+   cover gradients scroll with the content and hide each shadow once that
+   edge is reached. */
+.siddur-table-wrap {
+  overflow-x: auto;
+  background:
+    linear-gradient(to right, var(--siddur-bg) 30%, transparent) left / 2rem 100% no-repeat local,
+    linear-gradient(to left, var(--siddur-bg) 30%, transparent) right / 2rem 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%, color-mix(in srgb, var(--siddur-fg) 30%, transparent), transparent) left / 0.8rem 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%, color-mix(in srgb, var(--siddur-fg) 30%, transparent), transparent) right / 0.8rem 100% no-repeat scroll;
+}
 
 .siddur-table {
   border-collapse: collapse;
@@ -492,6 +502,8 @@ html.show-translation .siddur-rubric .siddur-translation {
   background: var(--siddur-sidebar-bg);
   font-weight: 600;
 }
+
+.siddur-table-stack td { white-space: normal; }
 
 .siddur-table-hebrew {
   font-family: "Noto Serif Hebrew", "Frank Ruhl Libre", serif;
@@ -583,6 +595,25 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
   }
 
   .siddur-hebrew { font-size: 1.4rem; }
+
+  /* Let reference tables wrap so most fit the screen without scrolling. */
+  .siddur-table th,
+  .siddur-table td { white-space: normal; padding: 0.35rem 0.45rem; }
+
+  /* stack: true tables: one labelled card per row. */
+  .siddur-table-stack thead { display: none; }
+  .siddur-table-stack tr { display: block; border-top: 1px solid var(--siddur-border); padding: 0.5rem 0; }
+  .siddur-table-stack, .siddur-table-stack tbody { display: block; }
+  .siddur-table-stack td { display: block; border: 0; padding: 0.1rem 0; }
+  .siddur-table-stack .siddur-table-len { width: auto; }
+  .siddur-table-stack .siddur-table-len .track { width: 8rem; }
+  /* The bar sits at the card's left edge here, so every label opens rightward. */
+  .siddur-table-stack .track i[data-tip]::after { left: 0; right: auto; }
+  .siddur-table-stack td + td::before {
+    content: attr(data-label) ": ";
+    color: var(--siddur-muted);
+    font-size: 0.85em;
+  }
 }
 
 /* --- Zemanim calculator (Appendix) --- */
@@ -664,4 +695,237 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
 .siddur-link-btn:hover {
   background: var(--siddur-accent);
   color: #fff;
+}
+
+/* --- Tanakh reading cycles (Appendix > Study Cycles) --- */
+
+.cycle-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  font-size: 0.8rem;
+  color: var(--siddur-muted);
+  margin: 0.75rem 0 0;
+  align-items: center;
+}
+
+.cycle-settings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-top: 1rem;
+}
+.cycle-group { display: flex; gap: 0.35rem; }
+
+.cycle-jump {
+  border: 1px solid var(--siddur-border);
+  background: var(--siddur-bg);
+  color: var(--siddur-fg);
+  border-radius: 999px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.85rem;
+  max-width: 11rem;
+}
+
+.cycle-week { margin-top: 1.75rem; scroll-margin-top: 4rem; }
+.cycle-week h2 {
+  font-size: 1.15rem;
+  margin: 0 0 0.4rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+.cycle-heads {
+  font-family: "Noto Serif Hebrew", serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--siddur-muted);
+}
+.cycle-sum {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--siddur-muted);
+  margin-left: auto;
+  font-variant-numeric: tabular-nums;
+}
+
+.cycle-card {
+  overflow-x: auto;
+  border: 1px solid var(--siddur-border);
+  border-radius: 8px;
+}
+.cycle-card table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+  font-variant-numeric: tabular-nums;
+}
+.cycle-card td {
+  padding: 0.5rem 0.6rem;
+  border-top: 1px solid var(--siddur-border);
+  vertical-align: middle;
+}
+.cycle-card tr:first-child td { border-top: 0; }
+.cycle-card td.day {
+  width: 2.75rem;
+  font-size: 0.75rem;
+  color: var(--siddur-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cycle-card td.ref { font-weight: 500; }
+.cycle-card td.heb {
+  font-family: "Noto Serif Hebrew", serif;
+  text-align: right;
+  color: var(--siddur-muted);
+  white-space: nowrap;
+}
+.cycle-card td.heb .ps { color: var(--siddur-accent); }
+.cycle-card .line { display: block; }
+.cycle-card .line.sub {
+  color: var(--siddur-muted);
+  font-weight: 400;
+  font-size: 0.92em;
+  margin-top: 2px;
+}
+
+/* Day length bar: Torah / Nevi'im / Ketuvim as three tints of the accent. */
+.cycle-card td.len {
+  width: 7rem;
+  font-size: 0.75rem;
+  color: var(--siddur-muted);
+}
+.cycle-card td.len { white-space: nowrap; }
+.cycle-card .track,
+.siddur-table .track {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: calc(100% - 2.6rem);
+  height: 6px;
+  margin-right: 0.4rem;
+  border-radius: 3px;
+  background: var(--siddur-border);
+}
+.cycle-card .track i,
+.siddur-table .track i { position: absolute; top: 0; bottom: 0; }
+.track i:first-child { border-radius: 3px 0 0 3px; }
+
+/* Tap (focus) or hover a segment for its word count. ::before is an
+   invisible taller hit area; ::after is the label. The first two segments'
+   labels open rightward, the last two leftward, so they stay on screen. */
+.track i[data-tip] { cursor: pointer; outline: none; }
+.track i[data-tip]::before { content: ""; position: absolute; inset: -9px 0; }
+.track i[data-tip]:hover,
+.track i[data-tip]:focus { box-shadow: 0 0 0 2px var(--siddur-bg), 0 0 0 3px var(--siddur-fg); z-index: 2; }
+.track i[data-tip]:hover::after,
+.track i[data-tip]:focus::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  padding: 0.2rem 0.5rem;
+  border-radius: 6px;
+  background: var(--siddur-fg);
+  color: var(--siddur-bg);
+  font: 500 0.75rem/1.3 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-style: normal;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px var(--siddur-shadow);
+  pointer-events: none;
+}
+.track i.k[data-tip]::after,
+.track i.q[data-tip]::after { left: auto; right: 0; }
+.cycle-card .t, .siddur-table .t, .cycle-sw.t { background: var(--siddur-accent); }
+.cycle-card .m, .siddur-table .m, .cycle-sw.m { background: color-mix(in srgb, var(--siddur-accent) 60%, var(--siddur-bg)); }
+.cycle-card .k, .siddur-table .k, .cycle-sw.k { background: color-mix(in srgb, var(--siddur-accent) 30%, var(--siddur-bg)); }
+/* Fourth track (Mishna, on Sedher HaMishmara): neutral, not an accent tint. */
+.siddur-table .q, .cycle-sw.q { background: color-mix(in srgb, var(--siddur-fg) 35%, var(--siddur-bg)); }
+.siddur-table-len { width: 8.5rem; font-size: 0.8rem; color: var(--siddur-muted); font-variant-numeric: tabular-nums; }
+.siddur-table-len .track { width: calc(100% - 3.2rem); }
+.siddur-table-section > .cycle-stats { margin: 0.75rem 0 0.25rem; }
+.siddur-prose + .cycle-stats { margin-top: 1rem; }
+.siddur-table-section > .cycle-legend { margin: 0 0 0.75rem; }
+
+.cycle-sw {
+  display: inline-block;
+  width: 12px;
+  height: 6px;
+  border-radius: 3px;
+  margin-right: 0.35rem;
+  vertical-align: middle;
+}
+
+.cycle-card td.end { width: 2rem; text-align: center; }
+.cycle-card td.end .cycle-mk { display: block; margin: 1px auto; }
+.cycle-mk {
+  display: inline-block;
+  min-width: 1.4rem;
+  font-size: 0.75rem;
+  padding: 0 0.3rem;
+  border-radius: 5px;
+  border: 1px solid var(--siddur-border);
+  color: var(--siddur-muted);
+  text-align: center;
+}
+.cycle-mk.pe {
+  font-family: "Noto Serif Hebrew", serif;
+  border-color: transparent;
+  background: color-mix(in srgb, var(--siddur-accent) 14%, var(--siddur-bg));
+  color: var(--siddur-accent);
+}
+
+.cycle-catch {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: var(--siddur-muted);
+  padding: 0.45rem 0.6rem;
+  border-top: 1px dashed var(--siddur-border);
+}
+
+.cycle-notes {
+  margin-top: 2rem;
+  padding: 0.25rem 1rem;
+  border: 1px solid var(--siddur-border);
+  border-radius: 8px;
+  background: var(--siddur-sidebar-bg);
+}
+.cycle-notes summary { cursor: pointer; font-weight: 600; padding: 0.5rem 0; }
+.cycle-notes p { color: var(--siddur-muted); font-size: 0.9rem; }
+.cycle-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0.5rem 0;
+  font-variant-numeric: tabular-nums;
+}
+.cycle-stats div { display: flex; flex-direction: column; }
+.cycle-stats b { font-size: 1.05rem; font-weight: 600; }
+.cycle-stats span {
+  font-size: 0.7rem;
+  color: var(--siddur-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.cycle-card .ps-phone { display: none; }
+
+/* Phones: the Hebrew column mostly repeats the English book names, so it
+   gives way to the length bar; its only unique bit, the parasha that starts
+   mid-reading (Even Tanakh Year), moves into the reference line instead. */
+@media (max-width: 560px) {
+  .cycle-card td { padding: 0.5rem 0.4rem; }
+  .cycle-card td.heb { display: none; }
+  .cycle-card .ps-phone {
+    display: inline;
+    font-family: "Noto Serif Hebrew", serif;
+    font-weight: 400;
+    color: var(--siddur-accent);
+  }
+  .cycle-card td.len { width: 6.6rem; }
+  .cycle-card .track { width: calc(100% - 2.2rem); margin-right: 0.25rem; }
+  /* The bar sits at the card's right edge here, so labels open leftward. */
+  .cycle-card .track i[data-tip]::after { left: auto; right: 0; }
+  .cycle-sum { margin-left: 0; }
 }
