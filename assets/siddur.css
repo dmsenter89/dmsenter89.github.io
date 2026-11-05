@@ -608,7 +608,7 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
   .siddur-table-stack .siddur-table-len { width: auto; }
   .siddur-table-stack .siddur-table-len .track { width: 8rem; }
   /* The bar sits at the card's left edge here, so every label opens rightward. */
-  .siddur-table-stack .track i[data-tip]::after { left: 0; right: auto; }
+  .siddur-table.siddur-table-stack .track i[data-tip]::after { left: 0; right: auto; }
   .siddur-table-stack td + td::before {
     content: attr(data-label) ": ";
     color: var(--siddur-muted);
