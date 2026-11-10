@@ -169,7 +169,9 @@ over the content tree.
   end of Shaḥrith's ʾAshre → Shabbat Musaf; after the Shabbat 'Ămidha, a
   "Continue:" row back to 'Arvith/Minḥa `#conclusion` and Shaḥrith
   `#ashrei` (Sedher HaYom is skipped on Shabbat); after Musaf → Shaḥrith
-  `#kawe`.
+  `#kawe`. Top of Minḥa's Taḥănun (so Shaḥrith's too, via `include`) →
+  Yamim Noraʾim > Widduy `#widduy`, with a "Continue:" row back to each
+  service's `#tachanun`.
 
 ## Divine Name
 
@@ -490,7 +492,9 @@ approved. ("Batch" numbers below refer to the 2026-10 retranslation passes.)
 - **Participles after a second-person opening** stay second person ("You
   make the dew fall", "You sustain the living").
 - **Rubric vocabulary:** "say the bĕrakha" (not "recite the blessing");
-  "the service" for תפלה as a prayer service; "ask a rabbi"; "our custom" /
+  "the service" for תפלה as a prayer service; "ask a rabbi"; "Hashem", not
+  "God", for God in rubrics ("pray to Hashem", "between you and Hashem"),
+  except in a quoted formula ("Adhonay, the God of Israel"); "our custom" /
   "the widespread custom" for מנהג; "a barrier (ḥăṣiṣa)"; "vessels" for כלים.
 - **Shaḥrith** — Yoṣer ʾor, ʾAhăvath 'olam, ʾĔmeth wĕyaṣṣiv, the Sedher HaYom
   verses, Qawweh and ʾEn kelohenu are settled as they stand in

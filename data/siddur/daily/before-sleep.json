@@ -7,6 +7,19 @@
       "items": [
         {
           "type": "rubric",
+          "id": "mehila-rubric",
+          "hebrew": "קדם השינה מוחל לכל מי שציער אותו, כמנהג מר זוטרא בכל לילה (מגלה כח ע״א)",
+          "translation": "Before going to sleep, forgive everyone who has hurt you, as Mar Zuṭra did every night (Mĕghilla 28a):"
+        },
+        {
+          "type": "text",
+          "id": "mehila",
+          "hebrew": "מָחוּל לְכׇל מִי שֶׁצִּעֵר אוֹתִי.",
+          "translation": "I forgive everyone who has caused me pain.",
+          "translit": "maḥul lĕkhol mi sheṣṣi'er ʾothi."
+        },
+        {
+          "type": "rubric",
           "id": "rubric-1",
           "hebrew": "כשיכנס אדם למטתו לישן בלילה מברך",
           "translation": "When you get into bed for the night, say this bĕrakha:"

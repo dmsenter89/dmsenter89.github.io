@@ -1,0 +1,455 @@
+{
+  "title": "Widduy",
+  "sections": [
+    {
+      "id": "introduction",
+      "title": "Introduction",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "intro-law",
+          "hebrewLead": "עקר הדין.",
+          "lead": "The Basic Law.",
+          "hebrew": "מצות וידוי מן התורה היא בשעה שאדם עושה תשובה מחטאו, שנאמר \"והתודו את חטאתם אשר עשו\" (במדבר ה, ז; רמב״ם תשובה א, א). ויום הכפורים זמן תשובה הוא לכל, ולכן חיבים הכל בו בתשובה ובוידוי (רמב״ם תשובה ב, ט).",
+          "translation": "By Torah law, the miṣwa of widduy (confession) applies when you do tĕshuva (return) for something you did wrong, as it says, \"they shall confess the wrong they have done\" (Numbers 5:7; Rambam, Tĕshuva 1:1). Yom HaKippurim is a time of tĕshuva for everyone, so everyone is obligated in tĕshuva and widduy on it (Rambam, Tĕshuva 2:9)."
+        },
+        {
+          "type": "rubric",
+          "id": "intro-custom",
+          "hebrewLead": "המנהג.",
+          "lead": "Our Custom.",
+          "hebrew": "נהגו בכל עדות המזרח לומר וידוי וי״ג מדות בכל יום אחר תפלת העמידה, בשחרית ובמנחה, ויסודו מדברי האר״י ז״ל (בא״ח כי תשא; כה״ח קלא). ואין זה מעקר הדין אלא מנהג, ועל כן בימים ובמקומות שנהגו לדלגו, מדלגים בלא חשש.",
+          "translation": "All the communities of the East have the custom of saying widduy and the Thirteen Attributes every day after the 'Ămidha, at Shaḥrith and Minḥa. It goes back to the words of the ʾAri, of blessed memory (Ben ʾIsh Ḥay, Ki Thissa; Kaf HaḤayyim 131). It isn't required by the basic law, only a custom, so on the days and in the places where the custom is to skip it, you can skip it without any concern."
+        },
+        {
+          "type": "rubric",
+          "id": "intro-page",
+          "hebrewLead": "סדר הדף.",
+          "lead": "This Page.",
+          "hebrew": "בדף זה הוידוי וי״ג מדות כמנהג היום, ואחריהם קצת מדיני תשובה, וסדר חשבון הנפש למי שרוצה לפשפש במעשיו בימים הנוראים או בכל לילה קדם השכיבה.",
+          "translation": "This page gives widduy and the Thirteen Attributes as they're said today, followed by some of the laws of tĕshuva, and an order of ḥeshbon hannefesh (self-reckoning) for anyone who wants to examine their deeds during the Yamim Noraʾim, or every night before going to sleep."
+        }
+      ]
+    },
+    {
+      "id": "laws",
+      "title": "Laws of Widduy",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "laws-days",
+          "hebrewLead": "הימים.",
+          "lead": "The Days.",
+          "hebrew": "אין אומרים וידוי בימים אלו, וכן לא במנחה שלפניהם: ראש חדש; כל חדש ניסן; י״ד באייר; ל״ג לעמר; מראש חדש סיון עד י״ב בו; תשעה באב; ט״ו באב; ממוצאי יום הכפורים עד סוף תשרי; חנכה; ט״ו בשבט; י״ד וט״ו באדר הראשון ובאדר השני, וכשחל ט״ו בשבת, גם בט״ז (כה״ח תרפח ס״ק מז).",
+          "translation": "Widduy isn't said on these days, nor at the Minḥa before them: Roʾsh Ḥodhesh; all of Nisan; the 14th of ʾIyyar; Lag La'Omer; from Roʾsh Ḥodhesh Siwan through the 12th; Tish'a BĕʾAv; the 15th of ʾAv; from the end of Yom HaKippurim through the end of Tishri; Ḥănukka; the 15th of Shĕvaṭ; the 14th and 15th of both ʾAdhar I and ʾAdhar II — and when the 15th falls on Shabbath, the 16th too (Kaf HaḤayyim 688:47)."
+        },
+        {
+          "type": "rubric",
+          "id": "laws-eves",
+          "hebrewLead": "ערב ראש השנה וערב יום הכפורים.",
+          "lead": "The Eves of Roʾsh HashShana and Yom HaKippurim.",
+          "hebrew": "בערב ראש השנה אין אומרים וידוי בשחרית ובמנחה, אבל במנחה שלפניו אומרים (בא״ח נצבים ב). בערב יום הכפורים אין אומרים בשחרית; ובמנחה שבו מתודים בתוך העמידה בלבד, ולא אחריה.",
+          "translation": "On the eve of Roʾsh HashShana, widduy isn't said at Shaḥrith or Minḥa, but it is said at the Minḥa of the day before (Ben ʾIsh Ḥay, Niṣṣavim 2). On the eve of Yom HaKippurim it isn't said at Shaḥrith; at that day's Minḥa, widduy is said inside the 'Ămidha only, not after it."
+        },
+        {
+          "type": "rubric",
+          "id": "laws-mourner-groom",
+          "hebrewLead": "אבל, חתן וברית.",
+          "lead": "A Mourner, a Groom, and a Bĕrith.",
+          "hebrew": "אין אומרים וידוי בבית האבל כל שבעה, כשהאבל שם; ואם בא האבל לבית הכנסת, הצבור אומרים והוא אינו אומר (שו״ע קלא, ד; כה״ח שם ס״ק נט). וכן כשיש חתן במנין כל שבעת ימי המשתה, ואפלו קדם החפה כשהוא ושושביניו מוכנים לה (שם ס״ק סט; רב פעלים ח״ד או״ח ד). ונהגו שלא לומר וידוי ביום הברית כשאבי הבן, הסנדק או המוהל במנין, אף שהברית במקום אחר.",
+          "translation": "Widduy isn't said in a mourner's house all seven days of mourning, while the mourner is there. If the mourner comes to the synagogue, the congregation says it and the mourner doesn't (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 131:4; Kaf HaḤayyim there, 59). The same goes when a groom is in the minyan, all seven days of the wedding celebration, and even before the ḥuppa, once he and his attendants are ready for it (there, 69; Rav Pĕ'alim vol. 4, ʾOraḥ Ḥayyim 4). Our custom is also not to say widduy on the day of a bĕrith mila when the baby's father, the sandaq or the mohel is in the minyan, even if the bĕrith is somewhere else."
+        },
+        {
+          "type": "rubric",
+          "id": "laws-fast",
+          "hebrewLead": "תענית צבור.",
+          "lead": "A Public Fast.",
+          "hebrew": "בתענית צבור אומרים וידוי וי״ג מדות וסליחות אף כשיש שם אבל או חתן, אבל הם עצמם אינם אומרים (שו״ע קלא, ה; כה״ח שם ס״ק עח, צ).",
+          "translation": "On a public fast, widduy, the Thirteen Attributes and sĕliḥoth are said even when a mourner or a groom is there, though they themselves don't say them (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 131:5; Kaf HaḤayyim there, 78, 90)."
+        }
+      ]
+    },
+    {
+      "id": "practices",
+      "title": "How to Say It",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "practices-slowly",
+          "hebrewLead": "בנחת.",
+          "lead": "Slowly.",
+          "hebrew": "יאמר הוידוי בנחת ובלב נשבר, וישהה מעט בין תבה לתבה, לידע לפני מי הוא מתודה (כה״ח קלא ס״ק יז).",
+          "translation": "Say widduy slowly and with a broken heart, pausing a little between words, so you know before Whom you are confessing (Kaf HaḤayyim 131:17)."
+        },
+        {
+          "type": "rubric",
+          "id": "practices-standing",
+          "hebrewLead": "בעמידה.",
+          "lead": "Standing.",
+          "hebrew": "אומרו בעמידה, ולא יסמך על דבר; וזקן או חולה מתר לו לסמך (בא״ח כי תשא ז).",
+          "translation": "Say it standing, without leaning on anything; someone elderly or ill may lean (Ben ʾIsh Ḥay, Ki Thissa 7)."
+        },
+        {
+          "type": "rubric",
+          "id": "practices-bowing",
+          "hebrewLead": "שחיה והכאה.",
+          "lead": "Bowing and Striking the Chest.",
+          "hebrew": "שוחה מעט כבמודים, ולא הרבה (קשר גודל יח, ו). ועל כל תבה מן האלפא ביתא מכה בנחת באגרופו הימני על לבו (בא״ח כי תשא ג).",
+          "translation": "Bow slightly, as at Modhim, but not deeply (Qesher Gudhal 18:6). At each word of the alphabet, strike your chest gently with your right fist (Ben ʾIsh Ḥay, Ki Thissa 3)."
+        },
+        {
+          "type": "rubric",
+          "id": "practices-congregation",
+          "hebrewLead": "עם הצבור.",
+          "lead": "With the Congregation.",
+          "hebrew": "אם רואה צבור מתודים, אף שכבר התודה, מתודה עמהם, ודיו \"חטאנו, עוינו, פשענו\" (שם ז).",
+          "translation": "If you see a congregation saying widduy, join them even if you've already said it; \"ḥaṭaʾnu, 'awinu, pasha'nu\" is enough (there, 7)."
+        }
+      ]
+    },
+    {
+      "id": "widduy",
+      "title": "Widduy",
+      "items": [
+        {
+          "type": "text",
+          "id": "widduy-anna",
+          "hebrew": "אָנָּא יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ. תָּבֹא לְפָנֶיךָ תְּפִלָּתֵנוּ. וְאַל־תִּתְעַלַּם מַלְכֵּנוּ מִתְּחִנָּתֵנוּ. שֶׁאֵין אֲנַחְנוּ עַזֵּי פָנִים וּקְשֵׁי עֹרֶף לוֹמַר לְפָנֶיךָ יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ צַדִּיקִים אֲנַחְנוּ וְלֹא חָטָאנוּ. אֲבָל חָטָאנוּ. עָוִינוּ. פָּשַׁעְנוּ. אֲנַחְנוּ וַאֲבוֹתֵינוּ וְאַנְשֵׁי בֵיתֵנוּ:",
+          "translation": "We beseech You, Adhonay our God and God of our forefathers: let our prayer come before You, and do not, our King, turn away from our plea. For we are not so brazen-faced and stiff-necked as to say before You, Adhonay our God and God of our forefathers, \"We are righteous, and we have not erred.\" But we have erred, we have done wrong, we have defied You — we, and our forefathers, and the people of our household.",
+          "translit": "ʾannaʾ Adhonay ʾĕlohenu weʾlohe ʾăvothenu. tavoʾ lĕfanekha tĕfillathenu. wĕʾal-thith'allam malkenu mittĕḥinnathenu. sheʾen ʾănaḥnu 'azze fanim uqĕshe 'oref lomar lĕfanekha Adhonay ʾĕlohenu weʾlohe ʾăvothenu ṣaddiqim ʾănaḥnu wĕloʾ ḥaṭaʾnu. ʾăval ḥaṭaʾnu. 'awinu. pasha'nu. ʾănaḥnu waʾăvothenu wĕʾanshe vethenu:"
+        },
+        {
+          "type": "text",
+          "id": "widduy-ashamnu",
+          "hebrew": "אָשַׁמְנוּ. בָּגַדְנוּ. גָּזַלְנוּ. דִּבַּרְנוּ דֹפִי וְלָשׁוֹן הָרָע. הֶעֱוִינוּ. וְהִרְשַׁעְנוּ. זַדְנוּ. חָמַסְנוּ. טָפַלְנוּ שֶׁקֶר וּמִרְמָה. יָעַצְנוּ עֵצוֹת רָעוֹת. כִּזַּבְנוּ. כָּעַסְנוּ. לַצְנוּ. מָרַדְנוּ. מָרִינוּ דְבָרֶיךָ. נִאַצְנוּ. נִאַפְנוּ. סָרַרְנוּ. עָוִינוּ. פָּשַׁעְנוּ. פָּגַמְנוּ. צָרַרְנוּ. צִעַרְנוּ אָב וָאֵם. קִשִּׁינוּ עֹרֶף. רָשַׁעְנוּ. שִׁחַתְנוּ. תִּעַבְנוּ. תָּעִינוּ וְתִעֲתַעְנוּ. וְסַרְנוּ מִמִּצְוֹתֶיךָ וּמִמִּשְׁפָּטֶיךָ הַטּוֹבִים וְלֹא שָׁוָה לָנוּ. וְאַתָּה צַדִּיק עַל־כָּל־הַבָּא עָלֵינוּ. כִּי אֱמֶת עָשִׂיתָ. וַאֲנַחְנוּ הִרְשָׁעְנוּ:",
+          "translation": "We have been guilty; we have betrayed; we have stolen; we have spoken spite and slander. We have perverted; we have caused wickedness; we have acted in arrogance; we have done violence; we have framed falsehood and deceit; we have given evil counsel. We have lied; we have raged; we have scoffed; we have rebelled; we have defied Your words; we have scorned; we have been unfaithful; we have been stubborn; we have done wrong; we have defied You; we have done damage; we have caused distress; we have pained father and mother; we have been stiff-necked; we have acted wickedly; we have corrupted; we have done what is abhorrent; we have strayed, and led others astray. We have turned aside from Your commandments and Your good laws, and it has not profited us. And You are righteous in all that has come upon us, for You have acted in truth, and we have acted wickedly.",
+          "translit": "ʾashamnu. baghadhnu. gazalnu. dibbarnu dhofi wĕlashon hara'. he'ĕwinu. wĕhirsha'nu. zadhnu. ḥamasnu. ṭafalnu sheqer umirma. ya'aṣnu 'eṣoth ra'oth. kizzavnu. ka'asnu. laṣnu. maradhnu. marinu dhĕvarekha. niʾaṣnu. niʾafnu. sararnu. 'awinu. pasha'nu. paghamnu. ṣararnu. ṣi'arnu ʾav waʾem. qishshinu 'oref. rasha'nu. shiḥathnu. ti'avnu. ta'inu wĕthi'ătha'nu. wĕsarnu mimmiṣwothekha umimmishpaṭekha haṭṭovim wĕloʾ shawa lanu. wĕʾatta ṣaddiq 'al-khol-habbaʾ 'alenu. ki ʾĕmeth 'asitha. waʾănaḥnu hirsha'ĕnu:"
+        }
+      ]
+    },
+    {
+      "id": "thirteen-attributes",
+      "title": "The Thirteen Attributes",
+      "items": [
+        {
+          "type": "text",
+          "id": "el-erekh-appayim",
+          "hebrew": "אֵל אֶרֶךְ אַפַּיִם אַתָּה וּבַעַל הָרַחֲמִים. גְּדֻלַּת רַחֲמֶיךָ וַחֲסָדֶיךָ הוֹדַעְתָּ לֶעָנָו מִקֶּדֶם. וְכֵן כָּתוּב בְּתוֹרָתָךְ.",
+          "translation": "God, You are slow to anger, and You are the Master of compassion; the greatness of Your compassion and Your kindnesses You made known to the humble one long ago; and so it is written in Your Torah:",
+          "translit": "ʾel ʾerekh ʾappayīm ʾatta uva'al haraḥămim. gĕdhullath raḥămekha waḥăsadhekha hodha'ta le'anaw miqqedhem. wĕkhen kathuv bĕthorathakh."
+        },
+        {
+          "type": "text",
+          "id": "thirteen-attributes-wayyeredh",
+          "hebrew": "וַיֵּ֤רֶד יְיָ֙ בֶּֽעָנָ֔ן וַיִּתְיַצֵּ֥ב עִמּ֖וֹ שָׁ֑ם וַיִּקְרָ֥א בְשֵׁ֖ם יְיָ׃ וְשָׁם נֶאֱמַר:",
+          "translation": "And Adhonay came down in the cloud, and stood with him there, and proclaimed the name of Adhonay. And there it is said:",
+          "translit": "wayyeredh Adhonay be'anan wayyithyaṣṣev 'immo sham wayyiqraʾ vĕshem Adhonay. wĕsham neʾĕmar:"
+        },
+        {
+          "type": "text",
+          "id": "thirteen-attributes-wayyaavor",
+          "hebrew": "וַיַּעֲבֹ֨ר יְיָ֥ ׀ עַל־פָּנָיו֮ וַיִּקְרָא֒ יְיָ֣ ׀ יְיָ֔ אֵ֥ל רַח֖וּם וְחַנּ֑וּן אֶ֥רֶךְ אַפַּ֖יִם וְרַב־חֶ֥סֶד וֶאֱמֶֽת׃ נֹצֵ֥ר חֶ֙סֶד֙ לָאֲלָפִ֔ים נֹשֵׂ֥א עָוֺ֛ן וָפֶ֖שַׁע וְחַטָּאָ֑ה וְנַקֵּה֙",
+          "translation": "And Adhonay passed before him and proclaimed: Adhonay, Adhonay, God compassionate and gracious, slow to anger, and abounding in loving-kindness and truth; keeping loving-kindness for thousands, forgiving wrongdoing, defiance and error, and cleansing.",
+          "translit": "wayya'ăvor Adhonay 'al-fanaw wayyiqraʾ Adhonay Adhonay ʾel raḥum wĕḥannun ʾerekh ʾappayim wĕrav-ḥesedh weʾĕmeth. noṣer ḥesedh laʾălafim noseʾ 'awon wafesha' wĕḥaṭṭaʾa wĕnaqqeh"
+        },
+        {
+          "type": "links",
+          "id": "widduy-return",
+          "label": "Continue:",
+          "links": [
+            {
+              "href": "/siddur/daily/shahrith/#tachanun",
+              "label": "← Shaḥrith (Taḥănun)"
+            },
+            {
+              "href": "/siddur/daily/minha/#tachanun",
+              "label": "← Minḥa (Taḥănun)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teshuva",
+      "title": "Some Laws of Tĕshuva",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "teshuva-foundation",
+          "hebrewLead": "היסוד.",
+          "lead": "The Foundation.",
+          "hebrew": "התשובה תקונו של אדם היא: שישוב לעבודת הבורא אחר שיצא ממנה, וישיב מה שאבד, כחולה שחוזר לבריאותו (חובות הלבבות, שער התשובה פ״א). וכלנו צריכים לתשובה, שאין אדם שיוכל לומר זכיתי לבי (חורב סעיף תקכ); ואפלו חטא כל ימיו, בן ה׳ הוא, ואביו קורא לו לשוב (שם סעיף תקיג).",
+          "translation": "Tĕshuva is how a person is repaired: returning to the service of the Creator after leaving it, and restoring what was lost, like a sick person coming back to health (Ḥovoth HalLĕvavoth, Sha'ar HatTĕshuva 1). All of us need tĕshuva, since no one can say \"I have made my heart pure\" (Ḥorev §520); and even someone who did wrong all their life is still Hashem's child, and their Father is calling them to return (there, §513)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-miswa",
+          "hebrewLead": "המצוה.",
+          "lead": "The Miṣwa.",
+          "hebrew": "העובר על אחת מכל המצות, בזדון או בשגגה, כשישוב מחטאו חיב להתודות לפני ה׳, ווידוי זה מצות עשה (רמב״ם תשובה א, א). ובזמן הזה שאין מקדש ומזבח כפרה, אין לנו אלא תשובה, והיא מכפרת על כל העברות (שם א, ח).",
+          "translation": "Anyone who breaks any of the miṣwoth, on purpose or by mistake, must confess before Hashem when returning from that wrong, and this widduy is a positive miṣwa (Rambam, Tĕshuva 1:1). Nowadays, with no Temple and no altar to bring pardon, all we have is tĕshuva, and it brings pardon for every misdeed (there, 1:8)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-what",
+          "hebrewLead": "מהי התשובה.",
+          "lead": "What Tĕshuva Is.",
+          "hebrew": "שיעזב החוטא חטאו ויסירנו ממחשבתו, ויגמר בלבו שלא יעשהו עוד; ויתנחם על שעבר; ויתודה בשפתיו מה שגמר בלבו (שם ב, ג). ואלו ארבעה גדרי התשובה: החרטה, העזיבה, הוידוי ובקשת המחילה, והקבלה שלא ישוב (חובות הלבבות שם פ״ד).",
+          "translation": "Leave the wrong behind and put it out of your mind, resolving in your heart never to do it again; regret what you did; and say aloud what you've resolved in your heart (there, 2:3). These are the four parts of tĕshuva: regret, leaving the wrong behind, widduy together with asking forgiveness, and taking on never to go back to it (Ḥovoth HalLĕvavoth there, 4)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-wording",
+          "hebrewLead": "נסח הוידוי.",
+          "lead": "The Wording of Widduy.",
+          "hebrew": "עקרו: \"אנא ה׳, חטאתי, עויתי, פשעתי לפניך, ועשיתי כך וכך, והרי נחמתי ובשתי במעשי, ולעולם איני חוזר לדבר זה\"; והמרבה ומאריך בוידוי הרי זה משבח (רמב״ם שם א, ב). וצריך לפרט את החטא (שם ב, ד); ובעברות שבין אדם למקום אינו מפרסם עצמו, אלא מפרט חטאיו לפני ה׳ בינו לבין עצמו (שם ב, ז). ועקר הוידוי שנהגו בו כל ישראל: \"אבל אנחנו חטאנו\" (שם ב, י).",
+          "translation": "Its core is: \"Please, Adhonay, I have erred, I have done wrong, I have defied You, and I did such-and-such; now I regret it and am ashamed of what I did, and I will never go back to it.\" The more you add and the longer your widduy, the more praiseworthy it is (Rambam there, 1:2). You need to name the wrong specifically (there, 2:4); but for wrongs between you and Hashem, don't make them public — name them before Hashem, privately (there, 2:7). The heart of the widduy all Israel has taken on is \"but we have erred\" (there, 2:10)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-future",
+          "hebrewLead": "עקרו העתיד.",
+          "lead": "Its Core Is the Future.",
+          "hebrew": "המתודה בדברים ולא גמר בלבו לעזב, דומה לטובל ושרץ בידו (שם ב, ד). שהוידוי והחרטה אין בהם כח, אם אינו מתאמץ מכאן ולהבא לחדל מן החטא ולהיטיב דרכו (חורב סעיף תקיז).",
+          "translation": "Someone who confesses in words without resolving in their heart to leave the wrong behind is like someone who immerses in a miqweh (ritual bath) while still holding something impure (there, 2:4). Widduy and regret have no power unless you make the effort, from now on, to stop the wrong and improve your ways (Ḥorev §517)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-gradual",
+          "hebrewLead": "בהדרגה.",
+          "lead": "Step by Step.",
+          "hebrew": "יתחיל בדבר קטן וקל, ואפלו בדבר המתר לו, ומשם יקל לו לכבש יצרו גם בדבר הגדול; וכיון שהצליח פעם אחת, כבר פעל הרבה, שבפעם השנית יקל לו יותר. ויתפלל לה׳ שיעזרהו (חורב סעיף תקיח).",
+          "translation": "Start with something small and easy, even with something that's permitted to you, and from there it gets easier to master your inclination in bigger things too. Once you've succeeded even once, you've already achieved a lot, because the second time is easier still. And pray to Hashem to help you (Ḥorev §518)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-despair",
+          "hebrewLead": "שלא להתיאש.",
+          "lead": "Not Giving Up.",
+          "hebrew": "אל יניח לצער על העבר להמס את לבו עד שיתיאש, אלא כל שמרגיש שנפל, יתחזק ביותר להיטיב דרכו (חורב סעיף תקטז). ואל יאמר שאינו יכול עוד, אחר שנכשל פעמים רבות; שהכל בידי שמים חוץ מיראת שמים, ומה שה׳ דורש ממנו נתן לו כח לעשותו (שם סעיף תקיט). ובעל תשובה אהוב ונחמד לפני הבורא כאלו לא חטא מעולם (רמב״ם שם ז, ד), ואין לך דבר שעומד בפני התשובה (שם ג, כו).",
+          "translation": "Don't let sorrow over the past melt your heart until you give up. Whenever you feel you've fallen, strengthen yourself all the more to improve your ways (Ḥorev §516). And don't tell yourself you can't do it anymore after failing many times: everything is in Heaven's hands except the fear of Heaven, and whatever Hashem asks of you, He has given you the strength to do (there, §519). Someone who has returned is loved and cherished before the Creator as if they had never done wrong (Rambam there, 7:4), and nothing stands in the way of tĕshuva (there, 3:26)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-levels",
+          "hebrewLead": "מעלות בשבים.",
+          "lead": "Levels of Return.",
+          "hebrew": "תשובה גמורה, שבא לידו דבר שעבר בו ויכול לעשותו, ופרש מפני התשובה, לא מיראה ולא מכשלון כח. ואם לא שב אלא בזקנתו, אף שאינה תשובה מעלה, מועלת היא לו (רמב״ם שם ב, א-ב). וכן יש ששב מהכרת טובת ה׳ עליו, ויש ששב רק כשבאה עליו צרה, וכלם מתקבלים, אלא שהראשון מצליח ביותר (חובות הלבבות שם פ״ו).",
+          "translation": "Complete tĕshuva is when the same thing you did wrong comes your way again, you're able to do it, and you hold back because of your tĕshuva — not out of fear, and not for lack of strength. And if you return only in old age, though it isn't the highest tĕshuva, it still helps (Rambam there, 2:1–2). Likewise, some return out of gratitude for Hashem's goodness to them, and some only when trouble comes upon them; all are accepted, but the first succeeds best (Ḥovoth HalLĕvavoth there, 6)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-time",
+          "hebrewLead": "הזמן.",
+          "lead": "The Time.",
+          "hebrew": "התשובה יפה לעולם, ובעשרה הימים שבין ראש השנה ליום הכפורים יפה ביותר ומתקבלת מיד (רמב״ם שם ב, ח). ולא יאמר \"כשאזקין אשוב\" (שם ז, ב). ויראה עצמו כל השנה כאלו חציו זכאי וחציו חיב, שמצוה אחת מכריעתו; ולכן נהגו להרבות בצדקה ובמעשים טובים בעשרת הימים (שם ג, ח-ט).",
+          "translation": "Tĕshuva is always good, and in the ten days between Roʾsh HashShana and Yom HaKippurim it is best of all, and accepted at once (Rambam there, 2:8). Don't say \"I'll return when I'm old\" (there, 7:2). All year long, see yourself as half deserving and half guilty, so that a single miṣwa tips the balance; that's why the custom is to give more charity and do more good deeds during the Ten Days of Tĕshuva (there, 3:8–9)."
+        },
+        {
+          "type": "rubric",
+          "id": "teshuva-yom-hakippurim",
+          "hebrewLead": "יום הכפורים.",
+          "lead": "Yom HaKippurim.",
+          "hebrew": "זמן תשובה לכל, ולכן חיבים הכל לשוב ולהתודות בו. ומתחיל להתודות בערב קדם הסעודה המפסקת, וחוזר ומתודה בכל תפלות היום, היחיד אחר תפלתו (שם ב, ט). ועברות שהתודה עליהם ביום הכפורים שעבר, חוזר ומתודה עליהם (שם ב, י).",
+          "translation": "It's a time of tĕshuva for everyone, so everyone is obligated to return and to confess on it. Start confessing on the eve, before the last meal before the fast, and confess again in every service of the day; someone praying alone says it after their 'Ămidha (there, 2:9). Wrongs you confessed last Yom HaKippurim, confess again (there, 2:10)."
+        }
+      ]
+    },
+    {
+      "id": "between-people",
+      "title": "Between People, and Refining Character",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "between-hardest",
+          "hebrewLead": "החמור שבתשובה.",
+          "lead": "The Hardest Part of Tĕshuva.",
+          "hebrew": "אין התשובה ויום הכפורים מכפרים על עברות שבין אדם לחברו עד שיתן לו מה שחיב לו וירצהו (רמב״ם תשובה ב, יא). והדעות הרעות קשות מן העברות שיש בהן מעשה, שכשאדם נשקע בהן קשה לו לפרש מהן (שם ז, ג).",
+          "translation": "Neither tĕshuva nor Yom HaKippurim pardons wrongs between people until you've paid what you owe and won the other person's goodwill (Rambam, Tĕshuva 2:11). And bad traits are harder than misdeeds that involve an action, since once you've sunk into them it is hard to break away (there, 7:3)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-hurry",
+          "hebrewLead": "למהר לפיס.",
+          "lead": "Hurry to Make Amends.",
+          "hebrew": "קדם שיתודה, ימהר לתקן מה שעוד אפשר לתקן, שכל שמאחר הרי הוא מאריך את החטא (חורב סעיף תקטו).",
+          "translation": "Before you confess, hurry to repair whatever can still be repaired; every delay only drags the wrong out longer (Ḥorev §515)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-money-words",
+          "hebrewLead": "ממון ודברים.",
+          "lead": "Money and Words.",
+          "hebrew": "אף שהחזיר לו ממון שחיב לו, צריך לרצותו ולשאל ממנו שימחל לו; ואפלו לא הקניטו אלא בדברים, צריך לפיסו ולפגע בו עד שימחל לו (רמב״ם שם ב, יב).",
+          "translation": "Even after returning money you owed someone, you still need to win them over and ask them to forgive you. Even if you only hurt them with words, you need to make amends and keep approaching them until they forgive you (Rambam there, 2:12)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-refuses",
+          "hebrewLead": "לא רצה למחל.",
+          "lead": "If They Won't Forgive.",
+          "hebrew": "מביא שלשה מרעיו ומבקשים ממנו; לא נתרצה, מביא שניה ושלישית; לא רצה, מניחו, וזה שלא מחל הוא החוטא. ואם היה רבו, הולך ובא אפלו אלף פעמים (שם ב, יג).",
+          "translation": "Bring three of their friends to ask on your behalf. If they still won't be won over, go back a second and a third time. If they still refuse, let it be: now the one who won't forgive is the one in the wrong. If it was your teacher, keep coming back, even a thousand times (there, 2:13)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-asked",
+          "hebrewLead": "המתבקש.",
+          "lead": "When You're Asked.",
+          "hebrew": "אסור להיות אכזרי ולא להתפיס, אלא יהיה נוח לרצות וקשה לכעס, ומוחל בלב שלם ובנפש חפצה; ואפלו הצר לו הרבה, לא יקם ולא יטר (שם ב, יד).",
+          "translation": "Don't be cruel and refuse to be appeased. Be easy to win over and slow to anger, and forgive with a whole heart and a willing spirit; even if they hurt you badly, don't take revenge or bear a grudge (there, 2:14)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-died",
+          "hebrewLead": "מת חברו.",
+          "lead": "If the Other Person Has Died.",
+          "hebrew": "מביא עשרה על קברו ואומר בפניהם: חטאתי לה׳ אלהי ישראל ולפלוני זה שעשיתי לו כך וכך; ואם חיב לו ממון, יחזירו ליורשיו (שם ב, טו).",
+          "translation": "Bring ten people to their grave and say before them: \"I wronged Adhonay, the God of Israel, and this person, by doing such-and-such to them.\" If you owed them money, return it to their heirs (there, 2:15)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-overlooked",
+          "hebrewLead": "דברים שאדם דש בעקביו.",
+          "lead": "Wrongs We Trample Underfoot.",
+          "hebrew": "יש עברות שבין אדם לחברו שהאדם מדמה שאין בהן חטא, ולכן אין חזקתו לשוב מהן, כגון המתכבד בקלון חברו, והחושד כשרים, והאוכל מסעודה שאינה מספקת לבעליה (שם ד, ד). ויזהר בהן ביותר, שבלא הכרת החטא אין צעד ראשון לתשובה (חורב סעיף תקכ).",
+          "translation": "Some wrongs between people don't seem like wrongs at all, so people rarely return from them — like gaining honor from someone else's disgrace, suspecting decent people, or eating from a meal that isn't enough for the host (there, 4:4). Be especially careful with these, because without recognizing the wrong there's no first step toward tĕshuva (Ḥorev §520)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-traits",
+          "hebrewLead": "הדעות.",
+          "lead": "Traits.",
+          "hebrew": "צריך לחפש בדעות רעות ולשוב מן הכעס, האיבה, הקנאה, ההתול, ורדיפת הממון, הכבוד והמאכלות (רמב״ם שם ז, ג). ושרש כלן התאוה והגאוה (חורב סעיף קז).",
+          "translation": "Search out your bad traits and return from anger, hatred, jealousy, mockery, and chasing after money, honor and food (Rambam there, 7:3). The root of them all is desire and pride (Ḥorev §107)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-habits",
+          "hebrewLead": "הנמשכות.",
+          "lead": "Habits That Pull You Along.",
+          "hebrew": "רכילות, לשון הרע, בעל חמה, בעל מחשבה רעה, והמתחבר לרשע: אדם נמשך אחריהן תמיד וקשה לפרש מהן, ולכן צריך להזהר בהן ביותר (רמב״ם שם ד, ה).",
+          "translation": "Gossip, slander, a hot temper, harboring evil thoughts, and keeping company with the wicked: these keep pulling a person along and are hard to break away from, so be especially careful with them (Rambam there, 4:5)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-goal",
+          "hebrewLead": "המטרה.",
+          "lead": "The Goal.",
+          "hebrew": "הדרך הישרה היא המדה הבינונית שבכל דעה ודעה, הרחוקה משני הקצוות רחוק שוה (רמב״ם דעות א, ו). חוץ מגבה הלב והכעס, שיתרחק מהם עד הקצה האחר (שם ב, ה-ו).",
+          "translation": "The right path is the middle measure of each trait, equally far from both extremes (Rambam, De'oth 1:6) — except for pride and anger, which you should distance yourself from all the way to the other extreme (there, 2:5–6)."
+        },
+        {
+          "type": "rubric",
+          "id": "between-repair",
+          "hebrewLead": "דרך התקון.",
+          "lead": "The Way to Repair.",
+          "hebrew": "מדה שנטה בה לקצה אחד, ירחיק עצמו לקצה השני זמן מרבה, עד שישוב אל המדה הבינונית (שם ב, ג-ד; חובות הלבבות, שער התשובה פ״א). ויעשה וישנה וישלש במעשים שעל פי הדעה הבינונית, עד שיהיו קלים עליו ותקבע הדעה בנפשו (רמב״ם דעות א, יב). ויתחיל בדבר קל: שלא יכעס, שלא יחניף, שלא יתגאה, שלא ידבר שקר (חורב סעיף תקיח).",
+          "translation": "When you've leaned toward one extreme of a trait, push yourself toward the other extreme for a long while, until you come back to the middle (there, 2:3–4; Ḥovoth HalLĕvavoth, Sha'ar HatTĕshuva 1). Do the actions that fit the middle path again and again, until they come easily and the trait settles into your soul (Rambam, De'oth 1:12). Start with something easy: not getting angry, not flattering, not being proud, not lying (Ḥorev §518)."
+        }
+      ]
+    },
+    {
+      "id": "heshbon-hanefesh",
+      "title": "Ḥeshbon HanNefesh",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "heshbon-foundation",
+          "hebrewLead": "היסוד.",
+          "lead": "The Foundation.",
+          "hebrew": "אמרו חז״ל: עכשו שנברא, יפשפש במעשיו (עירובין יג ע״ב). ואין חשבון כל אדם שוה, אלא כל אחד מחשב עם נפשו כפי הכרתו ושכלו וכפי הטובות שקבל; ומה שאינו יכול להשיג במעשה, יתאוהו בלשונו ויכסף אליו בלבו, והבורא ידינהו לזכות (חובות הלבבות, שער חשבון הנפש פ״ב; ועיין מכתב מאליהו ח״א, קונטרס הבחירה).",
+          "translation": "The Sages said: now that a person has been created, let them examine their deeds ('Eruvin 13b). No two people's reckoning is the same: each reckons with themselves according to their own understanding and intelligence, and the good they've received. What you can't reach in deed, long for in your words and yearn for in your heart, and the Creator will judge you favorably (Ḥovoth HalLĕvavoth, Sha'ar Ḥeshbon HanNefesh 2; see also Mikhtav MeʾEliyyahu vol. 1, Qunṭres HabBĕḥira)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-goal",
+          "hebrewLead": "המטרה.",
+          "lead": "The Goal.",
+          "hebrew": "אין השאלה אם הוא שלם, אלא אם הלך היום לפנים או לאחור; ובכל יום יחדש החלטתו ללכת לפנים ולא לאחור (חורב סעיף קח). ומה שקנה בתם וביושר, לא יגדל ערכו בעיניו, אלא יראהו כערבון שיכול להגיע עוד יותר (שם סעיף קט).",
+          "translation": "The question isn't whether you're perfect, but whether today you moved forward or backward; and every day, renew your resolve to go forward and not back (Ḥorev §108). Whatever you've gained in integrity and honesty, don't make too much of it; see it as a pledge that you can reach further still (there, §109)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-time",
+          "hebrewLead": "הזמן.",
+          "lead": "When.",
+          "hebrew": "בסוף כל יום (שם סעיף קח), ומומלץ לעשותו קדם קריאת שמע שעל המטה; ובימים שבין ראש השנה ליום הכפורים, שנועדו לבחינת החיים שעברו, ביתר שאת (שם סעיף תקכא).",
+          "translation": "At the end of every day (there, §108); it's recommended to do it before the bedtime Shĕma'. And all the more so in the days between Roʾsh HashShana and Yom HaKippurim, which are set aside for looking back over the life that has passed (there, §521)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-1",
+          "hebrewLead": "א. הכרת הטובה.",
+          "lead": "1. Gratitude.",
+          "hebrew": "יתחיל בחסדי הבורא עמו, שמתוכם יתעורר לעבודתו (חובות הלבבות שם פ״ג, החשבון הראשון).",
+          "translation": "Begin with the Creator's kindnesses to you, since out of them you'll be stirred to serve Him (Ḥovoth HalLĕvavoth there, 3, the first reckoning)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-2",
+          "hebrewLead": "ב. פשפוש.",
+          "lead": "2. Looking Back.",
+          "hebrew": "יעבר על מעשי היום: בין אדם למקום, בין אדם לחברו, ובמדותיו (רמב״ם תשובה ז, ג). ויבדק בלא אונאה ובלא משוא פנים, היכן התאוה והגאוה מתראות בו ביותר (חורב סעיף קח).",
+          "translation": "Go over the day's actions: between you and Hashem, between you and other people, and in your character traits (Rambam, Tĕshuva 7:3). Check, without fooling yourself and without playing favorites, where desire and pride show up in you most (Ḥorev §108)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-3",
+          "hebrewLead": "ג. מה שהצליח.",
+          "lead": "3. What Went Well.",
+          "hebrew": "יראה גם מה הלך יפה, ויתחזק בו (שם סעיף קט).",
+          "translation": "Look too at what went well, and build on it (there, §109)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-4",
+          "hebrewLead": "ד. תקון.",
+          "lead": "4. Repair.",
+          "hebrew": "מה שאפשר לתקן, יתקן; ואם פגע בחברו, יקבע מתי יפיסנו (שם סעיף תקטו; רמב״ם שם ב, יא).",
+          "translation": "Whatever can be repaired, repair; and if you hurt someone, decide when you'll make amends (there, §515; Rambam there, 2:11)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-5",
+          "hebrewLead": "ה. וידוי קצר.",
+          "lead": "5. A Short Widduy.",
+          "hebrew": "\"חטאתי, עויתי, פשעתי, ועשיתי כך וכך, והרי נחמתי ובשתי במעשי\" (רמב״ם שם א, ב).",
+          "translation": "\"I have erred, I have done wrong, I have defied You, and I did such-and-such; now I regret it and am ashamed of what I did\" (Rambam there, 1:2)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-6",
+          "hebrewLead": "ו. דבר אחד למחר.",
+          "lead": "6. One Thing for Tomorrow.",
+          "hebrew": "יבחר דבר אחד, קטן וקל, להתחזק בו מחר (חורב סעיף תקיח).",
+          "translation": "Choose one thing, small and easy, to work on tomorrow (Ḥorev §518)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-7",
+          "hebrewLead": "ז. מחילה.",
+          "lead": "7. Forgiveness.",
+          "hebrew": "ימחל בלב שלם לכל מי שחטא לו (רמב״ם שם ב, יד), כמנהג מר זוטרא בכל לילה (מגלה כח ע״א).",
+          "translation": "Forgive, with a whole heart, everyone who wronged you (Rambam there, 2:14), as Mar Zuṭra did every night (Mĕghilla 28a)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-bad-day",
+          "hebrewLead": "ואם היה היום רע.",
+          "lead": "If It Was a Bad Day.",
+          "hebrew": "אל יפל ברוחו: לפנים היה נקי וטהור, ויכול להיות כן עוד הפעם (חורב סעיף תקיט); ומי שנכשל ושב, מעלתו גדולה (רמב״ם שם ז, ד).",
+          "translation": "Don't lose heart: once you were clean and pure, and you can be again (Ḥorev §519); and someone who stumbled and returned stands very high (Rambam there, 7:4)."
+        },
+        {
+          "type": "rubric",
+          "id": "heshbon-write",
+          "hebrewLead": "רשום.",
+          "lead": "Write It Down.",
+          "hebrew": "מומלץ לרשם בקצרה את הדבר שבחר, ולחזר עליו בחשבון הבא.",
+          "translation": "It's recommended to jot down the one thing you chose, and come back to it at your next reckoning."
+        }
+      ]
+    }
+  ]
+}

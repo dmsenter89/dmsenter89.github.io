@@ -16,7 +16,7 @@ buildExpired = false
 removePathAccents = true
 
 # Ignore notebook/Rmd source files that live alongside posts.
-ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.ipynb$", "\\.sasnb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [pagination]
   pagerSize = 10
