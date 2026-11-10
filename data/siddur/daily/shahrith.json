@@ -54,6 +54,10 @@
           {
             "href": "/siddur/shabbat/tefilah/#siddur-toggle-kedushat-hayom-shahrith",
             "label": "Shabbat →"
+          },
+          {
+            "href": "/siddur/holidays/shalosh-regalim/#amidah",
+            "label": "Yom Ṭov →"
           }
         ]
       },
@@ -93,6 +97,10 @@
             {
               "href": "/siddur/shabbat/tefilah/#musaf",
               "label": "Shabbat Musaf →"
+            },
+            {
+              "href": "/siddur/holidays/shalosh-regalim/#musaf",
+              "label": "Yom Ṭov Musaf →"
             }
           ]
         }

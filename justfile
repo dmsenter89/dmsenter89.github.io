@@ -70,6 +70,14 @@ update-seder-hamishmarah:
 dev:
     hugo server -D
 
+# Same preview, reachable from your phone on the same Wi-Fi at http://<this Mac's IP>:1313
+dev-phone:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    ip=$(ipconfig getifaddr en0 || ipconfig getifaddr en1)
+    echo "Open http://$ip:1313/ on your phone"
+    hugo server -D --bind 0.0.0.0 --baseURL "http://$ip:1313/"
+
 # This is the same command CI runs; pushing to master/main builds and
 # deploys automatically, so you don't normally need to run this yourself —
 # it's here mainly for double-checking a change builds cleanly before you push.

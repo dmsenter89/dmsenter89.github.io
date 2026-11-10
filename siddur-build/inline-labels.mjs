@@ -19,6 +19,8 @@ export const LABEL_MAP = {
   "אִם חוֹזֵר בּוֹ בַּיּוֹם:": "if returning the same day:",
   "בעשרה:": "before ten:",
   "בסעדת נשואין:": "at a wedding meal:",
+  "בשבת:": "on Shabbath:",
+  "ביום טוב:": "on yom ṭov:",
 };
 
 // @@-delimited ASCII placeholders (not e.g. null bytes) so this file stays

@@ -33,6 +33,10 @@
           {
             "href": "/siddur/shabbat/tefilah/#siddur-toggle-kedushat-hayom-minha",
             "label": "Shabbat →"
+          },
+          {
+            "href": "/siddur/holidays/shalosh-regalim/#amidah",
+            "label": "Yom Ṭov →"
           }
         ]
       },

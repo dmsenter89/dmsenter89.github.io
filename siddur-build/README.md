@@ -171,7 +171,16 @@ over the content tree.
   `#ashrei` (Sedher HaYom is skipped on Shabbat); after Musaf → Shaḥrith
   `#kawe`. Top of Minḥa's Taḥănun (so Shaḥrith's too, via `include`) →
   Yamim Noraʾim > Widduy `#widduy`, with a "Continue:" row back to each
-  service's `#tachanun`.
+  service's `#tachanun`. Each of those daily rows also has a "Yom Ṭov →"
+  pill to Holidays > Shalosh Rĕghalim `#amidah` / `#musaf`, whose
+  "Continue:" rows match the Shabbath page's.
+
+  The Shalosh Rĕghalim page doesn't use a toggle for the festival. Where
+  only the festival's name changes, the shared text is split around a
+  `group` of labeled rows, one per festival (the Mĕ'en Shalosh pattern), so
+  you can see how the bĕrakha is built. Shabbath and Ḥol HamMo'edh changes
+  go in inline brackets (`[בשבת: …]`, `[ביום טוב: טוֹב]`). Musaf `include`s
+  the paragraphs it shares with that page's own 'Ămidha section.
 
 ## Divine Name
 
@@ -530,6 +539,10 @@ approved. ("Batch" numbers below refer to the 2026-10 retranslation passes.)
   28:9–10 as in `data/siddur/shabbat/tefilah.json`; Psalm 118:25–29, the
   spice, fire and HaMavdil bĕrakhoth as in
   `data/siddur/shabbat/havdalah.json`. Copy from there.
+- **מִקְרָא קֹדֶשׁ = "set apart"**, never "holy convocation" ("this festival
+  day set apart", "in love, a day set apart"; Qiddush's תְּחִלָּה לְמִקְרָאֵי
+  קֹדֶשׁ = "the first among the days set apart"). Other "holy" renderings
+  stay as they are for now.
 - **Proverbs 6:23:** "For the commandment is a lamp, and the Torah is
   light."
 - **More fixed renderings (batch 5):** נֵר שֶׁל שַׁבָּת = the Shabbath light
