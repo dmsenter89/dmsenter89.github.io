@@ -677,6 +677,14 @@ approved. ("Batch" numbers below refer to the 2026-10 retranslation passes.)
   Ḥadhash, Kaf HaḤayyim, 'Odh Yosef Ḥay, Kol Bo, Ḥizzĕquni, Darkhe Moshe,
   "Moram's gloss"; Rabbi Qafih, Shabazi, Maharitz, Tiklalim (Yemenite prayer
   books); Talmudic ʾAbbaye in the scheme.
+- **Ḥănukka after the lighting** — Psalm 30 and Ma'oz Ṣur are settled as
+  they stand in `data/siddur/holidays/hanukka.json`. Copy from there.
+  Ma'oz Ṣur's Hebrew is the Koren Shalem text from Sefaria (meteg stripped;
+  נוֹשַׁעְתִּי with pataḥ so the translit reads "nosha'ti"). Its images,
+  decoded in this context only: מַלְכוּת עֶגְלָה = "Egypt's rule";
+  שׁוֹשַׁנִּים = "Israel"; בְּצֵל צַלְמוֹן = "into the deepest shadow"; kept
+  literal: אַדְמוֹן = "the Red One", בְּרוֹשׁ = "the towering cypress",
+  רֹאשׁ יְמִינִי = "the head of the Benjaminite", זָרִים = "strange gods".
 
 ## Hebrew to re-check against the source
 

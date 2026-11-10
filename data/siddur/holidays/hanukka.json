@@ -188,6 +188,80 @@
           "translit": "hanneroth hallallu ʾanu madhliqin 'al hattĕshu'oth wĕ'al hannissim wĕ'al hanniflaʾoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh, 'al yĕdhe kohănekha haqqĕdhoshim. wĕkhol shĕmonath yĕme ḥănukka hanneroth hallallu qodhesh hen, wĕʾen lanu rĕshuth lĕhishtammesh bahen, ʾellaʾ lirʾothan bilvadh, kĕdhe lĕhodhoth lĕshimkha 'al niflĕʾothekha wĕ'al nissekha wĕ'al yĕshu'athekha."
         }
       ]
+    },
+    {
+      "id": "mizmor-shir-hanukkat-habayit",
+      "title": "Mizmor Shir Ḥănukkath HabBayith",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "mizmor-shir-cue",
+          "hebrew": "אחר ״הַנֵּרוֹת הַלַּלּוּ״ ראוי לומר תכף מזמור זה, ״ויכוון בהודאה של מזמור זה על התשועה שעשה עמנו יתברך שמו בימים האלו״ (יסוד ושורש העבודה). והמנהג לומר מזמור זה תכף אחר הדלקת הנרות נמצא כבר במחזור רומא.",
+          "translation": "Right after Hanneroth hallallu, it is fitting to say this psalm, and \"to have in mind, in the thanksgiving of this psalm, the salvation that Hashem, may His name be blessed, worked for us in these days\" (Yĕsodh WĕShoresh Ha'Avodha). The custom of saying this psalm right after lighting is already found in Maḥzor Roma."
+        },
+        {
+          "type": "text",
+          "id": "psalm-30",
+          "hebrew": "מִזְמ֡וֹר שִׁיר־חֲנֻכַּ֖ת הַבַּ֣יִת לְדָוִֽד׃ אֲרוֹמִמְךָ֣ יְיָ֭ כִּ֣י דִלִּיתָ֑נִי וְלֹֽא־שִׂמַּ֖חְתָּ אֹיְבַ֣י לִֽי׃ יְיָ֥ אֱלֹהָ֑י שִׁוַּ֥עְתִּי אֵ֝לֶ֗יךָ וַתִּרְפָּאֵֽנִי׃ יְיָ֗ הֶעֱלִ֣יתָ מִן־שְׁא֣וֹל נַפְשִׁ֑י חִ֝יִּיתַ֗נִי מִיׇּֽרְדִי־בֽוֹר׃ זַמְּר֣וּ לַיְיָ֣ חֲסִידָ֑יו וְ֝הוֹד֗וּ לְזֵ֣כֶר קׇדְשֽׁוֹ׃ כִּ֤י רֶ֨גַע ׀ בְּאַפּוֹ֮ חַיִּ֢ים בִּרְצ֫וֹנ֥וֹ בָּ֭עֶרֶב יָלִ֥ין בֶּ֗כִי וְלַבֹּ֥קֶר רִנָּֽה׃ וַ֭אֲנִי אָמַ֣רְתִּי בְשַׁלְוִ֑י בַּל־אֶמּ֥וֹט לְעוֹלָֽם׃ יְיָ֗ בִּרְצוֹנְךָ֮ הֶעֱמַ֢דְתָּה לְֽהַרְרִ֫י־עֹ֥ז הִסְתַּ֥רְתָּ פָנֶ֗יךָ הָיִ֥יתִי נִבְהָֽל׃ אֵלֶ֣יךָ יְיָ֣ אֶקְרָ֑א וְאֶל־אֲ֝דֹנָ֗י אֶתְחַנָּֽן׃ מַה־בֶּ֥צַע בְּדָמִי֮ בְּרִדְתִּ֢י אֶ֫ל־שָׁ֥חַת הֲיוֹדְךָ֥ עָפָ֑ר הֲיַגִּ֥יד אֲמִתֶּֽךָ׃ שְׁמַע־יְיָ֥ וְחׇנֵּ֑נִי יְיָ֝֗ הֱֽיֵה־עֹזֵ֥ר לִֽי׃ הָפַ֣כְתָּ מִסְפְּדִי֮ לְמָח֢וֹל לִ֥֫י פִּתַּ֥חְתָּ שַׂקִּ֑י וַֽתְּאַזְּרֵ֥נִי שִׂמְחָֽה׃ לְמַ֤עַן ׀ יְזַמֶּרְךָ֣ כָ֭בוֹד וְלֹ֣א יִדֹּ֑ם יְיָ֥ אֱ֝לֹהַ֗י לְעוֹלָ֥ם אוֹדֶֽךָּ׃",
+          "translation": "A psalm, a song for the dedication of the House, of David. I will exalt You, Adhonay, for You have drawn me up, and have not let my enemies rejoice over me. Adhonay my God, I cried out to You, and You healed me. Adhonay, You brought my soul up from the grave; You kept me alive, that I should not go down to the pit. Sing to Adhonay, you His devout ones, and give thanks to His holy name. For His anger lasts a moment, His favor a lifetime; weeping may linger for the night, but joy comes with the morning. And I had said in my ease, \"I shall never be shaken.\" Adhonay, in Your favor You made my mountain stand firm; You hid Your face, and I was terrified. To You, Adhonay, I call, and to my Lord I plead for grace: \"What gain is there in my blood, if I go down to the pit? Will the dust give thanks to You? Will it declare Your truth? Hear, Adhonay, and be gracious to me; Adhonay, be my helper.\" You turned my mourning into dancing; You loosed my sackcloth and girded me with joy — so that my soul may sing to You and not be silent. Adhonay my God, I will thank You forever.",
+          "translit": "mizmor shir-ḥănukkath habbayith lĕdhawīdh. ʾăromimkha Adhonay ki dhillithani wĕloʾ-simmaḥta ʾoyĕvay li. Adhonay ʾĕlohay shiwwa'ti ʾelekha wattirpaʾeni. Adhonay he'ĕlitha min-shĕʾol nafshi ḥiyyithani miyyorĕdhi-vor. zammĕru laAdhonay ḥăsidhaw wĕhodhu lĕzekher qodhsho. ki regha' bĕʾappo ḥayyim birṣono ba'erev yalin bekhi wĕlabboqer rinna. waʾăni ʾamarti vĕshalwi bal-ʾemmoṭ lĕ'olam. Adhonay birṣonĕkha he'ĕmadhta lĕharri-'oz histarta fanekha hayithi nivhal. ʾelekha Adhonay ʾeqraʾ wĕʾel-ʾădhonay ʾethḥannan. mah-veṣa' bĕdhami bĕridhti ʾel-shaḥath hăyodhĕkha 'afar hăyaggidh ʾămittekha. shĕma'-Adhonay wĕḥonneni Adhonay hĕyeh-'ozer li. hafakhta mispĕdhi lĕmaḥol li pittaḥta saqqi wattĕʾazzĕreni simḥa. lĕma'an yĕzammerkha khavodh wĕloʾ yiddom Adhonay ʾĕlohay lĕ'olam ʾodhekka."
+        }
+      ]
+    },
+    {
+      "id": "maoz-tsur",
+      "title": "Ma'oz Ṣur",
+      "audio": "https://www.sephardichazzanut.com/4.Holiday/Pizmonim/Hannukah/Maoz_Tsur.mp3",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "maoz-tsur-cue",
+          "hebrew": "אחר ״מִזְמוֹר שִׁיר־חֲנֻכַּת הַבַּיִת לְדָוִד״ נוהגים לשיר פזמון זה (הובא בלקט יושר, הלכות חנוכה, כב), ויש המקדימים לו ״וִיהִי נֹעַם״ ומזמור צ״א.",
+          "translation": "After Mizmor shir ḥănukkath habbayith lĕdhawidh, the custom is to sing this pizmon (brought in Leqeṭ Yosher, Laws of Ḥănukka 22). Some say Wihi no'am and Psalm 91 before it."
+        },
+        {
+          "type": "text",
+          "id": "maoz-tsur-1",
+          "hebrew": "מָעוֹז צוּר יְשׁוּעָתִי לְךָ נָאֶה לְשַׁבֵּחַ, תִּכּוֹן בֵּית תְּפִלָּתִי וְשָׁם תּוֹדָה נְזַבֵּחַ, לְעֵת תָּכִין מַטְבֵּחַ מִצָּר הַמְנַבֵּחַ, אָז אֶגְמֹר בְּשִׁיר מִזְמוֹר חֲנֻכַּת הַמִּזְבֵּחַ׃",
+          "translation": "Mighty Rock of my salvation, to You it is fitting to give praise. Restore my house of prayer, and there we will offer thanks; when You prepare the slaughter of the barking foe, then I will complete, with song and psalm, the dedication of the altar.",
+          "translit": "ma'oz ṣur yĕshu'athi lĕkha naʾeh lĕshabbeaḥ, tikkon beth tĕfillathi wĕsham todha nĕzabbeaḥ, lĕ'eth takhin maṭbeaḥ miṣṣar hamĕnabbeaḥ, ʾaz ʾeghmor bĕshir mizmor ḥănukkath hammizbeaḥ."
+        },
+        {
+          "type": "text",
+          "id": "maoz-tsur-2",
+          "hebrew": "רָעוֹת שָׂבְעָה נַפְשִׁי בְּיָגוֹן כֹּחִי כָּלָה, חַיַּי מֵרְרוּ בְּקֹשִׁי בְּשִׁעְבּוּד מַלְכוּת עֶגְלָה, וּבְיָדוֹ הַגְּדוֹלָה הוֹצִיא אֶת הַסְּגֻלָּה, חֵיל פַּרְעֹה וְכָל זַרְעוֹ יָרְדוּ כְאֶבֶן מְצוּלָה׃",
+          "translation": "My soul was sated with troubles, my strength was spent in sorrow; they made my life bitter with hardship in bondage under Egypt's rule. But with His great hand He brought out His treasured people; Pharaoh's army and all his offspring sank like a stone into the deep.",
+          "translit": "ra'oth savĕ'a nafshi bĕyaghon koḥi kala, ḥayyay merĕru bĕqoshi bĕshi'budh malkhuth 'eghla, uvĕyadho haggĕdhola hoṣiʾ ʾeth hassĕghulla, ḥel par'oh wĕkhol zar'o yarĕdhu khĕʾeven mĕṣula."
+        },
+        {
+          "type": "text",
+          "id": "maoz-tsur-3",
+          "hebrew": "דְּבִיר קָדְשׁוֹ הֱבִיאַנִי וְגַם שָׁם לֹא שָׁקַטְתִּי, וּבָא נוֹגֵשׂ וְהִגְלַנִי כִּי זָרִים עָבַדְתִּי, וְיֵין רַעַל מָסַכְתִּי כִּמְעַט שֶׁעָבַרְתִּי, קֵץ בָּבֶל זְרֻבָּבֶל לְקֵץ שִׁבְעִים נוֹשַׁעְתִּי׃",
+          "translation": "He brought me to His holy shrine, yet even there I found no rest; the oppressor came and drove me into exile, for I had served strange gods. I had drunk the wine of reeling — I had all but perished; then at Babylon's end, with Zerubbabel, at the end of seventy years I was saved.",
+          "translit": "dĕvir qodhsho hĕviʾani wĕgham sham loʾ shaqaṭti, uvaʾ noghes wĕhighlani ki zarim 'avadhti, wĕyen ra'al masakhti kim'aṭ she'avarti, qeṣ bavel zĕrubbavel lĕqeṣ shiv'im nosha'ti."
+        },
+        {
+          "type": "text",
+          "id": "maoz-tsur-4",
+          "hebrew": "כְּרֹת קוֹמַת בְּרוֹשׁ בִּקֵּשׁ אֲגָגִי בֶּן הַמְּדָתָא, וְנִהְיְתָה לוֹ לְפַח וּלְמוֹקֵשׁ וְגַאֲוָתוֹ נִשְׁבָּתָה, רֹאשׁ יְמִינִי נִשֵּׂאתָ וְאוֹיֵב שְׁמוֹ מָחִיתָ, רֹב בָּנָיו וְקִנְיָנָיו עַל הָעֵץ תָּלִיתָ׃",
+          "translation": "The Agagite, son of Hammedatha, sought to cut down the towering cypress; but it became a snare and a trap to him, and his arrogance was brought to an end. You raised the head of the Benjaminite and blotted out the enemy's name; his many sons and his possessions You hanged upon the gallows.",
+          "translit": "kĕroth qomath bĕrosh biqqesh ʾăghaghi ben hammĕdhathaʾ, wĕnihyĕtha lo lĕfaḥ ulĕmoqesh wĕghaʾăwatho nishbatha, roʾsh yĕmini nisseʾtha wĕʾoyev shĕmo maḥitha, rov banaw wĕqinyanaw 'al ha'eṣ talitha."
+        },
+        {
+          "type": "text",
+          "id": "maoz-tsur-5",
+          "hebrew": "יְוָנִים נִקְבְּצוּ עָלַי אֲזַי בִּימֵי חַשְׁמַנִּים, וּפָרְצוּ חוֹמוֹת מִגְדָּלַי וְטִמְּאוּ כָּל הַשְּׁמָנִים, וּמִנּוֹתַר קַנְקַנִּים נַעֲשָׂה נֵס לַשּׁוֹשַׁנִּים, בְּנֵי בִינָה יְמֵי שְׁמוֹנָה קָבְעוּ שִׁיר וּרְנָנִים׃",
+          "translation": "The Greeks gathered against me then, in the days of the Hasmoneans; they breached the walls of my towers and defiled all the oils. From the last remaining flask a miracle was worked for Israel; the people of understanding set eight days for song and joyful praise.",
+          "translit": "yĕwanim niqbĕṣu 'alay ʾăzay bime ḥashmannim, ufarĕṣu ḥomoth mighdalay wĕṭimmĕʾu kol hashshĕmanim, uminnothar qanqannim na'ăsa nes lashshoshannim, bĕne vina yĕme shĕmona qavĕ'u shir urĕnanim."
+        },
+        {
+          "type": "text",
+          "id": "maoz-tsur-6",
+          "hebrew": "חֲשֹׂף זְרוֹעַ קָדְשֶׁךָ וְקָרֵב קֵץ הַיְשׁוּעָה, נְקֹם נִקְמַת עֲבָדֶיךָ מֵאֻמָּה הָרְשָׁעָה, כִּי אָרְכָה לָנוּ הַשָּׁעָה וְאֵין קֵץ לִימֵי הָרָעָה, דְּחֵה אַדְמוֹן בְּצֵל צַלְמוֹן הָקֵם לָנוּ רוֹעִים שִׁבְעָה׃",
+          "translation": "Lay bare Your holy arm, and bring near the time of salvation; take vengeance for Your servants on the wicked nation. For the hour has grown long for us, and there is no end to the days of evil; thrust the Red One down into the deepest shadow, and raise up for us the seven shepherds.",
+          "translit": "ḥăsof zĕroa' qodhshekha wĕqarev qeṣ hayĕshu'a, nĕqom niqmath 'ăvadhekha meʾumma harĕsha'a, ki ʾarĕkha lanu hashsha'a wĕʾen qeṣ lime hara'a, dĕḥeh ʾadhmon bĕṣel ṣalmon haqem lanu ro'im shiv'a."
+        }
+      ]
     }
   ]
 }
