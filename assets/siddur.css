@@ -526,22 +526,78 @@ html.show-translation .siddur-rubric .siddur-translation {
 
 /* --- EY Triennial Cycle (Appendix) --- */
 
-/* Every column here is Hebrew reference text (verse ranges, not single
-   symbols), so right-align instead of the transliteration table's
-   center-aligned single-letter convention. */
-.siddur-ey-table .siddur-table-hebrew,
-#special-haftarot .siddur-table-hebrew {
+/* One card per book; each seder is a <details> row (summary = reading,
+   open = its 'ăliyyoth). Hebrew phrases sit on the right like the cycle pages. */
+.ey-nav { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1rem 0 0.5rem; }
+.ey-nav a {
+  border: 1px solid var(--siddur-border);
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.85rem;
+  color: var(--siddur-fg);
+  text-decoration: none;
+}
+.ey-nav a:hover { border-color: var(--siddur-accent); color: var(--siddur-accent); }
+.ey-section { margin-top: 1.75rem; scroll-margin-top: 4rem; }
+.ey-section > .ey-notes { margin: 0 0 0.6rem; }
+.ey-list {
+  border: 1px solid var(--siddur-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ey-item { border-top: 1px solid var(--siddur-border); scroll-margin-top: 4rem; }
+.ey-item:first-child { border-top: 0; }
+.ey-item > summary, .ey-static { padding: 0.6rem 2.2rem 0.6rem 0.8rem; }
+.ey-static { padding-right: 0.8rem; }
+.ey-item > summary { cursor: pointer; list-style: none; position: relative; }
+.ey-item > summary::-webkit-details-marker { display: none; }
+.ey-item > summary::after {
+  content: "\203A";
+  position: absolute;
+  right: 0.9rem;
+  top: 0.55rem;
+  font-size: 1.3rem;
+  color: var(--siddur-muted);
+  transition: transform 0.15s;
+}
+.ey-item[open] > summary::after { transform: rotate(90deg); }
+.ey-item[open] > summary { background: color-mix(in srgb, var(--siddur-accent) 6%, var(--siddur-bg)); }
+.ey-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.2rem 0.6rem; margin-bottom: 0.15rem; }
+.ey-name { font-weight: 600; }
+.ey-he { font-family: "Noto Serif Hebrew", serif; color: var(--siddur-muted); }
+.ey-count { margin-left: auto; font-size: 0.75rem; color: var(--siddur-muted); }
+.ey-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.1rem 0.5rem; margin-top: 0.1rem; }
+.ey-ref { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ey-torah { font-weight: 500; }
+.ey-label, .ey-sublabel {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--siddur-muted);
+}
+.ey-haf, .ey-note, .ey-when { font-size: 0.9rem; color: var(--siddur-muted); }
+.ey-haf .ey-ref { color: var(--siddur-fg); }
+.ey-phrase {
+  margin-left: auto;
+  font-family: "Noto Serif Hebrew", serif;
+  color: var(--siddur-muted);
   text-align: right;
 }
-
-.siddur-ey-table th.siddur-aliyah-col,
-.siddur-ey-table td.siddur-aliyah-col {
-  display: none;
+.ey-phrase .inc, .ey-phrase .fin { display: inline-block; white-space: nowrap; }
+.ey-notes { font-size: 0.9rem; color: var(--siddur-muted); margin: 0.5rem 0.8rem 0.2rem; }
+.ey-sublabel { margin: 0.6rem 0.8rem 0; }
+.ey-aliyot {
+  margin: 0.3rem 0 0.6rem;
+  padding: 0 0.8rem 0 2.4rem;
+  font-size: 0.92rem;
 }
-
-html.show-aliyot .siddur-ey-table th.siddur-aliyah-col,
-html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
-  display: table-cell;
+.ey-aliyot li { padding: 0.25rem 0; border-top: 1px dashed var(--siddur-border); }
+.ey-aliyot li:first-child { border-top: 0; }
+.ey-aliyot li::marker { color: var(--siddur-muted); font-size: 0.8em; }
+.ey-aliyot li > .ey-phrase { float: right; margin-left: 0.5rem; }
+@media (max-width: 560px) {
+  .ey-phrase .fin { display: none; }
+  .ey-count { display: none; }
 }
 
 .siddur-pronunciation-list {

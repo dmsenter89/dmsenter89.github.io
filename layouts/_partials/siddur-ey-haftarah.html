@@ -1,0 +1,4 @@
+{{- /* Hafṭara line on the EY Triennial page. Context: {ref, inc, note?}, or nil for none. */ -}}
+<div class="ey-line ey-haf"><span class="ey-label">Hafṭara</span>
+{{- if . }}<span class="ey-ref">{{ .ref }}</span>{{ with .note }}<span class="ey-note">({{ . }})</span>{{ end }}{{ partial "siddur-ey-phrase.html" (dict "inc" .inc) }}
+{{- else }}<span class="ey-note">none</span>{{ end }}</div>

@@ -9,7 +9,13 @@ uv run --with numpy bash run.sh     # or: pip install numpy; bash run.sh   (need
 ```
 
 `run.sh` checks the EY table, runs both planners and writes the three site
-files with `build_site.py`. Review `git diff` of the data before committing.
+files with `build_site.py`, plus the EY Triennial page's display data
+(`data/siddur/appendix/ey-triennial-view.json`, from `ey_view.py`: English
+references, verse counts and MAM phrases for every seder, ʿăliyya, hafṭara and
+special reading). Edit `ey-triennial.json`, never the view file; English names
+and notes for the special readings live in its `en` fields. Review `git diff`
+of the data before committing. To refresh only the EY page:
+`python3 build_site.py`.
 
 ## Sources
 

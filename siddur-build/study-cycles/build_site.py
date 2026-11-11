@@ -1,4 +1,5 @@
-"""Write the three study-cycle data files the site renders (data/siddur/appendix/study-cycles/).
+"""Write the study-cycle data files the site renders (data/siddur/appendix/study-cycles/), plus
+the EY Triennial page's display data (data/siddur/appendix/ey-triennial-view.json, see ey_view.py).
 
 Run after the pipelines (see run.sh). Adds what the site shows beyond the plans
 themselves: Five-Day references, Hebrew seder labels and opening/closing phrases,
@@ -8,6 +9,7 @@ import json
 import subprocess
 from pathlib import Path
 
+import ey_view
 import mam
 
 HERE = Path(__file__).resolve().parent
@@ -26,20 +28,32 @@ def normalize(strings):
     return json.loads(out.stdout)
 
 
-def write(name, data, rows):
-    """Normalize the Divine Name in each row's inc/fin, then write compactly like the other data files."""
+def phrases(x):
+    """Every dict in x that carries an inc/fin phrase."""
+    if isinstance(x, dict):
+        yield from ([x] if "inc" in x or "fin" in x else [])
+        for v in x.values():
+            yield from phrases(v)
+    elif isinstance(x, list):
+        for v in x:
+            yield from phrases(v)
+
+
+def write(name, data, path=SITE):
+    """Normalize the Divine Name in every inc/fin phrase, then write compactly like the other data files."""
+    rows = list(phrases(data))
     keys = [(r, k) for r in rows for k in ("inc", "fin") if k in r]
     for (r, k), s in zip(keys, normalize([r[k] for r, k in keys])):
         r[k] = s
-    (SITE / name).write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    print("wrote", name, len(rows), "rows")
+    (path / name).write_text(json.dumps(data, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    print("wrote", name, len(keys), "phrases")
 
 
 # Tanakh plans: already in the site's row format
 cont = json.loads((HERE / "tanakh/output/plan_continuous.json").read_text())
-write("even-tanakh-year.json", {"plans": cont}, [r for rows in cont.values() for r in rows])
+write("even-tanakh-year.json", {"plans": cont})
 par = json.loads((HERE / "tanakh/output/plan_parasha.json").read_text())
-write("tanakh-by-parasha.json", {"weekNames": par["tr"], "plans": par["plans"]}, [r for rows in par["plans"].values() for r in rows])
+write("tanakh-by-parasha.json", {"weekNames": par["tr"], "plans": par["plans"]})
 
 # Five-Day Seder Cycle
 plan = json.loads((HERE / "seder/outputs/plan.json").read_text())
@@ -56,4 +70,7 @@ for r in plan["rows"]:
     rows.append(dict(w=r["week"], d=r["dayn"], ref=f"{r['book']} {c1}:{span}", p=f"{r['heb']} · סדר {gematria(r['seder'])}",
                      np=[], words=r["words"], verses=r["verses"], end=end,
                      inc=vs[(c1, v1)]["first"], fin=vs[(c2, v2)]["last"]))
-write("five-day-seder-cycle.json", {"weekNames": [names[w] for w in sorted(names)], "plans": {"5": rows}}, rows)
+write("five-day-seder-cycle.json", {"weekNames": [names[w] for w in sorted(names)], "plans": {"5": rows}})
+
+# EY Triennial page: English references and phrases for the hand-maintained table
+write("ey-triennial-view.json", ey_view.build(), SITE.parent)

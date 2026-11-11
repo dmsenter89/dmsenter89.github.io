@@ -1,6 +1,5 @@
 {
   "title": "EY Triennial Cycle",
-  "note": "Torah readings following the ʾEreṣ Yisraʾel triennial (three-year) reading cycle, per Machon Shiloh. Use the \"'Ăliyyoth\" toggle above to also show the suggested 7-'ăliyya breakdown for each sidhraʾ.",
   "books": [
     {
       "id": "bereshith",
@@ -2010,75 +2009,109 @@
   "specialHaftarot": {
     "id": "special-haftarot",
     "title": "Special Shabbath Hafṭaroth",
-    "headers": [
-      "שבת מיוחדת",
-      "הפטרה מיוחדת",
-      "מתי",
-      "הערה"
-    ],
     "rows": [
-      [
-        "שבת שובה",
-        "הושע יד:ב-י",
-        "כל שבת שחלה בין ר\"ה ליוה\"כ",
-        "מחליפה את ההפטרה הרגילה"
-      ],
-      [
-        "שבת חזון",
-        "ישעיהו א:א-כז",
-        "שבת שלפני ט׳ באב",
-        "מחליפה את ההפטרה הרגילה"
-      ],
-      [
-        "שבת נחמו",
-        "ישעיהו מ:א-כו",
-        "שבת שלאחר ט׳ באב",
-        "מחליפה את ההפטרה הרגילה"
-      ],
-      [
-        "שבת הגדול",
-        "מלאכי ג:ד-כד",
-        "שבת שלפני פסח",
-        "מחליפה את ההפטרה הרגילה"
-      ],
-      [
-        "שבת ר\"ח",
-        "ישעיהו סו",
-        "כשר\"ח חל בשבת (מפטיר: במדבר כז:טו–כח:טו)",
-        "מחליפה את ההפטרה הרגילה"
-      ],
-      [
-        "שבת שקלים",
-        "מלכים ב יב:א-יז",
-        "שבת ר\"ח אדר (או סמוכה לו)",
-        "מוסיפים קריאה: שמות ל:יא-לח"
-      ],
-      [
-        "שבת זכור",
-        "שמואל א טו:ב-לד",
-        "שבת שלפני פורים",
-        "מוסיפים קריאה: דברים כה:יז – כז:ג"
-      ],
-      [
-        "שבת פרה",
-        "יחזקאל לו:טז-לו",
-        "שבת שלישית לפני פסח",
-        "מוסיפים קריאה: במדבר יט"
-      ],
-      [
-        "שבת החודש",
-        "יחזקאל מה:יח – מו:טז",
-        "שבת ר\"ח ניסן (או לפניו)",
-        "מוסיפים קריאה: שמות יב:א-כח"
-      ],
-      [
-        "שבת ראש חודש חשון / אדר / וכד'",
-        "ישעיהו סו",
-        "כשר\"ח חשון, אדר, וכד' חל בשבת",
-        "ישעיהו סו מחליפה את ההפטרה הרגילה"
-      ]
+      {
+        "name": "שבת שובה",
+        "haftarah": "הושע יד:ב-י",
+        "when": "כל שבת שחלה בין ר\"ה ליוה\"כ",
+        "note": "מחליפה את ההפטרה הרגילה",
+        "en": {
+          "name": "Shabbath Shuva",
+          "when": "Any Shabbath between Rosh HashShana and Yom HaKippurim",
+          "note": "Replaces the week's hafṭara."
+        }
+      },
+      {
+        "name": "שבת חזון",
+        "haftarah": "ישעיהו א:א-כז",
+        "when": "שבת שלפני ט׳ באב",
+        "note": "מחליפה את ההפטרה הרגילה",
+        "en": {
+          "name": "Shabbath Ḥazon",
+          "when": "The Shabbath before Tish'a bĕʾAv",
+          "note": "Replaces the week's hafṭara."
+        }
+      },
+      {
+        "name": "שבת נחמו",
+        "haftarah": "ישעיהו מ:א-כו",
+        "when": "שבת שלאחר ט׳ באב",
+        "note": "מחליפה את ההפטרה הרגילה",
+        "en": {
+          "name": "Shabbath Naḥămu",
+          "when": "The Shabbath after Tish'a bĕʾAv",
+          "note": "Replaces the week's hafṭara."
+        }
+      },
+      {
+        "name": "שבת הגדול",
+        "haftarah": "מלאכי ג:ד-כד",
+        "when": "שבת שלפני פסח",
+        "note": "מחליפה את ההפטרה הרגילה",
+        "en": {
+          "name": "Shabbath HagGadhol",
+          "when": "The Shabbath before Pesaḥ",
+          "note": "Replaces the week's hafṭara."
+        }
+      },
+      {
+        "name": "שבת ר\"ח",
+        "haftarah": "ישעיהו סו",
+        "when": "כשר\"ח חל בשבת (קוראים במדבר כז:טו – כח:טו במקום הסדר)",
+        "note": "מחליפה את ההפטרה הרגילה",
+        "en": {
+          "name": "Shabbath Rosh Ḥodhesh",
+          "when": "When Rosh Ḥodhesh falls on Shabbath",
+          "note": "The Torah reading is Num 27:15–28:15, in place of the week's seder, and Isa 66 replaces the week's hafṭara."
+        }
+      },
+      {
+        "name": "שבת שקלים",
+        "haftarah": "מלכים ב יב:א-יז",
+        "when": "שבת ר\"ח אדר (או סמוכה לו)",
+        "note": "קוראים במקום הסדר: שמות ל:יא-לח",
+        "en": {
+          "name": "Shabbath Shĕqalim",
+          "when": "The Shabbath of Rosh Ḥodhesh Adar, or the one before",
+          "note": "The Torah reading is Exod 30:11–38, in place of the week's seder."
+        }
+      },
+      {
+        "name": "שבת זכור",
+        "haftarah": "שמואל א טו:ב-לד",
+        "when": "שבת שלפני פורים",
+        "note": "קוראים במקום הסדר: דברים כה:יז – כז:ג",
+        "en": {
+          "name": "Shabbath Zakhor",
+          "when": "The Shabbath before Purim",
+          "note": "The Torah reading is Deut 25:17–27:3, in place of the week's seder."
+        }
+      },
+      {
+        "name": "שבת פרה",
+        "haftarah": "יחזקאל לו:טז-לו",
+        "when": "שבת שלישית לפני פסח",
+        "note": "קוראים במקום הסדר: במדבר יט",
+        "en": {
+          "name": "Shabbath Para",
+          "when": "The third Shabbath before Pesaḥ",
+          "note": "The Torah reading is Num 19, in place of the week's seder."
+        }
+      },
+      {
+        "name": "שבת החודש",
+        "haftarah": "יחזקאל מה:יח – מו:טז",
+        "when": "שבת ר\"ח ניסן (או לפניו)",
+        "note": "קוראים במקום הסדר: שמות יב:א-כח",
+        "en": {
+          "name": "Shabbath HaḤodhesh",
+          "when": "The Shabbath of Rosh Ḥodhesh Nisan, or the one before",
+          "note": "The Torah reading is Exod 12:1–28, in place of the week's seder."
+        }
+      }
     ],
-    "note": "הפטרות אלו מחליפות (או מצטרפות ל) ההפטרה הרגילה של הסדרה שנקראת באותה שבת. ראה לוח לפרטים."
+    "note": "הפטרות אלו מחליפות (או מצטרפות ל) ההפטרה הרגילה של הסדרה שנקראת באותה שבת. ראה לוח לפרטים.",
+    "en_note": "These replace, or add to, the regular hafṭara of the seder read that Shabbath."
   },
   "specialReadings": {
     "id": "special-readings",
@@ -2107,14 +2140,18 @@
           "כח:ג-ה",
           "כח:ו-י",
           "כח:יא-טו"
-        ]
+        ],
+        "en": {
+          "name": "Rosh Ḥodhesh",
+          "notes": "Weekdays: four ʿăliyyoth. On Shabbath it replaces the week's seder, with seven."
+        }
       },
       {
         "name": "פרשת שקלים",
         "textWeekday": "שמות ל:יא-לח",
         "textShabbat": "",
         "haftarah": "מלכים ב יב:א-יז",
-        "notes": "נוסף כמפטיר על סדרה הרגילה",
+        "notes": "במקום הסדר של השבוע; ז׳ עולים",
         "aliyotWeekday": [
           "ל:יא-יג",
           "ל:יד-טז",
@@ -2132,14 +2169,18 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Parashath Shĕqalim",
+          "notes": "Replaces the week's seder, like a festival reading. Seven ʿăliyyoth."
+        }
       },
       {
         "name": "פרשת זכור",
         "textWeekday": "דברים כה:יז – כז:ג",
         "textShabbat": "",
         "haftarah": "שמואל א טו:ב-לד",
-        "notes": "נוסף כמפטיר על סדרה הרגילה",
+        "notes": "במקום הסדר של השבוע; ז׳ עולים",
         "aliyotWeekday": [
           "כה:יז-יט",
           "כו:א-ג",
@@ -2157,14 +2198,18 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Parashath Zakhor",
+          "notes": "Replaces the week's seder, like a festival reading. Seven ʿăliyyoth."
+        }
       },
       {
         "name": "פרשת פרה",
         "textWeekday": "במדבר יט:א-כב",
         "textShabbat": "",
         "haftarah": "יחזקאל לו:טז-לו",
-        "notes": "נוסף כמפטיר על סדרה הרגילה",
+        "notes": "במקום הסדר של השבוע; ז׳ עולים",
         "aliyotWeekday": [
           "יט:א-ג",
           "יט:ד-ו",
@@ -2182,14 +2227,18 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Parashath Para",
+          "notes": "Replaces the week's seder, like a festival reading. Seven ʿăliyyoth."
+        }
       },
       {
         "name": "פרשת החודש",
         "textWeekday": "שמות יב:א-כח",
         "textShabbat": "",
         "haftarah": "יחזקאל מה:יח – מו:טז",
-        "notes": "נוסף כמפטיר על סדרה הרגילה",
+        "notes": "במקום הסדר של השבוע; ז׳ עולים",
         "aliyotWeekday": [
           "יב:א-ה",
           "יב:ו-ח",
@@ -2207,7 +2256,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Parashath HaḤodhesh",
+          "notes": "Replaces the week's seder, like a festival reading. Seven ʿăliyyoth."
+        }
       },
       {
         "name": "פורים",
@@ -2232,7 +2285,11 @@
           "יז:ח-י",
           "יז:יא-יג",
           "יז:יד-טז"
-        ]
+        ],
+        "en": {
+          "name": "Purim",
+          "notes": "Weekdays: three ʿăliyyoth. On Shabbath it replaces the week's seder, with seven."
+        }
       },
       {
         "name": "י\"ט ראשון של פסח",
@@ -2257,7 +2314,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Pesaḥ, first day",
+          "notes": "Five ʿăliyyoth."
+        }
       },
       {
         "name": "פסח ב׳",
@@ -2282,7 +2343,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Pesaḥ, second day",
+          "notes": "Four ʿăliyyoth."
+        }
       },
       {
         "name": "פסח ג׳",
@@ -2307,7 +2372,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Pesaḥ, third day",
+          "notes": "Four ʿăliyyoth."
+        }
       },
       {
         "name": "פסח ד׳",
@@ -2332,7 +2401,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Pesaḥ, fourth day",
+          "notes": "Four ʿăliyyoth."
+        }
       },
       {
         "name": "פסח ה׳",
@@ -2357,7 +2430,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Pesaḥ, fifth day",
+          "notes": "Four ʿăliyyoth."
+        }
       },
       {
         "name": "פסח ו׳",
@@ -2382,7 +2459,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Pesaḥ, sixth day",
+          "notes": "Four ʿăliyyoth."
+        }
       },
       {
         "name": "י\"ט שביעי של פסח",
@@ -2407,7 +2488,11 @@
           "יד:כו-לא",
           "טו:א-כא",
           "טו:כב-כו"
-        ]
+        ],
+        "en": {
+          "name": "Pesaḥ, seventh day",
+          "notes": "Weekdays: five ʿăliyyoth. Shabbath: seven."
+        }
       },
       {
         "name": "יום גאולת ירושלים",
@@ -2432,7 +2517,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Yom Gĕʾullath Yĕrushalayim",
+          "notes": "Three ʿăliyyoth. 28 Iyyar."
+        }
       },
       {
         "name": "קללות שבתורת כהנים",
@@ -2457,7 +2546,11 @@
           "כו:יד-לט",
           "כו:מ-מב",
           "כו:מג-מו"
-        ]
+        ],
+        "en": {
+          "name": "The Rebukes in Wayyiqraʾ",
+          "notes": "Read on the Shabbath before Shavu'oth, in place of the week's seder. Seven ʿăliyyoth."
+        }
       },
       {
         "name": "שבועות",
@@ -2482,7 +2575,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Shavu'oth",
+          "notes": "Five ʿăliyyoth."
+        }
       },
       {
         "name": "תעניות ציבור",
@@ -2507,7 +2604,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Public fast days",
+          "notes": "17 Tammuz, 10 Ṭeveth, Ṣom Gĕdhalya and Taʿănith Ester. Three ʿăliyyoth."
+        }
       },
       {
         "name": "תשעה באב",
@@ -2532,7 +2633,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Tish'a bĕʾAv",
+          "notes": "Three ʿăliyyoth."
+        }
       },
       {
         "name": "קללות שבמשנה תורה",
@@ -2557,7 +2662,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "The Rebukes in Dĕvarim",
+          "notes": "Read on the Shabbath before Rosh HashShana, in place of the week's seder. Seven ʿăliyyoth."
+        }
       },
       {
         "name": "ראש השנה א׳",
@@ -2582,7 +2691,11 @@
           "כב:א-ח",
           "כב:ט-יד",
           "כב:טו-יט"
-        ]
+        ],
+        "en": {
+          "name": "Rosh HashShana, first day",
+          "notes": "Weekdays: five ʿăliyyoth. Shabbath: seven."
+        }
       },
       {
         "name": "ראש השנה ב׳",
@@ -2607,7 +2720,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Rosh HashShana, second day",
+          "notes": "One verse per ʿăliyya. Mafṭir: Num 29:1–6."
+        }
       },
       {
         "name": "יום הכיפורים",
@@ -2632,7 +2749,11 @@
           "טז:יח-כד",
           "טז:כה-ל",
           "טז:לא-לד"
-        ]
+        ],
+        "en": {
+          "name": "Yom HaKippurim",
+          "notes": "Weekdays: six ʿăliyyoth. Shabbath: seven. At Minḥa: Lev 18, with Jonah and Micah 7 as hafṭara."
+        }
       },
       {
         "name": "י\"ט ראשון של סוכות",
@@ -2657,7 +2778,11 @@
           "כד:א-ד",
           "כד:ה-ט",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Sukkoth, first day",
+          "notes": "Weekdays: five ʿăliyyoth. Shabbath: seven."
+        }
       },
       {
         "name": "שמיני עצרת",
@@ -2682,7 +2807,11 @@
           "",
           "",
           ""
-        ]
+        ],
+        "en": {
+          "name": "Shĕmini 'Ăṣereth",
+          "notes": "Mafṭir: Num 29:35–30:1."
+        }
       }
     ]
   }

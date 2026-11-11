@@ -1,36 +1,92 @@
 {{ define "main" }}
 
-{{- /* EY Triennial Cycle appendix page. Data file shaped
-       { title, note, books: [{id,title,rows:[{num,parshiyot,haftarah,aliyot[7]}]}],
-         specialHaftarot: {id,title,headers,rows,note},
-         specialReadings: {id,title,occasions:[{name,textWeekday,textShabbat,haftarah,notes,aliyotWeekday[7],aliyotShabbat[7]}]} }.
-       Resolves the data file the same path-mirroring way tables.html does. */ -}}
-{{- $relDir := strings.TrimPrefix "siddur/" (strings.TrimSuffix "/" .File.Dir) }}
-{{- $relPath := .File.BaseFileName }}
-{{- if $relDir }}{{ $relPath = printf "%s/%s" $relDir .File.BaseFileName }}{{ end }}
-{{- $segments := split $relPath "/" }}
-{{- $page := hugo.Data.siddur }}
-{{- range $segments }}{{ $page = index $page . }}{{ end }}
+{{- /* EY Triennial Cycle appendix page. Display data is generated from the
+       hand-maintained data/siddur/appendix/ey-triennial.json by
+       siddur-build/study-cycles/ey_view.py into ey-triennial-view.json:
+       { books: [{id, title, sedarim: [{n, he, ref, inc, fin, verses, words,
+                  haftarah: {ref, inc, note?} | null, aliyot: [{ref, inc}]}]}],
+         specialHaftarot: {id, title, note, rows: [{name, he, when, note, haftarah}]},
+         specialReadings: {id, title, rows: [{name, he, notes, torah: [{label, ref, inc, fin}],
+                           aliyot: [{label, items: [{ref, inc}]}], haftarah}]} }.
+       Each seder is a <details>: the summary shows the reading, tapping it
+       opens the 'ăliyyoth. Closing phrases (.fin) hide on phones (siddur.css). */ -}}
+{{- $v := index hugo.Data.siddur.appendix "ey-triennial-view" }}
 
 <h1 class="siddur-page-title">{{ .Title }}</h1>
 {{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
-{{ with $page.note }}<p class="siddur-table-note">{{ . }}</p>{{ end }}
 
-<div class="siddur-display-toggle" role="group" aria-label="Display options">
-  <button type="button" class="siddur-toggle-btn" data-toggle-class="show-aliyot">'Ăliyyoth</button>
-</div>
+<nav class="ey-nav" aria-label="Sections">
+  {{- range $v.books }}<a href="#{{ .id }}">{{ .title }}</a>{{ end }}
+  <a href="#{{ $v.specialReadings.id }}">Special readings</a>
+  <a href="#{{ $v.specialHaftarot.id }}">Special hafṭaroth</a>
+</nav>
 
-{{ range $page.books }}
-{{ partial "siddur-ey-book-table.html" . }}
-{{ end }}
+{{- range $v.books }}
+{{- $book := . }}
+<section class="ey-section" id="{{ .id }}">
+  <h2>{{ .title }}</h2>
+  <div class="ey-list">
+    {{- range .sedarim }}
+    <details class="ey-item" id="{{ $book.id }}-{{ .n }}">
+      <summary>
+        <div class="ey-head"><span class="ey-name">{{ $book.title }} {{ .n }}</span><span class="ey-he" lang="he" dir="rtl">סדר {{ .he }}</span><span class="ey-count">{{ .verses }} pĕsuqim</span></div>
+        <div class="ey-line"><span class="ey-ref ey-torah">{{ .ref }}</span>{{ partial "siddur-ey-phrase.html" . }}</div>
+        {{ partial "siddur-ey-haftarah.html" .haftarah }}
+      </summary>
+      <ol class="ey-aliyot">
+        {{- range .aliyot }}<li><span class="ey-ref">{{ .ref }}</span>{{ partial "siddur-ey-phrase.html" . }}</li>{{ end }}
+      </ol>
+    </details>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
 
-{{ with $page.specialHaftarot }}
-{{ partial "siddur-table.html" (dict "id" .id "title" .title "headers" .headers "rows" .rows "hebrewColumn" "all") }}
-{{ with .note }}<p class="siddur-table-note">{{ . }}</p>{{ end }}
-{{ end }}
+{{- with $v.specialReadings }}
+<section class="ey-section" id="{{ .id }}">
+  <h2>Special Readings</h2>
+  <div class="ey-list">
+    {{- range .rows }}
+    <details class="ey-item">
+      <summary>
+        <div class="ey-head"><span class="ey-name">{{ .name }}</span><span class="ey-he" lang="he" dir="rtl">{{ .he }}</span></div>
+        {{- range .torah }}
+        <div class="ey-line">{{ with .label }}<span class="ey-label">{{ . }}</span>{{ end }}<span class="ey-ref ey-torah">{{ .ref }}</span>{{ partial "siddur-ey-phrase.html" . }}</div>
+        {{- end }}
+        {{ partial "siddur-ey-haftarah.html" .haftarah }}
+      </summary>
+      <p class="ey-notes">{{ .notes }}</p>
+      {{- range .aliyot }}
+      {{ with .label }}<div class="ey-sublabel">{{ . }}</div>{{ end }}
+      <ol class="ey-aliyot">
+        {{- range .items }}<li><span class="ey-ref">{{ .ref }}</span>{{ partial "siddur-ey-phrase.html" . }}</li>{{ end }}
+      </ol>
+      {{- end }}
+    </details>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
 
-{{ with $page.specialReadings }}
-{{ partial "siddur-ey-special-readings.html" . }}
-{{ end }}
+{{- with $v.specialHaftarot }}
+<section class="ey-section" id="{{ .id }}">
+  <h2>{{ .title }}</h2>
+  <p class="ey-notes">{{ .note }}</p>
+  <div class="ey-list">
+    {{- range .rows }}
+    <div class="ey-item ey-static">
+      <div class="ey-head"><span class="ey-name">{{ .name }}</span><span class="ey-he" lang="he" dir="rtl">{{ .he }}</span></div>
+      <div class="ey-line ey-when">{{ .when }}. {{ .note }}</div>
+      {{ partial "siddur-ey-haftarah.html" .haftarah }}
+    </div>
+    {{- end }}
+  </div>
+</section>
+{{- end }}
 
+<script>
+// A link to a seder (#bereshith-16) opens it.
+function eyOpen() { const d = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (d && d.tagName === 'DETAILS') d.open = true; }
+eyOpen(); addEventListener('hashchange', eyOpen);
+</script>
 {{ end }}
