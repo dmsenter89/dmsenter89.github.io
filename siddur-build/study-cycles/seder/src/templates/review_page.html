@@ -1,0 +1,146 @@
+<title>Reading Split Review</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+Hebrew:wght@400;600&family=Bitter:wght@500;600&display=swap">
+<style>
+/* Layout: one review column; each seder is a decision card with tappable option rows */
+:root{
+  --bg:#f4f6f8; --surface:#ffffff; --ink:#18232d; --muted:#5b6b78; --line:#d8e0e6;
+  --accent:#1d5f7a; --accent-soft:#e1eef4; --rec:#2f7a4e; --rec-soft:#e3f2e8; --warn:#a8552a; --warn-soft:#f7e9e0;
+  --bar:#b9c6cf;
+  --display:"Bitter", Georgia, serif; --body:"IBM Plex Sans", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, monospace; --heb:"Noto Serif Hebrew", "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#11181e; --surface:#19232b; --ink:#e4ebf0; --muted:#94a5b2; --line:#2b3944;
+  --accent:#6fb3d1; --accent-soft:#1d3440; --rec:#6cc08f; --rec-soft:#1b3326; --warn:#e3966b; --warn-soft:#3a271c; --bar:#4b5d6a; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#11181e; --surface:#19232b; --ink:#e4ebf0; --muted:#94a5b2; --line:#2b3944;
+  --accent:#6fb3d1; --accent-soft:#1d3440; --rec:#6cc08f; --rec-soft:#1b3326; --warn:#e3966b; --warn-soft:#3a271c; --bar:#4b5d6a; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:20px 48px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top, 0px);z-index:10;background:var(--bg)}
+main{max-width:720px;margin:0 auto;display:grid;gap:18px}
+h1{font-family:var(--display);font-weight:600;font-size:1.6rem;margin:0;text-wrap:balance}
+.lede{color:var(--muted);margin:4px 0 0;max-width:62ch}
+.bar{position:sticky;top:env(safe-area-inset-top, 0px);z-index:5;background:var(--bg);padding-block:10px;display:grid;gap:10px;border-bottom:1px solid var(--line)}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.progress{font-family:var(--mono);font-size:.85rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:5px 12px;font:500 .85rem var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.btn{border:1px solid var(--accent);background:transparent;color:var(--accent);border-radius:8px;padding:6px 12px;font:600 .85rem var(--body);cursor:pointer}
+.btn:disabled{opacity:.5;cursor:default}
+.status{font-size:.82rem;color:var(--muted)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:12px}
+.card.done{border-color:color-mix(in srgb, var(--rec) 45%, var(--line))}
+.head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.head h2{font-family:var(--display);font-weight:600;font-size:1.1rem;margin:0}
+.head .ref{font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.tag{font:600 .7rem var(--body);letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:4px}
+.tag.mid{background:var(--warn-soft);color:var(--warn)} .tag.uneven{background:var(--accent-soft);color:var(--accent)}
+.issue{margin:0}
+.seam{font-family:var(--heb);direction:rtl;text-align:right;background:var(--bg);border-radius:6px;padding:8px 10px;font-size:1.02rem;line-height:1.7;overflow-wrap:anywhere}
+.seam .cut{color:var(--warn);font-weight:600;padding:0 6px}
+.seam .vref{font-family:var(--mono);font-size:.72rem;color:var(--muted);direction:ltr;unicode-bidi:isolate}
+.opts{display:grid;gap:8px}
+.opt{display:grid;gap:6px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;cursor:pointer;background:var(--surface);text-align:left;color:var(--ink);font:inherit;width:100%}
+.opt:focus-visible,.chip:focus-visible,.btn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.opt[aria-checked="true"]{border-color:var(--accent);box-shadow:inset 0 0 0 1px var(--accent);background:var(--accent-soft)}
+.optt{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-weight:600}
+.dot{width:16px;height:16px;border-radius:50%;border:2px solid var(--muted);flex:none;display:grid;place-items:center}
+.opt[aria-checked="true"] .dot{border-color:var(--accent)} .opt[aria-checked="true"] .dot::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.rec{font:600 .68rem var(--body);letter-spacing:.06em;text-transform:uppercase;background:var(--rec-soft);color:var(--rec);padding:2px 7px;border-radius:4px}
+.note{color:var(--muted);font-size:.88rem;margin:0}
+.days{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;align-items:end}
+.day{display:grid;gap:3px;min-width:0}
+.col{height:44px;display:flex;align-items:flex-end}
+.col i{display:block;width:100%;background:var(--bar);border-radius:3px 3px 0 0}
+.day.m .col i{background:var(--warn)}
+.w{font-family:var(--mono);font-size:.78rem;font-variant-numeric:tabular-nums}
+.dr{font-family:var(--mono);font-size:.68rem;color:var(--muted);overflow-wrap:anywhere;line-height:1.3}
+.de{font-size:.66rem;color:var(--muted);line-height:1.2}
+.day.m .de{color:var(--warn);font-weight:600}
+.legend{font-size:.8rem;color:var(--muted)}
+.legend b{color:var(--warn)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+<main>
+  <header>
+    <h1>Reading split review</h1>
+    <p class="lede">__COUNT__ sedarim where the five-day split either ends a day mid-paragraph or leaves the week lopsided. Tap the split you want for each; your choices save as you go, and I'll apply them to the spreadsheet.</p>
+  </header>
+  <div class="bar">
+    <div class="row">
+      <span class="progress" id="progress">0 of __COUNT__ decided</span>
+      <span class="status" id="status">Connecting…</span>
+    </div>
+    <div class="row" role="group" aria-label="Filter">
+      <button class="chip" type="button" id="f-all" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" type="button" id="f-open" data-f="open" aria-pressed="false">Undecided</button>
+      <button class="chip" type="button" id="f-mid" data-f="mid" aria-pressed="false">Mid-paragraph</button>
+      <button class="chip" type="button" id="f-uneven" data-f="uneven" aria-pressed="false">Uneven week</button>
+      <button class="btn" type="button" id="acceptAll">Accept recommendations for the rest</button>
+    </div>
+    <div class="legend">Bars are words per day, Sunday to Thursday. <b>Orange</b> marks a day that ends mid-paragraph.</div>
+  </div>
+  <section id="list" class="opts" aria-live="polite"></section>
+</main>
+<script>
+const ITEMS = __DATA__;
+const state = {choice:{}, filter:'all', db:null};
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function seam(b){
+  return `<div class="seam"><span class="vref">${b.before}</span> …${esc(b.bword)}<span class="cut" aria-label="day break">|</span>${esc(b.aword)}… <span class="vref">${b.after}</span></div>`;
+}
+function optHtml(it, o){
+  const max = Math.max(...it.options.flatMap(x => x.days.map(d => d.words)));
+  const sel = state.choice[it.id] === o.key;
+  const days = o.days.map(d => `<div class="day${d.end==='mid-paragraph'?' m':''}"><div class="col"><i style="height:${Math.max(4, Math.round(d.words/max*44))}px"></i></div><span class="w">${d.words}</span><span class="dr">${d.ref}</span><span class="de">${d.end}</span></div>`).join('');
+  return `<button type="button" class="opt" role="radio" id="o-${it.id}-${o.key}" aria-checked="${sel}" data-id="${it.id}" data-k="${o.key}">
+    <span class="optt"><span class="dot" aria-hidden="true"></span>${esc(o.label)}${it.rec===o.key?'<span class="rec">Recommended</span>':''}</span>
+    <p class="note">${esc(o.note)}</p><div class="days">${days}</div></button>`;
+}
+function render(){
+  const f = state.filter;
+  const shown = ITEMS.filter(it => f==='all' || (f==='open' && !state.choice[it.id]) || it.kind===f);
+  $('#list').innerHTML = shown.length ? shown.map(it => `<article class="card${state.choice[it.id]?' done':''}" id="c-${it.id}">
+    <div class="head"><h2>${esc(it.book)} ${it.seder}</h2><span class="row"><span class="ref">${it.range}</span><span class="tag ${it.kind}">${it.kind==='mid'?'Mid-paragraph':'Uneven week'}</span></span></div>
+    <p class="issue">${esc(it.issue)}</p>${it.breaks.map(seam).join('')}
+    <div class="opts" role="radiogroup" aria-label="${esc(it.book)} ${it.seder} split">${it.options.map(o => optHtml(it,o)).join('')}</div></article>`).join('')
+    : '<p class="status">Nothing left in this view.</p>';
+  const n = ITEMS.filter(it => state.choice[it.id]).length;
+  $('#progress').textContent = `${n} of ${ITEMS.length} decided`;
+  $('#acceptAll').disabled = n === ITEMS.length || !state.db;
+}
+async function save(id, key){
+  state.choice[id] = key; render();
+  if (!state.db){ $('#status').textContent = 'Not saved: storage is unavailable in this view.'; return; }
+  try { await state.db.doc('choices/' + id).set({choice:key, at:new Date().toISOString()}); $('#status').textContent = 'Saved'; }
+  catch(e){ $('#status').textContent = 'Could not save that choice. Check your connection and tap it again.'; }
+}
+document.addEventListener('click', async e => {
+  const o = e.target.closest('.opt'); if (o){ save(o.dataset.id, o.dataset.k); return; }
+  const c = e.target.closest('.chip');
+  if (c){ state.filter = c.dataset.f; document.querySelectorAll('.chip').forEach(x => x.setAttribute('aria-pressed', x===c)); render(); return; }
+  if (e.target.id === 'acceptAll'){
+    const rest = ITEMS.filter(it => !state.choice[it.id]);
+    const withRec = rest.filter(it => it.rec);
+    for (const it of withRec){ await save(it.id, it.rec); }
+    $('#status').textContent = `Accepted ${withRec.length} recommendations` + (withRec.length < rest.length ? `; ${rest.length - withRec.length} have none and still need a choice` : '');
+  }
+});
+render();
+(async () => {
+  const timer = setTimeout(() => { if (!state.db) $('#status').textContent = 'Choices will not save in this view.'; }, 10000);
+  const db = await claude.use('db');
+  if (!db){ clearTimeout(timer); $('#status').textContent = 'Choices will not save in this view.'; return; }
+  state.db = db;
+  db.collection('choices').onSnapshot(snap => {
+    clearTimeout(timer);
+    snap.docs.forEach(d => { const v = d.data(); if (v && v.choice) state.choice[d.id] = v.choice; });
+    $('#status').textContent = 'Ready'; render();
+  }, () => { clearTimeout(timer); $('#status').textContent = 'Could not load saved choices.'; });
+})();
+</script>

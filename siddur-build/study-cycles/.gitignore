@@ -1,0 +1,5 @@
+.cache/
+work/
+output/
+__pycache__/
+outputs/

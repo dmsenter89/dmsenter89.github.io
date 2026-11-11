@@ -1,0 +1,77 @@
+{
+  "_comment": "Every tunable number and rule used by the pipeline. The text is Miqra according to the Masorah (src/textsource_mam.py); seder and ʿăliyya boundaries come from the site's EY table (../ey_table.py).",
+  "text_source": "mam",
+  "days_per_seder": 5,
+  "day_names": [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday"
+  ],
+  "break_kind_precedence": [
+    "petuha",
+    "setuma",
+    "aliyah",
+    "chapter",
+    "verse"
+  ],
+  "_break_kind_precedence_comment": "A break after verse v is classified by the FIRST rule that applies: v carries a petuha mark; v carries a setuma mark; the next verse is an ʿăliyya start (not the seder's first ʿăliyya); v is the last verse of its chapter; otherwise 'verse' (mid-paragraph). The break after a seder's last verse is 'seder end' and costs nothing.",
+  "break_costs": {
+    "petuha": 0,
+    "setuma": 0,
+    "aliyah": 0.03,
+    "chapter": 0.06,
+    "verse": 0.25
+  },
+  "_break_costs_comment": "Cost of one break = break_costs[kind] * T * T, where T = seder words / days_per_seder (the seder's own daily target). Total cost of a split = sum over days of (day words - T)^2 + sum of break costs. The split minimizing total cost wins; ties go to the earliest break (strict < in the dynamic program).",
+  "constraints": {
+    "days_never_cross_seder": true,
+    "days_never_cross_book": true,
+    "min_verses_per_day": 1,
+    "exactly_days_per_seder_days": true,
+    "_comment": "Books never cross because each book ends a seder. No global daily target: each seder is balanced against its own T, so week-to-week length follows the sedarim."
+  },
+  "review": {
+    "_comment": "Rules used on 2026-11-07 to pick sedarim for hand review and to generate the alternatives shown.",
+    "flag_if_any_break_kind": [
+      "verse"
+    ],
+    "flag_if_heaviest_over_lightest_at_least": 2.2,
+    "option_strict_verse_cost": 50,
+    "option_even_verse_cost": 0.15,
+    "option_order": [
+      "keep",
+      "strict",
+      "even",
+      "scene"
+    ],
+    "option_labels": {
+      "keep": "Keep as is",
+      "strict": "Section breaks only",
+      "even": "Evener split",
+      "scene": "Scene breaks"
+    },
+    "split_labels": {
+      "keep": "Reviewed: kept",
+      "strict": "Reviewed: section breaks",
+      "even": "Reviewed: evener split",
+      "scene": "Reviewed: scene breaks",
+      "automatic": "Automatic"
+    },
+    "seam_words_before": 4,
+    "seam_words_after": 5
+  },
+  "xlsx": {
+    "_comment": "Thresholds used in the Stats sheet formulas.",
+    "short_day_words": 60,
+    "long_day_words": 200,
+    "heavy_seder_words": 700,
+    "light_seder_words": 400,
+    "evenness_bands": [
+      0.1,
+      0.15,
+      0.25
+    ]
+  }
+}

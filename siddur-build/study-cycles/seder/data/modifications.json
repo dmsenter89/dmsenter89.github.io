@@ -1,0 +1,14 @@
+{
+ "_comment": "Edits the owner asked for on top of a chosen option. Each entry replaces the chosen option's day starts (first verses of days 2-5).",
+ "modifications": [
+  {
+   "id": "gen-16",
+   "based_on_choice": "even",
+   "day_starts": ["24:17", "24:42", "24:53", "25:1"],
+   "label": "Reviewed: evener, day 2 to 24:41",
+   "sheet_note": "Bĕreʾshith 16 uses the evener split with day 2 extended to 24:41.",
+   "source": "Owner's comment on the review page, 2026-11-10 (thread b57ec577-3ecc-4827-bd2d-7608d45f55b3), anchored on the 'Evener split' option of Bĕreʾshith 16",
+   "owner_comment": "I think the evener split is good, but the second day i would end at verse 41 because it's cleaner than 36"
+  }
+ ]
+}

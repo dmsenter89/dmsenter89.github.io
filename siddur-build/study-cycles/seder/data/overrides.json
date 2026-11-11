@@ -1,0 +1,1636 @@
+{
+ "_comment": "Hand decisions applied by build_plan.py; edit this file directly. day_starts = first verses of days 2-5 (MAM numbering). choice: keep = follow the optimizer (the owner accepted the automatic split; re-optimized on each run), strict = section breaks only, even = evener split, scene = hand-picked scene breaks (data/scene_options.json). The first 44 come from the 2026-11-07 review on the Leningrad Codex (record in data/review_*.json; at_decision.text = 'wlc'); exod-28 and the lev-14 update were decided on MAM on 2026-11-10. Lev 21 was also flagged on MAM; the owner kept the automatic split. 'problem' is why a seder was reviewed, 'chosen_option_note' describes the pick; only Bĕreʾshith 16 has an owner comment ('modification').",
+ "overrides": [
+  {
+   "id": "gen-1",
+   "book": "Gen",
+   "seder": 1,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "1:9",
+    "1:14",
+    "1:24",
+    "2:1"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends inside the sixth day of creation.",
+   "chosen_option_note": "One creation day per reading, with Shabbat (2:1–3) on its own as a short Thursday.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:42:50.450Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     90,
+     69,
+     126,
+     149,
+     35
+    ],
+    "ends": [
+     "petuha",
+     "petuha",
+     "petuha",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-9",
+   "book": "Gen",
+   "seder": 9,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "12:10",
+    "12:17",
+    "13:5",
+    "13:14"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": false,
+   "problem": "Day 2 ends inside the descent to Egypt, just before the plagues on Pharaoh.",
+   "chosen_option_note": "Splits the Egypt episode at 12:17.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:44:01.940Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     127,
+     88,
+     101,
+     125,
+     69
+    ],
+    "ends": [
+     "petuha",
+     "verse",
+     "aliyah",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-10",
+   "book": "Gen",
+   "seder": 10,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "14:8",
+    "14:15",
+    "15:1",
+    "15:7"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends inside the covenant between the pieces, at the birds of prey.",
+   "chosen_option_note": "The promise of the stars (15:1–6) and the covenant (15:7–21) each read whole.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:45:53.374Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     102,
+     107,
+     134,
+     85,
+     173
+    ],
+    "ends": [
+     "aliyah",
+     "aliyah",
+     "setuma",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-11",
+   "book": "Gen",
+   "seder": 11,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "16:8",
+    "17:1",
+    "17:15",
+    "17:23"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends mid-dialogue, before Abraham's plea for Yishmaʿel.",
+   "chosen_option_note": "Covenant and circumcision together, Sarah and Yiṣḥaq next, then the circumcision carried out (17:23–27).",
+   "modification": null,
+   "decided_at": "2026-11-10T17:46:08.473Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     107,
+     116,
+     178,
+     111,
+     66
+    ],
+    "ends": [
+     "aliyah",
+     "setuma",
+     "setuma",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-13",
+   "book": "Gen",
+   "seder": 13,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "19:12",
+    "19:18",
+    "19:24",
+    "19:30"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends in the middle of the mob at Loṭ's door.",
+   "chosen_option_note": "The night scene (19:1–11) read whole, though day 1 runs 166 words.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:46:39.737Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     166,
+     109,
+     84,
+     81,
+     123
+    ],
+    "ends": [
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-16",
+   "book": "Gen",
+   "seder": 16,
+   "choice": "even",
+   "label": "Reviewed: evener, day 2 to 24:41",
+   "day_starts": [
+    "24:17",
+    "24:42",
+    "24:53",
+    "25:1"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": false,
+   "problem": "Day 1 ends at the well, while Rivqa waters the camels.",
+   "chosen_option_note": "Evener, but both of the first breaks are mid-paragraph.",
+   "modification": {
+    "day_starts": [
+     "24:17",
+     "24:42",
+     "24:53",
+     "25:1"
+    ],
+    "source": "Owner's comment on the review page, 2026-11-10 (thread b57ec577-3ecc-4827-bd2d-7608d45f55b3), anchored on the 'Evener split' option of Bĕreʾshith 16",
+    "owner_comment": "I think the evener split is good, but the second day i would end at verse 41 because it's cleaner than 36",
+    "sheet_note": "Bĕreʾshith 16 uses the evener split with day 2 extended to 24:41."
+   },
+   "decided_at": "2026-11-10T17:48:09.633Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     254,
+     311,
+     179,
+     175,
+     209
+    ],
+    "ends": [
+     "verse",
+     "aliyah",
+     "aliyah",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-21",
+   "book": "Gen",
+   "seder": 21,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "30:28",
+    "30:31",
+    "30:35",
+    "30:40"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Uneven week: day 2 (30:28–30) is only 35 words.",
+   "chosen_option_note": "Short day at the wage negotiation; use the spare time for review.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:50:11.221Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     72,
+     35,
+     65,
+     78,
+     85
+    ],
+    "ends": [
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-24",
+   "book": "Gen",
+   "seder": 24,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "34:8",
+    "34:20",
+    "34:25",
+    "35:1"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends one verse into Ḥamor's proposal.",
+   "chosen_option_note": "Starts day 2 where Ḥamor begins speaking (34:8), so Dina's story and the negotiation each read whole.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:50:28.874Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     131,
+     147,
+     81,
+     100,
+     132
+    ],
+    "ends": [
+     "verse",
+     "aliyah",
+     "aliyah",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-26",
+   "book": "Gen",
+   "seder": 26,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "37:5",
+    "37:12",
+    "37:18",
+    "37:25"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Uneven week: day 1 (37:1–4) is only 52 words.",
+   "chosen_option_note": "One scene a day: coat, dreams, the search, the pit, the sale (day 5 runs 163).",
+   "modification": null,
+   "decided_at": "2026-11-10T17:51:25.329Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     66,
+     101,
+     75,
+     89,
+     163
+    ],
+    "ends": [
+     "verse",
+     "aliyah",
+     "aliyah",
+     "verse",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-33",
+   "book": "Gen",
+   "seder": 33,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "45:1",
+    "45:17",
+    "46:1",
+    "46:8"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 3 ends while Yosef is handing out gifts for the journey.",
+   "chosen_option_note": "One scene a day: Yehuda's plea, the revelation, Pharaoh's invitation, Beʾer Shevaʿ, the seventy souls. Two days run past 220 words.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:52:45.784Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     222,
+     226,
+     171,
+     97,
+     212
+    ],
+    "ends": [
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "setuma",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-34",
+   "book": "Gen",
+   "seder": 34,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "47:1",
+    "47:11",
+    "47:18",
+    "47:27"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends inside the famine land reform.",
+   "chosen_option_note": "Land reform whole on day 4; Yaʿaqov's deathbed oath (47:27–31) on day 5.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:53:17.049Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     105,
+     152,
+     118,
+     166,
+     76
+    ],
+    "ends": [
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "verse",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "gen-36",
+   "book": "Gen",
+   "seder": 36,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "49:13",
+    "49:27",
+    "50:7",
+    "50:15"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends as the brothers send their message to Yosef.",
+   "chosen_option_note": "Starts day 5 where the brothers grow afraid (50:15), so the reconciliation reads whole.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:53:27.340Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     134,
+     133,
+     188,
+     123,
+     168
+    ],
+    "ends": [
+     "petuha",
+     "petuha",
+     "aliyah",
+     "verse",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "exod-4",
+   "book": "Exod",
+   "seder": 4,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "6:10",
+    "6:14",
+    "6:24",
+    "7:1"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 1 cuts the four expressions of redemption before “wehevethi.”",
+   "chosen_option_note": "The whole promise (6:2–9) in one reading; Moshe's objection (6:10–13) is a short day 2.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:53:35.196Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     122,
+     53,
+     119,
+     93,
+     95
+    ],
+    "ends": [
+     "petuha",
+     "setuma",
+     "aliyah",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "exod-11",
+   "book": "Exod",
+   "seder": 11,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "14:22",
+    "14:26",
+    "15:1",
+    "15:20"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 3 ends in the middle of the Song of the Sea.",
+   "chosen_option_note": "The Song (15:1–19) chanted whole on day 4, at 198 words; the crossing gets days 2 and 3.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:53:41.921Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     107,
+     54,
+     99,
+     198,
+     110
+    ],
+    "ends": [
+     "aliyah",
+     "petuha",
+     "petuha",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "exod-13",
+   "book": "Exod",
+   "seder": 13,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "16:32",
+    "17:1",
+    "17:4",
+    "17:8"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Uneven week: day 5 (17:14–16) is only 37 words.",
+   "chosen_option_note": "Amaleq (17:8–16) read whole on day 5; the manna jar and Massa uMeriva fill days 1–4.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:53:55.318Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     51,
+     77,
+     56,
+     71,
+     119
+    ],
+    "ends": [
+     "verse",
+     "petuha",
+     "aliyah",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "exod-19",
+   "book": "Exod",
+   "seder": 19,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "26:7",
+    "26:15",
+    "26:23",
+    "26:26"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 2 ends inside the goat-hair curtains.",
+   "chosen_option_note": "Each covering whole, then the boards and bars; days 4–5 are short (41, 52).",
+   "modification": null,
+   "decided_at": "2026-11-10T17:54:06.719Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     92,
+     109,
+     86,
+     41,
+     52
+    ],
+    "ends": [
+     "petuha",
+     "petuha",
+     "aliyah",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "exod-21",
+   "book": "Exod",
+   "seder": 21,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "28:6",
+    "28:15",
+    "28:27",
+    "28:36"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 3 ends inside the breastplate section.",
+   "chosen_option_note": "The ḥoshen (28:15–30) is one long section, so any even split cuts it; 28:27 is a natural pause at the rings.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:54:19.220Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     114,
+     115,
+     142,
+     141,
+     121
+    ],
+    "ends": [
+     "petuha",
+     "setuma",
+     "verse",
+     "setuma",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "exod-28",
+   "book": "Exod",
+   "seder": 28,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "39:1",
+    "39:8",
+    "39:16",
+    "39:22"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends mid-paragraph at 38:28 (flagged on MAM).",
+   "chosen_option_note": "Section breaks only: day 1 runs to the chapter end (174 words).",
+   "modification": null,
+   "decided_at": "2026-11-10",
+   "at_decision": {
+    "text": "mam",
+    "words": [
+     174,
+     104,
+     82,
+     97,
+     136
+    ],
+    "ends": [
+     "chapter",
+     "petuha",
+     "aliyah",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "lev-5",
+   "book": "Lev",
+   "seder": 5,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "10:4",
+    "10:8",
+    "10:12",
+    "10:16"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Uneven week: days 1 and 3 are under 50 words.",
+   "chosen_option_note": "Moshe's inquiry about the goat (10:16–20) gets its own day.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:54:34.534Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     49,
+     75,
+     43,
+     81,
+     79
+    ],
+    "ends": [
+     "aliyah",
+     "petuha",
+     "petuha",
+     "verse",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "lev-8",
+   "book": "Lev",
+   "seder": 8,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "13:35",
+    "13:40",
+    "13:50",
+    "13:56"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 2 ends inside the law of baldness.",
+   "chosen_option_note": "Clean setuma break; day 2 is short (58), day 3 longer (130).",
+   "modification": null,
+   "decided_at": "2026-11-10T17:55:48.366Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     111,
+     58,
+     130,
+     112,
+     78
+    ],
+    "ends": [
+     "aliyah",
+     "setuma",
+     "aliyah",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "lev-10",
+   "book": "Lev",
+   "seder": 10,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "14:39",
+    "14:43",
+    "14:46",
+    "14:51"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends inside the purification of a house.",
+   "chosen_option_note": "Splits the bird ritual at 14:51.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:55:56.701Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     84,
+     55,
+     46,
+     62,
+     72
+    ],
+    "ends": [
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "verse",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "lev-11",
+   "book": "Lev",
+   "seder": 11,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "15:6",
+    "15:13",
+    "15:18",
+    "15:25"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Uneven week: day 1 is 60 words, day 5 is 133.",
+   "chosen_option_note": "Clean section breaks.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:56:02.729Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     60,
+     88,
+     77,
+     98,
+     133
+    ],
+    "ends": [
+     "aliyah",
+     "aliyah",
+     "petuha",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "lev-14",
+   "book": "Lev",
+   "seder": 14,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "19:9",
+    "19:12",
+    "19:16",
+    "19:19"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends inside the law of the shĕlamim offering.",
+   "chosen_option_note": "Keeps the shĕlamim law (19:5–8) whole; day 2 is short (35).",
+   "modification": null,
+   "decided_at": "2026-11-10T17:56:08.623Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     80,
+     35,
+     50,
+     53,
+     52
+    ],
+    "ends": [
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "petuha",
+     "seder end"
+    ]
+   },
+   "mam_update": "2026-11-10: on MAM, 19:19 ends no section, so 'section breaks only' was re-run on MAM (day 5 starts 19:19 instead of 19:20)."
+  },
+  {
+   "id": "lev-15",
+   "book": "Lev",
+   "seder": 15,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "19:33",
+    "20:8",
+    "20:17",
+    "20:23"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 3 ends inside the list of forbidden unions.",
+   "chosen_option_note": "The list has no section marks; any verse in it is a fair pause.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:56:23.216Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     108,
+     170,
+     123,
+     107,
+     90
+    ],
+    "ends": [
+     "petuha",
+     "aliyah",
+     "verse",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "lev-22",
+   "book": "Lev",
+   "seder": 22,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "27:9",
+    "27:14",
+    "27:20",
+    "27:28"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 3 ends inside the law of a dedicated field.",
+   "chosen_option_note": "A fair pause inside one long case.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:56:27.865Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     109,
+     67,
+     87,
+     100,
+     95
+    ],
+    "ends": [
+     "setuma",
+     "aliyah",
+     "verse",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-4",
+   "book": "Num",
+   "seder": 4,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "4:21",
+    "4:29",
+    "4:38",
+    "5:1"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Uneven week: day 1 (4:17–20) is only 43 words.",
+   "chosen_option_note": "One Levite family per day; Qehath's warning stands alone.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:56:40.267Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     43,
+     115,
+     115,
+     142,
+     132
+    ],
+    "ends": [
+     "petuha",
+     "petuha",
+     "setuma",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-6",
+   "book": "Num",
+   "seder": 6,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "7:1",
+    "7:12",
+    "7:24",
+    "7:36"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends one verse into the princes' offerings.",
+   "chosen_option_note": "Birkath Kohanim (6:22–27) as its own short day, then the offerings.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:57:30.891Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     41,
+     152,
+     137,
+     132,
+     132
+    ],
+    "ends": [
+     "petuha",
+     "setuma",
+     "petuha",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-10",
+   "book": "Num",
+   "seder": 10,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "11:23",
+    "11:30",
+    "12:1",
+    "12:9"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends at 12:8, inside the Miryam episode.",
+   "chosen_option_note": "12:9 is where the rebuke turns to punishment; a real scene change.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:57:36.155Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     140,
+     110,
+     88,
+     104,
+     93
+    ],
+    "ends": [
+     "petuha",
+     "aliyah",
+     "petuha",
+     "verse",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-15",
+   "book": "Num",
+   "seder": 15,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "17:27",
+    "18:8",
+    "18:15",
+    "18:21"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Uneven week: day 1 is 161 words, day 5 is 69.",
+   "chosen_option_note": "Clean section breaks.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:57:41.462Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     161,
+     144,
+     105,
+     112,
+     69
+    ],
+    "ends": [
+     "setuma",
+     "setuma",
+     "aliyah",
+     "setuma",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-16",
+   "book": "Num",
+   "seder": 16,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "19:1",
+    "19:11",
+    "20:1",
+    "20:7"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 3 ends inside the laws of corpse impurity.",
+   "chosen_option_note": "The impurity laws (19:11–22) whole; Miryam's death and the water (20:1–13) on days 4–5.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:57:50.826Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     112,
+     147,
+     199,
+     84,
+     108
+    ],
+    "ends": [
+     "petuha",
+     "aliyah",
+     "petuha",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-17",
+   "book": "Num",
+   "seder": 17,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "20:22",
+    "21:4",
+    "21:21",
+    "21:33"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends inside the battle with Siḥon, before the poets' song.",
+   "chosen_option_note": "Siḥon with its song whole on day 4 (211); ʿOg alone on day 5.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:00.835Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     114,
+     158,
+     211,
+     161,
+     64
+    ],
+    "ends": [
+     "petuha",
+     "petuha",
+     "petuha",
+     "verse",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-19",
+   "book": "Num",
+   "seder": 19,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "23:18",
+    "23:27",
+    "24:10",
+    "24:14"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends inside Bilʿam's second oracle.",
+   "chosen_option_note": "Setup (23:13–17) on day 1, the second oracle whole on day 2.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:10.278Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     73,
+     105,
+     157,
+     70,
+     131
+    ],
+    "ends": [
+     "verse",
+     "aliyah",
+     "aliyah",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-22",
+   "book": "Num",
+   "seder": 22,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "27:22",
+    "28:5",
+    "28:11",
+    "28:16"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends before Moshe carries out Yehoshuaʿ's appointment.",
+   "chosen_option_note": "27:22 is where the command turns to its fulfillment; a natural pause.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:16.898Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     94,
+     73,
+     63,
+     73,
+     102
+    ],
+    "ends": [
+     "verse",
+     "aliyah",
+     "setuma",
+     "setuma",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-24",
+   "book": "Num",
+   "seder": 24,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "30:7",
+    "30:14",
+    "31:6",
+    "31:13"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 2 ends inside the laws of vows.",
+   "chosen_option_note": "30:14 opens the summary of a husband's powers; a sub-topic start.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:21.445Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     86,
+     105,
+     111,
+     115,
+     156
+    ],
+    "ends": [
+     "aliyah",
+     "verse",
+     "aliyah",
+     "setuma",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-26",
+   "book": "Num",
+   "seder": 26,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "32:6",
+    "32:16",
+    "32:25",
+    "32:33"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends inside Moshe's rebuke of Gad and Reʾuven.",
+   "chosen_option_note": "The request (32:1–5) on day 1, the whole rebuke (32:6–15) on day 2.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:29.135Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     71,
+     137,
+     117,
+     110,
+     121
+    ],
+    "ends": [
+     "verse",
+     "setuma",
+     "aliyah",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-27",
+   "book": "Num",
+   "seder": 27,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "33:10",
+    "33:27",
+    "33:40",
+    "33:50"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 2 ends inside the list of encampments.",
+   "chosen_option_note": "It is a list; any station is a fair pause.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:34.191Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     110,
+     87,
+     88,
+     70,
+     109
+    ],
+    "ends": [
+     "aliyah",
+     "verse",
+     "setuma",
+     "setuma",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "num-28",
+   "book": "Num",
+   "seder": 28,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "34:7",
+    "34:16",
+    "35:1",
+    "35:6"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Uneven week: day 5 (35:6–8) is only 50 words.",
+   "chosen_option_note": "Clean section breaks; no better split exists.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:40.140Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     82,
+     115,
+     107,
+     76,
+     50
+    ],
+    "ends": [
+     "aliyah",
+     "petuha",
+     "petuha",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "deut-4",
+   "book": "Deut",
+   "seder": 4,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "4:5",
+    "4:15",
+    "4:25",
+    "4:31"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 1 ends at 4:4, inside Moshe's opening charge.",
+   "chosen_option_note": "4:5 (“See, I have taught you”) begins a new thought.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:45.461Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     170,
+     183,
+     157,
+     101,
+     178
+    ],
+    "ends": [
+     "verse",
+     "aliyah",
+     "petuha",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "deut-9",
+   "book": "Deut",
+   "seder": 9,
+   "choice": "strict",
+   "label": "Reviewed: section breaks",
+   "day_starts": [
+    "10:6",
+    "10:12",
+    "10:16",
+    "11:2"
+   ],
+   "recommended": "strict",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends inside the list of wonders in Egypt.",
+   "chosen_option_note": "The list (11:2–9) read whole on day 5; day 3 is short (62).",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:50.498Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     81,
+     99,
+     62,
+     93,
+     137
+    ],
+    "ends": [
+     "aliyah",
+     "petuha",
+     "aliyah",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "deut-13",
+   "book": "Deut",
+   "seder": 13,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "15:12",
+    "15:19",
+    "16:1",
+    "16:9"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Uneven week: day 3 (15:19–23) is only 60 words.",
+   "chosen_option_note": "Firstlings as their own short day.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:58:54.917Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     104,
+     100,
+     60,
+     129,
+     137
+    ],
+    "ends": [
+     "setuma",
+     "petuha",
+     "petuha",
+     "setuma",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "deut-16",
+   "book": "Deut",
+   "seder": 16,
+   "choice": "scene",
+   "label": "Reviewed: scene breaks",
+   "day_starts": [
+    "21:1",
+    "21:10",
+    "21:15",
+    "21:22"
+   ],
+   "recommended": "scene",
+   "followed_recommendation": true,
+   "problem": "Day 2 ends inside the ʿegla ʿărufa ritual.",
+   "chosen_option_note": "War laws on day 1, the ʿegla ʿărufa whole on day 2, then one family law per day.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:59:03.592Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     170,
+     136,
+     70,
+     114,
+     118
+    ],
+    "ends": [
+     "petuha",
+     "setuma",
+     "setuma",
+     "setuma",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "deut-21",
+   "book": "Deut",
+   "seder": 21,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "28:15",
+    "28:32",
+    "28:50",
+    "28:63"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Three days end inside the curses (28:15–68).",
+   "chosen_option_note": "The curses are one unbroken setuma; the only split possible is by verse.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:59:08.565Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     199,
+     219,
+     224,
+     222,
+     240
+    ],
+    "ends": [
+     "setuma",
+     "verse",
+     "verse",
+     "verse",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "deut-22",
+   "book": "Deut",
+   "seder": 22,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "29:15",
+    "29:20",
+    "29:26",
+    "30:4"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Days 2 and 3 end inside the warnings after the covenant.",
+   "chosen_option_note": "29:20 and 29:26 each open a new consequence; fair pauses.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:59:16.903Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     83,
+     103,
+     105,
+     95,
+     111
+    ],
+    "ends": [
+     "aliyah",
+     "verse",
+     "verse",
+     "aliyah",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "deut-24",
+   "book": "Deut",
+   "seder": 24,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "32:13",
+    "32:24",
+    "32:36",
+    "32:44"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 2 ends inside Haʾazinu.",
+   "chosen_option_note": "The song is verse by verse; 32:24 is a fair pause.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:59:20.494Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     125,
+     122,
+     119,
+     97,
+     153
+    ],
+    "ends": [
+     "aliyah",
+     "verse",
+     "aliyah",
+     "petuha",
+     "seder end"
+    ]
+   }
+  },
+  {
+   "id": "deut-25",
+   "book": "Deut",
+   "seder": 25,
+   "choice": "keep",
+   "label": "Reviewed: kept",
+   "day_starts": [
+    "33:12",
+    "33:20",
+    "34:1",
+    "34:7"
+   ],
+   "recommended": "keep",
+   "followed_recommendation": true,
+   "problem": "Day 4 ends at Moshe's burial, before his epitaph.",
+   "chosen_option_note": "34:7 (“Moshe was 120 years old”) begins the epitaph; a real scene change.",
+   "modification": null,
+   "decided_at": "2026-11-10T17:59:24.015Z",
+   "at_decision": {
+    "text": "wlc",
+    "words": [
+     135,
+     89,
+     115,
+     90,
+     86
+    ],
+    "ends": [
+     "setuma",
+     "setuma",
+     "setuma",
+     "verse",
+     "seder end"
+    ]
+   }
+  }
+ ]
+}

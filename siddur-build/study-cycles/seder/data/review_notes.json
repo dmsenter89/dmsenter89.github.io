@@ -1,0 +1,508 @@
+{
+ "_comment": "Hand-written text shown on the review page for the 44 sedarim reviewed 2026-11-07..10. 'recommended' is Claude's recommendation; 'option_notes' describe each option and quote word counts measured on the Westminster Leningrad Codex text. Only options that have a note here were shown for that seder.",
+ "items": [
+  {
+   "id": "gen-1",
+   "book": "Gen",
+   "seder": 1,
+   "recommended": "strict",
+   "issue": "Day 4 ends inside the sixth day of creation.",
+   "option_notes": {
+    "keep": "Splits day six before “Behold, I have given you.”",
+    "strict": "One creation day per reading, with Shabbat (2:1–3) on its own as a short Thursday.",
+    "even": "Evenest, but two days end mid-paragraph."
+   }
+  },
+  {
+   "id": "gen-9",
+   "book": "Gen",
+   "seder": 9,
+   "recommended": "scene",
+   "issue": "Day 2 ends inside the descent to Egypt, just before the plagues on Pharaoh.",
+   "option_notes": {
+    "keep": "Splits the Egypt episode at 12:17.",
+    "strict": "Clean break, but day 2 is only 52 words.",
+    "scene": "The whole Egypt episode (12:10–20) in one reading; the return north starts day 3."
+   }
+  },
+  {
+   "id": "gen-10",
+   "book": "Gen",
+   "seder": 10,
+   "recommended": "strict",
+   "issue": "Day 4 ends inside the covenant between the pieces, at the birds of prey.",
+   "option_notes": {
+    "keep": "Splits the covenant ritual at 15:11.",
+    "strict": "The promise of the stars (15:1–6) and the covenant (15:7–21) each read whole."
+   }
+  },
+  {
+   "id": "gen-11",
+   "book": "Gen",
+   "seder": 11,
+   "recommended": "scene",
+   "issue": "Day 4 ends mid-dialogue, before Abraham's plea for Yishmaʿel.",
+   "option_notes": {
+    "keep": "Cuts the conversation about Sarah's son in half.",
+    "strict": "Clean setuma before Sarah is renamed, but day 5 runs 177 words.",
+    "scene": "Covenant and circumcision together, Sarah and Yiṣḥaq next, then the circumcision carried out (17:23–27)."
+   }
+  },
+  {
+   "id": "gen-13",
+   "book": "Gen",
+   "seder": 13,
+   "recommended": "strict",
+   "issue": "Day 1 ends in the middle of the mob at Loṭ's door.",
+   "option_notes": {
+    "keep": "Splits the night scene at 19:9.",
+    "strict": "The night scene (19:1–11) read whole, though day 1 runs 166 words.",
+    "even": "Evener, but adds a second mid-paragraph break."
+   }
+  },
+  {
+   "id": "gen-16",
+   "book": "Gen",
+   "seder": 16,
+   "recommended": "keep",
+   "issue": "Day 1 ends at the well, while Rivqa waters the camels.",
+   "option_notes": {
+    "keep": "Chapter 24 has almost no section breaks, so every split lands mid-story; 24:20 is a reasonable pause.",
+    "strict": "Clean, but day 1 runs 361 words.",
+    "even": "Evener, but both of the first breaks are mid-paragraph."
+   }
+  },
+  {
+   "id": "gen-21",
+   "book": "Gen",
+   "seder": 21,
+   "recommended": "keep",
+   "issue": "Uneven week: day 2 (30:28–30) is only 35 words.",
+   "option_notes": {
+    "keep": "Short day at the wage negotiation; use the spare time for review.",
+    "even": "Evener, but breaks mid-paragraph at 30:27."
+   }
+  },
+  {
+   "id": "gen-24",
+   "book": "Gen",
+   "seder": 24,
+   "recommended": "scene",
+   "issue": "Day 1 ends one verse into Ḥamor's proposal.",
+   "option_notes": {
+    "keep": "Splits Ḥamor's speech after its first verse.",
+    "strict": "Clean ʿăliyya break, but day 1 runs 190 words.",
+    "even": "Evener, but adds a second mid-paragraph break.",
+    "scene": "Starts day 2 where Ḥamor begins speaking (34:8), so Dina's story and the negotiation each read whole."
+   }
+  },
+  {
+   "id": "gen-26",
+   "book": "Gen",
+   "seder": 26,
+   "recommended": "scene",
+   "issue": "Uneven week: day 1 (37:1–4) is only 52 words.",
+   "option_notes": {
+    "keep": "Short first day: the coat and the brothers' hatred.",
+    "even": "Evener, but two breaks are mid-paragraph.",
+    "scene": "One scene a day: coat, dreams, the search, the pit, the sale (day 5 runs 163)."
+   }
+  },
+  {
+   "id": "gen-33",
+   "book": "Gen",
+   "seder": 33,
+   "recommended": "strict",
+   "issue": "Day 3 ends while Yosef is handing out gifts for the journey.",
+   "option_notes": {
+    "keep": "Splits Pharaoh's invitation scene at 45:22.",
+    "strict": "One scene a day: Yehuda's plea, the revelation, Pharaoh's invitation, Beʾer Shevaʿ, the seventy souls. Two days run past 220 words."
+   }
+  },
+  {
+   "id": "gen-34",
+   "book": "Gen",
+   "seder": 34,
+   "recommended": "scene",
+   "issue": "Day 4 ends inside the famine land reform.",
+   "option_notes": {
+    "keep": "Splits the land reform at 47:24.",
+    "strict": "Clean, but day 4 is 72 words and day 5 is 170.",
+    "scene": "Land reform whole on day 4; Yaʿaqov's deathbed oath (47:27–31) on day 5."
+   }
+  },
+  {
+   "id": "gen-36",
+   "book": "Gen",
+   "seder": 36,
+   "recommended": "scene",
+   "issue": "Day 4 ends as the brothers send their message to Yosef.",
+   "option_notes": {
+    "keep": "Splits the reconciliation scene at 50:16.",
+    "strict": "Clean, but day 5 runs 212 words.",
+    "scene": "Starts day 5 where the brothers grow afraid (50:15), so the reconciliation reads whole."
+   }
+  },
+  {
+   "id": "exod-4",
+   "book": "Exod",
+   "seder": 4,
+   "recommended": "strict",
+   "issue": "Day 1 cuts the four expressions of redemption before “wehevethi.”",
+   "option_notes": {
+    "keep": "Breaks between 6:7 and 6:8, inside the promise.",
+    "strict": "The whole promise (6:2–9) in one reading; Moshe's objection (6:10–13) is a short day 2."
+   }
+  },
+  {
+   "id": "exod-11",
+   "book": "Exod",
+   "seder": 11,
+   "recommended": "strict",
+   "issue": "Day 3 ends in the middle of the Song of the Sea.",
+   "option_notes": {
+    "keep": "Splits Shirath HaYam at 15:9.",
+    "strict": "The Song (15:1–19) chanted whole on day 4, at 198 words; the crossing gets days 2 and 3."
+   }
+  },
+  {
+   "id": "exod-13",
+   "book": "Exod",
+   "seder": 13,
+   "recommended": "scene",
+   "issue": "Uneven week: day 5 (17:14–16) is only 37 words.",
+   "option_notes": {
+    "keep": "Short last day at the end of the Amaleq story.",
+    "even": "Evener, but splits the Amaleq battle mid-paragraph.",
+    "scene": "Amaleq (17:8–16) read whole on day 5; the manna jar and Massa uMeriva fill days 1–4."
+   }
+  },
+  {
+   "id": "exod-19",
+   "book": "Exod",
+   "seder": 19,
+   "recommended": "strict",
+   "issue": "Day 2 ends inside the goat-hair curtains.",
+   "option_notes": {
+    "keep": "Splits the second covering at 26:12.",
+    "strict": "Each covering whole, then the boards and bars; days 4–5 are short (41, 52)."
+   }
+  },
+  {
+   "id": "exod-21",
+   "book": "Exod",
+   "seder": 21,
+   "recommended": "keep",
+   "issue": "Day 3 ends inside the breastplate section.",
+   "option_notes": {
+    "keep": "The ḥoshen (28:15–30) is one long section, so any even split cuts it; 28:27 is a natural pause at the rings.",
+    "strict": "Also cuts the ḥoshen, at its ʿăliyya, and runs 182 words on day 5."
+   }
+  },
+  {
+   "id": "lev-5",
+   "book": "Lev",
+   "seder": 5,
+   "recommended": "scene",
+   "issue": "Uneven week: days 1 and 3 are under 50 words.",
+   "option_notes": {
+    "keep": "Clean section breaks; days run 43 to 100.",
+    "even": "Evener, but two breaks are mid-paragraph.",
+    "scene": "Moshe's inquiry about the goat (10:16–20) gets its own day."
+   }
+  },
+  {
+   "id": "lev-8",
+   "book": "Lev",
+   "seder": 8,
+   "recommended": "strict",
+   "issue": "Day 2 ends inside the law of baldness.",
+   "option_notes": {
+    "keep": "Splits the baldness case at 13:43.",
+    "strict": "Clean setuma break; day 2 is short (58), day 3 longer (130)."
+   }
+  },
+  {
+   "id": "lev-10",
+   "book": "Lev",
+   "seder": 10,
+   "recommended": "keep",
+   "issue": "Day 4 ends inside the purification of a house.",
+   "option_notes": {
+    "keep": "Splits the bird ritual at 14:51.",
+    "strict": "Also cuts the ritual, and day 5 is only 34 words."
+   }
+  },
+  {
+   "id": "lev-11",
+   "book": "Lev",
+   "seder": 11,
+   "recommended": "keep",
+   "issue": "Uneven week: day 1 is 60 words, day 5 is 133.",
+   "option_notes": {
+    "keep": "Clean section breaks.",
+    "even": "Evener, but two breaks are mid-paragraph."
+   }
+  },
+  {
+   "id": "lev-14",
+   "book": "Lev",
+   "seder": 14,
+   "recommended": "strict",
+   "issue": "Day 1 ends inside the law of the shĕlamim offering.",
+   "option_notes": {
+    "keep": "Splits the offering law at 19:7.",
+    "strict": "Keeps the shĕlamim law (19:5–8) whole; day 2 is short (35)."
+   }
+  },
+  {
+   "id": "lev-15",
+   "book": "Lev",
+   "seder": 15,
+   "recommended": "keep",
+   "issue": "Day 3 ends inside the list of forbidden unions.",
+   "option_notes": {
+    "keep": "The list has no section marks; any verse in it is a fair pause.",
+    "strict": "Clean, but day 4 runs 230 words.",
+    "even": "Evener, but adds a second mid-list break."
+   }
+  },
+  {
+   "id": "lev-22",
+   "book": "Lev",
+   "seder": 22,
+   "recommended": "keep",
+   "issue": "Day 3 ends inside the law of a dedicated field.",
+   "option_notes": {
+    "keep": "A fair pause inside one long case.",
+    "strict": "Clean, but days run 42 to 149."
+   }
+  },
+  {
+   "id": "num-4",
+   "book": "Num",
+   "seder": 4,
+   "recommended": "keep",
+   "issue": "Uneven week: day 1 (4:17–20) is only 43 words.",
+   "option_notes": {
+    "keep": "One Levite family per day; Qehath's warning stands alone.",
+    "even": "Evener, but two breaks are mid-paragraph."
+   }
+  },
+  {
+   "id": "num-6",
+   "book": "Num",
+   "seder": 6,
+   "recommended": "strict",
+   "issue": "Day 1 ends one verse into the princes' offerings.",
+   "option_notes": {
+    "keep": "Splits the opening of chapter 7 after its first verses.",
+    "strict": "Birkath Kohanim (6:22–27) as its own short day, then the offerings."
+   }
+  },
+  {
+   "id": "num-10",
+   "book": "Num",
+   "seder": 10,
+   "recommended": "keep",
+   "issue": "Day 4 ends at 12:8, inside the Miryam episode.",
+   "option_notes": {
+    "keep": "12:9 is where the rebuke turns to punishment; a real scene change.",
+    "strict": "Clean, but day 5 is only 38 words."
+   }
+  },
+  {
+   "id": "num-15",
+   "book": "Num",
+   "seder": 15,
+   "recommended": "keep",
+   "issue": "Uneven week: day 1 is 161 words, day 5 is 69.",
+   "option_notes": {
+    "keep": "Clean section breaks.",
+    "even": "Evener, but two breaks are mid-paragraph."
+   }
+  },
+  {
+   "id": "num-16",
+   "book": "Num",
+   "seder": 16,
+   "recommended": "scene",
+   "issue": "Day 3 ends inside the laws of corpse impurity.",
+   "option_notes": {
+    "keep": "Splits the sprinkling law at 19:19.",
+    "strict": "Also cuts the law, and runs 186 words on day 4.",
+    "scene": "The impurity laws (19:11–22) whole; Miryam's death and the water (20:1–13) on days 4–5."
+   }
+  },
+  {
+   "id": "num-17",
+   "book": "Num",
+   "seder": 17,
+   "recommended": "scene",
+   "issue": "Day 4 ends inside the battle with Siḥon, before the poets' song.",
+   "option_notes": {
+    "keep": "Splits the Siḥon story at the song (21:27).",
+    "strict": "Clean, but day 5 runs 225 words.",
+    "scene": "Siḥon with its song whole on day 4 (211); ʿOg alone on day 5."
+   }
+  },
+  {
+   "id": "num-19",
+   "book": "Num",
+   "seder": 19,
+   "recommended": "scene",
+   "issue": "Day 1 ends inside Bilʿam's second oracle.",
+   "option_notes": {
+    "keep": "Splits the oracle at 23:22.",
+    "strict": "Clean, but day 1 is only 58 words.",
+    "even": "Same mid-oracle break plus another.",
+    "scene": "Setup (23:13–17) on day 1, the second oracle whole on day 2."
+   }
+  },
+  {
+   "id": "num-22",
+   "book": "Num",
+   "seder": 22,
+   "recommended": "keep",
+   "issue": "Day 1 ends before Moshe carries out Yehoshuaʿ's appointment.",
+   "option_notes": {
+    "keep": "27:22 is where the command turns to its fulfillment; a natural pause.",
+    "strict": "Clean, but day 1 is only 33 words."
+   }
+  },
+  {
+   "id": "num-24",
+   "book": "Num",
+   "seder": 24,
+   "recommended": "keep",
+   "issue": "Day 2 ends inside the laws of vows.",
+   "option_notes": {
+    "keep": "30:14 opens the summary of a husband's powers; a sub-topic start.",
+    "strict": "Clean, but days run 61 to 166.",
+    "even": "Evener, but adds a second mid-paragraph break."
+   }
+  },
+  {
+   "id": "num-26",
+   "book": "Num",
+   "seder": 26,
+   "recommended": "scene",
+   "issue": "Day 1 ends inside Moshe's rebuke of Gad and Reʾuven.",
+   "option_notes": {
+    "keep": "Splits the rebuke at 32:9.",
+    "strict": "Clean, but day 1 is 56 words and day 2 is 152.",
+    "scene": "The request (32:1–5) on day 1, the whole rebuke (32:6–15) on day 2."
+   }
+  },
+  {
+   "id": "num-27",
+   "book": "Num",
+   "seder": 27,
+   "recommended": "keep",
+   "issue": "Day 2 ends inside the list of encampments.",
+   "option_notes": {
+    "keep": "It is a list; any station is a fair pause.",
+    "strict": "Clean, but day 3 is only 47 words."
+   }
+  },
+  {
+   "id": "num-28",
+   "book": "Num",
+   "seder": 28,
+   "recommended": "keep",
+   "issue": "Uneven week: day 5 (35:6–8) is only 50 words.",
+   "option_notes": {
+    "keep": "Clean section breaks; no better split exists."
+   }
+  },
+  {
+   "id": "deut-4",
+   "book": "Deut",
+   "seder": 4,
+   "recommended": "keep",
+   "issue": "Day 1 ends at 4:4, inside Moshe's opening charge.",
+   "option_notes": {
+    "keep": "4:5 (“See, I have taught you”) begins a new thought.",
+    "strict": "Clean, but day 1 runs 240 words."
+   }
+  },
+  {
+   "id": "deut-9",
+   "book": "Deut",
+   "seder": 9,
+   "recommended": "strict",
+   "issue": "Day 4 ends inside the list of wonders in Egypt.",
+   "option_notes": {
+    "keep": "Splits the list at 11:4.",
+    "strict": "The list (11:2–9) read whole on day 5; day 3 is short (62)."
+   }
+  },
+  {
+   "id": "deut-13",
+   "book": "Deut",
+   "seder": 13,
+   "recommended": "keep",
+   "issue": "Uneven week: day 3 (15:19–23) is only 60 words.",
+   "option_notes": {
+    "keep": "Firstlings as their own short day.",
+    "even": "Evener, but breaks inside the Pesaḥ laws."
+   }
+  },
+  {
+   "id": "deut-16",
+   "book": "Deut",
+   "seder": 16,
+   "recommended": "scene",
+   "issue": "Day 2 ends inside the ʿegla ʿărufa ritual.",
+   "option_notes": {
+    "keep": "Splits the ritual at 21:6.",
+    "strict": "Clean, but day 1 runs 170 words.",
+    "scene": "War laws on day 1, the ʿegla ʿărufa whole on day 2, then one family law per day."
+   }
+  },
+  {
+   "id": "deut-21",
+   "book": "Deut",
+   "seder": 21,
+   "recommended": "keep",
+   "issue": "Three days end inside the curses (28:15–68).",
+   "option_notes": {
+    "keep": "The curses are one unbroken setuma; the only split possible is by verse.",
+    "strict": "Puts all the curses on one 777-word day."
+   }
+  },
+  {
+   "id": "deut-22",
+   "book": "Deut",
+   "seder": 22,
+   "recommended": "keep",
+   "issue": "Days 2 and 3 end inside the warnings after the covenant.",
+   "option_notes": {
+    "keep": "29:20 and 29:26 each open a new consequence; fair pauses.",
+    "strict": "Clean, but day 3 runs 193 words."
+   }
+  },
+  {
+   "id": "deut-24",
+   "book": "Deut",
+   "seder": 24,
+   "recommended": "keep",
+   "issue": "Day 2 ends inside Haʾazinu.",
+   "option_notes": {
+    "keep": "The song is verse by verse; 32:24 is a fair pause.",
+    "strict": "Clean, but days run 68 to 160."
+   }
+  },
+  {
+   "id": "deut-25",
+   "book": "Deut",
+   "seder": 25,
+   "recommended": "keep",
+   "issue": "Day 4 ends at Moshe's burial, before his epitaph.",
+   "option_notes": {
+    "keep": "34:7 (“Moshe was 120 years old”) begins the epitaph; a real scene change.",
+    "strict": "Clean, but day 5 runs 176 words."
+   }
+  }
+ ]
+}

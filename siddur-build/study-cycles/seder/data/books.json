@@ -1,0 +1,42 @@
+[
+ {
+  "code": "Gen",
+  "file": "Gen.xml",
+  "he": "בראשית",
+  "translit": "Bĕreʾshith",
+  "en": "Genesis",
+  "slug": "gen"
+ },
+ {
+  "code": "Exod",
+  "file": "Exod.xml",
+  "he": "שמות",
+  "translit": "Shĕmoth",
+  "en": "Exodus",
+  "slug": "exod"
+ },
+ {
+  "code": "Lev",
+  "file": "Lev.xml",
+  "he": "ויקרא",
+  "translit": "Wayyiqraʾ",
+  "en": "Leviticus",
+  "slug": "lev"
+ },
+ {
+  "code": "Num",
+  "file": "Num.xml",
+  "he": "במדבר",
+  "translit": "Bĕmidhbar",
+  "en": "Numbers",
+  "slug": "num"
+ },
+ {
+  "code": "Deut",
+  "file": "Deut.xml",
+  "he": "דברים",
+  "translit": "Dĕvarim",
+  "en": "Deuteronomy",
+  "slug": "deut"
+ }
+]

@@ -770,6 +770,7 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
 .cycle-card td.day {
   width: 2.75rem;
   font-size: 0.75rem;
+  white-space: nowrap;
   color: var(--siddur-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -782,6 +783,26 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
   white-space: nowrap;
 }
 .cycle-card td.heb .ps { color: var(--siddur-accent); }
+/* Opening … closing phrase: the closing words drop to a second line when narrow. */
+.cycle-card td.heb:has(.fin) { white-space: normal; }
+.cycle-card td.heb:has(.fin) .inc,
+.cycle-card td.heb .fin { display: inline-block; white-space: nowrap; }
+/* Above phone width (below it the Hebrew column is hidden), keep each reference unbroken. */
+@media (min-width: 561px) {
+  .cycle-card td.ref .line { white-space: nowrap; }
+  .cycle-card td.len { min-width: 7rem; }
+}
+/* Sidebar open but the column still narrow: trim a three-track page's Torah opening
+   phrase (its end, at the left in RTL) instead of squeezing the length bar. */
+@media (min-width: 769px) and (max-width: 1000px) {
+  .cycle-card td.heb:not(:has(.fin)) .inc {
+    display: inline-block;
+    max-width: 8.5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: bottom;
+  }
+}
 .cycle-card .line { display: block; }
 .cycle-card .line.sub {
   color: var(--siddur-muted);
@@ -846,6 +867,7 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
 .siddur-table-len .track { width: calc(100% - 3.2rem); }
 .siddur-table-section > .cycle-stats { margin: 0.75rem 0 0.25rem; }
 .siddur-prose + .cycle-stats { margin-top: 1rem; }
+.siddur-prose a, .cycle-notes a { color: var(--siddur-accent); }
 .siddur-table-section > .cycle-legend { margin: 0 0 0.75rem; }
 
 .cycle-sw {
@@ -909,7 +931,7 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
   letter-spacing: 0.06em;
 }
 
-.cycle-card .ps-phone { display: none; }
+.cycle-card .ps-phone, .cycle-card .inc-phone { display: none; }
 
 /* Phones: the Hebrew column mostly repeats the English book names, so it
    gives way to the length bar; its only unique bit, the parasha that starts
@@ -922,6 +944,12 @@ html.show-aliyot .siddur-ey-table td.siddur-aliyah-col {
     font-family: "Noto Serif Hebrew", serif;
     font-weight: 400;
     color: var(--siddur-accent);
+  }
+  /* Torah-only cycles: the opening phrase is the Hebrew column's real content. */
+  .cycle-card .inc-phone {
+    display: block;
+    text-align: left;
+    font-family: "Noto Serif Hebrew", serif;
   }
   .cycle-card td.len { width: 6.6rem; }
   .cycle-card .track { width: calc(100% - 2.2rem); margin-right: 0.25rem; }

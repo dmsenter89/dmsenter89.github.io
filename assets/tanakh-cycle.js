@@ -1,23 +1,26 @@
 // Tanakh reading-cycle pages (Appendix > Study Cycles). Expects a global
-// CYCLE = { key, weekLabel, weekNames?, plans: {"6": [day], "5": [day]} },
+// CYCLE = { key, weekLabel, weekNames?, dayLabel?, catchUp?, plans: {"6"?: [day], "5": [day]} },
 // set by layouts/siddur/tanakh-cycle.html. Each day row:
-// { w, d, ref, p, np[], words, verses, end, inc, n:{ref,b[],words,verses,end}, k:{...} }.
+// { w, d, ref, p, np[], words, verses, end, inc, fin?, n?:{ref,b[],words,verses,end}, k?:{...} }.
+// fin (closing words) shows after inc on wide screens only.
+// Rows without n/k make a Torah-only cycle (no Torah/Nakh toggle).
 // Only the 6/5-day and Torah/Nakh choice is remembered (localStorage).
 (function () {
   const DAYS = { 6: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'], 5: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu'] };
   const CATCH = { 6: 'Shabbath: catch-up day', 5: 'Friday and Shabbath: catch-up days' };
   const MK = { petuha: ['פ', 'pe'], setuma: ['ס', 'pe'], book: ['פ', 'pe'], aliyah: ['al', ''], scene: ['sc', ''],
-    chapter: ['ch', ''], psalm: ['ps', ''], stanza: ['st', ''], verse: ['v', ''] };
+    chapter: ['ch', ''], psalm: ['ps', ''], stanza: ['st', ''], verse: ['v', ''], seder: ['sd', ''] };
   const KEY = 'siddur-cycle-' + CYCLE.key;
-  const weeks = Math.max(...CYCLE.plans['6'].map(r => r.w));
+  const DEF = CYCLE.plans['6'] ? '6' : '5', NAKH = !!CYCLE.plans[DEF][0].n;
+  const weeks = Math.max(...CYCLE.plans[DEF].map(r => r.w));
   const weekName = w => CYCLE.weekNames ? CYCLE.weekNames[w - 1] : CYCLE.weekLabel + ' ' + w;
   const $ = id => document.getElementById(id);
 
-  let st = { plan: '6', mode: 'both' };
-  try { const v = JSON.parse(localStorage.getItem(KEY)) || {}; st = { plan: v.plan || '6', mode: v.mode || 'both' }; } catch (e) {}
+  let st = { plan: DEF, mode: 'both' };
+  try { const v = JSON.parse(localStorage.getItem(KEY)) || {}; st = { plan: CYCLE.plans[v.plan] ? v.plan : DEF, mode: v.mode || 'both' }; } catch (e) {}
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(st)); } catch (e) {} };
 
-  const T = () => st.mode !== 'nakh', N = () => st.mode !== 'torah';
+  const T = () => !NAKH || st.mode !== 'nakh', N = () => NAKH && st.mode !== 'torah';
   const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
   const tot = r => (T() ? r.words : 0) + (N() ? r.n.words + r.k.words : 0);
   const fmt = n => n.toLocaleString();
@@ -57,15 +60,15 @@
       for (const r of rs) {
         const tp = T() ? pct(r.words) : 0, mp = N() ? Math.min(100 - tp, pct(r.n.words)) : 0, kp = N() ? Math.min(100 - tp - mp, pct(r.k.words)) : 0;
         const nc = T() ? 'line sub' : 'line';
-        const [mk, cls] = MK[r.end], [mmk, mcls] = MK[r.n.end], [kmk, kcls] = MK[r.k.end];
+        const [mk, cls] = MK[r.end], [mmk, mcls] = N() ? MK[r.n.end] : [], [kmk, kcls] = N() ? MK[r.k.end] : [];
         const ps = r.np.length ? ` <span class="ps">· ${r.np.map(esc).join(' · ')}</span>` : '';
-        html += `<tr><td class="day">${DAYS[st.plan][r.d - 1]}</td>`
-          + `<td class="ref">${T() ? `<span class="line">${esc(r.ref)}${r.np.length ? `<span class="ps ps-phone"> · <span lang="he" dir="rtl">${r.np.map(esc).join(' · ')}</span></span>` : ''}</span>` : ''}${N() ? `<span class="${nc}">${esc(r.n.ref)}</span><span class="${nc}">${esc(r.k.ref)}</span>` : ''}</td>`
-          + `<td class="heb" dir="rtl" lang="he">${T() ? `<span class="line"><span class="inc">${esc(r.inc)}</span>${ps}</span>` : ''}${N() ? `<span class="${nc}">${r.n.b.map(esc).join(' · ')}</span><span class="${nc}">${r.k.b.map(esc).join(' · ')}</span>` : ''}</td>`
+        html += `<tr><td class="day">${CYCLE.dayLabel ? CYCLE.dayLabel + ' ' + r.d : DAYS[st.plan][r.d - 1]}</td>`
+          + `<td class="ref">${T() ? `<span class="line">${esc(r.ref)}${r.np.length ? `<span class="ps ps-phone"> · <span lang="he" dir="rtl">${r.np.map(esc).join(' · ')}</span></span>` : ''}</span>${NAKH ? '' : `<span class="line sub inc-phone" lang="he" dir="rtl">${esc(r.inc)}</span>`}` : ''}${N() ? `<span class="${nc}">${esc(r.n.ref)}</span><span class="${nc}">${esc(r.k.ref)}</span>` : ''}</td>`
+          + `<td class="heb" dir="rtl" lang="he">${T() ? `<span class="line"><span class="inc">${esc(r.inc)}</span>${r.fin ? ` <span class="fin">… ${esc(r.fin)}</span>` : ''}${ps}</span>` : ''}${N() ? `<span class="${nc}">${r.n.b.map(esc).join(' · ')}</span><span class="${nc}">${r.k.b.map(esc).join(' · ')}</span>` : ''}</td>`
           + `<td class="len"><div class="track">${T() ? seg('t', 'Torah', r.words, 0, tp) : ''}${N() ? seg('m', 'Nĕviʾim', r.n.words, tp, mp) + seg('k', 'Kĕthuvim', r.k.words, tp + mp, kp) : ''}</div><span>${tot(r)}</span></td>`
           + `<td class="end">${T() ? `<span class="cycle-mk ${cls}" title="Torah: ${r.end}">${mk}</span>` : ''}${N() ? `<span class="cycle-mk ${mcls}" title="Nĕviʾim: ${r.n.end}">${mmk}</span><span class="cycle-mk ${kcls}" title="Kĕthuvim: ${r.k.end}">${kmk}</span>` : ''}</td></tr>`;
       }
-      html += `</table><div class="cycle-catch">${CATCH[st.plan]}</div></div></section>`;
+      html += `</table><div class="cycle-catch">${esc(CYCLE.catchUp || CATCH[st.plan])}</div></div></section>`;
     }
     $('cycle-weeks').innerHTML = html;
     const j = $('cycle-jump'), cur = j.value;

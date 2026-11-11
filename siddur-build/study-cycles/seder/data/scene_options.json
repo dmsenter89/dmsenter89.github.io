@@ -1,0 +1,313 @@
+{
+ "_comment": "Scene-break splits picked by hand (Claude, 2026-11-07) from the story structure. day_starts = first verses of days 2-5. Only entries with offered=true were shown on the review page as the 'Scene breaks' option; word counts in why_not_offered are Westminster Leningrad Codex counts.",
+ "options": [
+  {
+   "id": "gen-9",
+   "book": "Gen",
+   "seder": 9,
+   "alternative": 1,
+   "day_starts": [
+    "12:10",
+    "13:1",
+    "13:5",
+    "13:14"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "gen-11",
+   "book": "Gen",
+   "seder": 11,
+   "alternative": 1,
+   "day_starts": [
+    "16:8",
+    "17:1",
+    "17:15",
+    "17:23"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "gen-16",
+   "book": "Gen",
+   "seder": 16,
+   "alternative": 1,
+   "day_starts": [
+    "24:15",
+    "24:28",
+    "24:50",
+    "25:1"
+   ],
+   "offered": false,
+   "why_not_offered": "Scored [221, 160, 327, 211, 209] words with three mid-paragraph breaks; day 3 too heavy. Not offered."
+  },
+  {
+   "id": "gen-24",
+   "book": "Gen",
+   "seder": 24,
+   "alternative": 1,
+   "day_starts": [
+    "34:8",
+    "34:20",
+    "34:25",
+    "35:1"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "gen-26",
+   "book": "Gen",
+   "seder": 26,
+   "alternative": 1,
+   "day_starts": [
+    "37:5",
+    "37:12",
+    "37:18",
+    "37:25"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "gen-34",
+   "book": "Gen",
+   "seder": 34,
+   "alternative": 1,
+   "day_starts": [
+    "47:1",
+    "47:11",
+    "47:18",
+    "47:27"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "gen-36",
+   "book": "Gen",
+   "seder": 36,
+   "alternative": 1,
+   "day_starts": [
+    "49:13",
+    "49:27",
+    "50:7",
+    "50:15"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "exod-13",
+   "book": "Exod",
+   "seder": 13,
+   "alternative": 1,
+   "day_starts": [
+    "16:32",
+    "17:1",
+    "17:4",
+    "17:8"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "exod-21",
+   "book": "Exod",
+   "seder": 21,
+   "alternative": 1,
+   "day_starts": [
+    "28:6",
+    "28:15",
+    "28:31",
+    "28:36"
+   ],
+   "offered": false,
+   "why_not_offered": "Both alternatives scored worse than the automatic split: [114, 115, 222, 61, 121] and [114, 115, 75, 147, 182]. Not offered."
+  },
+  {
+   "id": "exod-21",
+   "book": "Exod",
+   "seder": 21,
+   "alternative": 2,
+   "day_starts": [
+    "28:6",
+    "28:15",
+    "28:22",
+    "28:31"
+   ],
+   "offered": false,
+   "why_not_offered": "Both alternatives scored worse than the automatic split: [114, 115, 222, 61, 121] and [114, 115, 75, 147, 182]. Not offered."
+  },
+  {
+   "id": "lev-5",
+   "book": "Lev",
+   "seder": 5,
+   "alternative": 1,
+   "day_starts": [
+    "10:4",
+    "10:8",
+    "10:12",
+    "10:16"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "lev-11",
+   "book": "Lev",
+   "seder": 11,
+   "alternative": 1,
+   "day_starts": [
+    "15:13",
+    "15:16",
+    "15:19",
+    "15:25"
+   ],
+   "offered": false,
+   "why_not_offered": "Scored [148, 49, 40, 86, 133]; less even than the clean automatic split. Not offered."
+  },
+  {
+   "id": "lev-14",
+   "book": "Lev",
+   "seder": 14,
+   "alternative": 1,
+   "day_starts": [
+    "19:5",
+    "19:11",
+    "19:15",
+    "19:19"
+   ],
+   "offered": false,
+   "why_not_offered": "Scored [42, 65, 43, 51, 69] with three mid-paragraph breaks. Not offered."
+  },
+  {
+   "id": "lev-22",
+   "book": "Lev",
+   "seder": 22,
+   "alternative": 1,
+   "day_starts": [
+    "27:9",
+    "27:14",
+    "27:16",
+    "27:26"
+   ],
+   "offered": false,
+   "why_not_offered": "Scored [109, 67, 31, 127, 124]: a 31-word day plus a mid-paragraph break. Not offered."
+  },
+  {
+   "id": "num-16",
+   "book": "Num",
+   "seder": 16,
+   "alternative": 1,
+   "day_starts": [
+    "19:1",
+    "19:11",
+    "20:1",
+    "20:7"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "num-17",
+   "book": "Num",
+   "seder": 17,
+   "alternative": 1,
+   "day_starts": [
+    "20:22",
+    "21:4",
+    "21:21",
+    "21:33"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "num-19",
+   "book": "Num",
+   "seder": 19,
+   "alternative": 1,
+   "day_starts": [
+    "23:18",
+    "23:27",
+    "24:10",
+    "24:14"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "num-22",
+   "book": "Num",
+   "seder": 22,
+   "alternative": 1,
+   "day_starts": [
+    "28:1",
+    "28:9",
+    "28:11",
+    "28:16"
+   ],
+   "offered": false,
+   "why_not_offered": "Scored [120, 89, 21, 73, 102]: a 21-word day. Not offered."
+  },
+  {
+   "id": "num-26",
+   "book": "Num",
+   "seder": 26,
+   "alternative": 1,
+   "day_starts": [
+    "32:6",
+    "32:16",
+    "32:25",
+    "32:33"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "deut-9",
+   "book": "Deut",
+   "seder": 9,
+   "alternative": 1,
+   "day_starts": [
+    "10:6",
+    "10:12",
+    "10:19",
+    "11:2"
+   ],
+   "offered": false,
+   "why_not_offered": "Not shown on the review page because review_notes.json has no 'scene' note for Dĕvarim 9 (scored [81, 99, 99, 56, 137]); the section-breaks option was recommended instead."
+  },
+  {
+   "id": "deut-16",
+   "book": "Deut",
+   "seder": 16,
+   "alternative": 1,
+   "day_starts": [
+    "21:1",
+    "21:10",
+    "21:15",
+    "21:22"
+   ],
+   "offered": true,
+   "why_not_offered": null
+  },
+  {
+   "id": "deut-22",
+   "book": "Deut",
+   "seder": 22,
+   "alternative": 1,
+   "day_starts": [
+    "29:15",
+    "29:21",
+    "30:1",
+    "30:6"
+   ],
+   "offered": false,
+   "why_not_offered": "Scored [83, 116, 133, 77, 88] but still had two mid-paragraph breaks. Not offered."
+  }
+ ]
+}

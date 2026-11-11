@@ -1,0 +1,199 @@
+{
+ "_doc": "Book order and display labels. 'osis' = WLC file name and OSIS book id. 'abbrev' = label used in reading references. 'hebrew' = label shown in the book column; the two halves of Sam/Kgs/Chr share one label and Neh is labelled עזרא because the Rambam counts ʿEzraʾ–Nĕḥemya as one book. Neviʾim/Ketuvim order follows the Rambam, Hilkhot Tefillin uMezuza wSefer Torah 7:15. The Rambam lists Tĕre ʿAsar as one book; the internal order of the Twelve used here is the standard one (he does not list it).",
+ "torah": [
+  {
+   "osis": "Gen",
+   "hebcal": "Genesis"
+  },
+  {
+   "osis": "Exod",
+   "hebcal": "Exodus"
+  },
+  {
+   "osis": "Lev",
+   "hebcal": "Leviticus"
+  },
+  {
+   "osis": "Num",
+   "hebcal": "Numbers"
+  },
+  {
+   "osis": "Deut",
+   "hebcal": "Deuteronomy"
+  }
+ ],
+ "neviim": [
+  {
+   "osis": "Josh",
+   "abbrev": "Josh",
+   "hebrew": "יהושע"
+  },
+  {
+   "osis": "Judg",
+   "abbrev": "Judg",
+   "hebrew": "שופטים"
+  },
+  {
+   "osis": "1Sam",
+   "abbrev": "1 Sam",
+   "hebrew": "שמואל"
+  },
+  {
+   "osis": "2Sam",
+   "abbrev": "2 Sam",
+   "hebrew": "שמואל"
+  },
+  {
+   "osis": "1Kgs",
+   "abbrev": "1 Kgs",
+   "hebrew": "מלכים"
+  },
+  {
+   "osis": "2Kgs",
+   "abbrev": "2 Kgs",
+   "hebrew": "מלכים"
+  },
+  {
+   "osis": "Jer",
+   "abbrev": "Jer",
+   "hebrew": "ירמיה"
+  },
+  {
+   "osis": "Ezek",
+   "abbrev": "Ezek",
+   "hebrew": "יחזקאל"
+  },
+  {
+   "osis": "Isa",
+   "abbrev": "Isa",
+   "hebrew": "ישעיה"
+  },
+  {
+   "osis": "Hos",
+   "abbrev": "Hos",
+   "hebrew": "הושע"
+  },
+  {
+   "osis": "Joel",
+   "abbrev": "Joel",
+   "hebrew": "יואל"
+  },
+  {
+   "osis": "Amos",
+   "abbrev": "Amos",
+   "hebrew": "עמוס"
+  },
+  {
+   "osis": "Obad",
+   "abbrev": "Obad",
+   "hebrew": "עובדיה"
+  },
+  {
+   "osis": "Jonah",
+   "abbrev": "Jonah",
+   "hebrew": "יונה"
+  },
+  {
+   "osis": "Mic",
+   "abbrev": "Mic",
+   "hebrew": "מיכה"
+  },
+  {
+   "osis": "Nah",
+   "abbrev": "Nah",
+   "hebrew": "נחום"
+  },
+  {
+   "osis": "Hab",
+   "abbrev": "Hab",
+   "hebrew": "חבקוק"
+  },
+  {
+   "osis": "Zeph",
+   "abbrev": "Zeph",
+   "hebrew": "צפניה"
+  },
+  {
+   "osis": "Hag",
+   "abbrev": "Hag",
+   "hebrew": "חגי"
+  },
+  {
+   "osis": "Zech",
+   "abbrev": "Zech",
+   "hebrew": "זכריה"
+  },
+  {
+   "osis": "Mal",
+   "abbrev": "Mal",
+   "hebrew": "מלאכי"
+  }
+ ],
+ "ketuvim": [
+  {
+   "osis": "Ruth",
+   "abbrev": "Ruth",
+   "hebrew": "רות"
+  },
+  {
+   "osis": "Ps",
+   "abbrev": "Ps",
+   "hebrew": "תהלים"
+  },
+  {
+   "osis": "Job",
+   "abbrev": "Job",
+   "hebrew": "איוב"
+  },
+  {
+   "osis": "Prov",
+   "abbrev": "Prov",
+   "hebrew": "משלי"
+  },
+  {
+   "osis": "Eccl",
+   "abbrev": "Eccl",
+   "hebrew": "קהלת"
+  },
+  {
+   "osis": "Song",
+   "abbrev": "Song",
+   "hebrew": "שיר השירים"
+  },
+  {
+   "osis": "Lam",
+   "abbrev": "Lam",
+   "hebrew": "קינות"
+  },
+  {
+   "osis": "Dan",
+   "abbrev": "Dan",
+   "hebrew": "דניאל"
+  },
+  {
+   "osis": "Esth",
+   "abbrev": "Esth",
+   "hebrew": "אסתר"
+  },
+  {
+   "osis": "Ezra",
+   "abbrev": "Ezra",
+   "hebrew": "עזרא"
+  },
+  {
+   "osis": "Neh",
+   "abbrev": "Neh",
+   "hebrew": "עזרא"
+  },
+  {
+   "osis": "1Chr",
+   "abbrev": "1 Chr",
+   "hebrew": "דברי הימים"
+  },
+  {
+   "osis": "2Chr",
+   "abbrev": "2 Chr",
+   "hebrew": "דברי הימים"
+  }
+ ]
+}

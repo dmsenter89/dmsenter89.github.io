@@ -307,11 +307,18 @@ marks up (`lang="he" dir="rtl"`) each row's first cell as Hebrew; omit it
 for tables with no Hebrew column (e.g. Sedher HaMishmara).
 
 **Appendix > Study Cycles** (`content/siddur/appendix/study-cycles/`) groups
-the one-year Tanakh plans: Sedher HaMishmara (a `tables` page) plus Tanakh by
-Parasha and Even Tanakh Year, which use `layout: "tanakh-cycle"`
-(`layouts/siddur/tanakh-cycle.html` + `assets/tanakh-cycle.js`). Their data
-file is `{ weekNames?, plans: {"6": [day], "5": [day]} }`, generated outside
-this repo, so replace it whole rather than hand-editing it. The intro is
+the study plans: Sedher HaMishmara (a `tables` page) plus Tanakh by
+Parasha, Even Tanakh Year and the Five-Day Seder Cycle, which use
+`layout: "tanakh-cycle"` (`layouts/siddur/tanakh-cycle.html` +
+`assets/tanakh-cycle.js`). Their data file is
+`{ weekNames?, plans: {"6"?: [day], "5": [day]} }`, built by
+`study-cycles/` (see its README), so rebuild it rather than hand-editing it.
+Rows without Nakh (`n`/`k`) make a Torah-only page (the Five-Day Seder Cycle,
+one EY triennial seder a week); with no `"6"` plan the 6/5-day toggle is
+hidden. A row's optional `fin` (closing words) shows after `inc` on wide
+screens only. Front matter
+`dayLabel` ("Day" → "Day 1"…) and `catchUp` replace the weekday names and
+the catch-up line. The intro is
 the page body and "How the plan was made" is front matter `notes`. The
 6/5-day and Torah/Nakh choice is remembered per page in localStorage under
 `siddur-cycle-<file name>`.

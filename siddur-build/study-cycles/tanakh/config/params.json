@@ -1,0 +1,65 @@
+{
+  "_doc": "Every numeric parameter and rule the pipeline uses. Read by pipeline/common.py. The text (words, section marks, verse numbers) is Miqra according to the Masorah via ../mam.py. See HANDOFF.md section 2 for the meaning of each entry (written for the earlier Leningrad build; the costs and rules are unchanged).",
+  "cost_function": {
+    "_doc": "cost(reading) = alpha * ((W - T) / S)^2 + break_cost(last verse of the reading). W = words in the reading, T = its target, S = normaliser. The plan minimises the sum over all readings (exact dynamic programming).",
+    "alpha": 12.0
+  },
+  "torah_break_costs": {
+    "_doc": "Cost of ending a reading after a given Torah verse. First matching rule wins, in this order: book_end, petuha, setuma, aliyah_end, chapter_end, otherwise 'verse'. Then hand scene breaks (config/hand_breaks.json) lower the cost to 'scene' when the current cost is higher than 'scene'.",
+    "book_end": 0.0,
+    "petuha": 0.0,
+    "setuma": 0.1,
+    "aliyah_end": 0.6,
+    "scene": 0.8,
+    "chapter_end": 1.2,
+    "verse": 3.0
+  },
+  "nakh_break_costs": {
+    "_doc": "Cost of ending a reading after a given Neviʾim/Ketuvim verse. First matching rule wins: book_end, petuha, setuma, psalm_end (chapter end in Ps), chapter_end, ps119_stanza (Ps 119, verse number divisible by stanza size), otherwise 'verse'. Then: if the verse is a hand scene break and cost > scene, cost = scene; else if cost == verse and the book is poetic, cost = verse_poetic.",
+    "book_end": 0.0,
+    "petuha": 0.0,
+    "setuma": 0.1,
+    "psalm_end": 0.0,
+    "chapter_end": 0.5,
+    "ps119_stanza": 0.2,
+    "scene": 0.8,
+    "verse": 3.0,
+    "verse_poetic": 5.0,
+    "ps119_stanza_size": 8,
+    "poetic_books": [
+      "Ps",
+      "Job",
+      "Prov",
+      "Eccl",
+      "Song",
+      "Lam"
+    ]
+  },
+  "plans": {
+    "_doc": "Two reading schemes x two week lengths. Keys '6' and '5' are days of reading per week; the remaining day(s) are catch-up days and carry no reading.",
+    "days_per_week": [
+      6,
+      5
+    ],
+    "catch_up_days": {
+      "6": "Shabbat",
+      "5": "Friday and Shabbat"
+    },
+    "continuous": {
+      "_doc": "Plan 1 (Even Tanakh Year). Torah read straight through in readings = weeks * days_per_week, ignoring parasha boundaries. T = S = total Torah words / readings for every reading.",
+      "weeks": 50,
+      "torah_max_verses_per_reading": 120,
+      "torah_may_cross_books": false
+    },
+    "parasha": {
+      "_doc": "Plan 2 (Tanakh by the Parasha). Each of the 54 parashiyyot is split on its own into exactly days_per_week readings, so readings = 54 * days_per_week. Within a parasha, T = S = parasha words / days_per_week. No maximum reading length. A reading can never cross a parasha (and so never a book).",
+      "parashiyyot": 54,
+      "extra_hand_breaks": "torah_parasha_plan_only"
+    },
+    "nakh": {
+      "_doc": "Used by both plans. Neviʾim and Ketuvim are two separate continuous streams, each split into exactly as many readings as the Torah track has. Day target: Ttot = (Torah words + Neviʾim words + Ketuvim words) / readings; remainder_d = Ttot - torah_words_d; target_track_d = remainder_d * W_track / (W_neviim + W_ketuvim). S = mean of that track's targets. Readings may cross book boundaries (this is how short books end up read together). Each reading has at least 1 verse.",
+      "max_verses_per_reading": 260,
+      "may_cross_books": true
+    }
+  }
+}

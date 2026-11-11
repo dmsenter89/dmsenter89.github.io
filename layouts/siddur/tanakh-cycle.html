@@ -1,15 +1,18 @@
 {{ define "main" }}
 
 {{- /* Daily Tanakh reading plan (Appendix > Study
-       Cycles). Data file shaped { weekNames?: []string, plans: {"6": [day],
+       Cycles). Data file shaped { weekNames?: []string, plans: {"6"?: [day],
        "5": [day]} }, resolved by the same path-mirroring as tables.html.
        Prose: lede in the page body, "How the plan was made" paragraphs in
-       front matter `notes`. Rendering lives in
+       front matter `notes`; optional `dayLabel` ("Day" → "Day 1"…) and
+       `catchUp` replace the weekday names and catch-up line. Rows without
+       Nakh (`n`/`k`) make a Torah-only page. Rendering lives in
        assets/tanakh-cycle.js. */ -}}
 {{- $relDir := strings.TrimPrefix "siddur/" (strings.TrimSuffix "/" .File.Dir) }}
 {{- $segments := split (printf "%s/%s" $relDir .File.BaseFileName) "/" }}
 {{- $page := hugo.Data.siddur }}
 {{- range $segments }}{{ $page = index $page . }}{{ end }}
+{{- $nakh := (index $page.plans "5" 0).n }}
 
 <h1 class="siddur-page-title">{{ .Title }}</h1>
 {{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
@@ -20,6 +23,7 @@
   <span><span class="cycle-mk pe">פ</span> pĕthuḥa</span>
   <span><span class="cycle-mk pe">ס</span> sĕthuma</span>
   <span><span class="cycle-mk">al</span> 'ăliyya</span>
+  {{- if $nakh }}
   <span><span class="cycle-mk">sc</span> scene</span>
   <span><span class="cycle-mk">ch</span> chapter</span>
   <span><span class="cycle-mk">ps</span> psalm</span>
@@ -27,18 +31,27 @@
   <span><span class="cycle-sw m"></span>Nĕviʾim<span data-avg="m"></span></span>
   <span><span class="cycle-sw k"></span>Kĕthuvim<span data-avg="k"></span></span>
   <span>(average words / day)</span>
+  {{- else }}
+  <span><span class="cycle-mk">ch</span> chapter</span>
+  <span><span class="cycle-mk">sd</span> end of seder</span>
+  {{- end }}
+  <span><span class="cycle-mk">v</span> mid-paragraph</span>
 </div>
 
 <div class="cycle-settings">
+  {{- if index $page.plans "6" }}
   <div class="cycle-group" role="group" aria-label="Reading days per week">
     <button type="button" class="siddur-toggle-btn" data-plan="6">6 days</button>
     <button type="button" class="siddur-toggle-btn" data-plan="5">5 days</button>
   </div>
+  {{- end }}
+  {{- if $nakh }}
   <div class="cycle-group" role="group" aria-label="What to read">
     <button type="button" class="siddur-toggle-btn" data-mode="torah">Torah</button>
     <button type="button" class="siddur-toggle-btn" data-mode="nakh">Nakh</button>
     <button type="button" class="siddur-toggle-btn" data-mode="both">Both</button>
   </div>
+  {{- end }}
   <select id="cycle-jump" class="cycle-jump" aria-label="Jump to {{ .Params.weekLabel | lower }}"></select>
 </div>
 
@@ -50,7 +63,7 @@
 </details>
 
 <script>
-const CYCLE = {{ dict "key" .File.BaseFileName "weekLabel" .Params.weekLabel "weekNames" $page.weekNames "plans" $page.plans }};
+const CYCLE = {{ dict "key" .File.BaseFileName "weekLabel" .Params.weekLabel "dayLabel" .Params.dayLabel "catchUp" .Params.catchUp "weekNames" $page.weekNames "plans" $page.plans }};
 {{ (resources.Get "tanakh-cycle.js" | minify).Content | safeJS }}
 </script>
 

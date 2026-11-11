@@ -1,0 +1,275 @@
+{
+ "_doc": "The 54 parashiyyot in order. 'hebcal' = the name used by @hebcal/core and in inputs/hebcal/aliyot.json (matched by order and checked by name). 'hebrew' = display label, typed by hand (space where the name has a maqaf; deficient spellings). 'translit' = Michael's transliteration scheme (ḥ ṭ ṣ q w ʾ ʿ; rafe v gh dh kh f th; vocal sheva ĕ; ḥatafs ĕ/ă/ŏ; final qamats-he a), typed by hand. 'hebrew' is used in both plans; 'translit' only in plan 2.",
+ "list": [
+  {
+   "hebcal": "Bereshit",
+   "hebrew": "בראשית",
+   "translit": "Bĕreʾshith"
+  },
+  {
+   "hebcal": "Noach",
+   "hebrew": "נח",
+   "translit": "Noaḥ"
+  },
+  {
+   "hebcal": "Lech-Lecha",
+   "hebrew": "לך לך",
+   "translit": "Lekh Lĕkha"
+  },
+  {
+   "hebcal": "Vayera",
+   "hebrew": "וירא",
+   "translit": "Wayyeraʾ"
+  },
+  {
+   "hebcal": "Chayei Sara",
+   "hebrew": "חיי שרה",
+   "translit": "Ḥayye Sara"
+  },
+  {
+   "hebcal": "Toldot",
+   "hebrew": "תולדת",
+   "translit": "Tolĕdhoth"
+  },
+  {
+   "hebcal": "Vayetzei",
+   "hebrew": "ויצא",
+   "translit": "Wayyeṣeʾ"
+  },
+  {
+   "hebcal": "Vayishlach",
+   "hebrew": "וישלח",
+   "translit": "Wayyishlaḥ"
+  },
+  {
+   "hebcal": "Vayeshev",
+   "hebrew": "וישב",
+   "translit": "Wayyeshev"
+  },
+  {
+   "hebcal": "Miketz",
+   "hebrew": "מקץ",
+   "translit": "Miqqeṣ"
+  },
+  {
+   "hebcal": "Vayigash",
+   "hebrew": "ויגש",
+   "translit": "Wayyiggash"
+  },
+  {
+   "hebcal": "Vayechi",
+   "hebrew": "ויחי",
+   "translit": "Wayḥi"
+  },
+  {
+   "hebcal": "Shemot",
+   "hebrew": "שמות",
+   "translit": "Shĕmoth"
+  },
+  {
+   "hebcal": "Vaera",
+   "hebrew": "וארא",
+   "translit": "Waʾeraʾ"
+  },
+  {
+   "hebcal": "Bo",
+   "hebrew": "בא",
+   "translit": "Boʾ"
+  },
+  {
+   "hebcal": "Beshalach",
+   "hebrew": "בשלח",
+   "translit": "Bĕshallaḥ"
+  },
+  {
+   "hebcal": "Yitro",
+   "hebrew": "יתרו",
+   "translit": "Yithro"
+  },
+  {
+   "hebcal": "Mishpatim",
+   "hebrew": "משפטים",
+   "translit": "Mishpaṭim"
+  },
+  {
+   "hebcal": "Terumah",
+   "hebrew": "תרומה",
+   "translit": "Tĕruma"
+  },
+  {
+   "hebcal": "Tetzaveh",
+   "hebrew": "תצוה",
+   "translit": "Tĕṣawwe"
+  },
+  {
+   "hebcal": "Ki Tisa",
+   "hebrew": "כי תשא",
+   "translit": "Ki Thissaʾ"
+  },
+  {
+   "hebcal": "Vayakhel",
+   "hebrew": "ויקהל",
+   "translit": "Wayyaqhel"
+  },
+  {
+   "hebcal": "Pekudei",
+   "hebrew": "פקודי",
+   "translit": "Pĕqudhe"
+  },
+  {
+   "hebcal": "Vayikra",
+   "hebrew": "ויקרא",
+   "translit": "Wayyiqraʾ"
+  },
+  {
+   "hebcal": "Tzav",
+   "hebrew": "צו",
+   "translit": "Ṣaw"
+  },
+  {
+   "hebcal": "Shmini",
+   "hebrew": "שמיני",
+   "translit": "Shĕmini"
+  },
+  {
+   "hebcal": "Tazria",
+   "hebrew": "תזריע",
+   "translit": "Tazriaʿ"
+  },
+  {
+   "hebcal": "Metzora",
+   "hebrew": "מצרע",
+   "translit": "Mĕṣoraʿ"
+  },
+  {
+   "hebcal": "Achrei Mot",
+   "hebrew": "אחרי מות",
+   "translit": "ʾAḥăre Moth"
+  },
+  {
+   "hebcal": "Kedoshim",
+   "hebrew": "קדשים",
+   "translit": "Qĕdhoshim"
+  },
+  {
+   "hebcal": "Emor",
+   "hebrew": "אמר",
+   "translit": "ʾĔmor"
+  },
+  {
+   "hebcal": "Behar",
+   "hebrew": "בהר",
+   "translit": "Bĕhar"
+  },
+  {
+   "hebcal": "Bechukotai",
+   "hebrew": "בחקתי",
+   "translit": "Bĕḥuqqothay"
+  },
+  {
+   "hebcal": "Bamidbar",
+   "hebrew": "במדבר",
+   "translit": "Bĕmidhbar"
+  },
+  {
+   "hebcal": "Nasso",
+   "hebrew": "נשא",
+   "translit": "Nasoʾ"
+  },
+  {
+   "hebcal": "Beha'alotcha",
+   "hebrew": "בהעלתך",
+   "translit": "Bĕhaʿălothĕkha"
+  },
+  {
+   "hebcal": "Sh'lach",
+   "hebrew": "שלח לך",
+   "translit": "Shĕlaḥ Lĕkha"
+  },
+  {
+   "hebcal": "Korach",
+   "hebrew": "קרח",
+   "translit": "Qoraḥ"
+  },
+  {
+   "hebcal": "Chukat",
+   "hebrew": "חקת",
+   "translit": "Ḥuqqath"
+  },
+  {
+   "hebcal": "Balak",
+   "hebrew": "בלק",
+   "translit": "Balaq"
+  },
+  {
+   "hebcal": "Pinchas",
+   "hebrew": "פינחס",
+   "translit": "Pinĕḥas"
+  },
+  {
+   "hebcal": "Matot",
+   "hebrew": "מטות",
+   "translit": "Maṭṭoth"
+  },
+  {
+   "hebcal": "Masei",
+   "hebrew": "מסעי",
+   "translit": "Masʿe"
+  },
+  {
+   "hebcal": "Devarim",
+   "hebrew": "דברים",
+   "translit": "Dĕvarim"
+  },
+  {
+   "hebcal": "Vaetchanan",
+   "hebrew": "ואתחנן",
+   "translit": "Waʾethḥannan"
+  },
+  {
+   "hebcal": "Eikev",
+   "hebrew": "עקב",
+   "translit": "ʿEqev"
+  },
+  {
+   "hebcal": "Re'eh",
+   "hebrew": "ראה",
+   "translit": "Rĕʾe"
+  },
+  {
+   "hebcal": "Shoftim",
+   "hebrew": "שפטים",
+   "translit": "Shofĕṭim"
+  },
+  {
+   "hebcal": "Ki Teitzei",
+   "hebrew": "כי תצא",
+   "translit": "Ki Theṣeʾ"
+  },
+  {
+   "hebcal": "Ki Tavo",
+   "hebrew": "כי תבוא",
+   "translit": "Ki Thavoʾ"
+  },
+  {
+   "hebcal": "Nitzavim",
+   "hebrew": "נצבים",
+   "translit": "Niṣṣavim"
+  },
+  {
+   "hebcal": "Vayeilech",
+   "hebrew": "וילך",
+   "translit": "Wayyelekh"
+  },
+  {
+   "hebcal": "Ha'azinu",
+   "hebrew": "האזינו",
+   "translit": "Haʾăzinu"
+  },
+  {
+   "hebcal": "Vezot Haberakhah",
+   "hebrew": "וזאת הברכה",
+   "translit": "Wĕzoʾth Habbĕrakha"
+  }
+ ]
+}
