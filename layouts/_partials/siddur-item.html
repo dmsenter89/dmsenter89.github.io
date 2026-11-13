@@ -46,6 +46,9 @@
 <audio class="siddur-audio-player" controls preload="none" src="{{ .audio }}"></audio>
 {{- end }}
 {{- if eq .type "include" }}
+  {{- /* Optional "suppress": occasions whose seasonal parts must never show
+         in this include, e.g. Ya'aleh Weyavo in Musaf's or Yom Tov's Retseh. */ -}}
+  {{- with .suppress }}<div class="siddur-suppress" data-suppress="{{ delimit . " " }}">{{ end }}
   {{- $refSegments := split .ref "/" }}
   {{- $refData := hugo.Data.siddur }}
   {{- range $refSegments }}{{ $refData = index $refData . }}{{ end }}
@@ -60,6 +63,7 @@
       {{- end }}
     {{- end }}
   {{- end }}
+  {{- with .suppress }}</div>{{ end }}
 {{- else if eq .type "expandable" }}
 <details class="siddur-item siddur-expandable" id="{{ .id }}">
   <summary class="siddur-expandable-label">{{ .label }}</summary>
@@ -118,6 +122,17 @@
   <span class="siddur-hebrew" lang="he" dir="rtl">{{ with .hebrewLead }}<strong>{{ . }}</strong> {{ end }}{{ .hebrew }}</span>
   <span class="siddur-translation">{{ with .lead }}<strong>{{ . }}</strong> {{ end }}{{ .translation }}</span>
 </p>
+{{- else if .parts }}
+{{- /* A text item split into "parts": one paragraph whose pieces may carry
+       "when" (space-separated occasions, or "!occasion" for the everyday
+       wording an occasion replaces) and "form" ("full" | "short"). siddur.js
+       shows the parts that fit today; with no script, every part shows,
+       labeled. See README, "Seasonal parts". */ -}}
+<div class="siddur-item siddur-text" id="{{ .id }}">
+  <p class="siddur-hebrew" lang="he" dir="rtl">{{ range $i, $p := .parts }}{{ if $i }} {{ end }}{{ partial "siddur-part.html" (dict "part" $p "text" $p.hebrew "label" $p.hebrewLabel) }}{{ end }}</p>
+  <p class="siddur-translit">{{ range $i, $p := .parts }}{{ if $i }} {{ end }}{{ partial "siddur-part.html" (dict "part" $p "text" $p.translit "label" $p.label) }}{{ end }}</p>
+  <p class="siddur-translation">{{ range $i, $p := .parts }}{{ if $i }} {{ end }}{{ partial "siddur-part.html" (dict "part" $p "text" $p.translation "label" $p.label) }}{{ end }}</p>
+</div>
 {{- else }}
 <div class="siddur-item siddur-text" id="{{ .id }}">
   <p class="siddur-hebrew" lang="he" dir="rtl">{{ .hebrew }}</p>

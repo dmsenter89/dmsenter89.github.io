@@ -68,9 +68,27 @@
         {
           "type": "text",
           "id": "kedushat-hashem",
-          "hebrew": "אַתָּה קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ, וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. בָּרוּךְ אַתָּה יְיָ, הָאֵל הַקָּדוֹשׁ.",
-          "translation": "You are holy and Your name is holy, and holy ones praise You every day, Selah. Blessed are You, Adhonay, the holy God.",
-          "translit": "ʾatta qadhosh wĕshimkha qadhosh, uqĕdhoshim bĕkhol yom yĕhalĕlukha sela. barukh ʾatta Adhonay, haʾel haqqadhosh."
+          "parts": [
+            {
+              "hebrew": "אַתָּה קָדוֹשׁ וְשִׁמְךָ קָדוֹשׁ, וּקְדוֹשִׁים בְּכָל יוֹם יְהַלְלוּךָ סֶּלָה. בָּרוּךְ אַתָּה יְיָ,",
+              "translation": "You are holy and Your name is holy, and holy ones praise You every day, Selah. Blessed are You, Adhonay,",
+              "translit": "ʾatta qadhosh wĕshimkha qadhosh, uqĕdhoshim bĕkhol yom yĕhalĕlukha sela. barukh ʾatta Adhonay,"
+            },
+            {
+              "when": "!ten-days",
+              "hebrew": "הָאֵל הַקָּדוֹשׁ.",
+              "translation": "the holy God.",
+              "translit": "haʾel haqqadhosh."
+            },
+            {
+              "when": "ten-days",
+              "label": "Ten Days of Tĕshuva:",
+              "hebrewLabel": "בעשרת ימי תשובה:",
+              "hebrew": "הַמֶּלֶךְ הַקָּדוֹשׁ.",
+              "translation": "the holy King.",
+              "translit": "hammelekh haqqadhosh."
+            }
+          ]
         },
         {
           "type": "text",
@@ -163,9 +181,27 @@
         {
           "type": "text",
           "id": "din",
-          "hebrew": "הָשִׁיבָה שׁוֹפְטֵינוּ כְּבָרִאשׁוֹנָה וְיוֹעֲצֵינוּ כְּבַתְּחִלָּה, וְהָסֵר מִמֶּנּוּ יָגוֹן וַאֲנָחָה, וּמְלוֹךְ עָלֵינוּ מְהֵרָה אַתָּה יְיָ לְבַדְּךָ, בְּחֶסֶד וּבְרַחֲמִים, בְּצֶדֶק וּבְמִשְׁפָּט. בָּרוּךְ אַתָּה יְיָ, מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט.",
-          "translation": "Restore our judges as at first, and our counselors as at the beginning; remove from us sorrow and sighing; and reign over us soon, You alone, Adhonay, in loving-kindness and compassion, in righteousness and justice. Blessed are You, Adhonay, King who loves righteousness and justice.",
-          "translit": "hashiva shofĕṭenu kĕvariʾshona wĕyo'ăṣenu kĕvattĕḥilla, wĕhaser mimmennu yaghon waʾănaḥa, umĕlokh 'alenu mĕhera ʾatta Adhonay lĕvaddĕkha, bĕḥesedh uvĕraḥămim, bĕṣedheq uvĕmishpaṭ. barukh ʾatta Adhonay, melekh ʾohev ṣĕdhaqa umishpaṭ."
+          "parts": [
+            {
+              "hebrew": "הָשִׁיבָה שׁוֹפְטֵינוּ כְּבָרִאשׁוֹנָה וְיוֹעֲצֵינוּ כְּבַתְּחִלָּה, וְהָסֵר מִמֶּנּוּ יָגוֹן וַאֲנָחָה, וּמְלוֹךְ עָלֵינוּ מְהֵרָה אַתָּה יְיָ לְבַדְּךָ, בְּחֶסֶד וּבְרַחֲמִים, בְּצֶדֶק וּבְמִשְׁפָּט. בָּרוּךְ אַתָּה יְיָ,",
+              "translation": "Restore our judges as at first, and our counselors as at the beginning; remove from us sorrow and sighing; and reign over us soon, You alone, Adhonay, in loving-kindness and compassion, in righteousness and justice. Blessed are You, Adhonay,",
+              "translit": "hashiva shofĕṭenu kĕvariʾshona wĕyo'ăṣenu kĕvattĕḥilla, wĕhaser mimmennu yaghon waʾănaḥa, umĕlokh 'alenu mĕhera ʾatta Adhonay lĕvaddĕkha, bĕḥesedh uvĕraḥămim, bĕṣedheq uvĕmishpaṭ. barukh ʾatta Adhonay,"
+            },
+            {
+              "when": "!ten-days",
+              "hebrew": "מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט.",
+              "translation": "King who loves righteousness and justice.",
+              "translit": "melekh ʾohev ṣĕdhaqa umishpaṭ."
+            },
+            {
+              "when": "ten-days",
+              "label": "Ten Days of Tĕshuva:",
+              "hebrewLabel": "בעשרת ימי תשובה:",
+              "hebrew": "הַמֶּלֶךְ הַמִּשְׁפָּט.",
+              "translation": "the King of judgment.",
+              "translit": "hammelekh hammishpaṭ."
+            }
+          ]
         },
         {
           "type": "text",
@@ -205,16 +241,140 @@
         {
           "type": "text",
           "id": "avodah",
-          "hebrew": "רְצֵה יְיָ אֱלֹהֵינוּ בְּעַמְּךָ יִשְׂרָאֵל וְלִתְפִלָּתָם שְׁעֵה, וְהָשֵׁב הָעֲבוֹדָה לִדְבִיר בֵּיתֶךָ, וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם מְהֵרָה בְּאַהֲבָה תְקַבֵּל בְּרָצוֹן, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּךָ. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים תַּחְפֹּץ בָּנוּ וְתִרְצֵנוּ, וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים. בָּרוּךְ אַתָּה יְיָ, הַמַּחֲזִיר שְׁכִינָתוֹ לְצִיּוֹן.",
-          "translation": "Look with favor, Adhonay our God, upon Your people Israel, and turn to their prayer. Restore the service to the sanctuary of Your house, and accept soon, in love and favor, the fire-offerings of Israel and their prayer; and may the service of Israel, Your people, always find favor. And You, in Your great compassion, take delight in us and favor us; and may our eyes behold Your return to Zion in compassion. Blessed are You, Adhonay, who restores His Presence to Zion.",
-          "translit": "rĕṣeh Adhonay ʾĕlohenu bĕ'ammĕkha yisraʾel wĕlithfillatham shĕ'eh, wĕhashev ha'ăvodha lidhvir bethekha, wĕʾishshe yisraʾel uthĕfillatham mĕhera bĕʾahăva thĕqabbel bĕraṣon, uthĕhi lĕraṣon tamidh 'ăvodhath yisraʾel 'ammekha. wĕʾatta bĕraḥămekha harabbim taḥpoṣ banu wĕthirṣenu, wĕtheḥĕzena 'enenu bĕshuvĕkha lĕṣiyyon bĕraḥămim. barukh ʾatta Adhonay, hammaḥăzir shĕkhinatho lĕṣiyyon."
+          "parts": [
+            {
+              "hebrew": "רְצֵה יְיָ אֱלֹהֵינוּ בְּעַמְּךָ יִשְׂרָאֵל וְלִתְפִלָּתָם שְׁעֵה, וְהָשֵׁב הָעֲבוֹדָה לִדְבִיר בֵּיתֶךָ, וְאִשֵּׁי יִשְׂרָאֵל וּתְפִלָּתָם מְהֵרָה בְּאַהֲבָה תְקַבֵּל בְּרָצוֹן, וּתְהִי לְרָצוֹן תָּמִיד עֲבוֹדַת יִשְׂרָאֵל עַמֶּךָ.",
+              "translation": "Look with favor, Adhonay our God, upon Your people Israel, and turn to their prayer. Restore the service to the sanctuary of Your house, and accept soon, in love and favor, the fire-offerings of Israel and their prayer; and may the service of Israel, Your people, always find favor.",
+              "translit": "rĕṣeh Adhonay ʾĕlohenu bĕ'ammĕkha yisraʾel wĕlithfillatham shĕ'eh, wĕhashev ha'ăvodha lidhvir bethekha, wĕʾishshe yisraʾel uthĕfillatham mĕhera bĕʾahăva thĕqabbel bĕraṣon, uthĕhi lĕraṣon tamidh 'ăvodhath yisraʾel 'ammekha."
+            },
+            {
+              "when": "rosh-hodesh hol-hamoed-pesah hol-hamoed-sukkoth",
+              "form": "full",
+              "label": "Roʾsh Ḥodhesh and Ḥol HamMoʿedh:",
+              "hebrewLabel": "בראש חודש ובחול המועד:",
+              "hebrew": "אֱלֹהֵֽינוּ וֵאלֹהֵי אֲבוֹתֵֽינוּ, יַעֲלֶה וְיָבֹא, וְיַגִּֽיעַ וְיֵרָאֶה, וְיֵרָצֶה וְיִשָּׁמַע, וְיִפָּקֵד וְיִזָּכֵר, זִכְרוֹנֵֽנוּ וְזִכְרוֹן אֲבוֹתֵֽינוּ, זִכְרוֹן יְרוּשָׁלַֽיִם עִירָךְ, וְזִכְרוֹן מָשִֽׁיחַ בֶּן־דָּוִד עַבְדָּךְ, וְזִכְרוֹן כָּל־עַמְּךָ בֵּית יִשְׂרָאֵל לְפָנֶֽיךָ, לִפְלֵיטָה, לְטוֹבָה, לְחֵן, לְחֶֽסֶד וּלְרַחֲמִים, לְחַיִּים טוֹבִים וּלְשָׁלוֹם, בְּיוֹם",
+              "translation": "Our God and God of our forefathers, may there rise and come, arrive and be seen, find favor and be heard, be recalled and be remembered before You our remembrance and the remembrance of our forefathers, the remembrance of Jerusalem, Your city, the remembrance of the Messiah, son of David, Your servant, and the remembrance of all Your people, the house of Israel — for deliverance, for good, for grace, for loving-kindness and compassion, for good life and for peace, on this day of",
+              "translit": "ʾĕlohenu weʾlohe ʾăvothenu, ya'ăleh wĕyavoʾ, wĕyaggia' wĕyeraʾeh, wĕyeraṣeh wĕyishshama', wĕyippaqedh wĕyizzakher, zikhronenu wĕzikhron ʾăvothenu, zikhron yĕrushalayim 'irakh, wĕzikhron mashiaḥ ben-dhawīdh 'avdakh, wĕzikhron kol-'ammĕkha beth yisraʾel lĕfanekha, lifleṭa, lĕṭova, lĕḥen, lĕḥesedh ulĕraḥămim, lĕḥayyim ṭovim ulĕshalom, bĕyom"
+            },
+            {
+              "when": "rosh-hodesh",
+              "form": "full",
+              "label": "On Roʾsh Ḥodhesh:",
+              "hebrewLabel": "בראש חודש:",
+              "hebrew": "רֹאשׁ הַחֹֽדֶשׁ הַזֶּה,",
+              "translation": "Roʾsh Ḥodhesh,",
+              "translit": "roʾsh haḥodhesh hazzeh,"
+            },
+            {
+              "when": "hol-hamoed-pesah",
+              "form": "full",
+              "label": "On Ḥol HamMoʿedh Pesaḥ:",
+              "hebrewLabel": "בחול המועד פסח:",
+              "hebrew": "חַג הַמַּצּוֹת הַזֶּה, בְּיוֹם מִקְרָא קֹֽדֶשׁ הַזֶּה,",
+              "translation": "the Festival of Maṣṣoth, on this day set apart,",
+              "translit": "ḥagh hammaṣṣoth hazzeh, bĕyom miqraʾ qodhesh hazzeh,"
+            },
+            {
+              "when": "hol-hamoed-sukkoth",
+              "form": "full",
+              "label": "On Ḥol HamMoʿedh Sukkoth:",
+              "hebrewLabel": "בחול המועד סוכות:",
+              "hebrew": "חַג הַסֻּכּוֹת הַזֶּה, בְּיוֹם מִקְרָא קֹֽדֶשׁ הַזֶּה,",
+              "translation": "the Festival of Sukkoth, on this day set apart,",
+              "translit": "ḥagh hassukkoth hazzeh, bĕyom miqraʾ qodhesh hazzeh,"
+            },
+            {
+              "when": "rosh-hodesh hol-hamoed-pesah hol-hamoed-sukkoth",
+              "form": "full",
+              "hebrew": "לְרַחֵם בּוֹ עָלֵֽינוּ וּלְהוֹשִׁיעֵֽנוּ. זָכְרֵֽנוּ יְיָ אֱלֹהֵֽינוּ בּוֹ לְטוֹבָה, וּפָקְדֵֽנוּ בוֹ לִבְרָכָה, וְהוֹשִׁיעֵֽנוּ בוֹ לְחַיִּים טוֹבִים, בִּדְבַר יְשׁוּעָה וְרַחֲמִים, חוּס וְחָנֵּֽנוּ, וַחֲמוֹל וְרַחֵם עָלֵֽינוּ, וְהוֹשִׁיעֵֽנוּ כִּי אֵלֶֽיךָ עֵינֵֽינוּ, כִּי אֵל מֶֽלֶךְ חַנּוּן וְרַחוּם אָֽתָּה.",
+              "translation": "to have mercy on us on it and to save us. Remember us on it, Adhonay our God, for good; recall us on it for blessing; and save us on it for good life. With a word of salvation and compassion, spare us and be gracious to us, have pity and mercy on us, and save us; for our eyes are on You, for You are God, a gracious and compassionate King.",
+              "translit": "lĕraḥem bo 'alenu ulĕhoshi'enu. zakhĕrenu Adhonay ʾĕlohenu bo lĕṭova, ufaqĕdhenu vo livrakha, wĕhoshi'enu vo lĕḥayyim ṭovim, bidhvar yĕshu'a wĕraḥămim, ḥus wĕḥannenu, waḥămol wĕraḥem 'alenu, wĕhoshi'enu ki ʾelekha 'enenu, ki ʾel melekh ḥannun wĕraḥum ʾatta."
+            },
+            {
+              "when": "rosh-hodesh",
+              "form": "short",
+              "label": "On Roʾsh Ḥodhesh, short form:",
+              "hebrewLabel": "בראש חודש, בקצרה:",
+              "hebrew": "וְזָכְרֵנוּ בְּיוֹם רֹאשׁ הַחֹֽדֶשׁ הַזֶּה.",
+              "translation": "And remember us on this day of Roʾsh Ḥodhesh.",
+              "translit": "wĕzakhĕrenu bĕyom roʾsh haḥodhesh hazzeh."
+            },
+            {
+              "when": "hol-hamoed-pesah",
+              "form": "short",
+              "label": "On Ḥol HamMoʿedh Pesaḥ, short form:",
+              "hebrewLabel": "בחול המועד פסח, בקצרה:",
+              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַמַּצּוֹת הַזֶּה.",
+              "translation": "And gladden us on this day of the Festival of Maṣṣoth.",
+              "translit": "wĕsammĕḥenu bĕyom ḥagh hammaṣṣoth hazzeh."
+            },
+            {
+              "when": "hol-hamoed-sukkoth",
+              "form": "short",
+              "label": "On Ḥol HamMoʿedh Sukkoth, short form:",
+              "hebrewLabel": "בחול המועד סוכות, בקצרה:",
+              "hebrew": "וְשַׂמְּחֵנוּ בְּיוֹם חַג הַסֻּכּוֹת הַזֶּה.",
+              "translation": "And gladden us on this day of the Festival of Sukkoth.",
+              "translit": "wĕsammĕḥenu bĕyom ḥagh hassukkoth hazzeh."
+            },
+            {
+              "hebrew": "וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים תַּחְפֹּץ בָּנוּ וְתִרְצֵנוּ, וְתֶחֱזֶינָה עֵינֵינוּ בְּשׁוּבְךָ לְצִיּוֹן בְּרַחֲמִים. בָּרוּךְ אַתָּה יְיָ, הַמַּחֲזִיר שְׁכִינָתוֹ לְצִיּוֹן.",
+              "translation": "And You, in Your great compassion, take delight in us and favor us; and may our eyes behold Your return to Zion in compassion. Blessed are You, Adhonay, who restores His Presence to Zion.",
+              "translit": "wĕʾatta bĕraḥămekha harabbim taḥpoṣ banu wĕthirṣenu, wĕtheḥĕzena 'enenu bĕshuvĕkha lĕṣiyyon bĕraḥămim. barukh ʾatta Adhonay, hammaḥăzir shĕkhinatho lĕṣiyyon."
+            }
+          ]
         },
         {
           "type": "text",
           "id": "modim",
-          "hebrew": "מוֹדִים אֲנַחְנוּ לָךְ, שֶׁאַתָּה הוּא יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ לְעוֹלָם וָעֶד, צוּרֵנוּ צוּר חַיֵּינוּ וּמָגֵן יִשְׁעֵנוּ אַתָּה הוּא, לְדוֹר וָדוֹר נוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶךָ, עַל חַיֵּינוּ הַמְּסוּרִים בְּיָדֶךָ, וְעַל נִשְׁמוֹתֵינוּ הַפְּקוּדוֹת לָךְ, וְעַל נִסֶּיךָ שֶׁבְּכָל יוֹם עִמָּנוּ, וְעַל נִפְלְאוֹתֶיךָ וְטוֹבוֹתֶיךָ שֶׁבְּכָל עֵת, עֶרֶב וָבֹקֶר וְצָהֳרָיִם. הַטּוֹב, כִּי לֹא כָלוּ רַחֲמֶיךָ, הַמְּרַחֵם, כִּי לֹא תַמּוּ חֲסָדֶיךָ, כִּי מֵעוֹלָם קִוִּינוּ לָךְ. וְעַל כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמָם וְיִתְנַשֵּׂא תָּמִיד שִׁמְךָ מַלְכֵּנוּ לְעוֹלָם וָעֶד. וְכָל הַחַיִּים יוֹדוּךָ סֶּלָה, וִיהַלְלוּ וִיבָרְכוּ אֶת שִׁמְךָ הַגָּדוֹל בֶּאֱמֶת לְעוֹלָם כִּי טוֹב, הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה, הָאֵל הַטּוֹב. בָּרוּךְ אַתָּה יְיָ, הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת.",
-          "translation": "We give thanks to You, for You are Adhonay our God and God of our forefathers, forever and ever. You are our Rock, the Rock of our lives and the Shield of our salvation. From generation to generation we will thank You and tell Your praise: for our lives, which are given into Your hand; for our souls, which are entrusted to You; for Your miracles, which are with us every day; and for Your wonders and Your kindnesses at every time — evening, morning and noon. You are the Good One, for Your compassion has never ended; the Compassionate One, for Your loving-kindness has never ceased; for we have always hoped in You. And for all these, may Your name, our King, be blessed, exalted and lifted high, always, forever and ever. And all the living shall thank You, Selah, and praise and bless Your great name in truth, forever, for it is good — the God of our salvation and our help, Selah, the good God. Blessed are You, Adhonay; Your name is the Good One, and to You it is fitting to give thanks.",
-          "translit": "modhim ʾănaḥnu lakh, sheʾatta huʾ Adhonay ʾĕlohenu weʾlohe ʾăvothenu lĕ'olam wa'edh, ṣurenu ṣur ḥayyenu umaghen yish'enu ʾatta huʾ, lĕdhor wadhor nodheh lĕkha unĕsapper tĕhillathekha, 'al ḥayyenu hammĕsurim bĕyadhekha, wĕ'al nishmothenu happĕqudhoth lakh, wĕ'al nissekha shebbĕkhal yom 'immanu, wĕ'al niflĕʾothekha wĕṭovothekha shebbĕkhal 'eth, 'erev wavoqer wĕṣohŏrayīm. haṭṭov, ki loʾ khalu raḥămekha, hammĕraḥem, ki loʾ thammu ḥăsadhekha, ki me'olam qiwwinu lakh. wĕ'al kullam yithbarakh wĕyithromam wĕyithnasseʾ tamidh shimkha malkenu lĕ'olam wa'edh. wĕkhol haḥayyim yodhukha sela, wihalĕlu wivarĕkhu ʾeth shimkha haggadhol beʾĕmeth lĕ'olam ki ṭov, haʾel yĕshu'athenu wĕ'ezrathenu sela, haʾel haṭṭov. barukh ʾatta Adhonay, haṭṭov shimkha ulĕkha naʾeh lĕhodhoth."
+          "parts": [
+            {
+              "hebrew": "מוֹדִים אֲנַחְנוּ לָךְ, שֶׁאַתָּה הוּא יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ לְעוֹלָם וָעֶד, צוּרֵנוּ צוּר חַיֵּינוּ וּמָגֵן יִשְׁעֵנוּ אַתָּה הוּא, לְדוֹר וָדוֹר נוֹדֶה לְּךָ וּנְסַפֵּר תְּהִלָּתֶךָ, עַל חַיֵּינוּ הַמְּסוּרִים בְּיָדֶךָ, וְעַל נִשְׁמוֹתֵינוּ הַפְּקוּדוֹת לָךְ, וְעַל נִסֶּיךָ שֶׁבְּכָל יוֹם עִמָּנוּ, וְעַל נִפְלְאוֹתֶיךָ וְטוֹבוֹתֶיךָ שֶׁבְּכָל עֵת, עֶרֶב וָבֹקֶר וְצָהֳרָיִם. הַטּוֹב, כִּי לֹא כָלוּ רַחֲמֶיךָ, הַמְּרַחֵם, כִּי לֹא תַמּוּ חֲסָדֶיךָ, כִּי מֵעוֹלָם קִוִּינוּ לָךְ.",
+              "translation": "We give thanks to You, for You are Adhonay our God and God of our forefathers, forever and ever. You are our Rock, the Rock of our lives and the Shield of our salvation. From generation to generation we will thank You and tell Your praise: for our lives, which are given into Your hand; for our souls, which are entrusted to You; for Your miracles, which are with us every day; and for Your wonders and Your kindnesses at every time — evening, morning and noon. You are the Good One, for Your compassion has never ended; the Compassionate One, for Your loving-kindness has never ceased; for we have always hoped in You.",
+              "translit": "modhim ʾănaḥnu lakh, sheʾatta huʾ Adhonay ʾĕlohenu weʾlohe ʾăvothenu lĕ'olam wa'edh, ṣurenu ṣur ḥayyenu umaghen yish'enu ʾatta huʾ, lĕdhor wadhor nodheh lĕkha unĕsapper tĕhillathekha, 'al ḥayyenu hammĕsurim bĕyadhekha, wĕ'al nishmothenu happĕqudhoth lakh, wĕ'al nissekha shebbĕkhal yom 'immanu, wĕ'al niflĕʾothekha wĕṭovothekha shebbĕkhal 'eth, 'erev wavoqer wĕṣohŏrayīm. haṭṭov, ki loʾ khalu raḥămekha, hammĕraḥem, ki loʾ thammu ḥăsadhekha, ki me'olam qiwwinu lakh."
+            },
+            {
+              "when": "hanukka",
+              "form": "full",
+              "label": "On Ḥănukka:",
+              "hebrewLabel": "בחנוכה:",
+              "hebrew": "וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה. בִּימֵי מַתִּתְיָהוּ בֶּן יוֹחָנָן כֹּהֵן גָּדוֹל חַשְׁמוֹנַאי וּבָנָיו כְּשֶׁעָמְדָה מַלְכוּת יָוָן הָרְשָׁעָה עַל עַמְּךָ יִשְׂרָאֵל לְהַשְׁכִּיחָם תּוֹרָתֶךָ וּלְהַעֲבִירָם מֵחֻקֵּי רְצוֹנֶךָ. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים עָמַדְתָּ לָהֶם בְּעֵת צָרָתָם רַבְתָּ אֶת רִיבָם דַּנְתָּ אֶת דִּינָם נָקַמְתָּ אֶת נִקְמָתָם מָסַרְתָּ גִבּוֹרִים בְּיַד חַלָּשִׁים וְרַבִּים בְּיַד מְעַטִּים וּטְמֵאִים בְּיַד טְהוֹרִים וּרְשָׁעִים בְּיַד צַדִּיקִים וְזֵדִים בְּיַד עוֹסְקֵי תוֹרָתֶךָ. וּלְךָ עָשִׂיתָ שֵׁם גָּדוֹל וְקָדוֹשׁ בְּעוֹלָמֶךָ וּלְעַמְּךָ יִשְׂרָאֵל עָשִׂיתָ תְּשׁוּעָה גְדוֹלָה וּפֻרְקָן כְּהַיּוֹם הַזֶּה. וְאַחַר כָּךְ בָּאוּ בָנֶיךָ לִדְבִיר בֵּיתֶךָ וּפִנּוּ אֶת הֵיכָלֶךָ וְטִהֲרוּ אֶת מִקְדָּשֶׁךָ וְהִדְלִיקוּ נֵרוֹת בְּחַצְרוֹת קָדְשֶׁךָ וְקָבְעוּ שְׁמוֹנַת יְמֵי חֲנֻכָּה אֵלּוּ לְהוֹדוֹת וּלְהַלֵּל לְשִׁמְךָ הַגָּדוֹל.",
+              "translation": "And for the miracles and the rescue, the mighty deeds, the victories and the battles that You worked for our forefathers in those days, at this season. In the days of Mattathias son of Johanan, the High Priest, the Hasmonean, and his sons, when the wicked kingdom of Greece rose against Your people Israel, to make them forget Your Torah and to turn them from the statutes of Your will. But You, in Your great compassion, stood by them in their time of trouble: You pleaded their cause, You judged their claim, You avenged their wrong. You gave the mighty into the hands of the weak, the many into the hands of the few, the impure into the hands of the pure, the wicked into the hands of the righteous, and the insolent into the hands of those who labor in Your Torah. For Yourself You made a great and holy name in Your world, and for Your people Israel You brought about a great victory and rescue, as on this day. And afterward Your children came to the shrine of Your house; they cleared Your Temple and purified Your sanctuary, kindled lights in Your holy courts, and set these eight days of Ḥănukka for giving thanks and praise to Your great name.",
+              "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mattithyahu ben yoḥanan kohen gadhol ḥashmonaʾy uvanaw kĕshe'amĕdha malkhuth yawan harĕsha'a 'al 'ammĕkha yisraʾel lĕhashkiḥam torathekha ulĕha'ăviram meḥuqqe rĕṣonekha. wĕʾatta bĕraḥămekha harabbim 'amadhta lahem bĕ'eth ṣaratham ravta ʾeth rivam danta ʾeth dinam naqamta ʾeth niqmatham masarta ghibborim bĕyadh ḥallashim wĕrabbim bĕyadh mĕ'aṭṭim uṭĕmeʾim bĕyadh ṭĕhorim urĕsha'im bĕyadh ṣaddiqim wĕzedhim bĕyadh 'osĕqe thorathekha. ulĕkha 'asitha shem gadhol wĕqadhosh bĕ'olamekha ulĕ'ammĕkha yisraʾel 'asitha tĕshu'a ghĕdhola ufurqan kĕhayyom hazzeh. wĕʾaḥar kakh baʾu vanekha lidhvir bethekha ufinnu ʾeth hekhalekha wĕṭihăru ʾeth miqdashekha wĕhidhliqu neroth bĕḥaṣroth qodhshekha wĕqavĕ'u shĕmonath yĕme ḥănukka ʾellu lĕhodhoth ulĕhallel lĕshimkha haggadhol."
+            },
+            {
+              "when": "purim",
+              "form": "full",
+              "label": "On Purim:",
+              "hebrewLabel": "בפורים:",
+              "hebrew": "וְעַל הַנִּסִּים וְעַל הַפֻּרְקָן וְעַל הַגְּבוּרוֹת וְעַל הַתְּשׁוּעוֹת וְעַל הַמִּלְחָמוֹת שֶׁעָשִׂיתָ לַאֲבוֹתֵינוּ בַּיָּמִים הָהֵם בַּזְּמַן הַזֶּה. בִּימֵי מָרְדֳּכַי וְאֶסְתֵּר בְּשׁוּשַׁן הַבִּירָה כְּשֶׁעָמַד עֲלֵיהֶם הָמָן הָרָשָׁע בִּקֵּשׁ לְהַשְׁמִיד לַהֲרֹג וּלְאַבֵּד אֶת כָּל הַיְּהוּדִים מִנַּעַר וְעַד זָקֵן טַף וְנָשִׁים בְּיוֹם אֶחָד בִּשְׁלוֹשָׁה עָשָׂר לְחֹדֶשׁ שְׁנֵים עָשָׂר הוּא חֹדֶשׁ אֲדָר וּשְׁלָלָם לָבוֹז. וְאַתָּה בְּרַחֲמֶיךָ הָרַבִּים הֵפַרְתָּ אֶת עֲצָתוֹ וְקִלְקַלְתָּ אֶת מַחֲשַׁבְתּוֹ וַהֲשֵׁבוֹתָ לּוֹ גְּמוּלוֹ בְרֹאשׁוֹ וְתָלוּ אוֹתוֹ וְאֶת בָּנָיו עַל הָעֵץ.",
+              "translation": "And for the miracles and the rescue, the mighty deeds, the victories and the battles that You worked for our forefathers in those days, at this season. In the days of Mordecai and Esther, in Shushan the capital, when the wicked Haman rose against them, he sought to destroy, to slay and to wipe out all the Jews, young and old, children and women, in a single day, on the thirteenth of the twelfth month, the month of Adar, and to take their goods as plunder. But You, in Your great compassion, brought his counsel to nothing and undid his design, and turned his deed back upon his own head; and they hanged him and his sons upon the gallows.",
+              "translit": "wĕ'al hannissim wĕ'al happurqan wĕ'al haggĕvuroth wĕ'al hattĕshu'oth wĕ'al hammilḥamoth she'asitha laʾăvothenu bayyamim hahem bazzĕman hazzeh. bime mordŏkhay wĕʾester bĕshushan habbira kĕshe'amadh 'ălehem haman harasha' biqqesh lĕhashmidh lahărogh ulĕʾabbedh ʾeth kol hayyĕhudhim minna'ar wĕ'adh zaqen ṭaf wĕnashim bĕyom ʾeḥadh bishlosha 'asar lĕḥodhesh shĕnem 'asar huʾ ḥodhesh ʾădhar ushĕlalam lavoz. wĕʾatta bĕraḥămekha harabbim hefarta ʾeth 'ăṣatho wĕqilqalta ʾeth maḥăshavto wahăshevotha lo gĕmulo vĕroʾsho wĕthalu ʾotho wĕʾeth banaw 'al ha'eṣ."
+            },
+            {
+              "when": "hanukka",
+              "form": "short",
+              "label": "On Ḥănukka, short form:",
+              "hebrewLabel": "בחנוכה, בקצרה:",
+              "hebrew": "וְעַל נִסֶּיךָ שֶׁעָשִׂיתָ לָנוּ בִּימֵי הַחַנֻכָּה.",
+              "translation": "And for Your miracles, which You worked for us in the days of Ḥănukka.",
+              "translit": "wĕ'al nissekha she'asitha lanu bime haḥanukka."
+            },
+            {
+              "when": "purim",
+              "form": "short",
+              "label": "On Purim, short form:",
+              "hebrewLabel": "בפורים, בקצרה:",
+              "hebrew": "וְעַל נִסֶּיךָ שֶׁעָשִׂיתָ לָנוּ בִּימֵי פּוּרִים.",
+              "translation": "And for Your miracles, which You worked for us in the days of Purim.",
+              "translit": "wĕ'al nissekha she'asitha lanu bime purim."
+            },
+            {
+              "hebrew": "וְעַל כֻּלָּם יִתְבָּרַךְ וְיִתְרוֹמָם וְיִתְנַשֵּׂא תָּמִיד שִׁמְךָ מַלְכֵּנוּ לְעוֹלָם וָעֶד. וְכָל הַחַיִּים יוֹדוּךָ סֶּלָה, וִיהַלְלוּ וִיבָרְכוּ אֶת שִׁמְךָ הַגָּדוֹל בֶּאֱמֶת לְעוֹלָם כִּי טוֹב, הָאֵל יְשׁוּעָתֵנוּ וְעֶזְרָתֵנוּ סֶלָה, הָאֵל הַטּוֹב. בָּרוּךְ אַתָּה יְיָ, הַטּוֹב שִׁמְךָ וּלְךָ נָאֶה לְהוֹדוֹת.",
+              "translation": "And for all these, may Your name, our King, be blessed, exalted and lifted high, always, forever and ever. And all the living shall thank You, Selah, and praise and bless Your great name in truth, forever, for it is good — the God of our salvation and our help, Selah, the good God. Blessed are You, Adhonay; Your name is the Good One, and to You it is fitting to give thanks.",
+              "translit": "wĕ'al kullam yithbarakh wĕyithromam wĕyithnasseʾ tamidh shimkha malkenu lĕ'olam wa'edh. wĕkhol haḥayyim yodhukha sela, wihalĕlu wivarĕkhu ʾeth shimkha haggadhol beʾĕmeth lĕ'olam ki ṭov, haʾel yĕshu'athenu wĕ'ezrathenu sela, haʾel haṭṭov. barukh ʾatta Adhonay, haṭṭov shimkha ulĕkha naʾeh lĕhodhoth."
+            }
+          ]
         },
         {
           "type": "text",
@@ -389,9 +549,27 @@
         {
           "type": "text",
           "id": "abbreviated-din",
-          "hebrew": "הָשִׁיבָה שׁוֹפְטֵינוּ כְּבָרִאשׁוֹנָה וְיוֹעֲצֵינוּ כְּבַתְּחִלָּה, וּמְלוֹךְ עָלֵינוּ מְהֵרָה אַתָּה יְיָ לְבַדְּךָ, בְּחֶסֶד וּבְרַחֲמִים, בְּצֶדֶק וּבְמִשְׁפָּט. בָּרוּךְ אַתָּה יְיָ, מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט.",
-          "translation": "Restore our judges as at first, and our counselors as at the beginning, and reign over us soon, You alone, Adhonay, in loving-kindness and compassion, in righteousness and justice. Blessed are You, Adhonay, King who loves righteousness and justice.",
-          "translit": "hashiva shofĕṭenu kĕvariʾshona wĕyo'ăṣenu kĕvattĕḥilla, umĕlokh 'alenu mĕhera ʾatta Adhonay lĕvaddĕkha, bĕḥesedh uvĕraḥămim, bĕṣedheq uvĕmishpaṭ. barukh ʾatta Adhonay, melekh ʾohev ṣĕdhaqa umishpaṭ."
+          "parts": [
+            {
+              "hebrew": "הָשִׁיבָה שׁוֹפְטֵינוּ כְּבָרִאשׁוֹנָה וְיוֹעֲצֵינוּ כְּבַתְּחִלָּה, וּמְלוֹךְ עָלֵינוּ מְהֵרָה אַתָּה יְיָ לְבַדְּךָ, בְּחֶסֶד וּבְרַחֲמִים, בְּצֶדֶק וּבְמִשְׁפָּט. בָּרוּךְ אַתָּה יְיָ,",
+              "translation": "Restore our judges as at first, and our counselors as at the beginning, and reign over us soon, You alone, Adhonay, in loving-kindness and compassion, in righteousness and justice. Blessed are You, Adhonay,",
+              "translit": "hashiva shofĕṭenu kĕvariʾshona wĕyo'ăṣenu kĕvattĕḥilla, umĕlokh 'alenu mĕhera ʾatta Adhonay lĕvaddĕkha, bĕḥesedh uvĕraḥămim, bĕṣedheq uvĕmishpaṭ. barukh ʾatta Adhonay,"
+            },
+            {
+              "when": "!ten-days",
+              "hebrew": "מֶלֶךְ אוֹהֵב צְדָקָה וּמִשְׁפָּט.",
+              "translation": "King who loves righteousness and justice.",
+              "translit": "melekh ʾohev ṣĕdhaqa umishpaṭ."
+            },
+            {
+              "when": "ten-days",
+              "label": "Ten Days of Tĕshuva:",
+              "hebrewLabel": "בעשרת ימי תשובה:",
+              "hebrew": "הַמֶּלֶךְ הַמִּשְׁפָּט.",
+              "translation": "the King of judgment.",
+              "translit": "hammelekh hammishpaṭ."
+            }
+          ]
         },
         {
           "type": "text",

@@ -22,6 +22,7 @@
   --siddur-accent: #7a4a2a;
   --siddur-sidebar-bg: #f7f5f2;
   --siddur-shadow: rgba(0, 0, 0, 0.15);
+  --siddur-highlight: rgba(122, 74, 42, 0.10);
 }
 
 html[data-theme="dark"] {
@@ -32,6 +33,7 @@ html[data-theme="dark"] {
   --siddur-accent: #d3a06c;
   --siddur-sidebar-bg: #1a1a1a;
   --siddur-shadow: rgba(0, 0, 0, 0.5);
+  --siddur-highlight: rgba(211, 160, 108, 0.16);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +45,7 @@ html[data-theme="dark"] {
     --siddur-accent: #d3a06c;
     --siddur-sidebar-bg: #1a1a1a;
     --siddur-shadow: rgba(0, 0, 0, 0.5);
+    --siddur-highlight: rgba(211, 160, 108, 0.16);
   }
 }
 
@@ -1012,4 +1015,52 @@ html.show-translation .siddur-rubric .siddur-translation {
   /* The bar sits at the card's right edge here, so labels open leftward. */
   .cycle-card .track i[data-tip]::after { left: auto; right: 0; }
   .cycle-sum { margin-left: 0; }
+}
+
+/* --- Seasonal parts (see README, "Seasonal parts") ---
+   Without siddur.js every part shows, with its label and a dashed
+   underline marking it as conditional. Once the script has worked out
+   today's occasions (html.siddur-occasions), only the parts that fit today
+   show, tinted; "All additions" (html.siddur-show-additions) brings the
+   rest back, labeled. */
+
+.siddur-suppress { display: contents; }
+
+.siddur-part[data-when]:not([data-when^="!"]):not(.is-active) {
+  text-decoration: underline dashed var(--siddur-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35em;
+}
+
+.siddur-part-label {
+  display: inline-block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--siddur-accent);
+  border: 1px solid var(--siddur-accent);
+  border-radius: 4px;
+  padding: 0 0.35em;
+  vertical-align: 0.15em;
+  white-space: nowrap;
+}
+
+html.siddur-occasions .siddur-part[data-when]:not(.is-active),
+html.siddur-occasions .siddur-part-label { display: none; }
+
+html.siddur-occasions.siddur-show-additions .siddur-part[data-when]:not(.is-suppressed) { display: inline; }
+html.siddur-occasions.siddur-show-additions .siddur-part-label { display: inline-block; }
+
+html.siddur-occasions .siddur-part.is-active:not([data-when^="!"]) {
+  background: var(--siddur-highlight);
+  border-radius: 3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.siddur-today {
+  margin: -1rem 0 1.5rem;
+  font-size: 0.85rem;
+  color: var(--siddur-accent);
 }

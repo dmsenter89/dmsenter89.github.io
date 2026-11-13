@@ -184,6 +184,39 @@ over the content tree.
   go in inline brackets (`[בשבת: …]`, `[ביום טוב: טוֹב]`). Musaf `include`s
   the paragraphs it shares with that page's own 'Ămidha section.
 
+## Seasonal parts
+
+Insertions that belong *inside* a paragraph on certain days (Yaʿăleh
+Wĕyavoʾ in Rĕṣeh, ʿAl HanNissim in Modim, the Ten Days endings) don't get
+their own item. The `text` item carries `parts` instead of
+`hebrew`/`translation`: consecutive pieces of one paragraph, each with its
+own `hebrew`, `translation` and (generated) `translit`. A part may add:
+
+- `when`: space-separated occasions it belongs to (`rosh-hodesh`,
+  `hol-hamoed-pesah`, `hol-hamoed-sukkoth`, `hanukka`, `purim`, `ten-days`),
+  or `!occasion` for the everyday wording that occasion replaces (e.g.
+  `הָאֵל הַקָּדוֹשׁ` is `!ten-days`, `הַמֶּלֶךְ הַקָּדוֹשׁ` is `ten-days`).
+- `form`: `full` or `short`. The Full ʿĂmidha shows `full` parts; the
+  Abbreviated and Hăvinenu options show `short` ones (Rabbi Abadi's one-line
+  Yaʿăleh Wĕyavoʾ and ʿAl HanNissim). With no `amidah-middle` toggle on the
+  page, `full`.
+- `label` / `hebrewLabel`: shown only when every addition is on show.
+
+`assets/siddur.js` reads today's Hebrew date (`Intl`, Hebrew calendar),
+shows the parts that fit, tints them, and puts a "Today: …" line and an
+"All additions" button under the display toggle. An evening service reads
+the next Hebrew day from noon on: pages with `evening: true` in front
+matter ('Arvith), or Shabbath's `-arvith` toggle option. Ḥol HamMoʿedh uses
+the Land of Israel's days; the extra Diaspora Yom Ṭov day is on the Yom Ṭov
+page, which suppresses those parts. With no script every part shows,
+labeled, with a dashed underline.
+
+An `include` may carry `suppress`, a list of occasions whose parts never
+show in that splice: Musaf's and the Yom Ṭov page's Rĕṣeh have no Yaʿăleh
+Wĕyavoʾ.
+
+Not yet covered: ʿĂnenu for fast days and Naḥem for Tishʿa BĕʾAv.
+
 ## Divine Name
 
 Every occurrence of the Tetragrammaton — the "יי" shorthand and any

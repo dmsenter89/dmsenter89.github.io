@@ -93,6 +93,19 @@ function processItems(items, sectionId) {
         }
       }
     }
+    // A text item may instead carry `parts`: consecutive pieces of one
+    // paragraph, some shown only on certain days (see README, "Seasonal
+    // parts"). Each part gets its own translit, the same as a whole item.
+    for (const [i, part] of (item.parts ?? []).entries()) {
+      const normalized = normalizeDivineName(part.hebrew);
+      if (normalized !== part.hebrew) normalizedCount++;
+      part.hebrew = normalized;
+      part.translit = transliterateWithDivineName(part.hebrew);
+      translitCount++;
+      if (!part.translation || !part.translation.trim()) {
+        missingTranslation.push(`${sectionId}/${item.id}[${i}]`);
+      }
+    }
     if (item.items) processItems(item.items, sectionId);
     if (item.options) {
       for (const opt of item.options) processItems(opt.items, sectionId);

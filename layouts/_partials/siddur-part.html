@@ -1,0 +1,5 @@
+{{- /* One piece of a "parts" text item (see siddur-item.html). Params:
+       part (the part map), text (this language's text), label (this
+       language's label, shown only when every addition is on show). */ -}}
+<span class="siddur-part"{{ with .part.when }} data-when="{{ . }}"{{ end }}{{ with .part.form }} data-form="{{ . }}"{{ end }}>
+{{- with .label }}<span class="siddur-part-label">{{ . }}</span> {{ end }}{{ .text }}</span>

@@ -13,7 +13,7 @@
 <h1 class="siddur-page-title">{{ .Title }}</h1>
 {{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
 
-<div class="siddur-display-toggle" role="group" aria-label="Display options">
+<div class="siddur-display-toggle" role="group" aria-label="Display options"{{ if .Params.evening }} data-evening{{ end }}>
   <button type="button" class="siddur-toggle-btn" data-toggle-class="show-hebrew">עברית</button>
   <button type="button" class="siddur-toggle-btn" data-toggle-class="show-translit">Translit</button>
   <button type="button" class="siddur-toggle-btn" data-toggle-class="show-translation">English</button>

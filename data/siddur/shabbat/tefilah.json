@@ -246,6 +246,11 @@
                 "yihyu-leratzon-closing",
                 "oseh-shalom",
                 "yehi-ratzon-mikdash"
+              ],
+              "suppress": [
+                "rosh-hodesh",
+                "hol-hamoed-pesah",
+                "hol-hamoed-sukkoth"
               ]
             }
           ]
