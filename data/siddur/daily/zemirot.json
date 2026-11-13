@@ -1,0 +1,82 @@
+{
+  "title": "Zĕmiroth",
+  "sections": [
+    {
+      "id": "barukh-sheamar",
+      "title": "Barukh SheʾAmar",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "zemiroth-intro",
+          "hebrew": "ושבחו חכמים למי שקורא זמירות מספר תהלים בכל יום ויום מתהלה לדוד עד סוף הספר. וכבר נהגו לקרות פסוקים לפניהם ולאחריהם ותקנו ברכה לפני הזמירות והיא ברוך שאמר וברכה לאחריהם והיא ישתבח. ואחר כך מברך על קריאת שמע וקורא קריאת שמע",
+          "translation": "The Sages praised anyone who reads zĕmiroth (psalms of praise) from the book of Psalms every day, from Tĕhilla LĕDhawidh to the end of the book. It has long been the custom to read verses before and after them, and a bĕrakha was instituted before the zĕmiroth, Barukh sheʾamar, and one after them, Yishtabbaḥ. After that you say the bĕrakhoth of the Shĕma' and recite the Shĕma'. (Rambam, Tĕfilla 7:12)"
+        },
+        {
+          "type": "rubric",
+          "id": "zemiroth-short",
+          "hebrew": "ואם אין שהות לא יאמר רק ברוך שאמר ותהלה לדוד וישתבח",
+          "translation": "If you're short on time, say only Barukh sheʾamar, Tĕhilla LĕDhawidh and Yishtabbaḥ. This page gives that short order. (Moram, Shulḥan 'Arukh, ʾOraḥ Ḥayyim 52:1)"
+        },
+        {
+          "type": "text",
+          "id": "barukh-sheamar",
+          "hebrew": "בָּרוּךְ שֶׁאָמַר וְהָיָה הָעוֹלָם, בָּרוּךְ הוּא, בָּרוּךְ אוֹמֵר וְעוֹשֶׂה, בָּרוּךְ גּוֹזֵר וּמְקַיֵּם, בָּרוּךְ עוֹשֶׂה בְרֵאשִׁית, בָּרוּךְ מְרַחֵם עַל הָאָרֶץ, בָּרוּךְ מְרַחֵם עַל הַבְּרִיּוֹת, בָּרוּךְ מְשַׁלֵּם שָׂכָר טוֹב לִירֵאָיו, בָּרוּךְ חַי לָעַד וְקַיָּם לָנֶצַח, בָּרוּךְ פּוֹדֶה וּמַצִּיל, בָּרוּךְ שְׁמוֹ. בָּרוּךְ אַתָּה יְיָ, אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הָאֵל, אָב הָרַחֲמָן, הַמְהֻלָּל בְּפֶה עַמּוֹ, מְשֻׁבָּח וּמְפֹאָר בִּלְשׁוֹן חֲסִידָיו וַעֲבָדָיו, וּבְשִׁירֵי דָּוִד עַבְדָּךְ נְהַלְלָךְ יְיָ אֱלֹהֵינוּ בִּשְׁבָחוֹת וּבִזְמִירוֹת, וּנְגַדְּלָךְ וּנְשַׁבְּחָךְ וּנְפָאֲרָךְ וְנַמְלִיכָךְ, וְנַזְכִּיר שִׁמְךָ מַלְכֵּנוּ אֱלֹהֵינוּ, יָחִיד חַי הָעוֹלָמִים, מֶלֶךְ מְשֻׁבָּח וּמְפֹאָר עֲדֵי עַד שְׁמוֹ הַגָּדוֹל. בָּרוּךְ אַתָּה יְיָ, מֶלֶךְ מְהֻלָּל בַּתִּשְׁבָּחוֹת.",
+          "translation": "Blessed is He who spoke, and the world came to be; blessed is He. Blessed is He who speaks and does; blessed is He who decrees and fulfills; blessed is He who brings creation into being; blessed is He who has compassion on the earth; blessed is He who has compassion on His creatures; blessed is He who pays a good reward to those who fear Him; blessed is He who lives forever and endures for all time; blessed is He who ransoms and delivers; blessed is His name. Blessed are You, Adhonay our God, King of the universe, the God, compassionate Father, praised by the mouth of His people, lauded and glorified by the tongue of His devout ones and His servants. With the songs of David Your servant we will praise You, Adhonay our God, with praises and with psalms; we will exalt You, laud You, glorify You and proclaim You King, and call upon Your name, our King, our God — the One, the Life of the worlds, the King whose great name is lauded and glorified forevermore. Blessed are You, Adhonay, King praised with songs of praise.",
+          "translit": "barukh sheʾamar wĕhaya ha'olam, barukh huʾ, barukh ʾomer wĕ'oseh, barukh gozer umĕqayyem, barukh 'oseh vĕreʾshith, barukh mĕraḥem 'al haʾareṣ, barukh mĕraḥem 'al habbĕriyyoth, barukh mĕshallem sakhar ṭov lireʾaw, barukh ḥay la'adh wĕqayyam laneṣaḥ, barukh podheh umaṣṣil, barukh shĕmo. barukh ʾatta Adhonay, ʾĕlohenu melekh ha'olam, haʾel, ʾav haraḥăman, hamĕhullal bĕfeh 'ammo, mĕshubbaḥ umĕfoʾar bilshon ḥăsidhaw wa'ăvadhaw, uvĕshire dawīdh 'avdakh nĕhalĕlakh Adhonay ʾĕlohenu bishvaḥoth uvizmiroth, unĕghaddĕlakh unĕshabbĕḥakh unĕfaʾărakh wĕnamlikhakh, wĕnazkir shimkha malkenu ʾĕlohenu, yaḥidh ḥay ha'olamim, melekh mĕshubbaḥ umĕfoʾar 'ădhe 'adh shĕmo haggadhol. barukh ʾatta Adhonay, melekh mĕhullal battishbaḥoth."
+        }
+      ]
+    },
+    {
+      "id": "tehilla-ledawidh",
+      "title": "Tĕhilla LĕDhawidh",
+      "items": [
+        {
+          "type": "text",
+          "id": "ashre-yoshve",
+          "hebrew": "אַ֭שְׁרֵי יוֹשְׁבֵ֣י בֵיתֶ֑ךָ ע֝֗וֹד יְֽהַלְל֥וּךָ סֶּֽלָה׃ אַשְׁרֵ֣י הָ֭עָם שֶׁכָּ֣כָה לּ֑וֹ אַֽשְׁרֵ֥י הָ֝עָ֗ם שֱׁיְיָ֥ אֱלֹהָֽיו׃",
+          "translation": "Happy are those who dwell in Your house; they shall praise You evermore, Selah. Happy is the people for whom this is so; happy is the people whose God is Adhonay.",
+          "translit": "ʾashre yoshĕve vethekha 'odh yĕhalĕlukha sela. ʾashre ha'am shekkakha lo ʾashĕre ha'am shĕAdhonay ʾĕlohaw."
+        },
+        {
+          "type": "include",
+          "ref": "daily/minha",
+          "sectionId": "ashrei",
+          "itemIds": [
+            "tehillah-ledavid"
+          ]
+        },
+        {
+          "type": "text",
+          "id": "vaanahnu-nevarekh",
+          "hebrew": "וַאֲנַ֤חְנוּ ׀ נְבָ֘רֵ֤ךְ יָ֗הּ מֵעַתָּ֥ה וְעַד־עוֹלָ֗ם הַֽלְלוּ־יָֽהּ׃",
+          "translation": "And we will bless Yah from now and forevermore. Halleluyah!",
+          "translit": "waʾănaḥnu nĕvarekh yah me'atta wĕ'adh-'olam halĕlu-ya."
+        }
+      ]
+    },
+    {
+      "id": "yishtabbah",
+      "title": "Yishtabbaḥ",
+      "items": [
+        {
+          "type": "text",
+          "id": "yishtabbah",
+          "hebrew": "יִשְׁתַּבַּח שִׁמְךָ לָעַד מַלְכֵּנוּ, הָאֵל הַמֶּלֶךְ הַגָּדוֹל וְהַקָּדוֹשׁ, בַּשָּׁמַיִם וּבָאָרֶץ. כִּי לְךָ נָאֶה יְיָ אֱלֹהֵינוּ וֵאלֹהֵי אֲבוֹתֵינוּ לְעוֹלָם וָעֶד, שִׁיר וּשְׁבָחָה, הַלֵּל וְזִמְרָה, עֹז וּמֶמְשָׁלָה, נֶצַח, גְּדֻלָּה, גְּבוּרָה, תְּהִלָּה וְתִפְאֶרֶת, קְדֻשָּׁה וּמַלְכוּת. בְּרָכוֹת וְהוֹדָאוֹת לְשִׁמְךָ הַגָּדוֹל וְהַקָּדוֹשׁ, וּמֵעוֹלָם וְעַד עוֹלָם אַתָּה אֵל. בָּרוּךְ אַתָּה יְיָ, מֶלֶךְ גָּדוֹל וּמְהֻלָּל בַּתִּשְׁבָּחוֹת, אֵל הַהוֹדָאוֹת, אֲדוֹן הַנִּפְלָאוֹת, בּוֹרֵא כָּל־הַנְּשָׁמוֹת, רִבּוֹן כָּל־הַמַּעֲשִׂים, הַבּוֹחֵר בְּשִׁירֵי זִמְרָה, מֶלֶךְ אֵל חַי הָעוֹלָמִים, אָמֵן.",
+          "translation": "May Your name be praised forever, our King, the God and King, great and holy, in heaven and on earth. For to You, Adhonay our God and God of our forefathers, it is fitting forever and ever: song and praise, laud and psalm, strength and dominion, triumph, greatness and might, praise and splendor, holiness and kingship; blessings and thanksgivings to Your great and holy name, for from everlasting to everlasting You are God. Blessed are You, Adhonay, King great and lauded with praises, God of thanksgivings, Lord of wonders, Creator of all souls, Master of all works, who chooses songs of psalmody, King, God, Life of the worlds. Amen.",
+          "translit": "yishtabbaḥ shimkha la'adh malkenu, haʾel hammelekh haggadhol wĕhaqqadhosh, bashshamayīm uvaʾareṣ. ki lĕkha naʾeh Adhonay ʾĕlohenu weʾlohe ʾăvothenu lĕ'olam wa'edh, shir ushĕvaḥa, hallel wĕzimra, 'oz umemshala, neṣaḥ, gĕdhulla, gĕvura, tĕhilla wĕthifʾereth, qĕdhushsha umalkhuth. bĕrakhoth wĕhodhaʾoth lĕshimkha haggadhol wĕhaqqadhosh, ume'olam wĕ'adh 'olam ʾatta ʾel. barukh ʾatta Adhonay, melekh gadhol umĕhullal battishbaḥoth, ʾel hahodhaʾoth, ʾădhon hanniflaʾoth, boreʾ kol-hannĕshamoth, ribbon kol-hamma'ăsim, habboḥer bĕshire zimra, melekh ʾel ḥay ha'olamim, ʾamen."
+        },
+        {
+          "type": "links",
+          "id": "zemiroth-continue",
+          "label": "Continue:",
+          "links": [
+            {
+              "href": "/siddur/daily/shahrith/#shema",
+              "label": "Shaḥrith →"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

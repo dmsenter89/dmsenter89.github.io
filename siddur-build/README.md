@@ -173,7 +173,9 @@ over the content tree.
   Yamim Noraʾim > Widduy `#widduy`, with a "Continue:" row back to each
   service's `#tachanun`. Each of those daily rows also has a "Yom Ṭov →"
   pill to Holidays > Shalosh Rĕghalim `#amidah` / `#musaf`, whose
-  "Continue:" rows match the Shabbath page's.
+  "Continue:" rows match the Shabbath page's. End of Upon Waking's Morning
+  Supplication → Blessings on Miṣwoth `#sisith` / `#tefillin` ("Before
+  Shaḥrith:"); end of Zĕmiroth → Shaḥrith `#shema` ("Continue:").
 
   The Shalosh Rĕghalim page doesn't use a toggle for the festival. Where
   only the festival's name changes, the shared text is split around a

@@ -1,6 +1,6 @@
 ---
 title: "Quick 'Ămidha"
-weight: 25
+weight: 26
 robots: "noindex, nofollow"
 toc: true
 ---
