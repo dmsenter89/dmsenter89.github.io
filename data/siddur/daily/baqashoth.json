@@ -657,6 +657,97 @@
           "translit": "ribbi ḥănanyaʾ ben-'ăqashyaʾ ʾomer; raṣa haqqadhosh barukh huʾ lĕzakkoth ʾeth yisraʾel, lĕfikhakh hirba lahem tora umiṣwoth, shenneʾĕmar; Adhonay ḥafeṣ lĕma'an ṣidhqo yaghdil tora wĕyaʾdir."
         }
       ]
+    },
+    {
+      "id": "tefillath-hanna",
+      "title": "Tĕfillath Ḥanna",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "tefillath-hanna-info",
+          "hebrew": "יש נוהגים לומר תפלת חנה, והמנהג הקדום לאומרו אחר גמר הבקשות (מהר״א חמוי — סידור \"בית דין\" דף מה:).",
+          "translation": "Some have the custom of saying Ḥanna's prayer; the old custom is to say it after finishing the Baqashoth (Rabbi Avraham Ḥamwi, Siddur Beth Din 45b)."
+        },
+        {
+          "type": "text",
+          "id": "tefillath-hanna-1",
+          "hebrew": "וַתִּתְפַּלֵּ֤ל חַנָּה֙ וַתֹּאמַ֔ר עָלַ֤ץ לִבִּי֙ בַּֽיְיָ֔ רָ֥מָה קַרְנִ֖י בַּֽיְיָ֑ רָ֤חַב פִּי֙ עַל־א֣וֹיְבַ֔י כִּ֥י שָׂמַ֖חְתִּי בִּישׁוּעָתֶֽךָ׃ אֵין־קָד֥וֹשׁ כַּיְיָ֖ כִּ֣י אֵ֣ין בִּלְתֶּ֑ךָ וְאֵ֥ין צ֖וּר כֵּאלֹהֵֽינוּ׃ אַל־תַּרְבּ֤וּ תְדַבְּרוּ֙ גְּבֹהָ֣ה גְבֹהָ֔ה יֵצֵ֥א עָתָ֖ק מִפִּיכֶ֑ם כִּ֣י אֵ֤ל דֵּעוֹת֙ יְיָ֔ וְל֥וֹ נִתְכְּנ֖וּ עֲלִלֽוֹת׃ קֶ֥שֶׁת גִּבֹּרִ֖ים חַתִּ֑ים וְנִכְשָׁלִ֖ים אָ֥זְרוּ חָֽיִל׃ שְׂבֵעִ֤ים בַּלֶּ֙חֶם֙ נִשְׂכָּ֔רוּ וּרְעֵבִ֖ים חָדֵ֑לּוּ עַד־עֲקָרָה֙ יָלְדָ֣ה שִׁבְעָ֔ה וְרַבַּ֥ת בָּנִ֖ים אֻמְלָֽלָה׃",
+          "translation": "And Ḥanna prayed and said: My heart exults in Adhonay; my horn is raised high through Adhonay. My mouth is opened wide against my enemies, for I rejoice in Your salvation. There is none holy like Adhonay, for there is none besides You, and there is no rock like our God. Do not keep on speaking so very proudly; let no arrogance come out of your mouth, for Adhonay is a God of knowledge, and by Him deeds are weighed. The bows of the mighty are broken, and those who stumbled are girded with strength. Those who were full hire themselves out for bread, and those who were hungry hunger no more; the barren woman has borne seven, and she who had many children languishes.",
+          "translit": "wattithpallel ḥanna wattoʾmar 'alaṣ libbi baAdhonay rama qarni baAdhonay raḥav pi 'al-ʾoyĕvay ki samaḥti bishu'athekha. ʾen-qadhosh kaAdhonay ki ʾen biltekha wĕʾen ṣur keʾlohenu. ʾal-tharbu thĕdhabbĕru gĕvoha ghĕvoha yeṣeʾ 'athaq mippikhem ki ʾel de'oth Adhonay wĕlo nithkĕnu 'ăliloth. qesheth gibborim ḥattim wĕnikhshalim ʾazĕru ḥayīl. sĕve'im balleḥem niskaru urĕ'evim ḥadhellu 'adh-'ăqara yalĕdha shiv'a wĕrabbath banim ʾumlala."
+        },
+        {
+          "type": "text",
+          "id": "tefillath-hanna-2",
+          "hebrew": "יְיָ֖ מֵמִ֣ית וּמְחַיֶּ֑ה מוֹרִ֥יד שְׁא֖וֹל וַיָּֽעַל׃ יְיָ֖ מוֹרִ֣ישׁ וּמַעֲשִׁ֑יר מַשְׁפִּ֖יל אַף־מְרוֹמֵֽם׃ מֵקִ֨ים מֵעָפָ֜ר דָּ֗ל מֵֽאַשְׁפֹּת֙ יָרִ֣ים אֶבְי֔וֹן לְהוֹשִׁיב֙ עִם־נְדִיבִ֔ים וְכִסֵּ֥א כָב֖וֹד יַנְחִלֵ֑ם כִּ֤י לַֽיְיָ֙ מְצֻ֣קֵי אֶ֔רֶץ וַיָּ֥שֶׁת עֲלֵיהֶ֖ם תֵּבֵֽל׃ רַגְלֵ֤י חֲסִידָו֙ יִשְׁמֹ֔ר וּרְשָׁעִ֖ים בַּחֹ֣שֶׁךְ יִדָּ֑מּוּ כִּי־לֹ֥א בְכֹ֖חַ יִגְבַּר־אִֽישׁ׃ יְיָ֞ יֵחַ֣תּוּ מְרִיבָ֗ו עָלָו֙ בַּשָּׁמַ֣יִם יַרְעֵ֔ם יְיָ֖ יָדִ֣ין אַפְסֵי־אָ֑רֶץ וְיִתֶּן־עֹ֣ז לְמַלְכּ֔וֹ וְיָרֵ֖ם קֶ֥רֶן מְשִׁיחֽוֹ׃",
+          "translation": "Adhonay brings death and gives life; He brings down to the grave and brings up. Adhonay makes poor and makes rich; He brings low, and He also lifts up. He raises the poor from the dust, He lifts the needy from the dunghill, to seat them with nobles and give them a throne of glory as their inheritance; for the pillars of the earth are Adhonay's, and He has set the world upon them. He guards the feet of His faithful ones, but the wicked are silenced in darkness, for not by strength does a man prevail. Those who contend with Adhonay are shattered; He thunders against them from the heavens. Adhonay judges the ends of the earth; He will give strength to His king and raise high the horn of His anointed.",
+          "translit": "Adhonay memith umĕḥayyeh moridh shĕʾol wayya'al. Adhonay morish uma'ăshir mashpil ʾaf-mĕromem. meqim me'afar dal meʾashpoth yarim ʾevyon lĕhoshiv 'im-nĕdhivim wĕkhisseʾ khavodh yanḥilem ki laAdhonay mĕṣūqe ʾereṣ wayyasheth 'ălehem tevel. raghle ḥăsidhaw yishmor urĕsha'im baḥoshekh yiddammu ki-loʾ vĕkhoaḥ yighbar-ʾish. Adhonay yeḥattu mĕrivaw 'alaw bashshamayim yar'em Adhonay yadhin ʾafse-ʾareṣ wĕyitten-'oz lĕmalko wĕyarem qeren mĕshiḥo."
+        },
+        {
+          "type": "text",
+          "id": "tefillath-hanna-verses",
+          "hebrew": "אָת֙וֹהִי֙ כְּמָ֣ה רַבְרְבִ֔ין וְתִמְה֖וֹהִי כְּמָ֣ה תַקִּיפִ֑ין מַלְכוּתֵהּ֙ מַלְכ֣וּת עָלַ֔ם וְשׇׁלְטָנֵ֖הּ עִם־דָּ֥ר וְדָֽר׃ וַאֲנַ֤חְנוּ עַמְּךָ֨ ׀ וְצֹ֥אן מַרְעִיתֶךָ֮ נ֤וֹדֶ֥ה לְּךָ֗ לְע֫וֹלָ֥ם לְד֥וֹר וָדֹ֑ר נְ֝סַפֵּ֗ר תְּהִלָּתֶֽךָ׃ עֶ֤רֶב וָבֹ֣קֶר וְ֭צׇהֳרַיִם אָשִׂ֣יחָה וְאֶהֱמֶ֑ה וַיִּשְׁמַ֥ע קוֹלִֽי׃ בְּרׇן־יַ֭חַד כּ֣וֹכְבֵי בֹ֑קֶר וַ֝יָּרִ֗יעוּ כׇּל־בְּנֵ֥י אֱלֹהִֽים׃ לֹֽא־אִ֭ירָא מֵרִבְב֥וֹת עָ֑ם אֲשֶׁ֥ר סָ֝בִ֗יב שָׁ֣תוּ עָלָֽי׃ וַֽאֲנִי֙ בַּיְיָ֣ אֲצַפֶּ֔ה אוֹחִ֖ילָה לֵאלֹהֵ֣י יִשְׁעִ֑י יִשְׁמָעֵ֖נִי אֱלֹהָֽי׃",
+          "translation": "How great are His signs, and how mighty His wonders! His kingdom is an everlasting kingdom, and His dominion is from generation to generation. And we, Your people and the flock of Your pasture, will thank You forever; from generation to generation we will tell Your praise. Evening, morning and noon I speak and moan, and He hears my voice. When the morning stars sang together, all the sons of God shouted for joy. I will not fear the myriads of people who have set themselves against me all around. But I will look to Adhonay; I will wait for the God of my salvation; my God will hear me.",
+          "translit": "ʾathohi kĕma ravrĕvin wĕthimhohi kĕma thaqqifin malkhutheh malkhuth 'alam wĕsholṭaneh 'im-dhar wĕdhar. waʾănaḥnu 'ammĕkha wĕṣoʾn mar'ithekha nodheh lĕkha lĕ'olam lĕdhor wadhor nĕsapper tĕhillathekha. 'erev wavoqer wĕṣohŏrayīm ʾasiḥa wĕʾehĕmeh wayyishma' qoli. bĕron-yaḥadh kokhĕve voqer wayyari'u kol-vĕne ʾĕlohim. loʾ-ʾiraʾ merivvoth 'am ʾăsher saviv shathu 'alay. waʾăni baAdhonay ʾăṣappeh ʾoḥila leʾlohe yish'i yishma'eni ʾĕlohay."
+        },
+        {
+          "type": "rubric",
+          "id": "tefillath-hanna-shabbath",
+          "hebrew": "בשבת ידלג פסוק זה:",
+          "translation": "On Shabbath, skip this one verse:"
+        },
+        {
+          "type": "text",
+          "id": "tefillath-hanna-micah",
+          "hebrew": "אַֽל־תִּשְׂמְחִ֤י אֹיַ֙בְתִּי֙ לִ֔י כִּ֥י נָפַ֖לְתִּי קָ֑מְתִּי כִּֽי־אֵשֵׁ֣ב בַּחֹ֔שֶׁךְ יְיָ֖ א֥וֹר לִֽי׃",
+          "translation": "Do not rejoice over me, my enemy: though I have fallen, I have risen; though I sit in darkness, Adhonay is a light to me.",
+          "translit": "ʾal-thismĕḥi ʾoyavti li ki nafalti qamĕti ki-ʾeshev baḥoshekh Adhonay ʾor li."
+        },
+        {
+          "type": "text",
+          "id": "tefillath-hanna-close",
+          "hebrew": "כִּֽי־לְךָ֣ יְיָ֣ הוֹחָ֑לְתִּי אַתָּ֥ה תַ֝עֲנֶ֗ה אֲדֹנָ֥י אֱלֹהָֽי׃ רַ֭גְלִי עָמְדָ֣ה בְמִישׁ֑וֹר בְּ֝מַקְהֵלִ֗ים אֲבָרֵ֥ךְ יְיָ׃",
+          "translation": "For in You, Adhonay, I have hoped; You will answer, my Lord, my God. My foot stands on level ground; in the assemblies I will bless Adhonay.",
+          "translit": "ki-lĕkha Adhonay hoḥalĕti ʾatta tha'ăneh ʾădhonay ʾĕlohay. raghli 'amĕdha vĕmishor bĕmaqhelim ʾăvarekh Adhonay."
+        }
+      ]
+    },
+    {
+      "id": "weahavta",
+      "title": "WĕʾAhavta LĕRe'ăkha",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "weahavta-info",
+          "hebrew": "קודם התפלה יקבל עליו מצות עשה של \"ואהבת לרעך כמוך\", ולכן אם יש אדם מישראל בצרה — יתפלל עליו כל יום בפירוש. ועל ידי זה תכלל תפלתו בכלל תפלות כל ישראל, ותעשה פרי למעלה (בא״ח מקץ ה). ויזהר לומר זאת בלב שלם, ולא מהשפה ולחוץ. ויאמר נוסח זה כעין המובא במנחת אהרן פארדו (כלל ט׳ אות ה׳):",
+          "translation": "Before praying, one should take upon oneself the positive commandment \"Love your fellow as yourself.\" So if any Jew is in distress, pray for that person every day, by name; through this one's prayer is included among the prayers of all Israel and bears fruit above (Ben ʾIsh Ḥay, Miqqeṣ 5). Take care to say it wholeheartedly, not just with the lips. Say this text, along the lines of the one in Minḥath ʾAharon (Pardo), rule 9, §5:"
+        },
+        {
+          "type": "text",
+          "id": "weahavta-kabbala",
+          "hebrew": "הֲרֵינִי מְקַבֵּל עָלַי מִצְוַת עֲשֵׂה שֶׁל וְאָהַבְתָּ לְרֵעֲךָ כָּמוֹךָ. וַהֲרֵינִי אוֹהֵב אֶת כׇּל־אֶחָד וְאֶחָד מִבְּנֵי יִשְׂרָאֵל כְּנַפְשִׁי.",
+          "translation": "I hereby take upon myself the positive commandment \"Love your fellow as yourself,\" and I hereby love every single one of the children of Israel as my own soul.",
+          "translit": "hăreni mĕqabbel 'alay miṣwath 'ăseh shel wĕʾahavta lĕre'ăkha kamokha. wahăreni ʾohev ʾeth kol-ʾeḥadh wĕʾeḥadh mibbĕne yisraʾel kĕnafshi."
+        }
+      ]
+    },
+    {
+      "id": "yadhanu",
+      "title": "Yadha'nu",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "yadhanu-info",
+          "hebrew": "עצה טובה שמעתי מהרה״ג חכם יוסף עזרא זליכה שליט״א לומר בפה מלא קודם התפלה נוסח מודעה שכתב רבינו בבא״ח (בשלח ד) לכוונו קודם תפלת העמידה, והוא מנהג יפה, כי לרוב הטרדות עלול האדם לשכוח לכוון, ומה טוב ונעים שיכוון האדם את כל זה גם קודם תפלת העמידה, דאחוז בזה וגם מזה אל תנח ידך, וזה לשון הבקשה:",
+          "translation": "Good advice I [Rabbi Abadi] heard from Ḥakham Yosef 'Ezra Zĕlikha: say aloud, before praying, the declaration our master wrote in the Ben ʾIsh Ḥay (Bĕshallaḥ 4) to have in mind before the 'Ămidha. It is a fine custom, since with so many distractions a person is liable to forget to have it in mind; how good and pleasant to have all this in mind before the 'Ămidha as well, for \"hold on to this, and do not let go of that either.\" These are the words of the request:"
+        },
+        {
+          "type": "text",
+          "id": "yadhanu",
+          "hebrew": "יָדַעְנוּ יְיָ שֶׁאֵין אֲנַחְנוּ רְאוּיִים וַהֲגוּנִים לְהִתְפַּלֵּל לְפָנֶיךָ, אֲבָל סָמַכְנוּ עַל רַחֲמֶיךָ הָרַבִּים וַחֲסָדֶיךָ הַגְּדוֹלִים, כִּי חָפֵץ חֶסֶד וּמַרְבֶּה לְהֵטִיב אַתָּה, וְכַכָּתוּב; טוֹב־יְיָ֥ לַכֹּ֑ל וְ֝רַחֲמָ֗יו עַל־כׇּל־מַעֲשָֽׂיו׃ וְאַתָּה צִוִּיתָנוּ לְהִתְפַּלֵּל אֵלֶיךָ, כִּי אַתָּה אֱלֹהֵינוּ וַאֲנַחְנוּ עֲבָדֶיךָ, וְעֵינֵינוּ לְךָ תְּלוּיוֹת כְּעֵינֵי עֲבָדִים אֶל יַד אֲדוֹנֵיהֶם.",
+          "translation": "We know, Adhonay, that we are not worthy or fit to pray before You; but we rely on Your abundant mercy and Your great kindness, for You delight in kindness and do much good, as it is written, \"Adhonay is good to all, and His mercy is over all His works.\" And You have commanded us to pray to You, for You are our God and we are Your servants, and our eyes look to You as the eyes of servants to the hand of their masters.",
+          "translit": "yadha'nu Adhonay sheʾen ʾănaḥnu rĕʾuyim wahăghunim lĕhithpallel lĕfanekha, ʾăval samakhnu 'al raḥămekha harabbim waḥăsadhekha haggĕdholim, ki ḥafeṣ ḥesedh umarbeh lĕheṭiv ʾatta, wĕkhakkathuv; ṭov-Adhonay lakkol wĕraḥămaw 'al-khol-ma'ăsaw. wĕʾatta ṣiwwithanu lĕhithpallel ʾelekha, ki ʾatta ʾĕlohenu waʾănaḥnu 'ăvadhekha, wĕ'enenu lĕkha tĕluyoth kĕ'ene 'ăvadhim ʾel yadh ʾădhonehem."
+        }
+      ]
     }
   ]
 }
