@@ -49,6 +49,7 @@ To publish: `git mv content/post/wip/<slug> content/post/YY/MM-<slug>`, then set
 - `_partials/extend_head.html` — Loads KaTeX on single pages that contain math (detection is automatic; override per page with `math: true` / `math: false` in front matter); inlines `assets/tables.css` on pages containing a `<table>` (captions, header shading, zebra striping, horizontal-scroll overflow — see below); loads Mermaid.js on pages containing a ` ```mermaid ` fenced block, initialized to match the page's light/dark `data-theme` at load (paired with the render hook below); and inlines `assets/tabs.css` for the language-switcher code tabs (see below).
 - `_partials/extend_footer.html` — Inlines `assets/tabs.js`, which wires up the language-switcher code tabs' click behavior.
 - `_partials/extend_post_content.html` — Renders Academic-style metadata blocks (authors, DOI, abstract, link buttons) for `publication`, `talk`, and `project` pages by reading front matter fields like `authors`, `doi`, `url_pdf`, `url_slides`, `url_video`, `url_code`, etc.
+- `_markup/render-passthrough.html` — Render hook for math caught by the Goldmark passthrough extension (see Configuration notes).
 - `_markup/render-codeblock-mermaid.html` — Render hook for ` ```mermaid ` fenced code blocks. Emits `<pre class="mermaid">` instead of letting the default Chroma syntax highlighter handle it — Chroma doesn't know the `mermaid` language and otherwise renders the block as inert fallback-highlighted text, hiding the diagram entirely.
 - `_shortcodes/alert.html` — `{{% alert note %}}…{{% /alert %}}` callout (Academic-compatible).
 - `_shortcodes/staticref.html` — `{{% staticref "files/x" "newtab" %}}label{{% /staticref %}}` link helper.
@@ -97,6 +98,15 @@ Notebook HTML exports (SAS Studio's ODS HTML5, Jupyter, Quarto, etc.) are built 
 - **Never put extracted files in a directory whose name ends in `_files` or `_cache`** (e.g. Quarto's `index_files/` convention) — see the `ignoreFiles` note below. Bundle root is safe and matches every other post.
 - **Flatten notebook-generated tables to a real `<table>`.** Drop per-cell classes (SAS's `data`/`header`/`rowheader`, Jupyter's Pandas `dataframe`) and any multi-row/`colspan` headers — collapse to one header row. `assets/tables.css` (loaded automatically on any page with a `<table>`) already handles captions, header shading, zebra striping, and overflow scrolling, so hand-written inline table styles are almost never needed. Give it a `<caption>` if the source had a title bar, and wrap it in `<div class="table-wrap">…</div>` so it gets the overflow handling.
 - **Delete tooltip/interactivity `<script>` blocks and `onload` handlers.** They reference JS functions that only exist inside the notebook tool's own runtime; dropping them is safe (an `<img>` never executes embedded SVG script) and removes dead weight.
+- **Quarto (`.qmd`) posts:** Quarto writes figures to `index.markdown_strict_files/` by default, which `ignoreFiles` silently drops. With the knitr engine, add this to the `.qmd` front matter so figures land in the bundle root (`fig-a-1.png`) with plain relative links:
+
+  ```yaml
+  knitr:
+    opts_chunk:
+      fig.path: ""
+  ```
+
+  The `.qmd` itself is in `ignoreFiles`, so it is never published. Also ignored: `index_cache/`.
 - **Mermaid diagrams** need no special content-side handling — just confirm the exporter emits a plain ` ```mermaid ` fenced block, not one wrapped in extra HTML. Rendering is automatic (see `render-codeblock-mermaid.html` above).
 
 If you maintain the exporter script rather than cleaning up its output by hand: doing the `<svg>`-to-standalone-file-plus-`<img>` extraction and table flattening in the exporter itself eliminates most of the manual work above.
@@ -104,6 +114,7 @@ If you maintain the exporter script rather than cleaning up its output by hand: 
 ### Configuration notes
 
 - `hugo.toml` sets `ignoreFiles` to exclude `.ipynb`, `.Rmd`, `.Rmarkdown`, and paths ending in `_files`/`_cache`. **This is a path-suffix match, not a filename match** — it silently excludes an entire directory tree if its path ends that way (e.g. Quarto's `index_files/` figure-output convention, or `.ipynb_checkpoints/`). The build succeeds and the page can reference an image inside such a directory with zero warning, yet the file never lands in `public/`. Keep post assets (images, SVGs, data files) directly in the bundle root instead.
+- **Math is passed through untouched.** `hugo.toml` enables Goldmark's passthrough extension for `$…$`, `\(…\)`, `$$…$$` and `\[…\]`, and `_markup/render-passthrough.html` re-emits the content (HTML-escaped) for KaTeX. So write plain LaTeX: `\\` for line breaks, `\{`, `\,`, `_`. **Don't** use the old Markdown escape workarounds (`\\\\`, `\\{`, `\_`), because they now render literally. Environments like `\begin{aligned}` need a `$$` wrapper; KaTeX won't find them on their own. A side effect: `\[` and `\(` in prose start math, so write plain `[`/`(` there.
 - Taxonomy URLs use singular forms (`/tag/`, `/category/`) to match old Academic site links.
 - Search is client-side via Fuse.js, powered by the JSON output format enabled in `[outputs]`.
 

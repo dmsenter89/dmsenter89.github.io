@@ -1,0 +1,3 @@
+{{- /* Goldmark passthrough (hugo.toml) hands math here untouched; re-emit it (auto-escaped by the template)
+       inside delimiters so KaTeX auto-render (extend_head.html) picks it up. */ -}}
+{{- if eq .Type "block" }}$${{ .Inner }}$${{ else }}\({{ .Inner }}\){{ end -}}

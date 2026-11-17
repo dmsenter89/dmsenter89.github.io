@@ -148,7 +148,7 @@ Learn these once a job calls for them.
 - **Drag or lift a log: [Timber hitch](https://www.animatedknots.com/timber-hitch-knot).** Grips a log or bundle of branches under pull and falls apart when slack. Add a half hitch on the end you're pulling toward (making a killick hitch) to keep the load pointed straight.
 - **Clamp something shut for good: [Constrictor knot](https://www.animatedknots.com/constrictor-knot-twisting-method).** Closing a feed bag, holding a bundle of hoses, or temporary whipping on a fraying rope end. It grips hard and often has to be cut off.
 - **Join two climbing-style or slick ropes: [Double fisherman's bend](https://www.animatedknots.com/double-fishermans-bend-knot)** or [Zeppelin bend](https://www.animatedknots.com/zeppelin-bend-knot). The double fisherman's is very secure but jams; the Zeppelin is secure and still unties.
-- **Quick release on anything:** most knots above can be tied "slipped" by finishing with a bight instead of the end, like a shoelace bow. Pulling the tail releases the knot. Search "slipped \[knot name\]" or browse [quick release knots](https://www.animatedknots.com/quick-release-knots).
+- **Quick release on anything:** most knots above can be tied "slipped" by finishing with a bight instead of the end, like a shoelace bow. Pulling the tail releases the knot. Search "slipped [knot name]" or browse [quick release knots](https://www.animatedknots.com/quick-release-knots).
 
 ## Common mistakes
 

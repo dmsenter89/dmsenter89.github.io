@@ -61,18 +61,22 @@ The names and function calls for the included distributions are described in the
 
 A basic linear model looks something like this:
 
+$$
 \begin{aligned}
-y_i &\sim \mathrm{Normal}(\mu_i, \sigma) \\\\
+y_i &\sim \mathrm{Normal}(\mu_i, \sigma) \\
 \mu_i &= \beta_0 + \beta_1 x_i
 \end{aligned}
+$$
 
 which will need to be combined with priors for $\beta_0$, $\beta_1$, and $\sigma$. Assume we have a data set `work.mydata` that contains two variables: our predictor `x` and our measured variable `y`. Assume we use the above model together with the following priors:
 
+$$
 \begin{aligned}
-\beta_0 &\sim \mathrm{Normal}(0, 10) \\\\
-\beta_1 &\sim \mathrm{Normal}(0, 10) \\\\
+\beta_0 &\sim \mathrm{Normal}(0, 10) \\
+\beta_1 &\sim \mathrm{Normal}(0, 10) \\
 \sigma &\sim \mathrm{Uniform}(0,50).
 \end{aligned}
+$$
 
 Translating this into PROC MCMC is straightforward. Even though we can specify the statements in any order, it is common to define the model "upside down" so that each line contains only variables that have already been defined. This is for convenience, so you don't forget to specify something before hitting "run."
 
@@ -100,24 +104,30 @@ For more info on simple regression, check out [chapters 9-11](https://www.bayesr
 
 A basic logistic model will look as follows:
 
+$$
 \begin{aligned}
-y_i &\sim \mathrm{Binomial}(n_i, p_i) \\\\
+y_i &\sim \mathrm{Binomial}(n_i, p_i) \\
 \mathrm{logit}(p_i) &= \beta_0 + \beta_1 x_i
 \end{aligned}
+$$
 
-combined with appropriate priors for $\beta_0$, $\beta_1$. Here $y_i$ is a positive integer response, $n_i$ is a count, and $x_i$ is still our predictor. In many medical studies we are interested in the special case where $y_i \in \\{0,1\\}$ so that the model becomes
+combined with appropriate priors for $\beta_0$, $\beta_1$. Here $y_i$ is a positive integer response, $n_i$ is a count, and $x_i$ is still our predictor. In many medical studies we are interested in the special case where $y_i \in \{0,1\}$ so that the model becomes
 
+$$
 \begin{aligned}
-y_i &\sim \mathrm{Bern}(p_i) \\\\
+y_i &\sim \mathrm{Bern}(p_i) \\
 \mathrm{logit}(p_i) &= \beta_0 + \beta_1 x_i.
 \end{aligned}
+$$
 
 Let's assume a diffuse prior like this:
 
+$$
 \begin{aligned}
-\beta_0 &\sim \mathrm{Normal}(0, 100) \\\\
+\beta_0 &\sim \mathrm{Normal}(0, 100) \\
 \beta_1 &\sim \mathrm{Normal}(0, 100).
 \end{aligned}
+$$
 
 Then we can translate to PROC MCMC as follows:
 
@@ -162,12 +172,14 @@ Random-effects, also known as hierarchical modeling, looks at group structures i
 
 As a simple example, assume we have a data set `ht` containing the height (`h`) and sex (`s`) of a population sample. Assume we are interested in modeling the distribution of height in our data set. We know that on average males are taller than females (mean 167 cm vs 156 cm based on NHANES 2006). We could build a model similar to this:
 
+$$
 \begin{aligned}
-h_i &\sim \mathrm{Normal}(\mu_i, \sigma) \\\\
-\mu_i &= \alpha_{\mathrm{sex[i]}} \\\\
-\alpha_j &\sim \mathrm{Normal}(160, 20) \quad \text{for } j=1,2 \\\\
+h_i &\sim \mathrm{Normal}(\mu_i, \sigma) \\
+\mu_i &= \alpha_{\mathrm{sex[i]}} \\
+\alpha_j &\sim \mathrm{Normal}(160, 20) \quad \text{for } j=1,2 \\
 \sigma &\sim \mathrm{Uniform}(0,50).
 \end{aligned}
+$$
 
 In SAS, the random effect is specified with the [random](https://go.documentation.sas.com/doc/en/pgmsascdc/9.4_3.4/statug/statug_mcmc_gettingstarted03.htm) statement. We specify the categories with the `subject` keyword in the random statement. SAS will then automatically create the necessary number of parameters for the random effect. Our model translates to the following MCMC call:
 
@@ -184,7 +196,7 @@ proc mcmc data=ht
 run;
 ```
 
-Assuming $s\in\\{1,2\\}$ this will cause SAS to create two alpha variables for the two levels of `s`: `alpha_1` and `alpha_2`. Had `s` been a character variable, say with values m and f, then SAS would have created `alpha_m` and `alpha_f` instead.
+Assuming $s\in\{1,2\}$ this will cause SAS to create two alpha variables for the two levels of `s`: `alpha_1` and `alpha_2`. Had `s` been a character variable, say with values m and f, then SAS would have created `alpha_m` and `alpha_f` instead.
 
 For more information on this, check out [unit IV](https://www.bayesrulesbook.com/chapter-15.html) of Bayes Rules!
 

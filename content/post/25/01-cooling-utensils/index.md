@@ -69,7 +69,7 @@ The main thing we worry about with cooling is surface area. We know the rate
 that heat leaves our system is the surface intergral of the heat flux over the
 objects area, i.e.
 
-$$ \dot{Q} = \oint_A q \\,dA.$$
+$$ \dot{Q} = \oint_A q \,dA.$$
 
 So to make cooling quicker, we either need to manipulate the surface area or
 change the heat flux, which depends on the temperature gradient and the
@@ -81,14 +81,14 @@ surface that either touches the inside of the bowl in scenario I and the air in
 scenario II. By construction of the example those are nice values:
 $A_\text{circ} = \pi r^2$ and $A_\text{hemi}= 2 \pi r^2$. With that in hand:
 
-$$\begin{aligned} \dot{Q}\_{I} &= q_b\\, 2 \pi r^2 + q_a \\,\pi r^2 \\\\
-\dot{Q}\_{II} &= q_{b}\\, \pi r^2 + q_a \\, 2 \pi r^2 \end{aligned}$$
+$$\begin{aligned} \dot{Q}_{I} &= q_b\, 2 \pi r^2 + q_a \,\pi r^2 \\
+\dot{Q}_{II} &= q_{b}\, \pi r^2 + q_a \, 2 \pi r^2 \end{aligned}$$
 
 where $q_b$ is the heat flux at the utensil interface and $q_a$ the heat flux at
 the air interface. Since I'm mainly interested in which is faster, I can write
 this as a fraction:
 
-$$\frac{\dot{Q}\_{I}}{\dot{Q}\_{II}} = \frac{2 q_b + q_a}{q_b + 2 q_a} $$
+$$\frac{\dot{Q}_{I}}{\dot{Q}_{II}} = \frac{2 q_b + q_a}{q_b + 2 q_a} $$
 
 Virtually every one I have talked to about this assumes that the plate cools
 faster, which for our purposes means the above fraction is less than 1, which is
@@ -119,7 +119,7 @@ $$\frac{dT}{dt} = - {\frac{h A}{m c}} \left(T(t) - T_\text{env}\right)$$
 
 which has the solution
 
-$$T(t) = T_\text{env} + \left(T_0 - T_\text{env}\right)\\,\mathrm{exp}(-K t)$$
+$$T(t) = T_\text{env} + \left(T_0 - T_\text{env}\right)\,\mathrm{exp}(-K t)$$
 
 where $K=hA/mc$. We're only interested in the comparison of  $K_I$ and $K_{II}$,
 so it mostly focuses on finding $h$. The heat transfer coefficient of air for
@@ -154,8 +154,8 @@ $$L = V/A = \left(\frac 23 \pi r^3 \right) \left( 3 \pi r^2 \right)^{-1} = \frac
 The value $h$ should be averaged over the surfaces and I don't feel like doing
 that. Let's see how far we got with this:
 
-$$\begin{aligned} \mathrm{Bi} &< 0.1 \\\\ \frac{100}{261} h\\,r &< \frac {1}{10}
-\\\\ \Rightarrow h &< 261 / (1000 r) \end{aligned}$$
+$$\begin{aligned} \mathrm{Bi} &< 0.1 \\ \frac{100}{261} h\,r &< \frac {1}{10}
+\\ \Rightarrow h &< 261 / (1000 r) \end{aligned}$$
 
 An Ikea bowl is about 5-6 in in length, so let's use $r=0.07 \mathrm{m}$. With
 that we get the Biot number we want when $h<3.7$. Since [even for

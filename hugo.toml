@@ -16,7 +16,7 @@ buildExpired = false
 removePathAccents = true
 
 # Ignore notebook/Rmd source files that live alongside posts.
-ignoreFiles = ["\\.ipynb$", "\\.sasnb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+ignoreFiles = ["\\.ipynb$", "\\.sasnb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "\\.qmd$", "_files$", "_cache$"]
 
 [pagination]
   pagerSize = 10
@@ -45,6 +45,12 @@ ignoreFiles = ["\\.ipynb$", "\\.sasnb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.R
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
+  # Hand math to KaTeX untouched, so LaTeX like `\\` and `\{` needs no Markdown escaping.
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [['\[', '\]'], ['$$', '$$']]
+      inline = [['\(', '\)'], ['$', '$']]
   [markup.highlight]
     noClasses = false
     codeFences = true

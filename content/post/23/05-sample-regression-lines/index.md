@@ -41,10 +41,12 @@ Since the majority of the steps are identical irrespective of what data set we u
 
 This macro will assume we have fitted a simple linear model of the form 
 
+$$
 \begin{aligned}
-y_i &\sim \mathrm{Normal}(\mu_i, \sigma) \\\\
+y_i &\sim \mathrm{Normal}(\mu_i, \sigma) \\
 \mu_i &= \beta_0 + \beta_1 x_i
 \end{aligned}
+$$
 
 ### Step 1: Get an SRS Sample
 The first step is the simplest - selecting a subset of the posterior samples. This is easily achieved by calling [PROC SURVEYSELECT](https://support.sas.com/rnd/app/stat/procedures/surveyselect.html).

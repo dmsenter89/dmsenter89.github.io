@@ -68,17 +68,17 @@ Bayes factors, $\text{BF}_{10}$ which compares the alternative
 hypothesis to the null, or $\text{BF}_{01}$ which compares the null to
 the the alternative. For illustrative purposes, consider the case of
 
-$$\mathrm{BF}\_{10} = \frac{1}{\mathrm{BF}_{01}} = 10$$
+$$\mathrm{BF}_{10} = \frac{1}{\mathrm{BF}_{01}} = 10$$
 
 We can interpret this to say that the data favor the alternative
 hypothesis 10 to 1 compared to the null. In other words, bigger values
-of $ \text{ BF }\_{10} $ correspond to greater evidence in favor of $H_{1}$
+of $ \text{ BF }_{10} $ correspond to greater evidence in favor of $H_{1}$
 over $H_{0}$, whereas smaller values of $\text{BF}_{01}$ favor $H_{1}$
 over $H_{0}$.
 
 In general, constructing a Bayes factor requires modeling. What we *can*
 do without modeling, however, is provide reasonable bounds for the Bayes
-factor - a minimum bound for $\text{BF}\_{01}$ or -- equivalently -- a
+factor - a minimum bound for $\text{BF}_{01}$ or -- equivalently -- a
 maximum bound for $\text{BF}_{10}$. Benjamin and Berger (2019) recommend
 a particularly simple upper bound for the Bayes factor that can be shown
 to hold in a wide variety of situations:

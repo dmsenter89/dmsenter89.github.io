@@ -38,7 +38,7 @@ Van Buuren demonstrates various techniques using data set 88 from Hand et al (19
 
 For purposes of this post, we assume one or more predictors $x$ are completely observed, while some variable of interest $y$ is only partially observed. Methods for dealing with this type of problem are available using the [monotone](http://documentation.sas.com/doc/en/statug/15.2/statug_mi_syntax09.htm) keyword in PROC MI. A data set has a monotone missing pattern if it consists of variables $Y_1$, $Y_2$, $\ldots$, $Y_p$ such that if $Y_j$ is missing for one individual, all subsequent variables $Y_k$ for $j < k \leq p$ are also missing. Schematically, the data set will look like this:   
 
-$$R = \begin{bmatrix} 1 & 1 & 1 \\\ 1 & 1 & 0 \\\ 1 & 0 & 0 \end{bmatrix}$$
+$$R = \begin{bmatrix} 1 & 1 & 1 \\ 1 & 1 & 0 \\ 1 & 0 & 0 \end{bmatrix}$$
 
 where 1 indicates an observed value and 0 a missing value. The monotone statement in SAS can impute missing values by completing the columns in turn using univariate methods. See the [SAS documentation](http://documentation.sas.com/doc/en/statug/15.2/statug_mi_details06.htm) for specifics.
 
@@ -50,7 +50,7 @@ For completion, I will mention all of the main linear model methods van Buuren m
 ### Regression Imputation
 Van Buuren also refers to this as the "prediction" method. In essence, the complete cases are used to create a linear model. This linear model is then used to fill in the missing values:
 
-$$ \dot{y} = \hat\beta_0 + X_\text{mis}\\,\hat\beta_1$$
+$$ \dot{y} = \hat\beta_0 + X_\text{mis}\,\hat\beta_1$$
 
 where $\hat\beta_i$ are least squares estimates. 
 
@@ -61,14 +61,14 @@ The mice package implements this method as `norm.predict`. PROC MI does not impl
 
 ### Stochastic Regression Imputation
 This method proceeds as above, except that Gaussian noise is added to the imputed value:
-$$ \dot{y} = \hat\beta_0 + X_\text{mis}\\,\hat\beta_1 + \dot\epsilon$$
+$$ \dot{y} = \hat\beta_0 + X_\text{mis}\,\hat\beta_1 + \dot\epsilon$$
 where $\dot\epsilon \sim N(0, \hat\sigma^2)$. An advantage of this method over plain regression is that it can preserve correlation between variables. 
 
 The mice package implements this method as `norm.nob`. It is not available in PROC MI but can be implemented with IML.
 
 ### Bayesian/Bootstrap Multiple Imputation
 Van Buuren also refrers to this as "predict + noise + parameters uncertainty." This technique is based on a Bayesian linear regression using draws from the posterior as parameters:
-$$\dot y = \dot\beta_0 + X_\text{mis}\\, \dot\beta_1 + \dot\epsilon$$
+$$\dot y = \dot\beta_0 + X_\text{mis}\, \dot\beta_1 + \dot\epsilon$$
 where $\dot\epsilon\sim N(0,\dot\sigma^2)$ and $\dot\beta_i$, $\dot\sigma$ are random draws from the posterior distribution.  
 
 This the default method in PROC MI for continuous data. Both SAS and mice use an algorithm based on Rubin (1987, pp. 166-167). See the [SAS documentation](http://documentation.sas.com/doc/en/statug/15.2/statug_mi_details07.htm) and [Algorithm 3.1](https://stefvanbuuren.name/fimd/sec-linearnormal.html#def:norm) in van Buuren for details. The mice package implements this method as `norm`. Here is an example of how the Bayesian regression can be used in PROC MI:

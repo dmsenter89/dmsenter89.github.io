@@ -43,8 +43,8 @@ As stated, it would appear that it is reasonable for Pascal to pay the mugger an
 If we ignore the question of the exact magnitude of the lottery win, we can divide the event space into three possibilities -- we are either worse off (cost of buying ticket), win back the ticket cost only, or win more money than the ticket cost so that we have a net gain from playing. Working off of the published odds again as a shortcut, we wind up with the following probabilities:
 
 $$
-\begin{cases} Pr(\text{loss}) = 24/25 \\\\
-Pr(\text{even}) = 1/38 \\\\
+\begin{cases} Pr(\text{loss}) = 24/25 \\
+Pr(\text{even}) = 1/38 \\
 Pr(\text{gain}) = 13/950
 \end{cases}
 $$

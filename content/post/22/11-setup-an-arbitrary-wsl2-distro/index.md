@@ -31,7 +31,7 @@ projects: []
 
 [Windows Subsystem for Linux](https://learn.microsoft.com/en-us/windows/wsl/) (WSL) is an important part of my daily work flow. Unfortunately, the main distro supplied by Windows
 is Ubuntu, which - for a variety of reasons - is not exactly my favorite distro. Luckily, WSL2 allows you to import an arbitrary Linux distro
-to use instead. I got the idea from [an article \(Dev.to\)](https://dev.to/bowmanjd/install-fedora-on-windows-subsystem-for-linux-wsl-4b26)
+to use instead. I got the idea from [an article (Dev.to)](https://dev.to/bowmanjd/install-fedora-on-windows-subsystem-for-linux-wsl-4b26)
 by Jonathan Bowman explaining how to get Fedora up and running in WSL2. This article summarizes the
 key points of Bowman's post and includes information for my long time daily driver, [Arch Linux](https://archlinux.org/).
 

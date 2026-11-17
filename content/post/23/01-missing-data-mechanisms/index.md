@@ -40,7 +40,7 @@ Understanding whether a variable's missingness from a dataset is related to the 
 
 My presentation here follows van Buuren[^2]. Let $Y$ be a $n \times p$ matrix representing a sample of $p$ variables for $n$ units of the sample and $R$ be a corresponding $n \times p$ indicator matrix, so that
 
-$$r_{i,j} = \begin{cases} 1 & y_{i,j} \text{ is observed} \\\ 0 & y_{i,j} \text{ not observed.}\end{cases} $$
+$$r_{i,j} = \begin{cases} 1 & y_{i,j} \text{ is observed} \\ 0 & y_{i,j} \text{ not observed.}\end{cases} $$
 
 We denote the observed data by $Y_\text{obs}$ and the missing data that $Y_\text{miss}$ so that $Y=(Y_\text{obs},Y_\text{miss})$. 
 
