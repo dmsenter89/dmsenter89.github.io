@@ -1,0 +1,377 @@
+---
+title: "Ten Points to McDonald's: Gamifying a Band Class's Medication Adherence"
+date: 2026-11-17
+draft: false
+author: "Michael Senter"
+description: "A band director's medication game, a negative binomial, a product of 14 probabilities, and a Jeffreys prior: how long until the class earns its McDonald's?"
+tags: ["bayesian", "probability", "statistics", "r", "simulation", "clinical-trials", "parenting", "teachers", "negative-binomial", "priors", "adhd", "ggplot2"]
+math: true
+format:
+  hugo-md:
+    fig-format: png
+    fig-dpi: 200
+    fig-width: 7
+    fig-height: 4.2
+execute:
+  echo: false
+  warning: false
+  message: false
+knitr:
+  opts_chunk:
+    fig.path: ""   # figures go in the bundle root; Hugo ignores *_files/ dirs
+---
+
+```{r}
+#| label: setup
+library(ggplot2)
+
+# ---- Data: update these as the class earns points --------------------------
+k      <- 7    # points earned so far
+n      <- 28   # class meetings so far
+N      <- 14   # students playing
+target <- 10   # points needed for the meal
+year   <- 90   # class meetings in an A/B school year (180 days / 2)
+
+accent <- "#2a6fdb"
+grey   <- "grey45"
+theme_set(theme_minimal(base_size = 12) +
+            theme(panel.grid.minor = element_blank(),
+                  plot.title.position = "plot",
+                  plot.title = element_text(face = "plain", size = 13),
+                  plot.subtitle = element_text(colour = "grey35"),
+                  legend.position = "top", legend.justification = "left"))
+
+pct <- function(x, d = 0) paste0(sprintf(paste0("%.", d, "f"), 100 * x), "%")
+
+# ---- Jeffreys posterior on theta, and derived per-student adherence --------
+a_post <- 0.5 + k
+b_post <- 0.5 + n - k
+pbar_q <- qbeta(c(0.025, 0.5, 0.975), a_post, b_post)^(1 / N)
+theta_hat <- k / n
+pbar_hat  <- theta_hat^(1 / N)
+
+# ---- Posterior predictive: class periods until `target` points -------------
+r_left <- target - k
+# P(at least r_left all-yes days within m meetings), beta-binomial
+pbb <- function(j, m, a, b) exp(lchoose(m, j) + lbeta(j + a, m - j + b) - lbeta(a, b))
+p_done_by <- function(m) {
+  if (m < r_left) return(0)
+  1 - sum(pbb(0:(r_left - 1), m, a_post, b_post))
+}
+mean_left <- r_left * (a_post + b_post - 1) / (a_post - 1)
+cdf_m     <- sapply(1:500, p_done_by)
+median_left <- which(cdf_m >= 0.5)[1]
+```
+
+My oldest son is taking high school band this year. His class is about half neurodivergent ("neurospicy," as the kids say) and medicated. To encourage medication adherence, the band director introduced a game: if every student confirms they took their medication that morning, the class earns a point. At ten points, the director buys McDonald's for everyone the next class, and they eat and "chill" instead of having regular class.
+
+## Making it better: spin the wheel
+
+My first thought was that this is a clever positive-reinforcement setup. Of the four operant-conditioning quadrants (positive and negative reinforcement, positive and negative punishment), positive reinforcement is the one generally favored, both for results and for goodwill between trainer and trainee.
+
+But you can generally make training even more effective with *variable* reinforcement. Remember Skinner's variable-ratio schedules? Rewards that arrive after an unpredictable number of responses produce high, steady response rates that are slow to extinguish. It's the same mechanic behind the pull of slot machines.
+
+Here's my improvement idea: have an LLM build a little web app you can project in class. Whenever the class would have earned a point under the current system, you instead "spin the wheel" with a 1-in-10 chance of winning the meal for the next class period. On average the director buys one meal per ten points either way, but the kids get immediate reinforcement, and excitement, every single class period -- or at least when everyone did take their meds. Fun!
+
+For the director, there is a small price to pay: variance. Under the fixed schedule, a meal comes after exactly 10 points. Under the wheel, the number of points until a meal is geometric with mean 10 but standard deviation of about 9.5. The class could win twice in one week, or go 20 points without a meal (probability $0.9^{20} \approx 12\%$). There's a catch in the director's favor, though: the game resets every school year. Under the current rules, a class that earns nine points in a year gets nothing. Under the wheel, it expects almost a meal. So with a yearly reset, the wheel pays out more often, not the same as the current rules.
+
+## One student: a negative binomial
+
+Let's break this down into a simpler experiment first. Pretend it's just you, playing a game to motivate yourself to take your medication.
+
+Medication adherence is rarely 100%. Clinical trials commonly count a patient as adherent if they take at least 80% of their doses, so let's start there: you take your medication exactly 80% of days. Each day is then a Bernoulli trial with success probability $p = 0.8$. Counting days until you collect 10 successes gives a negative binomial distribution.
+
+One wrinkle: there are two common ways to write a negative binomial. We'll count the missed days $F$ before the $r$-th success, which is how R's `dnbinom`, SciPy's `nbinom`, SAS's `negbin` and the model below all define it. The total number of days is then $T = r + F$.
+
+With $r = 10$ and $p = 0.8$, you expect $E[F] = r(1 - p)/p = `r 10 * 0.2 / 0.8`$ missed days, so the reward takes $E[T] = r/p = `r 10 / 0.8`$ days on average, about two and a half school weeks.
+
+## The class: a nested problem
+
+That was pretty straightforward. Now back to the class. Instead of one student, `r N` are playing. Each has some chance of missing a dose, and the class earns a point only on days when all `r N` say yes. Each class day is still a Bernoulli trial, but its success probability $\theta$ is the *product* of `r N` individual adherences. Treat those adherences as draws from a population distribution and you have a simple hierarchical model.
+
+$$
+\begin{aligned}
+p_i &\sim \operatorname{Beta}(\alpha, \beta), && i = 1, \dots, 14 && \text{each student's adherence} \\
+\theta &= \prod_{i=1}^{14} p_i && && \text{chance all 14 say yes} \\
+y \mid \theta &\sim \operatorname{NegBin}(r = 10,\ \theta) && && \text{meetings without a point before the 10th}
+\end{aligned}
+$$
+
+Here $y = D - 10$, where $D$ is the meeting on which the tenth point lands. The middle line is where the story lives: on each meeting, student $i$ takes their meds with probability $p_i$, and the class earns a point only if all 14 do. If students and days are independent given the $p_i$, each meeting is a Bernoulli($\theta$) trial, and the failures before the tenth success are negative binomial.
+
+```{r}
+#| label: one-at-80
+theta80 <- 0.8^N
+ed80    <- target / theta80
+sd80    <- sqrt(target * (1 - theta80)) / theta80
+```
+
+Two things fall out. First, the data identify only $\theta$ - one number (points earned in so many meetings) can't separate 14 individual adherences, or $\alpha$ from $\beta$, without a prior. Second, the product is brutal. If every student hits the clinical-trial bar of 80%, $\theta = 0.8^{14} \approx `r round(theta80, 3)`$, and the class should expect about `r round(ed80)` class meetings to reach ten points (SD $\approx$ `r round(sd80)`). With band meeting every other day, that's about two and a half school years. And the game resets each year. Cheap game for the band director if students can't beat that rate!
+
+```{r}
+#| label: fig-meetings
+#| fig-cap: "Expected meetings = 10 / p^14 if every student has adherence p."
+d1 <- data.frame(p = seq(0.80, 0.99, by = 0.001))
+d1$meetings <- target / d1$p^N
+ggplot(d1, aes(p, meetings)) +
+  geom_hline(yintercept = year, linetype = "dashed", colour = grey) +
+  annotate("text", x = 0.99, y = year, label = paste0("~", year, " meetings in an A/B school year"),
+           hjust = 1, vjust = -0.6, colour = grey, size = 3.5) +
+  geom_line(colour = accent, linewidth = 1.1) +
+  annotate("point", x = 0.8, y = ed80, colour = accent, size = 2.5) +
+  annotate("text", x = 0.8, y = ed80, label = paste(round(ed80), "meetings at 80%"),
+           hjust = -0.1, vjust = 0.3, size = 3.5) +
+  scale_x_continuous(labels = scales::percent) +
+  labs(title = paste0("At 80% adherence each, ", N, " students need ~", round(ed80), " class meetings for 10 points"),
+       subtitle = "Expected class meetings until the 10th all-yes day, if every student has the same adherence",
+       x = "Each student's daily adherence", y = NULL)
+```
+
+Class size makes it worse. Turning the formula around, a class of $N$ students expects ten points within $T$ meetings only if each student's adherence is at least $(10 / T)^{1/N}$. A class of 14 needs about `r pct((target / year)^(1 / 14))` to win within a school year, and a class of 30 needs about `r pct((target / year)^(1 / 30))`.
+
+```{r}
+#| label: fig-iso
+#| fig-cap: "Required adherence p = (10 / T)^(1/N) for an expected wait of T meetings; assumes independent students."
+lv <- data.frame(T = c(20, 45, 90, 360),
+                 label = c("2 months (20)", "a semester (45)", "a school year (90)", "all of high school (360)"))
+d2 <- merge(lv, data.frame(size = 1:30))
+d2$need <- (target / d2$T)^(1 / d2$size)
+d2 <- subset(d2, need >= 0.6)
+d2$label <- factor(d2$label, levels = lv$label)
+ends <- subset(d2, size == 30)
+ggplot(d2, aes(size, need, group = label, alpha = label)) +
+  geom_line(colour = accent, linewidth = 1.1) +
+  geom_text(data = ends, aes(label = label), hjust = -0.05, size = 3.4, colour = "black", alpha = 1) +
+  scale_alpha_manual(values = c(1, 0.75, 0.5, 0.3), guide = "none") +
+  scale_y_continuous(labels = scales::percent, limits = c(0.6, 1)) +
+  scale_x_continuous(breaks = c(1, 5, 10, 14, 20, 25, 30), expand = expansion(mult = c(0.02, 0.4))) +
+  labs(title = "The bigger the class, the closer to perfect every student has to be",
+       subtitle = "Each curve: the adherence every student needs for ten points within that many meetings, on average",
+       x = "Students in the class", y = NULL)
+```
+
+Two things pull $\theta$ away from "average adherence to the 14th power," and they pull in opposite directions. First, take one real classroom with fixed $p_i$. By the AM–GM inequality, $\theta = p_1 \times \cdots \times p_{14} \le \bar p^{14}$, where $\bar p$ is the class's ordinary average. At the same average, a spread-out class earns fewer points than a uniform one, because the least adherent student sets the pace for everyone. Second, and more important, the product itself rests on independence. If students' misses are positively correlated (a shared Monday, the morning after a break), all-yes days come more often than the product predicts. In the extreme, where everyone misses on the same days, $\theta = \min p_i$. So the independence assumption carries most of the weight: correlation pushes $\theta$ above $\prod p_i$, which makes $\theta^{1/14}$ an upper bound on the class's geometric-mean adherence rather than an estimate of it.
+
+## A model the data can fit
+
+Well, that was fun but a little demotivating. They might never earn their treat! But we can run the model in reverse and see how this particular class is doing, which is more interesting. From how many meetings it has taken my son's class to earn its points, we can estimate the class's adherence, then predict when they'll finish. It's an estimate of a class-level summary, not of any particular student, and that's important to keep in mind.
+
+**Counting opportunities.** Utah requires schools to provide educational services on at least 180 days each school year ([Utah Admin. Code R277-419-4](https://www.law.cornell.edu/regulations/utah/Utah-Admin-Code-R277-419-4)). Band runs on an A/B rotation, meeting every other school day, so a school year holds about `r year` chances to earn a point before the game resets. So far the class has used `r n` of them and earned `r k` points.
+
+Since only $\theta$ is identified, the model we can actually fit drops the student level. We put the prior on $\theta$ itself, using the Jeffreys prior, Beta(½, ½). Per-student adherence comes along as a derived quantity: $\bar p = \theta^{1/14}$ is the class's geometric-mean adherence, the one per-student number the data can speak to.
+
+$$
+\begin{aligned}
+\theta &\sim \operatorname{Beta}(\tfrac12, \tfrac12) && \text{Jeffreys prior} \\
+k \mid \theta &\sim \operatorname{Binomial}(n,\ \theta) && k = `r k` \text{ points in } n = `r n` \text{ meetings} \\
+\bar p &= \theta^{1/14} && \text{geometric-mean adherence (derived)}
+\end{aligned}
+$$
+
+The Beta prior is conjugate, so the posterior is Beta(`r a_post`, `r b_post`) in closed form, and $\bar p$ is just a transformation of its quantiles. For comparison, the maximum likelihood estimate is $\hat\theta = `r k`/`r n` = `r round(theta_hat, 3)`$, so $\hat p = `r round(theta_hat, 3)`^{1/14} = `r round(pbar_hat, 3)`$. Note that it doesn't matter that I'm checking in mid-game. Whether you count a fixed number of meetings (binomial) or stop at the tenth point (negative binomial), the likelihood kernel is the same, $\theta^k (1 - \theta)^{n - k}$, and for a Bayesian that's all the data have to say.
+
+```{r}
+#| label: priors
+# Four priors, all expressed as densities on the per-student scale pbar = theta^(1/N)
+g  <- seq(1e-4, 1 - 1e-6, length.out = 20001)
+dg <- diff(g[1:2])
+prior_dens <- list(
+  flat_theta = N * g^(N - 1),                                   # theta ~ U(0,1)
+  flat_p     = rep(1, length(g)),                               # pbar ~ U(0,1)
+  wi         = dbeta(g, 8, 2),                                  # pbar ~ Beta(8,2)
+  jeffreys   = dbeta(g^N, 0.5, 0.5) * N * g^(N - 1)             # theta ~ Beta(1/2,1/2)
+)
+prior_labels <- c(flat_theta = "Flat on θ", flat_p = "Flat on adherence",
+                  wi = "Beta(8, 2) on adherence", jeffreys = "Jeffreys, Beta(½, ½) on θ")
+
+# Prior predictive: P(10 points within a school year of `year` meetings)
+pp_year <- sapply(prior_dens, function(f) {
+  w <- f / sum(f)
+  sum(w * pnbinom(year - target, target, g^N))
+})
+p_below <- function(f, x) { w <- f / sum(f); sum(w[g < x]) }
+jeff_below80 <- p_below(prior_dens$jeffreys, 0.8)
+flat_p_half  <- 0.5^N   # median theta under a flat prior on pbar
+```
+
+The choice of prior deserves more than a sentence. It's tempting to reach for a "flat" prior so the analysis looks "objective," but what is "flat" depends on which scale you're on. Through $\theta = \bar p^{14}$, a flat prior on one scale makes a strong claim on the other. A flat prior on $\bar p$ becomes $\theta \sim \operatorname{Beta}(1/14, 1)$, which puts half its weight below $\theta = `r sprintf('%.5f', flat_p_half)`$. The Jeffreys prior sidesteps this: it's built from the Fisher information, so it means the same thing on every scale. Jeffreys on $\theta$, transformed, is exactly Jeffreys on $\bar p$. That doesn't make it uninformative, though. On the adherence scale it leans optimistic, with only a `r pct(jeff_below80)` chance that $\bar p$ is below 80%. So the useful test of any prior is still whether it predicts sensible data. That's where prior predictive simulations come in handy.
+
+Here are three alternatives to compare against Jeffreys (which, somewhat unrealistically, puts the chance of ten points in a year at `r pct(pp_year["jeffreys"])`), each judged by what it predicts *before* we see any data:
+
+- **Flat on θ.** A Uniform(0, 1) prior on the chance that all 14 kids say yes on a given day. It sounds neutral, but on the per-student scale it's wildly optimistic: `r pct(1 - 0.8^N)` of its weight sits above 80% adherence. It's `r pct(pp_year["flat_theta"])` sure the class earns ten points within a school year of about `r year` meetings.
+- **Flat on adherence.** Now 10% adherence is as believable as 90%. This also sounds neutral, and it's still conjugate: $\theta \sim \operatorname{Beta}(1/14, 1)$. But half its weight sits below 50% adherence, where an all-yes day comes about once every `r format(round(1 / 0.5^N, -3), big.mark = ",")` school days. It gives the class only a `r pct(pp_year["flat_p"])` chance of ten points in a year. It believes the game is mostly unwinnable.
+- **Weakly informative.** A Beta(8, 2) on adherence, centered on the 80% clinical-trial benchmark, with 95% of its weight between `r pct(qbeta(0.025, 8, 2))` and `r pct(qbeta(0.975, 8, 2))`. It rules out the silly worlds without pretending to know the answer, and it gives the class a `r pct(pp_year["wi"])` chance of ten points in a year. It isn't conjugate in θ, but a grid over one parameter takes a few lines of code. This is closer to what I'd use in a "real" problem.
+
+```{r}
+#| label: fig-priors
+#| fig-cap: "Prior densities on the adherence scale; the legend gives each prior's predictive chance of 10 points within a school year."
+d3 <- do.call(rbind, lapply(names(prior_dens), function(s)
+  data.frame(p = g, d = prior_dens[[s]], s = s)))
+d3 <- d3[seq(1, nrow(d3), by = 50), ]
+d3$lab <- factor(paste0(prior_labels[d3$s], ": ", pct(pp_year[d3$s]), " chance of 10 points in a year"),
+                 levels = paste0(prior_labels, ": ", pct(pp_year[names(prior_labels)]), " chance of 10 points in a year"))
+ggplot(d3, aes(p, d, colour = lab, linetype = lab)) +
+  geom_line(linewidth = 1) +
+  scale_colour_manual(values = c(grey, grey, grey, accent)) +
+  scale_linetype_manual(values = c("solid", "dashed", "dotted", "solid")) +
+  coord_cartesian(ylim = c(0, 14)) +
+  scale_x_continuous(labels = scales::percent) +
+  guides(colour = guide_legend(ncol = 1), linetype = guide_legend(ncol = 1)) +
+  labs(title = "“Flat” depends on the scale; Jeffreys means the same thing on every scale",
+       subtitle = "Prior density on per-student adherence",
+       x = "Per-student adherence (geometric mean, θ^(1/14))", y = NULL, colour = NULL, linetype = NULL)
+```
+
+This is the point Gelman and McElreath keep making: a prior is a claim about what data you expect to see. The way to check it is to simulate data from it, a *prior predictive check*. "Uninformative" priors often make confident, silly predictions on a scale you weren't looking at.
+
+```{r}
+#| label: posteriors
+lik <- exp(k * N * log(g) + (n - k) * log1p(-g^N))
+post_dens <- lapply(prior_dens, function(f) { p <- f * lik; p / (sum(p) * dg) })
+post_q <- sapply(post_dens, function(f) {
+  cf <- cumsum(f) * dg
+  g[sapply(c(0.025, 0.5, 0.975), function(q) which(cf >= q)[1])]
+})
+max_gap <- max(abs(post_q[2, ] - post_q[2, "jeffreys"]))
+```
+
+The good news: `r n` meetings of data swamps all four, so we don't have to worry too much about it for purposes of this blog post, and the prior matters more for honesty than for the answer.
+
+```{r}
+#| label: fig-posteriors
+#| fig-cap: "Grid posteriors on per-student adherence under each prior."
+d4 <- do.call(rbind, lapply(names(post_dens), function(s)
+  data.frame(p = g, d = post_dens[[s]], s = s)))
+d4 <- subset(d4, p >= 0.8 & p <= 0.96)
+d4$lab <- factor(prior_labels[d4$s], levels = prior_labels)
+ggplot(d4, aes(p, d, colour = lab, linetype = lab)) +
+  geom_line(linewidth = 1) +
+  scale_colour_manual(values = c(grey, grey, grey, accent)) +
+  scale_linetype_manual(values = c("solid", "dashed", "dotted", "solid")) +
+  scale_x_continuous(labels = scales::percent) +
+  guides(colour = guide_legend(ncol = 2), linetype = guide_legend(ncol = 2)) +
+  labs(title = paste0("After ", n, " meetings, all four priors land near ", pct(post_q[2, "jeffreys"]), " adherence"),
+       subtitle = paste0("Posterior density, ", k, " points in ", n, " meetings; Jeffreys (blue) is used in the text"),
+       x = "Per-student adherence (geometric mean, θ^(1/14))", y = NULL, colour = NULL, linetype = NULL)
+```
+
+The Jeffreys prior gives a posterior median of `r pct(pbar_q[2], 1)` and a 95% interval of `r pct(pbar_q[1], 1)`–`r pct(pbar_q[3], 1)`. The other three land within about `r round(100 * max_gap, 1)` percentage points of it.
+
+The posterior also answers "how sure are we that the class beats X?" directly:
+
+```{r}
+#| label: fig-exceed
+#| fig-cap: "Posterior probability that per-student adherence exceeds x (Jeffreys prior on θ)."
+d5 <- data.frame(x = seq(0.82, 0.97, by = 0.0025))
+d5$p <- 1 - pbeta(d5$x^N, a_post, b_post)
+marks <- data.frame(x = c(0.85, 0.90, 0.95))
+marks$p <- 1 - pbeta(marks$x^N, a_post, b_post)
+ggplot(d5, aes(x, p)) +
+  geom_line(colour = accent, linewidth = 1.1) +
+  geom_point(data = marks, colour = accent, size = 2.5) +
+  geom_text(data = marks, aes(label = paste0("P(> ", pct(x), ") = ", pct(p))),
+            hjust = -0.1, vjust = -0.6, size = 3.5) +
+  scale_x_continuous(labels = scales::percent, expand = expansion(mult = c(0.02, 0.12))) +
+  scale_y_continuous(labels = scales::percent) +
+  labs(title = paste0("Almost surely above 85% adherence, ",
+                      ifelse(marks$p[2] > 0.5, "probably above", "probably not above"), " 90%, not above 95%"),
+       subtitle = paste0("Posterior P(adherence > x), Jeffreys prior, ", k, " points in ", n, " meetings"),
+       x = "Adherence threshold x", y = NULL)
+```
+
+## How much longer?
+
+`r tools::toTitleCase(c("one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten")[r_left])` points to go. Given $\theta$, the number of further meetings until the tenth point is negative binomial with $r = `r r_left`$. Averaging over the Beta(`r a_post`, `r b_post`) posterior gives a beta-negative-binomial, again in closed form: about `r round(mean_left)` more class periods on average, with a median of `r median_left`. That's about a `r pct(p_done_by(5))` chance within the next 5 class periods (roughly two weeks) and `r pct(p_done_by(10))` within the next 10.
+
+```{r}
+#| label: fig-finish
+#| fig-cap: "Beta-negative-binomial posterior predictive (Jeffreys prior on θ), counted in class periods from now."
+d6 <- data.frame(m = 1:15)
+d6$p <- sapply(d6$m, p_done_by)
+lab6 <- subset(d6, m %in% c(5, 10))
+lab6$txt <- c("next 2 weeks", "next 10 periods")
+ggplot(d6, aes(m, p)) +
+  geom_hline(yintercept = 0.5, linetype = "dashed", colour = grey) +
+  geom_line(colour = accent, linewidth = 1.1) +
+  geom_point(colour = accent, size = 2.5) +
+  geom_text(data = lab6, aes(label = paste0(txt, ": ", pct(p))), hjust = -0.15, vjust = 1.6, size = 3.5) +
+  scale_x_continuous(breaks = 1:15) +
+  scale_y_continuous(labels = scales::percent, limits = c(0, 1)) +
+  labs(title = paste0("About ", pct(p_done_by(5)), " within two weeks; ", pct(p_done_by(10)), " within 10 class periods"),
+       subtitle = paste0("Posterior predictive probability of reaching ", target, " points (from ", k, " of ",
+                         target, " after ", n, " meetings)"),
+       x = "Class periods from now (A/B rotation: 5 periods is about two weeks)", y = NULL)
+```
+
+My son was hoping they'd finish this week, but `r r_left` more points need at least `r r_left` more class periods. The forecast also assumes $\theta$ holds steady; a meeting right after a long break may be a rough one.
+
+## Caveats
+
+The `r pct(pbar_q[2])` estimate holds only as well as the model's assumptions, and several of them are shaky:
+
+- **Self-report.** Every answer is a kid saying "yes," and the whole class wants McDonald's. Any fibbing biases $\hat\theta$ upward.
+- **Independence.** Students' misses aren't independent. The meds are taken at home, but students share a school calendar. Early starts, Mondays, the morning after a break, and testing days disrupt everyone's routine on the same day. Positive correlation makes all-yes days more common than a product of marginals predicts.
+- **Constant adherence.** Fridays, Mondays, and the days after a break probably differ from midweek.
+- **Group contingency.** One student's miss costs everyone a point, and confirming medication in front of peers isn't private. Both are worth weighing alongside the cleverness. This also goes back to the self-report issue. Especially if the class is at 9 points, I know I wouldn't want to be the kid single handedly causing another point miss.
+
+## How does this compare with real-world data?
+
+Next to real-world data on teenagers, the class's roughly `r pct(pbar_q[2])` looks quite high, though the published numbers measure something different.
+
+| Study | Population | Adherence measure | Result |
+|---|---|---|---|
+| [Ferrin et al. 2024](https://iris.unica.it/bitstream/11584/430266/1/Ferrin%202024%20accepted.pdf), systematic review, *European Child & Adolescent Psychiatry* | Under 18 with ADHD; 66 studies | Medication possession ratio ≥ 80% at 12 months | 22.9% of patients (pooled from 3 studies) |
+| [Kaiser Permanente cohort](https://divisionofresearch.kaiserpermanente.org/teens-who-stop-taking-adhd-medication/), *Journal of Adolescent Health*, 2021 | 4,466 17-year-olds with ADHD | Fills covering ≥ 70% of prescribed days | 25.6% at 18 and 19% at 19, down from 36.7% at 17 |
+| [Swedish national register, 2015–2020](https://synapsesocial.com/papers/W7125252264) | 128,366 patients on oral stimulants | Proportion of days covered ≥ 80% | 49.7–52.4% of 12–17-year-olds, vs. 69.3–71.8% of adults 25 and older |
+
+These are apples and oranges in three ways:
+
+- **Different quantity.** The studies report the share of patients who clear a threshold. We estimated a daily rate. A class where everyone takes their meds `r pct(pbar_q[2])` of days would have 100% of students above an 80% bar.
+- **Different measurement.** Pharmacy refills can't see pills that are filled but not swallowed. Self-report can't see a kid saying yes to protect the McDonald's run.
+- **Different population.** Registries include kids who quit their medication entirely. Every kid in this game is, by definition, still on it.
+
+So the gap could mean the game works, these kids are an already-adherent group, or some yeses are fibbed. The data can't tell those apart.
+
+### What if the game changed nothing?
+
+```{r}
+#| label: rwe-sim
+#| cache: true
+set.seed(2026)
+n_sim <- 200000
+conc  <- 10   # Beta concentration a + b (assumed spread)
+fit_mean <- function(thr, share, K = conc)
+  uniroot(function(m) pbeta(thr, m * K, (1 - m) * K, lower.tail = FALSE) - share, c(0.3, 0.97))$root
+bench <- data.frame(
+  name  = c("Swedish register: 51% of teens ≥ 80%", "Ferrin review: 23% ≥ 80%", "Kaiser cohort: 37% ≥ 70%"),
+  thr   = c(0.8, 0.8, 0.7),
+  share = c(0.51, 0.229, 0.367))
+sim_one <- function(thr, share, K = conc) {
+  m  <- fit_mean(thr, share, K)
+  th <- apply(matrix(rbeta(n_sim * N, m * K, (1 - m) * K), ncol = N), 1, prod)
+  # P(10 all-yes days within one school year of `year` meetings), then 4 independent years
+  p_year <- mean(pnbinom(year - target, target, th))
+  c(mean = m, p_year = p_year, p_4yr = 1 - (1 - p_year)^4)
+}
+res <- t(mapply(sim_one, bench$thr, bench$share))
+sens <- sapply(c(5, 20), function(K) sim_one(0.8, 0.51, K)["p_year"])
+fmt_small <- function(x) ifelse(x < 1e-4, "under 0.01%", ifelse(x < 0.001, "about 0%", pct(x, 1)))
+```
+
+Suppose these 14 kids adhered like the teenagers in the published studies. Would the director ever buy McDonald's? Almost never. The game resets every school year, so the class gets about `r year` meetings to reach ten points, and then starts over at zero. On real-world adherence, the class would have about a `r pct(res[1, "p_year"])` chance of a meal in a given year, and under `r pct(ceiling(10 * res[1, "p_4yr"]) / 10)` across all four years of high school.
+
+To get there, I turned each study's "share of teens above the bar" into a distribution of daily adherence: a Beta with a concentration of $a + b = `r conc`$, with its mean set so the right share of kids clears the study's threshold. I then simulated `r format(n_sim, big.mark = ",")` classes of 14 drawn from it, and counted meetings to ten all-yes days at about `r year` meetings a year.
+
+```{r}
+#| label: tbl-rwe
+knitr::kable(data.frame(
+  Benchmark = bench$name,
+  `Implied average adherence` = pct(res[, "mean"]),
+  `Chance of a meal in a given school year` = fmt_small(res[, "p_year"]),
+  `Chance of any meal in 4 years` = fmt_small(res[, "p_4yr"]),
+  check.names = FALSE))
+```
+
+The spread is my assumption, but it barely matters here. With a tighter Beta ($a + b = 20$) or a looser one ($a + b = 5$), the chance of a meal in a given year for a Swedish-like class stays between `r pct(min(sens), 1)` and `r pct(max(sens), 1)`. Without the reset, a Swedish-like class would eventually win after a median of 3 to 6 years. With it, those near-misses just evaporate each June.
+
+The product of 14 adherences is merciless. A class that averages `r pct(res[1, "mean"])`, a better-than-typical teenage result, all says yes on about `r pct(res[1, "mean"]^N)` of days. This class is earning points roughly `r round(theta_hat / res[1, "mean"]^N)` times as often. Either the game is working, these kids were already unusually adherent, or some of the yeses are hopeful. Whatever the reason, the director wrote a bet they should almost never lose, and they're about to lose it. Look at those kids go!
