@@ -1,5 +1,5 @@
 baseURL = "https://dmsenter89.github.io/"
-title = "Michael's Site"
+title = "Prior Engagements"
 locale = "en-us"
 defaultContentLanguage = "en"
 enableEmoji = true
@@ -63,8 +63,8 @@ ignoreFiles = ["\\.ipynb$", "\\.sasnb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.R
 
 [params]
   env = "production"
-  title = "Michael's Site"
-  description = "Personal site of D. Michael Senter — Research Statistician Developer. Notes on statistics, data analysis, missing data, and scientific computing with SAS, Python, and R."
+  title = "Prior Engagements"
+  description = "Prior Engagements: back-of-the-envelope questions, taken too far. D. Michael Senter, statistician developer at SAS, on statistics, missing data, and scientific computing with SAS, Python, and R."
   author = "D. Michael Senter"
   keywords = ["statistics", "data analysis", "missing data", "SAS", "Python", "R", "data science"]
   DateFormat = "Jan 2, 2006"
@@ -90,9 +90,9 @@ ignoreFiles = ["\\.ipynb$", "\\.sasnb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.R
     apple_touch_icon = "/img/icon.png"
 
   [params.homeInfoParams]
-    Title = "Hi, I'm Michael 👋"
+    Title = "Back-of-the-envelope questions, taken too far."
     Content = """
-Research Statistician Developer at SAS. I write about statistics, data analysis, missing-data methods, and scientific computing — usually with SAS, Python, and R.
+I'm Michael, a statistician developer at SAS. I write about statistics, missing data, and scientific computing, plus whatever everyday question got stuck in my head: lotteries, rent vs. buy, my dog's insulin, a band class's McDonald's fund.
 
 Browse the posts below, or read more [about me](/about/).
 """
