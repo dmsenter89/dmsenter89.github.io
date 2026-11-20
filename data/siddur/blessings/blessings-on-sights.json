@@ -1,0 +1,351 @@
+{
+  "title": "Blessings on Sights and News",
+  "sections": [
+    {
+      "id": "lightning-thunder",
+      "title": "Lightning and Thunder",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "lightning-law",
+          "hebrew": "הרואה ברק — דהיינו אור חזק היוצא מבין העננים בעונת החורף — מברך \"ברוך עושה מעשה בראשית\". והשומע רעם — דהיינו רעש חזק הנשמע מהעננים בעונת החורף — מברך \"ברוך שכחו וגבורתו מלא עולם\". ומן הדין צריך לברך בשם ומלכות, אך נהגו לברך שתי ברכות אלו בלי שם ומלכות, וכן המנהג בירושלים ת״ו (בא״ח עקב טז).",
+          "translation": "If you see lightning — a strong light flashing out from the clouds in the rainy season — say \"Blessed is He who makes the work of creation.\" If you hear thunder — a loud crash from the clouds in the rainy season — say \"Blessed is He whose strength and might fill the world.\" Strictly speaking, both should be said with God's Name and Kingship, but the custom is to say them without, and that is the custom in Jerusalem (Ben ʾIsh Ḥay, 'Eqev 16)."
+        },
+        {
+          "type": "rubric",
+          "id": "lightning-cue",
+          "hebrew": "על הברקים מברך בלי שם ומלכות:",
+          "translation": "Over lightning, say (without God's Name and Kingship — think the words in parentheses in your heart):"
+        },
+        {
+          "type": "text",
+          "id": "lightning",
+          "hebrew": "בָּרוּךְ (אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם) עֹשֶׂה מַעֲשֵׂה בְרֵאשִׁית.",
+          "translation": "Blessed (are You, Adhonay our God, King of the universe,) who makes the work of creation.",
+          "translit": "barukh (ʾatta Adhonay ʾĕlohenu melekh ha'olam) 'oseh ma'ăseh vĕreʾshith."
+        },
+        {
+          "type": "rubric",
+          "id": "thunder-cue",
+          "hebrew": "על הרעמים מברך בלי שם ומלכות:",
+          "translation": "Over thunder, say (without God's Name and Kingship):"
+        },
+        {
+          "type": "text",
+          "id": "thunder",
+          "hebrew": "בָּרוּךְ (אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם) שֶׁכֹּחוֹ וּגְבוּרָתוֹ מָלֵא עוֹלָם.",
+          "translation": "Blessed (are You, Adhonay our God, King of the universe,) whose strength and might fill the world.",
+          "translit": "barukh (ʾatta Adhonay ʾĕlohenu melekh ha'olam) shekkoḥo ughĕvuratho maleʾ 'olam."
+        },
+        {
+          "type": "rubric",
+          "id": "lightning-rambam",
+          "hebrew": "וכן על הרוחות שנושבות בזעף, ועל קול רעש הארץ, ועל כוכבים שנראים כנופלים ורצים ממקום למקום, או כוכבים שיש להם זנב — מברך אחת משתי ברכות אלו (רמב״ם ברכות י, יד).",
+          "translation": "The same bĕrakhoth go for raging winds, the rumble of an earthquake, shooting stars streaking across the sky, and comets — say either one of the two (Rambam, Bĕrakhoth 10:14)."
+        }
+      ]
+    },
+    {
+      "id": "rainbow",
+      "title": "The Rainbow",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "rainbow-law",
+          "hebrew": "הרואה קשת מברך \"זוכר הברית\" וכו׳, בשם ומלכות, ואסור להסתכל ולהתבונן בו אלא רק בראיה קצרה. ויש מי שאומר שאין לברך בשם ומלכות, אף שלהלכה אינו כן אלא מברכים בשם ומלכות, בכל זאת הרוצה להתחסד לברך בלי שם ומלכות ויהרהר שם ומלכות בלבו — רשאי (בא״ח שם יז).",
+          "translation": "When you see a rainbow, say \"who remembers the covenant\" with God's Name and Kingship. Don't gaze at it or study it — just a short look. One authority holds that it shouldn't be said with God's Name and Kingship. The hălakha isn't like that, and we do say them; still, if you want to be extra careful, you may say it without God's Name and Kingship and think them in your heart (Ben ʾIsh Ḥay, ibid. 17)."
+        },
+        {
+          "type": "text",
+          "id": "rainbow",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, זוֹכֵר הַבְּרִית, נֶאֱמָן בִּבְרִיתוֹ, וְקַיָּם בְּמַאֲמָרוֹ.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who remembers the covenant, is faithful to His covenant, and keeps His word.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, zokher habbĕrith, neʾĕman bivritho, wĕqayyam bĕmaʾămaro."
+        }
+      ]
+    },
+    {
+      "id": "mountains-seas",
+      "title": "Mountains, Seas and Deserts",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "mountains-law",
+          "hebrew": "על ההרים ועל הגבעות המשונים, ועל המדבריות, ועל הימים, ועל הנהרות — אם ראה אחד מהם אחר שלשים יום, מברך \"עושה מעשה בראשית\". והרואה את הים הגדול אחר שלשים יום, מברך \"שעשה את הים הגדול\" (רמב״ם ברכות י, טו; שו״ע או״ח רכח, א־ג).",
+          "translation": "Over striking mountains and hills — ones where the Creator's might shows — and over deserts, seas and rivers, if thirty days have passed since you last saw them, say \"who makes the work of creation.\" Over the Great Sea (the Mediterranean), after thirty days, say \"who made the great sea\" (Rambam, Bĕrakhoth 10:15; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 228:1–3)."
+        },
+        {
+          "type": "text",
+          "id": "mountains",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עֹשֶׂה מַעֲשֵׂה בְרֵאשִׁית.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who makes the work of creation.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, 'oseh ma'ăseh vĕreʾshith."
+        },
+        {
+          "type": "rubric",
+          "id": "great-sea-cue",
+          "hebrew": "על הים הגדול:",
+          "translation": "Over the Great Sea:"
+        },
+        {
+          "type": "text",
+          "id": "great-sea",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁעָשָׂה אֶת הַיָּם הַגָּדוֹל.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who made the great sea.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, she'asa ʾeth hayyam haggadhol."
+        }
+      ]
+    },
+    {
+      "id": "trees-creatures",
+      "title": "Trees and Creatures",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "ilanoth-law",
+          "hebrew": "היוצא בימי ניסן וראה אילנות פורחות, מברך פעם אחת בשנה. ויש אומרים שאין מברכים אלא על אילני מאכל (רמב״ם ברכות י, יג; שו״ע או״ח רכו, א; משנ״ב שם ס״ק ב):",
+          "translation": "When you go out in the month of Nisan and see trees in blossom, say this once a year. Some say it is said only over fruit trees (Rambam, Bĕrakhoth 10:13; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 226:1; Mishna Bĕrura there, note 2):"
+        },
+        {
+          "type": "text",
+          "id": "ilanoth",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁלֹּא חִסַּר בְּעוֹלָמוֹ כְּלוּם, וּבָרָא בוֹ בְּרִיּוֹת טוֹבוֹת וְאִילָנוֹת טוֹבוֹת לְהִתְנָאוֹת בָּהֶם בְּנֵי אָדָם.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has left His world lacking nothing, and created in it good creatures and good trees, for people to delight in.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shelloʾ ḥissar bĕ'olamo kĕlum, uvaraʾ vo bĕriyyoth ṭovoth wĕʾilanoth ṭovoth lĕhithnaʾoth bahem bĕne ʾadham."
+        },
+        {
+          "type": "rubric",
+          "id": "shekakha-law",
+          "hebrew": "הרואה אילנות טובות ובריות נאות ביותר, מברך בפעם הראשונה (רמב״ם ברכות י, יג; שו״ע או״ח רכה, י):",
+          "translation": "When you see exceptionally fine trees, or beautiful people or animals, say this the first time you see them (Rambam, Bĕrakhoth 10:13; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 225:10):"
+        },
+        {
+          "type": "text",
+          "id": "shekakha",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁכָּכָה לּוֹ בְּעוֹלָמוֹ.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has such as these in His world.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shekkakha lo bĕ'olamo."
+        },
+        {
+          "type": "rubric",
+          "id": "meshanne-law",
+          "hebrew": "הרואה בריות משונות, כגון פיל וקוף, מברך (רמב״ם ברכות י, יב; שו״ע או״ח רכה, ח):",
+          "translation": "When you see unusual creatures, such as an elephant or a monkey, say (Rambam, Bĕrakhoth 10:12; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 225:8):"
+        },
+        {
+          "type": "text",
+          "id": "meshanne",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, מְשַׁנֶּה הַבְּרִיּוֹת.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who makes His creatures different.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, mĕshanneh habbĕriyyoth."
+        }
+      ]
+    },
+    {
+      "id": "birkat-halevana",
+      "title": "Birkath HalLĕvana",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "levana-law",
+          "hebrew": "הרואה לבנה בחידושה מברך. וצריך לברך ברכה זו מעומד, שכל המברך על החודש בזמנו, כאילו הקביל פני שכינה. ואם לא בירך עליה בלילה הראשון, יש לו לברך עליה עד ששה עשר יום בחודש, עד שתתמלא פגימתה (רמב״ם ברכות י, טז־יז).",
+          "translation": "When you see the new moon, say this bĕrakha standing, for whoever blesses the month in its time is as if greeting the Shĕkhina (God's Presence). If you didn't say it on the first night, you can still say it until the sixteenth of the month, until the moon has filled out (Rambam, Bĕrakhoth 10:16–17)."
+        },
+        {
+          "type": "rubric",
+          "id": "levana-minhag",
+          "hebrew": "ויש נוהגים שלא לברך עד שיעברו שבעה ימים מן המולד, ושלא לברך אחר חצי החודש (שו״ע או״ח תכו, ג־ד).",
+          "translation": "Some have the custom not to say it until seven days have passed since the molad (the new moon), and not after the middle of the month (Shulḥan 'Arukh, ʾOraḥ Ḥayyim 426:3–4)."
+        },
+        {
+          "type": "text",
+          "id": "levana",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, אֲשֶׁר בְּמַאֲמָרוֹ בָּרָא שְׁחָקִים, וּבְרוּחַ פִּיו כָּל צְבָאָם, חֹק וּזְמַן נָתַן לָהֶם שֶׁלֹּא יְשַׁנּוּ אֶת תַּפְקִידָם, שָׂשִׂים וּשְׂמֵחִים לַעֲשׂוֹת רְצוֹן קוֹנֵיהֶם, פּוֹעֲלֵי אֱמֶת שֶׁפְּעֻלָּתָן אֱמֶת, וְלַלְּבָנָה אָמַר שֶׁתִּתְחַדֵּשׁ לִהְיוֹת עֲטֶרֶת תִּפְאֶרֶת לַעֲמוּסֵי בָטֶן, שֶׁהֵן עֲתִידִין לְהִתְחַדֵּשׁ כְּמוֹתָהּ, וּלְפָאֵר לְיוֹצְרָם עַל כְּבוֹד מַלְכוּתוֹ. בָּרוּךְ אַתָּה יְיָ, מְחַדֵּשׁ חֳדָשִׁים.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, whose word created the heavens, and the breath of His mouth all their host. He gave them a law and a season, that they not stray from their appointed task; they rejoice and are glad to do the will of their Maker — true workers, whose work is truth. And to the moon He said that she be renewed, a crown of glory for those He has carried from the womb, who will one day be renewed like her, and glorify their Creator for the honor of His kingdom. Blessed are You, Adhonay, who renews the months.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, ʾăsher bĕmaʾămaro baraʾ shĕḥaqim, uvĕruaḥ piw kol ṣĕvaʾam, ḥoq uzĕman nathan lahem shelloʾ yĕshannu ʾeth tafqidham, sasim usĕmeḥim la'ăsoth rĕṣon qonehem, po'ăle ʾĕmeth sheppĕ'ullathan ʾĕmeth, wĕlallĕvana ʾamar shettithḥaddesh lihyoth 'ăṭereth tifʾereth la'ămuse vaṭen, shehen 'ăthidhin lĕhithḥaddesh kĕmothah, ulĕfaʾer lĕyoṣĕram 'al kĕvodh malkhutho. barukh ʾatta Adhonay, mĕḥaddesh ḥŏdhashim."
+        }
+      ]
+    },
+    {
+      "id": "birkat-hahamma",
+      "title": "Birkath HaḤamma",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "hamma-law-a",
+          "hebrew": "א. הרואה חמה בתקופתה והוא כל כ״ח שנה, [אי״ה בפעם הבאה יהיה זה בשנת תשצ״ז] והתקופה בתחלת ליל ד׳, וביום בבקר שאז היא עומדת בנקודה שהיתה במעשה בראשית — יברך \"עושה מעשה בראשית\" בשם ומלכות. ודוקא שרואה גלגל החמה ממש, ולא מספיק שרואה אור זריחתה בלבד, שאז לא מברך כלל (בא״ח עקב יט).",
+          "translation": "1. When you see the sun at its cycle point, once every 28 years (God willing, the next time will be in 5797 — 2037), when the season begins at the start of Tuesday night, then on Wednesday morning, when the sun stands at the point where it stood at creation, say \"who makes the work of creation\" with God's Name and Kingship. You have to see the sun's disk itself; seeing only its light as it rises isn't enough, and then you don't say the bĕrakha at all (Ben ʾIsh Ḥay, 'Eqev 19)."
+        },
+        {
+          "type": "rubric",
+          "id": "hamma-law-b",
+          "hebrew": "ב. זמן הברכה בשם ומלכות הוא מהנץ עד שלש שעות זמניות, ואם עברו שלש שעות זמניות — יברך בלי שם ומלכות (בא״ח שם).",
+          "translation": "2. The time to say it with God's Name and Kingship is from sunrise until the end of the third seasonal hour. Once three seasonal hours have passed, say it without God's Name and Kingship (Ben ʾIsh Ḥay, ibid.)."
+        },
+        {
+          "type": "rubric",
+          "id": "hamma-law-c",
+          "hebrew": "ג. אם היה ענן שמסתיר את החמה — לא יברך, אלא יחכה עד שיעבור הענן. ואם לא עבר הענן מעליה, יברך בלי שם ומלכות (בא״ח שם).",
+          "translation": "3. If a cloud is hiding the sun, don't say the bĕrakha; wait for the cloud to pass. If it doesn't pass, say it without God's Name and Kingship (Ben ʾIsh Ḥay, ibid.)."
+        },
+        {
+          "type": "rubric",
+          "id": "hamma-law-d",
+          "hebrew": "ד. ברכה זו מצוה לברך אותה בקיבוץ עם, משום ברוב עם הדרת מלך.",
+          "translation": "4. It is a miṣwa to say this bĕrakha with a large gathering, because \"in a multitude of people is the King's glory.\""
+        },
+        {
+          "type": "rubric",
+          "id": "hamma-law-e",
+          "hebrew": "ה. לגבי אם נשים חיבות, יש ספק בדבר, ולכן טוב שיבואו הנשים ויעמדו ליד האנשים, וכשיברך החזן לבדו בקול רם יכוין להוציאם ידי חובה, והנשים יכוונו גם כן לצאת ידי חובה בשמיעתם הברכה (בא״ח שם).",
+          "translation": "5. Whether women are obligated is in doubt, so it is good for women to come and stand near the men. When the ḥazzan says the bĕrakha alone, out loud, he has in mind to fulfill their obligation, and the women have in mind to fulfill it by hearing him (Ben ʾIsh Ḥay, ibid.)."
+        },
+        {
+          "type": "rubric",
+          "id": "hamma-law-f",
+          "hebrew": "ו. העיור לא יברך ברכה זו, לכן יעשה כמו הנשים, שיעמוד ליד החזן וכשיברך החזן לבדו בקול רם יכוין להוציאו ידי חובה, והוא יכוין גם כן לצאת ידי חובה בשמיעתו הברכה (בא״ח שם).",
+          "translation": "6. A blind person doesn't say this bĕrakha, so he does as the women do: he stands near the ḥazzan, who has him in mind when saying the bĕrakha alone out loud, and he has in mind to fulfill his obligation by hearing it (Ben ʾIsh Ḥay, ibid.)."
+        },
+        {
+          "type": "rubric",
+          "id": "hamma-law-g",
+          "hebrew": "ז. נהגו להכין פרי חדש, ואחר הברכה מברכים עליו \"שהחיינו\" (הראש״ל רמ״א ז״ל).",
+          "translation": "7. The custom is to have a new fruit ready, and after the bĕrakha to say Sheheḥeyanu over it (the Riʾshon LĕṢiyyon, Rabbi Mordechai Eliyahu, of blessed memory)."
+        },
+        {
+          "type": "rubric",
+          "id": "hamma-order",
+          "hebrew": "קודם הברכה יעמדו הקהל והחזן במקום אחד תחת אויר השמים, ויאמרו מזמור \"השמים מספרים כבוד אל\", ומזמור \"הללו את ה׳ מן השמים\", ופרשת יום הרביעי. ואחר כך יברכו הקהל בקול אחד בשמחה, והחזן יאמר אחריהם הברכה לבדו וירים קולו ויכוין להוציא ידי חובה לסומים ולנשים השומעים אותו (על פי בא״ח עקב יט):",
+          "translation": "Before the bĕrakha, the congregation and the ḥazzan gather in one place under the open sky and say Psalm 19 (\"The heavens tell the glory of God\"), Psalm 148 (\"Praise Adhonay from the heavens\") and the passage of the fourth day of creation. Then the congregation says the bĕrakha together, in one voice, with joy, and the ḥazzan says it after them by himself, raising his voice, with the blind and the women who hear him in mind (based on the Ben ʾIsh Ḥay, 'Eqev 19):"
+        },
+        {
+          "type": "text",
+          "id": "hamma",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, עֹשֶׂה מַעֲשֵׂה בְרֵאשִׁית.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who makes the work of creation.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, 'oseh ma'ăseh vĕreʾshith."
+        },
+        {
+          "type": "rubric",
+          "id": "hamma-after",
+          "hebrew": "ואחר כך אומרים מזמור \"הודו לה׳ כי טוב\" ו\"עלינו לשבח\".",
+          "translation": "Afterward, say Psalm 136 (\"Give thanks to Adhonay, for He is good\") and 'Alenu."
+        }
+      ]
+    },
+    {
+      "id": "sage",
+      "title": "Sages",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "sage-law",
+          "hebrew": "הרואה חכם גדול מחכמי ישראל, המופלג בתורה ובחכמה וביראת ה׳ טהורה, ומורה הוראות בישראל, מברך \"שחלק מחכמתו ליראיו\", בלי שם ומלכות (בא״ח שם יג).",
+          "translation": "When you see a great Torah sage — outstanding in Torah, wisdom and pure fear of Hashem, who gives rulings in Israel — say \"who has shared His wisdom with those who fear Him,\" without God's Name and Kingship (Ben ʾIsh Ḥay, ibid. 13)."
+        },
+        {
+          "type": "text",
+          "id": "sage",
+          "hebrew": "בָּרוּךְ שֶׁחָלַק מֵחָכְמָתוֹ לִירֵאָיו.",
+          "translation": "Blessed is He who has shared His wisdom with those who fear Him.",
+          "translit": "barukh sheḥalaq meḥokhmatho lireʾaw."
+        },
+        {
+          "type": "rubric",
+          "id": "nations-sage-law",
+          "hebrew": "הרואה חכם מחכמי אומות העולם, החכם בחכמות העולם, מברך (רמב״ם ברכות י, יא; שו״ע או״ח רכד, ז):",
+          "translation": "When you see a non-Jewish sage, learned in the wisdom of the world, say (Rambam, Bĕrakhoth 10:11; Shulḥan 'Arukh, ʾOraḥ Ḥayyim 224:7):"
+        },
+        {
+          "type": "text",
+          "id": "nations-sage",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁנָּתַן מֵחָכְמָתוֹ לְבָשָׂר וָדָם.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has given of His wisdom to flesh and blood.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, shennathan meḥokhmatho lĕvasar wadham."
+        }
+      ]
+    },
+    {
+      "id": "friend",
+      "title": "Seeing a Friend After Thirty Days",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "friend-law",
+          "hebrew": "הרואה את חבירו המכירו כבר ועברו עליו שלשים יום שלא ראהו, ועתה הוא שמח בראייתו, מברך \"שהחיינו\". אבל אם אין מכירו מכבר בראיית פניו, אף על פי שמכירו על ידי מכתבים — לא יברך. ואף שמן הדין צריך לברך בשם ומלכות, כיון שלא נהגו העולם בזה, יברך בלי שם ומלכות ויהרהר שם ומלכות בלבו (בא״ח שם יד).",
+          "translation": "When you see a friend you already know by sight, whom you haven't seen for thirty days, and you're glad to see them, say Sheheḥeyanu. If you don't already know them face to face — even if you know them through letters — don't say it. Strictly, it should be said with God's Name and Kingship, but since that isn't the general practice, say it without them, and think them in your heart (Ben ʾIsh Ḥay, ibid. 14)."
+        },
+        {
+          "type": "text",
+          "id": "friend",
+          "hebrew": "בָּרוּךְ (אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם) שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה.",
+          "translation": "Blessed (are You, Adhonay our God, King of the universe,) who has kept us alive, sustained us, and brought us to this season.",
+          "translit": "barukh (ʾatta Adhonay ʾĕlohenu melekh ha'olam) sheheḥĕyanu wĕqiyyĕmanu wĕhiggi'anu lazzĕman hazzeh."
+        }
+      ]
+    },
+    {
+      "id": "news",
+      "title": "Good and Bad News",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "news-law-a",
+          "hebrew": "שמע שמועה טובה, מברך \"הטוב והמטיב\"; שמע שמועה רעה, מברך \"דיין האמת\". וחייב אדם לברך על הרעה בטובת נפש, כדרך שמברך על הטובה בשמחה, שנאמר \"ואהבת את ה׳ אלהיך... ובכל מאדך\", ובכלל אהבה היתרה שנצטווינו בה, שאפילו בעת שיצר לו, יודה וישבח בשמחה (רמב״ם ברכות י, ג).",
+          "translation": "When you hear good news, say \"who is good and does good\"; when you hear bad news, say \"the true Judge.\" You are obliged to say the bĕrakha over bad news with a willing heart, just as you say it over good news with joy, as it says, \"Love Adhonay your God… with all your might.\" That boundless love we were commanded includes this: even in a time of trouble, you give thanks and praise with joy (Rambam, Bĕrakhoth 10:3)."
+        },
+        {
+          "type": "rubric",
+          "id": "news-law-b",
+          "hebrew": "קצבו של דבר: כל טובה שהיא לו ולאחרים, מברך \"הטוב והמטיב\"; וטובה שהיא לו לבדו, מברך \"שהחיינו\" (שם ז).",
+          "translation": "The rule of thumb: for good that comes to you and to others too, say \"who is good and does good\"; for good that is yours alone, say Sheheḥeyanu (ibid. 7)."
+        },
+        {
+          "type": "rubric",
+          "id": "news-law-c",
+          "hebrew": "הגיעה אליו טובה או ששמע שמועה טובה, אף על פי שהדברים מראים שטובה זו תגרום לו רעה — מברך \"הטוב והמטיב\". וכן אם נגעה אליו רעה או ששמע שמועה רעה, אף על פי שהדברים מראים שרעה זו גורמת לו טובה — מברך \"דיין האמת\", שאין מברכין על העתיד להיות, אלא על מה שאירע עתה (שם ד).",
+          "translation": "If something good happened to you, or you heard good news, say \"who is good and does good\" even if it looks like it will lead to trouble. And if something bad happened, or you heard bad news, say \"the true Judge\" even if it looks like it will lead to good. We don't say bĕrakhoth over what may come, only over what has happened now (ibid. 4)."
+        },
+        {
+          "type": "rubric",
+          "id": "hatov-cue",
+          "hebrew": "על טובה שהיא לו ולאחרים:",
+          "translation": "Over good shared with others:"
+        },
+        {
+          "type": "text",
+          "id": "hatov",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, הַטּוֹב וְהַמֵּטִיב.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who is good and does good.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, haṭṭov wĕhammeṭiv."
+        },
+        {
+          "type": "rubric",
+          "id": "shehecheyanu-cue",
+          "hebrew": "על טובה שהיא לו לבדו:",
+          "translation": "Over good that is yours alone:"
+        },
+        {
+          "type": "text",
+          "id": "shehecheyanu",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, שֶׁהֶחֱיָנוּ וְקִיְּמָנוּ וְהִגִּיעָנוּ לַזְּמַן הַזֶּה.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, who has kept us alive, sustained us, and brought us to this season.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, sheheḥĕyanu wĕqiyyĕmanu wĕhiggi'anu lazzĕman hazzeh."
+        },
+        {
+          "type": "rubric",
+          "id": "dayyan-cue",
+          "hebrew": "על שמועה רעה:",
+          "translation": "Over bad news:"
+        },
+        {
+          "type": "text",
+          "id": "dayyan",
+          "hebrew": "בָּרוּךְ אַתָּה יְיָ אֱלֹהֵינוּ מֶלֶךְ הָעוֹלָם, דַּיַּן הָאֱמֶת.",
+          "translation": "Blessed are You, Adhonay our God, King of the universe, the true Judge.",
+          "translit": "barukh ʾatta Adhonay ʾĕlohenu melekh ha'olam, dayyan haʾĕmeth."
+        }
+      ]
+    }
+  ]
+}
