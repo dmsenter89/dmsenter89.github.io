@@ -1,0 +1,2315 @@
+{
+ "books": [
+  {
+   "n": 1,
+   "name": "Bĕreʾshith",
+   "he": "בראשית",
+   "en": "Genesis",
+   "id": "genesis",
+   "word": "Family",
+   "line": "From the creation of the world to one chosen family, ending in Miṣrayim",
+   "count": 12,
+   "chapters": 50,
+   "intro": "The book narrows from all of humanity to one family. Two parashiyyoth cover twenty generations; ten cover four. <strong>Axis event: Lekh Lĕkha (Genesis 12:1)</strong>, where the story turns from the world to ʾAvraham.",
+   "sections": [
+    {
+     "title": "Twenty generations, ʾAdham to ʾAvraham",
+     "parashiyyoth": [
+      {
+       "n": 1,
+       "name": "Bĕreʾshith",
+       "id": "bereshith",
+       "he": "בראשית",
+       "word": "Made",
+       "ref": "1:1–6:8",
+       "hook": "Creation, Shabbath, ʿEdhen, Qayin and Hevel, ten generations",
+       "kaplan": "1–23",
+       "axis": false,
+       "details": [
+        {
+         "text": "The seven days of creation",
+         "ref": "1:1–2:3",
+         "kaplan": "1–7"
+        },
+        {
+         "text": "ʾAdham and Ḥawwa in ʿEdhen; eating from the tree",
+         "ref": "2:4–3:21",
+         "kaplan": "8–10"
+        },
+        {
+         "text": "Sent out of ʿEdhen",
+         "ref": "3:22–24",
+         "kaplan": "11"
+        },
+        {
+         "text": "Qayin and Hevel",
+         "ref": "4",
+         "kaplan": "12"
+        },
+        {
+         "text": "Ten generations, ʾAdham to Noaḥ; the nĕfilim",
+         "ref": "5:1–6:4",
+         "kaplan": "13–22"
+        },
+        {
+         "text": "Hashem decides to bring an end",
+         "ref": "6:5–8",
+         "kaplan": "23"
+        }
+       ]
+      },
+      {
+       "n": 2,
+       "name": "Noaḥ",
+       "id": "noah",
+       "he": "נח",
+       "word": "Remade",
+       "ref": "6:9–11:32",
+       "hook": "The flood, the covenant and the rainbow, the Tower of Bavel, ten more generations",
+       "kaplan": "24–41",
+       "axis": false,
+       "details": [
+        {
+         "text": "Noaḥ and his times",
+         "ref": "6:9–12",
+         "kaplan": "24"
+        },
+        {
+         "text": "The flood",
+         "ref": "6:13–8:14",
+         "kaplan": "25"
+        },
+        {
+         "text": "After the flood: new laws; the covenant and the rainbow",
+         "ref": "8:15–9:17",
+         "kaplan": "26–27"
+        },
+        {
+         "text": "Noaḥ's sons; Kĕnaʿan cursed",
+         "ref": "9:18–29",
+         "kaplan": "28"
+        },
+        {
+         "text": "The seventy nations",
+         "ref": "10",
+         "kaplan": "29–31"
+        },
+        {
+         "text": "The Tower of Bavel",
+         "ref": "11:1–9",
+         "kaplan": "32"
+        },
+        {
+         "text": "Ten generations, Shem to ʾAvram",
+         "ref": "11:10–32",
+         "kaplan": "33–41"
+        }
+       ]
+      }
+     ],
+     "aid": "Made, remade. The world is made, then washed away and begun again."
+    },
+    {
+     "title": "ʾAvraham",
+     "parashiyyoth": [
+      {
+       "n": 3,
+       "name": "Lekh Lĕkha",
+       "id": "lekh-lekha",
+       "he": "לך לך",
+       "word": "Go",
+       "ref": "12:1–17:27",
+       "hook": "Go to Kĕnaʿan, Loṭ, the war, the covenant between the pieces, Hagar, the covenant of mila",
+       "kaplan": "42–48",
+       "axis": true,
+       "details": [
+        {
+         "text": "\"Go\": ʾAvram moves to Kĕnaʿan",
+         "ref": "12:1–9",
+         "kaplan": "42"
+        },
+        {
+         "text": "Famine, Miṣrayim, and parting from Loṭ",
+         "ref": "12:10–13:18",
+         "kaplan": "43"
+        },
+        {
+         "text": "The war of the kings",
+         "ref": "14",
+         "kaplan": "44"
+        },
+        {
+         "text": "The covenant between the pieces",
+         "ref": "15",
+         "kaplan": "45"
+        },
+        {
+         "text": "Hagar; Yishmaʿel born",
+         "ref": "16",
+         "kaplan": "46"
+        },
+        {
+         "text": "The covenant of mila; new names",
+         "ref": "17",
+         "kaplan": "47–48"
+        }
+       ]
+      },
+      {
+       "n": 4,
+       "name": "Wayyeraʾ",
+       "id": "wayyera",
+       "he": "וירא",
+       "word": "Test",
+       "ref": "18:1–22:24",
+       "hook": "Three guests, Sĕdhom, Yiṣḥaq born, Yishmaʿel sent away, the ʿĂqedha",
+       "kaplan": "49–54",
+       "axis": false,
+       "details": [
+        {
+         "text": "Three guests; Sĕdhom destroyed",
+         "ref": "18–19",
+         "kaplan": "49"
+        },
+        {
+         "text": "Sara and ʾĂvimelekh",
+         "ref": "20",
+         "kaplan": "50"
+        },
+        {
+         "text": "Yiṣḥaq born; Yishmaʿel sent away",
+         "ref": "21:1–21",
+         "kaplan": "51"
+        },
+        {
+         "text": "The treaty at Bĕʾer Shavaʿ",
+         "ref": "21:22–34",
+         "kaplan": "52"
+        },
+        {
+         "text": "The ʿĂqedha",
+         "ref": "22:1–19",
+         "kaplan": "53"
+        },
+        {
+         "text": "Rivqa's family",
+         "ref": "22:20–24",
+         "kaplan": "54"
+        }
+       ]
+      },
+      {
+       "n": 5,
+       "name": "Ḥayye Sara",
+       "id": "hayye-sara",
+       "he": "חיי שרה",
+       "word": "Bury",
+       "ref": "23:1–25:18",
+       "hook": "Sara buried at Makhpela, Rivqa at the well, ʾAvraham dies",
+       "kaplan": "55–58",
+       "axis": false,
+       "details": [
+        {
+         "text": "Sara dies; the cave of Makhpela",
+         "ref": "23",
+         "kaplan": "55"
+        },
+        {
+         "text": "A wife for Yiṣḥaq",
+         "ref": "24",
+         "kaplan": "56"
+        },
+        {
+         "text": "ʾAvraham's last days",
+         "ref": "25:1–11",
+         "kaplan": "57"
+        },
+        {
+         "text": "Yishmaʿel's line",
+         "ref": "25:12–18",
+         "kaplan": "58"
+        }
+       ]
+      }
+     ],
+     "aid": "Go, test, bury. The call, the ʿĂqedha, Sara's grave."
+    },
+    {
+     "title": "Yiṣḥaq and Yaʿăqov",
+     "parashiyyoth": [
+      {
+       "n": 6,
+       "name": "Tolĕdhoth",
+       "id": "toledhoth",
+       "he": "תולדות",
+       "word": "Blessing taken",
+       "ref": "25:19–28:9",
+       "hook": "Twins, the birthright, the wells, the stolen blessing",
+       "kaplan": "59–62",
+       "axis": false,
+       "details": [
+        {
+         "text": "Yaʿăqov and ʿEsaw born; the birthright",
+         "ref": "25:19–34",
+         "kaplan": "59"
+        },
+        {
+         "text": "Yiṣḥaq among the Pĕlishtim; the wells",
+         "ref": "26:1–33",
+         "kaplan": "60"
+        },
+        {
+         "text": "ʿEsaw marries",
+         "ref": "26:34–35",
+         "kaplan": "61"
+        },
+        {
+         "text": "Yaʿăqov takes the blessing",
+         "ref": "27:1–28:9",
+         "kaplan": "62"
+        }
+       ]
+      },
+      {
+       "n": 7,
+       "name": "Wayyeṣeʾ",
+       "id": "wayyese",
+       "he": "ויצא",
+       "word": "Family built",
+       "ref": "28:10–32:3",
+       "hook": "The ladder dream, Lavan, Leʾa and Raḥel, the children are born",
+       "kaplan": "63",
+       "axis": false,
+       "note": "Kaplan has one section here (§63); the lines follow the sedarim.",
+       "details": [
+        {
+         "text": "The ladder dream",
+         "ref": "28:10–22",
+         "kaplan": ""
+        },
+        {
+         "text": "Lavan, Leʾa and Raḥel",
+         "ref": "29:1–30",
+         "kaplan": ""
+        },
+        {
+         "text": "The children are born",
+         "ref": "29:31–30:24",
+         "kaplan": ""
+        },
+        {
+         "text": "Yaʿăqov's flocks",
+         "ref": "30:25–43",
+         "kaplan": ""
+        },
+        {
+         "text": "Leaving Lavan",
+         "ref": "31:1–32:3",
+         "kaplan": ""
+        }
+       ]
+      },
+      {
+       "n": 8,
+       "name": "Wayyishlaḥ",
+       "id": "wayyishlah",
+       "he": "וישלח",
+       "word": "Name changed",
+       "ref": "32:4–36:43",
+       "hook": "Wrestling at night, meeting ʿEsaw, Dina, Raḥel dies, ʿEsaw's line",
+       "kaplan": "64–72",
+       "axis": false,
+       "details": [
+        {
+         "text": "Yaʿăqov meets ʿEsaw; wrestling at night",
+         "ref": "32:4–33:17",
+         "kaplan": "64"
+        },
+        {
+         "text": "Arrival at Shĕkhem; Dina",
+         "ref": "33:18–34:31",
+         "kaplan": "65–66"
+        },
+        {
+         "text": "Beth ʾEl; Raḥel dies",
+         "ref": "35:1–22",
+         "kaplan": "67–68"
+        },
+        {
+         "text": "Yaʿăqov's sons; Yiṣḥaq dies",
+         "ref": "35:22–29",
+         "kaplan": "69"
+        },
+        {
+         "text": "ʿEsaw's line and the kings of ʾĔdhom",
+         "ref": "36",
+         "kaplan": "70–72"
+        }
+       ]
+      }
+     ],
+     "aid": "Blessing taken, family built, name changed (Yaʿăqov becomes Yisraʾel)."
+    },
+    {
+     "title": "Yosef and his brothers",
+     "parashiyyoth": [
+      {
+       "n": 9,
+       "name": "Wayyeshev",
+       "id": "wayyeshev",
+       "he": "וישב",
+       "word": "Sold",
+       "ref": "37:1–40:23",
+       "hook": "Dreams and the sale, Yĕhudha and Tamar, Poṭifar, the prison dreams",
+       "kaplan": "73–76",
+       "axis": false,
+       "details": [
+        {
+         "text": "Yosef's dreams and the sale",
+         "ref": "37",
+         "kaplan": "73"
+        },
+        {
+         "text": "Yĕhudha and Tamar",
+         "ref": "38",
+         "kaplan": "74"
+        },
+        {
+         "text": "Yosef and Poṭifar's wife",
+         "ref": "39",
+         "kaplan": "75"
+        },
+        {
+         "text": "The prisoners' dreams",
+         "ref": "40",
+         "kaplan": "76"
+        }
+       ]
+      },
+      {
+       "n": 10,
+       "name": "Miqqeṣ",
+       "id": "miqqes",
+       "he": "מקץ",
+       "word": "Rises",
+       "ref": "41:1–44:17",
+       "hook": "Parʿo's dreams, Yosef rules, the brothers come, the goblet",
+       "kaplan": "77",
+       "axis": false,
+       "note": "Kaplan has one section here (§77); the lines follow the sedarim.",
+       "details": [
+        {
+         "text": "Parʿo's dreams",
+         "ref": "41:1–37",
+         "kaplan": ""
+        },
+        {
+         "text": "Yosef rules Miṣrayim",
+         "ref": "41:38–57",
+         "kaplan": ""
+        },
+        {
+         "text": "The brothers come for food",
+         "ref": "42",
+         "kaplan": ""
+        },
+        {
+         "text": "Binyamin goes down",
+         "ref": "43",
+         "kaplan": ""
+        },
+        {
+         "text": "The goblet",
+         "ref": "44:1–17",
+         "kaplan": ""
+        }
+       ]
+      },
+      {
+       "n": 11,
+       "name": "Wayyiggash",
+       "id": "wayyiggash",
+       "he": "ויגש",
+       "word": "Revealed",
+       "ref": "44:18–47:27",
+       "hook": "Yĕhudha steps forward, \"I am Yosef,\" Yaʿăqov goes down",
+       "kaplan": "78–80",
+       "axis": false,
+       "details": [
+        {
+         "text": "Yĕhudha steps forward; \"I am Yosef\"",
+         "ref": "44:18–45:28",
+         "kaplan": "78"
+        },
+        {
+         "text": "Yaʿăqov goes down to Miṣrayim",
+         "ref": "46:1–7",
+         "kaplan": "78"
+        },
+        {
+         "text": "Yaʿăqov's family, seventy souls",
+         "ref": "46:8–27",
+         "kaplan": "79"
+        },
+        {
+         "text": "Settling in Goshen; the famine years",
+         "ref": "46:28–47:27",
+         "kaplan": "80"
+        }
+       ]
+      },
+      {
+       "n": 12,
+       "name": "Wayḥi",
+       "id": "wayhi",
+       "he": "ויחי",
+       "word": "Blessed",
+       "ref": "47:28–50:26",
+       "hook": "ʾEfrayim and Mĕnashshe, blessing the tribes, Yaʿăqov and Yosef die",
+       "kaplan": "81–91",
+       "axis": false,
+       "details": [
+        {
+         "text": "Yaʿăqov's last days; ʾEfrayim and Mĕnashshe",
+         "ref": "47:28–48:22",
+         "kaplan": "81"
+        },
+        {
+         "text": "Yaʿăqov blesses the twelve tribes",
+         "ref": "49:1–27",
+         "kaplan": "82–91"
+        },
+        {
+         "text": "Yaʿăqov and Yosef die",
+         "ref": "49:28–50:26",
+         "kaplan": "91"
+        }
+       ]
+      }
+     ],
+     "aid": "Sold, rises, revealed, blessed. Down into Miṣrayim, up to rule it, the brothers learn who he is, Yaʿăqov blesses them all."
+    }
+   ]
+  },
+  {
+   "n": 2,
+   "name": "Shĕmoth",
+   "he": "שמות",
+   "en": "Exodus",
+   "id": "exodus",
+   "word": "Nation",
+   "line": "The family becomes a people: freed from Miṣrayim, entering the covenant at Sinai, given the Mishkan",
+   "count": 11,
+   "chapters": 40,
+   "intro": "The book moves in three steps: out of Miṣrayim, up to Sinai, and Hashem's Presence coming down into the Mishkan. <strong>Axis event: the covenant at Sinai (Yithro and Mishpaṭim, Exodus 19 to 24)</strong>, proposed and freely accepted. It is what the Exodus was for: \"you will serve God on this mountain\" (3:12).",
+   "sections": [
+    {
+     "title": "Miṣrayim: slavery and redemption",
+     "parashiyyoth": [
+      {
+       "n": 1,
+       "name": "Shĕmoth",
+       "id": "shemoth",
+       "he": "שמות",
+       "word": "Crushed",
+       "ref": "1:1–6:1",
+       "hook": "Slavery, baby Moshe, the burning bush, \"let My people go,\" it gets worse",
+       "kaplan": "1–7",
+       "axis": false,
+       "details": [
+        {
+         "text": "Yisraʾel grows; a new Parʿo enslaves them",
+         "ref": "1",
+         "kaplan": "1–2"
+        },
+        {
+         "text": "Moshe born, raised, flees to Midhyan",
+         "ref": "2:1–22",
+         "kaplan": "3"
+        },
+        {
+         "text": "Yisraʾel cries out; Hashem remembers the covenant",
+         "ref": "2:23–25",
+         "kaplan": "4"
+        },
+        {
+         "text": "The burning bush",
+         "ref": "3:1–4:17",
+         "kaplan": "5"
+        },
+        {
+         "text": "Moshe returns to Miṣrayim",
+         "ref": "4:18–26",
+         "kaplan": "6"
+        },
+        {
+         "text": "First meeting with Parʿo; it gets worse",
+         "ref": "4:27–6:1",
+         "kaplan": "7"
+        }
+       ]
+      },
+      {
+       "n": 2,
+       "name": "Waʾeraʾ",
+       "id": "waera",
+       "he": "וארא",
+       "word": "Struck",
+       "ref": "6:2–9:35",
+       "hook": "Four words of redemption, staff into snake, plagues 1 to 7",
+       "kaplan": "8–23",
+       "axis": false,
+       "details": [
+        {
+         "text": "Hashem's promise; Moshe hesitates",
+         "ref": "6:2–12",
+         "kaplan": "8–9"
+        },
+        {
+         "text": "ʾAhăron joins; the family of Moshe and ʾAhăron",
+         "ref": "6:13–30",
+         "kaplan": "10–12"
+        },
+        {
+         "text": "Staff into snake",
+         "ref": "7:1–13",
+         "kaplan": "13–14"
+        },
+        {
+         "text": "Blood, frogs, lice",
+         "ref": "7:14–8:15",
+         "kaplan": "15–18"
+        },
+        {
+         "text": "Wild beasts, epidemic, boils",
+         "ref": "8:16–9:12",
+         "kaplan": "19–21"
+        },
+        {
+         "text": "Hail",
+         "ref": "9:13–35",
+         "kaplan": "22–23"
+        }
+       ]
+      },
+      {
+       "n": 3,
+       "name": "Boʾ",
+       "id": "bo",
+       "he": "בא",
+       "word": "Freed",
+       "ref": "10:1–13:16",
+       "hook": "Plagues 8 to 10, the first miṣwoth: Roʾsh Ḥodhesh, Pesaḥ, the firstborn, tĕfillin",
+       "kaplan": "24–37",
+       "axis": false,
+       "details": [
+        {
+         "text": "Locusts and darkness",
+         "ref": "10",
+         "kaplan": "24–26"
+        },
+        {
+         "text": "Warning of the last plague",
+         "ref": "11",
+         "kaplan": "27–29"
+        },
+        {
+         "text": "The first miṣwoth: Roʾsh Ḥodhesh and the Pesaḥ",
+         "ref": "12:1–28",
+         "kaplan": "30–31"
+        },
+        {
+         "text": "The firstborn die; leaving Miṣrayim",
+         "ref": "12:29–42",
+         "kaplan": "32–33"
+        },
+        {
+         "text": "Laws of the Pesaḥ offering",
+         "ref": "12:43–51",
+         "kaplan": "34–35"
+        },
+        {
+         "text": "Remembering: maṣṣoth, the firstborn, tĕfillin",
+         "ref": "13:1–16",
+         "kaplan": "36–37"
+        }
+       ]
+      },
+      {
+       "n": 4,
+       "name": "Bĕshallaḥ",
+       "id": "beshallah",
+       "he": "בשלח",
+       "word": "Crossed",
+       "ref": "13:17–17:16",
+       "hook": "Splitting the sea, the Song, manna and Shabbath, ʿĂmaleq",
+       "kaplan": "38–51",
+       "axis": false,
+       "details": [
+        {
+         "text": "The route out; Miṣrayim pursues",
+         "ref": "13:17–14:14",
+         "kaplan": "38–39"
+        },
+        {
+         "text": "Splitting the sea",
+         "ref": "14:15–31",
+         "kaplan": "40–41"
+        },
+        {
+         "text": "The Song at the Sea; Miryam's song",
+         "ref": "15:1–21",
+         "kaplan": "42–43"
+        },
+        {
+         "text": "Bitter water; ʾElim",
+         "ref": "15:22–16:3",
+         "kaplan": "44–45"
+        },
+        {
+         "text": "Manna and Shabbath",
+         "ref": "16:4–36",
+         "kaplan": "46–48"
+        },
+        {
+         "text": "Water from the rock",
+         "ref": "17:1–7",
+         "kaplan": "49"
+        },
+        {
+         "text": "ʿĂmaleq",
+         "ref": "17:8–16",
+         "kaplan": "50–51"
+        }
+       ]
+      }
+     ],
+     "aid": "Crushed, struck, freed, crossed."
+    },
+    {
+     "title": "Sinai: the covenant",
+     "parashiyyoth": [
+      {
+       "n": 5,
+       "name": "Yithro",
+       "id": "yithro",
+       "he": "יתרו",
+       "word": "Proposed",
+       "ref": "18:1–20:23",
+       "hook": "Yithro's advice, the covenant proposed, the Ten Statements (ʿĂsereth HadDibbĕroth)",
+       "kaplan": "52–65",
+       "axis": true,
+       "details": [
+        {
+         "text": "Yithro's advice",
+         "ref": "18",
+         "kaplan": "52"
+        },
+        {
+         "text": "The covenant proposed; preparing at the mountain",
+         "ref": "19",
+         "kaplan": "53"
+        },
+        {
+         "text": "The Ten Statements",
+         "ref": "20:1–14",
+         "kaplan": "54–63"
+        },
+        {
+         "text": "The people's fear; first laws of the altar",
+         "ref": "20:15–23",
+         "kaplan": "64–65"
+        }
+       ]
+      },
+      {
+       "n": 6,
+       "name": "Mishpaṭim",
+       "id": "mishpatim",
+       "he": "משפטים",
+       "word": "Sealed",
+       "ref": "21:1–24:18",
+       "hook": "Civil laws, the festivals, the covenant sealed: \"we will do and we will hear\"",
+       "kaplan": "66–98",
+       "axis": true,
+       "details": [
+        {
+         "text": "The Hebrew servant",
+         "ref": "21:1–11",
+         "kaplan": "66–67"
+        },
+        {
+         "text": "Harming people: killing, injury, kidnapping",
+         "ref": "21:12–27",
+         "kaplan": "68–76"
+        },
+        {
+         "text": "Damage: the goring ox, the pit, grazing, fire",
+         "ref": "21:28–22:5",
+         "kaplan": "77–82"
+        },
+        {
+         "text": "Watchmen, borrowers and other laws",
+         "ref": "22:6–23",
+         "kaplan": "83–88"
+        },
+        {
+         "text": "Lending, justice, the lost animal",
+         "ref": "22:24–23:5",
+         "kaplan": "89–93"
+        },
+        {
+         "text": "Justice and the three festivals",
+         "ref": "23:6–19",
+         "kaplan": "94"
+        },
+        {
+         "text": "The messenger ahead; the covenant sealed; Moshe goes up",
+         "ref": "23:20–24:18",
+         "kaplan": "95–98"
+        }
+       ]
+      }
+     ],
+     "aid": "Proposed, sealed. Hashem proposes the covenant; the people accept it with \"we will do and we will hear.\""
+    },
+    {
+     "title": "The Mishkan",
+     "parashiyyoth": [
+      {
+       "n": 7,
+       "name": "Tĕruma",
+       "id": "teruma",
+       "he": "תרומה",
+       "word": "Plan: the house",
+       "ref": "25:1–27:19",
+       "hook": "The gifts, the Ark, table, mĕnora, walls, altar",
+       "kaplan": "99–107",
+       "axis": false,
+       "details": [
+        {
+         "text": "The gifts",
+         "ref": "25:1–9",
+         "kaplan": "99"
+        },
+        {
+         "text": "Ark, table, mĕnora",
+         "ref": "25:10–40",
+         "kaplan": "100–102"
+        },
+        {
+         "text": "The coverings and the walls",
+         "ref": "26:1–30",
+         "kaplan": "103–104"
+        },
+        {
+         "text": "The dividing curtain",
+         "ref": "26:31–37",
+         "kaplan": "105"
+        },
+        {
+         "text": "The altar and the courtyard",
+         "ref": "27:1–19",
+         "kaplan": "106–107"
+        }
+       ]
+      },
+      {
+       "n": 8,
+       "name": "Tĕṣawwe",
+       "id": "tesawwe",
+       "he": "תצוה",
+       "word": "Plan: the kohen",
+       "ref": "27:20–30:10",
+       "hook": "Oil for the lamp, the kohănim's garments, the seven days, incense altar",
+       "kaplan": "108–117",
+       "axis": false,
+       "details": [
+        {
+         "text": "Oil for the lamp",
+         "ref": "27:20–21",
+         "kaplan": "108"
+        },
+        {
+         "text": "The kohănim's garments",
+         "ref": "28",
+         "kaplan": "109–114"
+        },
+        {
+         "text": "The seven days of installation",
+         "ref": "29:1–37",
+         "kaplan": "115"
+        },
+        {
+         "text": "The daily offering",
+         "ref": "29:38–46",
+         "kaplan": "116"
+        },
+        {
+         "text": "The incense altar",
+         "ref": "30:1–10",
+         "kaplan": "117"
+        }
+       ]
+      },
+      {
+       "n": 9,
+       "name": "Ki Thissaʾ",
+       "id": "ki-thissa",
+       "he": "כי תשא",
+       "word": "Break",
+       "ref": "30:11–34:35",
+       "hook": "Half-shekel, Shabbath, the Golden Calf, the Thirteen Attributes, second tablets and the covenant renewed",
+       "kaplan": "118–131",
+       "axis": false,
+       "details": [
+        {
+         "text": "Half-shekel, basin, anointing oil, incense",
+         "ref": "30:11–38",
+         "kaplan": "118–121"
+        },
+        {
+         "text": "Bĕṣalʾel; Shabbath",
+         "ref": "31:1–17",
+         "kaplan": "122–123"
+        },
+        {
+         "text": "The Golden Calf",
+         "ref": "31:18–32:35",
+         "kaplan": "124–126"
+        },
+        {
+         "text": "Moshe pleads; Hashem's glory",
+         "ref": "33",
+         "kaplan": "127–129"
+        },
+        {
+         "text": "Second tablets; the Thirteen Attributes; the covenant renewed",
+         "ref": "34:1–26",
+         "kaplan": "130"
+        },
+        {
+         "text": "Moshe's face shines",
+         "ref": "34:27–35",
+         "kaplan": "131"
+        }
+       ]
+      },
+      {
+       "n": 10,
+       "name": "Wayyaqhel",
+       "id": "wayyaqhel",
+       "he": "ויקהל",
+       "word": "Build",
+       "ref": "35:1–38:20",
+       "hook": "Shabbath, the people give too much, Bĕṣalʾel makes everything",
+       "kaplan": "132–144",
+       "axis": false,
+       "details": [
+        {
+         "text": "Shabbath",
+         "ref": "35:1–3",
+         "kaplan": "132"
+        },
+        {
+         "text": "The gifts and the craftsmen",
+         "ref": "35:4–36:7",
+         "kaplan": "133–134"
+        },
+        {
+         "text": "Making the coverings and walls",
+         "ref": "36:8–38",
+         "kaplan": "135–137"
+        },
+        {
+         "text": "Making the Ark, table, mĕnora, incense altar",
+         "ref": "37",
+         "kaplan": "138–141"
+        },
+        {
+         "text": "Making the altar, basin, courtyard",
+         "ref": "38:1–20",
+         "kaplan": "142–144"
+        }
+       ]
+      },
+      {
+       "n": 11,
+       "name": "Pĕqudhe",
+       "id": "pequdhe",
+       "he": "פקודי",
+       "word": "Raised",
+       "ref": "38:21–40:38",
+       "hook": "The accounting, the garments, the Mishkan stands, the cloud fills it",
+       "kaplan": "145–164",
+       "axis": false,
+       "details": [
+        {
+         "text": "The accounting",
+         "ref": "38:21–39:1",
+         "kaplan": "145–146"
+        },
+        {
+         "text": "Making the kohănim's garments",
+         "ref": "39:2–31",
+         "kaplan": "147–152"
+        },
+        {
+         "text": "The work is done; Moshe approves",
+         "ref": "39:32–43",
+         "kaplan": "153–154"
+        },
+        {
+         "text": "The Mishkan set up, piece by piece",
+         "ref": "40:1–33",
+         "kaplan": "155–163"
+        },
+        {
+         "text": "The cloud fills the Mishkan",
+         "ref": "40:34–38",
+         "kaplan": "164"
+        }
+       ]
+      }
+     ],
+     "aid": "Plan, plan, break, build, raised. Tĕruma and Tĕṣawwe give the instructions, Ki Thissaʾ breaks the covenant and repairs it, Wayyaqhel and Pĕqudhe carry the instructions out almost word for word. The Calf comes forty days after Sinai, a lesson in how quickly people fall back on worship of their own making."
+    }
+   ]
+  },
+  {
+   "n": 3,
+   "name": "Wayyiqraʾ",
+   "he": "ויקרא",
+   "en": "Leviticus",
+   "id": "leviticus",
+   "word": "Nearness",
+   "line": "How the people can live near Hashem: qorbanoth, ṭumʾa and ṭahŏra, and qĕdhushsha of people, time and Land",
+   "count": 10,
+   "chapters": 27,
+   "intro": "The whole book is spoken from the Mishkan at Sinai. It asks how a people can live near Hashem, and it widens outward: the altar, the body, the people, time, the Land. Its key word is qĕdhushsha (being set apart for Hashem). <strong>Axis event: Nadhav and ʾĂvihuʾ die on the Mishkan's first day (Shĕmini, Leviticus 10).</strong> Moshe answers with \"through those near to Me I will be set apart\" (10:3), and the Talmud (Qiddushin 30a) places the middle word of the Torah a few verses later, at 10:16.",
+   "sections": [
+    {
+     "title": "Qorbanoth and the first day",
+     "parashiyyoth": [
+      {
+       "n": 1,
+       "name": "Wayyiqraʾ",
+       "id": "wayyiqra",
+       "he": "ויקרא",
+       "word": "Giver's side",
+       "ref": "1:1–5:26",
+       "hook": "The qorbanoth (offerings) from the giver's side: ʿola, minḥa, shĕlamim, ḥaṭṭaʾth, ʾasham",
+       "kaplan": "1–21",
+       "axis": false,
+       "details": [
+        {
+         "text": "The ʿola",
+         "ref": "1",
+         "kaplan": "1–3"
+        },
+        {
+         "text": "The minḥa",
+         "ref": "2",
+         "kaplan": "4–8"
+        },
+        {
+         "text": "The shĕlamim",
+         "ref": "3",
+         "kaplan": "9–11"
+        },
+        {
+         "text": "The ḥaṭṭaʾth: for the kohen gadhol, the community, a leader, an individual",
+         "ref": "4",
+         "kaplan": "12–16"
+        },
+        {
+         "text": "The sliding-scale offering",
+         "ref": "5:1–13",
+         "kaplan": "17–18"
+        },
+        {
+         "text": "The ʾasham",
+         "ref": "5:14–26",
+         "kaplan": "19–21"
+        }
+       ]
+      },
+      {
+       "n": 2,
+       "name": "Ṣaw",
+       "id": "saw",
+       "he": "צו",
+       "word": "Kohen's side",
+       "ref": "6:1–8:36",
+       "hook": "The same qorbanoth from the kohen's side; the seven days of installation",
+       "kaplan": "22–29",
+       "axis": false,
+       "details": [
+        {
+         "text": "The altar fire and its ashes; the minḥa",
+         "ref": "6:1–11",
+         "kaplan": "22–23"
+        },
+        {
+         "text": "The kohen gadhol's daily minḥa",
+         "ref": "6:12–16",
+         "kaplan": "24"
+        },
+        {
+         "text": "Laws of the ḥaṭṭaʾth and the ʾasham",
+         "ref": "6:17–7:10",
+         "kaplan": "25–26"
+        },
+        {
+         "text": "Laws of the shĕlamim; no fat, no blood",
+         "ref": "7:11–27",
+         "kaplan": "27"
+        },
+        {
+         "text": "The kohănim's portion",
+         "ref": "7:28–38",
+         "kaplan": "28"
+        },
+        {
+         "text": "The seven days of installation",
+         "ref": "8",
+         "kaplan": "29"
+        }
+       ]
+      },
+      {
+       "n": 3,
+       "name": "Shĕmini",
+       "id": "shemini",
+       "he": "שמיני",
+       "word": "First day",
+       "ref": "9:1–11:47",
+       "hook": "The eighth day, Nadhav and ʾĂvihuʾ, permitted and forbidden animals",
+       "kaplan": "30–35",
+       "axis": true,
+       "details": [
+        {
+         "text": "The eighth day; Nadhav and ʾĂvihuʾ",
+         "ref": "9:1–10:7",
+         "kaplan": "30"
+        },
+        {
+         "text": "No wine for kohănim in service",
+         "ref": "10:8–11",
+         "kaplan": "31"
+        },
+        {
+         "text": "Finishing the day's service",
+         "ref": "10:12–20",
+         "kaplan": "32"
+        },
+        {
+         "text": "Permitted and forbidden animals",
+         "ref": "11",
+         "kaplan": "33–35"
+        }
+       ]
+      }
+     ],
+     "aid": "Giver's side, kohen's side, first day. The same offerings seen twice, then the Mishkan's first day."
+    },
+    {
+     "title": "Ṭumʾa and ṭahŏra (ritual impurity and purity)",
+     "parashiyyoth": [
+      {
+       "n": 4,
+       "name": "Tazriaʿ",
+       "id": "tazria",
+       "he": "תזריע",
+       "word": "Marked",
+       "ref": "12:1–13:59",
+       "hook": "Childbirth, ṣaraʿath on skin and clothing",
+       "kaplan": "36–44",
+       "axis": false,
+       "details": [
+        {
+         "text": "After childbirth",
+         "ref": "12",
+         "kaplan": "36"
+        },
+        {
+         "text": "Ṣaraʿath on the skin",
+         "ref": "13:1–46",
+         "kaplan": "37–43"
+        },
+        {
+         "text": "Ṣaraʿath on clothing",
+         "ref": "13:47–59",
+         "kaplan": "44"
+        }
+       ]
+      },
+      {
+       "n": 5,
+       "name": "Mĕṣoraʿ",
+       "id": "mesora",
+       "he": "מצורע",
+       "word": "Purified",
+       "ref": "14:1–15:33",
+       "hook": "Purifying from ṣaraʿath, ṣaraʿath on houses, bodily ṭumʾa",
+       "kaplan": "45–51",
+       "axis": false,
+       "details": [
+        {
+         "text": "Purifying from ṣaraʿath",
+         "ref": "14:1–32",
+         "kaplan": "45–46"
+        },
+        {
+         "text": "Ṣaraʿath on houses",
+         "ref": "14:33–57",
+         "kaplan": "47"
+        },
+        {
+         "text": "Bodily ṭumʾa of men and women",
+         "ref": "15",
+         "kaplan": "48–51"
+        }
+       ]
+      }
+     ],
+     "aid": "Marked, purified."
+    },
+    {
+     "title": "Qĕdhushsha of the people",
+     "parashiyyoth": [
+      {
+       "n": 6,
+       "name": "ʾAḥăre Moth",
+       "id": "ahare-moth",
+       "he": "אחרי מות",
+       "word": "Once a year",
+       "ref": "16:1–18:30",
+       "hook": "Yom HaKippurim in the innermost room, blood and slaughter, forbidden relationships",
+       "kaplan": "52–66",
+       "axis": false,
+       "details": [
+        {
+         "text": "The Yom HaKippurim service",
+         "ref": "16",
+         "kaplan": "52"
+        },
+        {
+         "text": "Slaughter only at the Mishkan; no eating blood",
+         "ref": "17",
+         "kaplan": "53"
+        },
+        {
+         "text": "Forbidden relationships",
+         "ref": "18",
+         "kaplan": "54–66"
+        }
+       ]
+      },
+      {
+       "n": 7,
+       "name": "Qĕdhoshim",
+       "id": "qedhoshim",
+       "he": "קדושים",
+       "word": "Every day",
+       "ref": "19:1–20:27",
+       "hook": "\"Qĕdhoshim tihyu\" (be set apart), love your neighbor, honest weights, the penalties",
+       "kaplan": "67–69",
+       "axis": false,
+       "details": [
+        {
+         "text": "\"Qĕdhoshim tihyu\" (be set apart): honoring parents, love your neighbor and more",
+         "ref": "19:1–22",
+         "kaplan": "67"
+        },
+        {
+         "text": "Fruit of young trees, forbidden practices, loving the stranger",
+         "ref": "19:23–37",
+         "kaplan": "68"
+        },
+        {
+         "text": "The penalties",
+         "ref": "20",
+         "kaplan": "69"
+        }
+       ]
+      }
+     ],
+     "aid": "Once a year, every day. Yom HaKippurim in the innermost room, then \"Qĕdhoshim tihyu\" in ordinary life."
+    },
+    {
+     "title": "Qĕdhushsha of kohănim and time",
+     "parashiyyoth": [
+      {
+       "n": 8,
+       "name": "ʾĔmor",
+       "id": "emor",
+       "he": "אמור",
+       "word": "Calendar",
+       "ref": "21:1–24:23",
+       "hook": "Laws of kohănim, the festival calendar, mĕnora and showbread, the blasphemer",
+       "kaplan": "70–86",
+       "axis": false,
+       "details": [
+        {
+         "text": "Laws for kohănim and the kohen gadhol",
+         "ref": "21",
+         "kaplan": "70–72"
+        },
+        {
+         "text": "Kohănim and the offerings; which animals qualify",
+         "ref": "22",
+         "kaplan": "73–75"
+        },
+        {
+         "text": "Shabbath, Pesaḥ, the ʿomer, Shavuʿoth",
+         "ref": "23:1–22",
+         "kaplan": "76–79"
+        },
+        {
+         "text": "Roʾsh HashShana, Yom HaKippurim, Sukkoth",
+         "ref": "23:23–44",
+         "kaplan": "80–82"
+        },
+        {
+         "text": "The lamp and the showbread",
+         "ref": "24:1–9",
+         "kaplan": "83–84"
+        },
+        {
+         "text": "The blasphemer",
+         "ref": "24:10–23",
+         "kaplan": "85–86"
+        }
+       ]
+      }
+     ],
+     "aid": "Who serves, and when. The kohănim and the festival calendar."
+    },
+    {
+     "title": "Qĕdhushsha of the Land, and the covenant",
+     "parashiyyoth": [
+      {
+       "n": 9,
+       "name": "Bĕhar",
+       "id": "behar",
+       "he": "בהר",
+       "word": "Land rests",
+       "ref": "25:1–26:2",
+       "hook": "Shĕmiṭṭa and yovel, helping a brother who falls",
+       "kaplan": "87–93",
+       "axis": false,
+       "details": [
+        {
+         "text": "Shĕmiṭṭa and yovel",
+         "ref": "25:1–24",
+         "kaplan": "87–88"
+        },
+        {
+         "text": "Buying back land and houses",
+         "ref": "25:25–34",
+         "kaplan": "89–90"
+        },
+        {
+         "text": "Helping a brother who falls; servants",
+         "ref": "25:35–26:2",
+         "kaplan": "91–93"
+        }
+       ]
+      },
+      {
+       "n": 10,
+       "name": "Bĕḥuqqothay",
+       "id": "behuqqothay",
+       "he": "בחקתי",
+       "word": "If, if not",
+       "ref": "26:3–27:34",
+       "hook": "Blessings and curses, \"I will remember My covenant,\" vows and valuations",
+       "kaplan": "94–98",
+       "axis": false,
+       "details": [
+        {
+         "text": "The good that comes from following Hashem",
+         "ref": "26:3–13",
+         "kaplan": "94"
+        },
+        {
+         "text": "What comes from turning away; exile, and the covenant remembered",
+         "ref": "26:14–46",
+         "kaplan": "95–96"
+        },
+        {
+         "text": "Vows and valuations",
+         "ref": "27",
+         "kaplan": "97–98"
+        }
+       ]
+      }
+     ],
+     "aid": "The Land rests; then the covenant's terms, if you follow and if you don't."
+    }
+   ]
+  },
+  {
+   "n": 4,
+   "name": "Bĕmidhbar",
+   "he": "במדבר",
+   "en": "Numbers",
+   "id": "numbers",
+   "word": "Journey",
+   "line": "From Sinai to the edge of the Land; the first generation fails, the second arrives",
+   "count": 10,
+   "chapters": 36,
+   "intro": "The book is organized by place, and it opens and closes with a census: the generation that left Miṣrayim (Numbers 1) and the generation that will enter the Land (Numbers 26). <strong>Axis event: the spies (Shĕlaḥ Lĕkha, Numbers 13 to 14)</strong>, which turn an eleven-day trip into forty years. The 38 years of wandering fall silently between Qoraḥ and Ḥuqqath.",
+   "sections": [
+    {
+     "title": "The camp at Sinai",
+     "parashiyyoth": [
+      {
+       "n": 1,
+       "name": "Bĕmidhbar",
+       "id": "bemidhbar",
+       "he": "במדבר",
+       "word": "Counted",
+       "ref": "1:1–4:20",
+       "hook": "The census, the tribes around the Mishkan, the Lĕwiyyim replace the firstborn",
+       "kaplan": "1–30",
+       "axis": false,
+       "details": [
+        {
+         "text": "The census, tribe by tribe",
+         "ref": "1:1–47",
+         "kaplan": "1–14"
+        },
+        {
+         "text": "The Lĕwiyyim set aside",
+         "ref": "1:48–54",
+         "kaplan": "15"
+        },
+        {
+         "text": "The camp around the Mishkan",
+         "ref": "2",
+         "kaplan": "16–21"
+        },
+        {
+         "text": "The Lĕwiyyim take the place of the firstborn",
+         "ref": "3",
+         "kaplan": "22–28"
+        },
+        {
+         "text": "Qĕhath's duties",
+         "ref": "4:1–20",
+         "kaplan": "29–30"
+        }
+       ]
+      },
+      {
+       "n": 2,
+       "name": "Nasoʾ",
+       "id": "naso",
+       "he": "נשא",
+       "word": "Dedicated",
+       "ref": "4:21–7:89",
+       "hook": "Duties of the Lĕwiyyim, soṭa, nazir, Birkath Kohănim, the twelve leaders' gifts",
+       "kaplan": "31–56",
+       "axis": false,
+       "details": [
+        {
+         "text": "Duties of Gershon and Mĕrari",
+         "ref": "4:21–49",
+         "kaplan": "31–33"
+        },
+        {
+         "text": "Keeping the camp pure; returning what was taken",
+         "ref": "5:1–10",
+         "kaplan": "34–35"
+        },
+        {
+         "text": "The soṭa",
+         "ref": "5:11–31",
+         "kaplan": "36"
+        },
+        {
+         "text": "The nazir",
+         "ref": "6:1–21",
+         "kaplan": "37"
+        },
+        {
+         "text": "Birkath Kohănim",
+         "ref": "6:22–27",
+         "kaplan": "38–42"
+        },
+        {
+         "text": "The leaders' gifts, twelve days",
+         "ref": "7",
+         "kaplan": "43–56"
+        }
+       ]
+      }
+     ],
+     "aid": "Counted, dedicated."
+    },
+    {
+     "title": "Leaving Sinai: the complaints",
+     "parashiyyoth": [
+      {
+       "n": 3,
+       "name": "Bĕhaʿălothĕkha",
+       "id": "behaalothekha",
+       "he": "בהעלתך",
+       "word": "Complain",
+       "ref": "8:1–12:16",
+       "hook": "Mĕnora, Pesaḥ Sheni, cloud and trumpets, they set out (10:11), quail, Miryam speaks",
+       "kaplan": "57–72",
+       "axis": false,
+       "details": [
+        {
+         "text": "Lighting the mĕnora",
+         "ref": "8:1–4",
+         "kaplan": "57"
+        },
+        {
+         "text": "The Lĕwiyyim begin their service",
+         "ref": "8:5–26",
+         "kaplan": "58–59"
+        },
+        {
+         "text": "Pesaḥ in the wilderness; Pesaḥ Sheni",
+         "ref": "9:1–14",
+         "kaplan": "60–61"
+        },
+        {
+         "text": "The cloud and the trumpets",
+         "ref": "9:15–10:10",
+         "kaplan": "62–63"
+        },
+        {
+         "text": "Setting out from Sinai",
+         "ref": "10:11–36",
+         "kaplan": "64–66"
+        },
+        {
+         "text": "Complaints; the seventy elders; the quail",
+         "ref": "11",
+         "kaplan": "67–69"
+        },
+        {
+         "text": "Miryam and ʾAhăron speak against Moshe",
+         "ref": "12",
+         "kaplan": "70–72"
+        }
+       ]
+      },
+      {
+       "n": 4,
+       "name": "Shĕlaḥ Lĕkha",
+       "id": "shelah-lekha",
+       "he": "שלח לך",
+       "word": "Spy",
+       "ref": "13:1–15:41",
+       "hook": "The spies, forty years decreed, wine and flour offerings, ḥalla, ṣiṣith",
+       "kaplan": "73–82",
+       "axis": true,
+       "details": [
+        {
+         "text": "The spies",
+         "ref": "13:1–14:10",
+         "kaplan": "73"
+        },
+        {
+         "text": "Moshe pleads; forty years decreed",
+         "ref": "14:11–45",
+         "kaplan": "74–75"
+        },
+        {
+         "text": "Wine and flour with the offerings; ḥalla",
+         "ref": "15:1–21",
+         "kaplan": "76–77"
+        },
+        {
+         "text": "Offerings for an unintended error",
+         "ref": "15:22–31",
+         "kaplan": "78–79"
+        },
+        {
+         "text": "The wood gatherer on Shabbath",
+         "ref": "15:32–36",
+         "kaplan": "80–81"
+        },
+        {
+         "text": "Ṣiṣith",
+         "ref": "15:37–41",
+         "kaplan": "82"
+        }
+       ]
+      },
+      {
+       "n": 5,
+       "name": "Qoraḥ",
+       "id": "qorah",
+       "he": "קרח",
+       "word": "Rebel",
+       "ref": "16:1–18:32",
+       "hook": "Qoraḥ's rebellion, ʾAhăron's staff blossoms, gifts to kohănim and Lĕwiyyim",
+       "kaplan": "83–95",
+       "axis": false,
+       "details": [
+        {
+         "text": "Qoraḥ's rebellion",
+         "ref": "16:1–35",
+         "kaplan": "83–85"
+        },
+        {
+         "text": "The fire pans; ʾAhăron stops the plague",
+         "ref": "17:1–15",
+         "kaplan": "86–88"
+        },
+        {
+         "text": "ʾAhăron's staff blossoms",
+         "ref": "17:16–28",
+         "kaplan": "89–91"
+        },
+        {
+         "text": "Duties and gifts of the kohănim and Lĕwiyyim",
+         "ref": "18",
+         "kaplan": "92–95"
+        }
+       ]
+      }
+     ],
+     "aid": "Complain, spy, rebel."
+    },
+    {
+     "title": "Year forty",
+     "parashiyyoth": [
+      {
+       "n": 6,
+       "name": "Ḥuqqath",
+       "id": "huqqath",
+       "he": "חקת",
+       "word": "Year forty",
+       "ref": "19:1–22:1",
+       "hook": "The red heifer; Miryam dies, the rock, ʾAhăron dies, the copper snake, Siḥon and ʿOgh",
+       "kaplan": "96–105",
+       "axis": false,
+       "details": [
+        {
+         "text": "The red heifer",
+         "ref": "19",
+         "kaplan": "96"
+        },
+        {
+         "text": "Miryam dies; water from the rock",
+         "ref": "20:1–13",
+         "kaplan": "97–99"
+        },
+        {
+         "text": "ʾĔdhom refuses; ʾAhăron dies",
+         "ref": "20:14–29",
+         "kaplan": "100–101"
+        },
+        {
+         "text": "ʿĂradh; the copper snake; onward",
+         "ref": "21:1–16",
+         "kaplan": "102–103"
+        },
+        {
+         "text": "The song of the well",
+         "ref": "21:17–20",
+         "kaplan": "104"
+        },
+        {
+         "text": "Siḥon and ʿOgh",
+         "ref": "21:21–22:1",
+         "kaplan": "105"
+        }
+       ]
+      }
+     ],
+     "aid": "The old generation passes; Miryam and ʾAhăron die."
+    },
+    {
+     "title": "The plains of Moʾav",
+     "parashiyyoth": [
+      {
+       "n": 7,
+       "name": "Balaq",
+       "id": "balaq",
+       "he": "בלק",
+       "word": "Blessed",
+       "ref": "22:2–25:9",
+       "hook": "Bilʿam's donkey and blessings, the people go astray at Pĕʿor",
+       "kaplan": "106–107",
+       "axis": false,
+       "note": "Kaplan has one section for the Bilʿam story (§106); the lines follow the sedarim.",
+       "details": [
+        {
+         "text": "Balaq hires Bilʿam; the donkey",
+         "ref": "22",
+         "kaplan": ""
+        },
+        {
+         "text": "Bilʿam's blessings",
+         "ref": "23–24",
+         "kaplan": ""
+        },
+        {
+         "text": "The people go astray at Pĕʿor",
+         "ref": "25:1–9",
+         "kaplan": "107"
+        }
+       ]
+      },
+      {
+       "n": 8,
+       "name": "Pinĕḥas",
+       "id": "pinehas",
+       "he": "פינחס",
+       "word": "Counted again",
+       "ref": "25:10–30:1",
+       "hook": "Pinĕḥas given the covenant of peace, the new census, Ṣĕlofḥadh's daughters, Yĕhoshuaʿ, festival offerings",
+       "kaplan": "108–142",
+       "axis": false,
+       "details": [
+        {
+         "text": "Pinĕḥas given the covenant of peace; war on Midhyan ordered",
+         "ref": "25:10–26:1",
+         "kaplan": "108–109"
+        },
+        {
+         "text": "The new census",
+         "ref": "26:1–51",
+         "kaplan": "110–121"
+        },
+        {
+         "text": "Dividing the Land; the Lĕwiyyim counted",
+         "ref": "26:52–65",
+         "kaplan": "122–123"
+        },
+        {
+         "text": "Ṣĕlofḥadh's daughters",
+         "ref": "27:1–11",
+         "kaplan": "124–125"
+        },
+        {
+         "text": "Yĕhoshuaʿ chosen",
+         "ref": "27:12–23",
+         "kaplan": "126–127"
+        },
+        {
+         "text": "Offerings: daily, Shabbath, Roʾsh Ḥodhesh",
+         "ref": "28:1–15",
+         "kaplan": "128–130"
+        },
+        {
+         "text": "Offerings for each festival",
+         "ref": "28:16–30:1",
+         "kaplan": "131–142"
+        }
+       ]
+      },
+      {
+       "n": 9,
+       "name": "Maṭṭoth",
+       "id": "mattoth",
+       "he": "מטות",
+       "word": "Settled",
+       "ref": "30:2–32:42",
+       "hook": "Vows, war with Midhyan, Rĕʾuven and Gadh stay east",
+       "kaplan": "143–150",
+       "axis": false,
+       "details": [
+        {
+         "text": "Vows",
+         "ref": "30:2–17",
+         "kaplan": "143"
+        },
+        {
+         "text": "War with Midhyan",
+         "ref": "31:1–24",
+         "kaplan": "144–145"
+        },
+        {
+         "text": "Dividing the spoils",
+         "ref": "31:25–54",
+         "kaplan": "146"
+        },
+        {
+         "text": "Rĕʾuven and Gadh ask for the east bank",
+         "ref": "32",
+         "kaplan": "147–150"
+        }
+       ]
+      },
+      {
+       "n": 10,
+       "name": "Masʿe",
+       "id": "mase",
+       "he": "מסעי",
+       "word": "Mapped",
+       "ref": "33:1–36:13",
+       "hook": "The 42 stops, the borders, cities of refuge, Ṣĕlofḥadh's daughters marry",
+       "kaplan": "151–158",
+       "axis": false,
+       "details": [
+        {
+         "text": "The journeys, stop by stop",
+         "ref": "33:1–49",
+         "kaplan": "151–152"
+        },
+        {
+         "text": "Taking the Land; its borders",
+         "ref": "33:50–34:15",
+         "kaplan": "153–154"
+        },
+        {
+         "text": "The new leaders",
+         "ref": "34:16–29",
+         "kaplan": "155"
+        },
+        {
+         "text": "Cities of the Lĕwiyyim; cities of refuge",
+         "ref": "35",
+         "kaplan": "156–157"
+        },
+        {
+         "text": "Ṣĕlofḥadh's daughters marry",
+         "ref": "36",
+         "kaplan": "158"
+        }
+       ]
+      }
+     ],
+     "aid": "Blessed, counted again, settled, mapped."
+    }
+   ]
+  },
+  {
+   "n": 5,
+   "name": "Dĕvarim",
+   "he": "דברים",
+   "en": "Deuteronomy",
+   "id": "deuteronomy",
+   "word": "Restatement",
+   "line": "Moshe restates the Torah (Mishne Torah) on the plains of Moʾav and the covenant is completed there: look back, the miṣwoth, the covenant, his death",
+   "count": 11,
+   "chapters": 34,
+   "intro": "Tradition calls this book Mishne Torah, the Torah restated (Deuteronomy 17:18). Moshe restates it on the plains of Moʾav in his last weeks, and there the people enter the covenant a second time, completing the pact made at Sinai. It follows his speeches: look back, lay the foundations, teach the laws, seal the covenant, hand over. <strong>Axis event: the covenant in Moʾav (Ki Thavoʾ and Niṣṣavim, Deuteronomy 28:69–29:14), made with those standing there and those not yet born.</strong>",
+   "sections": [
+    {
+     "title": "Looking back",
+     "parashiyyoth": [
+      {
+       "n": 1,
+       "name": "Dĕvarim",
+       "id": "devarim",
+       "he": "דברים",
+       "word": "Look back",
+       "ref": "1:1–3:22",
+       "hook": "Judges appointed, the spies retold, ʿEsaw, Moʾav and ʿAmmon, Siḥon and ʿOgh",
+       "kaplan": "1–5",
+       "axis": false,
+       "details": [
+        {
+         "text": "Moshe begins; the judges; the spies retold",
+         "ref": "1:1–2:1",
+         "kaplan": "1"
+        },
+        {
+         "text": "Passing ʿEsaw, Moʾav and ʿAmmon",
+         "ref": "2:2–30",
+         "kaplan": "2–4"
+        },
+        {
+         "text": "Siḥon and ʿOgh; the east bank given out",
+         "ref": "2:31–3:22",
+         "kaplan": "5"
+        }
+       ]
+      }
+     ],
+     "aid": "Look back."
+    },
+    {
+     "title": "Foundations: love and loyalty",
+     "parashiyyoth": [
+      {
+       "n": 2,
+       "name": "Waʾethḥannan",
+       "id": "waethhannan",
+       "he": "ואתחנן",
+       "word": "Love",
+       "ref": "3:23–7:11",
+       "hook": "Moshe pleads to enter, \"do not add or take away,\" the Ten Statements again, Shĕmaʿ",
+       "kaplan": "6–26",
+       "axis": false,
+       "details": [
+        {
+         "text": "Moshe pleads to enter the Land",
+         "ref": "3:23–29",
+         "kaplan": "6"
+        },
+        {
+         "text": "Remember Sinai; no images",
+         "ref": "4:1–40",
+         "kaplan": "7–8"
+        },
+        {
+         "text": "Cities of refuge",
+         "ref": "4:41–49",
+         "kaplan": "9"
+        },
+        {
+         "text": "The Ten Statements again",
+         "ref": "5",
+         "kaplan": "10–21"
+        },
+        {
+         "text": "The Shĕmaʿ",
+         "ref": "6:4–9",
+         "kaplan": "22"
+        },
+        {
+         "text": "Don't forget in good times; \"when your child asks\"",
+         "ref": "6:10–25",
+         "kaplan": "23–25"
+        },
+        {
+         "text": "Don't mix with the nations of the Land",
+         "ref": "7:1–11",
+         "kaplan": "26"
+        }
+       ]
+      },
+      {
+       "n": 3,
+       "name": "ʿEqev",
+       "id": "eqev",
+       "he": "עקב",
+       "word": "Don't forget",
+       "ref": "7:12–11:25",
+       "hook": "Reward, the lesson of the manna, the Calf retold, second tablets, second paragraph of Shĕmaʿ",
+       "kaplan": "27–36",
+       "axis": false,
+       "details": [
+        {
+         "text": "The reward; don't be afraid",
+         "ref": "7:12–26",
+         "kaplan": "27–28"
+        },
+        {
+         "text": "The lesson of the manna; don't forget",
+         "ref": "8",
+         "kaplan": "29–30"
+        },
+        {
+         "text": "Not because you are righteous; the Calf retold",
+         "ref": "9",
+         "kaplan": "31"
+        },
+        {
+         "text": "The second tablets",
+         "ref": "10:1–11",
+         "kaplan": "32"
+        },
+        {
+         "text": "What Hashem asks of you",
+         "ref": "10:12–11:9",
+         "kaplan": "33"
+        },
+        {
+         "text": "The Land, and the second paragraph of Shĕmaʿ",
+         "ref": "11:10–25",
+         "kaplan": "34–36"
+        }
+       ]
+      }
+     ],
+     "aid": "Love, don't forget."
+    },
+    {
+     "title": "The laws",
+     "parashiyyoth": [
+      {
+       "n": 4,
+       "name": "Rĕʾe",
+       "id": "ree",
+       "he": "ראה",
+       "word": "Worship",
+       "ref": "11:26–16:17",
+       "hook": "Blessing or curse, one chosen place, false prophets, permitted foods, tithes, the festivals",
+       "kaplan": "37–56",
+       "axis": false,
+       "details": [
+        {
+         "text": "Blessing or curse",
+         "ref": "11:26–28",
+         "kaplan": "37"
+        },
+        {
+         "text": "One chosen place; meat at home",
+         "ref": "11:29–12:28",
+         "kaplan": "38–39"
+        },
+        {
+         "text": "False prophets, enticers, a city gone astray",
+         "ref": "12:29–13:19",
+         "kaplan": "40–43"
+        },
+        {
+         "text": "Permitted foods",
+         "ref": "14:1–21",
+         "kaplan": "44–47"
+        },
+        {
+         "text": "Tithes",
+         "ref": "14:22–29",
+         "kaplan": "48–49"
+        },
+        {
+         "text": "Shĕmiṭṭa, lending, servants, firstborn animals",
+         "ref": "15",
+         "kaplan": "50–53"
+        },
+        {
+         "text": "The three festivals",
+         "ref": "16:1–17",
+         "kaplan": "54–56"
+        }
+       ]
+      },
+      {
+       "n": 5,
+       "name": "Shofĕṭim",
+       "id": "shofetim",
+       "he": "שופטים",
+       "word": "Leaders",
+       "ref": "16:18–21:9",
+       "hook": "Judges, the king, kohănim, prophets, cities of refuge, going to war",
+       "kaplan": "57–74",
+       "axis": false,
+       "details": [
+        {
+         "text": "Judges and honest justice",
+         "ref": "16:18–17:13",
+         "kaplan": "57–61"
+        },
+        {
+         "text": "The king",
+         "ref": "17:14–20",
+         "kaplan": "62"
+        },
+        {
+         "text": "Kohănim and Lĕwiyyim",
+         "ref": "18:1–8",
+         "kaplan": "63–65"
+        },
+        {
+         "text": "The true prophet",
+         "ref": "18:9–22",
+         "kaplan": "66"
+        },
+        {
+         "text": "Cities of refuge, boundaries, witnesses",
+         "ref": "19",
+         "kaplan": "67–70"
+        },
+        {
+         "text": "Going to war",
+         "ref": "20",
+         "kaplan": "71–73"
+        },
+        {
+         "text": "The unsolved murder",
+         "ref": "21:1–9",
+         "kaplan": "74"
+        }
+       ]
+      },
+      {
+       "n": 6,
+       "name": "Ki Theṣeʾ",
+       "id": "ki-these",
+       "he": "כי תצא",
+       "word": "Daily life",
+       "ref": "21:10–25:19",
+       "hook": "Family, lost objects, the bird's nest, fair wages, honest weights, ʿĂmaleq",
+       "kaplan": "75–118",
+       "axis": false,
+       "details": [
+        {
+         "text": "The captive woman, the firstborn's share, the rebellious son",
+         "ref": "21:10–23",
+         "kaplan": "75–78"
+        },
+        {
+         "text": "Lost objects, the fallen animal, the bird's nest, the roof railing",
+         "ref": "22:1–12",
+         "kaplan": "79–85"
+        },
+        {
+         "text": "Marriage, and who may join the community",
+         "ref": "22:13–23:9",
+         "kaplan": "86–96"
+        },
+        {
+         "text": "The camp, the runaway servant, interest, vows",
+         "ref": "23:10–26",
+         "kaplan": "97–103"
+        },
+        {
+         "text": "Divorce, the new husband, kidnapping, ṣaraʿath",
+         "ref": "24:1–9",
+         "kaplan": "104–107"
+        },
+        {
+         "text": "Pledges, wages, the poor, the forgotten sheaf",
+         "ref": "24:10–22",
+         "kaplan": "108–113"
+        },
+        {
+         "text": "Lashes, yibbum, honest weights",
+         "ref": "25:1–16",
+         "kaplan": "114–117"
+        },
+        {
+         "text": "Remember ʿĂmaleq",
+         "ref": "25:17–19",
+         "kaplan": "118"
+        }
+       ]
+      }
+     ],
+     "aid": "Worship, leaders, daily life. Rĕʾe is about serving Hashem, Shofĕṭim about the people who lead, Ki Theṣeʾ about how people treat each other."
+    },
+    {
+     "title": "The covenant",
+     "parashiyyoth": [
+      {
+       "n": 7,
+       "name": "Ki Thavoʾ",
+       "id": "ki-thavo",
+       "he": "כי תבוא",
+       "word": "Terms",
+       "ref": "26:1–29:8",
+       "hook": "First fruits, the stones at Har Gĕrizzim and Har ʿEval, blessings and curses, the covenant in Moʾav",
+       "kaplan": "119–139",
+       "axis": true,
+       "details": [
+        {
+         "text": "First fruits",
+         "ref": "26:1–11",
+         "kaplan": "119"
+        },
+        {
+         "text": "The tithe declaration; Yisraʾel and Hashem bound together",
+         "ref": "26:12–19",
+         "kaplan": "120–121"
+        },
+        {
+         "text": "The stones, and the twelve curses at Har ʿEval",
+         "ref": "27",
+         "kaplan": "122–135"
+        },
+        {
+         "text": "Blessings and curses; \"the words of the covenant\"",
+         "ref": "28",
+         "kaplan": "136–138"
+        },
+        {
+         "text": "Moshe calls the people into the covenant",
+         "ref": "29:1–8",
+         "kaplan": "139"
+        }
+       ]
+      },
+      {
+       "n": 8,
+       "name": "Niṣṣavim",
+       "id": "nissavim",
+       "he": "נצבים",
+       "word": "Choose",
+       "ref": "29:9–30:20",
+       "hook": "A covenant for every generation, tĕshuva (return), \"not in heaven,\" choose life",
+       "kaplan": "140–143",
+       "axis": true,
+       "details": [
+        {
+         "text": "The covenant for every generation",
+         "ref": "29:9–28",
+         "kaplan": "140"
+        },
+        {
+         "text": "Return and restoration",
+         "ref": "30:1–10",
+         "kaplan": "141"
+        },
+        {
+         "text": "\"Not in heaven\"; choose life",
+         "ref": "30:11–20",
+         "kaplan": "142–143"
+        }
+       ]
+      }
+     ],
+     "aid": "Terms, choose."
+    },
+    {
+     "title": "Moshe's last day",
+     "parashiyyoth": [
+      {
+       "n": 9,
+       "name": "Wayyelekh",
+       "id": "wayyelekh",
+       "he": "וילך",
+       "word": "Hand over",
+       "ref": "31:1–31:30",
+       "hook": "Yĕhoshuaʿ takes over, Haqhel, the Torah written and handed over",
+       "kaplan": "144–146",
+       "axis": false,
+       "details": [
+        {
+         "text": "Yĕhoshuaʿ encouraged; Haqhel",
+         "ref": "31:1–13",
+         "kaplan": "144–145"
+        },
+        {
+         "text": "The Torah written down; the song foretold",
+         "ref": "31:14–30",
+         "kaplan": "146"
+        }
+       ]
+      },
+      {
+       "n": 10,
+       "name": "Haʾăzinu",
+       "id": "haazinu",
+       "he": "האזינו",
+       "word": "Sing",
+       "ref": "32:1–32:52",
+       "hook": "Moshe's song, told to climb Har Nĕvo",
+       "kaplan": "147–149",
+       "axis": false,
+       "details": [
+        {
+         "text": "Moshe's song",
+         "ref": "32:1–43",
+         "kaplan": "147"
+        },
+        {
+         "text": "\"It is your life\"; told to climb Har Nĕvo",
+         "ref": "32:44–52",
+         "kaplan": "148–149"
+        }
+       ]
+      },
+      {
+       "n": 11,
+       "name": "Wĕzoʾth Habbĕrakha",
+       "id": "wezoth-habberakha",
+       "he": "וזאת הברכה",
+       "word": "Bless",
+       "ref": "33:1–34:12",
+       "hook": "Moshe blesses the tribes, Moshe dies",
+       "kaplan": "150–159",
+       "axis": false,
+       "details": [
+        {
+         "text": "Moshe blesses the tribes",
+         "ref": "33",
+         "kaplan": "150–158"
+        },
+        {
+         "text": "Moshe dies",
+         "ref": "34",
+         "kaplan": "159"
+        }
+       ]
+      }
+     ],
+     "aid": "Hand over, sing, bless."
+    }
+   ]
+  }
+ ],
+ "chain": "Family, Nation, Nearness, Journey, Restatement",
+ "spine": {
+  "intro": "One idea ties the books together: <strong>Sinai sits in the middle.</strong> From Exodus 19 to Numbers 10:10 the people stay at the mountain for about a year, and that year fills roughly a third of the Torah. Everything before it moves toward Sinai; everything after it moves from Sinai toward the Land. The Sinai year starts in the middle of Shĕmoth and ends early in Bĕmidhbar, so no book boundary matches a period boundary.",
+  "periods": [
+   {
+    "name": "Before Sinai",
+    "ref": "Genesis 1 to Exodus 18",
+    "note": "2,448 years, from creation to the mountain: the family, then Miṣrayim",
+    "w": 16.5
+   },
+   {
+    "name": "At Sinai",
+    "ref": "Exodus 19 to Numbers 10:10",
+    "note": "About one year at the mountain: all of Wayyiqraʾ falls here",
+    "w": 19
+   },
+   {
+    "name": "The wilderness",
+    "ref": "Numbers 10:11 to 22:1",
+    "note": "38 years, most of them passed over in silence",
+    "w": 3.5
+   },
+   {
+    "name": "The plains of Moʾav",
+    "ref": "Numbers 22:2 to Deuteronomy 34",
+    "note": "The last months before Moshe dies",
+    "w": 15
+   }
+  ]
+ },
+ "covenant": {
+  "intro": "Following José Faur's <em>Understanding the Covenant</em>, the hooks name every place a covenant is made, remembered, broken or renewed, so the thread runs through all five books. The pact is made at Sinai and completed in Moʾav, which is why both ends of the spine matter.",
+  "stops": [
+   {
+    "id": "noah",
+    "what": "With Noaḥ, and the rainbow",
+    "ref": "Genesis 9"
+   },
+   {
+    "id": "lekh-lekha",
+    "what": "Between the pieces, and mila",
+    "ref": "Genesis 15, 17"
+   },
+   {
+    "id": "shemoth",
+    "what": "Hashem remembers it",
+    "ref": "Exodus 2:24"
+   },
+   {
+    "id": "yithro",
+    "what": "Proposed",
+    "ref": "Exodus 19:3–6"
+   },
+   {
+    "id": "mishpatim",
+    "what": "Sealed: \"we will do and we will hear\"",
+    "ref": "Exodus 24:7–8"
+   },
+   {
+    "id": "ki-thissa",
+    "what": "Renewed after the Calf",
+    "ref": "Exodus 34:10, 27"
+   },
+   {
+    "id": "behuqqothay",
+    "what": "Remembered in exile",
+    "ref": "Leviticus 26:42–45"
+   },
+   {
+    "id": "pinehas",
+    "what": "Pinĕḥas's covenant of peace",
+    "ref": "Numbers 25:12"
+   },
+   {
+    "id": "ki-thavo",
+    "what": "Completed in Moʾav",
+    "ref": "Deuteronomy 28:69–29:14"
+   }
+  ]
+ }
+}

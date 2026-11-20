@@ -1,5 +1,5 @@
 ---
 title: "Ṭĕ'amim"
-weight: 40
+weight: 20
 robots: "noindex, nofollow"
 ---

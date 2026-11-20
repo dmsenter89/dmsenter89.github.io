@@ -1,0 +1,105 @@
+{{ define "main" }}
+
+{{- /* Chumash Map appendix page, from data/siddur/appendix/chumash-map.json:
+       { chain, spine: {intro, periods: [{name, ref, note, w}]},
+         books: [{n, id, name, he, en, word, line, count, chapters, intro,
+                  sections: [{title, aid, parashiyyoth: [{n, id, name, he, word,
+                    ref, hook, kaplan, axis, note?, details: [{text, ref, kaplan}]}]}]}],
+         covenant: {intro, stops: [{id, what, ref}]} }.
+       Each parasha is a <details> (reuses the EY Triennial .ey-* rows): the
+       summary shows name + poster word, opening it shows the hook and the
+       paragraph lines. .cm-word marks everything "Quiz me" blanks out. */ -}}
+{{- $v := index hugo.Data.siddur.appendix "chumash-map" }}
+
+<h1 class="siddur-page-title">{{ .Title }}</h1>
+{{ with .Content }}<div class="siddur-prose">{{ . }}</div>{{ end }}
+
+<label class="cm-quiz"><input type="checkbox" id="cm-quiz"> Quiz me</label>
+
+<nav class="ey-nav" aria-label="Sections">
+  <a href="#five-books">Five books</a>
+  {{- range $v.books }}<a href="#{{ .id }}">{{ .name }}</a>{{ end }}
+  <a href="#covenant">Covenant</a>
+</nav>
+
+<section class="ey-section" id="five-books">
+  <h2>The Five Books</h2>
+  <p class="cm-chain">{{ range $i, $w := split $v.chain ", " }}{{ if $i }}<span aria-hidden="true"> · </span>{{ end }}<span class="cm-word">{{ $w }}</span>{{ end }}</p>
+
+  <figure class="cm-spine">
+    <div class="cm-bar cm-books">
+      {{- range $v.books }}<a href="#{{ .id }}" style="--w: {{ .count }}" title="{{ .name }}" lang="he">{{ .he }}</a>{{ end }}
+    </div>
+    <div class="cm-bar cm-periods" aria-hidden="true">
+      {{- range $i, $p := $v.spine.periods }}<i class="p{{ $i }}" style="--w: {{ .w }}"></i>{{ end }}
+    </div>
+    <ul class="cm-legend">
+      {{- range $i, $p := $v.spine.periods }}
+      <li><i class="p{{ $i }}"></i><strong>{{ .name }}</strong> <span class="ey-ref">{{ .ref }}</span><br><span class="cm-muted">{{ .note }}</span></li>
+      {{- end }}
+    </ul>
+    <figcaption class="cm-muted">{{ $v.spine.intro | safeHTML }}</figcaption>
+  </figure>
+
+  <div class="ey-list">
+    {{- range $v.books }}
+    <a class="ey-item ey-static cm-book" href="#{{ .id }}">
+      <div class="ey-head"><span class="cm-n">{{ .n }}</span><span class="ey-name">{{ .name }}</span><span class="ey-he" lang="he" dir="rtl">{{ .he }}</span><span class="cm-word">{{ .word }}</span><span class="ey-count">{{ .count }} parashiyyoth · {{ .chapters }} chapters</span></div>
+      <div class="cm-line">{{ .line }}</div>
+    </a>
+    {{- end }}
+  </div>
+</section>
+
+{{- range $v.books }}
+{{- $book := . }}
+<section class="ey-section" id="{{ .id }}">
+  <h2>{{ .n }}. {{ .name }}: <span class="cm-word">{{ .word }}</span></h2>
+  <p class="cm-intro">{{ .intro | safeHTML }}</p>
+  {{- range .sections }}
+  <h3 class="cm-sec">{{ .title }}</h3>
+  <p class="cm-aid">{{ .aid }}</p>
+  <div class="ey-list">
+    {{- range .parashiyyoth }}
+    <details class="ey-item" id="{{ .id }}">
+      <summary>
+        <div class="ey-head"><span class="cm-n">{{ .n }}</span><span class="ey-name">{{ .name }}</span><span class="ey-he" lang="he" dir="rtl">{{ .he }}</span><span class="cm-vv">{{ .ref }}</span></div>
+        <div class="cm-pw"><span class="cm-word">{{ .word }}</span>{{ if .axis }}<span class="cm-axis">Axis</span>{{ end }}</div>
+      </summary>
+      <p class="cm-hook">{{ .hook }}</p>
+      {{ with .note }}<p class="ey-notes">{{ . }}</p>{{ end }}
+      <ul class="cm-lines">
+        {{- range .details }}
+        <li><span>{{ .text }}{{ with .kaplan }} <span class="cm-muted">§{{ . }}</span>{{ end }}</span><a class="ey-ref cm-ref" href="https://www.sefaria.org/{{ $book.en }}.{{ replace (replace .ref ":" ".") "–" "-" }}">{{ .ref }}</a></li>
+        {{- end }}
+      </ul>
+    </details>
+    {{- end }}
+  </div>
+  {{- end }}
+</section>
+{{- end }}
+
+{{- with $v.covenant }}
+<section class="ey-section" id="covenant">
+  <h2>The Covenant Thread</h2>
+  <p class="cm-intro">{{ .intro | safeHTML }}</p>
+  <ol class="cm-thread">
+    {{- range .stops }}<li><a href="#{{ .id }}">{{ .what }}</a> <span class="ey-ref cm-muted">{{ .ref }}</span></li>{{ end }}
+  </ol>
+</section>
+{{- end }}
+
+<script>
+// A link to a parasha (#lekh-lekha) opens it.
+function cmOpen() { const d = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (d && d.tagName === 'DETAILS') d.open = true; }
+cmOpen(); addEventListener('hashchange', cmOpen);
+// Quiz me: tap a blanked word to reveal it (without toggling its <details>).
+const cmQuiz = document.getElementById('cm-quiz');
+cmQuiz.addEventListener('change', () => document.querySelectorAll('.cm-word.shown').forEach(w => w.classList.remove('shown')));
+document.addEventListener('click', e => {
+  const w = cmQuiz.checked && e.target.closest('.cm-word');
+  if (w) { e.preventDefault(); w.classList.toggle('shown'); }
+});
+</script>
+{{ end }}

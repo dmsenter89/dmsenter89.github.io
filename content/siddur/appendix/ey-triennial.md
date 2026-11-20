@@ -1,6 +1,6 @@
 ---
 title: "EY Triennial Cycle"
-weight: 30
+weight: 40
 robots: "noindex, nofollow"
 layout: "ey-triennial"
 ---

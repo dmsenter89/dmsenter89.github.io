@@ -1,5 +1,5 @@
 ---
 title: "Study Cycles"
-weight: 60
+weight: 50
 robots: "noindex, nofollow"
 ---

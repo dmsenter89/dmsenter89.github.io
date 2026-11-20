@@ -366,6 +366,14 @@ split on spaces and maqaf, matching the other two cycles' data to within
 about half a percent. A new Mishna name in the table needs a `MISHNA` entry
 in the script (site spelling → Sefaria title).
 
+**Appendix > Ḥumash Map** (`layout: "chumash-map"`) reads
+`data/siddur/appendix/chumash-map.json`: five books → sections → 54
+parashiyyoth (poster word, hook, Kaplan §, and paragraph `details` lines whose
+`ref` becomes a Sefaria link), plus the Sinai `spine` and the `covenant`
+thread (stops link to parasha ids). Hand-edit the JSON; it was extracted once
+from the "Chumash Map: Content Draft" doc. Anything with class `cm-word`
+(book words, poster words) is blanked by the page's "Quiz me" checkbox.
+
 **Appendix > Pronunciation & Transliteration is auto-generated, not
 hand-authored.** Letter names, sound descriptions, and notes live as
 hand-curated prose in the generator; only the "Write" symbols come from

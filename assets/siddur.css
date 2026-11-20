@@ -603,6 +603,86 @@ html.show-translation .siddur-rubric .siddur-translation {
   .ey-count { display: none; }
 }
 
+/* --- Chumash Map (Appendix) --- */
+
+/* Built on the EY Triennial rows above. The spine is two flex bars sized by
+   parasha count (books) and by period; .cm-word is what "Quiz me" blanks. */
+.cm-quiz { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 0.5rem; font-size: 0.9rem; cursor: pointer; }
+.cm-muted { color: var(--siddur-muted); }
+.cm-chain { margin: 0.5rem 0 1rem; font-size: 1.2rem; font-weight: 600; color: var(--siddur-accent); text-align: center; }
+.cm-spine { margin: 0 0 1.25rem; }
+.cm-bar { display: flex; gap: 2px; }
+.cm-bar > * { flex: var(--w) 1 0; min-width: 0; }
+.cm-books a {
+  padding: 0.3rem 0.2rem;
+  border-radius: 6px 6px 0 0;
+  background: var(--siddur-sidebar-bg);
+  border: 1px solid var(--siddur-border);
+  border-bottom: 0;
+  color: var(--siddur-fg);
+  font: 0.85rem "Noto Serif Hebrew", serif;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cm-books a:hover { color: var(--siddur-accent); }
+.cm-periods { height: 0.9rem; border-radius: 0 0 6px 6px; overflow: hidden; }
+.cm-spine .p0 { background: color-mix(in srgb, var(--siddur-accent) 30%, var(--siddur-bg)); }
+.cm-spine .p1 { background: var(--siddur-accent); }
+.cm-spine .p2 { background: color-mix(in srgb, var(--siddur-fg) 30%, var(--siddur-bg)); }
+.cm-spine .p3 { background: color-mix(in srgb, var(--siddur-accent) 60%, var(--siddur-bg)); }
+.cm-legend { list-style: none; padding: 0; margin: 0.75rem 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0.5rem 1rem; font-size: 0.9rem; }
+.cm-legend li { padding-left: 1.3rem; position: relative; }
+.cm-legend i { position: absolute; left: 0; top: 0.3rem; width: 0.85rem; height: 0.85rem; border-radius: 3px; }
+.cm-spine figcaption { font-size: 0.9rem; }
+.cm-book { display: block; color: inherit; text-decoration: none; }
+.cm-book:hover .ey-name { color: var(--siddur-accent); }
+.cm-book .cm-word { font-weight: 600; color: var(--siddur-accent); }
+.cm-line { font-size: 0.9rem; color: var(--siddur-muted); }
+.cm-n { min-width: 1.1rem; color: var(--siddur-muted); font-variant-numeric: tabular-nums; }
+.cm-vv { margin-left: auto; font-size: 0.8rem; color: var(--siddur-muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.cm-axis {
+  margin-left: 0.5rem;
+  vertical-align: 0.1em;
+  padding: 0 0.4rem;
+  border: 1px solid var(--siddur-accent);
+  border-radius: 999px;
+  color: var(--siddur-accent);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.cm-pw { padding-left: 1.7rem; color: var(--siddur-accent); font-weight: 600; }
+.cm-intro { margin: 0 0 0.5rem; }
+.cm-sec {
+  margin: 1.25rem 0 0.1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--siddur-muted);
+}
+.cm-aid { margin: 0 0 0.5rem; font-size: 0.9rem; font-style: italic; }
+.cm-hook { margin: 0.6rem 0.8rem 0.2rem; font-weight: 500; }
+.cm-lines { list-style: none; margin: 0.3rem 0 0.6rem; padding: 0 0.8rem 0 2.5rem; font-size: 0.92rem; }
+.cm-lines li { display: flex; align-items: baseline; gap: 0.75rem; padding: 0.25rem 0; border-top: 1px dashed var(--siddur-border); }
+.cm-lines li:first-child { border-top: 0; }
+.cm-lines .cm-muted { white-space: nowrap; }
+.cm-ref { margin-left: auto; color: var(--siddur-accent); }
+.cm-thread li { margin: 0.3rem 0; }
+.cm-thread a { color: var(--siddur-accent); }
+
+/* Quiz me: blank out the words; tap one to reveal it. */
+.siddur-main:has(#cm-quiz:checked) .cm-word:not(.shown) {
+  color: transparent;
+  background: var(--siddur-border);
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+.siddur-main:has(#cm-quiz:checked) .cm-aid { display: none; }
+
 .siddur-pronunciation-list {
   list-style: none;
   padding: 0;

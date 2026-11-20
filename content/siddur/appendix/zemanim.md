@@ -1,6 +1,6 @@
 ---
 title: "Zĕmannim"
-weight: 50
+weight: 60
 robots: "noindex, nofollow"
 layout: "zemanim"
 ---
