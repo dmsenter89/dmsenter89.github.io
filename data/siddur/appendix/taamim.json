@@ -12,6 +12,74 @@
           "hebrew": "זַרְקָ֘א שׁוֹפָר־הוֹלֵ֣ךְ סְגוֹלְתָּ֒א שׁוֹפָר־הוֹלֵ֣ךְ רְבִ֗יעַ פָּזֶר־גָּד֡וֹל תַּ֠לְשָׂא אַזְלָ֨א גְּרִ֜ישׁ שְׁנֵי־גְרִישִׁ֞ין זָקֵף־גָּד֕וֹל ‏שׁוֹפָר־מְהֻפָּ֤ךְ קַדְמָא֙ זָקֵף־קָט֔וֹן דַּרְגָּ֧א תְּבִ֛יר מַאֲרִ֥יךְ טַרְחָ֖א אַתְנָ֑ח  יְ֚תִיב פָּסֵ֣ק׀ תְּרֵ֨י־קַדְמִין֙  שַׁלְשֶׁ֓לֶת סוֹף־פָּסֽוּק׃"
         }
       ]
+    },
+    {
+      "id": "reading",
+      "title": "Reading Correctly",
+      "items": [
+        {
+          "type": "rubric",
+          "id": "reading-intro",
+          "hebrew": "הטעמים מלמדים כיצד לקרוא את הפסוק, והכללים שלהלן כיצד לקרוא את המילה. כל כלל הוא דפוס ולא רשימה לשינון: המתרגל בהם שומע אותם עוד לפני שרואה אותם, ומתוך כך יקרא כראוי גם בספר תורה, שאין בו לא ניקוד ולא טעמים. והסימנים המקובלים מובאים לזיכרון.",
+          "translation": "The ṭĕ'amim tell you how to read a verse; these rules tell you how to read a word. Each one is a pattern, not a list to memorize. With practice you start to hear it before you see it, and that's what lets you read correctly from a Sefer Torah, which has no vowels and no ṭĕ'amim at all. Where tradition has a memory aid (a siman), it's given as a \"Hook\"."
+        },
+        {
+          "type": "rubric",
+          "id": "reading-stress",
+          "hebrewLead": "מלרע ומלעיל.",
+          "lead": "Stress.",
+          "hebrew": "רוב המילים מוטעמות בהברה האחרונה (מלרע). ואלו מוטעמות בהברה שלפניה (מלעיל): שמות בני שתי הברות בסגול, כגון מֶ֫לֶךְ, נַ֫עַר, קֹ֫דֶשׁ, בַּ֫יִת; הסיומת ־ַ֫יִם, כגון יָדַ֫יִם; ה״א המגמה, כגון אַ֫רְצָה; ופעלי עבר בסיומת ־תִּי, ־תָּ, ־נוּ, כגון שָׁמַ֫רְתִּי. וי״ו ההיפוך מזיזה את הטעם: וְ לפני עבר הופכת אותו לעתיד ומורידה את הטעם לסוף, כגון וְאָהַבְתָּ֫; וַ לפני עתיד הופכת אותו לעבר ולפעמים מעלה את הטעם, כגון וַיָּ֫קָם לעומת יָקוּם. שני טעמים אינם סמוכים זה לזה, לכן מילה מלרע שלפני מילה המוטעמת בראשה נסוגה לאחור, כגון קָ֣רָא לָ֑יְלָה. ויש שהטעם משנה את העניין: בָּ֫אָה בעבר, ובָּאָ֫ה בהווה (רש״י בראשית כט,ו). בכתב מנוקד הטעם עומד בדרך כלל על ההברה המוטעמת, חוץ מזרקא, סגולתא וקדמא שבסוף המילה, ותלשא ויתיב שבראשה.",
+          "translation": "Most words are stressed on the last syllable (milra'). The exceptions, stressed one syllable earlier (mil'el), come in families worth knowing: two-syllable nouns with segol, like מֶ֫לֶךְ, נַ֫עַר, קֹ֫דֶשׁ, בַּ֫יִת; the ending ־ַ֫יִם, as in יָדַ֫יִם; the ending ־ָה meaning \"toward\", as in אַ֫רְצָה (\"to the land\"); and past-tense verbs ending ־תִּי, ־תָּ, ־נוּ, like שָׁמַ֫רְתִּי. The joining waw moves the stress. וְ in front of a past form turns it into a future and pushes the stress to the end: וְאָהַבְתָּ֫, wĕʾahavtá. וַ in front of a future form turns it into a past and often pulls the stress back: וַיָּ֫קָם, wayyáqom, against יָקוּם, yaqúm. Two stressed syllables don't like to touch, so a milra' word before a word stressed at its start often steps back: קָ֣רָא לָ֑יְלָה, qára láyla. Stress can change the meaning: בָּ֫אָה (báʾa) is \"she came\", and בָּאָ֫ה (baʾá) is \"she is coming\" (Rashi on Bĕreshith 29:6). In a pointed text the ta'am usually sits on the stressed syllable. The exceptions always sit at the edge of the word, whatever its stress: zarqa, sĕgolta and qadma at the end, talsa and yĕthiv at the start."
+        },
+        {
+          "type": "rubric",
+          "id": "reading-daghesh",
+          "hebrewLead": "דגש קל ודגש חזק.",
+          "lead": "Hard and Doubled Letters.",
+          "hebrew": "לבגד״כפת יש קול קשה וקול רפה. בראש מילה הן רפות כשהמילה שלפניהן מסתיימת בתנועה, באחת מאותיות אהו״י, ונקראת עמה בלי הפסק, כגון וַֽיְהִי־כֵֽן; ואחר הפסק, או אחר מילה המסתיימת בעיצור, הן דגושות, כגון בְּרֵאשִׁ֖ית בָּרָ֣א. ובאמצע מילה: אחר שווא נח הן דגושות, כגון מַלְכּוּת, ואחר תנועה רפות, כגון כָּתַב. סימן: בגד״כפת אחר אהו״י רפות. דגש באות אחרת מכפיל אותה, ורובו צפוי: ה״א הידיעה מכפילה את שאחריה, כגון הַשָּׁמַיִם; וכן וי״ו ההיפוך שבעתיד, כגון וַיֹּאמֶר; ומ״ם השימוש, כגון מִשָּׁם; ואות אמצעית בבניין פיעל, כגון דִּבֶּר. אותיות אחהע״ר אינן מקבלות דגש, והתנועה שלפניהן מתארכת, כגון הָאָרֶץ.",
+          "translation": "Six letters, בגד כפת, have a hard sound and a soft one. At the start of a word they go soft when the word before ends in a vowel (spelled with one of אהו״י) and runs into this one without a pause: וַֽיְהִי־כֵֽן is wayhi-khen, not wayhi-ken. After a pause, or after a word that ends in a consonant, they stay hard: בְּרֵאשִׁ֖ית בָּרָ֣א, bĕreshith bara. Modern Israeli Hebrew has lost this rule entirely, so listen for it. Inside a word they are hard after a silent shĕwaʾ (מַלְכּוּת, malkuth) and soft after a vowel (כָּתַב, kathav). Hook: בגד כפת after אהו״י go soft. In any other letter, a daghesh doubles the sound: hold it a beat. Most doubling is predictable. The הַ meaning \"the\" doubles the letter after it (הַשָּׁמַיִם, hashshamayim), and so do the וַ that turns a future into a past (וַיֹּאמֶר, wayyomer) and the מִ meaning \"from\" (מִשָּׁם, mishsham). So does the middle root letter of a pi'el verb (דִּבֶּר, dibber). The throat letters and resh, אחהע״ר, never double; the vowel before them lengthens instead: הָאָרֶץ, haʾareṣ."
+        },
+        {
+          "type": "rubric",
+          "id": "reading-waw",
+          "hebrewLead": "וי״ו החיבור.",
+          "lead": "The Joining Waw.",
+          "hebrew": "וי״ו החיבור אינה תמיד וְ. לפני אותיות בומ״ף ולפני שווא היא שורוק, כגון וּמֹשֶׁה, וּבְכָל, ונקראת כאילו יש לפניה אל״ף, ולא כוי״ו עיצורית. לפני יְ היא בחיריק, כגון וִיהִי; לפני חטף היא כתנועת החטף, כגון וַאֲנִי, וֶאֱמֶת; ולפני הברה מוטעמת, בייחוד בצמדים קבועים, היא לעתים בקמץ, כגון תֹ֙הוּ֙ וָבֹ֔הוּ. ווי״ו ההיפוך שבעתיד היא בפתח ובדגש אחריה, כגון וַיֹּאמֶר: כשהפסוק מספר מעשה, כבר ידוע הניקוד. סימן: בומ״ף ושווא – שורוק.",
+          "translation": "\"And\" isn't always wĕ. Before the lip letters בומ״ף, and before any shĕwaʾ, it becomes the vowel u: וּמֹשֶׁה, umoshe; וּבְכָל, uvĕkhol. Say a clean u, as if an ʾalef stood in front of it, never wu. Before yĕ it becomes wi (וִיהִי, wihi), and before a ḥaṭaf it takes the ḥaṭaf's vowel (וַאֲנִי, waʾăni; וֶאֱמֶת, weʾĕmeth). Before a stressed syllable, especially in fixed pairs, it's sometimes wa: תֹ֙הוּ֙ וָבֹ֔הוּ, tohu wavohu. The waw that turns a future into a past is wa, and it doubles the letter after it: וַיֹּאמֶר, wayyomer. So once you know a verse is telling a story, you already know how to read its waws. Hook: בומ״ף and shĕwaʾ make it u."
+        },
+        {
+          "type": "rubric",
+          "id": "reading-qamas",
+          "hebrewLead": "קמץ קטן.",
+          "lead": "Short Qamaṣ.",
+          "hebrew": "קמץ הוא בדרך כלל קמץ גדול (a), ולפעמים קמץ קטן, שקריאתו כחולם (o). חמישה כללים לקמץ קטן: א. חטף קמץ, כגון צָהֳרַיִם. ב. קמץ לפני שווא, כשאין על הקמץ טעם או מתג, כגון חָכְמָה. ג. קמץ לפני אות דגושה, בדרך כלל, כגון חָנֵּנִי. ד. קמץ בסוף מילה הנסמכת במקף, בדרך כלל, כגון כָּל־. ה. וי״ו בפתח בראש מילה ואחריה שני קמצים, והמילה מלעיל: הקמץ השני קטן, כגון וַיָּ֫קָם. ומבחן המשפחה מועיל ביותר: אם יש חולם בקרובי המילה, גם בה o, כגון קֹדֶשׁ – קָדְשׁוֹ, אֹזֶן – אָזְנַיִם, כֹּל – כָּל־. ומתג מורה שהקמץ גדול והשווא שאחריו נע: לְאָכְלָה (למאכל) לעומת אָֽכְלָה (אש... אָֽכְלָה עָר מוֹאָב). (אם למקרא)",
+          "translation": "The same sign is usually a (qamaṣ gadhol) and sometimes o (qamaṣ qaṭan, read like a ḥolam). Tradition gives five rules for the o: (1) a ḥaṭaf qamaṣ, as in צָהֳרַיִם, ṣohorayim; (2) a qamaṣ before a shĕwaʾ, when the qamaṣ carries no ta'am or meteg, as in חָכְמָה, ḥokhma; (3) a qamaṣ before a letter with a daghesh, usually, as in חָנֵּנִי, ḥonneni; (4) a qamaṣ at the end of a word joined on by a maqaf, usually, as in כָּל־, kol; (5) after a word-initial וַ, when two qamaṣes follow and the word is stressed mil'el, the second is short, as in וַיָּ֫קָם, wayyáqom. Without vowels, the family test helps most: if the word's relatives have an o, it has one too. קֹדֶשׁ gives קָדְשׁוֹ, qodsho; אֹזֶן gives אָזְנַיִם, ʾoznayim; כֹּל gives כָּל־, kol. A meteg marks the opposite case, a long a with a sounded shĕwaʾ after it: לְאָכְלָה, lĕʾokhla, \"for food\", against אָֽכְלָה, ʾakhĕla, \"it devoured\" (Bĕmidhbar 21:28). (ʾEm LamMiqra)"
+        },
+        {
+          "type": "rubric",
+          "id": "reading-mappiq",
+          "hebrewLead": "ה״א מפיק ופתח גנובה.",
+          "lead": "Final Heʾ and the Stolen Pataḥ.",
+          "hebrew": "ה״א בסוף מילה היא בדרך כלל אם קריאה ואינה נשמעת. ה״א מפיק, שיש בה נקודה, היא עיצור, וצריך להשמיע אותה בנשיפה בסוף המילה. כמעט תמיד היא כינוי לנקבה: אַרְצָהּ – הארץ שלה, ואַרְצָה – אל הארץ; וכן לָהּ, בָּהּ. ומלבד זה מילים מעטות, כגון יָהּ, גָּבֹהַּ, אֱלוֹהַּ. וכיוצא בזה פתח גנובה: פתח שבסוף המילה תחת ה״א מפיק, חי״ת או עי״ן, אחר חיריק, צירי, שורוק או חולם, ונקראת לפני האות. ומנהג הספרדים והתימנים: אחר חיריק או צירי מוסיפים לפניה כעין יו״ד, כגון רָקִיעַ – \"רקִיַע\", מִזְבֵּחַ – \"מזבֵיַח\"; ואחר חולם או שורוק מוסיפים כעין וי״ו, כגון נֹחַ – \"נוֹוַח\", תַּפּוּחַ – \"תפּוּוַח\", גָּבֹהַּ – \"גבוֹוַה\". ולכן אֱלוֹהַּ נקרא \"אלוֹוַה\", ולא \"אלוֹהָה\" כמו שטועים רבים. אבל ה״א בקמץ בסוף מילה, כגון פִּיהָ, עָלֶיהָ, אינה פתח גנובה אלא קמץ רגיל. (אם למקרא; מנחת שי בראשית א,ד בשם מקנה אברם)",
+          "translation": "A final ה is usually silent, just a vowel letter. When it has a dot inside (mappiq), it's a real consonant: breathe out an h at the end of the word. That ה almost always means \"her\" or \"its\": אַרְצָהּ, ʾarṣah, is \"her land\", but אַרְצָה, ʾarṣa, is \"to the land\"; likewise לָהּ, בָּהּ. So when the sense is \"her ___\", sound the h. Beyond that, only a handful of words end in a real ה, like יָהּ, גָּבֹהַּ, אֱלוֹהַּ. Related is the pataḥ gĕnuva, the \"stolen\" pataḥ: a pataḥ under a final ח, ע or mappiq ה that comes after a ḥireq, ṣere, shureq or ḥolam. You say it before the letter, not after. Sephardim and Yemenites glide into it: after ḥireq or ṣere, with a y-sound (רָקִיעַ, rĕqiyaʿ; מִזְבֵּחַ, mizbeyaḥ), and after ḥolam or shureq, with a w-sound (נֹחַ, nowaḥ; תַּפּוּחַ, tappuwaḥ; גָּבֹהַּ, gavowah). So אֱלוֹהַּ is ʾĕlowah, not ʾĕloha, a common mistake. A final ה with a qamaṣ under it, as in פִּיהָ or עָלֶיהָ, isn't a stolen pataḥ at all, just an ordinary qamaṣ: piha, 'aleha. (ʾEm LamMiqra; Minḥath Shai on Bĕreshith 1:4, citing Miqne ʾAvram)"
+        },
+        {
+          "type": "rubric",
+          "id": "reading-shewa",
+          "hebrewLead": "שווא נע ונח.",
+          "lead": "Sounded and Silent Shĕwaʾ.",
+          "hebrew": "השווא נע או נח: הנע נשמע כתנועה קצרה, והנח סוגר את ההברה שלפניו. ארבעה מקומות לשווא נע: בראש מילה, כגון בְּרֵאשִׁית; השני משני שוואים, כגון יִשְׁמְרוּ; אחר תנועה גדולה, כגון שׁוֹמְרִים; ובאות דגושה, כגון הַמְּלָכִים. וכן נע שווא שיש עמו געיא, ושווא באות הראשונה משתי אותיות דומות, כגון הַֽלְלוּ. בשאר המקומות הוא נח, וכן בסוף מילה, כגון מֶלֶךְ, ואין להשמיע בו תנועה, כגון יִשְׂרָאֵל.",
+          "translation": "A shĕwaʾ is either sounded (na'), a quick ĕ, or silent (naḥ), closing the syllable before it. It's sounded in four places: at the start of a word (בְּרֵאשִׁית, bĕreshith); as the second of two in a row (יִשְׁמְרוּ, yishmĕru); after a long vowel (שׁוֹמְרִים, shomĕrim); and under a doubled letter (הַמְּלָכִים, hammĕlakhim). It's also sounded with a ga'ya, and under the first of two identical letters (הַֽלְלוּ, halĕlu). Everywhere else it's silent, including at the end of a word (מֶלֶךְ, melekh), so don't slip a vowel into it: יִשְׂרָאֵל is Yisraʾel, not Yisĕraʾel."
+        },
+        {
+          "type": "rubric",
+          "id": "reading-shewa-teman",
+          "hebrewLead": "מנהג תימן.",
+          "lead": "The Yemenite Custom.",
+          "hebrew": "יהודי תימן, ששמרו פרטים רבים של ההגייה הקדומה, משווים לשווא הנע את גוון מה שאחריו: לפני יו״ד הוא נוטה לחיריק, כגון בְּיוֹם; לפני אותיות אחה״ע הוא נוטה לתנועת האות הגרונית, כגון וְעָשׂוּ, מְאֹד; ועם געיא, תנועתו שלמה. ובשאר המקומות הוא כפתח חטופה, כגון בְּרֵאשִׁית. אין זה מנהג מקומי בלבד: כך כתב אהרן בן אשר, בעל המסורה מטבריה שעל ספרו סמך הרמב״ם, ב״דקדוקי הטעמים״, וכך משחזרים חוקרי זמננו את קריאת טבריה. (כללי קריאה ודקדוק, הרה״ג מרדכי רמתי, בתיקון תימני; אהרן בן אשר, דקדוקי הטעמים; Geoffrey Khan, The Tiberian Pronunciation Tradition of Biblical Hebrew, 2020)",
+          "translation": "Yemenite Jews, who kept many details of the old pronunciation, give a sounded shĕwaʾ the color of what comes after it. Before a yod it leans toward ḥireq: בְּיוֹם, biyom. Before a throat letter (אחה״ע) it leans toward that letter's vowel: וְעָשׂוּ, wa'asu; מְאֹד, moʾodh. With a ga'ya it becomes that full vowel. Everywhere else it's a quick pataḥ: בְּרֵאשִׁית, băreshith. This is more than a local custom. It's the rule Aharon ben Asher gives in his Diqduqe haṭ-Ṭĕ'amim. He was the Masorete of Tiberias whose Bible the Rambam relied on, and modern scholars reconstruct the Tiberian reading the same way. (Kĕlale Qĕriʾa wĕDhiqduq, Rabbi Mordekhai Ramati, in the Yemenite Tiqqun; Aharon ben Asher, Diqduqe haṭ-Ṭĕ'amim; Geoffrey Khan, The Tiberian Pronunciation Tradition of Biblical Hebrew, 2020)"
+        }
+      ]
     }
   ]
 }

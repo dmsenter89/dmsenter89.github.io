@@ -129,6 +129,22 @@ const data = {
       // independent of schema.mjs -- see the "Long i" note below.
       rows: VOWELS.map(([hebrew, name, key, say]) => [hebrew, name, key === "HIRIQ" ? `${resolved[key]} / ī` : resolved[key] ?? "", say]),
     },
+    {
+      id: "similar-letters",
+      title: "Letters Not to Confuse",
+      intro:
+        "Swapping one sound for its neighbor can change the meaning of a word, so these pairs are worth practicing out loud " +
+        "(after <em>Kĕlale Qĕriʾa wĕDhiqduq</em>, Rabbi Mordekhai Ramati, in the Yemenite Tiqqun).",
+      headers: ["Letters", "One", "The other"],
+      hebrewColumn: true,
+      rows: [
+        ["א / ע", "<span lang=\"he\" dir=\"rtl\">אָבַד</span> <em>ʾavadh</em><br>“was lost”", "<span lang=\"he\" dir=\"rtl\">עָבַד</span> <em>'avadh</em><br>“worked”"],
+        ["ח / כ", "<span lang=\"he\" dir=\"rtl\">מָחָר</span> <em>maḥar</em><br>“tomorrow”", "<span lang=\"he\" dir=\"rtl\">מָכַר</span> <em>makhar</em><br>“sold”"],
+        ["ק / כ", "<span lang=\"he\" dir=\"rtl\">קוֹל</span> <em>qol</em><br>“voice”", "<span lang=\"he\" dir=\"rtl\">כֹּל</span> <em>kol</em><br>“all”"],
+        ["ט / ת", "<span lang=\"he\" dir=\"rtl\">טוּר</span> <em>ṭur</em><br>“row”", "<span lang=\"he\" dir=\"rtl\">תּוּר</span> <em>tur</em><br>“scout”"],
+        ["ב / ו", "<span lang=\"he\" dir=\"rtl\">אָבִיב</span> <em>ʾaviv</em><br>“spring”", "<span lang=\"he\" dir=\"rtl\">אָבִיו</span> <em>ʾaviw</em><br>“his father”"],
+      ],
+    },
   ],
   notes: [
     {
